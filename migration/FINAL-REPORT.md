@@ -331,7 +331,7 @@ worth a binary download for the difference.
 Two byte-identical duplicate pairs (3.6 MB) remain; see
 `POST-MIGRATION-IDEAS.md` items 5 and 8.
 
-### Step 2 — initialise the repository
+### Step 2 — initialise the repository — DONE
 
 I measured the folder rather than guessing, because the sizes decide the
 shape:
@@ -345,39 +345,29 @@ shape:
 | `migration/baseline/` | 196 MB of PNGs | **No** — regenerable from `v2-maven/` with `capture_baseline.py` |
 | `uploads/`, `design_handoff_careorbit_site/` | 845 MB, 392 MB | **No** — source material, not the site |
 
-**Recommendation: one repository at `CareOrbit Website/`**, with a root
-`.gitignore` covering `node_modules`, `.next`, `migration/reference/`,
-`migration/baseline/`, `uploads/`, `design_handoff_careorbit_site/`, and
-`.env*` except `.env.example`. Vercel's **Root Directory** setting then
-points at `careorbit-next`.
+**Done: one repository at `CareOrbit Website/`**, on branch `main`, with the
+identity set repo-locally (this machine has no global git identity, and
+setting one would reach beyond this project).
 
-That keeps the code, the legacy site, the harness and the written record in
-one place — roughly **650 MB before step 1, and much less after** — while
-leaving out the two things that are either duplicated or regenerable.
-
-Ready to paste as the root `.gitignore`:
-
-```gitignore
-# dependencies and build output
-node_modules/
-.next/
-out/
-
-# secrets — the example file is names only and must be committed
-.env*
-!.env.example
-
-# verification artefacts: regenerable, or duplicated
-migration/reference/        # byte-identical copy of v2-maven/
-migration/baseline/         # 145 PNGs, rebuild with capture_baseline.py
-
-# source material, not the site
-uploads/
-design_handoff_careorbit_site/
-scraps/
-
-.DS_Store
 ```
+commit  aacaa750419a29b7ae7297ce5eaa999c2869bd2b
+        Checkpoint: completed and verified Next.js migration of the CareOrbit site
+        687 files, 643 MB of content, .git 697 MB
+```
+
+Two paths were excluded beyond the list above, both under the same rule
+already stated there — *regenerable or duplicated, and large*:
+
+| | Size | Commit? |
+|---|---|---|
+| `migration/page-check/` | 365 MB | **No** — `verify_page.py` output, rewritten on every run, referenced by nothing |
+| `migration/.venv/` | 155 MB | **No** — the harness interpreter; two commands to recreate, see `README.md` |
+
+`migration/chrome-check/` and `migration/typespecimen/` were kept: 2.4 MB,
+and they are the evidence the written reports point at.
+
+Vercel's **Root Directory** setting points at `careorbit-next` when that step
+comes.
 
 **One caveat worth stating plainly:** excluding `migration/baseline/` means
 the 145 reference screenshots live only on this machine. They are

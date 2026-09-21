@@ -862,3 +862,86 @@ While there, the secret-leak check was split per variable: it now asserts
 each of the five names separately, so a failure says **which** key leaked
 and into which chunk rather than just "something did". That is why its
 count went from 14 to 18.
+
+---
+
+## Phase 11 - Image masters and the first checkpoint commit — COMPLETE
+
+### Lossless PNG pass
+
+`migration/scripts/optimise_pngs.mjs` re-encoded every master under
+`careorbit-next/public`: decode to raw RGBA, re-encode at zlib level 9 with
+adaptive per-scanline filtering across three deflate strategies, keep the
+smallest, then **decode the result again and keep it only if the RGBA buffer
+is byte-identical, the dimensions match, and the file is actually smaller.**
+
+```
+93 PNG(s): 12 smaller, 81 already optimal, 0 refused
+169.5 MB -> 164.6 MB  (2.9% smaller)
+```
+
+2.9% is far short of the 10-30% a generic expectation would suggest, and the
+honest reason is that these masters are already well compressed. An earlier
+five-file sample suggested 21-25%, but that sample was the five *largest*
+files; the full run is the number that counts. A naive re-encode came out
+2-18% **bigger** on several mid-sized files, which is exactly what the size
+guard is for. `oxipng` with zopfli would do better and was not worth a
+third-party binary download for the difference.
+
+### Re-verification
+
+The harness could not run at first: playwright had vanished from the system
+interpreter, and `verify_all.py` reported all 28 pages as `NO VERDICT` with
+28 "failures". That was the harness crashing on import, not the site - worth
+recording, because the failure mode looks catastrophic and is not. Rebuilt as
+`migration/.venv` (git-ignored, setup in `README.md`); the cached browsers in
+`~/Library/Caches/ms-playwright` were still present.
+
+Rebuilt the app and re-ran the full pixel sweep against the optimised
+masters: **28 pages x 5 widths, 0 failures, 0 unexplained**. One fewer
+`REVIEW` flag than the closeout run, none more. Home and Platform keep theirs;
+Home's was inspected again at 768px and is the ratified `data-ml-auto`
+paragraph alignment from Phase 2, not anything to do with images.
+
+Strictly, identical decoded pixels into the same encoder must produce
+identical derivatives, so this sweep was confirmation rather than discovery.
+It was run anyway because that argument is the kind that is right until it
+isn't.
+
+### Checkpoint commit
+
+`git init -b main`, identity set **repo-locally** (git has no global
+`user.name`/`user.email` on this machine, and setting one would reach beyond
+this project).
+
+Two exclusions beyond the documented list, both under the rule already
+written there - *regenerable or duplicated, and large*:
+
+| Path | Size | Why |
+|---|---|---|
+| `migration/page-check/` | 365 MB | `verify_page.py` output, rewritten every run, referenced by nothing |
+| `migration/.venv/` | 155 MB | the harness interpreter, recreated in two commands |
+
+`chrome-check/` and `typespecimen/` were **kept** at 2.4 MB: they are the
+evidence the written reports point at.
+
+Checked before committing: no file over 50 MB, no `.env` staged except
+`.env.example` (names only, all values empty), and a regex sweep for key
+material across every staged text file returned only variable *names*.
+
+`v2-maven/` is committed in full, 240 files, and `diff -rq` against
+`migration/reference/v2-maven-snapshot` is silent.
+
+> Note on the integrity checksum: earlier entries quote md5
+> `e15d8a50f62831b0aeb487c36938ccb7` without recording how it was computed,
+> and it is not reproducible from the obvious recipe. The authoritative check
+> has always been the `diff -rq`, which passes. For future runs the recipe is
+> now fixed:
+> ```
+> find v2-maven -type f -print0 | sort -z | xargs -0 md5 -q | md5 -q
+> #  -> 9c4a448fff94b263e91924689856e0c6
+> ```
+> Filenames in `v2-maven/` contain spaces, so a non-null-delimited pipeline
+> silently hashes the wrong set.
+
+**No remote, no push, no Vercel, no DNS, no change to the live site.**

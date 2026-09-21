@@ -6,7 +6,17 @@ One complete run of every check in the harness against the final build.
 - **Build ID:** `tKcYoyG7X_coov4diRIqb`
 - **Pages:** 28 (Login excluded by decision)
 
-Reproduce with `migration/scripts/run_closeout.py`, both servers up.
+Reproduce with `migration/scripts/run_closeout.py`, both servers up. The
+harness needs playwright; see the venv setup in `README.md`.
+
+### Re-verified after the lossless PNG pass
+
+The image masters were losslessly recompressed and the app rebuilt
+(build `8j7o6WAswp1nVCLVCmPOL`, 2026-09-21 14:24). The pixel sweep was re-run
+in full: **28 pages, 0 failures, 0 unexplained differences** - one fewer
+`REVIEW` flag than the run recorded below, none more. The optimiser had
+already proved pixel identity by decoding each re-encoded file and comparing
+RGBA buffers, so this was confirmation rather than discovery.
 
 ## Summary
 
