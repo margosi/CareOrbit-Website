@@ -168,7 +168,7 @@ export default function SitemanStudyPage() {
           }}
         >
           <Figure
-            src="/images/case-study-siteman.png"
+            src="/images/case-study-siteman.webp"
             alt=""
             placeholder="[Placeholder: Siteman care team photo]"
             radius={32}

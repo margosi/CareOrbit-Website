@@ -43,10 +43,10 @@ export type PcSegment = {
 /** Per-segment value image. Segment 0 reuses the hero frame, as in the
  * source. Legacy: the valueSrc array in renderVals(). */
 export const VALUE_SRC = [
-  "/images/primarycare-hero.png",
-  "/images/primarycare-value-chronic.png",
-  "/images/primarycare-value-prevention.png",
-  "/images/primarycare-value-transitions.png",
+  "/images/primarycare-hero.webp",
+  "/images/primarycare-value-chronic.webp",
+  "/images/primarycare-value-prevention.webp",
+  "/images/primarycare-value-transitions.webp",
 ];
 
 export const QUOTES = [

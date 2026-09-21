@@ -25,11 +25,11 @@ import {
  * (not hero-5 or hero-6, which exist in the folder but are unused).
  */
 const FRAMES = [
-  { src: "/images/hero-1.png", pos: "78% 34%" },
-  { src: "/images/hero-2.png", pos: "80% 32%" },
-  { src: "/images/hero-3.png", pos: "88% 38%" },
-  { src: "/images/hero-4.png", pos: "80% 32%" },
-  { src: "/images/hero-7.png", pos: "60% 40%" },
+  { src: "/images/hero-1.webp", pos: "78% 34%" },
+  { src: "/images/hero-2.webp", pos: "80% 32%" },
+  { src: "/images/hero-3.webp", pos: "88% 38%" },
+  { src: "/images/hero-4.webp", pos: "80% 32%" },
+  { src: "/images/hero-7.webp", pos: "60% 40%" },
 ];
 
 const CHAT_LINKS = [

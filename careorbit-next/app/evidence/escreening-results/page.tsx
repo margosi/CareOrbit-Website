@@ -176,7 +176,7 @@ export default function EScreeningResultsPage() {
           }}
         >
           <Figure
-            src="/images/study-va-escreening.png"
+            src="/images/study-va-escreening.webp"
             alt=""
             placeholder="[Placeholder: screening in clinic photo]"
             radius={32}

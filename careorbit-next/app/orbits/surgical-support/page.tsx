@@ -160,7 +160,7 @@ export default function SurgicalSupportPage() {
           }}
         >
           <Figure
-            src="/images/hero-surgical-support.png"
+            src="/images/hero-surgical-support.webp"
             alt=""
             placeholder="Surgical support photo"
             radius={32}
@@ -232,7 +232,7 @@ export default function SurgicalSupportPage() {
         >
           <div style={{ position: "relative", minWidth: 0 }}>
             <Figure
-              src="/images/value-surgical.png"
+              src="/images/value-surgical.webp"
               alt=""
               placeholder="[Placeholder: surgical team with a patient before a procedure, vertical crop]"
               radius={28}

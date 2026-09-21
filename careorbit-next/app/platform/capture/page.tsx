@@ -99,7 +99,7 @@ export default function CapturePage() {
           }
           heading={<em style={{ ...SERIF, color: "#2D5A87" }}>Capture</em>}
           blurb="A digital tool paired with a professional service: our team converts your best patient material into one organized, deployable, trackable, HIPAA compliant system, and keeps it that way."
-          src="/images/capture-hero-2.png"
+          src="/images/capture-hero-2.webp"
           placeholder="[Placeholder: Capture hero image]"
           bookSrc="capture-page"
           sheetLabel="Get the Capture info sheet"

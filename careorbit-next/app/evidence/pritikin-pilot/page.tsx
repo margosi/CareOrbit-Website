@@ -160,7 +160,7 @@ export default function PritikinPilotPage() {
           }}
         >
           <Figure
-            src="/images/study-cardiac-rehab.png"
+            src="/images/study-cardiac-rehab.webp"
             alt=""
             placeholder="[Placeholder: cardiac rehab photo]"
             radius={32}

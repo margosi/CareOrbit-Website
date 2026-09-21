@@ -569,7 +569,7 @@ export default function HomePage() {
                 }}
               >
                 <Figure
-                  src="/images/orbit-phone.png"
+                  src="/images/orbit-phone.webp"
                   alt=""
                   radius={34}
                   placeholder="Product screenshot: patient orbit view (PHI-free)"
@@ -603,7 +603,7 @@ export default function HomePage() {
             }}
           >
             <Figure
-              src="/images/outcomes-banner.png"
+              src="/images/outcomes-banner.webp"
               alt=""
               shape="rect"
               placeholder="[Placeholder: patient at home photo]"
@@ -874,7 +874,7 @@ export default function HomePage() {
           >
             <div style={{ height: 330 }}>
               <Figure
-                src="/images/case-study-siteman.png"
+                src="/images/case-study-siteman.webp"
                 alt=""
                 radius={28}
                 placeholder="Care team reviewing the study"

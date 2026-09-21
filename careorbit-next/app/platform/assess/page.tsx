@@ -69,7 +69,7 @@ export default function AssessPage() {
         <ProductHero
           heading={<em style={{ ...SERIF, color: "#2D5A87" }}>Assess</em>}
           blurb="Structured patient input for any orbit, from light check-ins to formalized eScreening and PROMs reporting, or entirely on its own. No app, no login, no new FTEs."
-          src="/images/assess-hero-5.png"
+          src="/images/assess-hero-5.webp"
           placeholder="[Placeholder: Assess hero image]"
           bookSrc="assess-page"
           sheetLabel="Get the Assess info sheet"
@@ -483,7 +483,7 @@ export default function AssessPage() {
                 }}
               >
                 <Image
-                  src="/images/assess-escreening.png"
+                  src="/images/assess-escreening.webp"
                   alt="A veteran completing eScreening assessments at a VA medical center with his care team"
                   fill
                   unoptimized={EXACT_PIXELS}

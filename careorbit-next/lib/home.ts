@@ -26,7 +26,7 @@ export const GALLERY: GallerySlide[] = [
     slotId: "gallery-oncology",
     hint: "Oncology care photo",
     href: "/orbits/oncology",
-    src: "/images/tile-oncology.png",
+    src: "/images/tile-oncology.webp",
   },
   {
     title: "Primary Care & Prevention",
@@ -36,7 +36,7 @@ export const GALLERY: GallerySlide[] = [
     slotId: "gallery-primarycare",
     hint: "Primary care visit photo",
     href: "/orbits/primary-care",
-    src: "/images/tile-primarycare.png",
+    src: "/images/tile-primarycare.webp",
   },
   {
     title: "Orthopedics & Joint Care",
@@ -46,7 +46,7 @@ export const GALLERY: GallerySlide[] = [
     slotId: "gallery-orthopedics",
     hint: "Ortho / PT photo",
     href: "/orbits/orthopedics",
-    src: "/images/tile-orthopedics.png",
+    src: "/images/tile-orthopedics.webp",
   },
   {
     title: "Maternity & Women's Health",
@@ -56,7 +56,7 @@ export const GALLERY: GallerySlide[] = [
     slotId: "gallery-womens",
     hint: "Maternity photo",
     href: "/orbits/womens-health",
-    src: "/images/tile-womens.png",
+    src: "/images/tile-womens.webp",
   },
   {
     title: "Behavioral Health & Screening",
@@ -66,7 +66,7 @@ export const GALLERY: GallerySlide[] = [
     slotId: "gallery-behavioral",
     hint: "Behavioral health photo",
     href: "/orbits/behavioral-health",
-    src: "/images/tile-behavioral.png",
+    src: "/images/tile-behavioral.webp",
   },
   {
     title: "Cardiology & Cardiac Rehab",
@@ -76,7 +76,7 @@ export const GALLERY: GallerySlide[] = [
     slotId: "gallery-cardiology",
     hint: "Cardiac rehab photo",
     href: "/orbits/cardiology",
-    src: "/images/tile-cardiology.png",
+    src: "/images/tile-cardiology.webp",
   },
   {
     title: "Bariatrics & Weight Loss Surgery",
@@ -86,7 +86,7 @@ export const GALLERY: GallerySlide[] = [
     slotId: "gallery-bariatrics",
     hint: "Bariatric program photo",
     href: "/orbits/bariatrics",
-    src: "/images/tile-bariatrics.png",
+    src: "/images/tile-bariatrics.webp",
   },
   {
     title: "Medication Therapy & Adherence",
@@ -96,7 +96,7 @@ export const GALLERY: GallerySlide[] = [
     slotId: "gallery-medication",
     hint: "Infusion / pharmacy photo",
     href: "/orbits/medication-therapy",
-    src: "/images/tile-medication.png",
+    src: "/images/tile-medication.webp",
   },
 ];
 
@@ -108,7 +108,7 @@ export const EXPLORE_CARDS = [
     href: "/orbits/community-research",
     badge: "NEW",
     slotId: "explore-research",
-    src: "/images/offering-research.png",
+    src: "/images/offering-research.webp",
     hint: "[Placeholder: clinical research photo]",
   },
   {
@@ -118,7 +118,7 @@ export const EXPLORE_CARDS = [
     href: "/orbits/behavioral-risk",
     badge: "NEW",
     slotId: "explore-behavioral-safety",
-    src: "/images/offering-behavioral-safety.png",
+    src: "/images/offering-behavioral-safety.webp",
     hint: "[Placeholder: construction workforce photo]",
   },
   {
@@ -128,7 +128,7 @@ export const EXPLORE_CARDS = [
     href: "/platform/capture",
     badge: "NEW CAPABILITY",
     slotId: "explore-capture",
-    src: "/images/offering-capture-2.png",
+    src: "/images/offering-capture-2.webp",
     hint: "[Placeholder: health information photo]",
   },
 ];

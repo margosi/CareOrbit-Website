@@ -160,7 +160,7 @@ export default function BehavioralHealthPage() {
           }}
         >
           <Figure
-            src="/images/hero-behavioral-health.png"
+            src="/images/hero-behavioral-health.webp"
             alt=""
             placeholder="Behavioral health photo"
             radius={32}
@@ -232,7 +232,7 @@ export default function BehavioralHealthPage() {
         >
           <div style={{ position: "relative", minWidth: 0 }}>
             <Figure
-              src="/images/value-behavioralhealth.png"
+              src="/images/value-behavioralhealth.webp"
               alt=""
               placeholder="[Placeholder: behavioral health clinician with a patient, vertical crop]"
               radius={28}

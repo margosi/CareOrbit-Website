@@ -66,7 +66,7 @@ export default function EngagePage() {
         <ProductHero
           heading={<em style={{ ...SERIF, color: "#2D5A87" }}>Engage</em>}
           blurb="Care-team-approved digital journeys that put your guidance in the patient's hands from diagnosis through recovery, so every patient stays on course between visits."
-          src="/images/engage-hero-11.png"
+          src="/images/engage-hero-11.webp"
           placeholder="[Placeholder: Engage hero image]"
           bookSrc="engage-page"
           sheetLabel="Get the Engage info sheet"

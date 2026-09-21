@@ -178,7 +178,7 @@ export default function CommunityResearchPage() {
           }}
         >
           <Figure
-            src="/images/research-hero.png"
+            src="/images/research-hero.webp"
             alt=""
             placeholder="[Placeholder: community research team photo]"
             radius={32}
@@ -250,7 +250,7 @@ export default function CommunityResearchPage() {
         >
           <div style={{ position: "relative", minWidth: 0 }}>
             <Figure
-              src="/images/value-research.png"
+              src="/images/value-research.webp"
               alt=""
               placeholder="[Placeholder: study participant on a phone at home, vertical crop]"
               radius={28}

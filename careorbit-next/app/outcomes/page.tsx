@@ -571,7 +571,7 @@ export default function OutcomesPage() {
         {/* ----------------------------------------------- how we work -- */}
         <Reveal style={{ position: "relative", margin: "12px 0 56px" }}>
           <Figure
-            src="/images/how-we-work-bg.png"
+            src="/images/how-we-work-bg.webp"
             alt=""
             radius={0}
             shape="rect"

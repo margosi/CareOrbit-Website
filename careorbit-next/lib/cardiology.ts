@@ -49,10 +49,10 @@ export type CardSegment = {
 
 /** Per-segment value image. Legacy: valueSrc ternary in renderVals(). */
 export const VALUE_SRC = [
-  "/images/value-cardiology-all.png",
-  "/images/value-cardiology-hf.png",
-  "/images/value-cardiology-procedures.png",
-  "/images/value-cardiology-rehab.png",
+  "/images/value-cardiology-all.webp",
+  "/images/value-cardiology-hf.webp",
+  "/images/value-cardiology-procedures.webp",
+  "/images/value-cardiology-rehab.webp",
 ];
 
 /** Live oncology quotes, shown on every segment. Legacy: quotes. */

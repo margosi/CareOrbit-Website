@@ -153,7 +153,7 @@ export default function OrthopedicsPage() {
           }}
         >
           <Figure
-            src="/images/hero-orthopedics.png"
+            src="/images/hero-orthopedics.webp"
             alt=""
             placeholder="Ortho / PT photo"
             radius={32}

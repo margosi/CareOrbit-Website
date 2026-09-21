@@ -171,7 +171,7 @@ export default function BehavioralRiskPage() {
 
         <div style={{ minWidth: 0 }}>
           <Figure
-            src="/images/offering-behavioral-safety.png"
+            src="/images/offering-behavioral-safety.webp"
             alt=""
             placeholder="[Placeholder: field worker photo]"
             radius={32}

@@ -138,7 +138,7 @@ export default function PrimaryCarePage() {
           }}
         >
           <Figure
-            src="/images/primarycare-hero.png"
+            src="/images/primarycare-hero.webp"
             alt=""
             placeholder="[Placeholder: primary care visit photo]"
             radius={32}

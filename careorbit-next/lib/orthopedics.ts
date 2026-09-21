@@ -44,10 +44,10 @@ export type OrthoSegment = {
 
 /** Per-segment value image. Legacy: valueSrc ternary in renderVals(). */
 export const VALUE_SRC = [
-  "/images/value-ortho-all.png",
-  "/images/value-ortho-joint.png",
-  "/images/value-ortho-sports.png",
-  "/images/value-ortho-spine.png",
+  "/images/value-ortho-all.webp",
+  "/images/value-ortho-joint.webp",
+  "/images/value-ortho-sports.webp",
+  "/images/value-ortho-spine.webp",
 ];
 
 /** Live oncology quotes, shown on every segment. Legacy: quotes. */

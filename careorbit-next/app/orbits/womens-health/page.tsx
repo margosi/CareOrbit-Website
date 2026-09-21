@@ -127,7 +127,7 @@ export default function WomensHealthPage() {
           }}
         >
           <Figure
-            src="/images/hero-womens-health.png"
+            src="/images/hero-womens-health.webp"
             alt=""
             placeholder="Maternal health photo"
             radius={32}

@@ -22,7 +22,7 @@ import { AUDIENCES, TRIAL_STATS } from "@/lib/platform";
 const HERO_IMAGES = [
   {
     attr: "data-hero-img1",
-    src: "/images/platform-hero-1.png",
+    src: "/images/platform-hero-1.webp",
     ph: "[Placeholder: hero image 1]",
     radius: 0,
     style: {
@@ -35,7 +35,7 @@ const HERO_IMAGES = [
   },
   {
     attr: "data-hero-img2",
-    src: "/images/platform-hero-2.png",
+    src: "/images/platform-hero-2.webp",
     ph: "[Placeholder: hero image 2]",
     radius: 0,
     style: {
@@ -48,7 +48,7 @@ const HERO_IMAGES = [
   },
   {
     attr: "data-hero-img3",
-    src: "/images/platform-hero-3.png",
+    src: "/images/platform-hero-3.webp",
     ph: "[Placeholder: hero image 3]",
     radius: 20,
     style: {
@@ -61,7 +61,7 @@ const HERO_IMAGES = [
   },
   {
     attr: "data-hero-img4",
-    src: "/images/platform-hero-4b.png",
+    src: "/images/platform-hero-4b.webp",
     ph: "[Placeholder: hero image 4]",
     radius: 0,
     style: {
@@ -361,7 +361,7 @@ export default function PlatformPage() {
         }}
       >
         <Figure
-          src="/images/platform-statement-2.png"
+          src="/images/platform-statement-2.webp"
           alt=""
           radius={0}
           shape="rect"
@@ -676,7 +676,7 @@ export default function PlatformPage() {
         style={{ position: "relative", marginTop: 96, overflow: "hidden" }}
       >
         <Figure
-          src="/images/platform-experiences.png"
+          src="/images/platform-experiences.webp"
           alt=""
           radius={0}
           shape="rect"

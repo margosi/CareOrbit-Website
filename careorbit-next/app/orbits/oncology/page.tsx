@@ -163,7 +163,7 @@ export default function OncologyPage() {
           }}
         >
           <Figure
-            src="/images/consult-oncology.png"
+            src="/images/consult-oncology.webp"
             alt=""
             placeholder="Oncology care photo"
             radius={32}
@@ -235,7 +235,7 @@ export default function OncologyPage() {
         >
           <div style={{ position: "relative", minWidth: 0 }}>
             <Figure
-              src="/images/value-oncology.png"
+              src="/images/value-oncology.webp"
               alt=""
               placeholder="[Placeholder: oncology care team with a patient and family member, vertical crop]"
               radius={28}

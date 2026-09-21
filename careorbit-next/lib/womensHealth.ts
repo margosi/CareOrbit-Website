@@ -100,9 +100,9 @@ export const SUB =
  * Preserved: the placeholder caption shows on that tab. */
 export const VALUE_SRC: Record<string, string | undefined> = {
   all: undefined,
-  maternity: "/images/value-maternity.png",
-  gyn: "/images/value-gyn.png",
-  midlife: "/images/value-midlife.png",
+  maternity: "/images/value-maternity.webp",
+  gyn: "/images/value-gyn.webp",
+  midlife: "/images/value-midlife.webp",
 };
 
 export const TRANSFER_LINE =

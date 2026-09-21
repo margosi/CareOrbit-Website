@@ -166,7 +166,7 @@ export default function BariatricsPage() {
           }}
         >
           <Figure
-            src="/images/hero-bariatrics.png"
+            src="/images/hero-bariatrics.webp"
             alt=""
             placeholder="Bariatric care photo"
             radius={32}
@@ -239,7 +239,7 @@ export default function BariatricsPage() {
         >
           <div style={{ position: "relative", minWidth: 0 }}>
             <Figure
-              src="/images/value-bariatrics.png"
+              src="/images/value-bariatrics.webp"
               alt=""
               placeholder="[Placeholder: bariatric care team with a patient, vertical crop]"
               radius={28}

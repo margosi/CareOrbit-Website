@@ -496,7 +496,7 @@ export function BehavioralRiskBody() {
         >
           <div style={{ position: "relative", minWidth: 0 }}>
             <Figure
-              src="/images/safety-toolbox-talk.png"
+              src="/images/safety-toolbox-talk.webp"
               alt=""
               placeholder="[Placeholder: crew toolbox talk photo, vertical crop]"
               radius={28}

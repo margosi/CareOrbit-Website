@@ -64,7 +64,7 @@ export default function DataPage() {
         <ProductHero
           heading={<em style={{ ...SERIF, color: "#2D5A87" }}>Data</em>}
           blurb="Every action a patient takes, and every one they do not, becomes an engagement signal your teams can act on. Data begins with your first orbit, and you own your own data."
-          src="/images/data-hero-1.png"
+          src="/images/data-hero-1.webp"
           placeholder="[Placeholder: Data hero image]"
           bookSrc="data-page"
           sheetLabel="Get the Data info sheet"

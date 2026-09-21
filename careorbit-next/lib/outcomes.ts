@@ -35,7 +35,7 @@ export const HOW = [
 export const STUDIES = [
   {
     slot: "study-oncology",
-    src: "/images/case-study-siteman.png",
+    src: "/images/case-study-siteman.webp",
     imgHint: "[Placeholder: Siteman care team photo]",
     dot: "#E3735C",
     tag: "Oncology · Controlled trial",
@@ -46,7 +46,7 @@ export const STUDIES = [
   },
   {
     slot: "study-cardiac",
-    src: "/images/study-cardiac-rehab.png",
+    src: "/images/study-cardiac-rehab.webp",
     imgHint: "[Placeholder: cardiac rehab photo]",
     dot: "#2D5A87",
     tag: "Cardiology · Pilot",
@@ -57,7 +57,7 @@ export const STUDIES = [
   },
   {
     slot: "study-assess",
-    src: "/images/study-va-escreening.png",
+    src: "/images/study-va-escreening.webp",
     imgHint: "[Placeholder: screening in clinic photo]",
     dot: "#4FB3BF",
     tag: "Assess · Deployment",
@@ -71,7 +71,7 @@ export const STUDIES = [
 export const ROI_EXAMPLES = [
   {
     slot: "roi-missed-appts",
-    src: "/images/roi-missed-appts.png",
+    src: "/images/roi-missed-appts.webp",
     imgHint: "[Placeholder: clinic schedule or front desk photo]",
     dot: "#E3735C",
     tag: "Targeted ROI · Missed appointments",
@@ -83,7 +83,7 @@ export const ROI_EXAMPLES = [
   },
   {
     slot: "roi-vbc",
-    src: "/images/roi-vbc.png",
+    src: "/images/roi-vbc.webp",
     imgHint: "[Placeholder: quality dashboard screenshot]",
     dot: "#2D5A87",
     tag: "Targeted ROI · Value-based care",
@@ -95,7 +95,7 @@ export const ROI_EXAMPLES = [
   },
   {
     slot: "roi-enrollment",
-    src: "/images/roi-enrollment.png",
+    src: "/images/roi-enrollment.webp",
     imgHint: "[Placeholder: cardiac rehab session photo]",
     dot: "#1A6B3C",
     tag: "Targeted ROI · Program enrollment",
@@ -107,7 +107,7 @@ export const ROI_EXAMPLES = [
   },
   {
     slot: "roi-staff-time",
-    src: "/images/roi-staff-time.png",
+    src: "/images/roi-staff-time.webp",
     imgHint: "[Placeholder: care team at station photo]",
     dot: "#B05A46",
     tag: "Targeted ROI · Staff time",

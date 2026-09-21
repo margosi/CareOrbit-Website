@@ -156,7 +156,7 @@ export default function CardiologyPage() {
           }}
         >
           <Figure
-            src="/images/hero-cardiology.png"
+            src="/images/hero-cardiology.webp"
             alt=""
             placeholder="Cardiology care photo"
             radius={32}

@@ -160,7 +160,7 @@ export default function MedicationTherapyPage() {
           }}
         >
           <Figure
-            src="/images/hero-medication-therapy.png"
+            src="/images/hero-medication-therapy.webp"
             alt=""
             placeholder="Medication therapy photo"
             radius={32}
@@ -233,7 +233,7 @@ export default function MedicationTherapyPage() {
         >
           <div style={{ position: "relative", minWidth: 0 }}>
             <Figure
-              src="/images/value-medtherapy.png"
+              src="/images/value-medtherapy.webp"
               alt=""
               placeholder="[Placeholder: pharmacist counseling a patient, vertical crop]"
               radius={28}
