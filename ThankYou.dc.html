@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FFFFFF}a{color:#2D5A87}a:hover{color:#E3735C}</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FFFFFF;min-height:100vh;display:flex;flex-direction:column">
+<dc-import name="SiteNav" active="book" announce="{{ false }}" hint-size="100%,80px"></dc-import>
+<div style="max-width:720px;margin:0 auto;padding:96px 28px;display:flex;flex-direction:column;gap:22px;align-items:center;text-align:center;flex:1">
+  <svg width="72" height="72" viewBox="0 0 48 48" fill="none">
+    <circle cx="42" cy="24" r="3.4" fill="#E8734D"></circle><circle cx="40.3" cy="16.4" r="2.8" fill="#EE7B4E"></circle><circle cx="35.6" cy="10.2" r="2" fill="#F08A5C"></circle><circle cx="28.7" cy="6.6" r="1.3" fill="#E8865A"></circle><circle cx="22.4" cy="6.1" r="0.9" fill="#2D5A87"></circle><circle cx="17.2" cy="7.3" r="1.3" fill="#3E6FB0"></circle><circle cx="11.3" cy="11.3" r="2.1" fill="#5B9BEA"></circle><circle cx="7.1" cy="17.8" r="2.9" fill="#4A8FE0"></circle><circle cx="6.1" cy="25.6" r="2" fill="#5B9BEA"></circle><circle cx="7.7" cy="31.6" r="1.3" fill="#7FB0F0"></circle><circle cx="10.6" cy="36" r="0.8" fill="#8AB6F2"></circle><circle cx="22.4" cy="41.9" r="0.7" fill="#E3735C"></circle><circle cx="28.7" cy="41.4" r="1" fill="#E3735C"></circle><circle cx="34.3" cy="38.7" r="1.4" fill="#C05AB8"></circle><circle cx="39.6" cy="33" r="2.4" fill="#E3735C"></circle>
+    <path d="M24 33 C18.8 29.2 14.8 25.9 14.8 21.5 c0-3 2.4-5.4 5.4-5.4 1.9 0 3.7 1 4.6 2.7 0.9-1.7 2.7-2.7 4.6-2.7 3 0 5.4 2.4 5.4 5.4 0 4.4-4 7.7-9.8 11.5z" fill="#1E3A5F"></path>
+  </svg>
+  <h1 style="font-family:Lato,sans-serif;font-weight:700;font-size:44px;line-height:1.1;margin:0;text-wrap:pretty">You're booked.</h1>
+  <p style="font-size:16.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:520px;text-wrap:pretty">A confirmation is on its way to your email. We'll do our homework on your organization before the call, and you'll leave it with a one-page summary of what an orbit would target for you.</p>
+  <div style="display:flex;gap:14px;margin-top:8px;flex-wrap:wrap;justify-content:center">
+    <a href="{{ orbitFile }}" style="text-decoration:none;font-size:15px;font-weight:600;color:#FFFFFF;background:#E3735C;padding:14px 26px;border-radius:999px" style-hover="background:#D3644E;color:#FFFFFF">{{ orbitCta }}</a>
+    <a href="Platform.dc.html" style="text-decoration:none;font-size:15px;font-weight:600;color:#1E3A5F;padding:14px 24px;border-radius:999px;border:1.5px solid #EAF1F8" style-hover="border-color:#2D5A87;color:#1E3A5F">How the platform works</a>
+  </div>
+  <div style="font-size:13px;color:#8CA0B3;margin-top:6px">[Placeholder: Platform Infosheet PDF link]</div>
+</div>
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const line = new URLSearchParams(window.location.search).get("line") || "";
+    const files = {"Oncology": "Oncology.dc.html", "Cardiology": "Cardiology.dc.html", "Orthopedics": "Orthopedics.dc.html", "Women's Health": "WomensHealth.dc.html", "Bariatrics": "Bariatrics.dc.html", "Behavioral Health": "BehavioralHealth.dc.html", "Medication Therapy & Adherence": "MedicationTherapy.dc.html"};
+    const file = files[line];
+    return {
+      orbitFile: file || "Home.dc.html#orbit-grid",
+      orbitCta: file ? "Explore the " + line + " orbit while you wait" : "Browse the orbits while you wait"
+    };
+  }
+}
+</script>
+</body>
+</html>

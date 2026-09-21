@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="align-self:flex-start;margin-top:2px;display:flex;flex-direction:column;gap:10px;min-width:0">
+  <button type="button" onClick="{{ open }}" style="align-self:flex-start;background:none;border:none;padding:0 0 3px;margin:0;font-family:Inter,sans-serif;font-size:14.5px;font-weight:600;color:#0F1D2E;cursor:pointer;border-bottom:1.5px solid rgba(227,115,92,.55);transition:color .2s,border-color .2s" style-hover="color:#E3735C;border-color:#E3735C">{{ label }}</button>
+
+  <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#FFFFFF;border:1px solid rgba(45,90,135,.2);border-radius:20px;padding:24px 24px 22px;display:flex;flex-direction:column;gap:14px;max-width:460px;box-shadow:0 18px 40px rgba(15,29,46,.1)">
+      <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:17px;line-height:1.25;letter-spacing:-0.015em;color:#0F1D2E">{{ heading }}</div>
+            <div style="font-size:13.5px;line-height:1.55;color:rgba(15,29,46,.68);text-wrap:pretty">{{ blurb }}</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <label style="font-size:12.5px;font-weight:600;color:#2D5A87">First name <span style="color:#A8412F">*</span></label>
+              <input type="text" value="{{ first }}" onChange="{{ onFirst }}" autocomplete="given-name" style="font-family:Inter,sans-serif;font-size:14px;color:#0F1D2E;background:#FAF8F4;border:1px solid rgba(15,29,46,.16);border-radius:10px;padding:11px 13px;outline:none;min-width:0" style-focus="border-color:#E3735C;background:#FFFFFF">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <label style="font-size:12.5px;font-weight:600;color:#2D5A87">Last name <span style="color:#A8412F">*</span></label>
+              <input type="text" value="{{ last }}" onChange="{{ onLast }}" autocomplete="family-name" style="font-family:Inter,sans-serif;font-size:14px;color:#0F1D2E;background:#FAF8F4;border:1px solid rgba(15,29,46,.16);border-radius:10px;padding:11px 13px;outline:none;min-width:0" style-focus="border-color:#E3735C;background:#FFFFFF">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <label style="font-size:12.5px;font-weight:600;color:#2D5A87">Organization <span style="color:#A8412F">*</span></label>
+            <input type="text" value="{{ org }}" onChange="{{ onOrg }}" autocomplete="organization" style="font-family:Inter,sans-serif;font-size:14px;color:#0F1D2E;background:#FAF8F4;border:1px solid rgba(15,29,46,.16);border-radius:10px;padding:11px 13px;outline:none" style-focus="border-color:#E3735C;background:#FFFFFF">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <label style="font-size:12.5px;font-weight:600;color:#2D5A87">Business email address <span style="color:#A8412F">*</span></label>
+            <input type="email" value="{{ email }}" onChange="{{ onEmail }}" autocomplete="email" placeholder="you@organization.org" style="font-family:Inter,sans-serif;font-size:14px;color:#0F1D2E;background:#FAF8F4;border:1px solid rgba(15,29,46,.16);border-radius:10px;padding:11px 13px;outline:none" style-focus="border-color:#E3735C;background:#FFFFFF">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <label style="font-size:12.5px;font-weight:600;color:#2D5A87">Job title</label>
+            <input type="text" value="{{ title }}" onChange="{{ onTitle }}" autocomplete="organization-title" style="font-family:Inter,sans-serif;font-size:14px;color:#0F1D2E;background:#FAF8F4;border:1px solid rgba(15,29,46,.16);border-radius:10px;padding:11px 13px;outline:none" style-focus="border-color:#E3735C;background:#FFFFFF">
+          </div>
+          <input type="text" value="{{ website }}" onChange="{{ onWebsite }}" tabIndex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-5000px;width:1px;height:1px;opacity:0">
+          <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:13px;line-height:1.5;color:#A8412F">{{ error }}</div>
+          </sc-if>
+          <button type="button" onClick="{{ submit }}" style="align-self:flex-start;font-family:Inter,sans-serif;font-size:14.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;border:none;border-radius:999px;padding:13px 26px;cursor:pointer;transition:background .2s" style-hover="background:#E3735C">{{ submitLabel }}</button>
+          <div style="font-size:11.5px;line-height:1.5;color:rgba(15,29,46,.5)">We use your details only to send this document and follow up once. No list, no sharing. This form is protected against automated submissions.</div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ showDone }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:17px;line-height:1.25;letter-spacing:-0.015em;color:#0F1D2E">{{ doneHeading }}</div>
+            <div style="font-size:13.5px;line-height:1.55;color:rgba(15,29,46,.68);text-wrap:pretty">Download it below. Our team has been notified of your request and will follow up once.</div>
+          </div>
+          <a href="{{ file }}" download="{{ file }}" target="_blank" rel="noopener" style="align-self:flex-start;text-decoration:none;font-family:Inter,sans-serif;font-size:14.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;border-radius:999px;padding:13px 24px;transition:background .2s" style-hover="background:#E3735C">{{ downloadLabel }}</a>
+          <button type="button" onClick="{{ reset }}" style="align-self:flex-start;background:none;border:none;padding:0;font-family:Inter,sans-serif;font-size:12.5px;font-weight:600;color:rgba(15,29,46,.55);cursor:pointer;text-decoration:underline" style-hover="color:#E3735C">Submit a new request</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ showPending }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:17px;line-height:1.25;letter-spacing:-0.015em;color:#0F1D2E">Thank you, your request is in</div>
+          <div style="font-size:13.5px;line-height:1.55;color:rgba(15,29,46,.68);text-wrap:pretty">We will email your copy shortly. If you need it sooner, write to <a href="mailto:support@careorbit.com" style="color:#2D5A87;font-weight:600">support@careorbit.com</a>.</div>
+          <button type="button" onClick="{{ reset }}" style="align-self:flex-start;background:none;border:none;padding:0;font-family:Inter,sans-serif;font-size:12.5px;font-weight:600;color:rgba(15,29,46,.55);cursor:pointer;text-decoration:underline" style-hover="color:#E3735C">Submit a new request</button>
+        </div>
+      </sc-if>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:520,&quot;height&quot;:760},&quot;label&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Request a copy of the pilot summary&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;heading&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Request the pilot summary&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;blurb&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Tell us who you are and we will send you the full summary.&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;file&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;CareOrbit-Pritikin-ICR-Pilot.pdf&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;downloadLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Download the PDF&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;submitLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Submit request&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;notifyEndpoint&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = {open: false, first: "", last: "", org: "", email: "", title: "", website: "", sent: false, error: "", fileReady: true, openedAt: 0};
+
+  componentDidMount() {
+    try {
+      const key = "co-doc-" + (this.props.file || "doc");
+      if (localStorage.getItem(key)) this.setState({sent: true});
+    } catch (e) {}
+    const f = this.props.file;
+    if (!f) { this.setState({fileReady: false}); return; }
+    fetch(f, {method: "HEAD"})
+      .then(r => { if (!r.ok) this.setState({fileReady: false}); })
+      .catch(() => this.setState({fileReady: false}));
+  }
+
+  notify(payload) {
+    // [Placeholder: set the endpoint to CareOrbit's live form-relay (e.g. Formspree or an internal
+    // endpoint) so submissions email the team. Until then requests are stored locally only.]
+    const endpoint = this.props.notifyEndpoint ?? "";
+    if (!endpoint) return Promise.resolve();
+    return fetch(endpoint, {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
+      body: JSON.stringify(payload)
+    }).catch(() => {});
+  }
+
+  submit = () => {
+    const s = this.state;
+    // Spam guards: honeypot, minimum time on form, throttle per browser
+    if (s.website) return; // honeypot filled: silently drop
+    if (Date.now() - s.openedAt < 3000) { this.setState({error: "Please take a moment to review your details, then submit again."}); return; }
+    try { if (localStorage.getItem("co-req-throttle") && Date.now() - Number(localStorage.getItem("co-req-throttle")) < 30000) { this.setState({error: "You just sent a request. Give it a moment before sending another."}); return; } } catch (e) {}
+    const first = s.first.trim(), last = s.last.trim(), org = s.org.trim(), email = s.email.trim();
+    if (!first || !last || !org) { this.setState({error: "Please fill in your first name, last name, and organization."}); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { this.setState({error: "Please enter a valid business email address."}); return; }
+    const domain = email.split("@")[1].toLowerCase();
+    if (["gmail.com","yahoo.com","hotmail.com","outlook.com","aol.com","icloud.com","proton.me","protonmail.com","mail.com","gmx.com"].includes(domain)) {
+      this.setState({error: "Please use your business email address rather than a personal one."}); return;
+    }
+    const payload = {
+      subject: "Website request: " + (this.props.heading ?? "document"),
+      requested: this.props.file ?? this.props.heading ?? "document",
+      page: location.pathname.split("/").pop(),
+      firstName: first, lastName: last, organization: org, email: email, jobTitle: s.title.trim(),
+      submittedAt: new Date().toISOString()
+    };
+    this.notify(payload);
+    try {
+      localStorage.setItem("co-doc-" + (this.props.file || "doc"), email);
+      localStorage.setItem("co-req-throttle", String(Date.now()));
+    } catch (e) {}
+    this.setState({sent: true, error: ""});
+  };
+
+  renderVals() {
+    const sent = this.state.sent;
+    return {
+      label: this.props.label ?? "Request a copy",
+      heading: this.props.heading ?? "Request a copy",
+      blurb: this.props.blurb ?? "Tell us who you are and we will send you the full document.",
+      file: this.props.file ?? "",
+      downloadLabel: this.props.downloadLabel ?? "Download the PDF",
+      submitLabel: this.props.submitLabel ?? "Submit request",
+      doneHeading: this.state.first.trim() ? "Thank you, " + this.state.first.trim() + ". Your copy is ready" : "Thank you, your copy is ready",
+      isOpen: this.state.open,
+      showForm: this.state.open && !sent,
+      showDone: this.state.open && sent && this.state.fileReady,
+      showPending: this.state.open && sent && !this.state.fileReady,
+      first: this.state.first, last: this.state.last, org: this.state.org, email: this.state.email, title: this.state.title, website: this.state.website,
+      error: this.state.error,
+      open: () => this.setState(s => ({open: !s.open, openedAt: s.open ? s.openedAt : Date.now()})),
+      onFirst: (e) => this.setState({first: e.target.value, error: ""}),
+      onLast: (e) => this.setState({last: e.target.value, error: ""}),
+      onOrg: (e) => this.setState({org: e.target.value, error: ""}),
+      onEmail: (e) => this.setState({email: e.target.value, error: ""}),
+      onTitle: (e) => this.setState({title: e.target.value, error: ""}),
+      onWebsite: (e) => this.setState({website: e.target.value}),
+      submit: this.submit,
+      reset: () => {
+        try { localStorage.removeItem("co-doc-" + (this.props.file || "doc")); } catch (e) {}
+        this.setState({sent: false, error: "", openedAt: Date.now()});
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

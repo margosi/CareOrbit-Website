@@ -1,0 +1,3171 @@
+{
+  "actual_screenshots": 145,
+  "base_url": "http://localhost:8000/v2-maven/",
+  "captured_at": "2026-09-21T02:30:57.887691+00:00",
+  "expected_screenshots": 145,
+  "failures": [],
+  "pages": {
+    "About": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 451970,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20p.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/About.png",
+        "full_page_height": 3004,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/About.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 450863,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20p.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/About.png",
+        "full_page_height": 2517,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/About.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 459906,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20p.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1440px/About.png",
+        "full_page_height": 2517,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/About.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 419782,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20p.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/About.png",
+        "full_page_height": 4525,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/About.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 422322,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20p.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/About.png",
+        "full_page_height": 3031,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/About.dc.html"
+      }
+    },
+    "AssessPage": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1917379,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/AssessPage.png",
+        "full_page_height": 8050,
+        "images": 2,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/AssessPage.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 2272835,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/AssessPage.png",
+        "full_page_height": 7494,
+        "images": 2,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/AssessPage.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2429636,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1440px/AssessPage.png",
+        "full_page_height": 7317,
+        "images": 2,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/AssessPage.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1481403,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/AssessPage.png",
+        "full_page_height": 13934,
+        "images": 2,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/AssessPage.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1951489,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/AssessPage.png",
+        "full_page_height": 10338,
+        "images": 2,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/AssessPage.dc.html"
+      }
+    },
+    "Bariatrics": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1625521,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/Bariatrics.png",
+        "full_page_height": 7162,
+        "images": 1,
+        "reveal_elements": 13,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Bariatrics.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1865108,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/Bariatrics.png",
+        "full_page_height": 6556,
+        "images": 1,
+        "reveal_elements": 13,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Bariatrics.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1967398,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/Bariatrics.png",
+        "full_page_height": 6643,
+        "images": 1,
+        "reveal_elements": 13,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Bariatrics.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1408571,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/Bariatrics.png",
+        "full_page_height": 11767,
+        "images": 1,
+        "reveal_elements": 13,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Bariatrics.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1830731,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/Bariatrics.png",
+        "full_page_height": 9005,
+        "images": 1,
+        "reveal_elements": 13,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Bariatrics.dc.html"
+      }
+    },
+    "BehavioralHealth": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1752000,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/BehavioralHealth.png",
+        "full_page_height": 8274,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralHealth.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1960422,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/BehavioralHealth.png",
+        "full_page_height": 7602,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralHealth.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2053555,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/BehavioralHealth.png",
+        "full_page_height": 7688,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralHealth.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1517573,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/BehavioralHealth.png",
+        "full_page_height": 13721,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralHealth.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1925507,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/BehavioralHealth.png",
+        "full_page_height": 10375,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralHealth.dc.html"
+      }
+    },
+    "BehavioralSafety": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1849734,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/BehavioralSafety.png",
+        "full_page_height": 7396,
+        "images": 1,
+        "reveal_elements": 10,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralSafety.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 2159430,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/BehavioralSafety.png",
+        "full_page_height": 6698,
+        "images": 1,
+        "reveal_elements": 10,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralSafety.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2278470,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1440px/BehavioralSafety.png",
+        "full_page_height": 6712,
+        "images": 1,
+        "reveal_elements": 10,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralSafety.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1593911,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/BehavioralSafety.png",
+        "full_page_height": 12821,
+        "images": 1,
+        "reveal_elements": 10,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralSafety.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 2040084,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/BehavioralSafety.png",
+        "full_page_height": 9210,
+        "images": 1,
+        "reveal_elements": 10,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BehavioralSafety.dc.html"
+      }
+    },
+    "BookACall": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 185900,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20calendlyUrl%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1024px/BookACall.png",
+        "full_page_height": 1353,
+        "images": 1,
+        "reveal_elements": 1,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BookACall.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 189205,
+        "console_errors": [],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20calendlyUrl%20%7D%7D"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20calendlyUrl%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1280px/BookACall.png",
+        "full_page_height": 1281,
+        "images": 1,
+        "reveal_elements": 1,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BookACall.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 194242,
+        "console_errors": [],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20calendlyUrl%20%7D%7D"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20calendlyUrl%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1440px/BookACall.png",
+        "full_page_height": 1281,
+        "images": 1,
+        "reveal_elements": 1,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BookACall.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 159078,
+        "console_errors": [],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20calendlyUrl%20%7D%7D"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20calendlyUrl%20%7D%7D"
+          }
+        ],
+        "file": "baseline/390px/BookACall.png",
+        "full_page_height": 2121,
+        "images": 1,
+        "reveal_elements": 1,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BookACall.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 173728,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20calendlyUrl%20%7D%7D"
+          }
+        ],
+        "file": "baseline/768px/BookACall.png",
+        "full_page_height": 1836,
+        "images": 1,
+        "reveal_elements": 1,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/BookACall.dc.html"
+      }
+    },
+    "CapturePage": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1449906,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/CapturePage.png",
+        "full_page_height": 6806,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CapturePage.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1629629,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/CapturePage.png",
+        "full_page_height": 6535,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CapturePage.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1725901,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1440px/CapturePage.png",
+        "full_page_height": 6445,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CapturePage.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1073533,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/CapturePage.png",
+        "full_page_height": 11306,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CapturePage.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1351631,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/CapturePage.png",
+        "full_page_height": 8539,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CapturePage.dc.html"
+      }
+    },
+    "Cardiology": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1661068,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/Cardiology.png",
+        "full_page_height": 7323,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Cardiology.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1899306,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/Cardiology.png",
+        "full_page_height": 6665,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Cardiology.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1996361,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/Cardiology.png",
+        "full_page_height": 6751,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Cardiology.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1460014,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/Cardiology.png",
+        "full_page_height": 12568,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Cardiology.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1936158,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/Cardiology.png",
+        "full_page_height": 9333,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Cardiology.dc.html"
+      }
+    },
+    "CommunityResearch": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1785585,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/CommunityResearch.png",
+        "full_page_height": 7451,
+        "images": 1,
+        "reveal_elements": 12,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CommunityResearch.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 2027734,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/CommunityResearch.png",
+        "full_page_height": 7053,
+        "images": 1,
+        "reveal_elements": 12,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CommunityResearch.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2127879,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1440px/CommunityResearch.png",
+        "full_page_height": 7101,
+        "images": 1,
+        "reveal_elements": 12,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CommunityResearch.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1576500,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/CommunityResearch.png",
+        "full_page_height": 13001,
+        "images": 1,
+        "reveal_elements": 12,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CommunityResearch.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 2039586,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/CommunityResearch.png",
+        "full_page_height": 9689,
+        "images": 1,
+        "reveal_elements": 12,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/CommunityResearch.dc.html"
+      }
+    },
+    "DataPage": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1282292,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/DataPage.png",
+        "full_page_height": 6330,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/DataPage.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1522205,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/DataPage.png",
+        "full_page_height": 6087,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/DataPage.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1600811,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1440px/DataPage.png",
+        "full_page_height": 6011,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/DataPage.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 993110,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/DataPage.png",
+        "full_page_height": 10453,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/DataPage.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1254625,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/DataPage.png",
+        "full_page_height": 7915,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/DataPage.dc.html"
+      }
+    },
+    "EScreeningResults": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1139161,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-VA-eScreening-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/EScreeningResults.png",
+        "full_page_height": 5524,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EScreeningResults.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1246044,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-VA-eScreening-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/EScreeningResults.png",
+        "full_page_height": 5025,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EScreeningResults.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1294593,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-VA-eScreening-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/EScreeningResults.png",
+        "full_page_height": 5058,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EScreeningResults.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 995107,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-VA-eScreening-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/EScreeningResults.png",
+        "full_page_height": 9434,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EScreeningResults.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1190320,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-VA-eScreening-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/EScreeningResults.png",
+        "full_page_height": 7076,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EScreeningResults.dc.html"
+      }
+    },
+    "EngagePage": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1606818,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/EngagePage.png",
+        "full_page_height": 7324,
+        "images": 1,
+        "reveal_elements": 7,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EngagePage.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1902648,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/EngagePage.png",
+        "full_page_height": 6796,
+        "images": 1,
+        "reveal_elements": 7,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EngagePage.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2024079,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1440px/EngagePage.png",
+        "full_page_height": 6650,
+        "images": 1,
+        "reveal_elements": 7,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EngagePage.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1253148,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/EngagePage.png",
+        "full_page_height": 12219,
+        "images": 1,
+        "reveal_elements": 7,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EngagePage.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1594520,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/EngagePage.png",
+        "full_page_height": 9157,
+        "images": 1,
+        "reveal_elements": 7,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/EngagePage.dc.html"
+      }
+    },
+    "Home": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 4063431,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20g.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1024px/Home.png",
+        "full_page_height": 6846,
+        "images": 6,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Home.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 4813586,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20g.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/Home.png",
+        "full_page_height": 6644,
+        "images": 6,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Home.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 5224438,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20g.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20g.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1440px/Home.png",
+        "full_page_height": 6799,
+        "images": 6,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Home.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1697228,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20g.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/Home.png",
+        "full_page_height": 9532,
+        "images": 6,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Home.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 2681614,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20g.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/Home.png",
+        "full_page_height": 7530,
+        "images": 6,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Home.dc.html"
+      }
+    },
+    "Login": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 39979,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1024px/Login.png",
+        "full_page_height": 900,
+        "images": 1,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Login.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 41233,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1280px/Login.png",
+        "full_page_height": 900,
+        "images": 1,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Login.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 42336,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1440px/Login.png",
+        "full_page_height": 900,
+        "images": 1,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Login.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 36052,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/390px/Login.png",
+        "full_page_height": 900,
+        "images": 1,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Login.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 39056,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/768px/Login.png",
+        "full_page_height": 900,
+        "images": 1,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Login.dc.html"
+      }
+    },
+    "MedicationTherapy": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1839896,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/MedicationTherapy.png",
+        "full_page_height": 8294,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/MedicationTherapy.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 2072834,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/MedicationTherapy.png",
+        "full_page_height": 7657,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/MedicationTherapy.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2169048,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/MedicationTherapy.png",
+        "full_page_height": 7739,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/MedicationTherapy.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1596614,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/MedicationTherapy.png",
+        "full_page_height": 13860,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/MedicationTherapy.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 2066502,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/MedicationTherapy.png",
+        "full_page_height": 10423,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/MedicationTherapy.dc.html"
+      }
+    },
+    "Oncology": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1686331,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/Oncology.png",
+        "full_page_height": 7781,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Oncology.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1924623,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/Oncology.png",
+        "full_page_height": 7039,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Oncology.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2019004,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/Oncology.png",
+        "full_page_height": 7124,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Oncology.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1476661,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/Oncology.png",
+        "full_page_height": 13358,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Oncology.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1921649,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/Oncology.png",
+        "full_page_height": 9796,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Oncology.dc.html"
+      }
+    },
+    "Orthopedics": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1713473,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/Orthopedics.png",
+        "full_page_height": 7904,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Orthopedics.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 2005056,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/Orthopedics.png",
+        "full_page_height": 7122,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Orthopedics.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2113174,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/Orthopedics.png",
+        "full_page_height": 7209,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Orthopedics.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1501598,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/Orthopedics.png",
+        "full_page_height": 13410,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Orthopedics.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1919840,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/Orthopedics.png",
+        "full_page_height": 9816,
+        "images": 1,
+        "reveal_elements": 14,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Orthopedics.dc.html"
+      }
+    },
+    "Outcomes": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1480977,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20st.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/Outcomes.png",
+        "full_page_height": 3555,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Outcomes.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1689498,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20st.src%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1280px/Outcomes.png",
+        "full_page_height": 3363,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Outcomes.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1786774,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20st.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1440px/Outcomes.png",
+        "full_page_height": 3363,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Outcomes.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1134337,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20st.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/Outcomes.png",
+        "full_page_height": 5981,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Outcomes.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1344179,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20st.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20e.src%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/Outcomes.png",
+        "full_page_height": 4270,
+        "images": 1,
+        "reveal_elements": 8,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Outcomes.dc.html"
+      }
+    },
+    "Platform": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 3141313,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20c.img%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20tab.img%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1024px/Platform.png",
+        "full_page_height": 6162,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Platform.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 4204441,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20c.img%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20tab.img%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1280px/Platform.png",
+        "full_page_height": 6120,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Platform.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 5084682,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20c.img%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20tab.img%20%7D%7D"
+          }
+        ],
+        "file": "baseline/1440px/Platform.png",
+        "full_page_height": 6589,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Platform.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1993229,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20c.img%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20tab.img%20%7D%7D"
+          }
+        ],
+        "file": "baseline/390px/Platform.png",
+        "full_page_height": 8632,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Platform.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 2919879,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)",
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20c.img%20%7D%7D"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/%7B%7B%20tab.img%20%7D%7D"
+          }
+        ],
+        "file": "baseline/768px/Platform.png",
+        "full_page_height": 6384,
+        "images": 1,
+        "reveal_elements": 9,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Platform.dc.html"
+      }
+    },
+    "Pricing": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 322179,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1024px/Pricing.png",
+        "full_page_height": 2172,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Pricing.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 315534,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1280px/Pricing.png",
+        "full_page_height": 2080,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Pricing.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 323206,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1440px/Pricing.png",
+        "full_page_height": 2080,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Pricing.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 308511,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/390px/Pricing.png",
+        "full_page_height": 4179,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Pricing.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 331696,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/768px/Pricing.png",
+        "full_page_height": 3638,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/Pricing.dc.html"
+      }
+    },
+    "PricingAssess": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 301031,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1024px/PricingAssess.png",
+        "full_page_height": 1991,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingAssess.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 292823,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1280px/PricingAssess.png",
+        "full_page_height": 1914,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingAssess.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 299355,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1440px/PricingAssess.png",
+        "full_page_height": 1914,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingAssess.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 282194,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/390px/PricingAssess.png",
+        "full_page_height": 3755,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingAssess.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 303331,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/768px/PricingAssess.png",
+        "full_page_height": 3251,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingAssess.dc.html"
+      }
+    },
+    "PricingCapture": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 378621,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1024px/PricingCapture.png",
+        "full_page_height": 2344,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingCapture.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 370019,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1280px/PricingCapture.png",
+        "full_page_height": 2186,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingCapture.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 379526,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1440px/PricingCapture.png",
+        "full_page_height": 2186,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingCapture.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 358801,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/390px/PricingCapture.png",
+        "full_page_height": 4428,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingCapture.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 378322,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/768px/PricingCapture.png",
+        "full_page_height": 3595,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingCapture.dc.html"
+      }
+    },
+    "PricingData": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 344092,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1024px/PricingData.png",
+        "full_page_height": 2168,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingData.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 348653,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1280px/PricingData.png",
+        "full_page_height": 2098,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingData.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 356519,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1440px/PricingData.png",
+        "full_page_height": 2098,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingData.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 324729,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/390px/PricingData.png",
+        "full_page_height": 4070,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingData.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 345342,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/768px/PricingData.png",
+        "full_page_height": 3299,
+        "images": 1,
+        "reveal_elements": 3,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PricingData.dc.html"
+      }
+    },
+    "PrimaryCare": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1711343,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/PrimaryCare.png",
+        "full_page_height": 7795,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PrimaryCare.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1927443,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/PrimaryCare.png",
+        "full_page_height": 6886,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PrimaryCare.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2079285,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/PrimaryCare.png",
+        "full_page_height": 6974,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PrimaryCare.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1507415,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/PrimaryCare.png",
+        "full_page_height": 13142,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PrimaryCare.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1965208,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/PrimaryCare.png",
+        "full_page_height": 9789,
+        "images": 1,
+        "reveal_elements": 15,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PrimaryCare.dc.html"
+      }
+    },
+    "PritikinPilot": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 939615,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/PritikinPilot.png",
+        "full_page_height": 4908,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PritikinPilot.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1038295,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/PritikinPilot.png",
+        "full_page_height": 4555,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PritikinPilot.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1088240,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/PritikinPilot.png",
+        "full_page_height": 4588,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PritikinPilot.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 830422,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/PritikinPilot.png",
+        "full_page_height": 8307,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PritikinPilot.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1011133,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Pritikin-Pilot-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/PritikinPilot.png",
+        "full_page_height": 6053,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/PritikinPilot.dc.html"
+      }
+    },
+    "SitemanStudy": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1082121,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/SitemanStudy.png",
+        "full_page_height": 5526,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SitemanStudy.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1161867,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/SitemanStudy.png",
+        "full_page_height": 4947,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SitemanStudy.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1210665,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/SitemanStudy.png",
+        "full_page_height": 5010,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SitemanStudy.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 950555,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/SitemanStudy.png",
+        "full_page_height": 9475,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SitemanStudy.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1139882,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/SitemanStudy.png",
+        "full_page_height": 7235,
+        "images": 1,
+        "reveal_elements": 16,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SitemanStudy.dc.html"
+      }
+    },
+    "SurgicalSupport": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1847012,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1024px/SurgicalSupport.png",
+        "full_page_height": 8428,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SurgicalSupport.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 2081609,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1280px/SurgicalSupport.png",
+        "full_page_height": 7698,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SurgicalSupport.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 2174766,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/1440px/SurgicalSupport.png",
+        "full_page_height": 7811,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SurgicalSupport.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1622904,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/390px/SurgicalSupport.png",
+        "full_page_height": 14516,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SurgicalSupport.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 2065246,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          },
+          {
+            "failure": "net::ERR_ABORTED",
+            "url": "http://localhost:8000/v2-maven/CareOrbit-Siteman-Study-Report.pdf"
+          }
+        ],
+        "file": "baseline/768px/SurgicalSupport.png",
+        "full_page_height": 10701,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/SurgicalSupport.dc.html"
+      }
+    },
+    "ThankYou": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 156640,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1024px/ThankYou.png",
+        "full_page_height": 1184,
+        "images": 2,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/ThankYou.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 157312,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1280px/ThankYou.png",
+        "full_page_height": 1163,
+        "images": 2,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/ThankYou.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 161589,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/1440px/ThankYou.png",
+        "full_page_height": 1163,
+        "images": 2,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/ThankYou.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 128903,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/390px/ThankYou.png",
+        "full_page_height": 1522,
+        "images": 2,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/ThankYou.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 145970,
+        "console_errors": [],
+        "failed_requests": [],
+        "file": "baseline/768px/ThankYou.png",
+        "full_page_height": 1294,
+        "images": 2,
+        "reveal_elements": 0,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/ThankYou.dc.html"
+      }
+    },
+    "WomensHealth": {
+      "1024px": {
+        "broken_images": [],
+        "bytes": 1757990,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1024px/WomensHealth.png",
+        "full_page_height": 9216,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/WomensHealth.dc.html"
+      },
+      "1280px": {
+        "broken_images": [],
+        "bytes": 1873455,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1280px/WomensHealth.png",
+        "full_page_height": 8430,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/WomensHealth.dc.html"
+      },
+      "1440px": {
+        "broken_images": [],
+        "bytes": 1940068,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/1440px/WomensHealth.png",
+        "full_page_height": 8511,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/WomensHealth.dc.html"
+      },
+      "390px": {
+        "broken_images": [],
+        "bytes": 1579592,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/390px/WomensHealth.png",
+        "full_page_height": 16215,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/WomensHealth.dc.html"
+      },
+      "768px": {
+        "broken_images": [],
+        "bytes": 1824144,
+        "console_errors": [
+          "Failed to load resource: the server responded with a status of 404 (File not found)"
+        ],
+        "failed_requests": [
+          {
+            "status": 404,
+            "url": "http://localhost:8000/v2-maven/.image-slots.state.json"
+          }
+        ],
+        "file": "baseline/768px/WomensHealth.png",
+        "full_page_height": 11598,
+        "images": 1,
+        "reveal_elements": 17,
+        "reveal_still_hidden": 0,
+        "status": 200,
+        "url": "http://localhost:8000/v2-maven/WomensHealth.dc.html"
+      }
+    }
+  },
+  "passed": true,
+  "widths": [
+    1440,
+    1280,
+    1024,
+    768,
+    390
+  ]
+}

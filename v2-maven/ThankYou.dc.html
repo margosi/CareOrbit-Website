@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}
+@keyframes coPop{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4;min-height:100vh;display:flex;flex-direction:column">
+<dc-import name="SiteNav" active="book" announce="{{ false }}" hint-size="100%,80px"></dc-import>
+<div style="max-width:720px;margin:0 auto;padding:96px 28px;display:flex;flex-direction:column;gap:22px;align-items:center;text-align:center;flex:1;animation:coPop .7s cubic-bezier(.16,1,.3,1)">
+  <img src="careorbit-logo-nav2.png" alt="CareOrbit" style="height:60px;width:auto">
+  <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:48px;line-height:1.08;letter-spacing:-0.025em;margin:0;text-wrap:pretty">You're <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">booked</em>.</h1>
+  <p style="font-size:16.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:520px;text-wrap:pretty">A confirmation is on its way to your email. We'll do our homework on your organization before the call, and you'll leave it with a one-page summary of what an orbit would target for you.</p>
+  <div style="display:flex;gap:14px;margin-top:8px;flex-wrap:wrap;justify-content:center">
+    <a href="{{ orbitFile }}" style="text-decoration:none;font-size:15px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:15px 28px;border-radius:999px;transition:background .2s" style-hover="background:#E3735C;color:#FFFFFF">{{ orbitCta }}</a>
+    <a href="Platform.dc.html" style="text-decoration:none;font-size:15px;font-weight:600;color:#0F1D2E;padding:15px 24px;border-radius:999px;border:1.5px solid rgba(15,29,46,.2)" style-hover="border-color:#0F1D2E;color:#0F1D2E">How the platform works</a>
+  </div>
+  <div style="font-size:13.5px;color:rgba(15,29,46,.55);margin-top:6px">Want the overview now? <a href="sheets/careorbit-platform-2-page.pdf" download="" style="font-weight:600">Download the platform info sheet</a></div>
+</div>
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const line = new URLSearchParams(window.location.search).get("line") || "";
+    const files = {"Oncology": "Oncology.dc.html", "Cardiology": "Cardiology.dc.html", "Orthopedics": "Orthopedics.dc.html", "Women's Health": "WomensHealth.dc.html", "Bariatrics": "Bariatrics.dc.html", "Behavioral Health": "BehavioralHealth.dc.html", "Medication Therapy & Adherence": "MedicationTherapy.dc.html"};
+    const file = files[line];
+    return {
+      orbitFile: file || "Home.dc.html#orbit-grid",
+      orbitCta: file ? "Explore the " + line + " orbit while you wait" : "Browse the orbits while you wait"
+    };
+  }
+}
+</script>
+</body>
+</html>

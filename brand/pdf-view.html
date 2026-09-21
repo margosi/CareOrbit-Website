@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><style>body{margin:0;background:#fff}canvas{display:block;width:100%}</style></head><body>
+<div id="c"></div>
+<script type="module">
+import { PDFParse } from 'https://cdn.jsdelivr.net/npm/pdf-parse@2.4.5/dist/pdf-parse/web/pdf-parse.es.js';
+PDFParse.setWorker('https://cdn.jsdelivr.net/npm/pdf-parse@2.4.5/dist/pdf-parse/web/pdf.worker.min.mjs');
+const params = new URLSearchParams(location.search);
+const file = params.get('f') || '../uploads/CareOrbit_BrandGuide_7_5_2026.pdf';
+const buf = await (await fetch(file)).arrayBuffer();
+const parser = new PDFParse({ data: new Uint8Array(buf) });
+const res = await parser.getScreenshot({ scale: 1.6 });
+for (const p of res.pages) {
+  const img = new Image(); img.src = p.dataUrl; img.style.width='100%'; img.style.display='block';
+  document.getElementById('c').appendChild(img);
+}
+window.__done = true;
+</script>
+</body></html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+@media(max-width:1020px){[data-two]{grid-template-columns:1fr!important;gap:32px!important}[data-hdr]{grid-template-columns:1fr!important;gap:26px!important}[data-value]{grid-template-columns:1fr!important;gap:34px!important}[data-povrow]{grid-template-columns:1fr!important;gap:12px!important}[data-three]{grid-template-columns:1fr!important}[data-costgrid]{grid-template-columns:1fr 1fr!important}[data-start]{grid-template-columns:1fr!important;gap:24px!important}[data-start]>a,[data-start]>button,[data-start]>div{justify-self:start}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}[data-costgrid]{grid-template-columns:1fr!important}}
+@media(max-width:820px){[data-study]{grid-template-columns:1fr!important;gap:28px!important}}
+@media print{
+  @page{size:letter portrait;margin:0.5in}
+  body{background:#FFFFFF!important}
+  body.co-printing > *:not(#print-only){display:none!important}
+  #print-only{display:block!important;position:static!important;page-break-after:avoid;page-break-inside:avoid;break-inside:avoid}
+  #print-only *{page-break-inside:avoid;break-inside:avoid}
+  [data-print-hide]{display:none!important}
+}
+#print-only{display:none}
+#roi-calculator input::placeholder{color:rgba(15,29,46,.34);font-weight:400;font-style:italic}
+@media(max-width:760px){#roi-calculator [data-hdr]{padding-right:0!important;padding-top:44px!important}}
+@media(max-width:1020px){[data-calc-out]{grid-template-columns:1fr!important;gap:24px!important}[data-calc-total]{grid-template-columns:1fr!important;gap:20px!important}}
+@media(max-width:640px){[data-calc-grid]{grid-template-columns:1fr!important}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="behavioral-safety" hint-size="100%,120px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:76px 28px 96px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center" data-two>
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="display:flex;align-items:center;gap:8px;background:#0F3D2E;border-radius:8px;padding:7px 13px"><span style="width:8px;height:8px;border-radius:50%;background:#5CE8A4"></span><span style="font-size:11.5px;font-weight:700;letter-spacing:.08em;color:#FFFFFF">NEW</span></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A6516">Behavioral Risk</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">The most dangerous risk on the jobsite is the one <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">nobody reports</em>.</h1>
+    <p style="font-size:17.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:640px;text-wrap:pretty">High-risk industries have spent decades engineering physical safety. Behavioral risk has not had the same infrastructure. CareOrbit delivers a private, mobile orbit to every worker: what to watch for, where to get help, and a way to reach it without going through a supervisor.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px">
+      <a href="BookACall.dc.html?src=behavioral-safety" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 30px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;transform:translateY(-2px)">Book a 20-minute intro call</a>
+      <a href="#how" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:1px solid rgba(15,29,46,.12);padding:16px 30px;border-radius:999px;transition:border-color .2s" style-hover="border-color:#0F1D2E">How it works in the field</a>
+    </div>
+  </div>
+  <div style="min-width:0"><image-slot id="safety-hero" radius="32" src="images/offering-behavioral-safety.png" placeholder="[Placeholder: field worker photo]" style="display:block;width:100%;height:clamp(320px,30vw,440px)"></image-slot></div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 52px">
+  <div data-rv data-start style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 32px;align-items:center;border-top:1px solid rgba(15,29,46,.14);border-bottom:1px solid rgba(15,29,46,.14);padding:22px 0">
+    <div style="display:flex;gap:34px;align-items:baseline">
+      <button onClick="{{ setEmployers }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ empFg }}">For employers<sc-if value="{{ empOn }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ setAssociations }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ assocFg }}">For associations<sc-if value="{{ assocOn }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+    </div>
+    <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.66);max-width:640px;text-wrap:pretty">{{ audLine }}</div>
+  </div>
+</div>
+
+<div id="how" style="max-width:1220px;margin:0 auto;padding:0 28px 40px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px;text-wrap:balance">A private support guide every worker keeps, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">long before a crisis</em>.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:600px;text-wrap:pretty">Your resources and your language, reaching the field the way safety already does. Alongside the toolbox talk and the benefits packet, an orbit adds a consumer-grade digital mentor: short video, plain-language guidance, and text outreach that keeps a worker informed and one tap from help.</p>
+      <p style="font-size:16px;line-height:1.65;color:rgba(15,29,46,.6);margin:0;max-width:600px;text-wrap:pretty">No app, no account, and no supervisor in the middle. A worker orbit is private to the worker; leaders see aggregate reach only.</p>
+    </div>
+  </div>
+
+  <div data-rv data-value style="display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:60px;align-items:start">
+    <div style="position:relative;min-width:0">
+      <image-slot id="safety-crew" radius="28" src="safety-toolbox-talk.png" placeholder="[Placeholder: crew toolbox talk photo, vertical crop]" style="display:block;width:100%;height:clamp(420px,42vw,600px)"></image-slot>
+      <div style="margin-top:16px;font-size:13px;line-height:1.55;color:rgba(15,29,46,.5);max-width:300px;text-wrap:pretty">One orbit, issued once, working for the worker, the crew, and the company at the same time.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;min-width:0">
+      <sc-for list="{{ pov }}" as="p" hint-placeholder-count="3">
+        <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ p.label }}">{{ p.kicker }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ p.t }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ p.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div data-rv style="display:flex;flex-direction:column;margin-top:14px">
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="5">
+      <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ r.label }}">{{ r.kicker }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ r.t }}</div>
+          <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">{{ r.sub }}</div>
+        </div>
+        <sc-if value="{{ r.plain }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ r.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ r.seq }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:2px;padding-top:2px">
+            <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:6px;align-self:stretch">
+                  <span style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid {{ it.cBorder }};background:{{ it.cBg }};font-family:Lato,sans-serif;font-weight:700;font-size:12.5px;color:{{ it.cFg }};flex-shrink:0">{{ it.v }}</span>
+                  <sc-if value="{{ it.line }}" hint-placeholder-val="{{ true }}">
+                    <span style="flex:1;width:1px;background:linear-gradient({{ it.cLine }},rgba(79,179,191,.12))"></span>
+                  </sc-if>
+                </div>
+                <div style="padding-bottom:22px;display:flex;flex-direction:column;gap:3px;min-width:0">
+                  <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+                    <span style="font-family:Lato,sans-serif;font-weight:700;font-size:17px;letter-spacing:-0.01em;color:#0F1D2E">{{ it.t }}</span>
+                    <span style="font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:{{ it.cFg }}">{{ it.tag }}</span>
+                  </div>
+                  <div style="font-size:15px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it.d }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(15,29,46,.14);padding-top:20px;font-size:13.5px;line-height:1.6;color:rgba(15,29,46,.55);max-width:760px;text-wrap:pretty">CareOrbit is not a crisis line and does not replace emergency services. Orbits route workers to the crisis and clinical resources your organization designates. Engagement is reported in aggregate only, never by individual.</div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 88px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px;display:flex;flex-direction:column;gap:44px">
+    <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E9C46A">The exposure</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">The risk is <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#E9C46A">already measured</em>. The response is not.</h2>
+      </div>
+      <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">Published federal data on the trades, not CareOrbit projections. Every figure is an industry rate describing the exposure an orbit is built to reach, and every one of them turns on whether a worker knew what to watch for and had a private way to ask for help.</p>
+    </div>
+    <div style="border-top:1px solid #2D5A87;padding-top:26px;display:flex;flex-direction:column;gap:6px">
+      <div style="font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#E9C46A">What the gap costs</div>
+      <div style="font-size:16.5px;line-height:1.6;color:#B9C8D8;max-width:900px;text-wrap:pretty">None of this is decided in a benefits meeting. It is decided on the drive home, in the truck, and on the shifts between toolbox talks, where the company has almost no presence.</div>
+    </div>
+    <div data-stat5 style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;align-items:stretch;margin-top:-14px">
+      <sc-for list="{{ numbers }}" as="n" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #E9C46A;padding-top:18px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.2vw,44px);letter-spacing:-0.04em;line-height:1;color:#FFFFFF">{{ n.v }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#E9C46A;line-height:1.35">{{ n.t }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ n.d }}</div>
+          <div style="margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#7E93AB">{{ n.src }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin:0;font-size:13.5px;line-height:1.6;color:#7E93AB;max-width:900px;text-wrap:pretty">CareOrbit has no published behavioral risk outcome data. [Placeholder: program engagement and outcome figures once a first employer deployment is measured.] Rates vary by trade, region, and employer; bring your own figures and we will work from those.</p>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">{{ finKicker }}</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">{{ finHeadA }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">{{ finHeadEm }}</em>.</h2>
+    </div>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">{{ finIntro }}</p>
+  </div>
+  <div data-rv data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;border-top:1px solid rgba(15,29,46,.14);padding:30px 0 34px" >
+    <div style="display:flex;flex-direction:column;gap:7px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A8412F">Where it lands</div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">Six places behavioral risk shows up on the books</div>
+      <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">Published construction industry figures, not CareOrbit outcomes. Your own loss runs will differ.</div>
+    </div>
+    <div data-costgrid style="display:grid;grid-template-columns:1fr 1fr;gap:0 40px">
+      <sc-for list="{{ impact }}" as="im" hint-placeholder-count="6">
+        <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(15,29,46,.1)">
+          <span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:13.5px;color:#E3735C">{{ im.i }}</span>
+          <div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+            <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16px;line-height:1.25;letter-spacing:-0.01em;color:#0F1D2E">{{ im.t }}</div>
+            <div style="font-size:13.5px;line-height:1.55;color:rgba(15,29,46,.66);text-wrap:pretty">{{ im.d }}</div>
+            <div style="margin-top:3px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(15,29,46,.72)">{{ im.src }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:56px 48px;display:flex;flex-direction:column;gap:34px">
+    <div data-three style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px">
+      <sc-for list="{{ roi }}" as="r" hint-placeholder-count="2">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #E9C46A;padding-top:18px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.2vw,42px);line-height:1;letter-spacing:-0.04em;color:#FFFFFF">{{ r.v }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#E9C46A;line-height:1.35">{{ r.t }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ r.d }}</div>
+          <div style="margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#7E93AB">{{ r.src }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="border-top:1px solid #2D5A87;padding-top:26px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 40px;align-items:center" data-start>
+      <div style="font-size:15.5px;line-height:1.6;color:#B9C8D8;max-width:620px;text-wrap:pretty">{{ calcInvite }}</div>
+      <button onClick="{{ toggleCalc }}" style="font-family:Inter,sans-serif;align-self:flex-start;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:14px 26px;border-radius:999px;margin-top:14px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">{{ calcBtn }}</button>
+    </div>
+  </div>
+  <sc-if value="{{ calcOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeCalc }}" style="position:fixed;inset:0;z-index:90;background:rgba(15,29,46,.55);backdrop-filter:blur(6px);display:flex;align-items:flex-start;justify-content:center;padding:5vh 20px;overflow:auto">
+    <div id="roi-calculator" onClick="{{ stopClose }}" style="position:relative;width:100%;max-width:1000px;background:rgba(255,255,255,.9);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.6);box-shadow:0 40px 90px rgba(15,29,46,.35);border-radius:30px;padding:36px;display:flex;flex-direction:column;gap:26px">
+      <div data-print-hide style="position:absolute;top:20px;right:22px;display:flex;gap:10px;align-items:center">
+        <span style="position:relative;display:inline-flex">
+          <button onClick="{{ toggleExport }}" style="font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:1.5px solid rgba(15,29,46,.16);border-radius:999px;padding:9px 18px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background .2s,color .2s,border-color .2s" style-hover="background:#0F1D2E;color:#FFFFFF;border-color:#0F1D2E">Export<span style="font-size:10px;line-height:1">▾</span></button>
+          <sc-if value="{{ exportOpen }}" hint-placeholder-val="{{ false }}">
+            <span style="position:absolute;top:44px;right:0;background:#FFFFFF;border:1px solid rgba(15,29,46,.12);border-radius:14px;box-shadow:0 18px 40px rgba(15,29,46,.18);padding:6px;display:flex;flex-direction:column;min-width:190px;z-index:5">
+              <button onClick="{{ printCalc }}" style="font-family:Inter,sans-serif;text-align:left;font-size:13.5px;font-weight:500;color:#0F1D2E;background:none;border:none;border-radius:9px;padding:11px 12px;cursor:pointer" style-hover="background:#FAF8F4">PDF, one page</button>
+              <button onClick="{{ exportExcel }}" style="font-family:Inter,sans-serif;text-align:left;font-size:13.5px;font-weight:500;color:#0F1D2E;background:none;border:none;border-radius:9px;padding:11px 12px;cursor:pointer" style-hover="background:#FAF8F4">Excel spreadsheet</button>
+            </span>
+          </sc-if>
+        </span>
+        <button onClick="{{ closeCalc }}" aria-label="Close calculator" style="font-family:Inter,sans-serif;font-size:16px;line-height:1;color:#0F1D2E;background:#FFFFFF;border:1.5px solid rgba(15,29,46,.16);border-radius:999px;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s" style-hover="background:#0F1D2E;color:#FFFFFF">×</button>
+      </div>
+      <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;padding-right:200px">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#B0A99E">Run the numbers</div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.02em;line-height:1.2">Put your own workforce in.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <p style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.68);margin:0;text-wrap:pretty">Prefilled with 500 workers and published replacement-cost benchmarks. Replace them with your own figures; the totals update as you type.</p>
+          <div data-print-hide style="display:flex;gap:8px;flex-wrap:wrap">
+            <button onClick="{{ fillBenchmarks }}" style="font-family:Inter,sans-serif;font-size:12.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;border:none;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s" style-hover="background:#E3735C">Load published figures</button>
+            <button onClick="{{ clearCalc }}" style="font-family:Inter,sans-serif;font-size:12.5px;font-weight:600;color:#0F1D2E;background:none;border:1.5px solid rgba(15,29,46,.16);border-radius:999px;padding:9px 16px;cursor:pointer;transition:border-color .2s" style-hover="border-color:#0F1D2E">Clear</button>
+          </div>
+        </div>
+      </div>
+      <div data-calc-grid style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px">
+        <sc-for list="{{ calcFields }}" as="f" hint-placeholder-count="10">
+          <label style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:12.5px;font-weight:600;color:#0F1D2E;line-height:1.3">{{ f.label }}</span>
+            <span style="display:flex;align-items:center;gap:8px;border:1.5px solid rgba(15,29,46,.14);border-radius:12px;padding:0 12px;background:#FAF8F4">
+              <span style="font-size:14px;color:rgba(15,29,46,.7)">{{ f.prefix }}</span>
+              <input type="number" min="0" step="{{ f.step }}" value="{{ f.value }}" placeholder="{{ f.ph }}" onChange="{{ f.onChange }}" style="font-family:Inter,sans-serif;font-size:15px;font-weight:600;color:#0F1D2E;border:none;background:none;outline:none;padding:12px 0;width:100%;min-width:0">
+              <span style="font-size:13px;color:rgba(15,29,46,.7);white-space:nowrap">{{ f.suffix }}</span>
+            </span>
+            <span style="font-size:12px;line-height:1.45;color:rgba(15,29,46,.68)">{{ f.hint }}</span>
+          </label>
+        </sc-for>
+      </div>
+      <div data-calc-out style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid rgba(15,29,46,.12);padding-top:24px">
+        <sc-for list="{{ calcResults }}" as="r" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.4vw,42px);line-height:1;letter-spacing:-0.03em;color:#0F1D2E">{{ r.v }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:700;font-size:15px;line-height:1.25">{{ r.t }}</div>
+            <div style="font-size:12.5px;line-height:1.5;color:rgba(15,29,46,.66)">{{ r.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div data-calc-total style="background:#0F1D2E;border-radius:22px;padding:28px 30px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E9C46A">Total annual opportunity</div>
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(38px,4.6vw,58px);line-height:1;letter-spacing:-0.04em;color:#FFFFFF">{{ calcTotal }}</div>
+          <div style="font-size:12.5px;color:#B9C8D8">{{ calcTotalNote }}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <p style="font-size:13.5px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">This is arithmetic applying the rates you entered to your own headcount and wage, not a CareOrbit performance claim.</p>
+          <a data-print-hide href="BookACall.dc.html?src=behavioral-safety" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:13px 24px;border-radius:999px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">Walk through it with us</a>
+        </div>
+      </div>
+      <div style="font-size:11.5px;line-height:1.5;color:rgba(15,29,46,.6)">Modeled illustration for {{ crewLabel }}. Arithmetic on the inputs above, not a guarantee of results. CareOrbit, careorbit.com</div>
+    </div>
+    </div>
+  </sc-if>
+  <p data-rv style="margin:24px 0 0;font-size:13.5px;line-height:1.6;color:rgba(15,29,46,.52);max-width:940px;text-wrap:pretty">Replacement-cost ranges are published HR benchmarks: SHRM and Gallup put full replacement at 50–200% of annual salary depending on role, and a conservative frontline figure is 30–50% of annual wage. Absence, incident, and claims values are yours; CareOrbit makes no claim about them. [Placeholder: engagement and retention effect of a behavioral risk orbit, to be measured in a first employer deployment.] Every dollar figure here is arithmetic on the assumptions shown, not a CareOrbit performance claim.</p>
+</div>
+
+<div id="cta" style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv data-two style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:72px 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(30px,3.4vw,38px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:pretty">20 minutes. <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#E9C46A">Your</em> crews, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#E9C46A">our</em> platform.</h2>
+      <p style="font-size:15.5px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">{{ ctaLine }}</p>
+      <a href="BookACall.dc.html?src=behavioral-safety" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 28px;border-radius:999px;align-self:flex-start;margin-top:4px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">Book a 20-minute intro call</a>
+    </div>
+    <div style="background:#1E3A5F;border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:19px;color:#FFFFFF">What to bring</div>
+      <sc-for list="{{ bring }}" as="b" hint-placeholder-count="3">
+        <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+          <span style="width:9px;height:1.5px;border-radius:1px;background:#F2B8C6;transform:translateY(-4px)"></span>
+          <div style="font-size:14.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ b }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,480px"></dc-import>
+</div>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0F1D2E"/><circle cx="100" cy="96" r="42" fill="none" stroke="#5B9BEA" stroke-width="7"/><circle cx="142" cy="96" r="10" fill="#E3735C"/><text x="100" y="176" font-family="Lato,sans-serif" font-size="26" font-weight="900" fill="#FAF8F4" text-anchor="middle">BS</text></svg></template>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { aud: "employers", calcOpen: false, exportOpen: false, calc: {headcount: "500", wage: "65000", turnover: "30", turnCut: "2", replCost: "30", absDays: "6", absShare: "20", absCut: "20", claims: "250000", claimsCut: "10"} };
+  renderVals() {
+    const c = this.state.calc;
+    const num = (k) => (isNaN(parseFloat(c[k])) ? 0 : parseFloat(c[k]));
+    const setCalc = (k) => (e) => {
+      let v = e.target.value;
+      if (v !== "" && parseFloat(v) < 0) v = "0";
+      this.setState(st => ({calc: Object.assign({}, st.calc, {[k]: v})}));
+    };
+    const benchmarks = {headcount: "500", wage: "65000", turnover: "30", turnCut: "2", replCost: "30", absDays: "6", absShare: "20", absCut: "20", claims: "250000", claimsCut: "10"};
+    const money = (n) => !n ? "$0" : (n >= 1000000 ? "$" + (n / 1000000).toFixed(2).replace(/\.00$/, "") + "M" : "$" + Math.round(n / 1000).toLocaleString() + "K");
+    const dollars = (n) => "$" + Math.round(n || 0).toLocaleString();
+    const retained = num("headcount") * num("turnCut") / 100;
+    const retentionSavings = retained * num("wage") * num("replCost") / 100;
+    const dayRate = num("wage") ? num("wage") / 250 : 0;
+    const behavioralDays = num("headcount") * num("absDays") * num("absShare") / 100;
+    const daysAvoided = behavioralDays * num("absCut") / 100;
+    const absenceSavings = daysAvoided * dayRate;
+    const claimsSavings = num("claims") * num("claimsCut") / 100;
+    const groupTotal = retentionSavings + absenceSavings + claimsSavings;
+    const calcFields = [
+      {k: "headcount", label: "Field workers in scope", value: c.headcount, ph: "e.g. 500", step: "10", prefix: "", suffix: "workers", hint: "The crews an orbit would be issued to"},
+      {k: "wage", label: "Average annual wage", value: c.wage, ph: "e.g. 65000", step: "1000", prefix: "$", suffix: "", hint: "Loaded wage for the same population"},
+      {k: "turnover", label: "Current annual turnover rate", value: c.turnover, ph: "e.g. 30", step: "1", prefix: "", suffix: "%", hint: "Your own separations figure"},
+      {k: "turnCut", label: "Turnover reduction", value: c.turnCut, ph: "e.g. 2", step: "0.5", prefix: "", suffix: "points", hint: "Modeled assumption in percentage points. Set it to 0 to leave it out."},
+      {k: "replCost", label: "Replacement cost per worker", value: c.replCost, ph: "e.g. 30", step: "5", prefix: "", suffix: "% of wage", hint: "SHRM and Gallup put frontline replacement at 30–50%"},
+      {k: "absDays", label: "Missed days per worker per year", value: c.absDays, ph: "e.g. 6", step: "0.5", prefix: "", suffix: "days", hint: "From what your safety and HR leads already track"},
+      {k: "absShare", label: "Share your leads attribute to behavioral risk", value: c.absShare, ph: "e.g. 20", step: "1", prefix: "", suffix: "%", hint: "Your own judgment on the same population"},
+      {k: "absCut", label: "Reduction in that share", value: c.absCut, ph: "e.g. 20", step: "1", prefix: "", suffix: "%", hint: "Modeled assumption. Set it to 0 to leave it out."},
+      {k: "claims", label: "Annual claims and plan spend tied to behavioral risk", value: c.claims, ph: "e.g. 250000", step: "10000", prefix: "$", suffix: "", hint: "From your loss runs and health plan reporting"},
+      {k: "claimsCut", label: "Avoided share of that spend", value: c.claimsCut, ph: "e.g. 10", step: "1", prefix: "", suffix: "%", hint: "Modeled assumption. Set it to 0 to leave it out."}
+    ].map(f => Object.assign({}, f, {onChange: setCalc(f.k)}));
+    const calcResults = [
+      {raw: retentionSavings, v: money(retentionSavings), t: "Retention value", d: Math.round(retained).toLocaleString() + " skilled workers kept a year at the replacement cost you entered."},
+      {raw: absenceSavings, v: money(absenceSavings), t: "Absence recovered", d: Math.round(daysAvoided).toLocaleString() + " missed days back at " + dollars(dayRate) + " a day."},
+      {raw: claimsSavings, v: money(claimsSavings), t: "Claims and premium exposure", d: "The avoided share of the claims and plan spend you entered."}
+    ];
+    const emp = this.state.aud === "employers";
+    const beginRow = emp
+      ? {kicker: "How to begin", t: "One site first, then wherever it earns its way", label: "#A8412F", dot: "#E3735C", plain: true,
+         sub: "A pilot on one site or crew is enough to prove reach before anything scales.",
+         items: [
+           {t: "You bring three things.", d: "The support services you stand behind, the crews to reach, and a safety or HR lead who can approve content."},
+           {t: "We build and you approve.", d: "We propose the structure from your existing materials; nothing goes live until your lead signs off."},
+           {t: "First crew inside a quarter.", d: "From kickoff to workers holding it, with all launch and training materials provided."},
+           {t: "Scale on evidence, not faith.", d: "Aggregate reach from the first site decides whether the next site or region turns on."}
+         ]}
+      : {kicker: "How to begin", t: "One chapter first, then wherever it earns its way", label: "#A8412F", dot: "#E3735C", plain: true,
+         sub: "A pilot with one chapter is enough to prove reach before it goes out to the full membership.",
+         items: [
+           {t: "You bring three things.", d: "The support services your organization stands behind, the chapter or member group to reach, and a program lead who can approve content."},
+           {t: "We build and you approve.", d: "We propose the structure from your existing safety materials; nothing goes live until your lead signs off."},
+           {t: "First chapter inside a quarter.", d: "From kickoff to member crews holding it, with all launch and training materials provided."},
+           {t: "Scale on evidence, not faith.", d: "Aggregate reach from the first chapter decides whether the next chapter or state turns on."}
+         ]};
+    return {
+      aud: this.state.aud,
+      setEmployers: () => this.setState({aud: "employers"}),
+      setAssociations: () => this.setState({aud: "associations"}),
+      empFg: emp ? "#0F1D2E" : "rgba(15,29,46,.42)",
+      empOn: emp,
+      assocFg: emp ? "rgba(15,29,46,.42)" : "#0F1D2E",
+      assocOn: !emp,
+      audLine: emp
+        ? "Issued by your own safety leadership to the crews you employ, alongside the toolbox talk and the benefits packet you already run."
+        : "Issued through your chapters to the members and signatory contractors you represent, versioned by trade, state, and chapter, in your organization's voice.",
+      finKicker: emp ? "The financial case" : "The case you carry to members",
+      finHeadA: emp ? "What one retained worker is" : "What it is worth to the contractors you",
+      finHeadEm: emp ? "already worth" : "represent",
+      finIntro: emp
+        ? "A model, not a guarantee. Worked on a 500-worker contractor at a $65,000 average wage and 30% annual turnover. Swap in your own headcount, wage, turnover, and absence data and the arithmetic holds."
+        : "A model, not a guarantee. Worked on a single 500-worker member contractor at a $65,000 average wage and 30% annual turnover, so a chapter can show a member what one site is worth before asking anyone to fund it.",
+      calcInvite: emp
+        ? "Put your own headcount, wage, turnover, absence days, and claims spend in and the model totals all three lines."
+        : "Run it for one member company. Put their headcount, wage, turnover, absence days, and claims spend in and the model totals all three lines.",
+      bring: emp
+        ? ["Headcount, average wage, and turnover for one site or crew",
+           "Absence days and recordables your leads already track",
+           "The crisis line, EAP, and clinical resources you want workers routed to"]
+        : ["The chapter or member group you would start with, and its rough headcount",
+           "The safety materials and trainings your organization already publishes",
+           "The crisis line, member assistance, and community resources you want workers routed to"],
+      ctaLine: emp
+        ? "No demo script, no obligation. Twenty minutes with your safety and benefits leads. We hear where behavioral risk is showing up, show you where an orbit would sit, and you decide whether it is worth a second conversation."
+        : "No demo script, no obligation. Twenty minutes with your program and member services leads. We hear what your chapters are being asked for, show you where an orbit would sit, and you decide whether it is worth a second conversation.",
+      calcOpen: this.state.calcOpen,
+      calcBtn: this.state.calcOpen ? "Hide the calculator" : "Run the numbers",
+      toggleCalc: () => this.setState(st => ({calcOpen: !st.calcOpen})),
+      closeCalc: () => this.setState({calcOpen: false}),
+      stopClose: (e) => e.stopPropagation(),
+      exportOpen: this.state.exportOpen,
+      toggleExport: () => this.setState(st => ({exportOpen: !st.exportOpen})),
+      calcFields, calcResults,
+      calcTotal: money(groupTotal),
+      calcTotalNote: num("headcount") ? "Across " + num("headcount").toLocaleString() + " field workers a year" : "Enter your headcount to scale the model",
+      crewLabel: num("headcount") ? num("headcount").toLocaleString() + " field workers" : "your workforce",
+      fillBenchmarks: () => this.setState({calc: Object.assign({}, benchmarks)}),
+      clearCalc: () => this.setState({calc: {headcount: "", wage: "", turnover: "", turnCut: "", replCost: "", absDays: "", absShare: "", absCut: "", claims: "", claimsCut: ""}}),
+      exportExcel: () => {
+        const lines = [["CareOrbit behavioral risk ROI model", ""], ["", ""], ["Input", "Value"]];
+        calcFields.forEach(f => { let n = parseFloat(c[f.k]); if (isNaN(n)) n = 0; lines.push([f.label + (f.suffix.indexOf("%") === 0 ? " (%)" : (f.prefix === "$" ? " ($)" : "")), n]); });
+        lines.push(["", ""], ["Result", "Annual value"]);
+        calcResults.forEach(r => lines.push([r.t + " ($)", Math.round(r.raw)]));
+        lines.push(["Total annual opportunity ($)", Math.round(groupTotal)]);
+        lines.push(["", ""], ["Modeled illustration. Arithmetic on the inputs above, not a guarantee of results.", ""]);
+        const csv = lines.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(",")).join("\r\n");
+        const blob = new Blob(["\ufeff" + csv], {type: "text/csv;charset=utf-8;"});
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "careorbit-behavioral-safety-roi.csv";
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+        this.setState({exportOpen: false});
+      },
+      printCalc: () => {
+        const old = document.getElementById("print-only");
+        if (old) old.remove();
+        const esc = (v) => String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+        const fmtIn = (k) => {
+          const n = parseFloat(c[k]);
+          if (isNaN(n)) return "0";
+          return n.toLocaleString(undefined, {maximumFractionDigits: 2});
+        };
+        const inputRows = calcFields.map(f => '<tr><td style="padding:7px 0;border-bottom:1px solid #E6E1D9;font-size:10.5pt;color:#3A4A5C">' + esc(f.label) + '</td><td style="padding:7px 0;border-bottom:1px solid #E6E1D9;font-size:10.5pt;font-weight:700;color:#0F1D2E;text-align:right;white-space:nowrap">' + esc(f.prefix) + fmtIn(f.k) + (f.suffix ? " " + esc(f.suffix) : "") + '</td></tr>').join("");
+        const resultRows = calcResults.map(r => '<tr><td style="padding:9px 0;border-bottom:1px solid #E6E1D9"><div style="font-size:11pt;font-weight:700;color:#0F1D2E">' + esc(r.t) + '</div><div style="font-size:9pt;color:#5A6A7C;line-height:1.35">' + esc(r.d) + '</div></td><td style="padding:9px 0;border-bottom:1px solid #E6E1D9;font-family:Lato,sans-serif;font-size:20pt;font-weight:300;color:#0F1D2E;text-align:right;white-space:nowrap;vertical-align:middle">' + esc(dollars(r.raw)) + '</td></tr>').join("");
+        const holder = document.createElement("div");
+        holder.id = "print-only";
+        holder.innerHTML = '<div style="font-family:Inter,sans-serif;color:#0F1D2E;padding:0">' +
+          '<div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #0F1D2E;padding-bottom:10px;margin-bottom:18px">' +
+            '<div><div style="font-size:8.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">CareOrbit</div>' +
+            '<div style="font-family:Lato,sans-serif;font-size:20pt;font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-top:2px">Behavioral risk orbit ROI model</div></div>' +
+            '<div style="text-align:right;font-size:9pt;color:#5A6A7C;line-height:1.4">' + esc((parseFloat(c.headcount) || 0).toLocaleString() + " field workers") + '<br>' + new Date().toLocaleDateString() + '</div>' +
+          '</div>' +
+          '<div style="display:flex;gap:26px;align-items:flex-start">' +
+            '<div style="flex:0 0 44%"><div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8578;margin-bottom:6px">Your inputs</div>' +
+              '<table style="width:100%;border-collapse:collapse">' + inputRows + '</table></div>' +
+            '<div style="flex:1"><div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8578;margin-bottom:6px">Modeled annual value</div>' +
+              '<table style="width:100%;border-collapse:collapse">' + resultRows + '</table>' +
+              '<div style="background:#0F1D2E;border-radius:12px;padding:16px 20px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">' +
+                '<div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F2B8C6">Total annual opportunity</div>' +
+                '<div style="font-family:Lato,sans-serif;font-size:26pt;font-weight:300;letter-spacing:-0.03em;color:#FFFFFF;line-height:1">' + esc(dollars(groupTotal)) + '</div>' +
+              '</div></div>' +
+          '</div>' +
+          '<div style="margin-top:18px;padding-top:10px;border-top:1px solid #E6E1D9;font-size:8pt;line-height:1.5;color:#5A6A7C">Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Replacement-cost ranges are published SHRM and Gallup benchmarks; turnover, absence, and claims reductions are modeled assumptions, and every rate and unit cost is supplied by the user. careorbit.com</div>' +
+        '</div>';
+        document.body.appendChild(holder);
+        document.body.classList.add("co-printing");
+        const cleanup = () => {
+          document.body.classList.remove("co-printing");
+          const h = document.getElementById("print-only");
+          if (h) h.remove();
+          window.removeEventListener("afterprint", cleanup);
+        };
+        window.addEventListener("afterprint", cleanup);
+        this.setState({exportOpen: false});
+        window.print();
+        setTimeout(cleanup, 1500);
+      },
+      pov: [
+        {kicker: "For the worker", t: "They know where to go", label: "#A8412F", dot: "#E3735C",
+         items: [
+           "Help without having to ask a supervisor, fill in a form, or be seen doing it",
+           "Something to open at 11pm on the drive home, not only during business hours",
+           "Written for the field, in their language, at a reading level that does not talk down",
+           "Theirs to keep and to pass to a friend or family member who needs it"
+         ]},
+        {kicker: "For the people around them", t: "Fewer people frozen", label: "#2D5A87", dot: "#2D5A87",
+         items: [
+           "Confidence to say something instead of hoping someone else does",
+           "A supervisor can act without being asked to play counselor",
+           "Nothing added to anyone's day and no new reporting duty created",
+           "The person at home gets the same guidance as the person on the crew"
+         ]},
+        {kicker: "For program leaders", t: "Reach you can report, not people you can watch", label: "#5B9BEA", dot: "#5B9BEA",
+         items: [
+           "Aggregate dashboards only: activations, return visits, and which topics get opened",
+           "Resource click-throughs, so you can fix the benefits that go unused",
+           "Trends by state, chapter, site, and trade, plus peer and family usage",
+           "No employer surveillance and no individual-level monitoring, by design"
+         ]}
+      ],
+      rows: [
+        beginRow,
+        {kicker: "Two orbits, many versions", t: "One for the person struggling, one for the person helping", label: "#1F6B73", dot: "#4FB3BF", seq: true,
+         sub: "Workers usually turn to a peer before a professional, so the peer gets a guide of their own. Management is never inside the worker's.",
+         items: [
+           {v: "01", cBorder: "rgba(79,179,191,.5)", cBg: "rgba(79,179,191,.1)", cFg: "#1F6B73", cLine: "rgba(79,179,191,.55)", line: true, t: "Worker Support Orbit", tag: "Theirs, not the employer's", d: "For workers and their families. Reassurance and normalization, signs to watch for in yourself, habits and coping tools, substance use and financial stress, expert and community resources, and one tap to a hotline or warm line."},
+           {v: "02", cBorder: "rgba(79,179,191,.5)", cBg: "rgba(79,179,191,.1)", cFg: "#1F6B73", cLine: "rgba(227,115,92,.45)", line: true, t: "Peer Support Orbit", tag: "For supervisors, peers, and family", d: "For anyone supporting someone else: recognizing warning signs, how to hold a difficult conversation, the do's and don'ts, when and how to escalate, links to formal training, and the ability to send a worker guide to the person they are worried about."},
+           {v: "03", cBorder: "rgba(227,115,92,.5)", cBg: "rgba(227,115,92,.1)", cFg: "#A8412F", cLine: "rgba(79,179,191,.55)", line: false, t: "Versioned to your population", tag: "Trade, state, chapter, partner", d: "Content versioned by trade, geography, and participating partner, including branded versions for a single company, union, or organization."}
+         ]},
+        {kicker: "How it runs in the field", t: "Starts at the toolbox talk, keeps working after it", label: "#2D5A87", dot: "#5B9BEA", plain: true,
+         sub: "Six steps, from the first handout to the numbers you report upward.",
+         items: [
+           {t: "Introduce.", d: "Safety leadership hands it out the way any other safety program starts: in person, on site."},
+           {t: "Reach.", d: "A QR code on a poker chip, a hard-hat decal, signage, machinery, or onboarding materials."},
+           {t: "Activate.", d: "The worker enters an email address and nothing else. An activation email opens their secure guide."},
+           {t: "Educate.", d: "Short, direct modules on the risks that actually take workers out, plus ongoing messages of encouragement."},
+           {t: "Connect.", d: "One tap to the crisis line, warm line, EAP, or community resource your organization stands behind."},
+           {t: "Measure.", d: "Activations, topics, and resource click-throughs reported de-identified for safety and HR review."}
+         ]},
+        {kicker: "This is not an app", t: "Nothing to download, nothing to log into", label: "#2D5A87", dot: "#5B9BEA", plain: true,
+         sub: "Workers distrust apps because of downloads, logins, and the fear that an employer is watching. All three are removed.",
+         items: [
+           {t: "No download, no app store.", d: "It opens in the browser the worker already has, on a phone, tablet, or desktop."},
+           {t: "No login, and management never sees it.", d: "No credentials, and nobody at the company or the association can see who activated a worker orbit or what they read."},
+           {t: "HIPAA compliant.", d: "The same security posture the platform runs inside large health systems."},
+           {t: "No new FTEs, live in a quarter.", d: "White-label in your voice, from kickoff to first crew."}
+         ]},
+        {kicker: "How it gets smarter", t: "AI that learns what this workforce needs", label: "#2D5A87", dot: "#5B9BEA", plain: true,
+         sub: "Always confidential, always de-identified, always worker-centered.",
+         items: [
+           {t: "Recommends what matters.", d: "Surfaces the most relevant content for the person reading it."},
+           {t: "Adapts the path.", d: "Learning routes change based on what a worker actually opens."},
+           {t: "Spots emerging trends.", d: "Stress, substance use, and financial strain, at the population level."},
+           {t: "Improves routing.", d: "Resource connections get better over time, informing statewide prevention."}
+         ]}
+      ],
+      numbers: [
+        {v: "4\u00d7", t: "Higher than the national suicide rate", d: "53.2 suicides per 100,000 construction workers, against 17.3 per 100,000 across the general population.", src: "CDC, cited by CFMA"},
+        {v: "56", t: "Per 100,000 male construction workers, 2021", d: "Against 32 per 100,000 among male workers across all industries. Construction ranked second only to mining and extraction.", src: "CDC, 2021, via Travelers"},
+        {v: "162.6", t: "Overdose deaths per 100,000, construction and extraction", d: "The highest of any occupation group, against 42.1 per 100,000 across all paid civilian occupations.", src: "CDC MMWR QuickStats, 2020 data"},
+        {v: "5\u00d7", t: "Suicide deaths versus all fatal work injuries", d: "More construction workers are lost to suicide than to every recorded on-the-job fatality combined.", src: "CDC, cited by CFMA and CIASP"}
+      ],
+      roi: [
+        {v: "$195K\u2013$325K", t: "Retaining ten workers a year", d: "A two-point cut in a 30% turnover rate on 500 workers keeps ten skilled people. At a $65,000 wage, a conservative trade replacement cost of 30–50% returns $19.5K to $32.5K each.", src: "Replacement cost benchmarks: CII, SHRM, Gallup"},
+        {v: "$260", t: "Cost of one missed day, per worker", d: "A $65,000 wage over roughly 250 working days. Multiply by the absence days your safety and HR leads already track, then by the share behavioral risk drives.", src: "Your absence data; wage-based day rate"},
+      ],
+      impact: [
+        {i: "01", t: "Workers' compensation", d: "Mental-health-linked injuries cost 2.3 times more and last twice as long.", src: "NCCI"},
+        {i: "02", t: "Lost days of work", d: "Depression and distress drive roughly five missed workdays per worker each year.", src: "NIOSH"},
+        {i: "03", t: "Insurance premiums", d: "Behavioral-health-related claims raise premiums an estimated 10–15%.", src: "Actuarial benchmarks"},
+        {i: "04", t: "Turnover and retention", d: "Replacing a skilled tradesperson costs 20–40% of annual wages.", src: "CII"},
+        {i: "05", t: "Productivity and job-site errors", d: "Stress and fatigue contribute to an estimated 70% of job-site mistakes.", src: "CPWR"},
+        {i: "06", t: "Crisis response", d: "The one outcome with no cost to recover, only to absorb, and the one earliest awareness reaches first.", src: "CDC, CFMA"}
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

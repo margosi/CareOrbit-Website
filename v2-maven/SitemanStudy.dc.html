@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@keyframes coFloat{from{transform:translateY(-7px)}to{transform:translateY(9px)}}
+@media(max-width:1020px){[data-hdr],[data-hero-grid],[data-split],[data-two]{grid-template-columns:1fr!important;gap:32px!important}[data-povrow]{grid-template-columns:1fr!important;gap:12px!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}}
+@media(max-width:900px){[data-restat]{grid-template-columns:1fr!important;gap:18px!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="outcomes" hint-size="100%,120px"></dc-import>
+
+<div data-screen-label="Study hero" style="max-width:1220px;margin:0 auto;padding:72px 28px 88px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center" data-hero-grid="1">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="width:9px;height:9px;border-radius:50%;background:#4FB3BF;flex-shrink:0;display:block"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F7B87">Oncology &middot; Controlled clinical trial</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">The Siteman controlled clinical trial: an orbit, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">measured against usual care</em></h1>
+    <p style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:620px;text-wrap:pretty">Pancreatic cancer surgery patients and their families at Siteman Cancer Center, Washington University School of Medicine, were issued a CareOrbit and otherwise treated identically to a matched control group. These are the results.</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:4px;flex-wrap:wrap">
+      <a href="#request" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 28px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Download a summary of the study results</a>
+      <a href="BookACall.dc.html?src=siteman-study" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;padding:16px 24px;border-radius:999px;border:1.5px solid rgba(15,29,46,.2)" style-hover="border-color:#0F1D2E;color:#0F1D2E">Book a 20-minute intro call</a>
+    </div>
+  </div>
+  <div style="min-width:0;animation:coFloat 6s ease-in-out infinite alternate"><image-slot id="siteman-study-hero" radius="32" src="images/case-study-siteman.png" placeholder="[Placeholder: Siteman care team photo]" style="display:block;width:100%;height:clamp(320px,30vw,440px)"></image-slot></div>
+</div>
+
+<div data-screen-label="Topline" style="max-width:1220px;margin:0 auto;padding:0 28px 88px">
+  <div style="background:#0F1D2E url(arc-lines.svg) center/cover;border-radius:40px;padding:clamp(40px,5vw,72px) clamp(28px,5vw,72px);color:#FFFFFF">
+    <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:40px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4FB3BF">Topline results</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">What changed when patients <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">had an orbit</em></h2>
+      </div>
+      <p style="font-size:20px;line-height:1.6;color:#B9C8D8;margin:0;max-width:560px;text-wrap:pretty">Measured against a matched control group receiving identical care without CareOrbit.</p>
+    </div>
+    <div data-stat5 data-rv style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px">
+      <sc-for list="{{ topline }}" as="s" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #4FB3BF;padding-top:16px;min-height:120px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.2vw,42px);line-height:1;letter-spacing:-0.035em;color:#FFFFFF">{{ s.n }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#4FB3BF">{{ s.l }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ s.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:36px;padding-top:18px;border-top:1px solid #2D5A87;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8FA5BC">Controlled study, Siteman Cancer Center. Patient measures vs. matched control group.</div>
+  </div>
+</div>
+
+<div data-screen-label="Measured results" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">The full ledger</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Every measure, for patients <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">and their families</em></h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:560px;text-wrap:pretty">Family members were issued orbits alongside patients, and were measured as rigorously. In several categories the family effect was the larger one.</p>
+  </div>
+  <sc-for list="{{ measures }}" as="m" hint-placeholder-count="6">
+    <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ m.label }}">{{ m.kicker }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ m.t }}</div>
+      </div>
+      <div data-two style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:start">
+        <div data-restat style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+          <sc-for list="{{ m.stats }}" as="sv" hint-placeholder-count="2">
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:clamp(30px,3vw,40px);line-height:1;color:{{ m.dot }}">{{ sv.n }}</div>
+              <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">{{ sv.l }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);text-wrap:pretty;padding-top:4px">{{ m.d }}</div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+
+<div data-screen-label="Voices" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:30px 0 0;border-top:1px solid rgba(15,29,46,.14)">
+    <div style="display:flex;flex-direction:column;gap:7px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A8412F">Voices from the study</div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">How care teams responded to orbits in action</div>
+      <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">Surgeons, nurses, and managers were interviewed throughout the study. A representative sample of their responses.</div>
+    </div>
+    <div data-split style="display:grid;grid-template-columns:1fr 1fr;gap:36px 44px">
+      <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:12px;padding-top:4px">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;font-size:19px;line-height:1.5;color:#0F1D2E;text-wrap:pretty">&ldquo;{{ q.t }}&rdquo;</div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(15,29,46,.5)">{{ q.who }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div data-screen-label="Study design" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Study design</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">How the study <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">was run</em></h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:560px;text-wrap:pretty">A controlled design with a matched comparison group, validated survey instruments, and a nationally noted surgical oncologist as study author.</p>
+  </div>
+  <sc-for list="{{ design }}" as="r" hint-placeholder-count="3">
+    <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ r.label }}">{{ r.kicker }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ r.t }}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+        <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="3">
+          <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+            <span style="width:9px;height:1.5px;border-radius:1px;background:{{ r.dot }};transform:translateY(-4px)"></span>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-for>
+  <div data-rv style="border-top:1px solid rgba(15,29,46,.14);padding-top:22px;font-size:14px;line-height:1.65;color:rgba(15,29,46,.6);max-width:760px;text-wrap:pretty">The information on this page is the extent of what can be publicly shared prior to publication of the study. Some details of the validated survey instruments remain confidential until that time. Dr. Fields has made himself available for discussion with interested professional parties, including competitive healthcare systems. Siteman Cancer Center is currently expanding use of orbits, with multiple orbits now in development.</div>
+</div>
+
+<div data-screen-label="Request and CTA" id="request" style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div style="background:#0F1D2E url(arc-lines.svg) center/cover;border-radius:40px;padding:clamp(40px,5vw,72px) clamp(28px,5vw,72px);color:#FFFFFF;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center" data-hero-grid="1">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4FB3BF">Go deeper</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Get the study results, or <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">talk it through</em></h2>
+      <p style="font-size:17px;line-height:1.65;color:#B9C8D8;margin:0;max-width:540px;text-wrap:pretty">Download a summary of the study results, including program details. Or bring your own service line numbers and we will walk through what an orbit could change for you.</p>
+      <div><a href="BookACall.dc.html?src=siteman-study" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 28px;border-radius:999px;display:inline-block;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a></div>
+    </div>
+    <div style="background:#FAF8F4;border-radius:28px;padding:32px;color:#0F1D2E">
+      <div style="font-family:Lato,sans-serif;font-weight:700;font-size:19px;margin-bottom:6px">Download the study summary</div>
+      <div style="font-size:14px;line-height:1.6;color:rgba(15,29,46,.65);margin-bottom:14px">Full results and program details, in one document.</div>
+      <dc-import name="StudyRequest" label="Download a summary of the study results" heading="Download the study summary" blurb="Tell us who you are and your download will be ready." file="CareOrbit-Siteman-Study-Report.pdf" downloadLabel="Download the study report" hint-size="100%,60px"></dc-import>
+    </div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,400px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      topline: [
+        {n: "\u221241%", l: "Readmissions", d: "Reduction in readmissions vs. the control group."},
+        {n: "\u221253%", l: "Calls pre-op", d: "Fewer calls to the physician office before surgery, with 39% fewer post-op."},
+        {n: "+65%", l: "Patient understanding", d: "Improvement in understanding of the disease, treatment specifics, and pre- and post-treatment plans."},
+        {n: "+22%", l: "Patient satisfaction", d: "Improvement in HCAHPS and SF-36 satisfaction scores. Family satisfaction rose 38%."}
+      ],
+      measures: [
+        {kicker: "Understanding", label: "#A8412F", dot: "#E3735C", t: "Understanding of treatment plan and side effects",
+         stats: [{n: "+65%", l: "patients"}, {n: "+42%", l: "family members"}],
+         d: "Measured improvement in understanding of the disease, treatment specifics, and pre- and post-treatment plans, via validated surveys conducted as personal interviews."},
+        {kicker: "Navigation", label: "#1F6B73", dot: "#4FB3BF", t: "Ability to navigate the care journey",
+         stats: [{n: "87%", l: "of patients improved"}, {n: "77%", l: "of families improved"}],
+         d: "Improvement in navigating the surgical process: working with the care team, logistical requirements including appointments, required actions, and follow-ups."},
+        {kicker: "Preparedness", label: "#2D5A87", dot: "#5B9BEA", t: "Preparedness and accountability",
+         stats: [{n: "\u221253%", l: "calls pre-op"}, {n: "\u221239%", l: "calls post-op"}],
+         d: "Fewer calls to the physician office in both periods, indicating patients and families arrived and recovered more prepared."},
+        {kicker: "Readmissions", label: "#A8412F", dot: "#E3735C", t: "Readmission rate",
+         stats: [{n: "\u221241%", l: "vs. control group"}],
+         d: "Reduction in readmissions among CareOrbit patients compared with the matched control group."},
+        {kicker: "Satisfaction", label: "#1F6B73", dot: "#4FB3BF", t: "Satisfaction scores",
+         stats: [{n: "+22%", l: "patients, HCAHPS and SF-36"}, {n: "+38%", l: "family members"}],
+         d: "Improvement in patient HCAHPS and SF-36 satisfaction scores, with an even larger lift among family members."},
+        {kicker: "Support services", label: "#2D5A87", dot: "#5B9BEA", t: "Utilization of resources and support services",
+         stats: [{n: "96%", l: "of patients and families"}],
+         d: "Reported reaching additional support and educational resources, internal and external to Siteman, from their orbits."},
+        {kicker: "Adoption", label: "#A8412F", dot: "#E3735C", t: "Adoption and usage",
+         stats: [{n: "90%", l: "activated their orbit"}, {n: "107", l: "avg. page views per user"}],
+         d: "Of all users issued an orbit, 90% activated it, in under 4 days on average from invitation. Each patient and family member generated an average of 107 page views in their initial period of usage."}
+      ],
+      quotes: [
+        {t: "It helps evolve the quality of our conversations, leading to understanding happening earlier for everyone who could be part of the patient\u2019s improvement.", who: "On communication"},
+        {t: "They are nervous and confused and it helps them see what they face in ways they are comfortable around.", who: "On lowering anxiety"},
+        {t: "It was hard to deny the control group orbits for use during our study. We knew just how much an orbit could help them right now.", who: "On the control group"},
+        {t: "I\u2019m a nurse and I wish my own Dad had an orbit when he went through his procedure.", who: "A study nurse"}
+      ],
+      design: [
+        {kicker: "Participants", label: "#A8412F", dot: "#E3735C", t: "Who was studied", items: [
+          {t: "Approximately 125 users:", d: "50 patients plus approximately 75 family members, all issued orbits."},
+          {t: "Diagnosis and procedure:", d: "patients diagnosed with pancreatic ductal adenocarcinoma (PDAC) who had consented to surgery, Whipple or RAMPS, as part of their treatment plan."},
+          {t: "Matched control:", d: "participants were issued CareOrbit but otherwise treated identically to a matched non-CareOrbit control group."}]},
+        {kicker: "Method", label: "#1F6B73", dot: "#4FB3BF", t: "How results were measured", items: [
+          {t: "Validated surveys,", d: "conducted as personal interviews with patients and family members, for measures such as navigation, understanding, and preparedness."},
+          {t: "Operational measures,", d: "including call volume, readmissions, activation, and usage, tracked directly."}]},
+        {kicker: "Study author", label: "#2D5A87", dot: "#5B9BEA", t: "Who ran it", items: [
+          {t: "Dr. Ryan C. Fields,", d: "chief of the Section of Surgical Oncology at Washington University School of Medicine, treating patients at Siteman Cancer Center, St. Louis."},
+          {t: "A nationally noted cancer surgeon and researcher", d: "focused on patients at high risk of cancer recurrence, running a translational research laboratory funded by the National Institutes of Health (NIH)."}]}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

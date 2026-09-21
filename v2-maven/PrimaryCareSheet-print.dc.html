@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<meta name="omelette-owns-print" content="true">
+<style>
+body{margin:0;background:#FFFFFF;font-family:Inter,sans-serif;color:#0F1D2E}a{color:#2D5A87}a:hover{color:#E3735C}
+@page{size:letter portrait;margin:0}
+@media print{
+  html,body{background:#FFFFFF}
+  [data-page]{break-after:page;page-break-after:always;break-inside:avoid;page-break-inside:avoid}
+  [data-page]:last-of-type{break-after:auto;page-break-after:auto}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FFFFFF;display:flex;flex-direction:column;align-items:center">
+
+<section data-page="1" data-screen-label="Sheet page 1" style="width:816px;height:1056px;box-sizing:border-box;padding:54px 60px 42px;background:#FFFFFF;display:flex;flex-direction:column;gap:22px;overflow:hidden">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <img src="careorbit-logo-nav2.png" alt="CareOrbit" style="height:34px;width:auto;display:block">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="width:9px;height:9px;border-radius:50%;background:#4FB3BF;display:block"></span>
+      <span style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F7B87">Primary care orbit solutions</span>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:11px;border-top:2px solid #0F1D2E;padding-top:20px">
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:33px;line-height:1.08;letter-spacing:-0.025em;margin:0;max-width:640px">Your guidance in every patient's hands, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">all year between visits</em>.</h1>
+    <p style="font-size:13px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:660px">A year of health is managed in a few short visits; the rest happens at home, from memory. A primary care orbit adds a consumer-grade digital mentor alongside the after-visit summary and the follow-up call: engaging video, email, and text outreach in your brand and your clinicians' words, with engagement tracked at every step.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:14px;align-items:start;flex-shrink:0">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid rgba(15,29,46,.14);padding-top:13px">
+        <div style="font-size:9.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A8412F">For the patient</div>
+        <div style="font-size:11.5px;line-height:1.6;color:rgba(15,29,46,.72)">A clear understanding of their conditions and plan. Your instructions and reminders on the day each one applies. Which symptoms mean call us, and which mean go to the ED.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid rgba(15,29,46,.14);padding-top:13px">
+        <div style="font-size:9.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#2D5A87">For your team</div>
+        <div style="font-size:11.5px;line-height:1.6;color:rgba(15,29,46,.72)">Ordered from the workflow you already run, no new FTEs. Fewer calls asking what the visit already covered. Your brand and your protocols, not a generic app.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px;border-top:1px solid rgba(15,29,46,.14);padding-top:13px">
+        <div style="font-size:9.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#1F7B87">For the practice</div>
+        <div style="font-size:11.5px;line-height:1.6;color:rgba(15,29,46,.72)">Who opened their orbit and who never did, by patient. Check-ins routed back before the next visit. Optional validated measures, scored automatically.</div>
+      </div>
+    </div>
+    <image-slot id="pc-sheet-photo" radius="20" src="images/primarycare-hero.png" placeholder="[Placeholder: primary care visit photo]" style="display:block;width:100%;height:330px"></image-slot>
+  </div>
+  <div style="background:#0F1D2E;border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:17px;flex-shrink:0">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:16px;color:#FFFFFF;letter-spacing:-0.01em">Proven engagement mechanism</div>
+      <div style="font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#7E93AB">Controlled clinical trial, Siteman Cancer Center</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
+      <div style="display:flex;flex-direction:column;gap:5px;border-top:2px solid #4FB3BF;padding-top:11px">
+        <div style="font-family:Lato,sans-serif;font-weight:300;font-size:38px;line-height:1;letter-spacing:-0.045em;color:#FFFFFF">+65%</div>
+        <div style="font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4FB3BF;line-height:1.35">Patient understanding of the plan</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5px;border-top:2px solid #4FB3BF;padding-top:11px">
+        <div style="font-family:Lato,sans-serif;font-weight:300;font-size:38px;line-height:1;letter-spacing:-0.045em;color:#FFFFFF">&minus;53%</div>
+        <div style="font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4FB3BF;line-height:1.35">Patient calls to the office</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5px;border-top:2px solid #4FB3BF;padding-top:11px">
+        <div style="font-family:Lato,sans-serif;font-weight:300;font-size:38px;line-height:1;letter-spacing:-0.045em;color:#FFFFFF">&minus;41%</div>
+        <div style="font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4FB3BF;line-height:1.35">Re-admission rate vs usual care</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:5px;border-top:2px solid #4FB3BF;padding-top:11px">
+        <div style="font-family:Lato,sans-serif;font-weight:300;font-size:38px;line-height:1;letter-spacing:-0.045em;color:#FFFFFF">+22%</div>
+        <div style="font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#4FB3BF;line-height:1.35">Patient satisfaction</div>
+      </div>
+    </div>
+    <div style="font-size:9.5px;line-height:1.5;color:#7E93AB">Measured against usual care in hepatobiliary surgical oncology at Siteman Cancer Center and Washington University. Applied to a primary care panel, these percentages are a modeled transfer, not a measured primary care result.</div>
+  </div>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+    <div style="font-size:10.5px;color:rgba(15,29,46,.55)">CareOrbit is a Total Orbit company &middot; St. Louis, MO</div>
+    <div style="font-size:10.5px;font-weight:600;color:#0F1D2E">sales@totalorbit.com &middot; totalorbit.com</div>
+  </div>
+</section>
+
+<section data-page="2" data-screen-label="Sheet page 2" style="width:816px;height:1056px;box-sizing:border-box;padding:56px 60px 44px;background:#FFFFFF;display:flex;flex-direction:column;gap:20px;overflow:hidden">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <img src="careorbit-logo-nav2.png" alt="CareOrbit" style="height:28px;width:auto;display:block">
+    <div style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F7B87">Primary care orbit solutions</div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #0F1D2E;padding-top:18px">
+    <div style="font-family:Lato,sans-serif;font-weight:900;font-size:21px;letter-spacing:-0.02em">Primary care journeys an orbit can carry</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0 26px;border-top:1px solid rgba(15,29,46,.14)">
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">01</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">Healthy Life</span><br><span style="color:rgba(15,29,46,.6)">general + senior + community</span></div></div>
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">02</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">Annual wellness visit</span><br><span style="color:rgba(15,29,46,.6)">Medicare AWV + adult physical</span></div></div>
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">03</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">Hypertension</span><br><span style="color:rgba(15,29,46,.6)">readings, medications, lifestyle</span></div></div>
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">04</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">Type 2 diabetes</span><br><span style="color:rgba(15,29,46,.6)">newly diagnosed + ongoing</span></div></div>
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">05</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">Preventive screening</span><br><span style="color:rgba(15,29,46,.6)">colorectal, breast, cervical, lung</span></div></div>
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">06</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">New patient welcome</span><br><span style="color:rgba(15,29,46,.6)">onboarding into the practice</span></div></div>
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">07</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">Post-discharge follow-up</span><br><span style="color:rgba(15,29,46,.6)">the handoff back to primary care</span></div></div>
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">08</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">Asthma &amp; COPD</span><br><span style="color:rgba(15,29,46,.6)">technique, triggers, action plans</span></div></div>
+      <div style="display:flex;gap:10px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(15,29,46,.12)"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:11px;color:#1F7B87;min-width:18px">09</span><div style="font-size:11.5px;line-height:1.4"><span style="font-weight:700;font-family:Lato,sans-serif">Vaccination &amp; seasonal readiness</span><br><span style="color:rgba(15,29,46,.6)">routine + seasonal</span></div></div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:15px;letter-spacing:-0.01em">Targeted outcomes</div>
+      <div style="font-size:11.5px;line-height:1.7;color:rgba(15,29,46,.72)">Fewer missed appointments &middot; closed care gaps &middot; better chronic condition control &middot; better medication adherence &middot; fewer avoidable ED visits &middot; fewer inbound calls &middot; higher annual wellness visit completion &middot; new patient acquisition and retention. Every orbit is built and tracked against the outcomes your practice chooses, from the first patient forward.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:15px;letter-spacing:-0.01em">How it deploys</div>
+      <div style="font-size:11.5px;line-height:1.7;color:rgba(15,29,46,.72)">Issued from the workflow you already run: the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message. No new app or login for the patient. No new FTEs. White-label, in your brand and your clinicians' voice. Live in a quarter, from kickoff to first patient.</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;border-top:1px solid rgba(15,29,46,.14);padding-top:16px">
+    <div style="display:flex;flex-direction:column;gap:4px"><div style="font-family:Lato,sans-serif;font-weight:300;font-size:30px;line-height:1;letter-spacing:-0.04em">6 in 10</div><div style="font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1F7B87;line-height:1.35">Adults with a chronic disease</div><div style="font-size:9.5px;color:rgba(15,29,46,.55)">CDC</div></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><div style="font-family:Lato,sans-serif;font-weight:300;font-size:30px;line-height:1;letter-spacing:-0.04em">About half</div><div style="font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1F7B87;line-height:1.35">Chronic meds not taken as prescribed</div><div style="font-size:9.5px;color:rgba(15,29,46,.55)">Published adherence literature</div></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><div style="font-family:Lato,sans-serif;font-weight:300;font-size:30px;line-height:1;letter-spacing:-0.04em">Up to 1 in 5</div><div style="font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1F7B87;line-height:1.35">Visits end as no-shows</div><div style="font-size:9.5px;color:rgba(15,29,46,.55)">Published no-show analyses</div></div>
+    <div style="display:flex;flex-direction:column;gap:4px"><div style="font-family:Lato,sans-serif;font-weight:300;font-size:30px;line-height:1;letter-spacing:-0.04em">Under 10%</div><div style="font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1F7B87;line-height:1.35">Adults getting all recommended preventive care</div><div style="font-size:9.5px;color:rgba(15,29,46,.55)">Published preventive services analyses</div></div>
+  </div>
+  <div style="font-size:9px;line-height:1.5;color:rgba(15,29,46,.5)">Industry rates from CDC, CMS, and published analyses, not CareOrbit outcomes. Rates vary substantially by practice and payer mix.</div>
+  <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+    <div style="display:flex;align-items:baseline;gap:10px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:15px;letter-spacing:-0.01em">Aligned with employer-based plans</div>
+      <div style="font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#1F7B87">For employers and plan sponsors</div>
+    </div>
+    <div style="font-size:11.5px;line-height:1.7;color:rgba(15,29,46,.72)">When a new plan or primary care benefit is introduced, an orbit adds to the enrollment packet and the benefits meeting: a guided introduction at open enrollment that improves employee acceptance of the change, onboarding for employees and families into the new benefit, and reinforcement through the year of covered preventive visits, screenings, and in-network care. Employer-branded versions can be issued by worksite or plan population, with engagement visible to the benefits team.</div>
+  </div>
+  <div style="margin-top:auto;background:#0F1D2E;border-radius:16px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:16px;color:#FFFFFF">Book a 20-minute intro call</div>
+      <div style="font-size:11px;line-height:1.5;color:#B9C8D8">Your primary care pain points, our platform. No demo script, no obligation.</div>
+    </div>
+    <div style="text-align:right;font-size:11px;line-height:1.6;color:#FFFFFF;white-space:nowrap">sales@totalorbit.com<br><span style="color:#B9C8D8">totalorbit.com</span></div>
+  </div>
+</section>
+
+</div>
+</x-dc>
+</body>
+</html>

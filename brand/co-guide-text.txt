@@ -1,0 +1,56 @@
+B R A N D G U I D E L I N E S
+Brand guidelines
+THE LOGO
+The mark spirals a multicolor orbit of dots around a heart — care held at the center of a connected system.
+Use the Trust-Blue heart lockup on light backgrounds and the all-white lockup on Ink Navy or photography.
+Keep clear space of at least the heart's height on all sides; never recolor the orbit or stretch the mark.
+COLOR SYSTEM
+Ink Navy
+#0F1D2E
+Primary mark,
+headlines
+Harbor Blue
+#1E3A5F
+Logo, deep UI
+Trust Blue
+#2D5A87
+Secondary,
+accents
+Coral Care
+#E3735C
+Human accent,
+CTAs
+Sky Mist
+#F3F6FA
+Backgrounds,
+cards
+Cloud Blue
+#EAF1F8
+Tints, section
+fills
+Blush Pink
+#F2B8C6
+Wellness,
+warmth accents
+Paper
+#FFFFFF
+Text-dense
+surfaces
+T YPOGRAPHY
+Fredoka
+Wordmark & headlines · Regular / Medium /
+SemiBold
+Inter
+Body & UI · Regular / Medium / SemiBold
+Aa Bb Cc · 0123456789
+CareOrbit
+CareOrbit 	CareOrbit
+
+-- 1 of 2 --
+
+Aa Bb Cc · 0123456789
+CareOrbit brand guidelines · Healthcare-centric palette — navy carries trust and clinical weight; coral adds the human, care-forward
+warmth.
+
+-- 2 of 2 --
+

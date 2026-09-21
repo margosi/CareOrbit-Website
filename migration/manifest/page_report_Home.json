@@ -1,0 +1,18 @@
+[
+  {
+    "width": 768,
+    "delta_pct": 0.7259,
+    "verdict": "REVIEW-BODY-ALSO-DIFFERS",
+    "height": 7717,
+    "broken_images": [],
+    "console_errors": [],
+    "bad_responses": [],
+    "reveals_hidden": 0,
+    "image_wait": {
+      "status": "loaded",
+      "pending": 0,
+      "skipped_hidden": 8
+    },
+    "expected_deviation": "(a) Footer grid collapses to 2 columns under 900px (approved Phase 2). (b) RATIFIED: the intro paragraph now left-aligns when the two-column grid collapses. v2-maven's rule p[style*=\"margin-left: auto\"] never matched, because React collapses margin:0 + margin-left:auto into the shorthand 'margin: 0px 0px 0px auto' - the substring is absent. The legacy paragraph therefore stayed indented at left:192px under a left-aligned heading. data-ml-auto applies the intended rule."
+  }
+]

@@ -1,0 +1,184 @@
+/* CareOrbit global styles.
+ *
+ * Ported verbatim from the per-page <helmet><style> blocks in v2-maven.
+ * Values are copied exactly - do not "tidy" them, they are the visual
+ * contract the baseline screenshots were captured against.
+ *
+ * Layout is NOT here. It lives in inline styles on the components, exactly
+ * as in v2-maven. Only genuinely global rules belong in this file.
+ */
+
+@import url("./fonts.css");
+
+/* ---------------------------------------------------------------- base --
+ * From the shared page block:
+ *   body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}
+ *   a{color:#2D5A87}a:hover{color:#E3735C}
+ *   html{scroll-behavior:smooth}
+ *
+ * background is the 31-page majority default. Pages that differ (Home uses
+ * #0F1D2E, the print/PDF templates use #FFFFFF, one page uses #F1F6F4)
+ * override it locally, the same way they do today.
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  color: #0f1d2e;
+  background: #faf8f4;
+}
+
+a {
+  color: #2d5a87;
+}
+
+a:hover {
+  color: #e3735c;
+}
+
+/* ------------------------------------------------------- scroll reveal --
+ * Identical across all 30 pages that use it. Driven by the Reveal
+ * component adding .in, replacing motion.js's global observer.
+ */
+[data-rv] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-rv].in {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------------------------- donut rings --
+ * Home only. The arc sweeps to its final offset when its [data-rv]
+ * ancestor reveals. --rt is set per ring as an inline custom property.
+ */
+.co-ring {
+  transition: stroke-dashoffset 2s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+[data-rv].in .co-ring {
+  stroke-dashoffset: var(--rt) !important;
+}
+
+/* ----------------------------------------------------------- keyframes --
+ * Union of the animations defined across v2-maven pages.
+ *
+ * NOTE - coFloat conflict: v2-maven defines coFloat twice with different
+ * values. Today each page's <style> is self-scoped so they never collide.
+ * Hoisting both into one global sheet would make the last definition win.
+ * The 14-page majority variant is global here; CommunityResearch uses
+ * translateY(0) -> translateY(-12px) and must carry a page-scoped override
+ * when it is converted in Phase 6b. Tracked in migration/README.md.
+ */
+@keyframes coFloat {
+  from {
+    transform: translateY(-7px);
+  }
+  to {
+    transform: translateY(9px);
+  }
+}
+
+@keyframes coMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes coDash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1140;
+  }
+}
+
+@keyframes coPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes coPop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroDrift {
+  0% {
+    transform: translate(-12%, -16%) scale(1);
+  }
+  50% {
+    transform: translate(8%, 6%) scale(1.18);
+  }
+}
+
+@keyframes heroSweep {
+  0% {
+    transform: translateX(-85%);
+  }
+  50% {
+    transform: translateX(102%);
+  }
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1.14);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes tabProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ------------------------------------------------------ reduced motion --
+ * Carried over from every page. Must not be dropped: the baseline
+ * screenshots are captured under prefers-reduced-motion: reduce, and any
+ * comparison run depends on these rules resolving reveals and ring sweeps
+ * to their final state.
+ */
+@media (prefers-reduced-motion: reduce) {
+  [data-rv] {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .co-ring {
+    transition: none;
+    stroke-dashoffset: var(--rt) !important;
+  }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@keyframes coFloat{from{transform:translateY(0)}to{transform:translateY(-12px)}}
+@media(max-width:1020px){[data-hdr],[data-hero-grid],[data-split],[data-two]{grid-template-columns:1fr!important;gap:32px!important}
+  [data-value]{grid-template-columns:1fr!important;gap:34px!important}
+  [data-povrow]{grid-template-columns:1fr!important;gap:12px!important}
+  [data-start]{grid-template-columns:1fr!important;gap:24px!important}[data-start]>a{justify-self:start}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}}
+@media(max-width:960px){[data-catalog]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 32px!important}}
+@media(max-width:620px){[data-catalog]{grid-template-columns:1fr!important}}
+@media(max-width:820px){[data-ledger]{grid-template-columns:1fr!important;gap:8px!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="research" hint-size="100%,120px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:72px 28px 96px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center" data-hero-grid="1">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <span style="display:flex;align-items:center;gap:8px;background:#0F3D2E;border-radius:8px;padding:7px 13px"><span style="width:8px;height:8px;border-radius:50%;background:#5CE8A4"></span><span style="font-size:11.5px;font-weight:700;letter-spacing:.08em;color:#FFFFFF">NEW</span></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F7B87">Community research orbit solutions</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">Your protocol in the participant's hands, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">every week between visits</em></h1>
+    <p style="font-size:17.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:620px;text-wrap:pretty">Guided digital support tailored to each protocol, cohort, and follow-up window, carried from first contact through the final assessment, so every participant knows what the study asks and when it asks it.</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:4px;flex-wrap:wrap">
+      <a href="{{ bookHref }}" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 28px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+      <a href="#cta" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;padding:16px 24px;border-radius:999px;border:1.5px solid rgba(15,29,46,.2)" style-hover="border-color:#0F1D2E;color:#0F1D2E">Get the research info sheet</a>
+    </div>
+  </div>
+  <div style="min-width:0;animation:coFloat 6s ease-in-out infinite alternate"><image-slot id="research-hero" radius="32" src="images/research-hero.png" placeholder="[Placeholder: community research team photo]" style="display:block;width:100%;height:clamp(320px,30vw,440px)"></image-slot></div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 40px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px;text-wrap:balance">A trusted guide your participants keep, from first contact through <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">close-out</em>.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:600px;text-wrap:pretty">Your consent language and your visit schedule, delivered when each one actually matters. Alongside the packet at enrollment and the coordinator's reminder call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps people informed, oriented, and on protocol between visits.</p>
+      <p style="font-size:16px;line-height:1.65;color:rgba(15,29,46,.6);margin:0;max-width:600px;text-wrap:pretty">Built to your protocol before launch. Nothing added to a coordinator's week.</p>
+    </div>
+  </div>
+
+  <div data-rv data-value style="display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:60px;align-items:start">
+    <div style="position:relative;min-width:0">
+      <image-slot id="research-participant" radius="28" src="value-research.png" placeholder="[Placeholder: study participant on a phone at home, vertical crop]" style="display:block;width:100%;height:clamp(420px,42vw,600px)"></image-slot>
+      <div style="margin-top:16px;font-size:13px;line-height:1.55;color:rgba(15,29,46,.5);max-width:300px;text-wrap:pretty">One orbit, issued once, working for three audiences at the same time.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;min-width:0">
+      <sc-for list="{{ pov }}" as="p" hint-placeholder-count="3">
+        <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ p.label }}">{{ p.kicker }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ p.t }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ p.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div data-rv style="display:flex;flex-direction:column;margin-top:14px">
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="4">
+      <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ r.label }}">{{ r.kicker }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ r.t }}</div>
+          <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">{{ r.sub }}</div>
+        </div>
+        <sc-if value="{{ r.plain }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ r.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ r.seq }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:2px;padding-top:2px">
+            <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:6px;align-self:stretch">
+                  <span style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid {{ it.cBorder }};background:{{ it.cBg }};font-family:Lato,sans-serif;font-weight:700;font-size:12.5px;color:{{ it.cFg }};flex-shrink:0">{{ it.v }}</span>
+                  <sc-if value="{{ it.line }}" hint-placeholder-val="{{ true }}">
+                    <span style="flex:1;width:1px;background:linear-gradient({{ it.cLine }},rgba(79,179,191,.12))"></span>
+                  </sc-if>
+                </div>
+                <div style="padding-bottom:22px;display:flex;flex-direction:column;gap:3px;min-width:0">
+                  <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+                    <span style="font-family:Lato,sans-serif;font-weight:700;font-size:17px;letter-spacing:-0.01em;color:#0F1D2E">{{ it.t }}</span>
+                    <span style="font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:{{ it.cFg }}">{{ it.tag }}</span>
+                  </div>
+                  <div style="font-size:15px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it.d }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(15,29,46,.14);padding-top:20px;font-size:13.5px;line-height:1.6;color:rgba(15,29,46,.55);max-width:820px;text-wrap:pretty">Instrument names are referenced to describe configuration only. CareOrbit is not affiliated with, and does not license or distribute, third-party assessment instruments; licensing stays with the instrument owner and your research agreement.</div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 88px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px;display:flex;flex-direction:column;gap:44px">
+    <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4FB3BF">Where studies lose ground</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Attrition is rarely one failure. It is a hundred <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#4FB3BF">small gaps</em>.</h2>
+      </div>
+      <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">Community-based studies run for years across sites nobody staffs full time. Between visits, the protocol lives entirely in what a participant remembers and whether anyone can still reach them.</p>
+    </div>
+    <div style="border-top:1px solid #2D5A87;padding-top:26px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 56px;align-items:start" data-hdr>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#4FB3BF">What the gap costs</div>
+        <div style="font-size:16.5px;line-height:1.6;color:#B9C8D8;text-wrap:pretty">None of this is decided at a study visit. Each one turns on whether a participant understood what they agreed to, remembered the window, and could still be reached when it opened.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;font-size:19px;line-height:1.5;color:#FFFFFF;text-wrap:pretty">Behavioral health research demands deep, continuous patient engagement, yet current tools fall short of capturing real-world experience.</div>
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#7E93AB">National Institute of Mental Health, Research Priorities Report</div>
+      </div>
+    </div>
+    <div data-stat5 style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 56px;align-items:stretch;margin-top:-14px">
+      <sc-for list="{{ gaps }}" as="g" hint-placeholder-count="2">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #4FB3BF;padding-top:18px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:{{ g.size }};letter-spacing:-0.04em;line-height:1;color:#FFFFFF">{{ g.n }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#4FB3BF;line-height:1.35">{{ g.t }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ g.d }}</div>
+          <div style="margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#7E93AB">{{ g.src }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="font-size:13px;line-height:1.6;color:#7E93AB;max-width:900px;text-wrap:pretty">CareOrbit has no published outcome data in community-based research. The orbits on this page are blueprints built on the platform's engagement work in clinical care.</div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Measurable value</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">How an orbit <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">provides value</em>.</h2>
+    </div>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">Every orbit is built against at least one named study metric and the accrual or follow-up it protects, agreed before the build starts.</p>
+  </div>
+  <div data-rv style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px">
+    <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F7B87">Targeted Outcomes</div>
+    <div style="font-family:Lato,sans-serif;font-weight:400;font-size:19px;line-height:1.35;letter-spacing:-0.01em;color:rgba(15,29,46,.78)">What an orbit is built and tracked against from the first participant forward.</div>
+  </div>
+  <div data-rv style="border-top:1px solid rgba(15,29,46,.14)">
+    <sc-for list="{{ measures }}" as="m" hint-placeholder-count="8">
+      <div data-ledger style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px 56px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:15px;color:#1F7B87;flex-shrink:0;min-width:24px">{{ m.n }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:clamp(19px,2vw,23px);line-height:1.25;letter-spacing:-0.015em">{{ m.t }}</div>
+        </div>
+        <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.68);text-wrap:pretty">{{ m.d }}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div id="assess" style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4FB3BF">What is in this solution</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Three capabilities. One <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#4FB3BF">participant experience</em>.</h2>
+    </div>
+    <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">A participant receives education and motivation, validated instruments arrive inside the same orbit, and every response is captured, structured, and exported to the team drawing the conclusions.</p>
+  </div>
+  <div data-rv data-catalog style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 44px;border-top:1px solid #2D5A87">
+    <sc-for list="{{ library }}" as="c" hint-placeholder-count="3">
+      <div style="display:flex;flex-direction:column;gap:12px;padding:22px 0;border-bottom:1px solid rgba(45,90,135,.55)">
+        <div style="display:flex;align-items:baseline;gap:12px">
+          <span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:14px;color:#4FB3BF;min-width:24px">{{ c.n }}</span>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:21px;line-height:1.2;letter-spacing:-0.015em;color:#FFFFFF">{{ c.t }}</div>
+        </div>
+        <div style="font-size:14.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ c.v }}</div>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:2px">
+          <sc-for list="{{ c.items }}" as="it" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+              <span style="width:9px;height:1.5px;border-radius:1px;background:#4FB3BF;transform:translateY(-4px)"></span>
+              <div style="font-size:13.5px;line-height:1.55;color:#8FA5BC;text-wrap:pretty">{{ it }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <p data-rv style="margin:26px 0 0;font-size:13.5px;line-height:1.6;color:#7E93AB;max-width:940px;text-wrap:pretty">HIPAA-compliant, BAA-ready, EHR-friendly, and configurable to any study protocol. [Placeholder: the named orbit library for a given study is defined with the CareOrbit team during protocol scoping.]</p>
+  </div>
+</div>
+
+<div id="cta" style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv data-split style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:72px 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(30px,3.4vw,38px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:pretty">20 minutes. <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#4FB3BF">Your</em> study population, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#4FB3BF">our</em> platform.</h2>
+      <p style="font-size:15.5px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">No demo script, no obligation. We get introduced, hear which follow-up windows are costing your study the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.</p>
+      <a href="{{ bookHref }}" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 28px;border-radius:999px;align-self:flex-start;margin-top:4px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">Book a 20-minute intro call</a>
+    </div>
+    <div style="background:#1E3A5F;border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:19px;color:#FFFFFF">Not ready for a call?</div>
+      <div style="font-size:14px;line-height:1.55;color:#B9C8D8">Get the community research info sheet by email.</div>
+      <input onChange="{{ onHp }}" tabIndex="-1" autoComplete="off" aria-hidden="true" placeholder="Website" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"><input value="{{ email }}" onChange="{{ onEmail }}" placeholder="Work email *" style="font-family:Inter,sans-serif;font-size:14.5px;padding:14px 16px;border-radius:14px;border:1.5px solid #2D5A87;background:#0F1D2E;color:#FFFFFF;outline:none" style-focus="border-color:#4FB3BF">
+      <button onClick="{{ requestSheet }}" style="font-family:Inter,sans-serif;font-size:14.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:none;border-radius:999px;padding:13px 24px;cursor:pointer;align-self:flex-start;transition:background .2s" style-hover="background:#4FB3BF">{{ sheetBtn }}</button>
+    </div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { email: "", sent: false };
+  t0 = Date.now();
+  humanOk(email) { return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email) && !this.state.hp && (Date.now() - this.t0 > 3000); }
+  renderVals() {
+    return {
+      bookHref: "BookACall.dc.html?src=research",
+      pov: [
+        {kicker: "For participants", t: "They know what the study asks", label: "#A8412F", dot: "#E3735C",
+         items: [
+           "Education aligned to their treatment or study milestone, not a generic packet",
+           "Easy to understand across all literacy levels and all ages",
+           "Accessible on any screen, with no app download and no portal login",
+           "Less confusion, and less of the drift that turns into dropout"
+         ]},
+        {kicker: "For researchers", t: "Structured data, not chased paperwork", label: "#2D5A87", dot: "#2D5A87",
+         items: [
+           "An IRB-ready audit trail for every participant interaction",
+           "Assessment responses captured in real time and structured for analysis",
+           "No additional FTE and no additional I.T. requirement",
+           "Configurable to any study protocol, instrument set, and time-point schedule"
+         ]},
+        {kicker: "For your research division", t: "Throughput, richness, and a grant story", label: "#5B9BEA", dot: "#5B9BEA",
+         items: [
+           "White-labeled to your organization's brand rather than ours",
+           "Scalable across multiple concurrent studies",
+           "Higher study throughput and richer participant data",
+           "A differentiator you can point to in grant applications"
+         ]}
+      ],
+      rows: [
+        {kicker: "How we get started", t: "One pilot cohort first, then wherever it earns its way", label: "#A8412F", dot: "#E3735C", plain: true,
+         sub: "No risk and no lock-in. A pilot cohort is enough to prove reach before anything scales.",
+         items: [
+           {t: "Define the study protocol and orbits.", d: "Which time-points, which instruments, and which stretch of the study is losing people."},
+           {t: "Configure and brand it as yours.", d: "White-labeled to your organization, in your voice, matched to your interventions and milestones."},
+           {t: "Test with a pilot cohort.", d: "One study arm or one site, run beside the packet and the coordinator call you already have."},
+           {t: "Launch and monitor together.", d: "Completion from the pilot decides whether the next study or site turns on."}
+         ]},
+        {kicker: "Single orbit, multiple versions", t: "One participant orbit that changes as the study does", label: "#1F6B73", dot: "#4FB3BF", seq: true,
+         sub: "A participant moves through the study, and their orbit updates at the right moment with no new app or login.",
+         items: [
+           {v: "01", line: true, t: "Recruitment and eligibility", tag: "Before they are a participant", cBorder: "rgba(79,179,191,.5)", cBg: "rgba(79,179,191,.1)", cFg: "#1F6B73", cLine: "rgba(79,179,191,.55)", d: "Outreach, screening, and referral from community partners: what the study asks, what it involves, and how to take the first step."},
+           {v: "02", line: true, t: "Consent through baseline", tag: "Enrollment", cBorder: "rgba(79,179,191,.5)", cBg: "rgba(79,179,191,.1)", cFg: "#1F6B73", cLine: "rgba(227,115,92,.45)", d: "Eligibility, consent explained in plain language, orientation to the visit schedule, and the baseline instruments, delivered as a guided sequence instead of a packet."},
+           {v: "03", line: false, t: "Follow-up through close-out", tag: "The long stretch", cBorder: "rgba(227,115,92,.5)", cBg: "rgba(227,115,92,.1)", cFg: "#A8412F", cLine: "rgba(227,115,92,.55)", d: "Scheduled assessments, reminders that reach people who move, and check-ins that surface disengagement while the window is still open."}
+         ]},
+        {kicker: "Validated instruments", t: "The screeners your protocol already runs, delivered in-orbit", label: "#2D5A87", dot: "#5B9BEA", plain: true,
+         sub: "Assessment delivery configured to your protocol rather than retrofitted to a generic form builder.",
+         items: [
+           {t: "PHQ-9, GAD-7, AUDIT-C, DAST-10, CAGE-AID, and the GAIN family.", d: "Plus any researcher-defined instrument your protocol calls for."},
+           {t: "Scheduled and triggered delivery.", d: "At defined study time-points, or triggered by a participant behavior or milestone."},
+           {t: "Branching logic for adaptive protocols.", d: "The next item follows from the last answer rather than a fixed form."},
+           {t: "Real-time response capture.", d: "Structured on arrival, timestamped, and linked to the participant."},
+           {t: "Full audit trail.", d: "Every interaction recorded for IRB and regulatory review."},
+           {t: "Site and cohort rollups.", d: "Completion, drift, and dropout risk visible by site, cohort, and coordinator."}
+         ]},
+        {kicker: "Data and integration", t: "Research-ready from day one", label: "#1F6B73", dot: "#4FB3BF", plain: true,
+         sub: "Engagement and assessment data handed to the systems your team already works in.",
+         items: [
+           {t: "Engagement analytics per participant.", d: "Who accessed what, when, and how many times, with completion rates across a study arm."},
+           {t: "Structured exports.", d: "CSV or JSON for all instrument responses, timestamped, participant-linked, and audit-ready."},
+           {t: "Progress dashboards.", d: "Real-time participant status, pending items, and dropout risk indicators."},
+           {t: "API and EHR integration.", d: "Push data into your existing research systems, including REDCap, Epic, and custom API support."}
+         ]},
+        {kicker: "How it deploys", t: "Issued from the workflow you already run", label: "#2D5A87", dot: "#5B9BEA", plain: true,
+         sub: "Automated delivery across email, text, and a QR code at a partner site, at the time points you define.",
+         items: [
+           {t: "No new FTEs.", d: "Nothing added to a coordinator's week, and no portal logins to administer."},
+           {t: "HIPAA-compliant and BAA-ready.", d: "EHR-friendly and non-disruptive to the workflows and I.T. you already run."},
+           {t: "White-label.", d: "Your study, your institution, your voice."},
+           {t: "Stands up in days, not months.", d: "From kickoff to first participant."}
+         ]}
+      ],
+      gaps: [
+        {n: "40–60%", size: "clamp(38px,4.2vw,56px)", t: "Research participants who drop out before study completion", d: "Attrition climbs with study length and follow-up burden, and community-based protocols carry the hardest populations to hold.", src: "[Placeholder: source to confirm]"},
+        {n: "70%+", size: "clamp(38px,4.2vw,56px)", t: "Research teams reporting difficulty maintaining between-visit contact", d: "The stretch between visits is where a protocol lives, and it is the stretch nobody is staffed to cover.", src: "[Placeholder: source to confirm]"}
+      ],
+      measures: [
+        {n: "01", t: "Enrollment against target", d: "How many eligible people screened, consented, and reached baseline, tracked against the accrual curve the protocol assumed."},
+        {n: "02", t: "Time to full accrual", d: "The months between first contact and a closed enrollment window, and what a shorter one is worth to the study budget."},
+        {n: "03", t: "Consent comprehension", d: "Whether a participant can say what the study asks of them after they signed, not just that a signature exists."},
+        {n: "04", t: "Baseline completion", d: "The share of consented participants who finish every baseline instrument inside the protocol window."},
+        {n: "05", t: "Assessment window adherence", d: "On-time completion at each scheduled follow-up, the measure that decides whether a data point is usable at all."},
+        {n: "06", t: "Retention at final follow-up", d: "How many participants are still reachable and still on protocol when the last window opens."},
+        {n: "07", t: "Coordinator hours returned", d: "Time given back from reminder calls, rescheduling, and chasing forms, valued at loaded staff cost."},
+        {n: "08", t: "Study throughput and data richness", d: "How many concurrent studies a division can carry, and how much structured participant data each one produces."},
+        {n: "09", t: "Representation of the target community", d: "Whether the enrolled cohort actually reflects the community the study was funded to serve."}
+      ],
+      library: [
+        {n: "01", t: "Engage", v: "Structured digital education and motivation delivered to participants across the entire study journey.",
+         items: ["Milestone-aligned content delivery", "Protocol-specific messaging", "Phone, tablet, or desktop", "No app download required"]},
+        {n: "02", t: "Assess", v: "Validated screening and assessment tools woven into the participant experience rather than bolted on.",
+         items: ["Validated instruments, plus researcher-defined", "Scheduled and triggered delivery", "Real-time response capture", "HIPAA-compliant data handling"]},
+        {n: "03", t: "Data", v: "Structured participant data and dashboards that power research insight and reporting.",
+         items: ["Engagement analytics by participant", "Assessment response exports", "API and EHR integration", "IRB-ready audit trails"]}
+      ],
+      email: this.state.email,
+      onHp: (e) => this.setState({hp: e.target.value}),
+      onEmail: (e) => this.setState({email: e.target.value}),
+      sheetBtn: this.state.sent ? "Downloading your info sheet \u2713" : "Send me the info sheet",
+      requestSheet: () => { if (this.humanOk(this.state.email)) { this.setState({sent: true}); const a = document.createElement("a"); a.href = "sheets/careorbit-community-research-2-page.pdf"; a.download = "CareOrbit-Community-Research-Info-Sheet.pdf"; document.body.appendChild(a); a.click(); a.remove(); } }
+    };
+  }
+}
+</script>
+</body>
+</html>

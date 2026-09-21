@@ -1,0 +1,83 @@
+/* Pritikin pilot page rules, ported from PritikinPilot.dc.html's
+ * <helmet><style> block, in the original source order.
+ *
+ * NOT PORTED (already global in app/globals.css): body / a / html,
+ * [data-rv] and [data-rv].in, @keyframes coFloat (identical values here),
+ * and the prefers-reduced-motion [data-rv] override.
+ */
+
+@media (max-width: 1020px) {
+  [data-hdr],
+  [data-hero-grid],
+  [data-split],
+  [data-two] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  [data-povrow] {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+@media (min-width: 1021px) {
+  [data-hdr] > div:first-child:has(> h2) {
+    display: contents !important;
+  }
+  [data-hdr] > div:first-child:has(> h2) > div:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 12px;
+  }
+  [data-hdr] > div:first-child:has(> h2) > h2 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+  [data-hdr] > div:first-child:has(> h2) + * {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+  [data-hdr]:has(> div:first-child > h2) {
+    row-gap: 0 !important;
+  }
+}
+@media (max-width: 1100px) {
+  [data-stat5] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px !important;
+  }
+}
+@media (max-width: 700px) {
+  [data-stat5] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 900px) {
+  /* ONE DECLARATION DELIBERATELY NOT PORTED - grid-template-columns.
+   *
+   * The source writes `[data-restat]{grid-template-columns:1fr;gap:18px}`
+   * here, but on THIS page the only [data-restat] element is declared
+   * inline as `repeat(4, minmax(0,1fr))`, which the global responsive.css
+   * rule
+   *   div[style*="grid-template-columns: repeat(4, minmax(0px, 1fr))"]
+   * also matches - at specificity 0-1-1 against this rule's 0-1-0, with
+   * !important on both. Specificity decides, so the global wins and the
+   * cohort figures render TWO-up at 768px, not one-up. Measured on the
+   * legacy page: 347px 347px at 768, 334px at 390.
+   *
+   * Porting the declaration verbatim inverted that, because the
+   * replacement global selector [data-grid="4-min0"] is also 0-1-0 and
+   * source order then favoured this sheet: one column at 768px, and the
+   * page 493px taller (14.3% of the body above the footer).
+   *
+   * The `gap` is kept - no global rule competes with it, so it DOES apply
+   * at 900px in v2-maven. Only the column declaration is dropped.
+   *
+   * Same class of defect as [data-costgrid] on Behavioral Risk; see
+   * app/orbits/behavioral-risk/behavioral-risk.css.
+   */
+  [data-restat] {
+    gap: 18px !important;
+  }
+}

@@ -1,0 +1,201 @@
+
+CareOrbit Website Brief v4 07-21-2026
+Prepared for the CareOrbit Website design 2026 project. This is the working page-by-page brief for the new CareOrbit website: site goals, audience, messaging hierarchy, architecture, design system, and a full spec for every page.
+Changed in v4, incorporating Jeff Coburn’s review (7/21): problem headline locked to the “costliest” phrasing; announcement bar reworded to drop the newbie-sounding “Now live”; the hero panel renamed “Find your orbit solution” sitewide; a new “Low risk, by design” section on the Platform page, condensed from the current selling deck; issuing-method flexibility added to the orbit explainer; trial stat labels standardized to the current deck.
+Markers used throughout: [CONFIRM] means a decision or permission Michael needs to sign off before the item goes public. [PLACEHOLDER] means content that doesn’t exist yet or isn’t verified; build the slot, fill it later. A full content pass happens before launch; this brief defines structure, messaging, and the rules the content must follow.
+
+1. What the site is for
+One job: a sales lead lands on the site, understands what CareOrbit offers in under 90 seconds, clicks into the page built for their service line, sees the specific care and financial outcomes an orbit can deliver for them, and books a brief call or requests more information.
+The site is not trying to close the deal, explain pricing, or serve patients. It exists to create qualified first meetings.
+Success metrics: booked intro calls, info sheet requests, and service line page visits per session. Everything on every page should be judged against “does this move a visitor toward booking a call?”
+What the site should feel like: operational, credible, ROI-driven. A 10+ year company with real hospital deployments and real trial data, not a startup brochure. Short sentences, real numbers, no hype.
+2. Messaging hierarchy
+Two selling lines lead the site. Everything else supports them.
+Line 1, the hero headline: “Engaged patients are your most valuable asset.” This is the main headline on the front page. It flips the usual framing: engagement isn’t a cost center or a satisfaction checkbox, it’s an asset with financial value. The hero subhead then explains how CareOrbit turns that asset into measurable outcomes. [CONFIRM] one word: the current selling deck uses “most powerful asset,” this brief has been using “most valuable.” Pick one and standardize across site and deck.
+Line 2, the problem headline (locked, per Jeff’s review): “Your costliest moments happen when your patients aren’t with you.” “Costliest” is the feel-the-pain word; “most expensive” reads as ambiguous (expensive care can be revenue, depending on who’s reading). This headlines the problem section on Home and sets up the orbit as the answer.
+The two lines work as a pair: Line 1 states the value thesis, Line 2 states the gap. The orbit is the bridge. Every service line page inherits this logic in specialty-specific form.
+3. Who it is for
+Primary visitors (the people who book the call): service line managers and department heads, patient engagement and patient education leaders, and value-based care executives at hospitals and health systems.
+Secondary visitors (the people who bless the deal): CFOs looking for ROI, CMOs and CEOs worried about market share and consumerism, MSO leadership (CMO, Finance, HR), and VA/DOD quality-improvement leadership.
+Design implication: every page must serve two reading modes at once. The skimmer (executive) needs a headline, one proof number, and a CTA visible without scrolling effort. The validator (clinical and ops staff) needs the depth blocks further down: how it deploys, what it demands of staff, what the data shows. Structure every page top-down from skim to depth.
+4. Site architecture
+Top navigation:
+Platform (how orbits work)
+Orbits (dropdown, the service line pages): Oncology / Cardiology / Orthopedics / Women’s Health / Bariatrics / Behavioral Health / Medication Therapy &amp; Adherence
+Outcomes &amp; ROI
+About
+Book a Call (persistent pill button, always visible in the nav)
+“Orbits” as the dropdown label is deliberate: it’s on-brand, distinctive, and teaches the product’s core noun from the first visit. “Solutions” and “Government” sections are deferred to a later phase; VA/DOD gets a footer link at launch. [CONFIRM] whether Government should instead be in the top nav at launch given the VA/DOD ICP.
+Announcement bar (reworded in v4, per Jeff’s review): thin strip above the nav. “Now live with…” made us sound newly launched. Launch copy: “Live within large, complex health systems including BJC HealthCare, Washington University, and Siteman Cancer Center → See results,” linking to Outcomes &amp; ROI. This wording tracks the executive summary’s established deployment language. (Jeff’s suggested “national hospital systems and cancer centers” reads well but pluralizes “cancer centers” with only one named example; the version above keeps the established feel without the stretch.) Contingent on naming rights (see Content rules).
+Footer: brand block with “A Total Orbit company,” [PLACEHOLDER: publishable company address], sales@totalorbit.com, phone; link columns for Platform, Orbits, Resources, Company; bottom row with HIPAA Compliance, Privacy Policy, Terms. No Careers link at launch. [CONFIRM] whether a client “Log in” link belongs in the nav; include only if there’s a real client dashboard login to point at.
+Total: 13 pages. Home, Platform, 7 orbit pages, Outcomes &amp; ROI, About, Book a Call, plus a thank-you/confirmation page.
+[CONFIRM] Domain: careorbit.com vs totalorbit.com. Decide before build; redirect the other.
+5. Conversion strategy (applies to every page)
+Primary CTA: “Book a 20-minute intro call.” Pill button. Appears three times per page maximum: nav, mid-page after the strongest proof block, and the closing CTA card. [CONFIRM] final label (“intro call” is recommended over “demo” because the sales motion is a conversation that maps goals to a blueprint, and “20 minutes” lowers the commitment bar).
+Secondary CTA: “Get the [service line] info sheet.” Email-capture form that sends the relevant PDF and feeds the lead list. The existing Platform Infosheet and Executive Summary are the first assets; service line versions follow via the existing sell-sheet pipeline.
+No gated demos, no pricing CTAs, no chatbots. Two actions sitewide. (The “Find your orbit solution” panel on Home is a router, not a third CTA; it ends in one of the two actions.)
+6. Design system
+Layout grammar
+Applies sitewide:
+Generous whitespace; large rounded cards (radius ~22-28px); pill buttons; big confident headlines with tight letter-spacing; soft shadows.
+Section headers: large two-line H2 (second line in a lighter tone) paired with a right-aligned intro paragraph.
+Illustrated SVG imagery and real product screenshots instead of stock photography.
+Split hero: headline + subhead + two CTAs on the left, interactive panel on the right.
+Full-width deep-color rounded CTA card to close every major page.
+Deep-color multi-column footer.
+Color
+From the Total Orbit brand guide (7/5/2026):
+Ink Navy #0F1D2E: deep surfaces (announcement bar, CTA card, footer), headlines. Navy carries trust and clinical weight.
+Harbor Blue #1E3A5F / Trust Blue #2D5A87: secondary surfaces and accents.
+Signal Coral #E3735C: CTAs, eyebrows, active states only. Coral marks the active signal; never use it for large surfaces.
+Paper #FFFFFF / Sky Mist #F3F6FA / Cloud Blue #EAF1F8: page backgrounds, cards, section fills.
+Blush Pink #F2B8C6: wellness warmth, sparingly (patient-facing moments, Women’s Health accents).
+Type and logo
+Fredoka for headlines, Inter for body and UI. CareOrbit lockup (orbit-heart mark) in the nav; Total Orbit lockup in the footer as the corporate entity. Never recolor the orbit or stretch the mark; clear space of the center dot’s diameter on all sides.
+Copy voice
+Plain language, operational, numbers-forward. No “revolutionary,” no “best-in-class,” no “seamlessly.” Model sentence for register: “ordered the same way as bloodwork inside Epic.”
+7. Content rules (non-negotiable)
+No invented anything. No invented metrics, quotes, testimonials, case studies, or client references anywhere on the site. Every number traces to the Siteman controlled trial, the Siteman engagement results, or a clearly labeled model.
+Client names. Only actual clients may appear as clients: Washington University, Siteman Cancer Center, BJC HealthCare. [CONFIRM] naming and logo rights for a public marketing site. Prospects (Mercy, AdventHealth, Rezilient, VA, and others) never appear on the site in any form until they are signed clients with permission.
+Quotes and testimonials. The testimonial slot ships empty until real, permissioned quotes exist. [PLACEHOLDER: testimonial section, pending real quotes]. One named clinician quote outweighs any number of anonymous ones.
+Trial data attribution. The five trial stats are always labeled “controlled clinical trial at Siteman Cancer Center.” Don’t blend trial results and deployment footprint into one causal story. Stat labels standardized to the current selling deck: patient understanding +65%, recovery navigation improved for 9 in 10, patient calls to the office −53%, patient satisfaction +22%, re-admission rate −41%. Satisfaction is labeled “patient satisfaction” generically; [CONFIRM] whether the instrument was HCAHPS before ever naming it.
+Models vs. results. The cardiac rehab enrollment lift (+20-40% YoY) is a result; the revenue math built on it is a model and is always labeled as one.
+Design-target framing for orbits without proprietary data: “every orbit is built backwards from at least one measurable outcome, tracked from day one,” never implied results. No borrowed industry statistics without a named citation Michael approves.
+Supported claims only: build speed is “within a quarter” sitewide (the deck’s “weeks, not months” applies to orbit assembly specifically and may be used in that context); no competitor naming; no pricing.
+Page-by-page specs
+Page 1: Home
+Purpose: rapid comprehension plus routing. A visitor should grasp what CareOrbit is in one screen, then be routed to their orbit page within two scrolls.
+Sections, top to bottom:
+Announcement bar. “Live within large, complex health systems including BJC HealthCare, Washington University, and Siteman Cancer Center → See results.” (Rights-contingent.)
+Nav with Book a Call pill.
+Hero. Left: H1 “Engaged patients are your most valuable asset.” (Pending the valuable/powerful decision.) Subhead, one sentence connecting the thesis to the mechanism: CareOrbit turns engagement into measurable outcomes with clinical-journey-specific orbits, issued from inside your existing workflow and proven to reduce readmissions, calls, and confusion. Two CTAs: primary + “See how it works” (anchors to the orbit explainer). Right: the “Find your orbit solution” panel, the site’s signature interaction: a search input with suggestion chips for all seven orbits plus goal terms (“Readmissions,” “Patient Education”); a typed query resolves to a result card (“For Oncology, start with…”) with Explore + Book buttons; an unmatched query falls back gracefully to browse; a “Not sure, just let me browse” escape hatch below. Explore deep-links to the matching orbit page. “Solution” matters in the label: it frames orbits as built answers to the visitor’s problem, not a gallery of existing education content they’re being pointed into. Log all queries; they’re free market research on what visitors call their problems.
+Client strip. Washington University, Siteman Cancer Center, BJC HealthCare. (Rights-contingent; grows as clients sign.)
+Problem section. H2: “Your costliest moments happen when your patients aren’t with you.” Short framing paragraph plus the four cost moments: missed appointments and no-shows, delayed procedures and lost capacity, poor adherence and uneven outcomes, rising coordination burden. Today these moments are managed with scattered handouts, portals, and manual outreach.
+What an orbit is. The answer to section 5. One visual block: a guided digital journey covering the clinical, logistical, emotional, educational, motivational, and tracking sides of a specific care journey, received on any device with no downloads, needing only the patient’s email address. Issued however works for the care team’s workflow: an EHR order trigger (in Epic, ordered the same way as bloodwork), a provided patient list, a QR code, a text message, or on-site registration. The single most important comprehension moment on the site; invest design effort here.
+Orbit card grid. Section header: “An orbit for every clinical journey.” Seven image-topped cards routing to the seven orbit pages, Oncology first, each with a one-line outcome hook and “Learn more →”. Use a 4+3 arrangement or carousel. This grid plus the hero panel are the two routing mechanisms; they should agree.
+Proof bar. The five trial numbers in a strip: +65% patient understanding, 9 in 10 recovery navigation improved, −53% patient calls to office, +22% patient satisfaction, −41% re-admission rate. Label: “Proven in a controlled clinical trial at Siteman Cancer Center.”
+Case study feature. Split card, illustration left, content right: eyebrow “Case study · WashU / Siteman,” headline, short copy on the three live orbits (ENT Surgery Support, LivingWell Center, Fluoroscopy Procedure Support) and what changed for care teams and patients, 2x2 trial stat grid correctly attributed, “Read the case study” link. [PLACEHOLDER: case study write-up as the linkable asset]. A tab row for multiple case studies is phase 2; don’t ship tabs with one tab’s worth of content.
+How it works, in five steps. Map goals onto a proven blueprint → choose customization level (Low, Medium, Full) → we ingest your existing resources → enhance where needed → launch and track. Within a quarter, no new FTEs, white-label, non-disruptive.
+Testimonials. [PLACEHOLDER: section built but hidden until real permissioned quotes exist].
+Closing CTA card. “Your first orbit, live within a quarter.” One line: issued from inside your existing workflow, no new FTEs, no forced workflows, a measurable lift in the outcomes you already track. Primary CTA.
+Content status: both headlines locked (pending the one-word valuable/powerful decision). Needed: product screenshots (PHI-free), logo rights, case study write-up.
+Page 2: Platform (How It Works)
+Purpose: satisfy the validator. This is where clinical, ops, and IT visitors confirm CareOrbit is real, light to implement, and safe to bring to their committee.
+Must communicate: provider-anchored infrastructure, not a consumer app or a static content library; light implementation; plays well with your EHR; measurable by design; low risk to say yes to.
+Sections:
+Hero. “Enterprise engagement infrastructure for the moments that cost systems the most.” One-paragraph platform story. (Echoes Home’s problem headline; intentional.)
+Three pillars: Engage, Assess, Data. Engage: structured, care-team-approved digital journeys with education, reminders, and next steps. Assess: embedded PROMs, eScreenings, and outcomes capture tied to care pathways, quality initiatives, and value-based programs. Data: enterprise dashboards that make engagement, adherence, and outcomes measurable, actionable, and defensible, including an Engagement Index for every patient (one at-a-glance score, broken into knowledge, feeling, and actions, flagging topics not yet engaged or past due) and one-click export of any dashboard view.
+Low risk, by design (new in v4, per Jeff’s review). The peace-of-mind block, placed early because prospects reading this page are silently listing the issues they’d have to navigate. Condensed from the selling deck and infosheet, four short columns:
+Limited risk. No risk, no lock-in, no disruptions to your offices. A simple proposal you can say yes or no to; start with one orbit, one outcome.
+Light lift for your staff. No new FTEs. You share the content and brand assets you already have; we assemble the orbit; you review and launch. Most of the work is assembly, not creation.
+Secure from the start. HIPAA-compliant, BAA-ready, minimal PHI, hosted on AWS. (Anchor-links to the full compliance block below.)
+Built to match your system. White-labeled in your brand and voice, built on your content, ROI goals, and care standards. Works with your EHR and your workflow, whichever issuing method fits: EHR order trigger, patient list, QR code, text message, or on-site registration. Patients need only an email address, on any device, with no downloads.
+Inside an orbit. Active engaging pages, journey-sequenced topics at the right moment, email and text touchpoints between visits, your content and brand white-label throughout, end-to-end tracking, care team dashboards. Include CareOrbit Assessments: quick check-ins and validated measures woven into each orbit that surface rising-risk patients early. An orbit serves everyone around the patient: the patient’s guided journey, a caregiver/family version of it, care-team issuing and visibility, and program-level rollups for executives.
+The EHR workflow. How an orbit is ordered by staff inside Epic like any other order, and what the care team sees back; the other issuing methods for teams outside that workflow. Mention the flat-file integration pattern for auto-issuing orbits to pre-consented patients as an available deployment model. [CONFIRM] how publicly to describe Epic integration depth while the WashU/BJC work is in flight; public copy stays limited to what is live today.
+Implementation. Kickoff with a launch book, assigned Customer Success Manager, 100% remote delivery available, launches within a quarter. (The staffing and risk story lives in section 3; this section is the “what happens after you say yes” mechanics.)
+Blueprints and customization. Proven blueprints, customized at the level you choose (Low, Medium, Full). No pricing numbers on the site.
+Security and compliance. HIPAA-compliant, BAA-ready, hosted on AWS, minimal PHI (first name, last name, email, phone, diagnosis only), never transmitted outside CareOrbit, deleted on request. Own anchor link so a champion can send it straight to compliance.
+CTA block.
+Content status: all exists in current materials. Needed: [PLACEHOLDER: 2-3 clean dashboard screenshots], decision on public Epic detail.
+Pages 3-9: Orbit pages (shared template)
+These seven pages are the reason the site exists. Same skeleton for all seven so the build is a template with swapped content, which keeps future orbits cheap to add. Visual language: the orbit card and case study split-card patterns from the design system.
+Template, top to bottom:
+Hero: names the visitor’s world and the dual outcome. Pattern: “[Service line] orbits: [care outcome] and [financial outcome], by design.” Each hero echoes the site’s two lead lines in specialty form: what an engaged patient is worth here, and what the between-visit gaps cost here.
+The cost moments in this service line: three or four pain points specific to the specialty, written in the language its leaders use.
+What an orbit covers here: the journey stages an orbit supports for this specialty, so the visitor can picture their own pathway inside it.
+Outcomes to target: the care outcomes and the financial outcomes an orbit is designed backwards from, per the content rules (proven numbers labeled with source; design-target framing everywhere else).
+Nearest proof: the closest real evidence we hold (trial data, live deployment, orbit in build at a named academic medical center).
+How it deploys: two lines, inherited from the Platform page: inside your existing workflow, no new FTEs, launches within a quarter.
+CTA block: primary CTA plus “Get the [service line] info sheet.”
+Per-page content below. Status labels are honest per current materials: Live (deployed), In build (in active development), Blueprint (proven platform, service-line orbit not yet built).
+Page 3: Oncology (flagship orbit page)
+The strongest page on the site; the controlled trial data is oncology data. First card in the grid, first chip in the hero panel.
+Hero direction: “Oncology orbits: fewer readmissions, calmer patients, and a care team that spends less time on the phone.”
+Cost moments: readmissions after cancer surgery, unprepared patients arriving for treatment, high inbound call volume to nursing staff, fragmented education across a long multi-modality journey (surgery, infusion, radiation).
+Orbit coverage: diagnosis through survivorship; existing footprint includes ENT/head &amp; neck surgical support live at WashU/Siteman, with Head &amp; Neck Cancer Tumor Center and Breast Cancer orbits in active build.
+Proven outcomes (Siteman Cancer Center controlled clinical trial): −41% re-admission rate, −53% patient calls due to lack of preparedness, +65% patient understanding of treatment plan and side effects, +22% patient satisfaction, recovery navigation improved for 9 in 10 patients.
+Financial outcomes to feature: readmission cost avoidance, recovered nursing time from reduced call volume, protected treatment throughput from better-prepared patients. Present as the ROI logic an oncology orbit is designed around; the readmission and call numbers carry the quantitative weight.
+Status: Live (ENT Surgery Support, Fluoroscopy Procedure Support at WashU/Siteman) with two oncology orbits in build.
+Page 4: Cardiology
+Hero direction: “Cardiology orbits: more patients starting and finishing cardiac rehab, and revenue that follows.”
+Cost moments: cardiac rehab under-enrollment despite reimbursement being available, drop-off between referral and first session, post-event readmissions, medication and lifestyle adherence after discharge.
+Orbit coverage: post-event recovery, cardiac rehab enrollment and completion, procedure prep (cath, ablation), chronic management support.
+Proven outcomes: +20-40% year-over-year increase in monthly Cardiac Rehab program enrollment (Siteman engagement work). The anchor number.
+Financial outcomes: present the rehab ROI model transparently as a model, with the math shown: 25 additional starts per quarter × 36 reimbursable sessions × $100 Medicare reimbursement = $90,000 per quarter per location. Label it a projection built on the enrollment lift, not a customer result. [CONFIRM] the $100 Medicare reimbursement figure is still current for 2026.
+Status: Blueprint with proven enrollment results from the Siteman engagement. [CONFIRM] exact current status of cardiac work so tense is right.
+Page 5: Orthopedics
+Hero direction: “Orthopedics orbits: patients who show up ready for surgery, and PROMs that collect themselves.”
+Cost moments: day-of cancellations from unprepared patients, PROMs collection burden under bundled payment and quality programs, post-op call volume, discharge and rehab adherence.
+Orbit coverage: surgery decision through pre-op preparation, day-of expectations, post-op recovery milestones, PT adherence, PROMs capture at protocol intervals.
+Outcomes to target: fewer cancellations and delays, reduced coordination burden, PROMs completion rates, readmission reduction. No ortho-specific proprietary numbers yet: design-target framing, leaning on the platform-level trial data plus the Assess pillar (embedded PROMs is a real, current capability and a strong differentiator here).
+Proof: platform actively deployed across orthopedics within large complex health systems. [CONFIRM] what specifically backs the orthopedics deployment claim so public wording matches reality.
+Status: Blueprint/deployed footprint per above.
+Page 6: Women’s Health
+Hero direction: “Women’s Health orbits: confident, prepared patients across pregnancy and well-woman care.”
+Cost moments: long journeys with heavy education needs (pregnancy especially), missed and late-entry prenatal care, high communication load on nursing lines, OB’s malpractice exposure profile (educated, engaged patients and documented education are protective; keep this angle factual and understated).
+Orbit coverage: pregnancy journey support by trimester through postpartum, well-woman visit preparation, procedure support.
+Outcomes to target: patient preparedness and understanding, fewer missed appointments, reduced call burden, documented education touchpoints. Design-target framing; no proprietary women’s health numbers yet.
+Proof: Maternal Care orbit in active build; platform trial data as evidence the engagement mechanism works.
+Status: In build (Maternal Care).
+Page 7: Bariatrics
+Hero direction: “Bariatric orbits: more qualified patients reaching surgery, and stronger outcomes after it.”
+Cost moments: the long pre-surgical pathway (clearances, supervised weight management, psych evaluation, insurance requirements) where programs lose a large share of candidates to attrition; day-of cancellations; post-op adherence to staged diet and follow-up schedules; long-term regain.
+Orbit coverage: program entry through pre-op requirements tracking, surgery prep, staged post-op progression, long-term maintenance touchpoints.
+Outcomes to target: pipeline conversion (candidates completing requirements and reaching surgery), fewer cancellations, follow-up attendance, adherence. Financial logic: each completed bariatric surgery is high-value; reducing pre-op attrition is direct revenue. Present as the ROI target the orbit is designed around, without inventing a conversion statistic.
+Proof: Bariatric orbit in active build.
+Status: In build.
+Page 8: Behavioral Health
+Hero direction: “Behavioral health orbits: measurement-based care without the administrative weight.”
+Cost moments: no-show rates, screening and outcome-measure collection burden, engagement drop-off between sessions, documentation demands of value-based and quality programs.
+Orbit coverage: intake and expectation-setting, between-session engagement and skills reinforcement, scheduled validated screenings via eScreening, rising-risk surfacing to the care team.
+Outcomes to target: screening completion rates, appointment attendance, sustained engagement, defensible outcome documentation. eScreening is a real, current product: lead with it. The “surface rising-risk patients early” capability is the emotional center of this page.
+Proof: eScreening Behavioral Health orbit in build; behavioral health named in the current deployment footprint. [CONFIRM] specifics behind the behavioral health deployment mention. [CONFIRM] current VA/DOD status before any government reference appears on this page.
+Status: In build, with eScreening live as a product.
+Page 9: Medication Therapy &amp; Adherence
+Naming note: recommend “Medication Therapy &amp; Adherence” on the site rather than “Pharmaceutical Medical Therapy and Drug Adherence”; shorter, and reads provider-side rather than pharma-side. [CONFIRM] Michael’s preference, including whether pharma companies themselves are an intended audience for this page (that changes the copy considerably; this brief assumes provider audience).
+Hero direction: “Medication therapy orbits: patients who understand their therapy, stay on it, and know what to do when side effects hit.”
+Cost moments: non-adherence and early discontinuation (especially specialty and injectable therapies), side-effect-driven calls and ED visits, missed refills and infusion no-shows, prior-auth and onboarding confusion at therapy start.
+Orbit coverage: therapy onboarding, injection/infusion preparation and technique support, side effect expectation-setting and management, refill and appointment touchpoints, adherence tracking. (The selling deck’s outcome-mapping examples are this page’s backbone: higher medication adherence → guided education path; fewer missed or delayed doses → timely check-ins and reminders; proactive side-effect management → assessments and screenings; fewer treatment discontinuations → care-team visibility; a better patient experience → personalized, on-brand journey.)
+Outcomes to target: persistence and refill behavior, fewer therapy-related inbound calls, infusion chair utilization. Relevant proven number: +65% patient understanding of treatment plan and side effects from the Siteman trial, since understanding is the front door to adherence.
+Proof: the Injection Support orbit at WashU, which is in the Epic auto-issue integration work now in flight. A real, named proof point. [CONFIRM] its exact live status before the page says “live.”
+Status: Deployed/in integration (Injection Support). Confirm before labeling Live.
+Page 10: Outcomes &amp; ROI
+Purpose: one page holding all the real evidence, so champions can send a single link to their CFO or committee. This is also where the announcement bar’s “See results” link lands.
+Sections:
+The measurement philosophy. Every orbit is designed backwards from at least one desired outcome and its financial ROI, with trackable reporting that continuously proves both. This framing is the differentiator; most competitors can’t say it.
+The controlled trial. The five Siteman numbers with context: what the trial was, where, and what was measured. [CONFIRM] how much trial detail (dates, n, design) we can and want to publish. [PLACEHOLDER: trial methodology summary]
+The cardiac rehab result and model. Enrollment lift as the result; revenue model shown with its math and labeled as a model.
+Operational outcomes. ROI framing by pillar: throughput and preparedness (fewer cancellations, delays, no-shows; reduced manual outreach), quality and value-based care (stronger VBC performance, outcome documentation, PROMs readiness), visibility (adoption, completion, drop-off; credible ROI narratives for boards and payers).
+Reporting, shown. Screenshots of actual orbit reporting/dashboards, including the Engagement Index and the live program dashboard, because “trackable” claims land harder when the tracking is visible. [PLACEHOLDER: dashboard screenshots]
+Resource cards. Three-up card row: the Siteman case study [PLACEHOLDER: write-up], a Cardiac Rehab ROI overview [PLACEHOLDER: produce as a real asset; the math exists], and the Platform Infosheet download. Real assets only; the row launches with however many exist.
+CTA block: “Walk through the numbers for your service line on a 20-minute call.”
+Page 11: About
+Purpose: pass the “are these people real” check that precedes every booked meeting. Keep it short.
+Sections: the one-liner and the founding idea; 10+ years building patient engagement, St. Louis roots, the WashU/Siteman/BJC relationships; leadership (Michael Margraf, CEO; Jeff Coburn, co-founder; Jim Peck, head of development) with short bios and real photos; a line on how the company works (lean, senior, hands-on with every client). No timeline graphics, no mission-statement inflation.
+Content status: [PLACEHOLDER: bios, 3-4 sentences each, and headshots]
+Page 12: Book a Call
+Purpose: zero-friction conversion. This page should be almost empty.
+Sections:
+Headline: “20 minutes. Your service line, your numbers.” One line of reassurance: no demo script, no obligation; we’ll map your improvement goals against a proven blueprint and show you what an orbit would target for you. (The selling deck’s close is the model: define a strong first outcome, gather the key details, then a simple proposal you can say yes or no to.)
+Embedded scheduler (Calendly or equivalent wired to Michael’s calendar; team routing later if channel partners take meetings). Booking form fields, five maximum: name, organization, role, service line (dropdown of the seven plus “Other”), email.
+Alternative path: “Not ready for a call?” info sheet request (email + service line).
+What happens next: three short lines (we confirm, we do 10 minutes of homework on your organization, you leave the call with a one-page summary of what an orbit would target for you).
+The service line dropdown matters beyond routing: it tells Michael which page and pitch to prepare, and over time which service lines the site is actually attracting. The “Find your orbit solution” panel queries feed the same intelligence.
+Page 13: Thank you / confirmation
+Booking confirmation plus one useful next step: a link to the visitor’s orbit page and the platform infosheet PDF. Sets up the pre-call email sequence later; keep it simple at launch.
+
+Build notes and open items
+Asset checklist: product screenshots (patient view and dashboard, PHI-free), CareOrbit logo files from brand system, leadership headshots and bios, BJC/WashU naming permission, Siteman case study write-up, trial methodology summary, current Medicare reimbursement check for the cardiac model, real testimonial quotes with permission, publishable company address, scheduler account.
+Open questions for Michael:
+Hero headline, one word: “most valuable asset” (this brief) or “most powerful asset” (current selling deck)? Standardize everywhere.
+Primary domain: careorbit.com or totalorbit.com?
+BJC / WashU / Siteman naming and logo rights on a public site?
+CTA label: “Book a 20-minute intro call” (recommended) or “Book a demo”?
+Cardiac work: current deployment status, and is the $100/session Medicare figure still right?
+What backs the orthopedics and behavioral health deployment mentions, and what is the real VA/DOD status?
+“Medication Therapy &amp; Adherence” naming, and is pharma itself an audience for that page?
+Testimonials: any client quotes we can get permission to use? One named Siteman/WashU clinician quote would be the strongest single asset on the site.
+Was “+22% patient satisfaction” measured as HCAHPS specifically, or keep the generic label?
+Who takes the booked calls: Michael only, or route by service line to channel partners?
+Publishable company address, and does a client “Log in” belong in the nav?
+Suggested build sequence: Home + Platform + Oncology + Book a Call first (a complete, launchable conversion path, including the “Find your orbit solution” panel wired to all seven destinations even before all seven pages exist; unbuilt ones can route to the Book a Call page with a service-line-aware message), then the remaining six orbit pages off the template, then Outcomes &amp; ROI and About.

@@ -1,0 +1,16 @@
+.next
+node_modules
+package-lock.json
+
+# Generated files - owned by their generators, not by Prettier. Formatting
+# them makes `npm run gen:hover:check` fail because the file no longer
+# matches what the generator produces.
+# NOTE: gitignore syntax - a trailing comment would become part of the
+# pattern, so keep comments on their own lines.
+# app/hover.css       <- scripts/gen-hover-css.mjs
+# app/fonts.css       <- migration/scripts/vendor_fonts.py
+# app/specimen/body.ts <- migration/scripts/gen_specimen.py
+app/hover.css
+app/fonts.css
+app/specimen/body.ts
+public/fonts

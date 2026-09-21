@@ -1,0 +1,61 @@
+/* VA eScreening evidence page rules, ported from EScreeningResults.dc.html's
+ * <helmet><style> block, in the original source order.
+ *
+ * NOT PORTED (already global in app/globals.css): body / a / html,
+ * [data-rv] and [data-rv].in, @keyframes coFloat (identical values here),
+ * and the prefers-reduced-motion [data-rv] override.
+ */
+
+@media (max-width: 1020px) {
+  [data-hdr],
+  [data-hero-grid],
+  [data-split],
+  [data-two] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  [data-povrow] {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+@media (min-width: 1021px) {
+  [data-hdr] > div:first-child:has(> h2) {
+    display: contents !important;
+  }
+  [data-hdr] > div:first-child:has(> h2) > div:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 12px;
+  }
+  [data-hdr] > div:first-child:has(> h2) > h2 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+  [data-hdr] > div:first-child:has(> h2) + * {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+  [data-hdr]:has(> div:first-child > h2) {
+    row-gap: 0 !important;
+  }
+}
+@media (max-width: 1100px) {
+  [data-stat5] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px !important;
+  }
+}
+@media (max-width: 700px) {
+  [data-stat5] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 900px) {
+  [data-restat] {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+}

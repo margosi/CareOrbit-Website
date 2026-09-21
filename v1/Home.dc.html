@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FFFFFF}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FFFFFF">
+<dc-import name="SiteNav" active="home" hint-size="100%,110px"></dc-import>
+
+<div style="max-width:1180px;margin:0 auto;padding:64px 28px 84px;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center">
+  <div style="display:flex;flex-direction:column;gap:22px">
+    <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">Digital patient engagement platform</div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:700;font-size:54px;line-height:1.08;letter-spacing:-0.015em;margin:0;color:#0F1D2E;text-wrap:pretty">Engaged patients are your most {{ heroWord }} asset.</h1>
+    <p style="font-size:18px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:520px;text-wrap:pretty">CareOrbit turns engagement into measurable outcomes with clinical-journey-specific orbits, issued from inside your existing workflow and proven to reduce readmissions, calls, and confusion.</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:6px">
+      <a href="BookACall.dc.html" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#E3735C;padding:15px 28px;border-radius:999px;transition:background .15s" style-hover="background:#D3644E;color:#FFFFFF">{{ ctaLabel }}</a>
+      <a href="#orbit-explainer" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#1E3A5F;padding:15px 24px;border-radius:999px;border:1.5px solid #EAF1F8" style-hover="border-color:#2D5A87;color:#1E3A5F">See how it works &darr;</a>
+    </div>
+  </div>
+  <div style="background:#F3F6FA;border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:16px;box-shadow:0 24px 60px rgba(15,29,46,.08)">
+    <div style="font-family:Lato,sans-serif;font-weight:700;font-size:21px;color:#0F1D2E">Find your orbit solution</div>
+    <input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Try &quot;readmissions&quot; or &quot;cardiac rehab&quot;&hellip;" style="width:100%;box-sizing:border-box;font-family:Inter,sans-serif;font-size:15.5px;padding:15px 18px;border-radius:16px;border:1.5px solid #EAF1F8;background:#FFFFFF;color:#0F1D2E;outline:none" style-focus="border-color:#2D5A87">
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <sc-for list="{{ chips }}" as="c" hint-placeholder-count="9">
+        <button onClick="{{ c.pick }}" style="font-family:Inter,sans-serif;font-size:13px;font-weight:500;color:#1E3A5F;background:#FFFFFF;border:1px solid #EAF1F8;border-radius:999px;padding:7px 14px;cursor:pointer" style-hover="border-color:#2D5A87">{{ c.label }}</button>
+      </sc-for>
+    </div>
+    <sc-if value="{{ hasMatch }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FFFFFF;border-radius:20px;padding:22px;box-shadow:0 12px 32px rgba(15,29,46,.1);display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#E3735C">{{ matchKicker }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:700;font-size:19px;color:#0F1D2E">{{ matchTitle }}</div>
+        <div style="font-size:14px;line-height:1.55;color:rgba(15,29,46,.72)">{{ matchHook }}</div>
+        <div style="display:flex;gap:10px;margin-top:4px">
+          <a href="{{ matchFile }}" style="text-decoration:none;font-size:14px;font-weight:600;color:#FFFFFF;background:#E3735C;padding:10px 20px;border-radius:999px" style-hover="background:#D3644E;color:#FFFFFF">Explore</a>
+          <a href="BookACall.dc.html" style="text-decoration:none;font-size:14px;font-weight:600;color:#1E3A5F;padding:10px 18px;border-radius:999px;border:1.5px solid #EAF1F8" style-hover="border-color:#2D5A87;color:#1E3A5F">Book a call</a>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ noMatch }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FFFFFF;border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:6px">
+        <div style="font-size:14.5px;font-weight:600;color:#0F1D2E">We build orbits for problems exactly like that.</div>
+        <div style="font-size:13.5px;line-height:1.55;color:rgba(15,29,46,.72)">Browse the seven orbit lines below, or bring it to a 20-minute call and we will map it to a blueprint.</div>
+      </div>
+    </sc-if>
+    <a href="#orbit-grid" style="font-size:13.5px;font-weight:500;color:#2D5A87;text-decoration:none;align-self:center" style-hover="color:#E3735C">Not sure? Just let me browse &darr;</a>
+  </div>
+</div>
+
+<div style="border-top:1px solid #EAF1F8;border-bottom:1px solid #EAF1F8;background:#FFFFFF">
+  <div style="max-width:1180px;margin:0 auto;padding:26px 28px;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap">
+    <span style="font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8CA0B3">Live within</span>
+    <span style="font-family:Lato,sans-serif;font-weight:700;font-size:19px;color:#5A7089">Washington University</span>
+    <span style="font-family:Lato,sans-serif;font-weight:700;font-size:19px;color:#5A7089">Siteman Cancer Center</span>
+    <span style="font-family:Lato,sans-serif;font-weight:700;font-size:19px;color:#5A7089">BJC HealthCare</span>
+  </div>
+</div>
+
+<div style="background:#F3F6FA">
+  <div style="max-width:1180px;margin:0 auto;padding:88px 28px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;margin-bottom:44px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-0.01em;margin:0;max-width:560px">Your costliest moments happen<br><span style="color:#8CA0B3">when your patients aren't with you.</span></h2>
+      <p style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:360px;text-align:right;text-wrap:pretty">Between visits, engagement falls to scattered handouts, portal messages, and manual outreach. That gap has a price, and your system already pays it.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
+      <sc-for list="{{ costMoments }}" as="m" hint-placeholder-count="4">
+        <div style="background:#FFFFFF;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="width:10px;height:10px;border-radius:50%;background:#E3735C"></div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:18px;line-height:1.25;color:#0F1D2E">{{ m.t }}</div>
+          <div style="font-size:14px;line-height:1.55;color:rgba(15,29,46,.68)">{{ m.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div id="orbit-explainer" style="max-width:1180px;margin:0 auto;padding:96px 28px">
+  <div style="background:#0F1D2E;border-radius:32px;padding:64px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2B8C6">The answer is an orbit</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:38px;line-height:1.14;letter-spacing:-0.01em;margin:0;color:#FFFFFF;text-wrap:pretty">A guided digital journey around one specific care journey.</h2>
+      <p style="font-size:16px;line-height:1.65;color:#B9C8D8;margin:0;text-wrap:pretty">An orbit covers the clinical, logistical, emotional, educational, motivational, and tracking sides of a single clinical journey. Patients receive it on any device, with no downloads. All it needs is an email address.</p>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5F7690">Issued however your workflow works</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <sc-for list="{{ issueMethods }}" as="im" hint-placeholder-count="5">
+            <span style="font-size:13px;font-weight:500;color:#EAF1F8;border:1px solid #2D5A87;border-radius:999px;padding:7px 14px">{{ im }}</span>
+          </sc-for>
+        </div>
+        <div style="font-size:13.5px;color:#8CA0B3;margin-top:2px">In Epic, an orbit is ordered the same way as bloodwork.</div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center">
+      <div style="width:292px;background:#FFFFFF;border-radius:38px;border:9px solid #1E3A5F;box-shadow:0 32px 80px rgba(0,0,0,.35);overflow:hidden">
+        <div style="background:#2D5A87;padding:18px 20px 16px;display:flex;flex-direction:column;gap:3px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#B9C8D8">Your hospital &middot; White-label</div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16.5px;color:#FFFFFF">ENT Surgery Support</div>
+        </div>
+        <div style="padding:18px 20px;display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:12.5px;font-weight:600;color:#E3735C">Week 2 &middot; Before your surgery</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;align-items:center;gap:10px;background:#F3F6FA;border-radius:12px;padding:11px 13px">
+              <div style="width:18px;height:18px;border-radius:50%;background:#1A6B3C;color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0">&#10003;</div>
+              <div style="font-size:12.5px;font-weight:500;color:#0F1D2E">What to expect on surgery day</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;background:#F3F6FA;border-radius:12px;padding:11px 13px">
+              <div style="width:18px;height:18px;border-radius:50%;background:#1A6B3C;color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0">&#10003;</div>
+              <div style="font-size:12.5px;font-weight:500;color:#0F1D2E">Preparing your home for recovery</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1.5px solid #E3735C;border-radius:12px;padding:11px 13px">
+              <div style="width:18px;height:18px;border-radius:50%;border:2px solid #E3735C;box-sizing:border-box;flex-shrink:0"></div>
+              <div style="font-size:12.5px;font-weight:600;color:#0F1D2E">Your 2-minute check-in</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;background:#F3F6FA;border-radius:12px;padding:11px 13px;opacity:.55">
+              <div style="width:18px;height:18px;border-radius:50%;border:2px solid #8CA0B3;box-sizing:border-box;flex-shrink:0"></div>
+              <div style="font-size:12.5px;font-weight:500;color:#0F1D2E">Eating and drinking: the night before</div>
+            </div>
+          </div>
+          <div style="background:#EAF1F8;border-radius:14px;padding:12px 14px;font-size:12px;line-height:1.5;color:#1E3A5F"><b>Reminder:</b> your pre-op call is Thursday at 10:00 AM. Questions? Tap here first.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="orbit-grid" style="max-width:1180px;margin:0 auto;padding:8px 28px 96px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;margin-bottom:40px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-0.01em;margin:0;max-width:520px">An orbit for<br><span style="color:#8CA0B3">every clinical journey.</span></h2>
+    <p style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:360px;text-align:right;text-wrap:pretty">Seven service lines, one platform. Every orbit is built backwards from at least one measurable outcome, tracked from day one.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:18px">
+    <sc-for list="{{ orbitRow1 }}" as="o" hint-placeholder-count="4">
+      <a href="{{ o.file }}" style="text-decoration:none;background:#F3F6FA;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s" style-hover="transform:translateY(-3px);box-shadow:0 18px 44px rgba(15,29,46,.12)">
+        <div style="height:110px;background:{{ o.tint }};position:relative;overflow:hidden">
+          <svg width="100%" height="110" viewBox="0 0 260 110" preserveAspectRatio="xMidYMid slice"><g fill="{{ o.accent }}"><circle cx="200" cy="55" r="26" opacity=".18"></circle><circle cx="200" cy="55" r="9"></circle><circle cx="164" cy="34" r="4" opacity=".55"></circle><circle cx="236" cy="76" r="4" opacity=".55"></circle><circle cx="172" cy="82" r="3" opacity=".4"></circle><circle cx="228" cy="28" r="3" opacity=".4"></circle><circle cx="48" cy="88" r="16" opacity=".12"></circle><circle cx="70" cy="20" r="6" opacity=".2"></circle></g></svg>
+          <span style="position:absolute;top:12px;left:14px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1E3A5F;background:rgba(255,255,255,.85);padding:4px 10px;border-radius:999px">{{ o.status }}</span>
+        </div>
+        <div style="padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:18.5px;color:#0F1D2E">{{ o.name }}</div>
+          <div style="font-size:13.5px;line-height:1.5;color:rgba(15,29,46,.68);flex:1">{{ o.cardHook }}</div>
+          <div style="font-size:13.5px;font-weight:600;color:#E3735C">Learn more &rarr;</div>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+    <sc-for list="{{ orbitRow2 }}" as="o" hint-placeholder-count="3">
+      <a href="{{ o.file }}" style="text-decoration:none;background:#F3F6FA;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s" style-hover="transform:translateY(-3px);box-shadow:0 18px 44px rgba(15,29,46,.12)">
+        <div style="height:110px;background:{{ o.tint }};position:relative;overflow:hidden">
+          <svg width="100%" height="110" viewBox="0 0 260 110" preserveAspectRatio="xMidYMid slice"><g fill="{{ o.accent }}"><circle cx="200" cy="55" r="26" opacity=".18"></circle><circle cx="200" cy="55" r="9"></circle><circle cx="164" cy="34" r="4" opacity=".55"></circle><circle cx="236" cy="76" r="4" opacity=".55"></circle><circle cx="172" cy="82" r="3" opacity=".4"></circle><circle cx="228" cy="28" r="3" opacity=".4"></circle><circle cx="48" cy="88" r="16" opacity=".12"></circle><circle cx="70" cy="20" r="6" opacity=".2"></circle></g></svg>
+          <span style="position:absolute;top:12px;left:14px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1E3A5F;background:rgba(255,255,255,.85);padding:4px 10px;border-radius:999px">{{ o.status }}</span>
+        </div>
+        <div style="padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:18.5px;color:#0F1D2E">{{ o.name }}</div>
+          <div style="font-size:13.5px;line-height:1.5;color:rgba(15,29,46,.68);flex:1">{{ o.cardHook }}</div>
+          <div style="font-size:13.5px;font-weight:600;color:#E3735C">Learn more &rarr;</div>
+        </div>
+      </a>
+    </sc-for>
+  </div>
+</div>
+
+<div style="background:#0F1D2E">
+  <div style="max-width:1180px;margin:0 auto;padding:64px 28px;display:flex;flex-direction:column;gap:36px">
+    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <sc-for list="{{ proofStats }}" as="s" hint-placeholder-count="5">
+        <div style="display:flex;flex-direction:column;gap:6px;min-width:150px">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:44px;color:#FFFFFF;line-height:1">{{ s.n }}</div>
+          <div style="font-size:13.5px;line-height:1.45;color:#8CA0B3;max-width:180px">{{ s.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#F2B8C6">Proven in a controlled clinical trial at Siteman Cancer Center</div>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:96px 28px 0">
+  <div style="background:#EAF1F8;border-radius:32px;padding:56px;display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center">
+    <div style="display:flex;justify-content:center">
+      <div style="width:100%;max-width:340px;background:#FFFFFF;border-radius:22px;box-shadow:0 24px 56px rgba(15,29,46,.12);padding:22px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:12px;font-weight:700;color:#0F1D2E">Program dashboard</div>
+          <div style="font-size:10px;font-weight:600;color:#1A6B3C;background:#EBF4EE;padding:3px 9px;border-radius:999px">3 orbits live</div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <div style="flex:1;background:#F3F6FA;border-radius:12px;padding:12px"><div style="font-family:Lato,sans-serif;font-weight:700;font-size:20px;color:#0F1D2E">86%</div><div style="font-size:10px;color:#8CA0B3">Activation</div></div>
+          <div style="flex:1;background:#F3F6FA;border-radius:12px;padding:12px"><div style="font-family:Lato,sans-serif;font-weight:700;font-size:20px;color:#0F1D2E">7.9</div><div style="font-size:10px;color:#8CA0B3">Engagement Index</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="display:flex;align-items:center;gap:8px"><div style="font-size:10.5px;color:#5A7089;width:86px">ENT Surgery</div><div style="flex:1;height:8px;background:#F3F6FA;border-radius:4px"><div style="width:84%;height:8px;background:#2D5A87;border-radius:4px"></div></div></div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="font-size:10.5px;color:#5A7089;width:86px">LivingWell</div><div style="flex:1;height:8px;background:#F3F6FA;border-radius:4px"><div style="width:71%;height:8px;background:#E3735C;border-radius:4px"></div></div></div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="font-size:10.5px;color:#5A7089;width:86px">Fluoroscopy</div><div style="flex:1;height:8px;background:#F3F6FA;border-radius:4px"><div style="width:64%;height:8px;background:#5B9BEA;border-radius:4px"></div></div></div>
+        </div>
+        <div style="font-size:9.5px;color:#8CA0B3">Illustrative view. [Placeholder: PHI-free product screenshot]</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">Case study &middot; WashU / Siteman</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:32px;line-height:1.15;margin:0;text-wrap:pretty">Three orbits live inside one of the nation's leading academic medical centers.</h2>
+      <p style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">ENT Surgery Support, LivingWell Center, and Fluoroscopy Procedure Support run today at Washington University and Siteman Cancer Center: patients arrive prepared, care teams field fewer calls, and every journey is tracked end to end.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:420px">
+        <sc-for list="{{ caseStats }}" as="s" hint-placeholder-count="4">
+          <div style="background:#FFFFFF;border-radius:16px;padding:14px 16px"><div style="font-family:Lato,sans-serif;font-weight:700;font-size:24px;color:#1E3A5F">{{ s.n }}</div><div style="font-size:12px;color:#5A7089;line-height:1.4">{{ s.l }}</div></div>
+        </sc-for>
+      </div>
+      <div style="font-size:11.5px;color:#8CA0B3">Controlled clinical trial at Siteman Cancer Center.</div>
+      <a href="Outcomes.dc.html" style="font-size:14.5px;font-weight:600;color:#2D5A87;text-decoration:none" style-hover="color:#E3735C">Read the case study &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:96px 28px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;margin-bottom:44px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-0.01em;margin:0;max-width:480px">Your first orbit,<br><span style="color:#8CA0B3">in five steps.</span></h2>
+    <p style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:360px;text-align:right;text-wrap:pretty">Within a quarter. No new FTEs. White-label, in your brand and voice, without disrupting the workflow you already run.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
+    <sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
+      <div style="background:#F3F6FA;border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:Lato,sans-serif;font-weight:700;font-size:15px;color:#E3735C">{{ st.n }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:700;font-size:17px;line-height:1.25;color:#0F1D2E">{{ st.t }}</div>
+        <div style="font-size:13px;line-height:1.5;color:rgba(15,29,46,.68)">{{ st.d }}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 28px 96px">
+  <div style="background:#0F1D2E;border-radius:32px;padding:72px 64px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center">
+    <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:42px;line-height:1.1;margin:0;color:#FFFFFF;text-wrap:pretty">Your first orbit, live within a quarter.</h2>
+    <p style="font-size:16.5px;line-height:1.6;color:#B9C8D8;margin:0;max-width:640px;text-wrap:pretty">Issued from inside your existing workflow, with no new FTEs and no forced workflows: a measurable lift in the outcomes you already track.</p>
+    <a href="BookACall.dc.html" style="text-decoration:none;font-size:16px;font-weight:600;color:#FFFFFF;background:#E3735C;padding:16px 32px;border-radius:999px;margin-top:8px" style-hover="background:#D3644E;color:#FFFFFF">{{ ctaLabel }}</a>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroWord&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;valuable&quot;,&quot;powerful&quot;],&quot;default&quot;:&quot;valuable&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Open decisions&quot;},&quot;ctaLabel&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Book a 20-minute intro call&quot;,&quot;Book a demo&quot;],&quot;default&quot;:&quot;Book a 20-minute intro call&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Open decisions&quot;}}">
+class Component extends DCLogic {
+  state = { q: "" };
+  componentDidMount() {
+    import('./orbits-data.js').then(m => this.setState({orbits: m.ORBITS, order: m.ORBIT_ORDER}));
+  }
+  match(q) {
+    if (!q || !this.state.orbits) return null;
+    const s = q.toLowerCase();
+    const kw = {
+      "oncology": ["oncolog", "cancer", "tumor", "ent", "breast", "readmission", "chemo", "radiation", "surgery prep"],
+      "cardiology": ["cardio", "cardiac", "rehab", "heart"],
+      "orthopedics": ["ortho", "prom", "joint", "knee", "hip", "bundle"],
+      "womens-health": ["women", "pregnan", "ob", "maternal", "prenatal", "postpartum", "gyn"],
+      "bariatrics": ["bariatric", "weight", "sleeve", "bypass"],
+      "behavioral-health": ["behavior", "mental", "psych", "screening", "escreening", "no-show", "depression", "anxiety"],
+      "medication-therapy": ["medicat", "adheren", "injection", "infusion", "pharma", "drug", "refill", "therapy"]
+    };
+    for (const key of this.state.order) {
+      if (kw[key].some(k => s.includes(k)) || this.state.orbits[key].name.toLowerCase().includes(s)) return this.state.orbits[key];
+    }
+    if (s.includes("education") || s.includes("engagement") || s.includes("platform")) {
+      return {name: "the Platform", file: "Platform.dc.html", cardHook: "Structured, care-team-approved journeys with education, reminders, and next steps, on every orbit.", platform: true};
+    }
+    return null;
+  }
+  renderVals() {
+    const os = this.state.orbits || {};
+    const order = this.state.order || [];
+    const list = order.map(k => {
+      const o = os[k];
+      const tints = {"oncology": "#FBEDE9", "cardiology": "#EAF1F8", "orthopedics": "#EAF1F8", "womens-health": "#FDF1F4", "bariatrics": "#FBEDE9", "behavioral-health": "#EAF1F8", "medication-therapy": "#F3F6FA"};
+      return {...o, tint: tints[k]};
+    });
+    const q = this.state.q;
+    const m = this.match(q);
+    const chips = ["Oncology", "Cardiology", "Orthopedics", "Women's Health", "Bariatrics", "Behavioral Health", "Medication Therapy", "Readmissions", "Patient Education"].map(label => ({label, pick: () => this.logQ(label) || this.setState({q: label})}));
+    return {
+      heroWord: this.props.heroWord ?? "valuable",
+      ctaLabel: this.props.ctaLabel ?? "Book a 20-minute intro call",
+      query: q,
+      onQuery: (e) => this.setState({q: e.target.value}),
+      chips,
+      hasMatch: !!m,
+      noMatch: q.length > 2 && !m,
+      matchKicker: m && m.platform ? "Start here" : (m ? "For " + m.name : ""),
+      matchTitle: m && m.platform ? "Start with the platform" : (m ? "Start with a " + m.name + " orbit" : ""),
+      matchHook: m ? m.cardHook : "",
+      matchFile: m ? m.file : "#",
+      orbitRow1: list.slice(0, 4),
+      orbitRow2: list.slice(4),
+      costMoments: [
+        {t: "Missed appointments and no-shows", d: "Unused capacity and journeys that stall before they start."},
+        {t: "Delayed procedures and lost capacity", d: "Unprepared patients turn scheduled OR and chair time into rework."},
+        {t: "Poor adherence, uneven outcomes", d: "The between-visit behaviors that decide clinical and financial results."},
+        {t: "Rising coordination burden", d: "Stretched staff carrying education and outreach by hand."}
+      ],
+      issueMethods: ["EHR order trigger", "Provided patient list", "QR code", "Text message", "On-site registration"],
+      proofStats: [
+        {n: "+65%", l: "patient understanding of treatment plan and side effects"},
+        {n: "9 in 10", l: "reported improved recovery navigation"},
+        {n: "\u221253%", l: "patient calls to the office"},
+        {n: "+22%", l: "patient satisfaction"},
+        {n: "\u221241%", l: "re-admission rate"}
+      ],
+      caseStats: [
+        {n: "\u221241%", l: "re-admission rate"},
+        {n: "\u221253%", l: "patient calls to office"},
+        {n: "+65%", l: "patient understanding"},
+        {n: "+22%", l: "patient satisfaction"}
+      ],
+      steps: [
+        {n: "01", t: "Map your goals", d: "Your improvement goals, mapped onto a proven blueprint."},
+        {n: "02", t: "Choose your level", d: "Low, Medium, or Full customization: your call."},
+        {n: "03", t: "We ingest your resources", d: "The content and brand assets you already have."},
+        {n: "04", t: "Enhance where needed", d: "We fill the gaps; most of the work is assembly, not creation."},
+        {n: "05", t: "Launch and track", d: "Live to patients, measured from day one."}
+      ]
+    };
+  }
+  logQ(label) {
+    try {
+      const k = "co_orbit_queries";
+      const arr = JSON.parse(localStorage.getItem(k) || "[]");
+      arr.push({q: label, t: Date.now()});
+      localStorage.setItem(k, JSON.stringify(arr.slice(-200)));
+    } catch (e) {}
+    return false;
+  }
+}
+</script>
+</body>
+</html>

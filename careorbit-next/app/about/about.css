@@ -1,0 +1,36 @@
+/* About page rules, ported verbatim from About.dc.html's <helmet><style>.
+ * Same :has() header reflow used on Platform and Outcomes. */
+@media (max-width: 1020px) {
+  [data-hdr] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+@media (min-width: 1021px) {
+  [data-hdr] > div:first-child:has(> h2) {
+    display: contents !important;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) > div:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 12px;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) > h2 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) + * {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  [data-hdr]:has(> div:first-child > h2) {
+    row-gap: 0 !important;
+  }
+}

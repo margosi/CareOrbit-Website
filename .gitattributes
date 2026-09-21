@@ -1,0 +1,14 @@
+# Normalise line endings for text, and be explicit that these are binary so
+# git never tries to diff or merge them.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.docx binary
+*.pptx binary

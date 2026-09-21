@@ -1,0 +1,214 @@
+/* CareOrbit responsive overrides.
+ *
+ * REWRITTEN from v2-maven/responsive.css. Same breakpoints, same declared
+ * values, different selectors.
+ *
+ * WHY THE REWRITE
+ * The original matched React's serialized inline style strings, e.g.
+ *   div[style*="grid-template-columns: repeat(4, minmax(0px, 1fr))"]
+ * Its own header admitted the coupling: "selectors match React's serialized
+ * inline styles (spaces after colon/comma, leading zeros)". That makes every
+ * breakpoint depend on exact style serialization - reorder a property, write
+ * 0 instead of 0px, or change React version, and a grid silently stops
+ * collapsing on mobile with no error anywhere.
+ *
+ * Each such selector is replaced by an explicit data attribute. Components
+ * built in Phase 2 onward MUST carry these attributes; the mapping below is
+ * the contract. The [data-nav-*], [data-gallery-*] and [data-explore-row]
+ * selectors already worked this way in v2-maven and are carried over as-is.
+ *
+ * CONTRACT - attribute : replaces
+ *   data-grid="4-min0" : grid-template-columns: repeat(4, minmax(0px, 1fr))
+ *   data-grid="4"      : grid-template-columns: repeat(4, 1fr)
+ *   data-grid="5"      : grid-template-columns: repeat(5, 1fr)
+ *   data-grid="3"      : grid-template-columns: repeat(3, 1fr)
+ *   data-grid="split"  : two-column splits - 1fr 1fr, 1.05fr 0.95fr,
+ *                        1.1fr 0.9fr, 0.9fr 1.1fr, 0.85fr 1.15fr
+ *   data-ml-auto       : p with margin-left: auto
+ *   data-align-right   : text-align: right
+ *   data-pad="section" : padding: 72px/80px/88px 64px
+ *   data-pad="64"      : padding: 64px
+ *   data-pad="hero"    : padding: 0 64px 72px
+ *   data-pad="104-28"  : padding: 104px 28px
+ *   data-pad="page-top": padding: 72px/76px/84px 28px  (top-of-page sections)
+ *   data-hero-height   : height: clamp(740px, 96vh, 960px)
+ */
+
+/* ------------------------------------------------- nav chrome (always on) --
+ * From SiteNav.dc.html's own <helmet><style> block, which was global once
+ * the component loaded. Merged here so all responsive rules live in one
+ * file. --ann-off is set inline by SiteNav as the announcement bar scrolls
+ * away; the nav rides down by that amount and then pins to the top.
+ */
+[data-announce-bar] {
+  order: -1;
+}
+
+[data-nav-wrap] {
+  top: var(--ann-off) !important;
+}
+
+/* Nav sizing band: desktop nav still shown, but tighter. */
+@media (min-width: 901px) and (max-width: 1020px) {
+  [data-nav-wrap] {
+    padding-top: 22px !important;
+  }
+
+  [data-nav-spacer] {
+    height: 90px !important;
+  }
+
+  [data-pad="page-top"] {
+    padding-top: 40px !important;
+  }
+}
+
+@media (max-width: 1020px) {
+  [data-grid="4-min0"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  [data-ml-auto] {
+    margin-left: 0 !important;
+  }
+
+  [data-grid="4"],
+  [data-grid="5"],
+  [data-grid="3"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  [data-grid="split"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-pad="section"] {
+    padding: 48px 32px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  [data-nav-links] {
+    display: none !important;
+  }
+
+  [data-nav-mobile] {
+    display: flex !important;
+  }
+
+  [data-nav-wrap] {
+    padding: 0 !important;
+  }
+
+  [data-nav-bar] {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    height: 64px !important;
+    padding: 0 8px 0 18px !important;
+    box-shadow: 0 4px 24px rgba(15, 29, 46, 0.1) !important;
+  }
+
+  [data-gallery-row] {
+    display: none !important;
+  }
+
+  [data-gallery-carousel] {
+    display: block !important;
+  }
+
+  [data-explore-row] {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  [data-explore-row] > div {
+    height: 340px;
+  }
+
+  [data-align-right] {
+    text-align: left !important;
+  }
+
+  /* from SiteNav's own style block */
+  [data-nav-wrap] {
+    padding: 0 !important;
+  }
+
+  [data-nav-spacer] {
+    height: 64px !important;
+  }
+
+  [data-pad="page-top"] {
+    padding-top: 32px !important;
+  }
+
+  /* FOOTER - intentional improvement over v2-maven, approved after Phase 2.
+   *
+   * The legacy site declared this grid as `1.3fr repeat(4, minmax(0,1fr))`
+   * with no media query at any width. Below ~900px the four 40px gaps eat
+   * the available row and the link columns collapse to ~7px wide, so the
+   * text overlaps and is unreadable (measured 7.125px at 390px).
+   *
+   * It now collapses the way every other grid on the site does. Desktop
+   * (>=1024px) is untouched and still matches the baseline exactly. */
+  [data-footer-grid] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+  }
+
+  [data-footer-brand] {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-grid="4"],
+  [data-grid="5"],
+  [data-grid="3"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-pad="64"] {
+    padding: 36px 22px !important;
+  }
+
+  [data-pad="hero"] {
+    padding: 0 26px 56px !important;
+  }
+
+  [data-pad="104-28"] {
+    padding-top: 64px !important;
+    padding-bottom: 56px !important;
+  }
+
+  [data-hero-height] {
+    height: 82vh !important;
+  }
+
+  /* from SiteNav's own style block */
+  [data-nav-spacer] {
+    height: 64px !important;
+  }
+
+  [data-announce-bar] {
+    font-size: 12.5px !important;
+    padding: 10px 42px !important;
+  }
+
+  [data-pad="page-top"] {
+    padding-top: 24px !important;
+  }
+
+  /* Footer: single column on phones. See the 900px block above. */
+  [data-footer-grid] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  [data-grid="4-min0"] {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<meta name="ext-resource-dependency" content="images/hero-womens-health.png">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@keyframes coFloat{from{transform:translateY(-7px)}to{transform:translateY(9px)}}
+@media(max-width:1020px){[data-hdr],[data-hero-grid],[data-split]{grid-template-columns:1fr!important;gap:32px!important}[data-feature]{grid-template-columns:1fr!important;gap:24px!important}[data-feature]>*{grid-column:1/-1!important}[data-quad]{grid-template-columns:repeat(2,minmax(0,1fr))!important}[data-deploy]{grid-template-columns:1fr 1fr!important;gap:22px!important}[data-stats]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important}}
+@media(min-width:1021px){[data-featnav]>div:first-child a{border-bottom-color:transparent!important}}
+@media(max-width:760px){#roi-calculator [data-hdr]{padding-right:0!important;padding-top:44px!important}}
+@media print{
+  @page{size:letter portrait;margin:0.5in}
+  body{background:#FFFFFF!important}
+  body.co-printing > *:not(#print-only){display:none!important}
+  #print-only{display:block!important;position:static!important;page-break-after:avoid;page-break-inside:avoid;break-inside:avoid}
+  #print-only *{page-break-inside:avoid;break-inside:avoid}
+  [data-print-hide]{display:none!important}
+}
+#print-only{display:none}
+#roi-calculator input::placeholder{color:rgba(15,29,46,.34);font-weight:400;font-style:italic}
+#roi-calculator input::-webkit-outer-spin-button,#roi-calculator input::-webkit-inner-spin-button{opacity:1}
+@media(max-width:1020px){[data-calc-out]{grid-template-columns:1fr!important;gap:24px!important}[data-calc-total]{grid-template-columns:1fr!important;gap:20px!important}}
+@media(max-width:640px){[data-calc-grid]{grid-template-columns:1fr!important}}
+@media(max-width:1020px){[data-ledger]{grid-template-columns:1fr!important;gap:8px!important}[data-featnav]{grid-template-columns:1fr!important;gap:32px!important}[data-featnav]>div:first-child{position:static!important;flex-direction:row!important;flex-wrap:wrap!important;gap:4px}[data-featnav]>div:first-child a{border-left:none!important;padding:8px 14px 10px!important;font-size:15px!important}}
+@media(max-width:620px){[data-quad]{grid-template-columns:1fr!important}[data-deploy]{grid-template-columns:1fr!important}[data-deploy]>*{border-left:none!important;padding-left:0!important}[data-stats]{grid-template-columns:1fr!important}}
+@media(max-width:960px){[data-catalog]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 32px!important}}
+@media(max-width:620px){[data-catalog]{grid-template-columns:1fr!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(max-width:1020px){[data-start]{grid-template-columns:1fr!important;gap:24px!important}[data-start]>a{justify-self:start}}
+@media(max-width:940px){[data-oneline]{white-space:normal!important;text-wrap:balance!important;max-width:640px!important}}
+@media(max-width:1020px){[data-deploy2]{grid-template-columns:1fr!important;gap:26px!important}}
+@media(max-width:900px){[data-three]{grid-template-columns:1fr!important}[data-arrow]{display:none!important}[data-two]{grid-template-columns:1fr!important;gap:20px!important}[data-conn]{display:none!important}}
+@media(max-width:700px){[data-deploy2] [data-three]{grid-template-columns:1fr!important;gap:18px!important}}
+@media(max-width:1020px){[data-value]{grid-template-columns:1fr!important;gap:34px!important}[data-povrow]{grid-template-columns:1fr!important;gap:12px!important}[data-two]{grid-template-columns:1fr!important;gap:26px!important}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}}
+@media(max-width:820px){[data-study]{grid-template-columns:1fr!important;gap:28px!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="orbits" hint-size="100%,120px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:72px 28px 96px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center" data-hero-grid="1">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="width:9px;height:9px;border-radius:50%;background:#C0A5E8;flex-shrink:0;display:block"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6A4E9C">{{ name }}</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">Confident, prepared patients at <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">every stage of her care</em></h1>
+    <p style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:600px;text-wrap:pretty">{{ sub }}</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:4px;flex-wrap:wrap">
+      <a href="{{ bookHref }}" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 28px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+      <a href="#cta" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;padding:16px 24px;border-radius:999px;border:1.5px solid rgba(15,29,46,.2)" style-hover="border-color:#0F1D2E;color:#0F1D2E">Get the {{ name }} info sheet</a>
+    </div>
+  </div>
+  <div style="min-width:0;animation:coFloat 6s ease-in-out infinite alternate"><image-slot id="{{ heroSlotId }}" radius="32" src="{{ heroSrc }}" placeholder="{{ heroSlotHint }}" style="display:block;width:100%;height:clamp(320px,30vw,440px)"></image-slot></div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 52px">
+  <div data-rv style="display:flex;flex-direction:column;gap:16px;border-top:1px solid rgba(15,29,46,.14);border-bottom:1px solid rgba(15,29,46,.14);padding:22px 0">
+    <div style="display:flex;gap:34px;align-items:baseline;flex-wrap:wrap">
+      <button onClick="{{ pick0 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t0Fg }}">All of women's health<sc-if value="{{ t0On }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick1 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t1Fg }}">Maternity &amp; fertility<sc-if value="{{ t1On }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick2 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t2Fg }}">Gynecology &amp; surgery<sc-if value="{{ t2On }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick3 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t3Fg }}">Menopause &amp; midlife<sc-if value="{{ t3On }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+    </div>
+    <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.66);max-width:640px;text-wrap:pretty">{{ segLine }}</div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 40px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px;text-wrap:balance">{{ headLead }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">{{ headEm }}</em>.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:600px;text-wrap:pretty">{{ intro }}</p>
+      <p style="font-size:16px;line-height:1.65;color:rgba(15,29,46,.6);margin:0;max-width:600px;text-wrap:pretty">Built to your practice's protocols before launch. Nothing added to your team's day.</p>
+    </div>
+  </div>
+
+  <div data-rv data-value style="display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:60px;align-items:start">
+    <div style="position:relative;min-width:0">
+      <image-slot id="{{ valueSlotId }}" radius="28" src="{{ valueSrc }}" placeholder="[Placeholder: clinician with a patient in a women's health setting, vertical crop]" style="display:block;width:100%;height:clamp(420px,42vw,600px)"></image-slot>
+      <div style="margin-top:16px;font-size:13px;line-height:1.55;color:rgba(15,29,46,.5);max-width:300px;text-wrap:pretty">One orbit, issued once, working for three audiences at the same time.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;min-width:0">
+      <sc-for list="{{ pov }}" as="p" hint-placeholder-count="3">
+        <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ p.label }}">{{ p.kicker }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ p.t }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ p.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div data-rv style="display:flex;flex-direction:column;margin-top:14px">
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="3">
+      <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ r.label }}">{{ r.kicker }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ r.t }}</div>
+          <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">{{ r.sub }}</div>
+        </div>
+        <sc-if value="{{ r.plain }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ r.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ r.seq }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:2px;padding-top:2px">
+            <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:6px;align-self:stretch">
+                  <span style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid {{ it.cBorder }};background:{{ it.cBg }};font-family:Lato,sans-serif;font-weight:700;font-size:12.5px;color:{{ it.cFg }};flex-shrink:0">{{ it.v }}</span>
+                  <sc-if value="{{ it.line }}" hint-placeholder-val="{{ true }}">
+                    <span style="flex:1;width:1px;background:linear-gradient({{ it.cLine }},rgba(79,179,191,.12))"></span>
+                  </sc-if>
+                </div>
+                <div style="padding-bottom:22px;display:flex;flex-direction:column;gap:3px;min-width:0">
+                  <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+                    <span style="font-family:Lato,sans-serif;font-weight:700;font-size:17px;letter-spacing:-0.01em;color:#0F1D2E">{{ it.t }}</span>
+                    <span style="font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:{{ it.cFg }}">{{ it.tag }}</span>
+                  </div>
+                  <div style="font-size:15px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it.d }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(15,29,46,.14)"></div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 88px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px;display:flex;flex-direction:column;gap:44px">
+    <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C0A5E8">The understanding gap</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">{{ gapLead }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#C0A5E8">{{ gapEm }}</em>.</h2>
+      </div>
+      <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">{{ gapIntro }}</p>
+    </div>
+    <div style="border-top:1px solid #2D5A87;padding-top:26px;display:flex;flex-direction:column;gap:6px">
+      <div style="font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#C0A5E8">What the gap costs</div>
+      <div style="font-size:16.5px;line-height:1.6;color:#B9C8D8;max-width:900px;text-wrap:pretty">{{ gapBridge }}</div>
+    </div>
+    <div data-stat5 style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;align-items:stretch;margin-top:-14px">
+      <sc-for list="{{ window }}" as="w" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #C0A5E8;padding-top:18px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:{{ w.size }};letter-spacing:-0.04em;line-height:1;color:#FFFFFF">{{ w.n }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#C0A5E8;line-height:1.35">{{ w.t }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ w.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Measurable ROI</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">How an orbit <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">provides value</em>.</h2>
+    </div>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">Every orbit is built based on your target clinical and financial outcomes including revenue to protect, costs to lower, opportunities to expand and staff resources to support.</p>
+  </div>
+  <div data-rv style="border-top:1px solid rgba(15,29,46,.14)">
+    <sc-for list="{{ measures }}" as="m" hint-placeholder-count="8">
+      <div data-ledger style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px 56px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:15px;color:#2D5A87;flex-shrink:0;min-width:24px">{{ m.n }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:clamp(19px,2vw,23px);line-height:1.25;letter-spacing:-0.015em">{{ m.t }}</div>
+        </div>
+        <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.68);text-wrap:pretty">{{ m.d }}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Practice and group economics</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Adherence is the difference between care ordered and care <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">actually billed</em>.</h2>
+    </div>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">{{ econIntro }}</p>
+  </div>
+  <div data-rv style="display:flex;flex-direction:column">
+    <sc-for list="{{ econRows }}" as="r" hint-placeholder-count="3">
+      <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ r.label }}">{{ r.kicker }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ r.t }}</div>
+          <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">{{ r.sub }}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+          <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="5">
+            <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+              <span style="width:9px;height:1.5px;border-radius:1px;background:{{ r.dot }};transform:translateY(-4px)"></span>
+              <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(15,29,46,.14)"></div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Women’s health care journeys <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#C0A5E8">currently supported</em>.</h2>
+    </div>
+    <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">{{ segBlurb }}</p>
+  </div>
+  <div data-rv data-catalog style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 44px;border-top:1px solid #2D5A87">
+    <sc-for list="{{ catalog }}" as="c" hint-placeholder-count="9">
+      <div style="display:flex;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(45,90,135,.55)">
+        <span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:14px;color:#C0A5E8;min-width:24px">{{ c.n }}</span>
+        <div style="display:flex;flex-direction:column;gap:3px;min-width:0">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16px;line-height:1.3;letter-spacing:-0.01em;color:#FFFFFF">{{ c.t }}</div>
+          <div style="font-size:13px;line-height:1.5;color:#8FA5BC;text-wrap:pretty">{{ c.v }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 44px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">By the numbers</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Where adherence in women's health <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">actually stands</em>.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:6px">
+      <span style="align-self:flex-start;display:flex;align-items:center;gap:8px;background:#FFFFFF;border:1px solid rgba(15,29,46,.12);border-radius:8px;padding:7px 13px"><span style="width:8px;height:8px;border-radius:50%;background:#E3735C"></span><span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0F1D2E">Published national figures, not CareOrbit results</span></span>
+      <div style="font-size:13px;line-height:1.55;color:rgba(15,29,46,.66);max-width:520px">{{ transferLine }}</div>
+      <p style="font-size:17px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:520px;text-wrap:pretty">{{ worked }}</p>
+    </div>
+  </div>
+  <div data-rv data-money style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px">
+    <sc-for list="{{ money }}" as="m" hint-placeholder-count="4">
+      <div style="border-top:2px solid #0F1D2E;padding:22px 0 0;display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(38px,4.2vw,54px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">{{ m.v }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16px;line-height:1.3;color:#0F1D2E">{{ m.t }}</div>
+        <div style="font-size:14px;line-height:1.6;color:rgba(15,29,46,.68);text-wrap:pretty">{{ m.d }}</div>
+        <div style="font-size:12px;line-height:1.5;color:rgba(15,29,46,.7);margin-top:auto;padding-top:12px;border-top:1px solid rgba(15,29,46,.1)">{{ m.src }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div data-rv data-split style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:30px;padding:38px 40px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center;margin-top:34px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C0A5E8">Modeled annual exposure</div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(36px,4.4vw,54px);line-height:1;letter-spacing:-0.04em;color:#FFFFFF">$97K</div>
+          <div style="font-size:13px;line-height:1.5;color:#B9C8D8">On 600 patients a year, at the rates shown below</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;border-top:1px solid #2D5A87;padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(36px,4.4vw,54px);line-height:1;letter-spacing:-0.04em;color:#FFFFFF">286 hrs</div>
+          <div style="font-size:13px;line-height:1.5;color:#B9C8D8">Nursing time returned over the same year</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <p style="font-size:13.5px;line-height:1.6;color:#8FA3B8;margin:0;text-wrap:pretty">{{ worked2 }}</p>
+      <button onClick="{{ toggleCalc }}" style="font-family:Inter,sans-serif;align-self:flex-start;border:none;cursor:pointer;font-size:15px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:14px 26px;border-radius:999px;margin-top:18px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">{{ calcBtn }}</button>
+    </div>
+  </div>
+  <sc-if value="{{ calcOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-roi-backdrop onClick="{{ closeCalc }}" style="position:fixed;inset:0;z-index:90;background:rgba(15,29,46,.55);backdrop-filter:blur(6px);display:flex;align-items:flex-start;justify-content:center;padding:5vh 20px;overflow:auto">
+    <div id="roi-calculator" onClick="{{ stopClose }}" style="position:relative;width:100%;max-width:1000px;background:rgba(255,255,255,.9);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.6);box-shadow:0 40px 90px rgba(15,29,46,.35);border-radius:30px;padding:36px;display:flex;flex-direction:column;gap:26px">
+      <div data-print-hide style="position:absolute;top:20px;right:22px;display:flex;gap:10px;align-items:center">
+        <span style="position:relative;display:inline-flex">
+          <button onClick="{{ toggleExport }}" style="font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:1.5px solid rgba(15,29,46,.16);border-radius:999px;padding:9px 18px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:background .2s,color .2s,border-color .2s" style-hover="background:#0F1D2E;color:#FFFFFF;border-color:#0F1D2E">Export<span style="font-size:10px;line-height:1">▾</span></button>
+          <sc-if value="{{ exportOpen }}" hint-placeholder-val="{{ false }}">
+            <span style="position:absolute;top:44px;right:0;background:#FFFFFF;border:1px solid rgba(15,29,46,.12);border-radius:14px;box-shadow:0 18px 40px rgba(15,29,46,.18);padding:6px;display:flex;flex-direction:column;min-width:190px;z-index:5">
+              <button onClick="{{ printCalc }}" style="font-family:Inter,sans-serif;text-align:left;font-size:13.5px;font-weight:500;color:#0F1D2E;background:none;border:none;border-radius:9px;padding:11px 12px;cursor:pointer" style-hover="background:#FAF8F4">PDF, one page</button>
+              <button onClick="{{ exportExcel }}" style="font-family:Inter,sans-serif;text-align:left;font-size:13.5px;font-weight:500;color:#0F1D2E;background:none;border:none;border-radius:9px;padding:11px 12px;cursor:pointer" style-hover="background:#FAF8F4">Excel spreadsheet</button>
+            </span>
+          </sc-if>
+        </span>
+        <button onClick="{{ closeCalc }}" aria-label="Close calculator" style="font-family:Inter,sans-serif;font-size:16px;line-height:1;color:#0F1D2E;background:#FFFFFF;border:1.5px solid rgba(15,29,46,.16);border-radius:999px;width:34px;height:34px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s" style-hover="background:#0F1D2E;color:#FFFFFF">×</button>
+      </div>
+      <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;padding-right:200px">
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#B0A99E">ROI calculator</div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:24px;letter-spacing:-0.02em;line-height:1.2">Put your own numbers in.</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <p style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.68);margin:0;text-wrap:pretty">Prefilled with 600 patients a year and published national rates. Replace them with your own; the totals update as you type.</p>
+          <div data-print-hide style="display:flex;gap:8px;flex-wrap:wrap">
+            <button onClick="{{ fillBenchmarks }}" style="font-family:Inter,sans-serif;font-size:12.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;border:none;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s" style-hover="background:#E3735C">Load published figures</button>
+            <button onClick="{{ clearCalc }}" style="font-family:Inter,sans-serif;font-size:12.5px;font-weight:600;color:#0F1D2E;background:none;border:1.5px solid rgba(15,29,46,.16);border-radius:999px;padding:9px 16px;cursor:pointer;transition:border-color .2s" style-hover="border-color:#0F1D2E">Clear</button>
+          </div>
+        </div>
+      </div>
+      <div data-calc-grid style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px">
+        <sc-for list="{{ calcFields }}" as="f" hint-placeholder-count="8">
+          <label style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:12.5px;font-weight:600;color:#0F1D2E;line-height:1.3">{{ f.label }}</span>
+            <span style="display:flex;align-items:center;gap:8px;border:1.5px solid rgba(15,29,46,.14);border-radius:12px;padding:0 12px;background:#FAF8F4">
+              <span style="font-size:14px;color:rgba(15,29,46,.7)">{{ f.prefix }}</span>
+              <input type="number" min="0" step="{{ f.step }}" value="{{ f.value }}" placeholder="{{ f.ph }}" onChange="{{ f.onChange }}" style="font-family:Inter,sans-serif;font-size:15px;font-weight:600;color:#0F1D2E;border:none;background:none;outline:none;padding:12px 0;width:100%;min-width:0">
+              <span style="font-size:13px;color:rgba(15,29,46,.7);white-space:nowrap">{{ f.suffix }}</span>
+            </span>
+            <span style="font-size:12px;line-height:1.45;color:rgba(15,29,46,.68)">{{ f.hint }}</span>
+          </label>
+        </sc-for>
+      </div>
+      <div data-calc-out style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid rgba(15,29,46,.12);padding-top:24px">
+        <sc-for list="{{ calcResults }}" as="r" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.4vw,42px);line-height:1;letter-spacing:-0.03em;color:#0F1D2E">{{ r.v }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:700;font-size:15px;line-height:1.25">{{ r.t }}</div>
+            <div style="font-size:12.5px;line-height:1.5;color:rgba(15,29,46,.66)">{{ r.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="background:#0F1D2E;border-radius:22px;padding:28px 30px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center" data-calc-total>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C0A5E8">Total annual opportunity</div>
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(38px,4.6vw,58px);line-height:1;letter-spacing:-0.04em;color:#FFFFFF">{{ calcTotal }}</div>
+          <div style="font-size:12.5px;color:#B9C8D8">{{ calcTotalNote }}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+          <p style="font-size:13.5px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">This is arithmetic applying the percentages entered to your own volumes and unit costs, not a guarantee.</p>
+          <a data-print-hide href="{{ bookHref }}" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:13px 24px;border-radius:999px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">Walk through it with us</a>
+        </div>
+      </div>
+      <div style="font-size:11.5px;line-height:1.5;color:rgba(15,29,46,.6)">Modeled illustration for {{ practiceLabel }}. Arithmetic on the inputs above, not a guarantee of results. CareOrbit, careorbit.com</div>
+    </div>
+    </div>
+  </sc-if>
+  <div data-rv style="margin-top:20px;max-width:1000px;border-top:1px solid rgba(15,29,46,.12)">
+    <button onClick="{{ toggleSources }}" style="font-family:Inter,sans-serif;background:none;border:none;padding:16px 0;cursor:pointer;display:flex;align-items:center;gap:10px;color:#0F1D2E;width:100%;text-align:left">
+      <span style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase">{{ sourceLabel }}</span>
+      <span style="font-size:12px;color:rgba(15,29,46,.7)">{{ sourceCount }}</span>
+      <span style="margin-left:auto;font-size:12px;line-height:1;transform:{{ sourceArrow }};transition:transform .25s">▾</span>
+    </button>
+    <sc-if value="{{ showSources }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:9px;padding:0 0 4px">
+        <sc-for list="{{ sources }}" as="x" hint-placeholder-count="5">
+          <div style="font-size:12.5px;line-height:1.55;color:rgba(15,29,46,.68)">{{ x }}</div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+</div>
+
+<div id="cta" style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv data-split style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:72px 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(30px,3.4vw,38px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:pretty">20 minutes. <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#C0A5E8">Your</em> {{ nameLower }} pain points, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#C0A5E8">our</em> platform.</h2>
+      <p style="font-size:15.5px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">No demo script, no obligation. We get introduced, hear which {{ nameLower }} moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.</p>
+      <a href="{{ bookHref }}" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 28px;border-radius:999px;align-self:flex-start;margin-top:4px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">Book a 20-minute intro call</a>
+    </div>
+    <div style="background:#1E3A5F;border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:19px;color:#FFFFFF">Not ready for a call?</div>
+      <div style="font-size:14px;line-height:1.55;color:#B9C8D8">Get the {{ name }} info sheet by email.</div>
+      <input onChange="{{ onHp }}" tabIndex="-1" autoComplete="off" aria-hidden="true" placeholder="Website" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"><input value="{{ email }}" onChange="{{ onEmail }}" placeholder="Work email *" style="font-family:Inter,sans-serif;font-size:14.5px;padding:14px 16px;border-radius:14px;border:1.5px solid #2D5A87;background:#0F1D2E;color:#FFFFFF;outline:none" style-focus="border-color:#C0A5E8">
+      <button onClick="{{ requestSheet }}" style="font-family:Inter,sans-serif;font-size:14.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:none;border-radius:999px;padding:13px 24px;cursor:pointer;align-self:flex-start;transition:background .2s" style-hover="background:#F2B8C6">{{ sheetBtn }}</button>
+    </div>
+  </div>
+</div>
+
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#0F1D2E"/><circle cx="100" cy="100" r="44" fill="none" stroke="#F2B8C6" stroke-width="7"/><circle cx="144" cy="100" r="10" fill="#E3735C"/><text x="100" y="176" font-family="Lato,sans-serif" font-size="26" font-weight="900" fill="#FAF8F4" text-anchor="middle">WH</text></svg></template>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const SEGMENTS = [
+  {
+    key: "all",
+    econ: {"intro":"Most of what a practice bills in a year depends on something happening at home: a screening completed, a referral started, a visit kept. An orbit is the only part of your protocol that reaches her there.","sub":"Every one of these is a service you already ordered, sitting unbilled because nobody followed through.","items":[{"t":"Screening completed, not assumed.","d":"Mammography, cervical, and bone density studies finished on schedule instead of deferred to next year."},{"t":"Labs and imaging done as ordered.","d":"Preparation understood, the study completed, and the visit the result requires actually booked."},{"t":"Referrals that start.","d":"Genetic counseling, pelvic floor therapy, nutrition, and behavioral health that patients accept in clinic and never begin."},{"t":"Visits kept.","d":"Annual, post-operative, and follow-up appointments, the slots hardest to refill when they fall late."},{"t":"Value-based measures met.","d":"Screening and PROM completion is what the contract pays on, and it is usually chased by hand."}]},
+    gapLead: "The stretch you do not see is", gapEm: "most of her life",
+    gapIntro: "A practice sees a woman for a handful of hours a year across decades of care. The preparation, the recovery, the adherence, and the screening all happen somewhere else. That is the understanding gap, and the figures below are what it costs.",
+    gapBridge: "None of this is decided in the exam room. Each one turns on whether a patient understood the plan, kept the visit, and recognized the sign that mattered.",
+    window: [{"n":"Decades","t":"Length of the relationship","d":"Women's health is a lifetime service line, not an episode of care.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"A few hours","t":"Total contact in a year","d":"An annual visit, maybe a procedure, and a handful of follow-ups.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"1 visit","t":"Often the only follow-up","d":"After a delivery or a procedure, and frequently missed.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"Every day","t":"Managed at home","d":"Symptoms, preparation, recovery, adherence, and screening, all outside your building.","bg":"#1E3A5F","border":"#E3735C","pad":"26px 24px","size":"clamp(44px,5vw,62px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#D6E1EC"}],
+    beginSub: "Most practices start with their highest-volume journey and add the rest.", beginItems: [{"t":"Well woman care.","d":"The default orbit a patient keeps between annual visits."},{"t":"Maternity and fertility.","d":"Pregnancy week by week, delivery prep, and the fourth trimester."},{"t":"Procedure support.","d":"Hysterectomy, myomectomy, and the operative long tail on one template."},{"t":"Menopause and midlife.","d":"Symptoms, therapy options, and long-term risk, explained plainly."}],
+    seqSub: "The same orbit advances through three versions on its own, with no new app or login.", seqItems: [{"v": "01", "cBorder": "rgba(79,179,191,.5)", "cBg": "rgba(79,179,191,.1)", "cFg": "#1F6B73", "cLine": "rgba(79,179,191,.55)","line":true,"t":"Acquisition","tag":"Before they are a patient","d":"Screening and referral outreach that helps women choose your practice, plus what symptoms mean and when to be seen."},{"v": "02", "cBorder": "rgba(79,179,191,.5)", "cBg": "rgba(79,179,191,.1)", "cFg": "#1F6B73", "cLine": "rgba(227,115,92,.45)","line":true,"t":"Active care","tag":"Through the pathway","d":"Preparation, clearance, logistics, and stage-by-stage guidance in your clinicians' words."},{"v": "03", "cBorder": "rgba(227,115,92,.5)", "cBg": "rgba(227,115,92,.1)", "cFg": "#A8412F", "cLine": "rgba(79,179,191,.55)","line":false,"t":"Follow-up and ongoing care with PROMs","tag":"After the episode","d":"Recovery and maintenance guidance, plus validated measures collected on schedule."}],
+    measures: [{"t":"Fewer avoidable readmissions and ED visits","d":"The costliest after-discharge failure, and the one that most often follows a sign nobody recognized."},{"t":"Higher follow-up visit attendance","d":"The visit where the real clinical decisions get made, and the one most often skipped."},{"t":"Fewer cancelled and rescheduled cases","d":"A case that falls off the schedule late is revenue that rarely gets refilled."},{"t":"Earlier recognition of warning signs","d":"A patient who calls about a symptom costs a phone call, not an admission."},{"t":"Better screening completion","d":"Mammography, cervical, and bone density screening tracked instead of assumed."},{"t":"Fewer inbound calls per episode","d":"Every repeat call is nursing time spent re-explaining what was already covered."},{"t":"Higher PROM completion","d":"Required for quality programs and value-based contracts, and usually chased by hand."},{"t":"New patient acquisition","d":"A branded women's health experience is something few competing practices can show."}],
+    money: [{"v":"1 in 5","t":"Not up to date on mammography","d":"Eighty percent of women aged 50 to 74 are current. Every study that does not happen is a billable service that did not happen either.","src":"National Health Interview Survey, 2023 (80.0% up to date)."},{"v":"1 in 4","t":"Not up to date on cervical screening","d":"Three quarters of women aged 21 to 65 are current, and the share has been falling, with knowledge of what is due the barrier most often reported.","src":"National Health Interview Survey, 2023 (75.4% up to date)."},{"v":"1 in 4","t":"Abnormal results without colposcopy in a year","d":"The screening was completed and billed. The diagnostic step it existed to trigger was not.","src":"Multi-system cohort of 28,706 patients, 2010 to 2018: 75.3% received colposcopy within 12 months."},{"v":"1 in 6","t":"Pregnancies with inadequate prenatal care","d":"Visits that were scheduled, staffed, and never attended, measured on the adequacy of prenatal care utilization index.","src":"NCHS final natality data, 2024 (16.1% of live births)."}],
+    benefits: [{"t":"Paper handouts and binders","d":"Handed over at a visit, filed away at home, and never opened at three in the morning."},{"t":"Verbal instructions at discharge","d":"Given once, to a patient who will not remember the conversation."},{"t":"Generic EMR education material","d":"Auto-generated, rarely updated, and written for the chart rather than for the person reading it."},{"t":"Patient portal messages","d":"One more login to set up, on a channel most patients never open."}],
+    features: [{"tab":"Choosing a practice","t":"Found, and chosen, before the first visit","d":"Screening and symptom education that helps a woman recognize what she is dealing with and decide where to be seen."},{"tab":"Annual & preventive","t":"The year between well-woman visits","d":"Screening due dates, results guidance, and the preventive care that otherwise waits for the next annual."},{"tab":"Pregnancy & planning","t":"Prepared trimester by trimester","d":"What to expect, which symptoms matter, and how the program works, delivered across the pregnancy rather than at one visit."},{"tab":"Procedure support","t":"Ready on the day","d":"Preparation instructions released when each one has to be done, plus what the day itself will involve."},{"tab":"Recovery","t":"The warning signs, known in advance","d":"Bleeding, pain, and infection signs described plainly, with the threshold for calling rather than waiting."},{"tab":"Midlife & PROMs","t":"Follow-through, measured","d":"Therapy adherence, screening reminders, and validated measures collected on schedule and returned to the care team."}],
+    calc: {"vol":"Women's health patients per year","util":"Avoidable readmission or ED visit rate","utilCut":"Reduction in avoidable readmissions and ED visits","utilCost":"Cost per readmission or ED visit","noShow":"Patients who miss a follow-up visit","noShowCut":"Reduction in missed follow-up visits","revPer":"Revenue per completed follow-up visit","rUtil":"Readmission and ED cost avoided","rVisit":"Recovered visit revenue","visitWord":"follow-up visits","doc":"Women's health orbit ROI model","csv":"careorbit-womens-health-roi.csv","transferNoun":"women's health","hintUtilCut":"Modeled. Not a measured women's health result.","hintNoShow":"Use your own program's follow-up attendance figure.","worked2":"Worked on 600 patients a year at a 5% avoidable readmission or ED rate, $12,000 per event, six calls per patient at nine minutes each, and a $45 loaded hourly staff cost. Substitute your own figures and the totals move accordingly.","worked":"Worked on 600 patients a year at a 5% avoidable readmission or ED rate and $12,000 per event. All of these improvements are modeled assumptions. Every rate and unit cost is a figure you supply."},
+    headLead: "A trusted digital guide your patients keep, from the first visit through", headEm: "menopause and beyond",
+    intro: "Your protocol in your clinicians' own words, delivered when each instruction actually matters. Alongside the visit summary and the on-call line, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients informed, reassured, and on track between appointments.",
+    pov: [
+      {kicker: "For the patient", t: "She knows what to do", label: "#A8412F", dot: "#E3735C", items: [
+        "A clear understanding of her diagnosis or stage, the plan, and who is caring for her",
+        "Visit prep, results guidance, and what to expect next, on the day it applies",
+        "Which symptoms mean call us, and which mean go to labor and delivery or the ED",
+        "The same guide works for a partner or support person"
+      ]},
+      {kicker: "For your team", t: "Nothing added to the day", label: "#2D5A87", dot: "#2D5A87", items: [
+        "Ordered from the workflow you already run, no new FTEs",
+        "Fewer calls asking what the visit summary already said",
+        "Your protocols and your brand, not a generic women's health app",
+        "We build and maintain the content, including protocol updates"
+      ]},
+      {kicker: "For the practice", t: "You can finally see it", label: "#5B9BEA", dot: "#5B9BEA", items: [
+        "Who opened their orbit and who never did, by patient",
+        "Symptom and screening responses routed back before the next visit",
+        "Engagement and completion by service and by site",
+        "Optional: validated measures, including postpartum depression screening, scored automatically"
+      ]}
+    ], label: "All of women's health", name: "women\u2019s health",
+    line: "The full practice bundle, from the first well-woman visit through menopause and everything a practice runs in between.",
+    blurb: "Support your women’s health service line with a Women’s Health Department Bundle which gives you orbit versions for patients and families across the whole relationship: a default well-woman orbit that procedure orbits return to, plus the journeys a practice chooses to run separately.",
+    orbits: [
+      {t: "Well Woman Care", v: "Default orbit, and where procedure orbits evolve"},
+      {t: "Prenatal care and pregnancy support", v: "Versions: general and at-risk"},
+      {t: "Family planning", v: "Options, preparation, and follow-up"},
+      {t: "Infertility treatment", v: "Cycle preparation and expectation setting"},
+      {t: "Hysterectomy", v: "Preparation through recovery"},
+      {t: "Myomectomy", v: "Preparation through recovery"},
+      {t: "Endometriosis treatment", v: "Diagnosis, options, and ongoing management"},
+      {t: "Ovarian cysts", v: "Watchful waiting or procedure"},
+      {t: "Minimally invasive surgery", v: "Procedure template, versioned per case type"},
+      {t: "Urogynecology", v: "Pelvic floor, continence, and prolapse"},
+      {t: "Infection control", v: "Treatment adherence and recurrence prevention"},
+      {t: "Menopause management", v: "Symptoms, timeline, and what is normal"},
+      {t: "Menopause therapies", v: "Options, adherence, and side effect guidance"},
+      {t: "Cancer diligence and screenings", v: "Screening adherence and result follow-through"},
+      {t: "Pediatrics", v: "Overlaps another specialty"}
+    ]
+  },
+  {
+    key: "maternity",
+    econ: {"intro":"A maternity episode is billed across dozens of touchpoints, and nearly all of them depend on a patient who arrives prepared. An orbit is the part of the program that reaches her between them.","sub":"Every one of these is care you already planned, sitting unbilled because the visit was missed or the preparation was not done.","items":[{"t":"The prenatal schedule kept.","d":"Each visit understood as part of a plan rather than an appointment to move when the week gets hard."},{"t":"Screening and testing completed on time.","d":"Glucose tolerance, anatomy scan, and genetic screening done inside the window they belong in."},{"t":"The postpartum visit attended.","d":"Blood pressure, mood, and contraception addressed in a billable visit instead of an ED presentation."},{"t":"Depression screening delivered and scored.","d":"Collected on schedule and documented, rather than skipped for time."},{"t":"Lactation and support services used.","d":"Consults and classes offered at every delivery, started by a fraction of the patients who need them."}]},
+    gapLead: "The", gapEm: "postpartum weeks",
+    gapIntro: "Pregnancy is one of the most closely monitored periods in medicine, and then it stops. The patient goes home with a newborn, and the weeks that carry the most risk are the weeks with the least contact. That is the understanding gap, and the figures below are what it costs.",
+    gapBridge: "None of this is decided in the exam room. Each one turns on whether a patient understood the plan, recognized a warning sign, or knew which questions could wait until the next visit.",
+    window: [{"n":"40 weeks","t":"Closely monitored","d":"Pregnancy is one of the most watched periods in medicine.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"1","t":"Postpartum visit","d":"Often the only scheduled contact after discharge, and frequently missed.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"6 weeks","t":"Highest-risk window","d":"When most severe postpartum events occur, at home.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"Every night","t":"On their own","d":"Feeding, recovery, mood, and warning signs, all outside your building.","bg":"#1E3A5F","border":"#E3735C","pad":"26px 24px","size":"clamp(44px,5vw,62px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#D6E1EC"}],
+    beginSub: "Most maternity programs start with prenatal care and extend into the fourth trimester.", beginItems: [{"t":"Prenatal care.","d":"Pregnancy week by week, in your clinicians' words."},{"t":"Labor and delivery prep.","d":"Arrival logistics, pain management options, and what the day involves."},{"t":"Postpartum and newborn.","d":"The fourth trimester, feeding, mood, and newborn warning signs."},{"t":"Fertility and family planning.","d":"The paths into pregnancy, and the decisions before them."}],
+    seqSub: "The same orbit advances through three versions on its own, with no new app or login.", seqItems: [{"v": "01", "cBorder": "rgba(79,179,191,.5)", "cBg": "rgba(79,179,191,.1)", "cFg": "#1F6B73", "cLine": "rgba(79,179,191,.55)","line":true,"t":"Planning and first contact","tag":"Before they are a patient","d":"Fertility and family planning outreach that helps women choose your practice, plus what to do in the first weeks of a pregnancy."},{"v": "02", "cBorder": "rgba(79,179,191,.5)", "cBg": "rgba(79,179,191,.1)", "cFg": "#1F6B73", "cLine": "rgba(227,115,92,.45)","line":true,"t":"Prenatal and delivery","tag":"Through the pregnancy","d":"Week-by-week guidance, visit prep, delivery logistics, and the symptoms that mean call now."},{"v": "03", "cBorder": "rgba(227,115,92,.5)", "cBg": "rgba(227,115,92,.1)", "cFg": "#A8412F", "cLine": "rgba(79,179,191,.55)","line":false,"t":"Postpartum and newborn with PROMs","tag":"The fourth trimester","d":"Recovery guidance, feeding and mood support, and validated measures including depression screening collected on schedule."}],
+    measures: [{"t":"Fewer postpartum readmissions and ED visits","d":"The costliest after-discharge failure, and the one that most often follows a warning sign nobody recognized."},{"t":"Higher postpartum visit attendance","d":"The visit where blood pressure, mood, and contraception are actually addressed."},{"t":"Earlier recognition of warning signs","d":"A patient who calls about a blood pressure reading costs a phone call, not an admission."},{"t":"Better breastfeeding continuation","d":"Support at the moment the question arises rather than at the next appointment."},{"t":"Earlier mood and anxiety detection","d":"Screening that reaches the patient at home, when the symptoms are actually present."},{"t":"Fewer inbound calls per episode","d":"Every repeat call is nursing time spent re-explaining what was already covered."},{"t":"Higher PROM and screening completion","d":"Required for quality programs and value-based contracts, and usually chased by hand."},{"t":"A visible program differentiator","d":"A branded maternity experience is something few competing programs can show."}],
+    money: [{"v":"1 in 6","t":"Pregnancies with inadequate prenatal care","d":"Care beginning in the fifth month or later, or fewer than half the recommended visits. Each one is a booked slot that went unused.","src":"NCHS final natality data, 2024 (16.1% of live births)."},{"v":"7%","t":"Late or no prenatal care","d":"Care starting in the third trimester or never starting at all, and the share has been rising since 2021.","src":"NCHS final natality data, 2023 (7.0% of live births)."},{"v":"4 in 10","t":"Postpartum visits missed","d":"The visit where blood pressure, mood, and contraception are addressed, and where the episode is billed.","src":"Published postpartum attendance literature, widest gaps in Medicaid populations. Use your own program's rate."},{"v":"Most","t":"Pregnancy-related deaths occur postpartum","d":"CDC review committees judge more than 80% of pregnancy-related deaths preventable, and they happen in the weeks with the least contact.","src":"CDC Pregnancy Mortality Surveillance System and state maternal mortality review committee findings."}],
+    benefits: [{"t":"Paper handouts and binders","d":"Handed over during pregnancy, misplaced by delivery, and never opened at three in the morning."},{"t":"Verbal instructions at discharge","d":"Given hours after birth, to a patient who will not remember the conversation."},{"t":"Generic EMR education material","d":"Auto-generated, rarely updated, and written for the chart rather than for a new parent at home."},{"t":"Patient portal messages","d":"One more login to set up, on a channel most patients never open in the postpartum weeks."}],
+    features: [{"tab":"Pregnancy & planning","t":"Prepared for what is coming, trimester by trimester","d":"What to expect, which symptoms matter, and how the program works, delivered across the pregnancy rather than at one visit."},{"tab":"Labor & delivery","t":"No surprises on the day","d":"Arrival logistics, what the day will involve, pain management options, and who will be in the room, sent before it matters."},{"tab":"Newborn care","t":"The first weeks at home, guided","d":"Feeding, sleep, cord and bathing care, and the specific newborn warning signs that warrant a call rather than waiting."},{"tab":"Postpartum recovery","t":"The warning signs, known in advance","d":"Bleeding, blood pressure, pain, and infection signs described plainly, with the threshold for calling rather than waiting."},{"tab":"Feeding & mental health","t":"Support in the weeks it is actually needed","d":"Lactation guidance and mood screening delivered when the questions arise, with a clear route to help."},{"tab":"Postpartum visit & PROMs","t":"Follow-through, measured","d":"Visit reminders, contraception and interval planning, and validated measures collected on schedule and returned to the care team."}],
+    calc: {"vol":"Deliveries or maternity patients per year","util":"Postpartum readmission or ED visit rate","utilCut":"Reduction in postpartum readmissions and ED visits","utilCost":"Cost per postpartum readmission or ED visit","noShow":"Patients who miss the postpartum visit","noShowCut":"Reduction in missed postpartum visits","revPer":"Revenue per completed postpartum visit","rUtil":"Readmission and ED cost avoided","rVisit":"Recovered visit revenue","visitWord":"postpartum visits","doc":"Maternal health orbit ROI model","csv":"careorbit-maternity-roi.csv","transferNoun":"maternity","hintUtilCut":"Modeled. Not a measured maternity result.","hintNoShow":"Attendance gaps are well documented, and widest in Medicaid populations.","worked2":"Worked on 600 patients a year at a 5% postpartum readmission or ED rate, $12,000 per event, six calls per patient at nine minutes each, and a $45 loaded hourly staff cost. Substitute your own figures and the totals move accordingly.","worked":"Worked on 600 patients a year at a 5% postpartum readmission or ED rate and $12,000 per event. All of these improvements are modeled assumptions. Every rate and unit cost is a figure you supply."},
+    headLead: "A trusted guide she keeps for the whole pregnancy, and the", headEm: "weeks after it",
+    intro: "Your prenatal protocol in your clinicians' own words, delivered the week it applies. Alongside the visit summary and the on-call line, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps her informed, reassured, and reaching you at the right moment.",
+    pov: [
+      {kicker: "For the patient", t: "She knows what is normal and what is not", label: "#A8412F", dot: "#E3735C", items: [
+        "What is happening this week, why this visit matters, and what comes next",
+        "Warning signs named plainly, with the threshold for calling versus going to labor and delivery",
+        "Postpartum guidance that keeps arriving after the six-week visit, not before it",
+        "The same guide for a partner, a mother, or whoever is actually at home"
+      ]},
+      {kicker: "For your team", t: "Fewer triage calls, better ones", label: "#2D5A87", dot: "#2D5A87", items: [
+        "Ordered at the first prenatal visit and it runs the rest of the pregnancy",
+        "Fewer calls asking what the last visit already covered",
+        "Your protocols and your brand, not a consumer pregnancy app",
+        "At-risk versions layered on without a separate program to staff"
+      ]},
+      {kicker: "For the practice", t: "The postpartum window stops being blind", label: "#5B9BEA", dot: "#5B9BEA", items: [
+        "Who is still engaged at 2, 6, and 12 weeks postpartum, by patient",
+        "Postpartum depression screening delivered and scored on schedule",
+        "Symptom responses routed back before the next visit",
+        "Engagement and completion by clinician and by site"
+      ]}
+    ], label: "Maternity & fertility", name: "maternity",
+    line: "Prenatal, postpartum, and the paths into pregnancy, where the plan is carried at home for nine months and then some.",
+    blurb: "The orbits for getting pregnant, staying informed through pregnancy, and the postpartum weeks nobody is staffed to cover. Versioned general and at-risk.",
+    orbits: [
+      {t: "Prenatal care and pregnancy support", v: "Versions: general and at-risk"},
+      {t: "Family planning", v: "Options, preparation, and follow-up"},
+      {t: "Infertility treatment", v: "Cycle preparation and expectation setting"},
+      {t: "Pediatrics", v: "Overlaps another specialty"}
+    ]
+  },
+  {
+    key: "gyn",
+    econ: {"intro":"An operative case is only revenue if it happens on the day it was booked and the follow-through after it holds. Both are decided at home, weeks before and weeks after.","sub":"Every one of these is scheduled revenue that turns on what a patient did at home.","items":[{"t":"Clearance and pre-op testing completed.","d":"Labs, imaging, and medical clearance finished in time rather than surfacing as a cancellation the day before."},{"t":"Cases held on the schedule.","d":"A case that falls off late is an operating room hour that rarely gets refilled."},{"t":"Post-operative visits attended.","d":"Where healing, restrictions, and pathology results get reviewed, and where the visit gets billed."},{"t":"Referrals that start.","d":"Pelvic floor therapy, urogynecology, and behavioral health that patients accept in clinic and never begin."},{"t":"Surveillance kept current.","d":"Imaging and screening intervals tracked instead of assumed once the episode closes."}]},
+    gapLead: "Weeks of preparation inside", gapEm: "one operative day",
+    gapIntro: "A gynecologic procedure is decided in one visit, prepared for alone at home over weeks, and recovered from alone at home over more. The clinic sees a sliver of it. That is the understanding gap, and the figures below are what it costs.",
+    gapBridge: "None of this is decided in the operating room. Each one turns on whether a patient followed the preparation, arrived ready, and recognized the sign that mattered afterward.",
+    window: [{"n":"Weeks","t":"Between booking and surgery","d":"Preparation, clearance, and medication changes happen entirely at home.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"1 call","t":"Often the only prep contact","d":"Delivered once, days before, to a patient who is anxious and not writing it down.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"6 weeks","t":"Typical recovery window","d":"Where restrictions, complications, and most of the questions actually land.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"Every day","t":"Managed at home","d":"Preparation, medications, restrictions, and warning signs, all outside your building.","bg":"#1E3A5F","border":"#E3735C","pad":"26px 24px","size":"clamp(44px,5vw,62px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#D6E1EC"}],
+    beginSub: "Most practices start with their highest-volume operative journey and template the rest.", beginItems: [{"t":"Well woman care.","d":"The default orbit a patient keeps between annual visits."},{"t":"Hysterectomy and myomectomy.","d":"The high-volume journeys, preparation through recovery."},{"t":"A procedure template.","d":"The operative long tail, versioned with minor edits per case type."},{"t":"Urogynecology.","d":"Pelvic floor, continence, and prolapse, before and after intervention."}],
+    seqSub: "The same orbit advances through three versions on its own, with no new app or login.", seqItems: [{"v": "01", "cBorder": "rgba(79,179,191,.5)", "cBg": "rgba(79,179,191,.1)", "cFg": "#1F6B73", "cLine": "rgba(79,179,191,.55)","line":true,"t":"Decision and consent","tag":"Before the case is booked","d":"What the condition is, what the options were, and what the procedure involves, so consent is understood rather than signed."},{"v": "02", "cBorder": "rgba(79,179,191,.5)", "cBg": "rgba(79,179,191,.1)", "cFg": "#1F6B73", "cLine": "rgba(227,115,92,.45)","line":true,"t":"Preparation and day of surgery","tag":"Through the operative window","d":"Clearance, medication changes, fasting, and arrival logistics, each released on the day it has to be done."},{"v": "03", "cBorder": "rgba(227,115,92,.5)", "cBg": "rgba(227,115,92,.1)", "cFg": "#A8412F", "cLine": "rgba(79,179,191,.55)","line":false,"t":"Recovery and follow-up with PROMs","tag":"After the case","d":"Week-by-week restrictions and recovery guidance, warning signs, and validated measures collected on schedule."}],
+    measures: [{"t":"Fewer cancelled and rescheduled cases","d":"A case that falls off the schedule late is revenue that rarely gets refilled."},{"t":"Fewer day-of surprises","d":"Fasting, medication, and clearance failures that only surface when the patient arrives."},{"t":"Fewer readmissions and ED visits","d":"The costliest post-operative failure, and the one that most often follows a sign nobody recognized."},{"t":"Higher post-op visit attendance","d":"The visit where healing, restrictions, and pathology results are actually reviewed."},{"t":"Fewer inbound calls per case","d":"Every repeat call is nursing time spent re-explaining what the packet already said."},{"t":"Higher PROM completion","d":"Required for quality programs and value-based contracts, and usually chased by hand."},{"t":"Better documented consent and instruction","d":"A record that the patient received and opened the guidance, which protects the practice."},{"t":"New patient acquisition","d":"Patients choose surgeons on experience as much as outcome, and reviews say so."}],
+    money: [{"v":"7 in 10","t":"Day-of-surgery cancellations judged avoidable","d":"Incomplete evaluation, missing clearance, and patients who did not arrive. An operating room hour lost late is rarely refilled.","src":"Single-center and multicenter day-of-surgery cancellation audits (71.6% and 74% avoidable)."},{"v":"Up to 24%","t":"Reported day-of-surgery cancellation rates","d":"Published rates range widely by setting and specialty. The avoidable share is the part preparation can move.","src":"Published day-of-surgery cancellation series, 1.96% to 24%."},{"v":"1 in 4","t":"Abnormal results without colposcopy in a year","d":"The diagnostic and operative work an abnormal result should trigger, never scheduled.","src":"Multi-system cohort of 28,706 patients, 2010 to 2018: 75.3% received colposcopy within 12 months."},{"v":"[Your rate]","t":"Post-operative visits missed","d":"[Placeholder: your own figure] Attendance after a gynecologic procedure varies too much by case type and payer mix for a national number to mean anything.","src":"No national benchmark. Supply your own rate in the calculator below."}],
+    benefits: [{"t":"The pre-op packet","d":"Handed over weeks early, in one stack, to a patient who is not ready to read it yet."},{"t":"The pre-op phone call","d":"One call, days before, covering everything at once and remembered in pieces."},{"t":"Generic EMR education material","d":"Auto-generated, rarely updated, and written for the chart rather than for the person recovering."},{"t":"Printed discharge instructions","d":"No reminders, no sequencing, and no way to tell whether any of it was followed."}],
+    features: [{"tab":"Decision & consent","t":"She understands what she agreed to","d":"The condition, the options that were considered, and what the procedure actually involves, available again after the visit."},{"tab":"Preparation","t":"One instruction at a time","d":"Clearance, medication holds, fasting, and bowel prep released on the day each has to be done rather than all at once."},{"tab":"Day of surgery","t":"No surprises on the day","d":"Arrival time and location, what to bring, who can come, and what the day will actually look like."},{"tab":"Recovery","t":"Week by week, not all at once","d":"Activity restrictions, lifting limits, driving, and return to work, delivered as each one becomes relevant."},{"tab":"Warning signs","t":"The signs, known in advance","d":"Bleeding, fever, pain, and infection described plainly, with the threshold for calling rather than waiting."},{"tab":"Follow-up & PROMs","t":"Follow-through, measured","d":"Post-op visit reminders, pathology result guidance, and validated measures collected before and after."}],
+    calc: {"vol":"Gynecologic cases per year","util":"Post-operative readmission or ED visit rate","utilCut":"Reduction in readmissions and ED visits","utilCost":"Cost per readmission or ED visit","noShow":"Cases cancelled or post-op visits missed","noShowCut":"Reduction in cancellations and missed visits","revPer":"Revenue per recovered case or visit","rUtil":"Readmission and ED cost avoided","rVisit":"Recovered case and visit revenue","visitWord":"cases and visits","doc":"Gynecologic surgery orbit ROI model","csv":"careorbit-gynecology-roi.csv","transferNoun":"gynecologic surgery","hintUtilCut":"Modeled. Not a measured gynecologic surgery result.","hintNoShow":"Use your own cancellation and post-op attendance figures.","worked2":"Worked on 600 cases a year at a 5% post-operative readmission or ED rate, $12,000 per event, six calls per case at nine minutes each, and a $45 loaded hourly staff cost. Substitute your own figures and the totals move accordingly.","worked":"Worked on 600 cases a year at a 5% post-operative readmission or ED rate and $12,000 per event. All of these improvements are modeled assumptions. Every rate and unit cost is a figure you supply."},
+    headLead: "Preparation and recovery she can follow, on the day", headEm: "each step matters",
+    intro: "Your operative protocol in your surgeons' own words, released one instruction at a time. Alongside the pre-op packet and the nurse call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that gets her to the day prepared and through recovery without guessing.",
+    pov: [
+      {kicker: "For the patient", t: "She arrives ready on the day", label: "#A8412F", dot: "#E3735C", items: [
+        "What the procedure is, why it was recommended, and what the alternatives were",
+        "Every preparation instruction delivered on the day it has to be done, not all at once",
+        "Recovery expectations week by week, with the signs that warrant a call",
+        "The same guide works for whoever is driving her home"
+      ]},
+      {kicker: "For your team", t: "Fewer cancellations to rebook", label: "#2D5A87", dot: "#2D5A87", items: [
+        "Ordered when the case is booked, running until the post-op visit",
+        "Fewer calls about prep, and fewer day-of surprises",
+        "Your protocols and your brand, not a generic surgery handout",
+        "One procedure template versions the long tail of case types"
+      ]},
+      {kicker: "For the practice", t: "The schedule holds", label: "#5B9BEA", dot: "#5B9BEA", items: [
+        "Who completed preparation and who never opened it, before the day",
+        "Cancellation and rebooking patterns visible by case type",
+        "PROMs collected before and after without coordinator time",
+        "Engagement and completion by surgeon and by site"
+      ]}
+    ], label: "Gynecology & surgery", name: "gynecology",
+    line: "Well-woman care and the operative journeys, where preparation decides whether a case happens on the day it was booked.",
+    blurb: "A default well-woman orbit that procedure orbits return to, plus named orbits for the high-volume operative journeys and a template for the rest.",
+    orbits: [
+      {t: "Well Woman Care", v: "Default orbit, and where procedure orbits evolve"},
+      {t: "Hysterectomy", v: "Preparation through recovery"},
+      {t: "Myomectomy", v: "Preparation through recovery"},
+      {t: "Endometriosis treatment", v: "Diagnosis, options, and ongoing management"},
+      {t: "Ovarian cysts", v: "Watchful waiting or procedure"},
+      {t: "Minimally invasive surgery", v: "Procedure template, versioned per case type"},
+      {t: "Urogynecology", v: "Pelvic floor, continence, and prolapse"},
+      {t: "Infection control", v: "Treatment adherence and recurrence prevention"}
+    ]
+  },
+  {
+    key: "midlife",
+    econ: {"intro":"Midlife care is a decade of small, recurring, billable services, and every one of them depends on a patient who still understood the plan months after the conversation.","sub":"Every one of these is care you already recommended, sitting unbilled because the follow-through happened where you cannot see it.","items":[{"t":"Therapy continued past month three.","d":"Most discontinuation is quiet and early, and it takes the follow-up visits and refills with it."},{"t":"Screening completed on schedule.","d":"Mammography, cervical, and bone density studies finished rather than deferred to the next annual."},{"t":"Labs and cardiovascular risk work completed.","d":"Ordered at the visit, done in the window, and followed by the visit the result requires."},{"t":"Referrals that start.","d":"Pelvic floor therapy, urogynecology, nutrition, and behavioral health that patients accept and never begin."},{"t":"The annual visit kept.","d":"The one appointment where risk, therapy, and screening all get addressed at once."}]},
+    gapLead: "A decade of decisions, and", gapEm: "two visits a year",
+    gapIntro: "Perimenopause and menopause run for years. The therapy decision, the side effect at week three, and the screening that keeps getting deferred all happen between annual visits. That is the understanding gap, and the figures below are what it costs.",
+    gapBridge: "None of this is decided in the exam room. Each one turns on whether a patient understood what was happening, stayed on the therapy, and kept the screening she was due for.",
+    window: [{"n":"Years","t":"How long the transition lasts","d":"Menopause is managed over years, not settled at one appointment.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"2 visits","t":"Typical contact in a year","d":"A well-woman visit, and perhaps one follow-up.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"1 conversation","t":"Where therapy is decided","d":"Explained once in clinic, then revisited alone for years.","bg":"transparent","border":"transparent","pad":"0 22px 0 0","size":"clamp(34px,3.6vw,46px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#B9C8D8"},{"n":"Every day","t":"Managed at home","d":"Symptoms, therapy adherence, and the screenings that keep getting deferred, all outside your building.","bg":"#1E3A5F","border":"#E3735C","pad":"26px 24px","size":"clamp(44px,5vw,62px)","fg":"#FFFFFF","label":"#C0A5E8","body":"#D6E1EC"}],
+    beginSub: "Most practices start with menopause management and add therapy support alongside it.", beginItems: [{"t":"Menopause management.","d":"What is happening, what is normal, and what is treatable."},{"t":"Menopause therapies.","d":"Options, adherence, and what to do when a side effect shows up."},{"t":"Cancer diligence and screenings.","d":"Due dates, preparation, and following through on a result."},{"t":"Urogynecology.","d":"Pelvic floor, continence, and prolapse, before and after intervention."}],
+    seqSub: "The same orbit advances through three versions on its own, with no new app or login.", seqItems: [{"v": "01", "cBorder": "rgba(79,179,191,.5)", "cBg": "rgba(79,179,191,.1)", "cFg": "#1F6B73", "cLine": "rgba(79,179,191,.55)","line":true,"t":"Recognition","tag":"Before she raises it","d":"What perimenopause looks like, why it is happening, and which symptoms are worth a visit rather than an internet search."},{"v": "02", "cBorder": "rgba(79,179,191,.5)", "cBg": "rgba(79,179,191,.1)", "cFg": "#1F6B73", "cLine": "rgba(227,115,92,.45)","line":true,"t":"Decision and start of therapy","tag":"The first months","d":"Options explained in your clinicians' words, what to expect in the first weeks, and which side effects warrant a call rather than stopping."},{"v": "03", "cBorder": "rgba(227,115,92,.5)", "cBg": "rgba(227,115,92,.1)", "cFg": "#A8412F", "cLine": "rgba(79,179,191,.55)","line":false,"t":"Maintenance and screening with PROMs","tag":"The long stretch","d":"Adherence support, long-term risk guidance, screening reminders, and validated measures collected on schedule."}],
+    measures: [{"t":"Higher therapy continuation","d":"Most discontinuation happens early and quietly, over a side effect nobody was warned about."},{"t":"Better screening completion","d":"Mammography, cervical, and bone density screening tracked instead of assumed."},{"t":"Fewer avoidable urgent and ED visits","d":"A symptom understood at home is a phone call, not an unscheduled visit."},{"t":"Higher annual visit attendance","d":"The visit where risk, therapy, and screening all actually get addressed."},{"t":"Fewer inbound calls per patient","d":"Every repeat call is clinical time spent re-explaining a conversation already had."},{"t":"Earlier mood and sleep detection","d":"Screening that reaches the patient at home, when the symptoms are actually present."},{"t":"Higher PROM completion","d":"Required for quality programs and value-based contracts, and usually chased by hand."},{"t":"New patient acquisition","d":"Midlife care is under-served, and a practice that handles it well gets talked about."}],
+    money: [{"v":"35–40%","t":"Never return for a second prescription","d":"Of women starting menopausal hormone therapy, this share does not refill once. Most of it is a side effect nobody prepared them for.","src":"Retrospective prescription database of 1,532 women, Menopause, 2018."},{"v":"76–81%","t":"Stop therapy within three years","d":"Every discontinuation takes the follow-up visits, the refills, and the monitoring with it.","src":"Retrospective prescription database of 1,532 women, Menopause, 2018."},{"v":"1 in 5","t":"Not up to date on mammography","d":"Eighty percent of women aged 50 to 74 are current. The remainder is screening you recommended and never billed.","src":"National Health Interview Survey, 2023 (80.0% up to date)."},{"v":"1 in 4","t":"Not up to date on cervical screening","d":"Three quarters of women aged 21 to 65 are current, and the share has been falling year over year.","src":"National Health Interview Survey, 2023 (75.4% up to date)."}],
+    benefits: [{"t":"A single clinic conversation","d":"Explained once, at the visit, and needed most several months later when the details have faded."},{"t":"Printed information sheets","d":"No reminders, no sequencing, and no way to tell whether any of it was read."},{"t":"Generic EMR education material","d":"Auto-generated, rarely updated, and written for the chart rather than for the person living it."},{"t":"Whatever she found online","d":"Confident, contradictory, and not written by the clinician she trusts."}],
+    features: [{"tab":"Understanding the transition","t":"What is happening, and why","d":"Perimenopause and menopause explained in plain language, without alarm and without the internet's certainty."},{"tab":"Symptom guidance","t":"Expected, treatable, or worth a visit","d":"Hot flashes, sleep, mood, and genitourinary symptoms sorted into what is normal and what is worth raising."},{"tab":"Therapy options","t":"The conversation, available again","d":"What each option involves, what the evidence says, and what her own risk profile means, in your clinicians' words."},{"tab":"Adherence & side effects","t":"Still on therapy at month six","d":"What to expect in the first weeks, and which side effects warrant a call rather than quietly stopping."},{"tab":"Screening & prevention","t":"The screenings that keep getting deferred","d":"Mammography, cervical, bone density, and cardiovascular risk, with reminders when the window opens."},{"tab":"Follow-up & PROMs","t":"Follow-through, measured","d":"Visit reminders and validated measures collected on schedule and returned to the care team."}],
+    calc: {"vol":"Midlife patients per year","util":"Avoidable urgent or ED visit rate","utilCut":"Reduction in avoidable urgent and ED visits","utilCost":"Cost per avoidable visit","noShow":"Patients who miss an annual or screening visit","noShowCut":"Reduction in missed annual and screening visits","revPer":"Revenue per completed visit","rUtil":"Avoidable visit cost avoided","rVisit":"Recovered visit revenue","visitWord":"annual and screening visits","doc":"Menopause and midlife orbit ROI model","csv":"careorbit-midlife-roi.csv","transferNoun":"menopause and midlife","hintUtilCut":"Modeled. Not a measured midlife result.","hintNoShow":"Use your own annual and screening attendance figures.","worked2":"Worked on 600 patients a year at a 5% avoidable urgent or ED visit rate, $12,000 per event, six calls per patient at nine minutes each, and a $45 loaded hourly staff cost. Substitute your own figures and the totals move accordingly.","worked":"Worked on 600 patients a year at a 5% avoidable urgent or ED visit rate and $12,000 per event. All of these improvements are modeled assumptions. Every rate and unit cost is a figure you supply."},
+    headLead: "A guide for the decade your practice only sees", headEm: "twice a year",
+    intro: "Your guidance in your clinicians' own words, delivered as symptoms and decisions actually arrive. Alongside the visit summary and the patient portal, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps her informed, on therapy, and current on screening.",
+    pov: [
+      {kicker: "For the patient", t: "She knows what is happening and why", label: "#A8412F", dot: "#E3735C", items: [
+        "What perimenopause and menopause actually do, in plain language and without alarm",
+        "Which symptoms are expected, which are treatable, and which warrant a visit",
+        "What each therapy option involves, and what to do when a side effect shows up",
+        "Screening reminders that arrive when the window opens, not a year later"
+      ]},
+      {kicker: "For your team", t: "The questions arrive answered", label: "#2D5A87", dot: "#2D5A87", items: [
+        "Ordered at a well-woman visit and it works for the next decade",
+        "Fewer calls relitigating a therapy conversation already had in clinic",
+        "Your protocols and your brand, not whatever she found online",
+        "We build and maintain the content, including guideline updates"
+      ]},
+      {kicker: "For the practice", t: "Adherence and screening, visible", label: "#5B9BEA", dot: "#5B9BEA", items: [
+        "Who is still on therapy at 3, 6, and 12 months, by patient",
+        "Screening completion tracked instead of assumed",
+        "Symptom responses routed back before the next visit",
+        "Engagement and completion by clinician and by site"
+      ]}
+    ], label: "Menopause & midlife", name: "midlife",
+    line: "The decade most practices touch twice a year, where symptoms, therapy adherence, and screening all run at home.",
+    blurb: "Orbits for the midlife stretch: what is happening and why, which therapies exist, and the screenings that keep getting deferred.",
+    orbits: [
+      {t: "Menopause management", v: "Symptoms, timeline, and what is normal"},
+      {t: "Menopause therapies", v: "Options, adherence, and side effect guidance"},
+      {t: "Cancer diligence and screenings", v: "Screening adherence and result follow-through"},
+      {t: "Urogynecology", v: "Pelvic floor, continence, and prolapse"}
+    ]
+  }
+];
+
+class Component extends DCLogic {
+  state = { seg: 0, showSources: false, calcOpen: false, exportOpen: false, calc: {"volume":"600","utilRate":"5","utilCut":"20","utilCost":"12000","calls":"6","callCut":"53","minutes":"9","staffRate":"45","noShow":"40","noShowCut":"20","revPer":"250"}, email: "", sent: false, active: 0 };
+  componentDidMount() {
+    import('./orbits-data.js').then(m => this.setState({d: m.ORBITS["womens-health"]}));
+    this._onScroll = () => {
+      const blocks = Array.from(document.querySelectorAll('[data-feat-block]'));
+      if (!blocks.length) return;
+      let idx = 0;
+      blocks.forEach((b, i) => { if (b.getBoundingClientRect().top <= 220) idx = i; });
+      if (idx !== this.state.active) this.setState({active: idx});
+    };
+    document.addEventListener('scroll', this._onScroll, {capture: true, passive: true});
+    this._onScroll();
+  }
+  componentWillUnmount() { document.removeEventListener('scroll', this._onScroll, {capture: true}); }
+  t0 = Date.now();
+  humanOk(email) { return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email) && !this.state.hp && (Date.now() - this.t0 > 3000); }
+  renderVals() {
+    const d = this.state.d || {};
+    const segIdx = this.state.seg ?? 0;
+    const seg = SEGMENTS[segIdx];
+    const features = seg.features.map((f, i) => Object.assign({}, f, {
+      id: "wh-f" + i, anchor: "#wh-f" + i, slotId: "wh-feature-" + i, src: f.src || "",
+      navColor: i === this.state.active ? "#0F1D2E" : "rgba(15,29,46,.66)",
+      navRule: i === this.state.active ? "#E3735C" : "rgba(15,29,46,.12)",
+      pick: () => this.setState({active: i})
+    }));
+    const c = this.state.calc;
+    const num = (k) => (isNaN(parseFloat(c[k])) ? 0 : parseFloat(c[k]));
+    const setCalc = (k) => (e) => {
+      let v = e.target.value;
+      if (v !== "" && parseFloat(v) < 0) v = "0";
+      const pct = ["utilRate", "utilCut", "callCut", "noShow", "noShowCut"];
+      if (v !== "" && pct.indexOf(k) > -1 && parseFloat(v) > 100) v = "100";
+      this.setState(st => ({calc: Object.assign({}, st.calc, {[k]: v})}));
+    };
+    const benchmarks = {"volume":"600","utilRate":"5","utilCut":"20","utilCost":"12000","calls":"6","callCut":"53","minutes":"9","staffRate":"45","noShow":"40","noShowCut":"20","revPer":"250"};
+    const money = (n) => !n ? "$0" : (n >= 1000000 ? "$" + (n / 1000000).toFixed(2).replace(/\.00$/, "") + "M" : "$" + Math.round(n / 1000).toLocaleString() + "K");
+    const dollars = (n) => "$" + Math.round(n || 0).toLocaleString();
+    const utilEvents = num("volume") * num("utilRate") / 100;
+    const utilAvoided = utilEvents * num("utilCut") / 100;
+    const utilSavings = utilAvoided * num("utilCost");
+    const callsAvoided = num("volume") * num("calls") * num("callCut") / 100;
+    const hoursReturned = callsAvoided * num("minutes") / 60;
+    const callSavings = hoursReturned * num("staffRate");
+    const missedTotal = num("volume") * num("noShow") / 100;
+    const missedRecovered = missedTotal * num("noShowCut") / 100;
+    const missedSavings = missedRecovered * num("revPer");
+    const groupTotal = utilSavings + callSavings + missedSavings;
+    const calcFields = [
+      {k: "volume", label: seg.calc.vol, value: c.volume, ph: "e.g. 600", step: "10", prefix: "", suffix: "patients", hint: "The population an orbit would be issued to"},
+      {k: "utilRate", label: seg.calc.util, value: c.utilRate, ph: "e.g. 5", step: "0.5", prefix: "", suffix: "%", hint: "Use your own program's figure"},
+      {k: "utilCut", label: seg.calc.utilCut, value: c.utilCut, ph: "e.g. 20", step: "1", prefix: "", suffix: "%", hint: seg.calc.hintUtilCut},
+      {k: "utilCost", label: seg.calc.utilCost, value: c.utilCost, ph: "e.g. 12000", step: "1000", prefix: "$", suffix: "", hint: "Your finance team's figure"},
+      {k: "calls", label: "Calls per patient per episode", value: c.calls, ph: "e.g. 6", step: "1", prefix: "", suffix: "calls", hint: "Questions to the nursing line between visits"},
+      {k: "callCut", label: "Reduction in inbound calls", value: c.callCut, ph: "e.g. 53", step: "1", prefix: "", suffix: "%", hint: "Modeled assumption. Replace it with your own figure."},
+      {k: "minutes", label: "Minutes per call, including documentation", value: c.minutes, ph: "e.g. 9", step: "1", prefix: "", suffix: "min", hint: "Handle time plus charting and follow-up"},
+      {k: "staffRate", label: "Loaded hourly cost of the staff taking calls", value: c.staffRate, ph: "e.g. 45", step: "5", prefix: "$", suffix: "/hr", hint: "Nurse or navigator wage plus benefits"},
+      {k: "noShow", label: seg.calc.noShow, value: c.noShow, ph: "e.g. 40", step: "1", prefix: "", suffix: "%", hint: seg.calc.hintNoShow},
+      {k: "noShowCut", label: seg.calc.noShowCut, value: c.noShowCut, ph: "e.g. 20", step: "1", prefix: "", suffix: "%", hint: "Modeled assumption. Set it to 0 to leave it out."},
+      {k: "revPer", label: seg.calc.revPer, value: c.revPer, ph: "e.g. 250", step: "25", prefix: "$", suffix: "", hint: "Your own contracted rate"}
+    ].map(f => Object.assign({}, f, {onChange: setCalc(f.k)}));
+    const calcResults = [
+      {raw: utilSavings, v: money(utilSavings), t: seg.calc.rUtil, d: Math.round(utilAvoided).toLocaleString() + " events a year prevented at the rate and cost you entered."},
+      {raw: callSavings, v: money(callSavings), t: "Nursing time returned", d: Math.round(hoursReturned).toLocaleString() + " hours a year back to clinical work instead of the phone."},
+      {raw: missedSavings, v: money(missedSavings), t: seg.calc.rVisit, d: Math.round(missedRecovered).toLocaleString() + " " + seg.calc.visitWord + " a year kept instead of missed."}
+    ];
+    const sourcesList = [
+        "National Health Interview Survey, 2023: 80.0% of women aged 50 to 74 up to date with breast cancer screening and 75.4% of women aged 21 to 65 up to date with cervical cancer screening.",
+        "Time-to-colposcopy across three US health systems, 28,706 patients with an abnormal cervical result, 2010 to 2018: 75.3% received colposcopy within 12 months, with site estimates from 70.0% to 83.0%.",
+        "National Center for Health Statistics final natality data: 16.1% of 2024 live births to women receiving inadequate prenatal care on the Adequacy of Prenatal Care Utilization Index, and 7.0% of 2023 live births to women receiving late or no prenatal care.",
+        "CDC Pregnancy Mortality Surveillance System: the majority of pregnancy-related deaths occur in the postpartum period, and state maternal mortality review committees judge more than 80% of pregnancy-related deaths preventable.",
+        "Postpartum visit attendance is incomplete across published series, with the widest gaps in Medicaid-covered populations. The 40% default is a placeholder for your own rate.",
+        "Menopausal hormone therapy continuation, retrospective prescription database of 1,532 women, Menopause, 2018: 35% to 40% did not return for a refill and 76% to 81% stopped therapy within three years.",
+        "Day-of-surgery cancellation audits report overall rates from about 2% to 24%, with 71.6% and 74% of cancellations judged potentially avoidable in single-center and multicenter series.",
+        "CareOrbit has no published women's health outcome data. Every reduction in the model below is an assumption you set, not a measured CareOrbit result.",
+        "Rates, unit costs, call volume, and staff cost are supplied by the user. CareOrbit makes no claim about those values.",
+        "Dollar figures on this page are arithmetic applying the percentages entered to the volumes and unit costs entered. They are illustrations, not guarantees."
+    ];
+    return {
+      bookHref: "BookACall.dc.html?src=womens-health",
+      heroSrc: "images/hero-womens-health.png",
+      heroSlotId: "orbit-hero-womens-health", heroSlotHint: "Maternal health photo",
+      name: d.name ?? "", nameLower: (d.name ?? "").toLowerCase(),
+      hero: d.hero ?? "",
+      sub: "Women's health is a relationship measured in decades, and almost all of it happens between visits: well-woman care, the operative journeys, pregnancy, and the long midlife stretch. A women's health orbit is designed backwards from preparedness, attendance, and the documentation that protects your practice.",
+      costMoments: (d.costMoments ?? []).slice(0, 4),
+      features,
+      benefits: seg.benefits,
+      window: seg.window,
+      t0Fg: segIdx === 0 ? "#0F1D2E" : "rgba(15,29,46,.42)", t0On: segIdx === 0, pick0: () => this.setState({seg: 0}),
+      t1Fg: segIdx === 1 ? "#0F1D2E" : "rgba(15,29,46,.42)", t1On: segIdx === 1, pick1: () => this.setState({seg: 1}),
+      t2Fg: segIdx === 2 ? "#0F1D2E" : "rgba(15,29,46,.42)", t2On: segIdx === 2, pick2: () => this.setState({seg: 2}),
+      t3Fg: segIdx === 3 ? "#0F1D2E" : "rgba(15,29,46,.42)", t3On: segIdx === 3, pick3: () => this.setState({seg: 3}),
+      segLine: seg.line,
+      valueSlotId: "womenshealth-value-" + seg.key,
+      valueSrc: seg.key === "maternity" ? "images/value-maternity.png" : seg.key === "gyn" ? "images/value-gyn.png" : seg.key === "midlife" ? "images/value-midlife.png" : "",
+      gapLead: seg.gapLead,
+      gapEm: seg.gapEm,
+      gapIntro: seg.gapIntro,
+      gapBridge: seg.gapBridge,
+      worked: seg.calc.worked,
+      worked2: seg.calc.worked2,
+      transferLine: "Each figure below is a published national or multi-system estimate of where adherence sits today, not an outcome measured with an orbit in place. They are the baselines an orbit is built to move.",
+      headLead: seg.headLead,
+      headEm: seg.headEm,
+      intro: seg.intro,
+      segName: seg.name,
+      segBlurb: seg.blurb,
+      catalog: seg.orbits.map((o, i) => ({n: String(i + 1).padStart(2, "0"), t: o.t, v: o.v})),
+      versions: [
+        {n: "By depth", t: "Success plan or full journey", d: "A success plan orbit carries broad, all-patient content and asks little of the care team. A journey orbit layers deeply specific content on top of that foundation.", who: "Chosen per department", bg: "#FCEFF3", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#A83E5B", rule: "rgba(168,62,91,.22)"},
+        {n: "By stage", t: "Prospect through long-term follow-up", d: "As a person moves along the pathway, their orbit updates at the right moment, with no new app or login.", who: "One orbit, whole journey", bg: "#FCEFF3", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#A83E5B", rule: "rgba(168,62,91,.22)"},
+        {n: "By procedure", t: "Named orbits, plus a template", d: "High-volume, high-value procedures get their own orbit. Everything else runs on a procedure template that can be versioned with minor edits.", who: "Scope, value, and understanding dividend", bg: "#FCEFF3", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#A83E5B", rule: "rgba(168,62,91,.22)"},
+        {n: "By audience", t: "Patient, family, community", d: "Any orbit can be issued in patient and family versions, and in outreach-facing versions for at-risk, senior, or community audiences.", who: "Versioned on request", bg: "#FCEFF3", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#A83E5B", rule: "rgba(168,62,91,.22)"}
+      ],
+      pov: seg.pov,
+      rows: [
+        {kicker: "How to begin", t: "Start with one, add the rest", label: "#A8412F", dot: "#E3735C", plain: true, sub: seg.beginSub, items: seg.beginItems},
+        {kicker: "A patient’s orbit can evolve as their journey needs change", t: "One orbit supports the full journey, adapting as needs change", label: "#1F6B73", dot: "#4FB3BF", seq: true, sub: seg.seqSub, items: seg.seqItems},
+        {kicker: "How it deploys", t: "Issued from the workflow you already run", label: "#2D5A87", dot: "#5B9BEA", plain: true, sub: "From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.", items: [
+          {t: "No new FTEs.", d: "Nothing added to anyone's day."},
+          {t: "White-label.", d: "Your brand, your voice."},
+          {t: "Live in a quarter.", d: "From kickoff to first patient."}
+        ]}
+      ],
+      econIntro: seg.econ.intro,
+      econRows: [
+        {kicker: "Adherence, then billing", t: "The services you already ordered, actually completed", label: "#A8412F", dot: "#E3735C", plain: true, sub: seg.econ.sub, items: seg.econ.items},
+        {kicker: "For a group or MSO", t: "What it means above the practice level", label: "#1F6B73", dot: "#4FB3BF", plain: true, sub: "The same orbit, read from the level that owns the contracts and the recruiting.", items: [
+          {t: "More billable services per patient.", d: "The screenings and referrals you already order, completed rather than chased."},
+          {t: "A recruiting and retention argument.", d: "Physicians choose groups that hand them a tool their patients notice and their staff does not have to run."},
+          {t: "Staff support instead of staff load.", d: "The orbit answers the repeat questions first, so your team spends its time on the interactions that need a person."},
+          {t: "Standardization with room to localize.", d: "One group-wide orbit, versioned by site, payor, employer, or language, without a separate build for each."},
+          {t: "Patient-level data you cannot get elsewhere.", d: "Who opened what, by location and by clinician, measured against the metrics your contracts pay on."}
+        ]},
+        {kicker: "How it scales", t: "One build, then versions", label: "#2D5A87", dot: "#5B9BEA", plain: true, sub: "Expansion is a versioning exercise, not a second implementation.", items: [
+          {t: "Start group-wide.", d: "One main orbit relevant to every patient in the group, live before anything is customized."},
+          {t: "Add journeys on results.", d: "Pregnancy, menopause, and operative journeys added where your own numbers say they pay back."},
+          {t: "Customize per care center.", d: "Light content edits per site or provider, turn-key on our side, with no headquarters FTE."},
+          {t: "One orbit follows her forward.", d: "Fertility becomes pregnancy, pregnancy becomes well woman care, with no new build and no new login."}
+        ]}
+      ],
+      measures: seg.measures.map((m, i) => Object.assign({}, m, {n: String(i + 1).padStart(2, "0")})),
+      money: seg.money,
+      calcOpen: this.state.calcOpen,
+      calcBtn: this.state.calcOpen ? "Hide the calculator" : "Run the model with your numbers",
+      toggleCalc: () => this.setState(st => ({calcOpen: !st.calcOpen})),
+      closeCalc: () => this.setState({calcOpen: false}),
+      stopClose: (e) => e.stopPropagation(),
+      exportOpen: this.state.exportOpen,
+      toggleExport: () => this.setState(st => ({exportOpen: !st.exportOpen})),
+      exportExcel: () => {
+        const lines = [["CareOrbit " + seg.calc.doc, ""], ["", ""], ["Input", "Value"]];
+        calcFields.forEach(f => { let n = parseFloat(c[f.k]); if (isNaN(n)) n = 0; lines.push([f.label + (f.suffix === "%" ? " (%)" : (f.prefix === "$" ? " ($)" : "")), n]); });
+        lines.push(["", ""], ["Result", "Annual value"]);
+        calcResults.forEach(r => lines.push([r.t + " ($)", Math.round(r.raw)]));
+        lines.push(["Total annual opportunity ($)", Math.round(groupTotal)]);
+        lines.push(["", ""], ["Modeled illustration. Arithmetic on the inputs above, not a guarantee of results.", ""]);
+        const csv = lines.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(",")).join("\r\n");
+        const blob = new Blob(["\ufeff" + csv], {type: "text/csv;charset=utf-8;"});
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = seg.calc.csv;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+        this.setState({exportOpen: false});
+      },
+      printCalc: () => {
+        const old = document.getElementById("print-only");
+        if (old) old.remove();
+        const esc = (v) => String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+        const fmtIn = (k) => {
+          const n = parseFloat(c[k]);
+          if (isNaN(n)) return "0";
+          return n.toLocaleString(undefined, {maximumFractionDigits: 2});
+        };
+        const inputRows = calcFields.map(f => '<tr><td style="padding:7px 0;border-bottom:1px solid #E6E1D9;font-size:10.5pt;color:#3A4A5C">' + esc(f.label) + '</td><td style="padding:7px 0;border-bottom:1px solid #E6E1D9;font-size:10.5pt;font-weight:700;color:#0F1D2E;text-align:right;white-space:nowrap">' + esc(f.prefix) + fmtIn(f.k) + (f.suffix ? " " + esc(f.suffix) : "") + '</td></tr>').join("");
+        const resultRows = calcResults.map(r => '<tr><td style="padding:9px 0;border-bottom:1px solid #E6E1D9"><div style="font-size:11pt;font-weight:700;color:#0F1D2E">' + esc(r.t) + '</div><div style="font-size:9pt;color:#5A6A7C;line-height:1.35">' + esc(r.d) + '</div></td><td style="padding:9px 0;border-bottom:1px solid #E6E1D9;font-family:Lato,sans-serif;font-size:20pt;font-weight:300;color:#0F1D2E;text-align:right;white-space:nowrap;vertical-align:middle">' + esc(dollars(r.raw)) + '</td></tr>').join("");
+        const holder = document.createElement("div");
+        holder.id = "print-only";
+        holder.innerHTML = '<div style="font-family:Inter,sans-serif;color:#0F1D2E;padding:0">' +
+          '<div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #0F1D2E;padding-bottom:10px;margin-bottom:18px">' +
+            '<div><div style="font-size:8.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">CareOrbit</div>' +
+            '<div style="font-family:Lato,sans-serif;font-size:20pt;font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-top:2px">' + esc(seg.calc.doc) + '</div></div>' +
+            '<div style="text-align:right;font-size:9pt;color:#5A6A7C;line-height:1.4">' + esc((parseFloat(c.volume) || 0).toLocaleString() + " patients a year") + '<br>' + new Date().toLocaleDateString() + '</div>' +
+          '</div>' +
+          '<div style="display:flex;gap:26px;align-items:flex-start">' +
+            '<div style="flex:0 0 44%"><div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8578;margin-bottom:6px">Your inputs</div>' +
+              '<table style="width:100%;border-collapse:collapse">' + inputRows + '</table></div>' +
+            '<div style="flex:1"><div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8578;margin-bottom:6px">Modeled annual value</div>' +
+              '<table style="width:100%;border-collapse:collapse">' + resultRows + '</table>' +
+              '<div style="background:#0F1D2E;border-radius:12px;padding:16px 20px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">' +
+                '<div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F2B8C6">Total annual opportunity</div>' +
+                '<div style="font-family:Lato,sans-serif;font-size:26pt;font-weight:300;letter-spacing:-0.03em;color:#FFFFFF;line-height:1">' + esc(dollars(groupTotal)) + '</div>' +
+              '</div></div>' +
+          '</div>' +
+          '<div style="margin-top:18px;padding-top:10px;border-top:1px solid #E6E1D9;font-size:8pt;line-height:1.5;color:#5A6A7C">Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Call reduction, utilization, and visit-attendance improvements are modeled assumptions for a ' + esc(seg.calc.transferNoun) + ' population. Rates and unit costs are supplied by the user. careorbit.com</div>' +
+        '</div>';
+        document.body.appendChild(holder);
+        document.body.classList.add("co-printing");
+        const cleanup = () => {
+          document.body.classList.remove("co-printing");
+          const h = document.getElementById("print-only");
+          if (h) h.remove();
+          window.removeEventListener("afterprint", cleanup);
+        };
+        window.addEventListener("afterprint", cleanup);
+        this.setState({exportOpen: false});
+        window.print();
+        setTimeout(cleanup, 1500);
+      },
+      practiceLabel: num("volume") ? num("volume").toLocaleString() + " patients a year" : "your program",
+      calcFields, calcResults,
+      fillBenchmarks: () => this.setState({calc: Object.assign({}, benchmarks)}),
+      clearCalc: () => this.setState({calc: {volume: "", utilRate: "", utilCut: "", utilCost: "", calls: "", callCut: "", minutes: "", staffRate: "", noShow: "", noShowCut: "", revPer: ""}}),
+      calcTotal: money(groupTotal),
+      calcTotalNote: num("volume") ? "Across " + num("volume").toLocaleString() + " patients a year" : "Enter your volume to scale the model",
+      showSources: this.state.showSources,
+      sourceCount: sourcesList.length + " references",
+      sourceArrow: this.state.showSources ? "rotate(180deg)" : "rotate(0deg)",
+      sourceLabel: this.state.showSources ? "Hide sources" : "View sources",
+      toggleSources: () => this.setState(st => ({showSources: !st.showSources})),
+      sources: sourcesList,
+      deploy: [
+        {t: "No new FTEs", d: "Nothing added to anyone's day."},
+        {t: "White-label", d: "Your brand, your voice."},
+        {t: "Live in a quarter", d: "From kickoff to first patient."}
+      ],
+      email: this.state.email,
+      onHp: (e) => this.setState({hp: e.target.value}),
+      onEmail: (e) => this.setState({email: e.target.value}),
+      sheetBtn: this.state.sent ? "Downloading your info sheet \u2713" : "Send me the info sheet",
+      requestSheet: () => { if (this.humanOk(this.state.email)) { this.setState({sent: true}); const a = document.createElement("a"); a.href = "sheets/careorbit-womens-health-2-page.pdf"; a.download = "CareOrbit-Womens-Health-Info-Sheet.pdf"; document.body.appendChild(a); a.click(); a.remove(); } }
+    };
+  }
+}
+</script>
+</body>
+</html>

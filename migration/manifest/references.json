@@ -1,0 +1,372 @@
+{
+  "About.dc.html": [
+    "../uploads/1722391799177.jpg",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/headshot-david.png",
+    "images/headshot-jeff.png",
+    "images/headshot-jim.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "AssessPage.dc.html": [
+    "CareOrbit-Assess-Info-Sheet.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/assess-escreening.png",
+    "images/assess-hero-5.png",
+    "motion.js",
+    "sheets/careorbit-assess-2-page.pdf"
+  ],
+  "BariatricsPage.dc.html": [
+    "CareOrbit-Bariatrics-Info-Sheet.pdf",
+    "CareOrbit-Siteman-Study-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/hero-bariatrics.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-bariatrics-2-page.pdf",
+    "value-bariatrics.png"
+  ],
+  "BehavioralHealthPage.dc.html": [
+    "CareOrbit-Behavioral-Health-Info-Sheet.pdf",
+    "CareOrbit-Siteman-Study-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/hero-behavioral-health.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-behavioral-health-2-page.pdf",
+    "value-behavioralhealth.png"
+  ],
+  "BehavioralSafety.dc.html": [
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/offering-behavioral-safety.png",
+    "motion.js",
+    "responsive.css",
+    "safety-toolbox-talk.png"
+  ],
+  "BookACall.dc.html": [
+    "image-slot.js",
+    "motion.js",
+    "responsive.css"
+  ],
+  "CapturePage.dc.html": [
+    "CareOrbit-Capture-Info-Sheet.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/capture-hero-2.png",
+    "motion.js",
+    "sheets/careorbit-capture-2-page.pdf"
+  ],
+  "CardiologyPage v1.dc.html": [
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/hero-cardiology.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "CardiologyPage.dc.html": [
+    "CareOrbit-Cardiology-Info-Sheet.pdf",
+    "CareOrbit-Pritikin-Pilot-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/hero-cardiology.png",
+    "images/value-cardiology-all.png",
+    "images/value-cardiology-hf.png",
+    "images/value-cardiology-procedures.png",
+    "images/value-cardiology-rehab.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-cardiology-2-page.pdf"
+  ],
+  "CommunityResearch v1.dc.html": [
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/research-hero.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "CommunityResearch.dc.html": [
+    "CareOrbit-Community-Research-Info-Sheet.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/research-hero.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-community-research-2-page.pdf",
+    "value-research.png"
+  ],
+  "DataPage.dc.html": [
+    "CareOrbit-Data-Info-Sheet.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/data-hero-1.png",
+    "motion.js",
+    "sheets/careorbit-data-2-page.pdf"
+  ],
+  "EScreeningResults.dc.html": [
+    "CareOrbit-VA-eScreening-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/study-va-escreening.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "EngagePage.dc.html": [
+    "CareOrbit-Engage-Info-Sheet.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/engage-hero-11.png",
+    "motion.js",
+    "sheets/careorbit-engage-2-page.pdf"
+  ],
+  "Home.dc.html": [
+    "arc-lines.svg",
+    "hero-1.png",
+    "hero-2.png",
+    "hero-3.png",
+    "hero-4.png",
+    "hero-7.png",
+    "image-slot.js",
+    "images/case-study-siteman.png",
+    "images/offering-behavioral-safety.png",
+    "images/offering-capture-2.png",
+    "motion.js",
+    "oncology-bell.png",
+    "orbit-phone.png",
+    "outcomes-banner.png",
+    "responsive.css",
+    "tile-bariatrics.png",
+    "tile-behavioral.png",
+    "tile-cardiology.png",
+    "tile-medication.png",
+    "tile-oncology.png",
+    "tile-orthopedics.png",
+    "tile-primarycare.png",
+    "tile-womens.png"
+  ],
+  "Login.dc.html": [
+    "careorbit-logo-nav2.png"
+  ],
+  "MedicationTherapyPage.dc.html": [
+    "CareOrbit-Medication-Therapy-Info-Sheet.pdf",
+    "CareOrbit-Siteman-Study-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/hero-medication-therapy.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-medication-therapy-2-page.pdf",
+    "value-medtherapy.png"
+  ],
+  "OncologyPage-print.html": [
+    "doc-page.js"
+  ],
+  "OncologyPage.dc.html": [
+    "CareOrbit-Oncology-Info-Sheet.pdf",
+    "CareOrbit-Siteman-Study-Report.pdf",
+    "arc-lines.svg",
+    "consult-oncology.png",
+    "image-slot.js",
+    "motion.js",
+    "onc-diagnosis-home.png",
+    "onc-infusion.png",
+    "onc-oral-therapy.png",
+    "onc-recovery.png",
+    "onc-surgical-prep.png",
+    "onc-survivorship.png",
+    "responsive.css",
+    "sheets/careorbit-oncology-2-page.pdf",
+    "value-oncology.png"
+  ],
+  "OrbitPage.dc.html": [
+    "arc-lines.svg",
+    "consult-oncology.png",
+    "image-slot.js",
+    "images/hero-bariatrics.png",
+    "images/hero-behavioral-health.png",
+    "images/hero-cardiology.png",
+    "images/hero-medication-therapy.png",
+    "images/hero-orthopedics.png",
+    "images/hero-surgical-support.png",
+    "images/hero-womens-health.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "OrthopedicsPage-print.html": [
+    "doc-page.js"
+  ],
+  "OrthopedicsPage.dc.html": [
+    "CareOrbit-Orthopedics-Info-Sheet.pdf",
+    "CareOrbit-Siteman-Study-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/hero-orthopedics.png",
+    "images/ortho-day-of.png",
+    "images/ortho-home-recovery.png",
+    "images/ortho-pain.png",
+    "images/ortho-prehab.png",
+    "images/ortho-proms.png",
+    "images/ortho-therapy.png",
+    "images/value-ortho-all.png",
+    "images/value-ortho-joint.png",
+    "images/value-ortho-spine.png",
+    "images/value-ortho-sports.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-orthopedics-2-page.pdf"
+  ],
+  "Outcomes.dc.html": [
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/case-study-siteman.png",
+    "images/how-we-work-bg.png",
+    "images/roi-enrollment.png",
+    "images/roi-missed-appts.png",
+    "images/roi-staff-time.png",
+    "images/roi-vbc.png",
+    "images/study-cardiac-rehab.png",
+    "images/study-va-escreening.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "PAGE-STANDARD.md": [
+    "arc-lines.svg"
+  ],
+  "PancreaticStudy-print.dc.html": [
+    "careorbit-logo-nav2.png"
+  ],
+  "Platform.dc.html": [
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/assess-hero-2.png",
+    "images/capture-hero-2.png",
+    "images/engage-hero-8.png",
+    "images/platform-card-assess-5.png",
+    "images/platform-card-capture-2.png",
+    "images/platform-card-data-2.png",
+    "images/platform-card-engage-3.png",
+    "images/platform-experiences.png",
+    "images/platform-feat-1f.png",
+    "images/platform-feat-2d.png",
+    "images/platform-feat-3b.png",
+    "images/platform-feat-4.png",
+    "images/platform-feat-5b.png",
+    "images/platform-hero-1.png",
+    "images/platform-hero-2.png",
+    "images/platform-hero-3.png",
+    "images/platform-hero-4b.png",
+    "images/platform-statement-2.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "Pricing.dc.html": [
+    "motion.js",
+    "responsive.css"
+  ],
+  "PricingAssess.dc.html": [
+    "motion.js",
+    "responsive.css"
+  ],
+  "PricingCapture.dc.html": [
+    "motion.js",
+    "responsive.css"
+  ],
+  "PricingData.dc.html": [
+    "motion.js",
+    "responsive.css"
+  ],
+  "PrimaryCarePage.dc.html": [
+    "CareOrbit-Primary-Care-Info-Sheet.pdf",
+    "CareOrbit-Siteman-Study-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/primarycare-hero.png",
+    "images/primarycare-value-chronic.png",
+    "images/primarycare-value-prevention.png",
+    "images/primarycare-value-transitions.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-primary-care-2-page.pdf"
+  ],
+  "PrimaryCareSheet-print.dc.html": [
+    "careorbit-logo-nav2.png",
+    "image-slot.js",
+    "images/primarycare-hero.png"
+  ],
+  "PritikinPilot.dc.html": [
+    "CareOrbit-Pritikin-Pilot-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/study-cardiac-rehab.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "PritikinPilotSummaryPDF-print.dc.html": [
+    "careorbit-logo-nav2.png"
+  ],
+  "PritikinPilotSummaryPDF.dc.html": [
+    "careorbit-logo-nav2.png"
+  ],
+  "SiteFooter.dc.html": [
+    "arc-lines.svg",
+    "responsive.css",
+    "sheets/careorbit-platform-2-page.pdf"
+  ],
+  "SiteNav.dc.html": [
+    "careorbit-logo-nav2.png",
+    "responsive.css"
+  ],
+  "SitemanStudy.dc.html": [
+    "CareOrbit-Siteman-Study-Report.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/case-study-siteman.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "SurgicalSupportPage.dc.html": [
+    "CareOrbit-Siteman-Study-Report.pdf",
+    "CareOrbit-Surgical-Support-Info-Sheet.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/hero-surgical-support.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-surgical-support-2-page.pdf",
+    "value-surgical.png"
+  ],
+  "ThankYou.dc.html": [
+    "careorbit-logo-nav2.png",
+    "responsive.css",
+    "sheets/careorbit-platform-2-page.pdf"
+  ],
+  "WomensHealthPage.dc.html": [
+    "CareOrbit-Womens-Health-Info-Sheet.pdf",
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/hero-womens-health.png",
+    "images/value-gyn.png",
+    "images/value-maternity.png",
+    "images/value-midlife.png",
+    "motion.js",
+    "responsive.css",
+    "sheets/careorbit-womens-health-2-page.pdf"
+  ],
+  "archive/Platform-tabs.dc.html": [
+    "arc-lines.svg",
+    "image-slot.js",
+    "images/offering-capture.png",
+    "motion.js",
+    "responsive.css"
+  ],
+  "doc-page.js": [
+    "doc-page.js"
+  ],
+  "support.js": [
+    "parsed.js"
+  ]
+}

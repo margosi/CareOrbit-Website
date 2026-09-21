@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(max-width:1020px){[data-hdr]{grid-template-columns:1fr!important;gap:24px!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+@media(max-width:1020px){[data-capture-grid]{grid-template-columns:1fr!important;gap:36px!important}[data-pillars]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:900px){[data-ppanel]{grid-template-columns:1fr!important;gap:32px!important}}
+@media(max-width:820px){[data-ptabs]{gap:28px!important}[data-ptabs] button span:first-child{font-size:21px!important}}
+@media(max-width:820px){[data-pillars]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:640px){[data-pillars]{grid-template-columns:1fr!important}}
+@media(max-width:900px){[data-edu]{grid-template-columns:1fr!important}}
+@media(max-width:1100px){[data-lowrisk]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:700px){[data-lowrisk]{grid-template-columns:1fr!important}}
+@media(max-width:1020px){[data-two]{grid-template-columns:1fr!important;gap:40px!important}[data-steps]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:620px){[data-steps]{grid-template-columns:1fr!important}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="platform" hint-size="100%,120px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:76px 28px 88px;display:flex;flex-direction:column;gap:22px;align-items:center;text-align:center">
+  <div style="font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#E3735C">Platform</div>
+  <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(40px,5vw,60px);line-height:1.06;letter-spacing:-0.025em;margin:0;max-width:900px;text-wrap:balance">Patient engagement built for the moments that <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">cost</em> systems the most.</h1>
+  <p style="font-size:17.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:760px;text-wrap:pretty">CareOrbit is provider-anchored, with the polish and ease consumers have come to expect from the apps they use every day. Care teams issue journey-specific orbits from inside the workflow they already run; patients receive a guided experience on any device; the system measures everything, from first click to final outcome.</p>
+  <a href="BookACall.dc.html?src=platform" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 30px;border-radius:999px;margin-top:6px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv>
+    <div data-ptabs style="display:flex;gap:44px;flex-wrap:wrap;border-top:1px solid rgba(15,29,46,.12);margin-bottom:28px">
+      <sc-for list="{{ pillarTabs }}" as="p" hint-placeholder-count="4">
+        <button onClick="{{ p.select }}" style="cursor:pointer;background:none;border:none;padding:22px 0 16px;display:flex;align-items:center;gap:10px;border-bottom:3px solid {{ p.underline }};transition:border-color .2s" style-hover="border-bottom-color:{{ p.accent }}">
+          <span style="font-family:Lato,sans-serif;font-weight:900;font-size:27px;letter-spacing:-0.02em;color:{{ p.titleColor }};transition:color .2s">{{ p.t }}</span>
+          <sc-if value="{{ p.isNew }}" hint-placeholder-val="{{ false }}">
+            <span style="display:flex;align-items:center;gap:6px;background:#0F3D2E;border-radius:7px;padding:4px 9px"><span style="width:7px;height:7px;border-radius:50%;background:#5CE8A4"></span><span style="font-size:10px;font-weight:700;letter-spacing:.08em;color:#FFFFFF">NEW</span></span>
+          </sc-if>
+        </button>
+      </sc-for>
+    </div>
+    <div data-ppanel style="display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:start;padding:10px 0 44px;border-bottom:1px solid rgba(15,29,46,.12)">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <h3 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3.2vw,38px);line-height:1.12;letter-spacing:-0.02em;margin:0;text-wrap:balance">{{ apHeadPre }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:{{ apAccent }}">{{ apHeadEm }}</em>{{ apHeadPost }}</h3>
+        <p style="font-size:15.5px;line-height:1.68;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">{{ apDesc }}</p>
+        <p style="font-size:15.5px;line-height:1.68;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">{{ apDeep }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:8px">
+          <sc-for list="{{ apNext }}" as="nx" hint-placeholder-count="2">
+            <a href="{{ nx.href }}" style="text-decoration:none;font-size:13.5px;font-weight:600;color:#0F1D2E;border:1px solid rgba(15,29,46,.18);padding:11px 18px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;transition:border-color .2s,color .2s,background .2s" style-hover="border-color:#E3735C;color:#E3735C">{{ nx.label }} <span style="font-size:15px;line-height:1">&#8594;</span></a>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column">
+        <sc-for list="{{ apCaps }}" as="c" hint-placeholder-count="4">
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(15,29,46,.12)">
+            <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:16.5px;color:{{ apAccent }};min-width:28px;flex-shrink:0;padding-top:1px">{{ c.n }}</div>
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16.5px;line-height:1.3">{{ c.t }}</div>
+              <div style="font-size:13.5px;line-height:1.6;color:rgba(15,29,46,.68);text-wrap:pretty">{{ c.d }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <sc-for list="{{ apRows }}" as="row" hint-placeholder-count="1">
+      <div data-hdr style="display:grid;grid-template-columns:.62fr 1fr;gap:56px;align-items:start;padding:36px 0 10px;border-bottom:1px solid rgba(15,29,46,.12)">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:{{ row.label }}">{{ row.kicker }}</div>
+          <h3 style="font-family:Lato,sans-serif;font-weight:900;font-size:23px;line-height:1.2;letter-spacing:-0.015em;margin:0;max-width:380px;text-wrap:balance">{{ row.t }}</h3>
+          <sc-if value="{{ row.sub }}" hint-placeholder-val="{{ false }}">
+            <p style="font-size:14px;line-height:1.6;color:rgba(15,29,46,.6);margin:0;max-width:330px;text-wrap:pretty">{{ row.sub }}</p>
+          </sc-if>
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <sc-for list="{{ row.items }}" as="it" hint-placeholder-count="3">
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-top:1px solid rgba(15,29,46,.12)">
+              <div style="width:9px;height:1.5px;background:{{ row.dot }};flex-shrink:0;margin-top:11px"></div>
+              <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.68);text-wrap:pretty"><strong style="color:#0F1D2E;font-weight:600">{{ it.t }}</strong> {{ it.d }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:72px 64px">
+    <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:44px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(32px,4vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0;color:#FFFFFF">Low risk, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#F2B8C6">by design</em>.</h2>
+      <p style="font-size:20px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">You are already listing the issues you would have to navigate to say yes. Here is where each one lands.</p>
+    </div>
+    <div data-lowrisk style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+      <sc-for list="{{ lowRisk }}" as="r" hint-placeholder-count="4">
+        <div style="border-top:2px solid #E3735C;padding-top:20px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:18px;line-height:1.3;letter-spacing:-0.01em;color:#FFFFFF">{{ r.t }}</div>
+          <div style="font-size:13.5px;line-height:1.62;color:#B9C8D8;text-wrap:pretty">{{ r.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div id="ehr" style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:40px;padding:64px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">The EHR workflow</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:33px;line-height:1.12;letter-spacing:-0.02em;margin:0;text-wrap:pretty">In leading EHRs like Epic, an orbit is ordered the same way as <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">bloodwork</em>.</h2>
+      <p style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;text-wrap:pretty">Staff place an order for an orbit like any other order. The patient receives their journey by email; the care team sees activation, engagement, and assessment results come back on their dashboard. No new system to learn, no separate login for clinicians.</p>
+      <p style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;text-wrap:pretty">For teams outside that workflow, orbits issue from a provided patient list, a QR code, a text message, or on-site registration. A flat-file integration pattern is also available for auto-issuing orbits to pre-consented patients.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="background:#FAF8F4;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#B0A99E">Order entry</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border-radius:12px;padding:12px 14px"><div style="font-size:13px;color:#5A7089;flex:1">CBC with differential</div><div style="font-size:11px;color:#B0A99E">Lab</div></div>
+          <div style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border-radius:12px;padding:12px 14px"><div style="font-size:13px;color:#5A7089;flex:1">Basic metabolic panel</div><div style="font-size:11px;color:#B0A99E">Lab</div></div>
+          <div style="display:flex;align-items:center;gap:10px;background:#FFFFFF;border:1.5px solid #E3735C;border-radius:12px;padding:12px 14px"><div style="font-size:13px;font-weight:600;flex:1">CareOrbit: ENT Surgery Support</div><div style="font-size:11px;font-weight:600;color:#E3735C">Education</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:4px"><div style="width:22px;height:22px;border-radius:50%;background:#1A6B3C;color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center">&#10003;</div><div style="font-size:12.5px;color:#1A6B3C;font-weight:600">Order signed. Orbit issued to patient's email.</div></div>
+      </div>
+      <div style="height:180px"><image-slot id="platform-ehr-shot" radius="24" placeholder="PHI-free workflow screenshot" style="width:100%;height:180px"></image-slot></div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv data-two style="display:grid;grid-template-columns:1fr 1fr;gap:64px;border-top:1px solid rgba(15,29,46,.12);padding-top:40px">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#A8412F">Implementation</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:30px;line-height:1.15;letter-spacing:-0.02em;margin:0">What happens after you say yes.</h2>
+      <sc-for list="{{ impl }}" as="i" hint-placeholder-count="4">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:16px;color:#E3735C;background:#FAF8F4;border-radius:999px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex-shrink:0">{{ i.n }}</div>
+          <div><div style="font-size:15.5px;font-weight:600">{{ i.t }}</div><div style="font-size:14px;line-height:1.55;color:rgba(15,29,46,.68)">{{ i.d }}</div></div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F6B73">Blueprints &amp; customization</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:30px;line-height:1.15;letter-spacing:-0.02em;margin:0">Proven blueprints, customized at the level you choose.</h2>
+      <p style="font-size:15px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;text-wrap:pretty">Every orbit starts from a proven use case, then tailors to your journey, content, and workflow at one of three levels.</p>
+      <sc-for list="{{ levels }}" as="lv" hint-placeholder-count="3">
+        <div style="border-top:1px solid rgba(15,29,46,.12);padding:16px 0 2px;display:flex;gap:16px;align-items:baseline">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16.5px;color:#1E3A5F;width:88px;flex-shrink:0">{{ lv.t }}</div>
+          <div style="font-size:14px;line-height:1.55;color:rgba(15,29,46,.68)">{{ lv.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:48px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(34px,4vw,48px);line-height:1.08;letter-spacing:-0.02em;margin:0;max-width:520px">Your first orbit, in <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">five</em> steps.</h2>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">Within a quarter. No new FTEs. White-label, in your brand and voice, without disrupting the workflow you already run.</p>
+  </div>
+  <div data-rv data-steps style="display:grid;grid-template-columns:repeat(5,1fr);gap:28px;border-top:1px solid rgba(15,29,46,.12);padding-top:30px">
+    <sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:30px;height:30px;border-radius:50%;border:1.5px solid #4FB3BF;color:#1F6B73;font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:13.5px;display:flex;align-items:center;justify-content:center;flex-shrink:0">{{ st.n }}</div>
+          <sc-if value="{{ st.line }}" hint-placeholder-val="{{ true }}">
+            <div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(79,179,191,.6),rgba(79,179,191,.12))"></div>
+          </sc-if>
+        </div>
+        <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16.5px;line-height:1.25;letter-spacing:-0.01em">{{ st.t }}</div>
+        <div style="font-size:13.5px;line-height:1.55;color:rgba(15,29,46,.66);text-wrap:pretty">{{ st.d }}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:36px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Today's tools</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Patient education today is neither <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">persistent nor trackable</em>.</h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">Every health system already educates its patients well. That education just stops at the door. The platform replaces none of it, it carries it into the weeks between visits and reports back on what was actually used.</p>
+  </div>
+  <div data-rv data-edu style="display:grid;grid-template-columns:1fr 1fr;gap:0 56px;border-top:1px solid rgba(15,29,46,.12)">
+    <sc-for list="{{ eduToday }}" as="b" hint-placeholder-count="8">
+      <div style="display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid rgba(15,29,46,.12)">
+        <div style="width:9px;height:1.5px;background:#4FB3BF;flex-shrink:0;margin-top:11px"></div>
+        <div style="display:flex;flex-direction:column;gap:3px">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:17px;line-height:1.3">{{ b.t }}</div>
+          <div style="font-size:14.5px;line-height:1.55;color:rgba(15,29,46,.66);text-wrap:pretty">{{ b.d }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div id="capture" style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:40px;padding:56px 52px;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center" data-capture-grid>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="display:flex;align-items:center;gap:8px;background:#0F3D2E;border-radius:8px;padding:7px 13px"><span style="width:8px;height:8px;border-radius:50%;background:#5CE8A4"></span><span style="font-size:11.5px;font-weight:700;letter-spacing:.08em;color:#FFFFFF">NEW CAPABILITY</span></span>
+      </div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(30px,3.6vw,42px);line-height:1.08;letter-spacing:-0.02em;margin:0;text-wrap:balance">CareOrbit <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">Capture</em>: the content layer underneath every orbit.</h2>
+      <p style="font-size:16.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">Your system already owns good material. Capture intakes what you have, organizes and versions it, and distributes it digitally to patients, providers, and care teams. It runs on its own or feeds the orbits above.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px">
+        <sc-for list="{{ capture }}" as="c" hint-placeholder-count="4">
+          <div style="display:flex;gap:11px;align-items:flex-start">
+            <div style="width:8px;height:8px;border-radius:50%;background:{{ c.accent }};margin-top:6px;flex-shrink:0"></div>
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <div style="font-family:Lato,sans-serif;font-weight:900;font-size:15.5px">{{ c.t }}</div>
+              <div style="font-size:13.5px;line-height:1.55;color:rgba(15,29,46,.68)">{{ c.d }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <a href="Capture.dc.html" style="align-self:flex-start;text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:15px 28px;border-radius:999px;margin-top:8px;transition:background .2s,transform .2s" style-hover="background:#E3735C;transform:translateY(-2px)">Explore Capture</a>
+    </div>
+    <div style="height:400px;border-radius:28px;overflow:hidden"><image-slot id="platform-capture" radius="28" src="images/offering-capture.png" placeholder="[Placeholder: Capture product screenshot]" style="width:100%;height:100%"></image-slot></div>
+  </div>
+</div>
+
+<div id="security" style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px;display:flex;flex-direction:column;gap:28px">
+    <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:36px;letter-spacing:-0.02em;line-height:1.1;margin:0;color:#FFFFFF">Security &amp; compliance</h2>
+      <div style="font-size:17px;line-height:1.6;color:#B9C8D8">Send this section straight to your compliance team: <span style="color:#F2B8C6">this page anchors here</span>.</div>
+    </div>
+    <div data-pillars style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px">
+      <sc-for list="{{ security }}" as="s" hint-placeholder-count="6">
+        <div style="border-top:1px solid #2D5A87;padding-top:18px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:14.5px;font-weight:600;color:#FFFFFF">{{ s.t }}</div>
+          <div style="font-size:13px;line-height:1.55;color:#8CA0B3">{{ s.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:40px;padding:72px 64px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
+    <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(32px,4vw,44px);line-height:1.08;letter-spacing:-0.02em;margin:0;text-wrap:balance">Bring it to your committee with <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">confidence</em>.</h2>
+    <p style="font-size:16px;line-height:1.6;color:rgba(15,29,46,.7);margin:0;max-width:600px;text-wrap:pretty">20 minutes: we map your improvement goals against a proven blueprint and show you exactly what an orbit would target for you.</p>
+    <a href="BookACall.dc.html?src=platform" style="text-decoration:none;font-size:16px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:17px 32px;border-radius:999px;margin-top:6px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const PILLARS = [
+  {t: "Engage", accent: "#E3735C", tag: "Guided journeys between visits",
+   headPre: "The journey patients", headEm: "actually follow", headPost: ".",
+   d: "Care-team-approved digital journeys that carry your education, reminders, and next steps to patients and families in the weeks between visits.",
+   deep: "The care team issuing an orbit is just one of many ways orbits reach patients. However it arrives, each orbit carries the patient step by step from diagnosis through recovery, alongside the discharge folder and the follow-up call, never in place of them.",
+   caps: [
+     {t: "Opens anywhere, no new app or login", d: "Patients open their orbit from email, text, or a QR code, on any device they already own."},
+     {t: "The right guidance at the right moment", d: "Topics sequenced to the clinical pathway, so education arrives when it actually matters."},
+     {t: "The whole circle around the patient", d: "A caregiver version travels alongside the patient's, in your brand and voice."},
+     {t: "Your team sees who needs a nudge", d: "Engagement is tracked at every step, so staff time goes to the patients who are drifting."}
+   ],
+   next: [
+     {label: "Find the orbit for your service line", href: "Home.dc.html#orbit-grid"},
+     {label: "How an orbit is issued", href: "#ehr"}
+   ],
+   rows: [
+     {kicker: "Inside an orbit", label: "#A8412F", dot: "#E3735C", t: "What the patient actually receives", items: [
+       {t: "Active, engaging pages.", d: "Interactive journey content patients complete, not a PDF gallery."},
+       {t: "Touchpoints between visits.", d: "Email and text check-ins that keep the journey moving, in your voice."},
+       {t: "Assessments woven in.", d: "Quick check-ins and validated measures inside the journey, when you want them."},
+       {t: "Nothing replaced.", d: "The orbit travels alongside the discharge folder and the follow-up call, never instead of them."}
+     ]},
+     {kicker: "How orbits reach patients", label: "#1F6B73", dot: "#4FB3BF", t: "Issued from the workflow you already run", items: [
+       {t: "An EHR order, like bloodwork.", d: "In leading EHRs like Epic, staff place an order and the orbit goes out. Detail further down this page."},
+       {t: "A patient list or flat file.", d: "Auto-issue on a schedule to pre-consented patients from any EHR."},
+       {t: "A QR code or a text.", d: "On-site registration and outreach for teams working outside the EHR."}
+     ]}
+   ]},
+  {t: "Assess", accent: "#2D5A87", tag: "PROMs, eScreenings, outcomes capture",
+   headPre: "Collection that happens", headEm: "inside the journey", headPost: ".",
+   d: "PROMs, eScreenings, and outcomes capture woven into the journey patients are already following, tied to your care pathways and quality programs.",
+   deep: "Because assessments arrive inside the guidance patients are already using, collection happens without a separate ask, a mailed survey, or another portal login. Your team gets the numbers your quality and value-based programs need, and an early read on the patients behind them.",
+   caps: [
+     {t: "Collection without a separate ask", d: "Measures embedded in a journey patients already engage with, so completion does not depend on chasing."},
+     {t: "Validated measures on schedule", d: "PROMs and eScreenings at protocol intervals, mapped to your quality and value-based programs."},
+     {t: "Rising risk surfaced early", d: "Quick check-ins flag the patients who need a call before the next visit does."},
+     {t: "Results land in your workflow", d: "Scores return to the care-team dashboard, not to a separate system anyone has to remember to open."}
+   ],
+   next: [
+     {label: "PROMs in orthopedics", href: "OrthopedicsPage.dc.html"},
+     {label: "Check-ins in cardiology", href: "CardiologyPage.dc.html"}
+   ],
+   rows: [
+     {kicker: "Standalone or combined", label: "#A8412F", dot: "#E3735C", t: "Runs with an orbit, or entirely without one",
+      sub: "Assess is its own product. An orbit makes it richer; it never requires one.", items: [
+       {t: "Screenings on their own.", d: "Run eScreening and PROMs programs with no accompanying orbit, issued the same easy ways: an order, a list, a QR code, or a text."},
+       {t: "Billing opportunities.", d: "Structured screenings can support CPT-coded services your clinicians already perform and document."},
+       {t: "Together when the need dictates.", d: "Place assessments inside an orbit and collection becomes part of the guidance patients are already following, a more compelling experience for both sides."}
+     ]}
+   ]},
+  {t: "Capture", isNew: true, accent: "#4FB3BF", tag: "Your content, organized and delivered",
+   headPre: "Your content,", headEm: "one canonical version", headPost: ", everywhere.",
+   d: "The content layer underneath every orbit: it takes in the material your system already owns and delivers one current version everywhere it is needed.",
+   deep: "Most systems do not have a content problem, they have a version problem: good material scattered across drives, binders, and the EMR, with no way to know which copy is current or whether anyone used it. Capture fixes that. It runs on its own or feeds the orbits above.",
+   caps: [
+     {t: "Intake what you already own", d: "Documents, handouts, protocols, and video, in whatever format they live in today."},
+     {t: "One canonical version", d: "Structured, versioned, and updated everywhere at once when a protocol changes."},
+     {t: "Delivered where patients are", d: "Orbits, QR codes, text, and email, on any device without a portal login."},
+     {t: "Proof of what was used", d: "Views, completion, and engagement by audience and content item."}
+   ],
+   next: [
+     {label: "Explore Capture", href: "Capture.dc.html"},
+     {label: "Capture on this page", href: "#capture"}
+   ],
+   rows: [
+     {kicker: "Alone or underneath", label: "#A8412F", dot: "#E3735C", t: "A content layer that stands on its own", items: [
+       {t: "Standalone.", d: "Departments run Capture as their content operation with no orbit attached."},
+       {t: "Underneath every orbit.", d: "The same canonical content feeds the guided journeys in Engage."},
+       {t: "Ready to grow.", d: "Start with Capture today and add guided journeys later without redoing the work."}
+     ]}
+   ]},
+  {t: "Data", accent: "#1E3A5F", tag: "Dashboards and the Engagement Index",
+   headPre: "Measured from", headEm: "first click to final outcome", headPost: ".",
+   d: "Dashboards that make engagement, adherence, and outcomes measurable and defensible, from the individual patient up to the program.",
+   deep: "Every orbit reports from first click to final outcome: activation, engagement, adherence, and assessment results. What you measure from day one is what you defend at committee, and what turns a pilot into a program.",
+   caps: [
+     {t: "An Engagement Index for every patient", d: "One at-a-glance score across knowledge, feeling, and actions, flagging topics not yet engaged or past due."},
+     {t: "Rollups your executives can read", d: "Care-team dashboards and program-level views, from activation through outcomes."},
+     {t: "Committee-ready in one click", d: "Any dashboard view exports for your committee or quality program."},
+     {t: "Minimal PHI by design", d: "First name, last name, email, phone, and diagnosis only; details in the compliance block below."}
+   ],
+   next: [
+     {label: "Security and compliance", href: "#security"},
+     {label: "Book a 20-minute intro call", href: "BookACall.dc.html?src=platform"}
+   ],
+   rows: [
+     {kicker: "At committee", label: "#A8412F", dot: "#E3735C", t: "The questions the dashboard answers", items: [
+       {t: "Did patients activate?", d: "Activation and first engagement, by service line and cohort."},
+       {t: "Who is drifting?", d: "The Engagement Index flags patients with topics untouched or past due."},
+       {t: "Are the measures coming back?", d: "Assessment completion and scores at each protocol interval."},
+       {t: "What changed?", d: "Engagement and outcome trends over the life of the program, exportable in one click."}
+     ]}
+   ]}
+];
+class Component extends DCLogic {
+  state = { pt: 0 };
+  renderVals() {
+    const pt = this.state.pt;
+    const ap = PILLARS[pt];
+    return {
+      pillarTabs: PILLARS.map((p, i) => ({
+        t: p.t, accent: p.accent, tag: p.tag, isNew: !!p.isNew,
+        select: () => this.setState({pt: i}),
+        underline: i === pt ? p.accent : "transparent",
+        titleColor: i === pt ? "#0F1D2E" : "rgba(15,29,46,.38)"
+      })),
+      apTitle: ap.t, apAccent: ap.accent, apDesc: ap.d, apDeep: ap.deep, apCaps: ap.caps.map((c, i) => ({...c, n: "0" + (i + 1)})), apNext: ap.next, apRows: ap.rows || [],
+      apHeadPre: ap.headPre, apHeadEm: ap.headEm, apHeadPost: ap.headPost,
+      lowRisk: [
+        {t: "Limited risk", d: "No lock-in, no disruptions to your offices. A simple proposal you can say yes or no to; start with one orbit, one outcome."},
+        {t: "Light lift for your staff", d: "No new FTEs. You share the content and brand assets you already have; we assemble the orbit; you review and launch. Most of the work is assembly, not creation."},
+        {t: "Secure from the start", d: "HIPAA-compliant, BAA-ready, minimal PHI, hosted on AWS. Full details in the compliance block below."},
+        {t: "Built to match your system", d: "White-labeled in your brand and voice, built on your content, ROI goals, and care standards. Works with your EHR and whichever issuing method fits your workflow."}
+      ],
+      impl: [
+        {n: "1", t: "Kickoff with the Launch Book", d: "A walkthrough with the care team and everyone who will use the orbit."},
+        {n: "2", t: "Assigned Customer Success Manager", d: "Training and ongoing follow-up for each care team."},
+        {n: "3", t: "100% remote delivery available", d: "No on-site requirement for customers outside St. Louis."},
+        {n: "4", t: "Live within a quarter", d: "From kickoff to patients receiving their first orbit."}
+      ],
+      steps: [
+        {n: "01", t: "Map your goals", d: "Your improvement goals, mapped onto a proven blueprint."},
+        {n: "02", t: "Choose your level", d: "Low, Medium, or Full customization: your call."},
+        {n: "03", t: "We ingest your resources", d: "The content and brand assets you already have."},
+        {n: "04", t: "Enhance where needed", d: "We fill the gaps; most of the work is assembly, not creation."},
+        {n: "05", t: "Launch and track", d: "Live to patients, measured from day one."}
+      ].map((s, i, a) => ({...s, line: i < a.length - 1})),
+      levels: [
+        {t: "Low", d: "Minimal changes to an existing blueprint."},
+        {t: "Medium", d: "Moderate tailoring to your journey, content, and workflow."},
+        {t: "Full", d: "A fully custom build for your specific needs."}
+      ],
+      eduToday: [
+        {t: "Paper handouts", d: "Printed once, misplaced within weeks, and out of date the moment a protocol changes."},
+        {t: "Verbal instructions at discharge", d: "Given at the end of a long visit, often with no one else there to hear them."},
+        {t: "Generic EMR discharge material", d: "Auto-generated, rarely updated, and written for the chart rather than the patient."},
+        {t: "Patient portal messages", d: "One more login to set up, on a channel most patients never open between visits."},
+        {t: "\"Call us if you need anything\"", d: "Asks the patient to recognize what is abnormal, and your staff to be available when they do."},
+        {t: "One-time in-person teaching", d: "Equipment, wound care, or device technique shown once, with nothing to look back at that night."},
+        {t: "Printed home programs", d: "No week-by-week sequence, no reminders, and no way to tell whether any of it was done."},
+        {t: "Manual staff outreach", d: "Experienced staff spending their week on phone tag instead of on the patients who need them."}
+      ],
+      capture: [
+        {t: "Intake", d: "Documents, handouts, protocols, and video in whatever format they live in today.", accent: "#E3735C"},
+        {t: "Organize", d: "Structured, versioned, and tied to the right journey and moment.", accent: "#5B9BEA"},
+        {t: "Distribute", d: "Orbits, QR codes, text, and email, on any device without a portal login.", accent: "#4FB3BF"},
+        {t: "Measure", d: "Views, completion, and engagement by audience and content item.", accent: "#F2B8C6"}
+      ],
+      security: [
+        {t: "HIPAA-compliant", d: "Compliant infrastructure and processes end to end."},
+        {t: "BAA-ready", d: "Business Associate Agreements in place, including with AWS."},
+        {t: "Hosted on AWS", d: "HIPAA-compliant AWS hosting."},
+        {t: "Minimal PHI", d: "First name, last name, email, phone, and diagnosis only."},
+        {t: "Never leaves CareOrbit", d: "PHI is never transmitted outside the platform."},
+        {t: "Deleted on request", d: "Retained only as long as you ask; removed on formal request."}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

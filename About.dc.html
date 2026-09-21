@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FFFFFF}a{color:#2D5A87}a:hover{color:#E3735C}</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FFFFFF">
+<dc-import name="SiteNav" active="about" hint-size="100%,110px"></dc-import>
+
+<div style="background:#F3F6FA">
+  <div style="max-width:1180px;margin:0 auto;padding:80px 28px;display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+    <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">About</div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:700;font-size:48px;line-height:1.1;letter-spacing:-0.015em;margin:0;max-width:800px;text-wrap:pretty">Ten years building patient engagement that hospitals can actually run.</h1>
+    <p style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:720px;text-wrap:pretty">CareOrbit is a Digital Patient Engagement Platform designed to support any patient care journey through education, understanding, motivation, and insight-driven improvement. We are a Total Orbit company, built in St. Louis, shaped by more than a decade of work alongside Washington University, Siteman Cancer Center, and BJC HealthCare.</p>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:88px 28px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px;flex-wrap:wrap;margin-bottom:40px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:38px;line-height:1.12;margin:0">Leadership</h2>
+    <p style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:380px;text-align:right;text-wrap:pretty">Lean, senior, and hands-on with every client. The people you meet on the first call are the people who build your orbit.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+    <sc-for list="{{ team }}" as="p" hint-placeholder-count="3">
+      <div style="background:#F3F6FA;border-radius:26px;padding:32px 30px;display:flex;flex-direction:column;gap:14px">
+        <div style="width:88px;height:88px;border-radius:50%;background:#EAF1F8;display:flex;align-items:center;justify-content:center;font-family:Lato,sans-serif;font-weight:700;font-size:26px;color:#2D5A87">{{ p.initials }}</div>
+        <div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:21px;color:#0F1D2E">{{ p.name }}</div>
+          <div style="font-size:13.5px;font-weight:600;color:#E3735C">{{ p.role }}</div>
+        </div>
+        <div style="font-size:14px;line-height:1.6;color:rgba(15,29,46,.68)">{{ p.bio }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="font-size:12.5px;color:#8CA0B3;margin-top:16px">[Placeholder: 3&ndash;4 sentence bios and real headshots]</div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 28px 96px">
+  <div style="background:#EAF1F8;border-radius:32px;padding:56px 64px;display:grid;grid-template-columns:1fr 1fr;gap:56px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:30px;line-height:1.15;margin:0">How we work</h2>
+      <p style="font-size:15.5px;line-height:1.7;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">We have been at this for more than ten years, and we still run lean by choice. No layers between you and the people doing the work: the team that scopes your orbit builds it, launches it, and sits in your quarterly reviews.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+        <div style="display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border-radius:16px;padding:16px 20px">
+          <div style="width:8px;height:8px;border-radius:50%;background:#E3735C;margin-top:7px;flex-shrink:0"></div>
+          <div style="font-size:14.5px;line-height:1.55;color:#0F1D2E;font-weight:500">{{ f }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 28px 96px">
+  <div style="background:#0F1D2E;border-radius:32px;padding:64px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
+    <h2 style="font-family:Lato,sans-serif;font-weight:700;font-size:38px;line-height:1.1;margin:0;color:#FFFFFF">Put a face to the platform.</h2>
+    <p style="font-size:16px;line-height:1.6;color:#B9C8D8;margin:0;max-width:520px">20 minutes with the people who will actually build your orbit.</p>
+    <a href="BookACall.dc.html" style="text-decoration:none;font-size:16px;font-weight:600;color:#FFFFFF;background:#E3735C;padding:16px 32px;border-radius:999px;margin-top:6px" style-hover="background:#D3644E;color:#FFFFFF">Book a 20-minute intro call</a>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      team: [
+        {name: "Michael Margraf", role: "CEO", initials: "MM", bio: "[Placeholder bio: sales, operations, and every client relationship, personally.]"},
+        {name: "Jeff Coburn", role: "Co-founder", initials: "JC", bio: "[Placeholder bio: heads the engagement side of the company.]"},
+        {name: "Jim Peck", role: "Head of Development", initials: "JP", bio: "[Placeholder bio: leads the development team behind the platform.]"}
+      ],
+      facts: [
+        "10+ years building patient engagement",
+        "St. Louis roots; WashU, Siteman, and BJC relationships",
+        "Live within large, complex health systems",
+        "A Customer Success Manager on every care team"
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

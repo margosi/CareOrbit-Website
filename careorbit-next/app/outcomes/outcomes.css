@@ -1,0 +1,96 @@
+/* Outcomes page rules, ported verbatim from Outcomes.dc.html's
+ * <helmet><style> block. No style-substring selectors here - the author
+ * already used data attributes. */
+
+@media (max-width: 1020px) {
+  [data-hdr] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+/* Desktop only: same :has() header reflow used on Platform. */
+@media (min-width: 1021px) {
+  [data-hdr] > div:first-child:has(> h2) {
+    display: contents !important;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) > div:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 12px;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) > h2 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) + * {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  [data-hdr]:has(> div:first-child > h2) {
+    row-gap: 0 !important;
+  }
+}
+
+/* CASCADE NOTE - this differs from the page's own stylesheet on purpose.
+ *
+ * Outcomes.dc.html declares `[data-grid3] { grid-template-columns: 1fr }`
+ * at <=1020px, but that rule NEVER TOOK EFFECT on the legacy site: the
+ * global responsive.css rule
+ *     div[style*="grid-template-columns: repeat(3, 1fr)"]
+ * also applied at <=1020px and, being later in the cascade there, won with
+ * repeat(2, 1fr). Measured on the live site at 768px: 347px 347px, i.e. two
+ * columns, not one.
+ *
+ * Next orders page CSS after global CSS, which reversed that and produced a
+ * single column - 476px too tall at 768px. What is encoded here is the
+ * legacy's EFFECTIVE behaviour: two columns to 1020px, one below 640px.
+ *
+ * [data-grid2] and [data-split] are unaffected: they are `1fr 1fr`, which
+ * both the global rule and the page rule collapse to 1fr.
+ */
+@media (max-width: 1020px) {
+  [data-grid3] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  [data-grid2] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-split] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-grid3] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* The how-we-work strip uses left borders between columns; when it wraps to
+ * two-up each cell also needs a top border so the grid still reads as a
+ * grid. Verbatim from the original. */
+@media (max-width: 1100px) {
+  [data-how4] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  [data-how4] > div {
+    border-top: 1px solid rgba(15, 29, 46, 0.14);
+  }
+}
+
+@media (max-width: 640px) {
+  [data-how4] {
+    grid-template-columns: 1fr !important;
+  }
+}

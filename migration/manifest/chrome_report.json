@@ -1,0 +1,206 @@
+{
+  "pixel": [
+    {
+      "element": "nav",
+      "width": 1440,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "announce",
+      "width": 1440,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "footer",
+      "width": 1440,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "nav",
+      "width": 1280,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "announce",
+      "width": 1280,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "footer",
+      "width": 1280,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "nav",
+      "width": 1024,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "announce",
+      "width": 1024,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "footer",
+      "width": 1024,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "nav",
+      "width": 768,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "announce",
+      "width": 768,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "footer",
+      "width": 768,
+      "delta_pct": 3.1511,
+      "verdict": "EXPECTED-DEVIATION",
+      "expected_deviation": "Footer grid collapses to 2 columns under 900px. v2-maven kept five columns at every width; below ~900px its link columns shrank to ~7px and overlapped. Approved improvement."
+    },
+    {
+      "element": "nav",
+      "width": 390,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "announce",
+      "width": 390,
+      "delta_pct": 0.0,
+      "verdict": "PASS",
+      "expected_deviation": null
+    },
+    {
+      "element": "footer",
+      "width": 390,
+      "delta_pct": 5.1045,
+      "verdict": "EXPECTED-DEVIATION",
+      "expected_deviation": "Footer grid collapses to 1 column under 640px. v2-maven rendered 7.125px-wide columns here with overlapping text. Approved improvement."
+    }
+  ],
+  "interaction": [
+    {
+      "test": "nav visible at rest",
+      "pass": true,
+      "detail": "opacity=1.0"
+    },
+    {
+      "test": "announcement height measured into --ann-off",
+      "pass": true,
+      "detail": "annH=46px navTop=46px"
+    },
+    {
+      "test": "hides on scroll down past 80px",
+      "pass": true,
+      "detail": "opacity=0.0"
+    },
+    {
+      "test": "reappears on scroll up",
+      "pass": true,
+      "detail": "opacity=1.0"
+    },
+    {
+      "test": "resets below 80px",
+      "pass": true,
+      "detail": "transform=none"
+    },
+    {
+      "test": "orbit dropdown opens with 11 links",
+      "pass": true,
+      "detail": "found=11"
+    },
+    {
+      "test": "orbit dropdown shows 4 product links",
+      "pass": true,
+      "detail": "found=4"
+    },
+    {
+      "test": "orbit dropdown closes on mouse out",
+      "pass": true,
+      "detail": "found=0"
+    },
+    {
+      "test": "pricing dropdown adds 4 links",
+      "pass": true,
+      "detail": "closed=1 open=5"
+    },
+    {
+      "test": "pricing dropdown closes on mouse out",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "announcement dismiss removes the bar",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "test": "nav offset returns to 0 after dismiss",
+      "pass": true,
+      "detail": "navTop=0px"
+    },
+    {
+      "test": "desktop links hidden at 390px",
+      "pass": true,
+      "detail": "display=none"
+    },
+    {
+      "test": "mobile bar shown at 390px",
+      "pass": true,
+      "detail": "display=flex"
+    },
+    {
+      "test": "nav bar collapses to 64px",
+      "pass": true,
+      "detail": "height=64"
+    },
+    {
+      "test": "mobile drawer opens with 11 orbit links",
+      "pass": true,
+      "detail": "found=11"
+    },
+    {
+      "test": "mobile drawer lists 4 product links",
+      "pass": true,
+      "detail": "found=4"
+    },
+    {
+      "test": "menu button reports expanded",
+      "pass": true,
+      "detail": "aria-expanded=true"
+    },
+    {
+      "test": "mobile drawer closes",
+      "pass": true,
+      "detail": "drawers=0"
+    }
+  ]
+}

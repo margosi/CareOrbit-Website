@@ -1,0 +1,42 @@
+{
+  "154249713db2b2686763b42ab45df5454fa9b0e957cd94fa3d059efbe9d8bfff": [
+    "tile-primarycare.png",
+    "images/primarycare-hero.png"
+  ],
+  "47e5bb2a3821a897b906fdf3ff1c76660a473dbe88828ef9eaafef16121dbb55": [
+    "images/engage-hero-9.png",
+    "images/platform-card-engage-2.png"
+  ],
+  "516f0858e26c1053edac690c45aa75b15b987e6aae80c0890ce0f3491c29e8fa": [
+    "images/engage-hero-10.png",
+    "images/platform-feat-5b.png"
+  ],
+  "52f3590ea732e4998da2c0af7ef3e8774219d1a408d38143d9ede8da9394feb6": [
+    "images/assess-hero-4.png",
+    "images/platform-card-assess-3.png"
+  ],
+  "6a59e391271bbb04e419e84687f038b3f151cc9e3c50371d3c7a420fe5fb8894": [
+    "images/platform-card-assess-5.png",
+    "images/platform-card-engage-4.png"
+  ],
+  "77143c134fff3ed840d55df9a71295b8a3d34d46fd91703b039e8ed03ba80874": [
+    "images/capture-content-1.png",
+    "images/data-hero-1.png"
+  ],
+  "9d547ca94f63dd255dc0e3eea1bd0ab1348e67732d0c2fa61a31d07ba87a76bd": [
+    "images/capture-hero-2.png",
+    "images/offering-capture-2.png"
+  ],
+  "cdd71a58b0d706256ed884e14391faa151cb0ba86c6e596641d73d4fa71edd60": [
+    "images/unified-experience-2.png",
+    "images/unified-experience-5.png"
+  ],
+  "f3739b331582f0bbe450209fb6926d2289005a8aa6749144c5c31a2ef00ad321": [
+    "images/platform-hero-4.png",
+    "images/platform-hero-4b.png"
+  ],
+  "fb41a1efbef06553eb3188f150dd4d063ecef743add7f56f8c0e744222b524fb": [
+    "case-study-surgery.png",
+    "tile-procedures.png"
+  ]
+}

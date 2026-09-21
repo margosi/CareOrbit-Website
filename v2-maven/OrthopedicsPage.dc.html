@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@keyframes coFloat{from{transform:translateY(-7px)}to{transform:translateY(9px)}}
+@media(max-width:1020px){[data-hdr],[data-hero-grid],[data-split]{grid-template-columns:1fr!important;gap:32px!important}[data-feature]{grid-template-columns:1fr!important;gap:24px!important}[data-feature]>*{grid-column:1/-1!important}[data-quad]{grid-template-columns:repeat(2,minmax(0,1fr))!important}[data-deploy]{grid-template-columns:1fr 1fr!important;gap:22px!important}[data-stats]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important}}
+@media(min-width:1021px){[data-featnav]>div:first-child a{border-bottom-color:transparent!important}}
+@media(max-width:760px){#roi-calculator [data-hdr]{padding-right:0!important;padding-top:44px!important}}
+@media print{
+  @page{size:letter portrait;margin:0.5in}
+  body{background:#FFFFFF!important}
+  body.co-printing > *:not(#print-only){display:none!important}
+  #print-only{display:block!important;position:static!important;page-break-after:avoid;page-break-inside:avoid;break-inside:avoid}
+  #print-only *{page-break-inside:avoid;break-inside:avoid}
+  [data-print-hide]{display:none!important}
+}
+#print-only{display:none}
+#roi-calculator input::placeholder{color:rgba(15,29,46,.34);font-weight:400;font-style:italic}
+#roi-calculator input::-webkit-outer-spin-button,#roi-calculator input::-webkit-inner-spin-button{opacity:1}
+@media(max-width:1020px){[data-calc-out]{grid-template-columns:1fr!important;gap:24px!important}[data-calc-total]{grid-template-columns:1fr!important;gap:20px!important}}
+@media(max-width:640px){[data-calc-grid]{grid-template-columns:1fr!important}}
+@media(max-width:1020px){[data-ledger]{grid-template-columns:1fr!important;gap:8px!important}[data-featnav]{grid-template-columns:1fr!important;gap:32px!important}[data-featnav]>div:first-child{position:static!important;flex-direction:row!important;flex-wrap:wrap!important;gap:4px}[data-featnav]>div:first-child a{border-left:none!important;padding:8px 14px 10px!important;font-size:15px!important}}
+@media(max-width:620px){[data-quad]{grid-template-columns:1fr!important}[data-deploy]{grid-template-columns:1fr!important}[data-deploy]>*{border-left:none!important;padding-left:0!important}[data-stats]{grid-template-columns:1fr!important}}
+@media(max-width:960px){[data-catalog]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 32px!important}}
+@media(max-width:620px){[data-catalog]{grid-template-columns:1fr!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(max-width:1020px){[data-start]{grid-template-columns:1fr!important;gap:24px!important}[data-start]>a{justify-self:start}}
+@media(max-width:900px){[data-three]{grid-template-columns:1fr!important}[data-arrow]{display:none!important}[data-two]{grid-template-columns:1fr!important;gap:20px!important}[data-conn]{grid-template-columns:1fr!important;height:20px!important}[data-conn]>div:not(:first-child){display:none!important}}
+@media(max-width:940px){[data-oneline]{white-space:normal!important;text-wrap:balance!important;max-width:640px!important}}
+@media(max-width:1020px){[data-deploy2]{grid-template-columns:1fr!important;gap:26px!important}}
+@media(max-width:700px){[data-deploy2] [data-three]{grid-template-columns:1fr!important;gap:18px!important}}
+@media(max-width:1020px){[data-value]{grid-template-columns:1fr!important;gap:34px!important}[data-povrow]{grid-template-columns:1fr!important;gap:12px!important}[data-two]{grid-template-columns:1fr!important;gap:26px!important}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}}
+@media(max-width:820px){[data-study]{grid-template-columns:1fr!important;gap:28px!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="orbits" hint-size="100%,120px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:72px 28px 96px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center" data-hero-grid="1">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="width:9px;height:9px;border-radius:50%;background:#5B9BEA;flex-shrink:0;display:block"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2D5A87">Orthopedic orbit solutions</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">Your best guidance and motivation in the patient's hands, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">every day between visits</em></h1>
+    <p style="font-size:17.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:620px;text-wrap:pretty">Guided digital support tailored to each procedure and each surgeon's protocol, carried through prehab, surgery, and the full recovery window, so every patient arrives ready and recovers as expected.</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:4px;flex-wrap:wrap">
+      <a href="{{ bookHref }}" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 28px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+      <a href="#cta" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;padding:16px 24px;border-radius:999px;border:1.5px solid rgba(15,29,46,.2)" style-hover="border-color:#0F1D2E;color:#0F1D2E">Get the {{ name }} info sheet</a>
+    </div>
+  </div>
+  <div style="min-width:0;animation:coFloat 6s ease-in-out infinite alternate"><image-slot id="{{ heroSlotId }}" radius="32" src="{{ heroSrc }}" placeholder="{{ heroSlotHint }}" style="display:block;width:100%;height:clamp(320px,30vw,440px)"></image-slot></div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 52px">
+  <div data-rv style="display:flex;flex-direction:column;gap:16px;border-top:1px solid rgba(15,29,46,.14);border-bottom:1px solid rgba(15,29,46,.14);padding:22px 0">
+    <div style="display:flex;gap:34px;align-items:baseline;flex-wrap:wrap">
+      <button onClick="{{ pick0 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t0Fg }}">All of orthopedics<sc-if value="{{ t0On }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick1 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t1Fg }}">Joint replacement<sc-if value="{{ t1On }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick2 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t2Fg }}">Sports medicine &amp; arthroscopy<sc-if value="{{ t2On }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick3 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t3Fg }}">Spine<sc-if value="{{ t3On }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+    </div>
+    <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.66);max-width:660px;text-wrap:pretty">{{ segLine }}</div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 40px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px;text-wrap:balance">{{ headLead }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">{{ headEm }}</em>.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:600px;text-wrap:pretty">{{ intro }}</p>
+      <p style="font-size:16px;line-height:1.65;color:rgba(15,29,46,.6);margin:0;max-width:600px;text-wrap:pretty">Built to each surgeon's protocol before launch. Nothing added to your team's day.</p>
+    </div>
+  </div>
+
+  <div data-rv data-value style="display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:60px;align-items:start">
+    <div style="position:relative;min-width:0">
+      <image-slot id="{{ valueSlotId }}" radius="28" src="{{ valueSrc }}" placeholder="[Placeholder: orthopedic surgeon or therapist with a patient, vertical crop]" style="display:block;width:100%;height:clamp(420px,42vw,600px)"></image-slot>
+      <div style="margin-top:16px;font-size:13px;line-height:1.55;color:rgba(15,29,46,.5);max-width:300px;text-wrap:pretty">One orbit, issued once, working for three audiences at the same time.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;min-width:0">
+      <sc-for list="{{ pov }}" as="p" hint-placeholder-count="3">
+        <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ p.label }}">{{ p.kicker }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ p.t }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ p.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div data-rv style="display:flex;flex-direction:column;margin-top:14px">
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="2">
+      <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ r.label }}">{{ r.kicker }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ r.t }}</div>
+          <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">{{ r.sub }}</div>
+        </div>
+        <sc-if value="{{ r.plain }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ r.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ r.seq }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:2px;padding-top:2px">
+            <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:6px;align-self:stretch">
+                  <span style="display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:1px solid {{ it.cBorder }};background:{{ it.cBg }};font-family:Lato,sans-serif;font-weight:700;font-size:12.5px;color:{{ it.cFg }};flex-shrink:0">{{ it.v }}</span>
+                  <sc-if value="{{ it.line }}" hint-placeholder-val="{{ true }}">
+                    <span style="flex:1;width:1px;background:linear-gradient({{ it.cLine }},rgba(79,179,191,.12))"></span>
+                  </sc-if>
+                </div>
+                <div style="padding-bottom:22px;display:flex;flex-direction:column;gap:3px;min-width:0">
+                  <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap">
+                    <span style="font-family:Lato,sans-serif;font-weight:700;font-size:17px;letter-spacing:-0.01em;color:#0F1D2E">{{ it.t }}</span>
+                    <span style="font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:{{ it.cFg }}">{{ it.tag }}</span>
+                  </div>
+                  <div style="font-size:15px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it.d }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(15,29,46,.14)"></div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 88px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px;display:flex;flex-direction:column;gap:44px">
+    <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5B9BEA">The understanding gap</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">{{ gapLead }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#5B9BEA">{{ gapEm }}</em>.</h2>
+      </div>
+      <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">{{ gapIntro }}</p>
+    </div>
+    <div style="border-top:1px solid #2D5A87;padding-top:26px;display:flex;flex-direction:column;gap:6px">
+      <div style="font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#5B9BEA">What the gap costs</div>
+      <div style="font-size:16.5px;line-height:1.6;color:#B9C8D8;max-width:900px;text-wrap:pretty">{{ gapBridge }}</div>
+    </div>
+    <div data-stat5 style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;align-items:stretch;margin-top:-14px">
+      <sc-for list="{{ window }}" as="w" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #5B9BEA;padding-top:18px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:{{ w.size }};letter-spacing:-0.04em;line-height:1;color:#FFFFFF">{{ w.n }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#5B9BEA;line-height:1.35">{{ w.t }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ w.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Measurable ROI</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">How an orbit <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">provides value</em>.</h2>
+    </div>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">Every orbit is built based on your target clinical and financial outcomes including revenue to protect, costs to lower, opportunities to expand and staff resources to support.</p>
+  </div>
+  <div data-rv style="border-top:1px solid rgba(15,29,46,.14)">
+    <sc-for list="{{ measures }}" as="m" hint-placeholder-count="8">
+      <div data-ledger style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px 56px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:15px;color:#2D5A87;flex-shrink:0;min-width:24px">{{ m.n }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:clamp(19px,2vw,23px);line-height:1.25;letter-spacing:-0.015em">{{ m.t }}</div>
+        </div>
+        <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.68);text-wrap:pretty">{{ m.d }}</div>
+      </div>
+    </sc-for>
+  </div>
+  </div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Orthopedic care journeys <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#5B9BEA">currently supported</em>.</h2>
+    </div>
+    <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">{{ libIntro }}</p>
+  </div>
+  <div data-rv data-catalog style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 44px;border-top:1px solid #2D5A87">
+    <sc-for list="{{ catalog }}" as="c" hint-placeholder-count="9">
+      <div style="display:flex;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(45,90,135,.55)">
+        <span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:14px;color:#5B9BEA;min-width:24px">{{ c.n }}</span>
+        <div style="display:flex;flex-direction:column;gap:3px;min-width:0">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16px;line-height:1.3;letter-spacing:-0.01em;color:#FFFFFF">{{ c.t }}</div>
+          <div style="font-size:13px;line-height:1.5;color:#8FA5BC;text-wrap:pretty">{{ c.v }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Clinical evidence</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">The trial <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">behind the platform</em>.</h2>
+    </div>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">The platform's controlled trial was run in surgical oncology, not orthopedics. We show it as measured and let you judge the transfer.</p>
+  </div>
+
+  <div data-rv data-study style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:start;border-top:1px solid rgba(15,29,46,.14);padding-top:30px">
+    <div style="display:flex;flex-direction:column;gap:13px">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF;background:#0F1D2E;border-radius:6px;padding:6px 11px">Controlled clinical trial</span>
+        <span style="font-size:12.5px;color:rgba(15,29,46,.6)">Siteman Cancer Center, Washington University School of Medicine</span>
+      </div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.16;letter-spacing:-0.02em;text-wrap:balance">Patients arrived better prepared, called less, and came back less</div>
+      <div style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);text-wrap:pretty">A controlled trial in hepatobiliary surgical oncology compared an orbit against usual care across the same surgical pathway an orthopedic episode follows: preparation, discharge instructions, home recovery, and the calls in between. The mechanism is comprehension, not oncology. Applying these percentages to an orthopedic population is a modeled transfer, not a measured orthopedic result.</div>
+      <a href="SitemanStudy.dc.html" style="align-self:flex-start;text-decoration:none;font-size:14.5px;font-weight:600;color:#2D5A87;padding-bottom:3px;border-bottom:1.5px solid rgba(45,90,135,.4);transition:color .2s,border-color .2s" style-hover="color:#E3735C;border-color:#E3735C">Read the study results &rarr;</a>
+      <dc-import name="StudyRequest" label="Download a summary of the study results" heading="Download the study summary" blurb="Tell us who you are and your download will be ready." file="CareOrbit-Siteman-Study-Report.pdf" downloadLabel="Download the study report" hint-size="100%,60px"></dc-import>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px 32px">
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">+65%</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">better understanding of the plan and side effects</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">−53%</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">fewer calls to the office</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">−41%</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">fewer readmissions</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">+22%</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">higher patient satisfaction</div>
+        </div>
+    </div>
+  </div>
+
+  <div data-rv data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:30px 0 0;border-top:1px solid rgba(15,29,46,.14);margin-top:34px">
+    <div style="display:flex;flex-direction:column;gap:7px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A8412F">Voices from the pathway</div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">What it sounds like when recovery is guided</div>
+      <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">From live oncology deployments. Orthopedic orbits are built on the same platform.</div>
+    </div>
+    <div data-split style="display:grid;grid-template-columns:1fr 1fr;gap:36px">
+      <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="2">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;font-size:19px;line-height:1.5;color:#2D5A87;text-wrap:pretty">{{ q.text }}</div>
+          <div style="margin-top:auto;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(15,29,46,.5)">{{ q.who }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div id="cta" style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv data-split style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:72px 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(30px,3.4vw,38px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:pretty">20 minutes. <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#5B9BEA">Your</em> orthopedic pain points, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#5B9BEA">our</em> platform.</h2>
+      <p style="font-size:15.5px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">No demo script, no obligation. We get introduced, hear which orthopedic moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.</p>
+      <a href="{{ bookHref }}" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 28px;border-radius:999px;align-self:flex-start;margin-top:4px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">Book a 20-minute intro call</a>
+    </div>
+    <div style="background:#1E3A5F;border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:19px;color:#FFFFFF">Not ready for a call?</div>
+      <div style="font-size:14px;line-height:1.55;color:#B9C8D8">Get the {{ name }} info sheet by email.</div>
+      <input onChange="{{ onHp }}" tabIndex="-1" autoComplete="off" aria-hidden="true" placeholder="Website" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"><input value="{{ email }}" onChange="{{ onEmail }}" placeholder="Work email *" style="font-family:Inter,sans-serif;font-size:14.5px;padding:14px 16px;border-radius:14px;border:1.5px solid #2D5A87;background:#0F1D2E;color:#FFFFFF;outline:none" style-focus="border-color:#5B9BEA">
+      <button onClick="{{ requestSheet }}" style="font-family:Inter,sans-serif;font-size:14.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:none;border-radius:999px;padding:13px 24px;cursor:pointer;align-self:flex-start;transition:background .2s" style-hover="background:#F2B8C6">{{ sheetBtn }}</button>
+    </div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const ORTHO_SEGMENTS = [
+  {
+    label: "All of orthopedics",
+    line: "The whole practice, from the first consult through return to activity, across joints, sports, and spine.",
+    headLead: "A trusted digital guide your patients keep, from consult through full recovery, with PROMs that", headEm: "collect themselves",
+    intro: "Your protocol in your surgeons' own words, delivered when each instruction actually matters. Alongside the handout at discharge and the therapy referral, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients prepared, motivated, and doing the exercises between visits.",
+    gapLead: "Four visits inside a", gapEm: "120-day journey",
+    gapIntro: "Those four visits carry the clinical decisions. Everything else, the exercises, the brace, the pain plan, and every judgment about what is normal, is handled at home by a patient working from memory. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.",
+    gapBridge: "None of these days are billable, and none of them are staffed. A cancelled case, an unfinished home program, a brace worn wrong, or a call that becomes an ED visit all happen here, in the stretch between appointments.",
+    libIntro: "Support your orthopedic service line with an Orthopedics Department Bundle which gives you 18 procedure orbit versions for patients and families, plus injection, sports, and activity orbits and a template for everything else, supporting the specifics of procedures like these:",
+    window: [
+      {n: "4", t: "Visits with you", d: "One initial consult, then two or three follow-ups."},
+      {n: "120 days", t: "Length of the episode", d: "From the first consult through return to activity."},
+      {n: "2 weeks", t: "Between each visit", d: "Long enough for instructions to fade and a program to quietly stop."},
+      {n: "116", t: "Days on their own", d: "Where the exercises, the brace, and every recovery decision actually happen.", hero: true}
+    ],
+    catalog: [
+      {t: "ACL reconstruction", v: ""}, {t: "Hip replacement", v: ""}, {t: "Knee replacement", v: ""},
+      {t: "Shoulder replacement", v: ""}, {t: "Joint replacement", v: ""}, {t: "Arthroscopy", v: ""},
+      {t: "Knee arthroscopy", v: ""}, {t: "Hip arthroscopy", v: ""}, {t: "Spinal surgery", v: ""},
+      {t: "Spinal fusion", v: ""}, {t: "Rotator cuff repair", v: ""}, {t: "Shoulder surgery", v: ""},
+      {t: "Foot and ankle surgery", v: ""}, {t: "Carpal tunnel surgery", v: ""}, {t: "Hand surgery", v: ""},
+      {t: "Osteotomy", v: ""}, {t: "Arthroplasty", v: ""}, {t: "Joint fusion", v: ""},
+      {t: "Injections", v: "12+ varieties; one orbit or individualized"},
+      {t: "Sports / performance plan", v: "Versions: individual + team. Patient and outreach."},
+      {t: "Healthy Activity", v: "Versions: general + senior. Patient and outreach."}
+    ],
+    beginSub: "Most practices start with their highest-volume procedure. All four run as one guide the patient keeps.",
+    beginItems: [
+      {t: "Procedure support.", d: "Joint replacement, ACL, rotator cuff, spine, arthroscopy."},
+      {t: "Therapy adherence.", d: "The home program, week by week, with PROMs on schedule."},
+      {t: "Nonoperative care.", d: "Injections and conservative management before surgery is on the table."},
+      {t: "Activity and outreach.", d: "Seminars, screenings, and sports or senior activity plans."}
+    ],
+    measures: [
+      {t: "Fewer cancellations and delays", d: "A cancelled case is operating room time you cannot get back. Prepared patients keep the schedule intact."},
+      {t: "Higher therapy protocol adherence", d: "Adherence is what separates a good surgical result from a good functional one."},
+      {t: "Fewer avoidable readmissions and ED visits", d: "The most expensive way to answer a question a patient could have had answered at home."},
+      {t: "Fewer inbound calls per episode", d: "Every repeat call is staff time spent re-explaining what was already covered."},
+      {t: "Higher PROM completion rates", d: "Bundled and value-based programs pay on documented outcomes. Missing scores are unbilled work."},
+      {t: "Correct equipment use at home", d: "Brace and weight-bearing errors cause the revisions and delays that erase an episode's margin."},
+      {t: "Stronger referral and review volume", d: "A guided recovery is the cheapest patient acquisition a practice has."},
+      {t: "A visible practice differentiator", d: "A branded recovery experience is something few competitors in the market can show."}
+    ],
+    povPat: {"t":"They know what to do","items":["A clear understanding of their procedure, their surgeon, and what recovery will ask of them","Prehab, clearance, and day-of instructions, on the day they apply","Their home exercise program week by week, with reminders that keep it going","Which symptoms mean call us, and which mean go to the ED"]},
+    povTeam: {"t":"Nothing added to the day","items":["Ordered from the workflow you already run, no new FTEs","Fewer calls asking what the discharge sheet already said","Each surgeon's protocol, not a generic recovery app","We build and maintain the content, including protocol updates"]},
+    pov3: {t: "You can finally see it", items: [
+      "Who opened their orbit and who never did, by patient",
+      "Adherence and symptom check-ins routed back before the next visit",
+      "PROM completion by procedure, surgeon, and site",
+      "Optional: validated measures scored automatically"
+    ]}
+  },
+  {
+    label: "Joint replacement",
+    line: "Hip, knee, and shoulder arthroplasty, where the episode is scored on documented outcomes and a late cancellation costs a block you cannot resell.",
+    headLead: "Prehab, recovery, and PROMs on one guide the patient keeps through", headEm: "the whole episode",
+    intro: "Each surgeon's arthroplasty protocol in their own words, delivered when each instruction actually matters. Alongside the joint class and the therapy referral, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients prepared, moving, and answering the measures the episode is scored on.",
+    gapLead: "Ninety days of episode, and", gapEm: "a handful of visits",
+    gapIntro: "The episode runs for ninety days. You see the patient for four of them. Prehab, weight-bearing, the home program, and every judgment about what is normal happen at home, and they are what the episode gets scored on. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.",
+    gapBridge: "None of these days are billable, and none of them are staffed. A cancelled case, an unfinished home program, a brace worn wrong, or a call that becomes an ED visit all happen here, inside the window you are accountable for.",
+    libIntro: "The arthroplasty orbits, plus the injection and activity orbits that carry a patient before the case and after it. Each one runs the surgeon's own protocol.",
+    window: [
+      {n: "4", t: "Visits with you", d: "One initial consult, then two or three follow-ups."},
+      {n: "90 days", t: "Length of the episode", d: "The window a bundled or value-based program is scored on."},
+      {n: "2 weeks", t: "Between each visit", d: "Long enough for instructions to fade and a program to quietly stop."},
+      {n: "86", t: "Days on their own", d: "Where the exercises, the weight-bearing, and every recovery decision actually happen.", hero: true}
+    ],
+    catalog: [
+      {t: "Hip replacement", v: ""}, {t: "Knee replacement", v: ""}, {t: "Shoulder replacement", v: ""},
+      {t: "Joint replacement", v: ""}, {t: "Arthroplasty", v: ""}, {t: "Joint fusion", v: ""},
+      {t: "Osteotomy", v: ""},
+      {t: "Injections", v: "Conservative management before a case is booked"},
+      {t: "Healthy Activity", v: "Versions: general + senior. Patient and outreach."}
+    ],
+    beginSub: "Most practices start with their highest-volume joint and template the second one.",
+    beginItems: [
+      {t: "Decision and prehab.", d: "What the joint class covers, plus the weeks of preparation after it."},
+      {t: "Day of surgery.", d: "Arrival, fasting, transportation, and what the day will feel like."},
+      {t: "Home recovery.", d: "Weight-bearing, wound care, and the pain step-down, week by week."},
+      {t: "PROMs on schedule.", d: "Functional measures collected at protocol intervals, scored automatically."}
+    ],
+    measures: [
+      {t: "Fewer cancellations and delays", d: "A cancelled arthroplasty is block time you cannot resell. Prepared patients keep the schedule intact."},
+      {t: "Higher PROM completion rates", d: "Functional-status scores are how the outcome measure gets reported, and missing scores are unbilled work."},
+      {t: "Higher therapy protocol adherence", d: "Range of motion in week six is decided by what happened in weeks one through five, at home."},
+      {t: "Fewer avoidable readmissions and ED visits", d: "The most expensive way to answer a question a patient could have had answered at home."},
+      {t: "Correct weight-bearing and equipment use", d: "Brace and weight-bearing errors cause the revisions and delays that erase an episode's margin."},
+      {t: "Fewer inbound calls per episode", d: "Every repeat call is staff time spent re-explaining what the joint class already covered."},
+      {t: "Better prehab completion", d: "The preparation that shortens recovery, and the part nobody can observe."},
+      {t: "Stronger referral and review volume", d: "A guided recovery is the cheapest patient acquisition a practice has."}
+    ],
+    povPat: {"t":"Prepared for the whole episode","items":["What their new joint will ask of them, from the joint class through week twelve","Prehab, clearance, and day-of instructions, on the day they apply","Weight-bearing, wound care, and the pain step-down, explained when each starts","PROM check-ins that arrive on schedule instead of by phone chase"]},
+    povTeam: {"t":"The block stays protected","items":["Issued at the joint class or the consult, from the workflow you already run","Fewer day-before calls that end in a cancelled block","Each surgeon's arthroplasty protocol, not a generic recovery app","We build and maintain the content, including protocol updates"]},
+    pov3: {t: "The episode stops being blind", items: [
+      "Who opened their orbit and who never did, by patient",
+      "Adherence and symptom check-ins routed back before the next visit",
+      "PROM completion by joint, surgeon, and site",
+      "Optional: validated functional measures scored automatically"
+    ]}
+  },
+  {
+    label: "Sports medicine & arthroscopy",
+    line: "ACL, rotator cuff, and arthroscopy, where a younger patient's return to activity is decided almost entirely by a home program nobody watches.",
+    headLead: "The home program that decides the result, guided", headEm: "week by week",
+    intro: "Each surgeon's protocol in their own words, delivered on the week it applies. Alongside the therapy referral and the handout, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps a young, busy patient doing the exercises and holding the restrictions long after motivation fades.",
+    gapLead: "Months of rehab, and", gapEm: "a few visits",
+    gapIntro: "An ACL or a rotator cuff is repaired in an hour and rehabilitated for the better part of a year. Formal therapy ends long before the recovery does, and the rest is a home program nobody watches. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.",
+    gapBridge: "None of these days are billable, and none of them are staffed. A program that stopped in week six, a sling worn wrong, or a return to sport taken too early all happen here, between appointments.",
+    libIntro: "The sports and arthroscopy orbits, plus the injection and performance orbits that carry a patient before a procedure and back to full activity after it.",
+    window: [
+      {n: "4", t: "Visits with you", d: "One initial consult, then two or three follow-ups."},
+      {n: "9 months", t: "Typical return to sport", d: "From repair through clearance for full activity."},
+      {n: "6 weeks", t: "Typical course of formal therapy", d: "The rest of the program is done alone, at home."},
+      {n: "Most of it", t: "On their own", d: "Where the exercises, the brace, and every return-to-activity decision happen.", hero: true}
+    ],
+    catalog: [
+      {t: "ACL reconstruction", v: ""}, {t: "Rotator cuff repair", v: ""}, {t: "Shoulder surgery", v: ""},
+      {t: "Knee arthroscopy", v: ""}, {t: "Hip arthroscopy", v: ""}, {t: "Arthroscopy", v: ""},
+      {t: "Foot and ankle surgery", v: ""},
+      {t: "Injections", v: "12+ varieties; one orbit or individualized"},
+      {t: "Sports / performance plan", v: "Versions: individual + team. Patient and outreach."}
+    ],
+    beginSub: "Most practices start with the repair they do most and extend the same template across the rest.",
+    beginItems: [
+      {t: "Decision and prehab.", d: "What the repair involves and the preparation that improves the result."},
+      {t: "Therapy adherence.", d: "The home program week by week, long after formal therapy ends."},
+      {t: "Return to activity.", d: "The milestones, and why taking them early costs the repair."},
+      {t: "Sports and outreach.", d: "Team and performance plans that reach athletes before an injury."}
+    ],
+    measures: [
+      {t: "Higher therapy protocol adherence", d: "Adherence is what separates a good surgical result from a good functional one, and it is invisible today."},
+      {t: "Safer return to activity", d: "A milestone taken early is a re-tear, a revision, and an outcome the practice wears."},
+      {t: "Fewer cancellations and delays", d: "A cancelled case is operating room time you cannot get back."},
+      {t: "Correct brace and sling use", d: "Explained once at the counter, and then used wrong for six weeks."},
+      {t: "Higher PROM completion rates", d: "Function scores are the only real measure of a sports result, and they are collected by hand today."},
+      {t: "Fewer inbound calls per episode", d: "Every repeat call is staff time spent re-explaining what was already covered."},
+      {t: "Stronger referral and review volume", d: "Younger patients choose on reviews, and they tell their team where they went."},
+      {t: "A visible practice differentiator", d: "A branded recovery experience is something few competitors in the market can show."}
+    ],
+    povPat: {"t":"The program keeps going","items":["A clear picture of the repair and why the timeline is longer than it feels","The home program week by week, long after formal therapy ends","Brace and sling use shown correctly, not explained once at the counter","Return-to-activity milestones, and why taking one early costs the repair"]},
+    povTeam: {"t":"Adherence without follow-up calls","items":["Ordered at the consult or the post-op visit, no new FTEs","A stopped program surfaces in week six, not at month four","Each surgeon's rehab protocol, not a generic exercise app","We build and maintain the content, including protocol updates"]},
+    pov3: {t: "Adherence stops being a guess", items: [
+      "Who opened their orbit and who never did, by patient",
+      "A home program that stopped, visible in week six rather than at month four",
+      "PROM completion by procedure, surgeon, and site",
+      "Optional: validated function measures scored automatically"
+    ]}
+  },
+  {
+    label: "Spine",
+    line: "The long conservative runway before a case is ever booked, and the recovery after it, where expectations decide whether a good result feels like one.",
+    headLead: "Expectations set early, and recovery followed", headEm: "all the way through",
+    intro: "Your spine protocol in your surgeons' own words, delivered when each instruction matters. Alongside the consult and the therapy referral, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that carries a patient through conservative care, into surgery only when it is warranted, and through a recovery they understand.",
+    gapLead: "Months of conservative care before", gapEm: "anyone books a case",
+    gapIntro: "Most spine patients spend months in injections, therapy, and imaging before surgery is on the table, and months more recovering afterward. Almost none of that time is spent with you. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.",
+    gapBridge: "None of these days are billable, and none of them are staffed. A patient who abandons conservative care, arrives with the wrong expectation, or reads normal recovery pain as a failed operation all happen here, between appointments.",
+    libIntro: "The spine orbits, plus the injection and activity orbits that carry the long conservative runway before a case is ever booked.",
+    window: [
+      {n: "4", t: "Visits with you", d: "One initial consult, then two or three follow-ups."},
+      {n: "Months", t: "Of conservative care first", d: "Injections, therapy, and imaging before surgery is on the table."},
+      {n: "12 months", t: "To a settled result", d: "Where expectations decide whether a good result feels like one."},
+      {n: "Nearly all of it", t: "Managed at home", d: "Activity limits, the home program, and every judgment about what is normal.", hero: true}
+    ],
+    catalog: [
+      {t: "Spinal surgery", v: ""}, {t: "Spinal fusion", v: ""},
+      {t: "Injections", v: "12+ varieties; one orbit or individualized"},
+      {t: "Healthy Activity", v: "Versions: general + senior. Patient and outreach."}
+    ],
+    beginSub: "Most practices start on the conservative side, where the volume is, and extend into the operative journey.",
+    beginItems: [
+      {t: "Conservative care.", d: "Injections, therapy, and activity, before surgery is on the table."},
+      {t: "Decision and expectations.", d: "What surgery can fix, what it cannot, and what recovery will ask."},
+      {t: "Preparation and day of surgery.", d: "Clearance, medication holds, and what the day will involve."},
+      {t: "Recovery and PROMs.", d: "Activity limits month by month, with validated measures on schedule."}
+    ],
+    measures: [
+      {t: "Better expectation setting", d: "A spine result is judged against what the patient expected, and that expectation is set months earlier."},
+      {t: "Higher conservative care completion", d: "The therapy and injection course that has to be documented before a case is ever approved."},
+      {t: "Fewer cancellations and delays", d: "A cancelled spine case is a long block you cannot resell late."},
+      {t: "Fewer avoidable readmissions and ED visits", d: "Normal recovery pain, read as an emergency because nobody said what normal looks like."},
+      {t: "Higher therapy protocol adherence", d: "The home program is most of the recovery, and today nobody sees whether it happens."},
+      {t: "Higher PROM completion rates", d: "Function and pain scores are how a spine outcome gets reported, and they are chased by hand today."},
+      {t: "Fewer inbound calls per episode", d: "Every repeat call is staff time spent re-explaining what was already covered."},
+      {t: "Stronger referral and review volume", d: "Spine patients research heavily, and a guided recovery is what they write about."}
+    ],
+    povPat: {"t":"Expectations set early","items":["What surgery can fix, what it cannot, and what recovery will actually ask","The conservative course explained, so therapy and injections get finished","What normal recovery pain feels like, month by month","Which symptoms mean call us, and which mean go to the ED"]},
+    povTeam: {"t":"The runway documents itself","items":["Issued at the first consult, months before a case is booked","Conservative care progress documented without staff chasing it","Each surgeon's spine protocol, not a generic back-pain app","We build and maintain the content, including protocol updates"]},
+    pov3: {t: "The long runway becomes visible", items: [
+      "Who opened their orbit and who never did, by patient",
+      "Conservative care progress documented before the case is submitted",
+      "PROM completion by procedure, surgeon, and site",
+      "Optional: validated pain and function measures scored automatically"
+    ]}
+  }
+];
+
+class Component extends DCLogic {
+  state = { seg: 0, showSources: false, calcOpen: false, exportOpen: false, calc: {surgeons: "1", cases: "400", rev: "6000", cxRate: "10.4", unfilled: "22", preventable: "48", reduction: "42", acqLift: "2", partB: "600000", mips: "9"}, email: "", sent: false, active: 0 };
+  componentDidMount() {
+    import('./orbits-data.js').then(m => this.setState({d: m.ORBITS["orthopedics"]}));
+    this._onScroll = () => {
+      const blocks = Array.from(document.querySelectorAll('[data-feat-block]'));
+      if (!blocks.length) return;
+      let idx = 0;
+      blocks.forEach((b, i) => { if (b.getBoundingClientRect().top <= 220) idx = i; });
+      if (idx !== this.state.active) this.setState({active: idx});
+    };
+    document.addEventListener('scroll', this._onScroll, {capture: true, passive: true});
+    this._onScroll();
+  }
+  componentWillUnmount() { document.removeEventListener('scroll', this._onScroll, {capture: true}); }
+  t0 = Date.now();
+  humanOk(email) { return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email) && !this.state.hp && (Date.now() - this.t0 > 3000); }
+  renderVals() {
+    const d = this.state.d || {};
+    const segIdx = this.state.seg ?? 0;
+    const seg = ORTHO_SEGMENTS[segIdx];
+    const features = [
+      {tab: "Decision & prehab", t: "Prepared before the incision", d: "What the procedure involves, the prehab that improves the outcome, and the logistics to arrange, delivered across the weeks before surgery.", src: "images/ortho-prehab.png", hint: "[Placeholder: prehab exercise photo]"},
+      {tab: "Day of surgery", t: "No surprises on the morning of", d: "Arrival time, fasting rules, transportation, and what the day will actually feel like, sent the day before instead of buried in a packet.", src: "images/ortho-day-of.png", hint: "[Placeholder: surgical check-in photo]"},
+      {tab: "Home recovery", t: "The first two weeks, guided day by day", d: "Wound care, weight-bearing limits, brace and sling use, and what a normal amount of swelling looks like, with clear warning signs that warrant a call rather than an ED visit.", src: "images/ortho-home-recovery.png", hint: "[Placeholder: home recovery photo]"},
+      {tab: "Therapy adherence", t: "Home exercise that actually gets done", d: "Your protocol, laid out week by week, with reminders and short check-ins so a missed program surfaces while it can still be corrected.", src: "images/ortho-therapy.png", hint: "[Placeholder: physical therapy session photo]"},
+      {tab: "Pain & medication", t: "Pain guidance the patient can follow", d: "What level of pain to expect, how to step down safely, and how to take what was prescribed, in your team’s own words.", src: "images/ortho-pain.png", hint: "[Placeholder: medication guidance photo]"},
+      {tab: "Milestones & PROMs", t: "Function measured, not assumed", d: "Recovery milestones and validated measures collected on schedule, scored automatically, and returned to the care team without added staff time.", src: "images/ortho-proms.png", hint: "[Placeholder: care-team dashboard screenshot]"}
+    ].map((f, i) => Object.assign({}, f, {
+      id: "ortho-f" + i, anchor: "#ortho-f" + i, slotId: "ortho-feature-" + i, src: f.src || "",
+      navColor: i === this.state.active ? "#0F1D2E" : "rgba(15,29,46,.66)",
+      navRule: i === this.state.active ? "#E3735C" : "rgba(15,29,46,.12)",
+      pick: () => this.setState({active: i})
+    }));
+    const c = this.state.calc;
+    const num = (k) => (isNaN(parseFloat(c[k])) ? 0 : parseFloat(c[k]));
+    const setCalc = (k) => (e) => {
+      let v = e.target.value;
+      if (v !== "" && parseFloat(v) < 0) v = "0";
+      const pct = ["cxRate", "unfilled", "reduction", "acqLift", "mips"];
+      if (v !== "" && pct.indexOf(k) > -1 && parseFloat(v) > 100) v = "100";
+      this.setState(st => ({calc: Object.assign({}, st.calc, {[k]: v})}));
+    };
+    const benchmarks = {surgeons: "1", cases: "400", rev: "6000", cxRate: "10.4", unfilled: "22", preventable: "48", reduction: "42", acqLift: "2", partB: "600000", mips: "9"};
+    const money = (n) => !n ? "$0" : (n >= 1000000 ? "$" + (n / 1000000).toFixed(2).replace(/\.00$/, "") + "M" : "$" + Math.round(n / 1000).toLocaleString() + "K");
+    const dollars = (n) => "$" + Math.round(n || 0).toLocaleString();
+    const cancelled = num("cases") * num("cxRate") / 100;
+    const unfilledCases = cancelled * num("unfilled") / 100;
+    const lostPerSurgeon = unfilledCases * num("rev");
+    const preventableShare = (num("preventable") || 0) / 100;
+    const recoveredPerSurgeon = lostPerSurgeon * preventableShare * num("reduction") / 100;
+    const acqPerSurgeon = num("cases") * num("acqLift") / 100 * num("rev");
+    const mipsSwing = num("partB") * num("mips") / 100;
+    const recoveredCases = unfilledCases * preventableShare * num("reduction") / 100;
+    const docs = num("surgeons") || 1;
+    const groupTotal = (recoveredPerSurgeon + acqPerSurgeon + mipsSwing) * docs;
+    const calcFields = [
+      {k: "surgeons", label: "Surgeons in the practice", value: c.surgeons, ph: "e.g. 10", step: "1", prefix: "", suffix: "", hint: "Used to scale per-surgeon figures"},
+      {k: "cases", label: "Scheduled cases per surgeon, per year", value: c.cases, ph: "e.g. 400", step: "10", prefix: "", suffix: "cases", hint: "Typical range is 300–500. The published study surgeon ran 840."},
+      {k: "rev", label: "Revenue your practice collects per case", value: c.rev, ph: "e.g. 6000", step: "500", prefix: "$", suffix: "", hint: "Professional fee only unless you own the ASC. The published $10,148 is total cost of care including facility and implant."},
+      {k: "cxRate", label: "Scheduled cases cancelled at any point before surgery", value: c.cxRate, ph: "e.g. 10.4", step: "0.5", prefix: "", suffix: "%", hint: "10.4% in the published series. Not the day-of rate, which runs under 2% in US centers. Published full-window rates span 5–30%."},
+      {k: "unfilled", label: "Cancellations never refilled", value: c.unfilled, ph: "e.g. 22", step: "1", prefix: "", suffix: "%", hint: "38 of 175 in the published series"},
+      {k: "preventable", label: "Share of cancellations that are preventable", value: c.preventable, ph: "e.g. 48", step: "1", prefix: "", suffix: "%", hint: "48% judged avoidable in a published series. Education cannot touch the rest."},
+      {k: "reduction", label: "Reduction in those preventable cancellations", value: c.reduction, ph: "e.g. 42", step: "1", prefix: "", suffix: "%", hint: "42% with online education plus standardized pre-op"},
+      {k: "acqLift", label: "New case volume lift", value: c.acqLift, ph: "e.g. 2", step: "0.5", prefix: "", suffix: "%", hint: "Our assumption, not a measured result. Set it to 0 to leave it out."},
+      {k: "partB", label: "Medicare Part B billings per surgeon", value: c.partB, ph: "e.g. 600000", step: "50000", prefix: "$", suffix: "", hint: "Annual allowed charges for one surgeon. Multiplied by the surgeon count above."},
+      {k: "mips", label: "MIPS penalty at stake", value: c.mips, ph: "e.g. 9", step: "1", prefix: "", suffix: "%", hint: "Up to 9% downside under CMS rules"}
+    ].map(f => Object.assign({}, f, {onChange: setCalc(f.k)}));
+    const calcResults = [
+      {raw: recoveredPerSurgeon * docs, v: money(recoveredPerSurgeon * docs), t: "Recovered case revenue", d: Math.round(recoveredCases * docs) + " cases a year that no longer fall off the schedule, counting only the preventable share."},
+      {raw: acqPerSurgeon * docs, v: money(acqPerSurgeon * docs), t: "New case revenue", d: Math.round(num("cases") * num("acqLift") / 100 * docs) + " additional cases from reputation and referral gains."},
+      {raw: mipsSwing * docs, v: money(mipsSwing * docs), t: "MIPS penalty avoided", d: "Downside only. Budget neutrality has kept positive adjustments near 1–2%, so the defensible number is the penalty you do not take."}
+    ];
+    const sourcesList = [
+        "McMahon S, et al. The Cost of Last-Minute Cancellation. JBJS Open Access. 2025;10(4):e25.00295. 1,684 scheduled elective cases, one high-volume orthopedic surgeon; 10.4% cancellation rate; $385,624 in unfilled-slot revenue loss over two years.",
+        "Leite KA, et al. Reducing Preventable Surgical Cancellations. J PeriAnesthesia Nurs. 2019;34(5):929-37. Online education and a standardized nurse-led preoperative interview reduced preventable cancellations from 34.3% to 20.0%.",
+        "Cancellation rates depend heavily on definition. Across published series, cancellation of scheduled elective orthopedic cases runs 5%–30%, while same-day cancellation in US centers is often under 2%; one tertiary hospital reported 36.5% for elective orthopedics. The 10.4% used here is the full booking window from a single-surgeon, single-center series, and 48% of cancellations in a separate series were judged avoidable.",
+        "CMS Quality Payment Program, CY2026 Final Rule: MIPS payment adjustments range up to plus or minus 9% of Medicare Part B, against a 75-point performance threshold, applied two years after the performance year. On a $2M annual Part B book that is roughly a $180,000 spread between the best and worst outcome. CMS offers an orthopedic-specific MVP, Improving Care for Lower Extremity Joint Repair, requiring four of seven quality measures with at least one outcome measure; functional-status measures for knee, hip, low back, shoulder, neck, ankle/foot, and elbow/wrist/hand sit in the Musculoskeletal Care MVP. MVP reporting is optional in 2026, and CMS has said it plans to sunset traditional MIPS.",
+        "CMS Hospital IQR THA/TKA PRO-PM. Complete matched pre- and post-operative PROM data required for at least 50% of eligible THA/TKA patients, collected within 90 days before surgery and 300–425 days after, using HOOS JR. or KOOS JR. plus a generic health survey at both timepoints. Mandatory for hospitals and hospital outpatient departments and, from the CY2028 reporting period, for ambulatory surgery centers. The penalty falls on the facility, not the physician group: 25% of the facility's Annual Payment Update across all Medicare Part A claims, about $725K on a $100M base, plus disqualification from value-based purchasing. AAOS fact sheet: failure reduces 25% of the Annual Payment Update (typically 2-4%) on all Medicare fee-for-service Part A claims and disqualifies the hospital from Medicare value-based purchasing programs.",
+        "Siteman Cancer Center / Washington University controlled trial: 65% better understanding, 53% fewer inbound calls, 41% fewer readmissions, 22% higher satisfaction.",
+        "rater8, \"How Patients Choose Their Doctors,\" nationwide survey of 1,008 U.S. adults, December 2024: 84% check online reviews before choosing a new provider and 61% would not follow a personal recommendation from friends or family if the provider's reviews were poor. Word-of-mouth and online reputation, rather than social media, dominate physician selection in orthopedic sports medicine (Arthroscopy, Sports Medicine, and Rehabilitation, 2022).",
+        "The 2% patient-acquisition lift is our own conservative assumption applied to the published case-revenue figure. No study measures an acquisition lift attributable to a patient engagement platform.",
+        "Pritikin Intensive Cardiac Rehabilitation is cited here only as evidence that structured education changes patient behavior: the published outpatient ICR series showed significant improvement in dietary behavior and physical function, while the peer-reviewed PICO comparison found no significant six-month readmission difference versus conventional rehab. The widely quoted 25% readmission reduction is program-reported, not from that trial.",
+        "Modeled figures are arithmetic on the sources above. They are illustrations, not CareOrbit performance claims or guarantees."
+    ];
+    return {
+      bookHref: "BookACall.dc.html?src=orthopedics",
+      heroSrc: "images/hero-orthopedics.png",
+      heroSlotId: "orbit-hero-orthopedics", heroSlotHint: "Ortho / PT photo",
+      valueSlotId: "ortho-value-" + segIdx,
+      valueSrc: segIdx === 0 ? "images/value-ortho-all.png" : segIdx === 1 ? "images/value-ortho-joint.png" : segIdx === 2 ? "images/value-ortho-sports.png" : segIdx === 3 ? "images/value-ortho-spine.png" : "",
+      name: d.name ?? "", nameLower: (d.name ?? "").toLowerCase(),
+      hero: d.hero ?? "", heroRest: (() => { const h = (d.hero ?? "").replace("Orthopedics orbits: ", ""); return h.charAt(0).toUpperCase() + h.slice(1); })(), sub: d.sub ?? "",
+      
+      features,
+      benefits: ([
+        {t: "Paper handouts", d: "Printed once, misplaced by week two, and out of date the moment a protocol changes."},
+        {t: "Verbal walk-out instructions", d: "Given at the end of a long visit, often with no one else there to hear them."},
+        {t: "Generic EMR discharge material", d: "Auto-generated, rarely updated, and written for the chart rather than the patient."},
+        {t: "Patient portal messages", d: "One more login to set up, on a channel most patients never open between visits."},
+        {t: "\"Call me if you need anything\"", d: "Asks the patient to recognize what is abnormal, and your staff to be available when they do."},
+        {t: "DME instruction at the counter", d: "Brace, crutch, and sling technique shown once, with nothing to look back at that night."},
+        {t: "Paper home exercise sheets", d: "No week-by-week sequence, no reminders, and no way to tell whether any of it was done."},
+        {t: "Manual staff outreach", d: "Experienced staff spending their week on phone tag instead of on the patients who need them."}
+      ]).slice(0, 4),
+      window: [
+        {n: "4", t: "Visits with you", d: "One initial consult, then two or three follow-ups.", bg: "transparent", border: "transparent", pad: "0 22px 0 0", size: "clamp(30px,3.2vw,42px)", fg: "#FFFFFF", label: "#E3735C", body: "#B9C8D8"},
+        {n: "120 days", t: "Length of the episode", d: "From the first consult through return to activity.", bg: "transparent", border: "transparent", pad: "0 22px 0 0", size: "clamp(30px,3.2vw,42px)", fg: "#FFFFFF", label: "#E3735C", body: "#B9C8D8"},
+        {n: "2 weeks", t: "Between each visit", d: "Long enough for instructions to fade and a program to quietly stop.", bg: "transparent", border: "transparent", pad: "0 22px 0 0", size: "clamp(30px,3.2vw,42px)", fg: "#FFFFFF", label: "#E3735C", body: "#B9C8D8"},
+        {n: "116", t: "Days on their own", d: "Where the exercises, the brace, and every recovery decision actually happen.", bg: "#1E3A5F", border: "#E3735C", pad: "26px 24px", size: "clamp(34px,3.8vw,50px)", fg: "#FFFFFF", label: "#E3735C", body: "#D6E1EC"}
+      ],
+      catalog: [
+        {n: "01", t: "ACL reconstruction", v: ""},
+        {n: "02", t: "Hip replacement", v: ""},
+        {n: "03", t: "Knee replacement", v: ""},
+        {n: "04", t: "Shoulder replacement", v: ""},
+        {n: "05", t: "Joint replacement", v: ""},
+        {n: "06", t: "Arthroscopy", v: ""},
+        {n: "07", t: "Knee arthroscopy", v: ""},
+        {n: "08", t: "Hip arthroscopy", v: ""},
+        {n: "09", t: "Spinal surgery", v: ""},
+        {n: "10", t: "Spinal fusion", v: ""},
+        {n: "11", t: "Rotator cuff repair", v: ""},
+        {n: "12", t: "Shoulder surgery", v: ""},
+        {n: "13", t: "Foot and ankle surgery", v: ""},
+        {n: "14", t: "Carpal tunnel surgery", v: ""},
+        {n: "15", t: "Hand surgery", v: ""},
+        {n: "16", t: "Osteotomy", v: ""},
+        {n: "17", t: "Arthroplasty", v: ""},
+        {n: "18", t: "Joint fusion", v: ""},
+        {n: "19", t: "Injections", v: "12+ varieties; one orbit or individualized"},
+        {n: "20", t: "Sports / performance plan", v: "Versions: individual + team. Patient and outreach."},
+        {n: "21", t: "Healthy Activity", v: "Versions: general + senior. Patient and outreach."}
+      ],
+      versions: [
+        {n: "By depth", t: "Success plan or full journey", d: "A success plan orbit carries broad, all-patient content and asks little of the care team. A journey orbit layers deeply specific content on top of that foundation.", who: "Chosen per department", bg: "#FFFFFF", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#E3735C", rule: "rgba(15,29,46,.09)"},
+        {n: "By stage", t: "Prospect through long-term follow-up", d: "As a person moves along the pathway, their orbit updates at the right moment, with no new app or login.", who: "One orbit, whole journey", bg: "#FFFFFF", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#2D5A87", rule: "rgba(15,29,46,.09)"},
+        {n: "By procedure", t: "Named orbits, plus a template", d: "High-volume, high-value procedures get their own orbit. Everything else runs on a procedure template that can be versioned with minor edits.", who: "Scope, value, and understanding dividend", bg: "#0F1D2E", fg: "#FFFFFF", body: "#B9C8D8", accent: "#F2B8C6", rule: "#2D5A87"},
+        {n: "By audience", t: "Patient, family, community", d: "Any orbit can be issued in patient and family versions, and in outreach-facing versions for at-risk, senior, or community audiences.", who: "Versioned on request", bg: "#FFFFFF", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#4FB3BF", rule: "rgba(15,29,46,.09)"}
+      ],
+      pov: [
+        {kicker: "For the patient", t: "They know what to do", label: "#A8412F", dot: "#E3735C",
+         items: [
+           "A clear understanding of their procedure, their surgeon, and what recovery will ask of them",
+           "Prehab, clearance, and day-of instructions, on the day they apply",
+           "Their home exercise program week by week, with reminders that keep it going",
+           "Which symptoms mean call us, and which mean go to the ED"
+         ]},
+        {kicker: "For your team", t: "Nothing added to the day", label: "#2D5A87", dot: "#2D5A87",
+         items: [
+           "Ordered from the workflow you already run, no new FTEs",
+           "Fewer calls asking what the discharge sheet already said",
+           "Each surgeon's protocol, not a generic recovery app",
+           "We build and maintain the content, including protocol updates"
+         ]},
+        {kicker: "For the practice", t: "You can finally see it", label: "#5B9BEA", dot: "#5B9BEA",
+         items: [
+           "Who opened their orbit and who never did, by patient",
+           "Adherence and symptom check-ins routed back before the next visit",
+           "PROM completion by procedure, surgeon, and site",
+           "Optional: validated measures scored automatically"
+         ]}
+      ],
+      rows: [
+        {kicker: "How to begin", t: "Start with one, add the rest", label: "#A8412F", dot: "#E3735C", plain: true,
+         sub: "Most practices start with their highest-volume procedure. All four run as one guide the patient keeps.",
+         items: [
+           {t: "Procedure support.", d: "Joint replacement, ACL, rotator cuff, spine, arthroscopy."},
+           {t: "Therapy adherence.", d: "The home program, week by week, with PROMs on schedule."},
+           {t: "Nonoperative care.", d: "Injections and conservative management before surgery is on the table."},
+           {t: "Activity and outreach.", d: "Seminars, screenings, and sports or senior activity plans."}
+         ]},
+        {kicker: "A patient’s orbit can evolve as their journey needs change", t: "One orbit supports the full journey, adapting as needs change", label: "#1F6B73", dot: "#4FB3BF", seq: true,
+         sub: "The same orbit advances through three versions on its own, with no new app or login for the patient.",
+         items: [
+           {v: "01", cBorder: "rgba(79,179,191,.5)", cBg: "rgba(79,179,191,.1)", cFg: "#1F6B73", cLine: "rgba(79,179,191,.55)", line: true, t: "Acquisition", tag: "Before they are a patient", d: "Seminar, screening, and referral outreach that helps people choose your practice, plus what is causing the pain and when a procedure is warranted."},
+           {v: "02", cBorder: "rgba(79,179,191,.5)", cBg: "rgba(79,179,191,.1)", cFg: "#1F6B73", cLine: "rgba(227,115,92,.45)", line: true, t: "Procedure support", tag: "Consult through procedure week", d: "Prehab, clearance, logistics, and day-of instructions, delivered week by week instead of handed over in a packet."},
+           {v: "03", cBorder: "rgba(227,115,92,.5)", cBg: "rgba(227,115,92,.1)", cFg: "#A8412F", cLine: "rgba(79,179,191,.55)", line: false, t: "Recovery with PROMs", tag: "Home through return to activity", d: "Weight-bearing, bracing, pain step-down, the home program, and validated measures collected on schedule."}
+         ]},
+        {kicker: "How it deploys", t: "Issued from the workflow you already run", label: "#2D5A87", dot: "#5B9BEA", plain: true,
+         sub: "From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.",
+         items: [
+           {t: "No new FTEs.", d: "Nothing added to anyone's day."},
+           {t: "White-label.", d: "Your brand, your voice."},
+           {t: "Live in a quarter.", d: "From kickoff to first patient."}
+         ]}
+      ],
+      measures: [
+        {t: "Fewer cancellations and delays", d: "A cancelled case is operating room time you cannot get back. Prepared patients keep the schedule intact."},
+        {t: "Higher therapy protocol adherence", d: "Adherence is what separates a good surgical result from a good functional one."},
+        {t: "Fewer avoidable readmissions and ED visits", d: "The most expensive way to answer a question a patient could have had answered at home."},
+        {t: "Fewer inbound calls per episode", d: "Every repeat call is staff time spent re-explaining what was already covered."},
+        {t: "Higher PROM completion rates", d: "Bundled and value-based programs pay on documented outcomes. Missing scores are unbilled work."},
+        {t: "Correct equipment use at home", d: "Brace and weight-bearing errors cause the revisions and delays that erase an episode's margin."},
+        {t: "Stronger referral and review volume", d: "A guided recovery is the cheapest patient acquisition a practice has."},
+        {t: "A visible practice differentiator", d: "A branded recovery experience is something few competitors in the market can show."}
+      ].map((m, i) => Object.assign({}, m, {n: String(i + 1).padStart(2, "0")})),
+      money: [
+        {v: "$55K", t: "Lost to unfilled slots, per surgeon", d: "Of 400 scheduled cases, 10.4% get cancelled at some point before surgery, which is 42 cases. Roughly 22% of those are never refilled, and at $6,000 collected that is nine cases of revenue gone. This is the full booking window, not the day-of rate.", src: "JBJS Open Access 2025: 1,684 consecutive scheduled elective cases, one surgeon, two years; 175 cancellations (10.4%), 38 never refilled. Single-center series. Volume and collections set below the study's 840-case surgeon."},
+        {v: "$11K", t: "Recoverable per surgeon, per year", d: "Only about half of cancellations are avoidable, so the 42% reduction from online education plus a standardized preoperative interview applies to that half. Two cases a year per surgeon, and it scales with every surgeon and every dollar of case value above the conservative figures used here.", src: "Leite et al., J PeriAnesthesia Nursing 2019 (34.3% to 20.0% preventable). 48% avoidable share from a published cancellation series."},
+        {v: "$54K", t: "MIPS penalty at stake, per surgeon", d: "A 9% downside on a $600K Part B book. Budget neutrality has kept positive adjustments near 1–2%, so the defensible figure is the penalty avoided rather than a bonus won. The orthopedic MVP requires four quality measures including at least one outcome measure, and functional-status PROMs are how that outcome gets scored.", src: "CMS CY2026 QPP Final Rule: up to 9% downside on Part B, 75-point threshold. CMS MVP Improving Care for Lower Extremity Joint Repair."},
+        {v: "+$48K", t: "From a 2% acquisition lift", d: "Eight additional cases a year per surgeon at $6,000 collected. Patient experience is the lever: 84% of patients check reviews before booking and 61% will not follow a personal recommendation if the reviews are poor. Satisfaction rose 22% in the Siteman trial.", src: "rater8 survey of 1,008 U.S. adults, Dec 2024; Siteman controlled trial. The 2% lift is our assumption, not a measured result."}
+      ],
+      calcOpen: this.state.calcOpen,
+      calcBtn: this.state.calcOpen ? "Hide the calculator" : "Run the model with your numbers",
+      toggleCalc: () => this.setState(st => ({calcOpen: !st.calcOpen})),
+      closeCalc: () => this.setState({calcOpen: false}),
+      stopClose: (e) => e.stopPropagation(),
+      exportOpen: this.state.exportOpen,
+      toggleExport: () => this.setState(st => ({exportOpen: !st.exportOpen})),
+      exportExcel: () => {
+        const lines = [["CareOrbit orthopedic ROI model", ""], ["", ""], ["Input", "Value"]];
+        calcFields.forEach(f => { let n = parseFloat(c[f.k]); if (isNaN(n)) n = 0; if (f.k === "surgeons" && n < 1) n = 1; lines.push([f.label + (f.suffix === "%" ? " (%)" : (f.prefix === "$" ? " ($)" : "")), n]); });
+        lines.push(["", ""], ["Result", "Annual value"]);
+        calcResults.forEach(r => lines.push([r.t + " ($)", Math.round(r.raw)]));
+        lines.push(["Total annual opportunity ($)", Math.round(groupTotal)]);
+        lines.push(["", ""], ["Modeled illustration. Arithmetic on the inputs above, not a guarantee of results.", ""]);
+        const csv = lines.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(",")).join("\r\n");
+        const blob = new Blob(["\ufeff" + csv], {type: "text/csv;charset=utf-8;"});
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "careorbit-orthopedic-roi.csv";
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+        this.setState({exportOpen: false});
+      },
+      printCalc: () => {
+        const old = document.getElementById("print-only");
+        if (old) old.remove();
+        const esc = (v) => String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+        const fmtIn = (k) => {
+          const n = parseFloat(c[k]);
+          if (k === "surgeons" && (isNaN(n) || n < 1)) return "1 (assumed)";
+          if (isNaN(n)) return "0";
+          return n.toLocaleString(undefined, {maximumFractionDigits: 2});
+        };
+        const inputRows = calcFields.map(f => '<tr><td style="padding:7px 0;border-bottom:1px solid #E6E1D9;font-size:10.5pt;color:#3A4A5C">' + esc(f.label) + '</td><td style="padding:7px 0;border-bottom:1px solid #E6E1D9;font-size:10.5pt;font-weight:700;color:#0F1D2E;text-align:right;white-space:nowrap">' + esc(f.prefix) + fmtIn(f.k) + (f.suffix ? " " + esc(f.suffix) : "") + '</td></tr>').join("");
+        const resultRows = calcResults.map(r => '<tr><td style="padding:9px 0;border-bottom:1px solid #E6E1D9"><div style="font-size:11pt;font-weight:700;color:#0F1D2E">' + esc(r.t) + '</div><div style="font-size:9pt;color:#5A6A7C;line-height:1.35">' + esc(r.d) + '</div></td><td style="padding:9px 0;border-bottom:1px solid #E6E1D9;font-family:Lato,sans-serif;font-size:20pt;font-weight:300;color:#0F1D2E;text-align:right;white-space:nowrap;vertical-align:middle">' + esc(dollars(r.raw)) + '</td></tr>').join("");
+        const holder = document.createElement("div");
+        holder.id = "print-only";
+        holder.innerHTML = '<div style="font-family:Inter,sans-serif;color:#0F1D2E;padding:0">' +
+          '<div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #0F1D2E;padding-bottom:10px;margin-bottom:18px">' +
+            '<div><div style="font-size:8.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">CareOrbit</div>' +
+            '<div style="font-family:Lato,sans-serif;font-size:20pt;font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-top:2px">Orthopedic orbit ROI model</div></div>' +
+            '<div style="text-align:right;font-size:9pt;color:#5A6A7C;line-height:1.4">' + esc((parseFloat(c.surgeons) >= 1 ? parseFloat(c.surgeons) : 1) + (docs === 1 ? "-surgeon practice" : "-surgeon practice")) + '<br>' + new Date().toLocaleDateString() + '</div>' +
+          '</div>' +
+          '<div style="display:flex;gap:26px;align-items:flex-start">' +
+            '<div style="flex:0 0 44%"><div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8578;margin-bottom:6px">Your inputs</div>' +
+              '<table style="width:100%;border-collapse:collapse">' + inputRows + '</table></div>' +
+            '<div style="flex:1"><div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8578;margin-bottom:6px">Modeled annual value</div>' +
+              '<table style="width:100%;border-collapse:collapse">' + resultRows + '</table>' +
+              '<div style="background:#0F1D2E;border-radius:12px;padding:16px 20px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">' +
+                '<div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F2B8C6">Total annual opportunity</div>' +
+                '<div style="font-family:Lato,sans-serif;font-size:26pt;font-weight:300;letter-spacing:-0.03em;color:#FFFFFF;line-height:1">' + esc(dollars(groupTotal)) + '</div>' +
+              '</div></div>' +
+          '</div>' +
+          '<div style="margin-top:18px;padding-top:10px;border-top:1px solid #E6E1D9;font-size:8pt;line-height:1.5;color:#5A6A7C">Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Published inputs: JBJS Open Access 2025 cancellation cost study; Leite et al. 2019 education intervention; CMS CY2026 QPP Final Rule MIPS adjustment. Readmission, call-volume, and satisfaction gains measured in the Siteman controlled trial are not included in these figures. careorbit.com</div>' +
+        '</div>';
+        document.body.appendChild(holder);
+        document.body.classList.add("co-printing");
+        const cleanup = () => {
+          document.body.classList.remove("co-printing");
+          const h = document.getElementById("print-only");
+          if (h) h.remove();
+          window.removeEventListener("afterprint", cleanup);
+        };
+        window.addEventListener("afterprint", cleanup);
+        this.setState({exportOpen: false});
+        window.print();
+        setTimeout(cleanup, 1500);
+      },
+      practiceLabel: num("surgeons") ? num("surgeons") + "-surgeon orthopedic practice" : "your practice",
+      calcFields, calcResults,
+      fillBenchmarks: () => this.setState({calc: Object.assign({}, benchmarks)}),
+      clearCalc: () => this.setState({calc: {surgeons: "1", cases: "400", rev: "6000", cxRate: "10.4", unfilled: "22", preventable: "48", reduction: "42", acqLift: "2", partB: "600000", mips: "9"}}),
+      calcTotal: money(groupTotal),
+      calcTotalNote: !num("surgeons") ? "Per surgeon. Add your surgeon count to scale it." : (num("surgeons") === 1 ? "Across 1 surgeon, per year" : "Across " + num("surgeons") + " surgeons, per year"),
+      showSources: this.state.showSources,
+      sourceCount: sourcesList.length + " references",
+      sourceArrow: this.state.showSources ? "rotate(180deg)" : "rotate(0deg)",
+      sourceLabel: this.state.showSources ? "Hide sources" : "View sources",
+      toggleSources: () => this.setState(st => ({showSources: !st.showSources})),
+      sources: sourcesList,
+      deploy: [
+        {t: "No new FTEs", d: "Nothing added to anyone's day."},
+        {t: "White-label", d: "Your brand, your voice."},
+        {t: "Live in a quarter", d: "From kickoff to first patient."}
+      ],
+      quotes: [
+        {text: "Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!", who: "Chief of Section, Surgical Oncology"},
+        {text: "It's seen as incredibly easy to understand and use. They (patients and families) just run with it.", who: "Nurse Navigator, Siteman Cancer Center Surgical Department"}
+      ],
+      pick0: () => this.setState({seg: 0}), pick1: () => this.setState({seg: 1}),
+      pick2: () => this.setState({seg: 2}), pick3: () => this.setState({seg: 3}),
+      t0Fg: segIdx === 0 ? "#0F1D2E" : "rgba(15,29,46,.42)", t0On: segIdx === 0,
+      t1Fg: segIdx === 1 ? "#0F1D2E" : "rgba(15,29,46,.42)", t1On: segIdx === 1,
+      t2Fg: segIdx === 2 ? "#0F1D2E" : "rgba(15,29,46,.42)", t2On: segIdx === 2,
+      t3Fg: segIdx === 3 ? "#0F1D2E" : "rgba(15,29,46,.42)", t3On: segIdx === 3,
+      segLine: seg.line,
+      headLead: seg.headLead, headEm: seg.headEm, intro: seg.intro,
+      gapLead: seg.gapLead, gapEm: seg.gapEm, gapIntro: seg.gapIntro, gapBridge: seg.gapBridge,
+      libIntro: seg.libIntro,
+      window: seg.window.map(w => Object.assign({}, w, {
+        bg: w.hero ? "#1E3A5F" : "transparent", border: w.hero ? "#E3735C" : "transparent",
+        pad: w.hero ? "26px 24px" : "0 22px 0 0",
+        size: w.hero ? "clamp(34px,3.8vw,50px)" : "clamp(30px,3.2vw,42px)",
+        fg: "#FFFFFF", label: "#E3735C", body: w.hero ? "#D6E1EC" : "#B9C8D8"
+      })),
+      catalog: seg.catalog.map((c, i) => Object.assign({}, c, {n: String(i + 1).padStart(2, "0")})),
+      measures: seg.measures.map((m, i) => Object.assign({}, m, {n: String(i + 1).padStart(2, "0")})),
+      pov: [
+        {kicker: "For the patient", t: seg.povPat.t, label: "#A8412F", dot: "#E3735C", items: seg.povPat.items},
+        {kicker: "For your team", t: seg.povTeam.t, label: "#2D5A87", dot: "#2D5A87", items: seg.povTeam.items},
+        {kicker: "For the practice", t: seg.pov3.t, label: "#5B9BEA", dot: "#5B9BEA", items: seg.pov3.items}
+      ],
+      rows: [
+        {kicker: "How to begin", t: "Start with one, add the rest", label: "#A8412F", dot: "#E3735C", plain: true, sub: seg.beginSub, items: seg.beginItems},
+        {kicker: "A patient’s orbit can evolve as their journey needs change", t: "One orbit supports the full journey, adapting as needs change", label: "#1F6B73", dot: "#4FB3BF", seq: true,
+         sub: "The same orbit advances through three versions on its own, with no new app or login for the patient.",
+         items: [
+           {v: "01", cBorder: "rgba(79,179,191,.5)", cBg: "rgba(79,179,191,.1)", cFg: "#1F6B73", cLine: "rgba(79,179,191,.55)", line: true, t: "Acquisition", tag: "Before they are a patient", d: "Seminar, screening, and referral outreach that helps people choose your practice, plus what is causing the pain and when a procedure is warranted."},
+           {v: "02", cBorder: "rgba(79,179,191,.5)", cBg: "rgba(79,179,191,.1)", cFg: "#1F6B73", cLine: "rgba(227,115,92,.45)", line: true, t: "Procedure support", tag: "Consult through procedure week", d: "Prehab, clearance, logistics, and day-of instructions, delivered week by week instead of handed over in a packet."},
+           {v: "03", cBorder: "rgba(227,115,92,.5)", cBg: "rgba(227,115,92,.1)", cFg: "#A8412F", cLine: "rgba(79,179,191,.55)", line: false, t: "Recovery with PROMs", tag: "Home through return to activity", d: "Weight-bearing, bracing, pain step-down, the home program, and validated measures collected on schedule."}
+         ]},
+        {kicker: "How it deploys", t: "Issued from the workflow you already run", label: "#2D5A87", dot: "#5B9BEA", plain: true,
+         sub: "From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.",
+         items: [
+           {t: "No new FTEs.", d: "Nothing added to anyone's day."},
+           {t: "White-label.", d: "Your brand, your voice."},
+           {t: "Live in a quarter.", d: "From kickoff to first patient."}
+         ]}
+      ],
+      email: this.state.email,
+      onHp: (e) => this.setState({hp: e.target.value}),
+      onEmail: (e) => this.setState({email: e.target.value}),
+      sheetBtn: this.state.sent ? "Downloading your info sheet \u2713" : "Send me the info sheet",
+      requestSheet: () => { if (this.humanOk(this.state.email)) { this.setState({sent: true}); const a = document.createElement("a"); a.href = "sheets/careorbit-orthopedics-2-page.pdf"; a.download = "CareOrbit-Orthopedics-Info-Sheet.pdf"; document.body.appendChild(a); a.click(); a.remove(); } }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FFFFFF}a{color:#2D5A87}a:hover{color:#E3735C}</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FFFFFF;min-height:100vh;display:flex;flex-direction:column">
+<dc-import name="SiteNav" active="book" announce="{{ false }}" hint-size="100%,80px"></dc-import>
+
+<div style="max-width:1180px;margin:0 auto;padding:72px 28px 96px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;flex:1">
+  <div style="display:flex;flex-direction:column;gap:22px">
+    <h1 style="font-family:Lato,sans-serif;font-weight:700;font-size:48px;line-height:1.1;letter-spacing:-0.015em;margin:0;text-wrap:pretty">20 minutes.<br><span style="color:#8CA0B3">Your service line, your numbers.</span></h1>
+    <p style="font-size:16.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:480px;text-wrap:pretty">No demo script, no obligation. We map your improvement goals against a proven blueprint and show you what an orbit would target for you.</p>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+      <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8CA0B3">What happens next</div>
+      <sc-for list="{{ next }}" as="n" hint-placeholder-count="3">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:13px;color:#E3735C;background:#F3F6FA;border-radius:999px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;flex-shrink:0">{{ n.i }}</div>
+          <div style="font-size:14.5px;line-height:1.55;color:rgba(15,29,46,.78);padding-top:4px">{{ n.t }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="background:#F3F6FA;border-radius:22px;padding:24px 26px;display:flex;flex-direction:column;gap:10px;margin-top:8px">
+      <div style="font-family:Lato,sans-serif;font-weight:700;font-size:17px;color:#0F1D2E">Not ready for a call?</div>
+      <div style="font-size:14px;line-height:1.55;color:rgba(15,29,46,.68)">Get the info sheet for your service line by email instead.</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <input value="{{ sheetEmail }}" onChange="{{ onSheetEmail }}" placeholder="Work email" style="flex:1;min-width:180px;font-family:Inter,sans-serif;font-size:14px;padding:12px 16px;border-radius:14px;border:1.5px solid #EAF1F8;background:#FFFFFF;outline:none" style-focus="border-color:#2D5A87">
+        <button onClick="{{ sendSheet }}" style="font-family:Inter,sans-serif;font-size:14px;font-weight:600;color:#1E3A5F;background:#FFFFFF;border:1.5px solid #EAF1F8;border-radius:999px;padding:12px 20px;cursor:pointer" style-hover="border-color:#2D5A87">{{ sheetBtn }}</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#F3F6FA;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 60px rgba(15,29,46,.08)">
+    <div style="font-family:Lato,sans-serif;font-weight:700;font-size:21px;color:#0F1D2E">Book your intro call</div>
+    <input value="{{ fName }}" onChange="{{ onName }}" placeholder="Name" style="font-family:Inter,sans-serif;font-size:15px;padding:14px 17px;border-radius:14px;border:1.5px solid #EAF1F8;background:#FFFFFF;outline:none" style-focus="border-color:#2D5A87">
+    <input value="{{ fOrg }}" onChange="{{ onOrg }}" placeholder="Organization" style="font-family:Inter,sans-serif;font-size:15px;padding:14px 17px;border-radius:14px;border:1.5px solid #EAF1F8;background:#FFFFFF;outline:none" style-focus="border-color:#2D5A87">
+    <input value="{{ fRole }}" onChange="{{ onRole }}" placeholder="Role" style="font-family:Inter,sans-serif;font-size:15px;padding:14px 17px;border-radius:14px;border:1.5px solid #EAF1F8;background:#FFFFFF;outline:none" style-focus="border-color:#2D5A87">
+    <select value="{{ fLine }}" onChange="{{ onLine }}" style="font-family:Inter,sans-serif;font-size:15px;padding:14px 14px;border-radius:14px;border:1.5px solid #EAF1F8;background:#FFFFFF;color:{{ lineColor }};outline:none">
+      <option value="">Service line&hellip;</option>
+      <option value="Oncology">Oncology</option>
+      <option value="Cardiology">Cardiology</option>
+      <option value="Orthopedics">Orthopedics</option>
+      <option value="Women's Health">Women's Health</option>
+      <option value="Bariatrics">Bariatrics</option>
+      <option value="Behavioral Health">Behavioral Health</option>
+      <option value="Medication Therapy &amp; Adherence">Medication Therapy &amp; Adherence</option>
+      <option value="Other">Other</option>
+    </select>
+    <input value="{{ fEmail }}" onChange="{{ onEmail }}" placeholder="Work email" style="font-family:Inter,sans-serif;font-size:15px;padding:14px 17px;border-radius:14px;border:1.5px solid #EAF1F8;background:#FFFFFF;outline:none" style-focus="border-color:#2D5A87">
+    <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+      <div style="font-size:13px;color:#B05A46;font-weight:500">{{ error }}</div>
+    </sc-if>
+    <button onClick="{{ submit }}" style="font-family:Inter,sans-serif;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#E3735C;border:none;border-radius:999px;padding:15px 28px;cursor:pointer" style-hover="background:#D3644E">Book a 20-minute intro call</button>
+    <div style="background:#FFFFFF;border:1.5px dashed #EAF1F8;border-radius:16px;padding:18px;text-align:center;font-size:12.5px;color:#8CA0B3;line-height:1.5">[Placeholder: embedded scheduler, Calendly or equivalent, wired to Michael's calendar]</div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { name: "", org: "", role: "", line: "", email: "", sheetEmail: "", sheetSent: false, error: "" };
+  renderVals() {
+    const set = (k) => (e) => this.setState({[k]: e.target.value, error: ""});
+    return {
+      fName: this.state.name, onName: set("name"),
+      fOrg: this.state.org, onOrg: set("org"),
+      fRole: this.state.role, onRole: set("role"),
+      fLine: this.state.line, onLine: set("line"),
+      lineColor: this.state.line ? "#0F1D2E" : "#8CA0B3",
+      fEmail: this.state.email, onEmail: set("email"),
+      showError: !!this.state.error, error: this.state.error,
+      submit: () => {
+        const s = this.state;
+        if (!s.name || !s.org || !s.email.includes("@")) { this.setState({error: "Please add your name, organization, and a work email."}); return; }
+        try { localStorage.setItem("co_booking", JSON.stringify({name: s.name, org: s.org, role: s.role, line: s.line, email: s.email, t: Date.now()})); } catch (e) {}
+        window.location.href = "ThankYou.dc.html?line=" + encodeURIComponent(s.line || "Other");
+      },
+      sheetEmail: this.state.sheetEmail, onSheetEmail: set("sheetEmail"),
+      sheetBtn: this.state.sheetSent ? "Request received \u2713" : "Send it",
+      sendSheet: () => { if (this.state.sheetEmail.includes("@")) this.setState({sheetSent: true}); },
+      next: [
+        {i: "1", t: "We confirm the time."},
+        {i: "2", t: "We do 10 minutes of homework on your organization."},
+        {i: "3", t: "You leave the call with a one-page summary of what an orbit would target for you."}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

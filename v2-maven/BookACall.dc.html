@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4;min-height:100vh;display:flex;flex-direction:column">
+<dc-import name="SiteNav" active="book" announce="{{ false }}" hint-size="100%,80px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:72px 28px 104px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;flex:1">
+  <div style="display:flex;flex-direction:column;gap:22px">
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(38px,4.5vw,54px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:pretty">20 minutes.<br><em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">Your</em> pain points, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">our</em> platform.</h1>
+    <p style="font-size:16.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:480px;text-wrap:pretty">No demo script, no obligation. We get introduced, hear which pain points you want to tackle, and give you a brief look at the platform, then decide together whether it's worth a second conversation.</p>
+    <div style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:26px;padding:26px 28px;display:flex;flex-direction:column;gap:10px;margin-top:8px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:17px">Not ready for a call?</div>
+      <div style="font-size:14px;line-height:1.55;color:rgba(15,29,46,.68)">Get the info sheet for your desired orbit solution by email instead.</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <select value="{{ sheetLine }}" onChange="{{ onSheetLine }}" style="flex:1;min-width:180px;font-family:Inter,sans-serif;font-size:14px;padding:13px 13px;border-radius:14px;border:1.5px solid rgba(15,29,46,.12);background:#FAF8F4;color:{{ sheetLineColor }};outline:none">
+          <option value="">Desired orbit solution&hellip; *</option>
+          <option value="platform">Full platform overview</option>
+          <option value="oncology">Oncology</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="orthopedics">Orthopedics</option>
+          <option value="womens-health">Women's Health</option>
+          <option value="bariatrics">Bariatrics</option>
+          <option value="behavioral-health">Behavioral Health</option>
+          <option value="medication-therapy">Medication Therapy &amp; Adherence</option>
+          <option value="surgical-support">Surgical Support</option>
+          <option value="behavioral-safety">Behavioral Risk (employers)</option>
+          <option value="community-research">Community Research</option>
+          <option value="engage">CareOrbit Engage</option>
+          <option value="capture">CareOrbit Capture</option>
+          <option value="assess">CareOrbit Assess</option>
+          <option value="data">CareOrbit Data</option>
+        </select>
+        <input onChange="{{ onHp }}" tabIndex="-1" autoComplete="off" aria-hidden="true" placeholder="Website" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"><input value="{{ sheetEmail }}" onChange="{{ onSheetEmail }}" placeholder="Work email *" style="flex:1;min-width:180px;font-family:Inter,sans-serif;font-size:14px;padding:13px 16px;border-radius:14px;border:1.5px solid rgba(15,29,46,.12);background:#FAF8F4;outline:none" style-focus="border-color:#0F1D2E">
+        <button onClick="{{ sendSheet }}" style="font-family:Inter,sans-serif;font-size:14px;font-weight:600;color:#0F1D2E;background:#FAF8F4;border:1.5px solid rgba(15,29,46,.12);border-radius:999px;padding:13px 22px;cursor:pointer;transition:border-color .15s" style-hover="border-color:#0F1D2E">{{ sheetBtn }}</button>
+      </div>
+    </div>
+  </div>
+
+  <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:32px;padding:36px;display:flex;flex-direction:column;gap:14px;box-shadow:0 28px 70px rgba(15,29,46,.08)">
+    <div style="font-family:Lato,sans-serif;font-weight:900;font-size:21px;letter-spacing:-0.01em">Book your intro call</div>
+    <sc-if value="{{ hasSrc }}" hint-placeholder-val="{{ false }}">
+      <label style="background:#FAF8F4;border:1px solid rgba(15,29,46,.08);border-radius:16px;padding:14px 16px;display:flex;gap:11px;align-items:flex-start;cursor:pointer">
+        <input type="checkbox" checked="{{ srcChecked }}" onChange="{{ toggleSrc }}" style="width:17px;height:17px;margin:1px 0 0;accent-color:#E3735C;cursor:pointer;flex-shrink:0">
+        <span style="display:flex;flex-direction:column;gap:5px">
+          <span style="font-family:Lato,sans-serif;font-weight:900;font-size:15px;color:#0F1D2E">{{ srcLabel }}</span>
+          <span style="font-size:13px;line-height:1.5;color:rgba(15,29,46,.66)">{{ srcNote }}</span>
+        </span>
+      </label>
+    </sc-if>
+    <input value="{{ fName }}" onChange="{{ onName }}" placeholder="Name *" style="font-family:Inter,sans-serif;font-size:15px;padding:15px 17px;border-radius:14px;border:1.5px solid rgba(15,29,46,.12);background:#FAF8F4;outline:none" style-focus="border-color:#0F1D2E">
+    <input value="{{ fOrg }}" onChange="{{ onOrg }}" placeholder="Organization *" style="font-family:Inter,sans-serif;font-size:15px;padding:15px 17px;border-radius:14px;border:1.5px solid rgba(15,29,46,.12);background:#FAF8F4;outline:none" style-focus="border-color:#0F1D2E">
+    <input value="{{ fRole }}" onChange="{{ onRole }}" placeholder="Role" style="font-family:Inter,sans-serif;font-size:15px;padding:15px 17px;border-radius:14px;border:1.5px solid rgba(15,29,46,.12);background:#FAF8F4;outline:none" style-focus="border-color:#0F1D2E">
+    <select value="{{ fLine }}" onChange="{{ onLine }}" style="font-family:Inter,sans-serif;font-size:15px;padding:15px 13px;border-radius:14px;border:1.5px solid rgba(15,29,46,.12);background:#FAF8F4;color:{{ lineColor }};outline:none">
+      <option value="">Service line&hellip;</option>
+      <option value="Oncology">Oncology</option>
+      <option value="Cardiology">Cardiology</option>
+      <option value="Orthopedics">Orthopedics</option>
+      <option value="Women's Health">Women's Health</option>
+      <option value="Bariatrics">Bariatrics</option>
+      <option value="Behavioral Health">Behavioral Health</option>
+      <option value="Medication Therapy &amp; Adherence">Medication Therapy &amp; Adherence</option>
+      <option value="Behavioral Risk (employers)">Behavioral Risk (employers)</option>
+      <option value="Other">Other</option>
+    </select>
+    <input value="{{ fEmail }}" onChange="{{ onEmail }}" placeholder="Work email *" style="font-family:Inter,sans-serif;font-size:15px;padding:15px 17px;border-radius:14px;border:1.5px solid rgba(15,29,46,.12);background:#FAF8F4;outline:none" style-focus="border-color:#0F1D2E">
+    <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+      <div style="font-size:13px;color:#B05A46;font-weight:500">{{ error }}</div>
+    </sc-if>
+    <sc-if value="{{ notBooking }}" hint-placeholder-val="{{ true }}">
+      <button onClick="{{ submit }}" style="font-family:Inter,sans-serif;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;border:none;border-radius:999px;padding:16px 28px;cursor:pointer;transition:background .2s,transform .2s" style-hover="background:#E3735C;transform:translateY(-1px)">Pick a time &rarr;</button>
+    </sc-if>
+    <sc-if value="{{ booking }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:13px;color:rgba(15,29,46,.6)">Pick a time that works for you:</div>
+        <iframe src="{{ calendlyUrl }}" title="Schedule with CareOrbit" style="width:100%;height:640px;border:1px solid rgba(15,29,46,.08);border-radius:16px;background:#FFFFFF"></iframe>
+      </div>
+    </sc-if>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { name: "", org: "", role: "", line: "", email: "", sheetEmail: "", sheetLine: "", sheetSent: false, error: "", src: "", srcLabel: "", srcNote: "", srcChecked: true, booking: false, calendlyUrl: "" };
+  componentDidMount() {
+    window.addEventListener("message", (e) => {
+      if (e.origin.indexOf("calendly.com") !== -1 && e.data && e.data.event === "calendly.event_scheduled") {
+        const s = this.state;
+        window.location.href = "ThankYou.dc.html?line=" + encodeURIComponent(s.line || "Other") + "&src=" + encodeURIComponent(s.src || "direct");
+      }
+    });
+    let src = "";
+    try { src = new URLSearchParams(window.location.search).get("src") || ""; } catch (e) {}
+    const lines = {
+      "oncology": "Oncology", "cardiology": "Cardiology", "orthopedics": "Orthopedics",
+      "womens-health": "Women's Health", "bariatrics": "Bariatrics",
+      "behavioral-health": "Behavioral Health", "medication-therapy": "Medication Therapy & Adherence",
+      "behavioral-safety": "Behavioral Risk (employers)"
+    };
+    const pages = {
+      "home": "the home page", "platform": "the Platform page", "outcomes": "the Outcomes & ROI page",
+      "about": "the About page", "orbits": "the orbit solutions overview", "book": "the Book a Call page",
+      "footer": "the site footer"
+    };
+    const topics = {
+      "capture": {label: "Content capture focus", note: "We will come ready to talk about turning your existing material into orbits. Uncheck if that is not the right starting point."},
+      "quote-get-started": {label: "Quote request: Single Orbit Solution plan", note: "A 30 minute meeting to scope one orbit line and give you a quote. Uncheck if you would rather keep it a general intro."},
+      "quote-department": {label: "Quote request: Department plan", note: "A 30 minute meeting to scope your department rollout and give you a quote. Uncheck if you would rather keep it a general intro."},
+      "quote-enterprise": {label: "Quote request: Full Enterprise plan", note: "A 30 minute meeting to scope a system-wide rollout and give you a quote. Uncheck if you would rather keep it a general intro."},
+      "quote-assess-single": {label: "Quote request: Assess, Single Program", note: "A 30 minute meeting to scope one assessment pathway and give you a quote. Uncheck if you would rather keep it a general intro."},
+      "quote-assess-department": {label: "Quote request: Assess, Department", note: "A 30 minute meeting to scope department-wide check-ins and give you a quote. Uncheck if you would rather keep it a general intro."},
+      "quote-assess-enterprise": {label: "Quote request: Assess, Full Enterprise", note: "A 30 minute meeting to scope system-wide patient-reported data and give you a quote. Uncheck if you would rather keep it a general intro."},
+      "quote-captivate-single": {label: "Quote request: Capture, Single Collection", note: "A 30 minute meeting to scope converting one service line's materials and give you a quote. Uncheck if you would rather keep it a general intro."},
+      "quote-captivate-department": {label: "Quote request: Capture, Department", note: "A 30 minute meeting to scope a department content library and give you a quote. Uncheck if you would rather keep it a general intro."},
+      "quote-captivate-enterprise": {label: "Quote request: Capture, Full Enterprise", note: "A 30 minute meeting to scope system-wide content conversion and give you a quote. Uncheck if you would rather keep it a general intro."}
+    };
+    if (topics[src]) {
+      this.setState({src: src, srcLabel: topics[src].label, srcNote: topics[src].note});
+    } else if (lines[src]) {
+      this.setState({src: src, line: lines[src], sheetLine: src, srcLabel: lines[src] + " focus",
+        srcNote: "If that is not right, uncheck the box and pick your service line below."});
+    } else if (pages[src]) {
+      this.setState({src: src, srcLabel: "", srcNote: ""});
+    }
+    try { sessionStorage.setItem("co_src", src); } catch (e) {}
+  }
+  t0 = Date.now();
+  humanOk(email) { return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email) && !this.state.hp && (Date.now() - this.t0 > 3000); }
+  renderVals() {
+    const set = (k) => (e) => this.setState({[k]: e.target.value, error: ""});
+    return {
+      fName: this.state.name, onName: set("name"),
+      fOrg: this.state.org, onOrg: set("org"),
+      fRole: this.state.role, onRole: set("role"),
+      fLine: this.state.line, onLine: set("line"),
+      lineColor: this.state.line ? "#0F1D2E" : "#8A93A0",
+      fEmail: this.state.email, onEmail: set("email"),
+      showError: !!this.state.error, error: this.state.error,
+      hasSrc: !!this.state.srcLabel, srcLabel: this.state.srcLabel, srcNote: this.state.srcNote,
+      srcChecked: this.state.srcChecked,
+      toggleSrc: (e) => {
+        const on = e.target.checked;
+        const lines = {"behavioral-safety":"Behavioral Risk (employers)","oncology":"Oncology","cardiology":"Cardiology","orthopedics":"Orthopedics","womens-health":"Women's Health","bariatrics":"Bariatrics","behavioral-health":"Behavioral Health","medication-therapy":"Medication Therapy & Adherence"};
+        this.setState({srcChecked: on, line: on ? (lines[this.state.src] || "") : ""});
+      },
+      submit: () => {
+        const s = this.state;
+        if (!s.name || !s.org || !s.email.includes("@")) { this.setState({error: "Please add your name, organization, and a work email."}); return; }
+        try { localStorage.setItem("co_booking", JSON.stringify({name: s.name, org: s.org, role: s.role, line: s.line, email: s.email, source: s.src || "direct", t: Date.now()})); } catch (e) {}
+        const q = "?hide_gdpr_banner=1&embed_type=Inline&name=" + encodeURIComponent(s.name) + "&email=" + encodeURIComponent(s.email) + "&utm_content=" + encodeURIComponent((s.org || "") + " | " + (s.role || "") + " | " + (s.line || "Other")) + "&utm_source=" + encodeURIComponent(s.src || "direct");
+        this.setState({booking: true, calendlyUrl: "https://calendly.com/careorbitceo/20-min-intro-call" + q});
+      },
+      booking: this.state.booking, notBooking: !this.state.booking,
+      calendlyUrl: this.state.calendlyUrl,
+      sheetEmail: this.state.sheetEmail, onSheetEmail: set("sheetEmail"),
+      onHp: (e) => this.setState({hp: e.target.value}),
+      sheetLine: this.state.sheetLine, onSheetLine: set("sheetLine"),
+      sheetLineColor: this.state.sheetLine ? "#0F1D2E" : "#8A93A0",
+      sheetBtn: this.state.sheetSent ? "Downloading \u2713" : "Send it",
+      sendSheet: () => {
+        if (!this.state.sheetLine || !this.humanOk(this.state.sheetEmail)) return;
+        this.setState({sheetSent: true});
+        const a = document.createElement("a");
+        a.href = "sheets/careorbit-" + this.state.sheetLine + "-2-page.pdf";
+        a.download = "";
+        document.body.appendChild(a); a.click(); a.remove();
+      },
+      next: [
+        {i: "1", t: "Quick introductions, and we listen for the pain points you actually want to solve."},
+        {i: "2", t: "A short walkthrough of the platform, only the parts that touch those pain points."},
+        {i: "3", t: "Together we decide whether it makes sense to keep going. No pressure either way."},
+        {i: "4", t: "If yes, we book a working session with your key stakeholders."},
+        {i: "5", t: "Shortly after, you get a plain-language proposal with the health and financial multipliers laid out."}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

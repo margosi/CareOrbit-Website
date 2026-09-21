@@ -1,0 +1,79 @@
+/* Community Research page rules, ported from CommunityResearch.dc.html's
+ * <helmet><style> block, in the original source order.
+ *
+ * NOT PORTED (already global in app/globals.css): body / a / html,
+ * [data-rv] and [data-rv].in, and the prefers-reduced-motion [data-rv]
+ * override.
+ *
+ * PORTED AS AN OVERRIDE - @keyframes coFloat. v2-maven defines coFloat
+ * twice with different values. Fourteen pages use
+ *   from translateY(-7px) -> to translateY(9px)
+ * which app/globals.css carries as the global definition. THIS page uses
+ *   from translateY(0) -> to translateY(-12px)
+ * and, because each legacy page's <style> was self-scoped, the two never
+ * collided. Hoisting them into one sheet would let the last definition
+ * win, so the minority variant is redefined here, page-scoped. Flagged in
+ * globals.css and tracked in migration/README.md since Phase 1.
+ */
+
+@keyframes coFloat {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 1020px) {
+  [data-hdr],
+  [data-hero-grid],
+  [data-split],
+  [data-two] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  [data-value] {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+  [data-povrow] {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  [data-start] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  [data-start] > a {
+    justify-self: start;
+  }
+}
+@media (max-width: 1100px) {
+  [data-stat5] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px !important;
+  }
+}
+@media (max-width: 700px) {
+  [data-stat5] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 960px) {
+  [data-catalog] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 32px !important;
+  }
+}
+@media (max-width: 620px) {
+  [data-catalog] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 820px) {
+  [data-ledger] {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+}

@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""
+Phase 1 checkpoint - typography specimen generator.
+
+Emits the SAME body markup into two places so a pixel diff isolates exactly
+one variable, the font source:
+
+  careorbit-next/app/specimen/body.ts   consumed by the Next page, which
+                                        resolves fonts from the self-hosted
+                                        @font-face rules in app/fonts.css
+  migration/typespecimen/reference.html standalone page that loads the fonts
+                                        from Google exactly as v2-maven does
+
+If those two render identically, self-hosting under the literal family names
+is faithful and every inline font-family declaration carried over from
+v2-maven will keep resolving.
+
+Covers every face the site actually loads: Lato 300/400/700/900,
+Source Serif 4 italic 500/600, Inter 400/500/600 - plus curly punctuation
+and accented characters to exercise the latin-ext subset.
+"""
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+MIG = os.path.dirname(HERE)
+ROOT = os.path.dirname(MIG)
+APP = os.path.join(ROOT, "careorbit-next")
+
+GF_HREF = (
+    "https://fonts.googleapis.com/css2"
+    "?family=Lato:ital,wght@0,300;0,400;0,700;0,900"
+    "&family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600"
+    "&family=Inter:wght@400;500;600"
+    "&display=swap"
+)
+
+LATO = "Lato, sans-serif"
+SERIF = "'Source Serif 4', serif"
+INTER = "Inter, sans-serif"
+
+# Strings lifted from real v2-maven copy, including the curly apostrophes
+# that appear in the hero paragraph ("today's patients expect").
+PANGRAM = "Engaged patients are your most valuable asset"
+CURLY = "today’s patients expect — orbits, not links à la carte"
+DIGITS = "0123456789 +65% −53% −41% +22% 9-in-10"
+
+
+def row(label, family, weight, size, style="normal", extra=""):
+    return (
+        '<div class="row">'
+        '<div class="label">%s</div>'
+        '<div style="font-family:%s;font-weight:%s;font-size:%spx;'
+        'font-style:%s;%s">%s</div>'
+        "</div>"
+    ) % (label, family, weight, size, style, extra, PANGRAM)
+
+
+def build_body():
+    p = []
+    p.append('<div class="wrap">')
+    p.append("<h2>Lato</h2>")
+    for w in (300, 400, 700, 900):
+        p.append(row("Lato %d / 40px" % w, LATO, w, 40))
+        p.append(row("Lato %d / 17px" % w, LATO, w, 17))
+
+    p.append("<h2>Source Serif 4 (italic)</h2>")
+    for w in (500, 600):
+        p.append(row("SS4 italic %d / 40px" % w, SERIF, w, 40, "italic"))
+        p.append(row("SS4 italic %d / 17px" % w, SERIF, w, 17, "italic"))
+
+    p.append("<h2>Inter</h2>")
+    for w in (400, 500, 600):
+        p.append(row("Inter %d / 40px" % w, INTER, w, 40))
+        p.append(row("Inter %d / 17px" % w, INTER, w, 17))
+
+    # The real hero treatment: Lato 300 at a large fixed size with the
+    # negative tracking and a Source Serif italic accent word inline.
+    p.append("<h2>Hero treatment (as used on Home)</h2>")
+    p.append(
+        '<h1 style="font-family:%s;font-weight:300;font-size:84px;'
+        'line-height:1.04;letter-spacing:-0.02em;margin:0 0 24px">'
+        "Engaged patients are your most "
+        '<em style="font-family:%s;font-style:italic;font-weight:500;'
+        'letter-spacing:0">valuable</em> asset.</h1>' % (LATO, SERIF)
+    )
+    # Section head treatment: Lato 900.
+    p.append(
+        '<h3 style="font-family:%s;font-weight:900;font-size:44px;'
+        'line-height:1.1;letter-spacing:-0.01em;margin:0 0 24px">'
+        "An orbit for "
+        '<em style="font-family:%s;font-style:italic;font-weight:500;'
+        'letter-spacing:0">every</em> clinical journey</h3>' % (LATO, SERIF)
+    )
+
+    p.append("<h2>Subset coverage</h2>")
+    p.append(
+        '<div style="font-family:%s;font-weight:400;font-size:20px">%s</div>'
+        % (INTER, CURLY)
+    )
+    p.append(
+        '<div style="font-family:%s;font-weight:400;font-size:20px">%s</div>'
+        % (LATO, CURLY)
+    )
+    p.append(
+        '<div style="font-family:%s;font-style:italic;font-weight:500;'
+        'font-size:20px">%s</div>' % (SERIF, CURLY)
+    )
+    p.append(
+        '<div style="font-family:%s;font-weight:600;font-size:28px">%s</div>'
+        % (INTER, DIGITS)
+    )
+    p.append("</div>")
+    return "\n".join(p)
+
+
+SPECIMEN_CSS = """
+body { margin: 0; background: #FAF8F4; color: #0F1D2E; }
+.wrap { padding: 40px; width: 1100px; box-sizing: border-box; }
+h2 { font-family: Inter, sans-serif; font-size: 13px; font-weight: 600;
+     text-transform: uppercase; letter-spacing: .12em; color: #8A93A0;
+     margin: 36px 0 12px; }
+.row { display: grid; grid-template-columns: 180px 1fr; align-items: baseline;
+       gap: 16px; padding: 6px 0; }
+.label { font-family: Inter, sans-serif; font-size: 12px; color: #8A93A0; }
+"""
+
+
+def main():
+    body = build_body()
+
+    # 1. Next page source
+    out_dir = os.path.join(APP, "app", "specimen")
+    os.makedirs(out_dir, exist_ok=True)
+    ts = (
+        "/* GENERATED by migration/scripts/gen_specimen.py - do not edit.\n"
+        " * Shared verbatim with migration/typespecimen/reference.html so a\n"
+        " * pixel diff isolates the font source and nothing else. */\n"
+        "export const SPECIMEN_CSS = `%s`;\n\n"
+        "export const SPECIMEN_BODY = `%s`;\n"
+    ) % (SPECIMEN_CSS, body)
+    with open(os.path.join(out_dir, "body.ts"), "w", encoding="utf-8") as fh:
+        fh.write(ts)
+
+    # 2. Google-Fonts reference page
+    ref_dir = os.path.join(MIG, "typespecimen")
+    os.makedirs(ref_dir, exist_ok=True)
+    html = (
+        "<!DOCTYPE html>\n<html><head><meta charset='utf-8'>\n"
+        "<title>Type specimen - Google Fonts reference</title>\n"
+        "<link rel='preconnect' href='https://fonts.googleapis.com'>\n"
+        "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>\n"
+        "<link href='%s' rel='stylesheet'>\n"
+        "<style>%s</style>\n</head>\n<body>\n%s\n</body></html>\n"
+    ) % (GF_HREF, SPECIMEN_CSS, body)
+    with open(os.path.join(ref_dir, "reference.html"), "w", encoding="utf-8") as fh:
+        fh.write(html)
+
+    print("wrote careorbit-next/app/specimen/body.ts")
+    print("wrote migration/typespecimen/reference.html")
+    print("body markup bytes: %d (identical in both)" % len(body))
+
+
+if __name__ == "__main__":
+    main()

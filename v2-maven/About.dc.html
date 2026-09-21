@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(max-width:1020px){[data-hdr]{grid-template-columns:1fr!important;gap:24px!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="about" hint-size="100%,120px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:76px 28px 88px;display:flex;flex-direction:column;gap:22px;align-items:center;text-align:center">
+  <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(36px,4.4vw,54px);line-height:1.06;letter-spacing:-0.025em;margin:0;max-width:880px;text-wrap:balance">Ten years building patient engagement that health focused organizations can <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">actually run</em>.</h1>
+  <p style="font-size:17.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:760px;text-wrap:pretty">CareOrbit is a Digital Patient Engagement Platform designed to support any patient care journey through education, understanding, motivation, and insight-driven improvement. We are a Total Orbit company, built in St. Louis, shaped by more than a decade of work alongside Washington University, Siteman Cancer Center, and BJC HealthCare.</p>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:44px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.5vw,40px);line-height:1.1;letter-spacing:-0.02em;margin:0">Leadership</h2>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">Lean, senior, and hands-on with every client. The people you meet on the first call are the people who build your orbit.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+    <sc-for list="{{ team }}" as="p" hint-placeholder-count="3">
+      <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:30px;padding:36px 32px;display:flex;flex-direction:column;gap:16px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s" style-hover="transform:translateY(-6px);box-shadow:0 24px 56px rgba(15,29,46,.1)">
+        <image-slot id="{{ p.slotId }}" shape="circle" src="{{ p.src }}" placeholder="Headshot" style="width:110px;height:110px"></image-slot>
+        <div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:22px;letter-spacing:-0.01em">{{ p.name }}</div>
+          <div style="font-size:13.5px;font-weight:600;color:#E3735C">{{ p.role }}</div>
+        </div>
+        <div style="font-size:14px;line-height:1.6;color:rgba(15,29,46,.68)">{{ p.bio }}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:38px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.5vw,40px);line-height:1.1;letter-spacing:-0.02em;margin:0">How we <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">work</em>.</h2>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">We have been at this for more than ten years, and we still run lean by choice. No layers between you and the people doing the work: the team that scopes your orbit builds it, launches it, and sits in your quarterly reviews.</p>
+  </div>
+  <div data-rv style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px 32px">
+    <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+      <div style="border-top:1px solid rgba(15,29,46,.14);padding-top:16px;font-size:15px;line-height:1.55;font-weight:500;text-wrap:pretty">{{ f }}</div>
+    </sc-for>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:80px 64px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
+    <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.08;letter-spacing:-0.02em;margin:0;color:#FFFFFF">Put a <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#F2B8C6">face</em> to the platform.</h2>
+    <p style="font-size:16px;line-height:1.6;color:#B9C8D8;margin:0;max-width:520px">20 minutes with the people who will actually build your orbit.</p>
+    <a href="BookACall.dc.html?src=about" style="text-decoration:none;font-size:16px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:17px 32px;border-radius:999px;margin-top:6px;transition:background .2s,color .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      team: [
+        {name: "Michael Margraf", role: "Co-founder & CEO", linkedin: "https://www.linkedin.com/in/michael-margraf-65a83333/", slotId: "headshot-michael", src: "../uploads/1722391799177.jpg", bio: "Michael runs all facets of the business and stays personally involved in every client relationship, with nearly 20 years leading technology startups. He holds a BBA from Washington University in St. Louis."},
+        {name: "Jeff Coburn", role: "Co-founder & Chief Strategy Officer", linkedin: "https://www.linkedin.com/in/jeff-coburn-1405844/", slotId: "headshot-jeff", src: "images/headshot-jeff.png", bio: "Jeff is the co-inventor of the orbit and heads engagement: strategy, content, and how every orbit earns a patient's attention. Most recently he was SVP / Director of Creative Strategy for Momentum Worldwide."},
+        {name: "David Scott", role: "Co-founder", linkedin: "https://www.linkedin.com/in/davidpscott/", slotId: "headshot-david", src: "images/headshot-david.png", bio: "David is a Fortune 500 executive and serial entrepreneur with multiple exits who guides operations and commercial strategy. He holds a J.D., cum laude, from St. Louis University School of Law."},
+        {name: "Jim Peck", role: "Head of Development", linkedin: "https://www.linkedin.com/in/quenchdev/", slotId: "headshot-jim", src: "images/headshot-jim.png", bio: "Jim leads the development team behind the CareOrbit platform, from the patient-facing orbit to care-team dashboards and EHR workflow."}
+      ],
+      facts: [
+        "10+ years building patient engagement",
+        "St. Louis roots; WashU, Siteman, and BJC relationships",
+        "Live within large, complex health systems",
+        "A Customer Success Manager on every care team"
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

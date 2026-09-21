@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="motion.js"></script>
+<script src="image-slot.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(max-width:1020px){[data-hdr],[data-hero-grid],[data-split],[data-two]{grid-template-columns:1fr!important;gap:32px!important}
+  [data-row]{grid-template-columns:1fr!important;gap:18px!important}
+  [data-hero-grid]{min-height:0!important;margin-top:-64px!important}
+  [data-hero-grid] [data-hero-media]{height:clamp(260px,52vw,420px)!important;min-height:0!important}
+  [data-sec]{margin-top:64px!important}
+  [data-panel]{padding:44px 24px!important;border-radius:24px!important}}
+@media(max-width:700px){[data-sec]{margin-top:48px!important}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}}
+@media(max-width:820px){[data-study]{grid-template-columns:1fr!important;gap:28px!important}}
+@keyframes heroSweep{0%{transform:translateX(-85%)}50%{transform:translateX(102%)}100%{transform:translateX(-85%)}}
+@keyframes heroDrift{0%{transform:translate(-12%,-16%) scale(1)}50%{transform:translate(8%,6%) scale(1.18)}100%{transform:translate(-12%,-16%) scale(1)}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}[data-hero-glow]{animation:none!important}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4;min-height:100vh;display:flex;flex-direction:column">
+<dc-import name="SiteNav" active="orbits" hint-size="100%,80px"></dc-import>
+
+<div data-screen-label="CareOrbit Assess" style="width:100%;flex:1">
+
+  <div data-hero-grid data-rv style="display:grid;grid-template-columns:1fr 1.15fr;align-items:center;min-height:clamp(480px,58vw,680px);margin-top:-104px;position:relative;z-index:0">
+    <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none" aria-hidden="true">
+      <div data-hero-glow style="position:absolute;top:0;left:0;width:85%;height:clamp(300px,36vw,520px);background:radial-gradient(90% 100% at 50% 0%,rgba(91,155,234,.55) 0%,rgba(91,155,234,.26) 48%,rgba(91,155,234,0) 78%);filter:blur(28px);animation:heroSweep 36s ease-in-out infinite"></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:26px;align-items:flex-start;padding:164px 48px 88px clamp(28px,6vw,96px);box-sizing:border-box;position:relative">
+      <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(38px,4.6vw,60px);line-height:1.03;letter-spacing:-0.025em;margin:0;text-wrap:balance"><em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#2D5A87">Assess</em></h1>
+      <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:rgba(15,29,46,.75);margin:0;max-width:540px;text-wrap:pretty">Structured patient input for any orbit, from light check-ins to formalized eScreening and PROMs reporting, or entirely on its own. No app, no login, no new FTEs.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="BookACall.dc.html?src=assess-page" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 30px;border-radius:999px;transition:background .2s" style-hover="background:#E3735C;color:#FFFFFF">Book a 20-minute intro call</a>
+        <a href="#cta" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;border:1.5px solid rgba(15,29,46,.25);padding:15px 30px;border-radius:999px;transition:border-color .2s,color .2s" style-hover="border-color:#E3735C;color:#E3735C">Get the Assess info sheet</a>
+      </div>
+    </div>
+    <div data-hero-media style="position:relative;align-self:stretch;height:100%;min-height:clamp(480px,58vw,680px)">
+      <image-slot id="assess-hero-slot" radius="0" src="images/assess-hero-5.png" placeholder="[Placeholder: Assess hero image]" style="position:absolute;inset:0;width:100%;height:100%;display:block"></image-slot>
+    </div>
+  </div>
+
+  <div data-sec style="max-width:1440px;margin:96px auto 0;padding:0 28px;box-sizing:border-box">
+    <div data-rv data-panel style="background:#F1EDE4;border-radius:32px;padding:clamp(48px,6vw,88px) clamp(28px,5vw,80px);box-sizing:border-box">
+    <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">One tool, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">three ways</em> to listen.</h2>
+      <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">Between visits is when symptoms shift, screenings lapse, and reportable outcomes go uncollected. Assess turns that quiet stretch into structured, usable data.</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ modes }}" as="m" hint-placeholder-count="3">
+        <div data-row style="display:grid;grid-template-columns:.62fr 1fr;gap:44px;border-top:1px solid rgba(15,29,46,.14);padding:30px 0 34px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:{{ m.label }}">{{ m.kicker }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.16;letter-spacing:-0.02em;text-wrap:balance">{{ m.t }}</div>
+            <div style="font-size:15.5px;line-height:1.55;color:rgba(15,29,46,.6);max-width:330px">{{ m.sub }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <sc-for list="{{ m.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:flex;gap:14px;align-items:flex-start">
+                <span style="width:9px;height:1.5px;background:{{ m.dot }};display:inline-block;flex-shrink:0;margin-top:12px"></span>
+                <span style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.82)"><strong style="font-weight:600;color:#0F1D2E">{{ it.t }}</strong> {{ it.d }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    </div>
+  </div>
+
+  <div data-sec style="max-width:1440px;margin:96px auto 0;padding:0 28px;box-sizing:border-box">
+    <div data-rv data-panel style="background:#0F1D2E url(arc-lines.svg) center/cover;border-radius:32px;padding:clamp(48px,6vw,88px) clamp(28px,5vw,80px);box-sizing:border-box">
+      <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4FB3BF">Why now</div>
+          <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">PROMs stopped being <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#4FB3BF">optional</em>.</h2>
+        </div>
+        <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:#B9C8D8;margin:0;text-wrap:pretty">CMS now requires patient-reported outcomes for hip and knee replacement, and has announced expansion beyond the hospital. Collection is the hard part: patients are home when the surveys come due. That is exactly where Assess lives.</p>
+      </div>
+      <div style="border-top:1px solid #2D5A87;padding-top:26px;margin-bottom:22px">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#4FB3BF">The orthopedic mandate, by the numbers</div>
+      </div>
+      <div data-stat5 style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px">
+        <sc-for list="{{ mandateStats }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #4FB3BF;padding-top:18px;min-height:150px">
+            <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.2vw,42px);line-height:1;color:#FFFFFF">{{ s.v }}</div>
+            <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4FB3BF">{{ s.l }}</div>
+            <div style="font-size:15px;line-height:1.5;color:#B9C8D8">{{ s.d }}</div>
+            <div style="font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#7E93AB;margin-top:auto">{{ s.src }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:13px;line-height:1.6;color:#7E93AB;margin:26px 0 0;max-width:760px">Hip and knee arthroplasty is where the mandate starts, not where it ends. CMS has finalized expansion of the same measure to outpatient and ambulatory surgical settings, and value-based programs continue to push patient-reported measures into additional service lines.</p>
+    </div>
+  </div>
+
+  <div data-sec style="max-width:1440px;margin:96px auto 0;padding:0 28px;box-sizing:border-box">
+    <div data-rv data-panel style="background:#EEF2F7;border-radius:32px;padding:clamp(48px,6vw,88px) clamp(28px,5vw,80px);box-sizing:border-box">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:8px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2D5A87">Reimbursement and funding</div>
+        <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;font-size:16px;color:rgba(15,29,46,.55)">Screening that pays its way</div>
+      </div>
+      <div data-stat5 style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px">
+        <sc-for list="{{ payQuad }}" as="p" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #2D5A87;padding-top:16px">
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:17px;letter-spacing:-0.01em;color:#0F1D2E">{{ p.t }}</div>
+            <div style="font-size:14px;line-height:1.55;color:rgba(15,29,46,.65)">{{ p.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(15,29,46,.5);margin:26px 0 0">CPT codes shown as examples. Billing eligibility depends on payer policy and documentation.</p>
+    </div>
+  </div>
+
+  <div data-sec style="max-width:1440px;margin:96px auto 0;padding:0 clamp(28px,5vw,108px);box-sizing:border-box">
+    <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Every patient scored, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">every score routed</em>.</h2>
+      <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">Most systems stop when the assessment is submitted. Assess keeps working the result: scores are routed, patients are supported, and the next assessment is already scheduled.</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ inside }}" as="m" hint-placeholder-count="3">
+        <div data-row style="display:grid;grid-template-columns:.62fr 1fr;gap:44px;border-top:1px solid rgba(15,29,46,.14);padding:30px 0 34px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F6B73">{{ m.kicker }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.16;letter-spacing:-0.02em;text-wrap:balance">{{ m.t }}</div>
+            <div style="font-size:15.5px;line-height:1.55;color:rgba(15,29,46,.6);max-width:330px">{{ m.sub }}</div>
+          </div>
+          <div data-two style="display:grid;grid-template-columns:1fr 1fr;gap:16px 36px;align-content:start">
+            <sc-for list="{{ m.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:flex;gap:14px;align-items:flex-start">
+                <span style="width:9px;height:1.5px;background:#4FB3BF;display:inline-block;flex-shrink:0;margin-top:12px"></span>
+                <span style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.82)"><strong style="font-weight:600;color:#0F1D2E">{{ it.t }}</strong> {{ it.d }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+      <p style="font-size:12.5px;line-height:1.6;color:rgba(15,29,46,.5);margin:14px 0 0">Instruments and schedules are configured to your protocols and approved by your team.</p>
+    </div>
+  </div>
+
+  <div data-sec style="max-width:1440px;margin:96px auto 0;padding:0 clamp(28px,5vw,108px);box-sizing:border-box">
+    <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Proven in the field</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">eScreening, tested where the stakes are <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">highest</em>.</h2>
+      </div>
+      <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">The eScreening approach behind Assess is a proven solution in use across VA medical centers nationwide, where screening completion is a matter of safety, not paperwork.</p>
+    </div>
+    <div data-study data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;border-top:1px solid rgba(15,29,46,.14);padding-top:34px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:10px;align-items:center">
+          <span style="background:#EBF4EE;color:#1A6B3C;font-size:12px;font-weight:600;letter-spacing:.04em;padding:6px 13px;border-radius:999px">Deployed at scale</span>
+        </div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(22px,2.4vw,28px);line-height:1.18;letter-spacing:-0.02em;text-wrap:balance">Adopted across VA medical centers, with measured gains over paper screening.</div>
+        <p style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;text-wrap:pretty">In a published VA study of 1,372 newly enrolling veterans, electronic screening beat paper on accessibility, completion rate, clinical processes, speed of connection to care, and time to document required suicide risk assessments. By 2022 the program had been adopted at 19 VA medical centers with 18 more adoptions in progress. These are VA program results, cited as evidence for the approach Assess is built on.</p>
+        <a href="EScreeningResults.dc.html" style="align-self:flex-start;text-decoration:none;font-size:14.5px;font-weight:600;color:#2D5A87;padding-bottom:3px;border-bottom:1.5px solid rgba(45,90,135,.4);transition:color .2s,border-color .2s" style-hover="color:#E3735C;border-color:#E3735C">Read the eScreening evidence &rarr;</a>
+        <div style="height:clamp(180px,20vw,240px)"><img src="images/assess-escreening.png" alt="A veteran completing eScreening assessments at a VA medical center with his care team" style="width:100%;height:100%;object-fit:cover;border-radius:24px;display:block"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-content:start">
+        <sc-for list="{{ vaStats }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid rgba(15,29,46,.14);padding-top:18px">
+            <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.2vw,40px);line-height:1;color:#0F1D2E">{{ s.v }}</div>
+            <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1F7B87">{{ s.l }}</div>
+            <div style="font-size:14px;line-height:1.5;color:rgba(15,29,46,.62)">{{ s.d }}</div>
+            <div style="font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#B0A99E">{{ s.src }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div data-sec style="max-width:1440px;margin:96px auto 0;padding:0 clamp(28px,5vw,108px);box-sizing:border-box">
+    <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Pick one requirement. <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">Prove it in a quarter</em>.</h2>
+      <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">Assess launches without an interface project, a portal rollout, or new work for your staff. 90 days to launch, and the first cohort reports capture rates against your baseline inside a quarter.</p>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ launch }}" as="m" hint-placeholder-count="3">
+        <div data-row style="display:grid;grid-template-columns:.62fr 1fr;gap:44px;border-top:1px solid rgba(15,29,46,.14);padding:30px 0 34px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#A8412F">{{ m.kicker }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.16;letter-spacing:-0.02em;text-wrap:balance">{{ m.t }}</div>
+            <div style="font-size:15.5px;line-height:1.55;color:rgba(15,29,46,.6);max-width:330px">{{ m.sub }}</div>
+          </div>
+          <div data-two style="display:grid;grid-template-columns:{{ m.cols }};gap:16px 36px;align-content:start">
+            <sc-for list="{{ m.items }}" as="it" hint-placeholder-count="3">
+              <div style="display:flex;gap:14px;align-items:flex-start">
+                <sc-if value="{{ it.n }}" hint-placeholder-val="{{ false }}"><span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:17px;color:#E3735C;flex-shrink:0;min-width:26px">{{ it.n }}</span></sc-if>
+                <sc-if value="{{ it.plain }}" hint-placeholder-val="{{ true }}"><span style="width:9px;height:1.5px;background:#E3735C;display:inline-block;flex-shrink:0;margin-top:12px"></span></sc-if>
+                <span style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.82)"><strong style="font-weight:600;color:#0F1D2E">{{ it.t }}</strong> {{ it.d }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div id="cta" data-sec style="max-width:1440px;margin:96px auto 0;padding:0 28px 104px;box-sizing:border-box">
+    <div data-rv data-split data-panel style="background:#0F1D2E url(arc-lines.svg) center/cover;border-radius:32px;padding:clamp(48px,6vw,80px) clamp(28px,5vw,72px);box-sizing:border-box;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Start listening <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#4FB3BF">between visits</em>.</h2>
+        <p style="font-size:16.5px;line-height:1.65;color:#B9C8D8;margin:0;max-width:520px;text-wrap:pretty">Bring one screening mandate, one PROMs requirement, or one orbit you want to hear back from. We will show you what Assess collects and where it lands in your workflow.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px">
+          <a href="BookACall.dc.html?src=assess-page" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 30px;border-radius:999px;transition:background .2s" style-hover="background:#F2B8C6;color:#0F1D2E">Book a 20-minute intro call</a>
+        </div>
+      </div>
+      <div style="background:#1E3A5F;border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:19px;color:#FFFFFF">Not ready for a call?</div>
+        <div style="font-size:14px;line-height:1.55;color:#B9C8D8">Get the CareOrbit Assess info sheet by email.</div>
+        <input onChange="{{ onHp }}" tabIndex="-1" autoComplete="off" aria-hidden="true" placeholder="Website" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"><input value="{{ email }}" onChange="{{ onEmail }}" placeholder="Work email *" style="font-family:Inter,sans-serif;font-size:14.5px;padding:14px 16px;border-radius:14px;border:1.5px solid #2D5A87;background:#0F1D2E;color:#FFFFFF;outline:none" style-focus="border-color:#4FB3BF">
+        <button onClick="{{ requestSheet }}" style="font-family:Inter,sans-serif;font-size:14.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:none;border-radius:999px;padding:13px 24px;cursor:pointer;align-self:flex-start;transition:background .2s" style-hover="background:#F2B8C6">{{ sheetBtn }}</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {email: "", sent: false};
+  t0 = Date.now();
+  humanOk(email) { return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email) && !this.state.hp && (Date.now() - this.t0 > 3000); }
+  renderVals() {
+    return {
+      email: this.state.email,
+      onHp: (e) => this.setState({hp: e.target.value}),
+      onEmail: (e) => this.setState({email: e.target.value, sent: false}),
+      sheetBtn: this.state.sent ? "Downloading your info sheet \u2713" : "Send me the info sheet",
+      requestSheet: () => { if (this.humanOk(this.state.email)) { this.setState({sent: true}); const a = document.createElement("a"); a.href = "sheets/careorbit-assess-2-page.pdf"; a.download = "CareOrbit-Assess-Info-Sheet.pdf"; document.body.appendChild(a); a.click(); a.remove(); } },
+      modes: [
+        {kicker: "Inside any orbit", t: "Light assessments, woven into the guidance", label: "#A8412F", dot: "#E3735C",
+         sub: "Check-ins arrive as part of the orbit a patient is already following, with no separate ask.",
+         items: [
+           {t: "Symptom and progress check-ins", d: "scheduled to the clinical pathway: after discharge, before a follow-up, at the moments your team wants eyes on."},
+           {t: "No new app or login.", d: "Patients answer from the same guide they already open by text or email."},
+           {t: "Responses return to the care team dashboard", d: "and flag who needs a call before the next visit does."}
+         ]},
+        {kicker: "Standalone", t: "Formalized eScreening, no orbit required", label: "#1F6B73", dot: "#4FB3BF",
+         sub: "A proven approach, currently deployed across VA medical centers nationwide.",
+         items: [
+           {t: "Validated screening instruments", d: "run on schedule and issued the same easy ways: an order, a patient list, a QR code, or a text."},
+           {t: "Structured results into your workflow,", d: "supporting the CPT-coded screening services your clinicians already perform and document."},
+           {t: "Rising risk surfaced early,", d: "with scores routed by role and urgency instead of waiting in a portal inbox."}
+         ]},
+        {kicker: "Reporting programs", t: "PROMs collection that meets the mandate", label: "#2D5A87", dot: "#5B9BEA",
+         sub: "Built for the pre-op and post-op survey windows that reporting programs actually enforce.",
+         items: [
+           {t: "Validated PROMs on the required schedule,", d: "including the long post-op windows when patients are home and hardest to reach."},
+           {t: "Completion rates that survive the gap.", d: "Reminders ride the same channel patients already respond to, protecting the capture rates your reporting depends on."},
+           {t: "Ortho today, more service lines next.", d: "CMS has finalized expansion of PROMs reporting beyond inpatient hip and knee, and Assess is built to follow it."}
+         ]}
+      ],
+      mandateStats: [
+        {v: "Jul 2024", l: "Collection began", d: "Pre-operative PROMs capture required for elective hip and knee replacement performed from July 1, 2024.", src: "CMS IQR / AAOS"},
+        {v: "50%", l: "Required capture", d: "Minimum share of eligible patients with complete pre- and post-op surveys and risk variables.", src: "CMS IQR / AAOS"},
+        {v: "FY 2028", l: "Payment at risk", d: "Hospitals that miss reporting requirements face an annual payment reduction.", src: "J. Arthroplasty, 2024"},
+        {v: "2027", l: "Expansion arrives", d: "Mandatory reporting extends to outpatient and ambulatory surgical settings after a voluntary phase.", src: "J. Arthroplasty, 2025"}
+      ],
+      vaStats: [
+        {v: "19+", l: "VA medical centers", d: "Adopted the eScreening program by 2022, with 18 more adoptions then in progress.", src: "VA Diffusion of Excellence"},
+        {v: "1,372", l: "Veterans studied", d: "Published two-cohort study comparing electronic screening with paper screening.", src: "Pittman et al., 2017"},
+        {v: "Higher", l: "Completion and access", d: "eScreening beat paper on accessibility, completion rate, and clinical processes.", src: "Pittman et al., 2017"},
+        {v: "Faster", l: "Connection to care", d: "Quicker vesting into the health system and faster documentation of required suicide risk assessments.", src: "Pittman et al., 2017"}
+      ],
+      payQuad: [
+        {t: "Billable screening support", d: "Delivery and documentation behind CPT-coded services, such as 96127, 96160 and 96161, and G0444."},
+        {t: "Capture rates that hold", d: "Reminders patients answer, so scheduled screenings are completed and billable, not missed."},
+        {t: "Grant initiatives", d: "Scheduled instruments and structured exports support grant-funded programs and community studies."},
+        {t: "Value-based reporting", d: "PROMs and screening results, structured for CMS, MIPS, and payer programs."}
+      ],
+      inside: [
+        {kicker: "What you get", t: "Pre-built, flexible, and never a dead end",
+         sub: "Ready to run on day one, and built to your protocol when day one is not enough.",
+         items: [
+           {t: "Pre-built assessments.", d: "Ready-made packages for major requirements: CMS PROMs windows, behavioral screening, and annual screenings."},
+           {t: "Build and deploy your own.", d: "A flexible builder for research and study support, patient information, satisfaction, and even marketing."},
+           {t: "Paired with Engage.", d: "Complimentary CareOrbit Engage journeys support patients around each assessment, with preparation, reminders, and education that lift completion and results."},
+           {t: "Results that go somewhere.", d: "Scores routed by role and urgency, and structured results into your EHR, registry file, or team workflow."}
+         ]},
+        {kicker: "Where teams start", t: "Four proven starting points",
+         sub: "The screening or PROMs requirement you are on the hook for, and who reports it today.",
+         items: [
+           {t: "Ortho PROMs.", d: "The CMS hip and knee windows, pre-op and long post-op."},
+           {t: "Behavioral screening.", d: "PHQ-9, GAD-7, and the instruments your program runs."},
+           {t: "In-orbit check-ins.", d: "Light assessments woven into any journey."},
+           {t: "Standalone eScreening.", d: "No orbit required: an order, a list, a QR code, or a text."}
+         ]},
+        {kicker: "Instrument support", t: "Validated instruments, on schedule",
+         sub: "Standard instruments configured to your protocol, with scoring and thresholds your team sets.",
+         items: [
+           {t: "PHQ-9 and PHQ-2", d: "depression"},
+           {t: "GAD-7", d: "anxiety"},
+           {t: "HOOS JR and KOOS JR", d: "hip and knee PROMs"},
+           {t: "PROMIS Global-10", d: "global health"},
+           {t: "C-SSRS", d: "suicide risk screening"},
+           {t: "AUDIT-C", d: "alcohol use"},
+           {t: "PC-PTSD-5", d: "trauma screening"},
+           {t: "GAIN", d: "substance use and behavioral health"},
+           {t: "Custom check-ins", d: "your protocol's questions"},
+           {t: "Custom instruments", d: "built to your study or program"}
+         ]}
+      ],
+      launch: [
+        {kicker: "Zero disruption", t: "Nothing added to anyone's day", cols: "1fr 1fr",
+         sub: "Issued from the workflow you already run: an order, a patient list, a QR code, or a text.",
+         items: [
+           {plain: true, t: "No new FTEs.", d: "Nothing added to anyone's day."},
+           {plain: true, t: "White-label.", d: "Your brand, your voice."},
+           {plain: true, t: "Live in a quarter.", d: "From kickoff to first patient."},
+           {plain: true, t: "HIPAA, SOC 2, HITRUST.", d: "Documentation ready for review."},
+           {plain: true, t: "No risk, no lock-in.", d: "And no disruption to your offices."},
+           {plain: true, t: "EHR-friendly.", d: "A scheduled flat file, or nothing at all."}
+         ]},
+        {kicker: "What happens next", t: "Three steps from kickoff to live", cols: "1fr",
+         sub: "A launch measured in weeks, with the numbers agreed up front.",
+         items: [
+           {n: "01", t: "Pick the requirement, week one.", d: "The screening or PROMs mandate you are on the hook for. We agree on the two or three numbers this has to move."},
+           {n: "02", t: "We build it, weeks two through six.", d: "Your instruments, your schedule, your brand and thresholds. We build it for your team's review."},
+           {n: "03", t: "We measure against your baseline.", d: "The first cohort reports capture rates against your baseline inside a quarter."}
+         ]},
+        {kicker: "Common questions", t: "What your team might ask", cols: "1fr",
+         sub: "The questions that come up in the first call, answered plainly.",
+         items: [
+           {plain: true, t: "Does my staff have to chase surveys?", d: "No. Scheduling, reminders, and escalation run automatically. Your team sees scores and acts on the ones that need attention."},
+           {plain: true, t: "What does IT have to do?", d: "As little as a scheduled flat file, or nothing at all. HIPAA, SOC 2, and HITRUST documentation is ready for review."},
+           {plain: true, t: "Can we bill for this?", d: "Assess supports the delivery and documentation behind CPT-coded screening services. Eligibility depends on payer policy."},
+           {plain: true, t: "How fast will we know if it works?", d: "90 days to launch, and the first cohort reports capture rates against your baseline inside a quarter."}
+         ]}
+      ],
+      bring: [
+        {n: "01", t: "The screening or PROMs requirement you are on the hook for, and who reports it today."},
+        {n: "02", t: "Your current completion rate, or an honest guess at it."},
+        {n: "03", t: "Where results need to land: EHR, registry file, or a team inbox."}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

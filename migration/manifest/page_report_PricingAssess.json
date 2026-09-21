@@ -1,0 +1,82 @@
+[
+  {
+    "width": 1440,
+    "delta_pct": 0.0,
+    "verdict": "PASS",
+    "height": 1914,
+    "broken_images": [],
+    "console_errors": [],
+    "bad_responses": [],
+    "reveals_hidden": 0,
+    "image_wait": {
+      "status": "all-complete",
+      "pending": 0,
+      "skipped_hidden": 0
+    },
+    "expected_deviation": null
+  },
+  {
+    "width": 1280,
+    "delta_pct": 0.0,
+    "verdict": "PASS",
+    "height": 1914,
+    "broken_images": [],
+    "console_errors": [],
+    "bad_responses": [],
+    "reveals_hidden": 0,
+    "image_wait": {
+      "status": "all-complete",
+      "pending": 0,
+      "skipped_hidden": 0
+    },
+    "expected_deviation": null
+  },
+  {
+    "width": 1024,
+    "delta_pct": 0.0,
+    "verdict": "PASS",
+    "height": 1991,
+    "broken_images": [],
+    "console_errors": [],
+    "bad_responses": [],
+    "reveals_hidden": 0,
+    "image_wait": {
+      "status": "all-complete",
+      "pending": 0,
+      "skipped_hidden": 0
+    },
+    "expected_deviation": null
+  },
+  {
+    "width": 768,
+    "delta_pct": 0.6539,
+    "verdict": "EXPECTED-DEVIATION",
+    "height": 3439,
+    "broken_images": [],
+    "console_errors": [],
+    "bad_responses": [],
+    "reveals_hidden": 0,
+    "image_wait": {
+      "status": "all-complete",
+      "pending": 0,
+      "skipped_hidden": 0
+    },
+    "expected_deviation": "Footer grid collapses to 2 columns under 900px (approved Phase 2). v2-maven kept 5 columns at every width; its link columns shrank to ~7px and overlapped."
+  },
+  {
+    "width": 390,
+    "delta_pct": 1.0427,
+    "verdict": "EXPECTED-DEVIATION",
+    "height": 4175,
+    "broken_images": [],
+    "console_errors": [],
+    "bad_responses": [],
+    "reveals_hidden": 0,
+    "image_wait": {
+      "status": "all-complete",
+      "pending": 0,
+      "skipped_hidden": 0
+    },
+    "expected_deviation": "Footer grid collapses to 1 column under 640px (approved Phase 2)."
+  }
+]

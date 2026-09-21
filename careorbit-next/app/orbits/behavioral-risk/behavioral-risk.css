@@ -1,0 +1,146 @@
+/* Behavioral Risk page rules, ported from BehavioralSafety.dc.html's
+ * <helmet><style> block (lines 22-40), in the original source order.
+ *
+ * SOURCE ORDER IS THE CONTRACT - see cardiology.css for why.
+ *
+ * NOT PORTED (already global in app/globals.css): body / a / html,
+ * [data-rv] and [data-rv].in, and the prefers-reduced-motion [data-rv]
+ * override. This page declares no @keyframes coFloat and uses no float
+ * animation, so nothing is carried over there.
+ *
+ * INERT HERE: [data-study] has no matching element. Unlike the other two
+ * pages in this family, #roi-calculator IS live - this page has a working
+ * ROI calculator in a modal, so the #roi-calculator, [data-calc-*] and
+ * [data-print-hide] / #print-only / @media print rules are all load-bearing.
+ *
+ * ONE RULE DELIBERATELY NOT PORTED - [data-costgrid] at 1020px.
+ * The source declares `[data-costgrid]{grid-template-columns:1fr 1fr}` in
+ * its max-width:1020px block, intending the "six places behavioral risk
+ * shows up" list to stay two-up on tablets. It never takes effect. The
+ * global responsive.css rule that collapses it is
+ *   div[style*="grid-template-columns: 1fr 1fr"]     specificity 0-1-1
+ * against the page's
+ *   [data-costgrid]                                  specificity 0-1-0
+ * and both carry !important, so specificity decides and the global wins
+ * regardless of which sheet is loaded last. The Phase 0 baseline confirms
+ * it: at 768px the legacy page renders this list in ONE column (measured
+ * grid-template-columns: 712px).
+ *
+ * Porting the declaration verbatim inverted that, because the replacement
+ * global selector is [data-grid="split"], also 0-1-0, so source order
+ * decided instead and the page sheet - which Next.js loads last - won.
+ * That rendered two columns at 768px and shortened the page by 180px
+ * (9.43% of the body above the footer). The dead declaration is dropped so
+ * the rendered result matches the baseline. The 700px rule below is kept:
+ * it is redundant but harmless, and it is what the source says.
+ *
+ * This is a reproduction of measured legacy behaviour, not a design
+ * change. If the two-up tablet layout was the real intent, that is a
+ * post-migration fix; it is recorded in POST-MIGRATION-IDEAS.md.
+ */
+
+@media (max-width: 1020px) {
+  [data-two] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  [data-hdr] {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+  [data-value] {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+  [data-povrow] {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  [data-three] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-start] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  [data-start] > a,
+  [data-start] > button,
+  [data-start] > div {
+    justify-self: start;
+  }
+}
+@media (max-width: 1100px) {
+  [data-stat5] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px !important;
+  }
+}
+@media (max-width: 700px) {
+  [data-stat5] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-costgrid] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 820px) {
+  [data-study] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.5in;
+  }
+  body {
+    background: #ffffff !important;
+  }
+  body.co-printing > *:not(#print-only) {
+    display: none !important;
+  }
+  #print-only {
+    display: block !important;
+    position: static !important;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  #print-only * {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  [data-print-hide] {
+    display: none !important;
+  }
+}
+#print-only {
+  display: none;
+}
+#roi-calculator input::placeholder {
+  color: rgba(15, 29, 46, 0.34);
+  font-weight: 400;
+  font-style: italic;
+}
+@media (max-width: 760px) {
+  #roi-calculator [data-hdr] {
+    padding-right: 0 !important;
+    padding-top: 44px !important;
+  }
+}
+@media (max-width: 1020px) {
+  [data-calc-out] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  [data-calc-total] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+@media (max-width: 640px) {
+  [data-calc-grid] {
+    grid-template-columns: 1fr !important;
+  }
+}

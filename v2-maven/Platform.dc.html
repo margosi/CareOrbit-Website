@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(max-width:1020px){[data-hdr],[data-two],[data-comp]{grid-template-columns:1fr!important;gap:28px!important}[data-steps]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(max-width:1100px){[data-lowrisk]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:700px){[data-lowrisk]{grid-template-columns:1fr!important}}
+@media(max-width:620px){[data-steps]{grid-template-columns:1fr!important}}
+@media(max-width:1020px){[data-capture-grid]{grid-template-columns:1fr!important;gap:36px!important}}
+@media(max-width:820px){[data-pillars]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:1100px){[data-cards]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:640px){[data-cards]{grid-template-columns:1fr!important}}
+@media(max-width:640px){[data-pillars]{grid-template-columns:1fr!important}}
+@media(max-width:1020px){[data-need]{grid-template-columns:1fr!important;gap:10px!important}}
+@media(max-width:760px){[data-panel]{padding:44px 28px!important;border-radius:28px!important}}
+@media(max-width:620px){[data-conn]{display:none!important}}
+@media(max-width:1020px){[data-hero-grid]{grid-template-columns:1fr!important;min-height:0!important;margin-top:-64px!important}
+  [data-hero-grid] [data-hero-media]{height:clamp(260px,52vw,420px)!important;min-height:0!important}
+  [data-sec]{margin-top:64px!important}
+  [data-hero-img4]{bottom:-64px!important}
+  [data-panel]{padding:44px 24px!important;border-radius:24px!important}}
+@media(max-width:700px){[data-sec]{margin-top:48px!important}}
+@media(max-width:900px){[data-feat-tabs]{flex-wrap:wrap}[data-feat-tabs] button{flex:1 1 40%}}
+@media(max-width:700px){
+  [data-hero-center]{width:100%!important}
+  div:has(>[data-hero-img1]){min-height:0!important;display:flex;flex-direction:column}
+  [data-hero-img1],[data-hero-img2],[data-hero-img3],[data-hero-img4]{position:static!important;width:100%!important;border-radius:16px!important;aspect-ratio:4/3!important;margin:0 0 14px!important}
+  [data-hero-img1]{margin-top:28px!important}}
+@keyframes heroZoom{from{transform:scale(1.14)}to{transform:scale(1)}}
+[data-hero-img1] image-slot,[data-hero-img2] image-slot,[data-hero-img3] image-slot,[data-hero-img4] image-slot{animation:heroZoom 1.8s cubic-bezier(.16,1,.3,1) both}
+@media(prefers-reduced-motion:reduce){[data-hero-img1] image-slot,[data-hero-img2] image-slot,[data-hero-img3] image-slot,[data-hero-img4] image-slot{animation:none}}
+@keyframes tabProgress{from{width:0}to{width:100%}}
+@keyframes heroSweep{0%{transform:translateX(-85%)}50%{transform:translateX(102%)}100%{transform:translateX(-85%)}}
+@keyframes heroDrift{0%{transform:translate(-12%,-16%) scale(1)}50%{transform:translate(8%,6%) scale(1.18)}100%{transform:translate(-12%,-16%) scale(1)}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}[data-hero-glow]{animation:none!important}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="platform" hint-size="100%,120px"></dc-import>
+
+<div style="position:relative;margin-top:-104px;padding-top:104px">
+<div style="position:absolute;inset:0;overflow:hidden;pointer-events:none" aria-hidden="true">
+  <div data-hero-glow style="position:absolute;top:0;left:0;width:85%;height:clamp(300px,36vw,520px);background:radial-gradient(90% 100% at 50% 0%,rgba(91,155,234,.55) 0%,rgba(91,155,234,.26) 48%,rgba(91,155,234,0) 78%);filter:blur(28px);animation:heroSweep 36s ease-in-out infinite"></div>
+</div>
+<div data-rv style="position:relative;padding:48px 28px 72px;box-sizing:border-box;min-height:clamp(500px,42vw,680px)">
+  <div data-hero-center style="position:relative;width:min(760px,44vw);margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;padding-top:28px;z-index:1">
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4vw,54px);line-height:1.08;letter-spacing:-0.025em;margin:0;text-wrap:balance">The patient engagement platform for <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#2D5A87">the whole clinical journey</em>.</h1>
+    <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:rgba(15,29,46,.7);margin:0;max-width:560px;text-wrap:pretty">CareOrbit carries your guidance from diagnosis through recovery, driving better outcomes for patients, families, and care teams.</p>
+    <a href="BookACall.dc.html?src=platform" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 30px;border-radius:999px;transition:background .2s" style-hover="background:#E3735C;color:#FFFFFF">Book a 20-minute intro call</a>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;column-gap:12px;row-gap:6px;max-width:100%;font-size:13.5px;font-weight:400;letter-spacing:0;line-height:1.2;color:#0F1D2E"><span style="white-space:nowrap">For Health Systems</span><span>&bull;</span><span style="white-space:nowrap">For Service Lines</span><span>&bull;</span><span style="white-space:nowrap">For Practices</span><span>&bull;</span><span style="white-space:nowrap">For Employers</span></div>
+  </div>
+  <div data-hero-img1 style="position:absolute;top:72px;left:0;width:clamp(160px,17vw,330px);aspect-ratio:9/10;border-radius:0 20px 20px 0;overflow:hidden"><image-slot id="platform-hero-1" radius="0" src="images/platform-hero-1.png" placeholder="[Placeholder: hero image 1]" style="width:100%;height:100%;display:block"></image-slot></div>
+  <div data-hero-img2 style="position:absolute;top:36px;right:0;width:clamp(220px,23vw,480px);aspect-ratio:5/4;border-radius:20px 0 0 20px;overflow:hidden"><image-slot id="platform-hero-2" radius="0" src="images/platform-hero-2.png" placeholder="[Placeholder: hero image 2]" style="width:100%;height:100%;display:block"></image-slot></div>
+  <div data-hero-img3 style="position:absolute;bottom:0;left:clamp(24px,3vw,70px);width:clamp(220px,22vw,480px);aspect-ratio:16/9;border-radius:20px;overflow:hidden"><image-slot id="platform-hero-3" radius="20" src="images/platform-hero-3.png" placeholder="[Placeholder: hero image 3]" style="width:100%;height:100%;display:block"></image-slot></div>
+  <div data-hero-img4 style="position:absolute;bottom:-96px;right:0;width:clamp(210px,22vw,460px);aspect-ratio:8/7;border-radius:20px 0 0 0;overflow:hidden"><image-slot id="platform-hero-4" radius="0" src="images/platform-hero-4b.png" placeholder="[Placeholder: hero image 4]" style="width:100%;height:100%;display:block"></image-slot></div>
+</div>
+</div>
+
+<div id="how-orbits-work" data-sec style="background:#F1EDE4;margin:96px 0 0;padding:clamp(80px,9vw,150px) 0 clamp(56px,7vw,96px)">
+<div style="max-width:1440px;margin:0 auto;padding:0 clamp(28px,5vw,108px);box-sizing:border-box">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:64px">
+    <div style="display:flex;flex-direction:column;gap:26px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="width:9px;height:9px;border-radius:50%;background:#2D5A87;display:inline-block"></span>
+        <span style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#2D5A87">Our platform</span>
+      </div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(32px,4vw,52px);line-height:1.04;letter-spacing:-0.022em;margin:0;color:#122536;text-wrap:balance">Care and guidance for<br><em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#2D5A87">every clinical journey</em></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:44px;align-items:flex-start;max-width:540px;justify-self:end;padding-top:10px">
+      <p style="font-size:clamp(16px,1.5vw,20px);line-height:1.5;color:#122536;margin:0;text-wrap:pretty">Our platform is built around the journeys that cost systems the most, pairing guided support with seamless measurement to help patients achieve better outcomes.</p>
+      <a href="BookACall.dc.html?src=platform" style="text-decoration:underline;text-underline-offset:10px;font-size:17px;font-weight:500;color:#2D5A87" style-hover="color:#E3735C">Learn more</a>
+    </div>
+  </div>
+  <div style="overflow:hidden;margin:0 calc(50% - 50vw);width:100vw">
+    <div style="display:flex;gap:20px;transform:translateX({{ cShift }});transition:{{ cTrans }}">
+      <sc-for list="{{ cardLoop }}" as="c" hint-placeholder-count="8">
+        <a href="{{ c.href }}" style="flex:0 0 30vw;box-sizing:border-box;position:relative;display:block;height:clamp(400px,33vw,500px);border-radius:12px;overflow:hidden;text-decoration:none;color:#FFFFFF">
+          <image-slot id="{{ c.slot }}" radius="0" src="{{ c.img }}" placeholder="{{ c.ph }}" style="position:absolute;inset:0;width:100%;height:100%;display:block"></image-slot>
+          <div style="position:absolute;left:0;right:0;bottom:0;height:45%;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);background:linear-gradient(180deg,rgba(52,48,44,.42) 0%,rgba(42,39,36,.62) 100%);display:flex;flex-direction:column;gap:14px;padding:26px 28px 28px;box-sizing:border-box">
+            <span style="width:11px;height:11px;border-radius:50%;background:{{ c.dot }};box-shadow:0 0 0 4px rgba(255,255,255,.25);display:inline-block"></span>
+            <div style="font-family:Lato,sans-serif;font-weight:400;font-size:clamp(21px,1.9vw,28px);letter-spacing:-0.01em;line-height:1.2">{{ c.name }}</div>
+            <div style="font-size:clamp(14px,1.15vw,16px);line-height:1.55;color:rgba(255,255,255,.94);text-wrap:pretty">{{ c.d }}</div>
+            <div style="margin-top:auto;font-size:15px;font-weight:500;color:#FFFFFF;text-decoration:underline;text-underline-offset:7px;align-self:flex-start">Learn more</div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:24px;margin-top:44px">
+    <div style="flex:1;height:1px;background:rgba(15,29,46,.25)"></div>
+    <button onClick="{{ cPrev }}" aria-label="Previous" style="width:44px;height:44px;border-radius:10px;background:#2D5A87;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="background:#0F1D2E"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7H1M7 1L1 7l6 6"></path></svg></button>
+    <button onClick="{{ cNext }}" aria-label="Next" style="width:44px;height:44px;border-radius:10px;background:#2D5A87;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="background:#0F1D2E"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h16M11 1l6 6-6 6"></path></svg></button>
+  </div>
+</div>
+</div>
+
+<div data-rv style="position:relative;margin-top:0;min-height:clamp(520px,52vw,760px);overflow:hidden">
+  <image-slot id="platform-statement-bg" radius="0" src="images/platform-statement-2.png" placeholder="[Placeholder: full-width lifestyle photo]" style="position:absolute;inset:0;width:100%;height:100%;display:block"></image-slot>
+  <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,29,46,.55) 0%,rgba(15,29,46,.3) 55%,rgba(15,29,46,.15) 100%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(48px,6vw,88px) clamp(28px,5vw,108px);box-sizing:border-box;min-height:inherit;display:flex;flex-direction:column;justify-content:space-between;gap:48px;pointer-events:none">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3.4vw,44px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;max-width:640px;text-wrap:balance">A clinical journey doesn't happen in fragments. <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0">Neither should the guidance.</em></h2>
+    <div style="display:flex;flex-direction:column;gap:22px;max-width:520px">
+      <p style="font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:#FFFFFF;margin:0;text-wrap:pretty">When guidance is scattered across portals, papers, and voicemails, it fails patients, drives up costs, and wastes staff time.</p>
+      <p style="font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:#FFFFFF;margin:0;text-wrap:pretty">CareOrbit brings guidance, assessment, content, and data together on one platform, from diagnosis through recovery.</p>
+    </div>
+  </div>
+</div>
+
+<div id="features" style="background:#F1EDE4;margin:0;padding:clamp(48px,6vw,88px) 0 0">
+<div style="max-width:1440px;margin:0 auto;padding:0 clamp(28px,5vw,108px);box-sizing:border-box">
+  <div data-rv style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;margin-bottom:52px">
+    <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Platform features</div>
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:820px;text-wrap:balance">The intersection of healthcare <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">and technology</em>.</h2>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:640px;text-wrap:pretty">Every inch of the platform is built for action, connection, and better outcomes.</p>
+  </div>
+  <div data-feat-tabs style="display:flex;gap:clamp(12px,2vw,32px)">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
+      <button onClick="{{ t.pick }}" style="position:relative;flex:1;font-family:Inter,sans-serif;font-size:clamp(14px,1.2vw,16.5px);font-weight:500;text-align:center;color:{{ t.color }};background:none;border:none;border-bottom:1px solid rgba(15,29,46,.18);padding:0 8px 18px;cursor:pointer;transition:color .2s" style-hover="color:#0F1D2E">{{ t.name }}
+        <sc-if value="{{ t.active }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;left:0;bottom:-1px;height:2px;background:#1F6B73;animation:tabProgress 18s linear forwards"></span>
+        </sc-if>
+      </button>
+    </sc-for>
+  </div>
+  <div data-hdr style="display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(36px,5vw,88px);align-items:end;padding-top:clamp(40px,5vw,80px)">
+    <div style="display:flex;flex-direction:column;gap:22px;align-self:center;padding-bottom:clamp(40px,5vw,80px)">
+      <h3 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3.2vw,44px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#0F1D2E;text-wrap:balance">{{ tab.t }}</h3>
+      <p style="font-size:clamp(16px,1.5vw,19px);line-height:1.68;color:rgba(15,29,46,.75);margin:0;max-width:520px;text-wrap:pretty">{{ tab.d }}</p>
+    </div>
+    <div style="aspect-ratio:21/20;border-radius:16px 16px 0 0;overflow:hidden"><image-slot id="{{ tab.slot }}" radius="0" src="{{ tab.img }}" placeholder="{{ tab.ph }}" style="width:100%;height:100%;display:block"></image-slot></div>
+  </div>
+</div>
+</div>
+
+<div id="outcomes" data-sec style="max-width:1440px;margin:96px auto 0;padding:0 clamp(28px,5vw,108px);box-sizing:border-box">
+  <div data-rv style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;margin-bottom:24px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(34px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;max-width:820px;text-wrap:balance">Empowering<br><em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#2D5A87">leading health systems</em></h2>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.55;color:#122536;margin:0;max-width:560px;text-wrap:pretty">In a controlled trial at Siteman Cancer Center with Washington University, patients carrying an orbit were compared with patients receiving standard education. See the measured results <a href="Outcomes.dc.html" style="color:#1F6B73;text-decoration:underline;text-underline-offset:4px" style-hover="color:#E3735C">here</a>.</p>
+  </div>
+  <div data-lowrisk data-rv style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,2.5vw,40px)">
+    <sc-for list="{{ trialStats }}" as="s" hint-placeholder-count="4">
+      <div style="aspect-ratio:1/1;border:clamp(8px,0.9vw,13px) solid #E7E0D4;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:11%;box-sizing:border-box;text-align:center">
+        <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(38px,4.2vw,62px);line-height:1;color:#122536">{{ s.v }}</div>
+        <div style="font-size:clamp(13.5px,1.15vw,16px);line-height:1.5;color:#122536;text-wrap:pretty">{{ s.d }}</div>
+      </div>
+    </sc-for>
+  </div>
+  <p data-rv style="font-size:13px;line-height:1.6;color:rgba(15,29,46,.5);margin:30px 0 0;text-align:center">Nine in ten patients reported the orbit helped them navigate their care.</p>
+</div>
+
+<div id="experiences" data-sec style="position:relative;margin-top:96px;overflow:hidden">
+  <image-slot id="platform-experiences-bg" radius="0" src="images/platform-experiences.png" placeholder="[Placeholder: full-width member photo]" style="position:absolute;inset:0;width:100%;height:100%;display:block"></image-slot>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,29,46,.5) 0%,rgba(15,29,46,.25) 45%,rgba(15,29,46,.45) 100%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(72px,8vw,130px) clamp(28px,5vw,108px) clamp(48px,5vw,72px);box-sizing:border-box;display:flex;flex-direction:column">
+    <div data-rv style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;margin-bottom:clamp(56px,7vw,110px);pointer-events:none">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85)">CareOrbit experiences</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(34px,4.2vw,58px);line-height:1.08;letter-spacing:-0.02em;margin:0;color:#FFFFFF;max-width:760px;text-wrap:balance">Trusted by care teams,<br><em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0">carried by patients</em></h2>
+      <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.55;color:rgba(255,255,255,.92);margin:0;max-width:520px;text-wrap:pretty">Hear from the teams choosing CareOrbit to transform care, and the patients carrying it.</p>
+      <a href="Outcomes.dc.html" style="pointer-events:auto;color:#FFFFFF;font-size:16px;font-weight:500;text-decoration:underline;text-underline-offset:8px" style-hover="color:#F2B8C6">Explore the outcomes</a>
+    </div>
+    <div style="overflow:hidden;margin:0 calc(clamp(28px,5vw,108px) * -1 - (100vw - min(1440px,100vw)) / 2);width:100vw">
+      <div style="display:flex;gap:20px;transform:translateX({{ qShift }});transition:transform .6s cubic-bezier(.16,1,.3,1)">
+        <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="4">
+          <div style="flex:0 0 30vw;box-sizing:border-box;background:{{ q.bg }};backdrop-filter:blur(10px);border-radius:12px;padding:26px 26px 24px;display:flex;flex-direction:column;gap:18px;min-height:clamp(240px,20vw,320px);color:{{ q.ink }}">
+            <div style="font-family:'Source Serif 4',serif;font-weight:600;font-size:27px;line-height:.5;color:#4FB3BF">&ldquo;</div>
+            <div style="font-size:clamp(13px,1.05vw,15.5px);line-height:1.6;flex:1;text-wrap:pretty">{{ q.text }}</div>
+            <div style="font-size:clamp(12px,0.95vw,14px);line-height:1.5">{{ q.who }}<br>{{ q.role }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:24px;margin-top:40px">
+      <div style="flex:1;height:1px;background:rgba(255,255,255,.35);position:relative"><div style="position:absolute;left:0;top:-0.5px;height:2px;background:#FFFFFF;width:{{ qProgress }};transition:width .5s"></div></div>
+      <button onClick="{{ qPrev }}" aria-label="Previous" style="width:44px;height:44px;border-radius:10px;background:#FFFFFF;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#0F1D2E" style-hover="background:#F2B8C6"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7H1M7 1L1 7l6 6"></path></svg></button>
+      <button onClick="{{ qNext }}" aria-label="Next" style="width:44px;height:44px;border-radius:10px;background:#FFFFFF;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#0F1D2E" style-hover="background:#F2B8C6"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h16M11 1l6 6-6 6"></path></svg></button>
+    </div>
+  </div>
+</div>
+
+<div data-sec style="max-width:1440px;margin:96px auto 0;padding:0 28px 104px;box-sizing:border-box">
+  <div data-rv data-panel style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:32px;padding:clamp(44px,5vw,64px);display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.08;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Experience <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#F2B8C6">smarter engagement</em> today.</h2>
+    <p style="font-size:16px;line-height:1.6;color:#B9C8D8;margin:0;max-width:600px;text-wrap:pretty">20 minutes: we map your improvement goals against a proven blueprint and show you exactly which component, or combination, would target them.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:6px">
+      <a href="BookACall.dc.html?src=platform" style="text-decoration:none;font-size:16px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:17px 32px;border-radius:999px;transition:background .2s,color .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+      <a href="Outcomes.dc.html" style="text-decoration:none;font-size:16px;font-weight:600;color:#FFFFFF;border:1.5px solid rgba(255,255,255,.5);padding:16px 32px;border-radius:999px;transition:border-color .2s,color .2s" style-hover="border-color:#F2B8C6;color:#F2B8C6">Explore the outcomes</a>
+    </div>
+    <div style="font-size:13px;font-weight:600;letter-spacing:.04em;color:#7E93AB;margin-top:8px">For Health Systems&nbsp;&nbsp;&bull;&nbsp;&nbsp;For Service Lines&nbsp;&nbsp;&bull;&nbsp;&nbsp;For Practices&nbsp;&nbsp;&bull;&nbsp;&nbsp;For Employers</div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {tab: 0, q: 0, c: 0};
+  componentDidMount() {
+    this._auto = setInterval(() => this.setState(s => ({tab: (s.tab + 1) % 5})), 18000);
+  }
+  componentWillUnmount() { clearInterval(this._auto); }
+  _pick(i) {
+    clearInterval(this._auto);
+    this._auto = setInterval(() => this.setState(s => ({tab: (s.tab + 1) % 5})), 18000);
+    this.setState({tab: i});
+  }
+  renderVals() {
+    const tabData = [
+      {name: "Meeting patients where they live", slot: "platform-feat-1", img: "images/platform-feat-1f.png", ph: "[Placeholder: unified dashboard image]",
+       t: "Meeting patients where they live",
+       d: "Your team's guidance travels with the patient, at home, at work, or miles from the clinic, on whatever device is in their pocket. One platform carries journeys, assessments, content, and results into a single record and one dashboard for the care team."},
+      {name: "Guidance that adapts", slot: "platform-feat-2", img: "images/platform-feat-2d.png", ph: "[Placeholder: engagement index image]",
+       t: "Guidance that adapts",
+       d: "Every action, and every inaction, feeds the Patient Engagement Index. Content, channel, and cadence adjust to each patient's score, so the platform works hardest for the patients who are drifting."},
+      {name: "Instant access to support", slot: "platform-feat-3", img: "images/platform-feat-3b.png", ph: "[Placeholder: patient opening orbit image]",
+       t: "Instant access to support",
+       d: "No app, no login, no portal account. Patients open their orbit from a text, an email, or a QR code, on any device, and land on the right guidance for exactly where they are in the journey."},
+      {name: "Nothing added to the day", slot: "platform-feat-4", img: "images/platform-feat-4.png", ph: "[Placeholder: EHR order image]",
+       t: "Nothing added to the day",
+       d: "Orbits, screenings, and content issue from the workflow you already run: an EHR order, a patient list, on-site registration, or a nightly flat file. No new FTEs, no new system to learn."},
+      {name: "Differentiation that matters", slot: "platform-feat-5", img: "images/platform-feat-5b.png", ph: "[Placeholder: care team image]",
+       t: "Differentiation that matters",
+       d: "A visibly higher standard of care that patients notice, families talk about, and referring physicians and administrators remember. Orbits carry your brand and your clinical voice through the whole journey, setting your program apart when patients choose where to be treated and when systems choose who to partner withr quarterly reviews."}
+    ];
+    const oldTabData = [
+      {name: "Engage", num: "01", accent: "#E3735C", label: "#A8412F", href: "EngagePage.dc.html", slot: "platform-tab-engage", img: "images/engage-hero-8.png", ph: "[Placeholder: Engage feature image]",
+       t: "Guided journeys for the weeks between visits.",
+       d: "Care-team-approved digital journeys that carry your education, reminders, and next steps to patients and families, step by step from diagnosis through recovery, alongside the discharge folder and the follow-up call, never in place of them.",
+       fit: "A costly journey is the problem: readmissions, cancellations, no-shows, or avoidable call volume.",
+       items: [
+         {t: "Opens anywhere, on any device.", d: "No new downloads or complicated onboarding. Patients open their orbit from email, text, or a QR code."},
+         {t: "The right guidance at the right moment.", d: "Active, engaging pages sequenced to the clinical pathway and overall patient experience, not a static library of PDFs and webpages."},
+         {t: "A whole circle of information and support.", d: "Always there, always relevant, always welcomed. Also available to family caregivers, white-labeled in your brand and voice."}
+       ]},
+      {name: "Assess", num: "02", accent: "#5B9BEA", label: "#2D5A87", href: "AssessPage.dc.html", slot: "platform-tab-assess", img: "images/assess-hero-2.png", ph: "[Placeholder: Assess feature image]",
+       t: "PROMs, eScreenings, and outcomes capture.",
+       d: "Validated measures collected on schedule, tied to your care pathways, quality initiatives, and value-based programs. Assess is its own product: an orbit makes it richer, it never requires one.",
+       fit: "A screening mandate, a PROMs requirement, or a billable service going undocumented.",
+       items: [
+         {t: "Screenings on their own.", d: "Run eScreening and PROMs programs with no accompanying orbit, issued the same easy ways: an order, a patient list, a QR code, or a text."},
+         {t: "Billing opportunities.", d: "Structured screenings can support CPT-coded services your clinicians already perform and document."},
+         {t: "Together when the need dictates.", d: "Place assessments inside an orbit and collection becomes part of the guidance patients are already following, with no separate ask and no chasing."},
+         {t: "Rising risk surfaced early.", d: "Scores return to the care-team dashboard and flag the patients who need a call before the next visit does."}
+       ]},
+      {name: "Capture", num: "03", accent: "#4FB3BF", label: "#1F6B73", href: "CapturePage.dc.html", isNew: true, slot: "platform-tab-capture", img: "images/capture-hero-2.png", ph: "[Placeholder: Capture feature image]",
+       t: "Your content, one canonical version, everywhere.",
+       d: "Most systems do not have a content problem, they have a version problem: good material scattered across drives, binders, and the EMR. Capture fixes that, with our expert team guiding the intake so the conversion is strategic, not binder by binder.",
+       fit: "Nobody can say which version of a handout, protocol, or video is the current one.",
+       items: [
+         {t: "Intake what you already own.", d: "Documents, handouts, protocols, and video, in whatever format they live in today."},
+         {t: "One canonical version.", d: "Structured, versioned, and updated everywhere at once when a protocol changes."},
+         {t: "Delivered where patients are.", d: "Orbits, QR codes, text, and email, on any device without a portal login."},
+         {t: "Proof of what was used.", d: "Views, completion, and engagement by audience and content item."}
+       ]},
+      {name: "Data", num: "04", accent: "#5B9BEA", label: "#1E3A5F", href: "", slot: "platform-tab-data", img: "", ph: "[Placeholder: dashboard feature image]",
+       t: "Measured from first click to final outcome.",
+       d: "Dashboards that make engagement, adherence, and outcomes measurable and defensible, rolled up from the individual patient to the program. Data is woven into every component rather than sold on its own.",
+       fit: "A committee that wants numbers: engagement, adherence, and outcomes you can defend.",
+       items: [
+         {t: "Rollups your executives can read.", d: "Care-team dashboards and program-level views, from activation through outcomes."},
+         {t: "Committee-ready in one click.", d: "Any dashboard view exports for your committee or quality program."},
+         {t: "Minimal PHI by design.", d: "First name, last name, email, phone, and diagnosis only."}
+       ]}
+    ];
+    const active = tabData[this.state.tab];
+    const cardsData = [
+      {name: "Engage", href: "EngagePage.dc.html", slot: "platform-card-engage", img: "images/platform-card-engage-3.png", ph: "[Placeholder: Engage image]", dot: "#E3735C", d: "Guided digital journeys that carry your guidance from diagnosis through recovery."},
+      {name: "Assess", href: "AssessPage.dc.html", slot: "platform-card-assess", img: "images/platform-card-assess-5.png", ph: "[Placeholder: Assess image]", dot: "#5B9BEA", d: "PROMs, eScreening, and check-ins collected on schedule, without the chasing."},
+      {name: "Capture", href: "CapturePage.dc.html", slot: "platform-card-capture", img: "images/platform-card-capture-2.png", ph: "[Placeholder: Capture image]", dot: "#4FB3BF", d: "Your best patient material converted into one organized, trackable system."},
+      {name: "Data", href: "Outcomes.dc.html", slot: "platform-card-data", img: "images/platform-card-data-2.png", ph: "[Placeholder: dashboard image]", dot: "#F2B8C6", d: "Engagement, adherence, and outcomes measured from the first click, on every orbit."}
+    ];
+    return {
+      tabs: tabData.map((t, i) => ({
+        name: t.name,
+        pick: () => this._pick(i),
+        active: i === this.state.tab,
+        color: i === this.state.tab ? "#0F1D2E" : "rgba(15,29,46,.5)",
+        line: i === this.state.tab ? "#E3735C" : "transparent"
+      })),
+      tab: active,
+      cards: cardsData,
+      quotes: [
+        {bg: "rgba(120,100,90,.45)", ink: "#FFFFFF", text: "\u201cI finally understood what was coming next instead of being afraid of it. My whole family read my orbit with me.\u201d", who: "Denise,", role: "Oncology patient"},
+        {bg: "rgba(250,248,244,.96)", ink: "#122536", text: "\u201cPatients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!\u201d", who: "Chief of Section,", role: "Surgical Oncology"},
+        {bg: "rgba(120,100,90,.45)", ink: "#FFFFFF", text: "\u201cI have never seen anything like this, ever. I showed my friends at church and they couldn't believe it either.\u201d", who: "Stan,", role: "Oncology patient"},
+        {bg: "rgba(250,248,244,.96)", ink: "#122536", text: "\u201cI wish my dad had something like this when he went through his procedure.\u201d", who: "Nurse,", role: "Oncology"},
+        {bg: "rgba(120,100,90,.45)", ink: "#FFFFFF", text: "\u201cBetween visits I always knew what to do and who to call. It took so much worry off my shoulders.\u201d", who: "Marcus,", role: "Oncology patient"},
+        {bg: "rgba(250,248,244,.96)", ink: "#122536", text: "\u201cIt's seen as incredibly easy to understand and use. They (patients and families) just run with it.\u201d", who: "Nurse Navigator,", role: "Siteman Cancer Center Surgical Department"},
+        {bg: "rgba(120,100,90,.45)", ink: "#FFFFFF", text: "\u201cEverything my care team told me was right there when I got home. I did not have to remember it all on my own.\u201d", who: "Carol,", role: "Oncology patient"}
+      ],
+      cardLoop: [cardsData[3], ...cardsData, ...cardsData].map((c, i) => ({...c, slot: c.slot + "-" + i})),
+      cShift: "calc(" + (-(this.state.c + 1) * 30) + "vw - " + ((this.state.c + 1) * 20 - 35) + "px)",
+      cTrans: this.state.cSnap ? "none" : "transform .6s cubic-bezier(.16,1,.3,1)",
+      cPrev: () => {
+        if (this.state.c === 0) {
+          this.setState({c: 4, cSnap: true});
+          setTimeout(() => this.setState({c: 3, cSnap: false}), 40);
+        } else this.setState(s => ({c: s.c - 1, cSnap: false}));
+      },
+      cNext: () => {
+        const n = this.state.c + 1;
+        this.setState({c: n, cSnap: false});
+        if (n >= 4) setTimeout(() => this.setState({c: 0, cSnap: true}), 650);
+      },
+      qShift: "calc(" + (-this.state.q * 30) + "vw - " + (this.state.q * 20 - 35) + "px)",
+      qProgress: Math.round(((this.state.q + 1) / 5) * 100) + "%",
+      qPrev: () => this.setState(s => ({q: Math.max(0, s.q - 1)})),
+      qNext: () => this.setState(s => ({q: Math.min(4, s.q + 1)})),
+      trialStats: [
+        {v: "+65%", l: "Understanding", d: "Better understanding of the plan of care."},
+        {v: "\u221253%", l: "Inbound calls", d: "Fewer calls to the nursing line with questions the orbit answered first."},
+        {v: "\u221241%", l: "Readmissions", d: "Fewer readmissions among patients carrying an orbit."},
+        {v: "+22%", l: "Satisfaction", d: "Higher patient satisfaction scores."}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

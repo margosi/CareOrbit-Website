@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+@media(max-width:1020px){[data-two]{grid-template-columns:1fr!important}[data-three]{grid-template-columns:1fr 1fr!important}[data-four]{grid-template-columns:1fr 1fr!important}}
+@media(max-width:640px){[data-three]{grid-template-columns:1fr!important}[data-four]{grid-template-columns:1fr!important}}
+@media(max-width:940px){[data-oneline]{white-space:normal!important;text-wrap:balance!important;max-width:640px!important}}
+@media(max-width:1020px){[data-deploy2]{grid-template-columns:1fr!important;gap:26px!important}}
+@media(max-width:900px){[data-jour]{grid-template-columns:1fr!important}[data-arrow]{display:none!important}[data-pair]{grid-template-columns:1fr!important;gap:20px!important}[data-conn]{display:none!important}}
+@media(max-width:700px){[data-deploy2] [data-three]{grid-template-columns:1fr!important;gap:18px!important}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="research" hint-size="100%,120px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:76px 28px 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center" data-two>
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="display:flex;align-items:center;gap:8px;background:#0F3D2E;border-radius:8px;padding:7px 13px"><span style="width:8px;height:8px;border-radius:50%;background:#5CE8A4"></span><span style="font-size:11.5px;font-weight:700;letter-spacing:.08em;color:#FFFFFF">NEW</span></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">Community-Based Research</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">Keep participants <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">enrolled</em>, engaged, and on protocol.</h1>
+    <p style="font-size:17.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:640px;text-wrap:pretty">Community-based research lives or dies on follow-up. CareOrbit gives research teams a guided, mobile-first orbit for every participant: consent explained in plain language, assessments delivered on schedule, reminders that actually reach people, and a dashboard that shows who is drifting before the window closes.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px">
+      <a href="BookACall.dc.html?src=research" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 30px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;transform:translateY(-2px)">Book a 20-minute intro call</a>
+      <a href="#assess" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:1px solid rgba(15,29,46,.12);padding:16px 30px;border-radius:999px;transition:border-color .2s" style-hover="border-color:#0F1D2E">See CareOrbit Assess</a>
+    </div>
+  </div>
+  <div style="height:440px;border-radius:32px;overflow:hidden"><image-slot id="research-hero" radius="32" src="images/research-hero.png" placeholder="[Placeholder: research team photo]" style="width:100%;height:100%"></image-slot></div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:36px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">How a solution is built</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px;text-wrap:balance">Any protocol or cohort, multiple versions per orbit, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">fully customized</em>.</h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:600px;text-wrap:pretty">Participant support comes first: consent, orientation, and the assessment schedule your protocol defines. Retention work then runs in the same place. You choose which orbits your study launches, and each is built to your protocol, your coordinators, and your population.</p>
+  </div>
+  <div data-rv style="display:flex;flex-direction:column;gap:6px;margin-bottom:18px">
+    <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F6B73">Example</div>
+    <div style="font-family:Lato,sans-serif;font-weight:400;font-size:19px;line-height:1.35;letter-spacing:-0.01em;color:rgba(15,29,46,.78)">A participant orbit, dynamically evolving across three versions to deliver the right one at the right moment in the study.</div>
+  </div>
+  <div data-rv data-jour style="display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:stretch">
+    <div style="background:#E8F5F6;border:1px solid rgba(31,107,115,.28);border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:12px;box-shadow:0 12px 30px rgba(15,29,46,.05);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(15,29,46,.1)">
+      <div style="display:flex;align-items:center;gap:11px">
+        <span style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:rgba(31,107,115,.14);flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6B73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 3V7L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15 9a4 4 0 0 1 0 6"/><path d="M18 6.5a7.5 7.5 0 0 1 0 11"/></svg></span>
+        <span style="font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#1F6B73;line-height:1.3">Recruitment</span>
+      </div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:21px;line-height:1.18;letter-spacing:-0.015em;color:#0F1D2E;text-wrap:balance">Before they are a participant</div>
+      <div style="font-size:14.5px;line-height:1.65;color:rgba(15,29,46,.68);text-wrap:pretty">Outreach for eligibility, screening, and referral from community partners. What the study asks, what it involves, and how to take the first step.</div>
+    </div>
+    <div data-arrow style="align-self:center;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#FFFFFF;border:1px solid rgba(31,107,115,.28);color:#1F6B73;font-size:13px;line-height:1">&rsaquo;</div>
+    <div style="background:#E8F5F6;border:1px solid rgba(31,107,115,.28);border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:12px;box-shadow:0 12px 30px rgba(15,29,46,.05);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(15,29,46,.1)">
+      <div style="display:flex;align-items:center;gap:11px">
+        <span style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:rgba(31,107,115,.14);flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6B73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2.5"/><path d="M9 3.5V6h6V3.5"/><path d="M8.5 12.5l2.2 2.2 4.3-4.3"/></svg></span>
+        <span style="font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#1F6B73;line-height:1.3">Consent and enrollment</span>
+      </div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:21px;line-height:1.18;letter-spacing:-0.015em;color:#0F1D2E;text-wrap:balance">Screening through baseline</div>
+      <div style="font-size:14.5px;line-height:1.65;color:rgba(15,29,46,.68);text-wrap:pretty">Eligibility, consent explained in plain language, orientation to the visit schedule, and the baseline instruments, delivered as a guided sequence instead of a packet.</div>
+    </div>
+    <div data-arrow style="align-self:center;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#FFFFFF;border:1px solid rgba(31,107,115,.28);color:#1F6B73;font-size:13px;line-height:1">&rsaquo;</div>
+    <div style="background:#E8F5F6;border:1px solid rgba(31,107,115,.28);border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:12px;box-shadow:0 12px 30px rgba(15,29,46,.05);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s" style-hover="transform:translateY(-5px);box-shadow:0 22px 46px rgba(15,29,46,.1)">
+      <div style="display:flex;align-items:center;gap:11px">
+        <span style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:rgba(31,107,115,.14);flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6B73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.2 12 4.8l8 6.4"/><path d="M6.6 10.2V19.2h10.8v-9"/><path d="M9.4 14.6h5.2"/><path d="M12 12v5.2"/></svg></span>
+        <span style="font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#1F6B73;line-height:1.3">Follow-up and retention</span>
+      </div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:21px;line-height:1.18;letter-spacing:-0.015em;color:#0F1D2E;text-wrap:balance">Baseline through the final window</div>
+      <div style="font-size:14.5px;line-height:1.65;color:rgba(15,29,46,.68);text-wrap:pretty">Scheduled assessments, reminders that reach people who move, and check-ins that surface disengagement while the window is still open.</div>
+    </div>
+  </div>
+  <div data-rv data-conn style="display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);gap:16px;height:26px">
+    <div style="justify-self:center;width:1.5px;height:100%;background:linear-gradient(#4FB3BF,#4FB3BF59)"></div>
+    <div style="width:26px"></div>
+    <div style="justify-self:center;width:1.5px;height:100%;background:linear-gradient(#4FB3BF,#4FB3BF59)"></div>
+    <div style="width:26px"></div>
+    <div style="justify-self:center;width:1.5px;height:100%;background:linear-gradient(#4FB3BF,#4FB3BF59)"></div>
+  </div>
+  <div data-rv data-pair style="background:#FFFFFF;border:1px solid rgba(31,107,115,.28);border-radius:26px;padding:34px 34px 34px 30px;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:36px;align-items:start;box-shadow:0 14px 34px rgba(15,29,46,.05)">
+    <div style="display:flex;flex-direction:column;gap:9px;border-left:3px solid #4FB3BF;padding-left:22px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#1F6B73">Runs through all three</div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:21px;line-height:1.18;letter-spacing:-0.015em;color:#0F1D2E;text-wrap:balance">Assessment delivery and completion tracking</div>
+    </div>
+    <div style="font-size:15px;line-height:1.7;color:rgba(15,29,46,.72);text-wrap:pretty">Your instruments and your windows, carried from consent through the final follow-up. Items collect on your schedule, score automatically, and return to your data pipeline without coordinator time, in one continuous record rather than a stack of disconnected campaigns.</div>
+  </div>
+  <div data-rv data-deploy2 style="background:transparent;border:none;border-top:1px solid rgba(31,107,115,.28);border-radius:0;padding:30px 4px 0 30px;margin-top:22px;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:36px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:9px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#1F6B73">How it deploys</div>
+      <div style="font-family:Lato,sans-serif;font-weight:700;font-size:19px;line-height:1.18;letter-spacing:-0.015em;color:#0F1D2E;text-wrap:balance">Issued from the workflow you already run</div>
+      <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.68);text-wrap:pretty">A participant list, a QR code at a partner site, or a text message.</div>
+    </div>
+    <div data-three style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+      <sc-for list="{{ deploy }}" as="p" hint-placeholder-count="3">
+        <div style="border-left:1px solid rgba(31,107,115,.28);padding-left:20px;display:flex;flex-direction:column;gap:5px">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16px;color:#0F1D2E;line-height:1.22">{{ p.t }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:rgba(15,29,46,.66);text-wrap:pretty">{{ p.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 18px">
+  <div data-rv style="display:flex;flex-direction:column;gap:8px">
+    <h3 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(20px,2.2vw,26px);line-height:1.15;letter-spacing:-0.02em;margin:0;max-width:none;white-space:nowrap;text-wrap:nowrap" data-oneline="1">Orbits solve for the stretch of a study <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">no one can staff</em>.</h3>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px">
+    <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Where studies lose ground</div>
+    <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:820px;text-wrap:balance">Attrition is rarely one big failure. It is a hundred small gaps.</h2>
+  </div>
+  <div data-four style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px">
+    <sc-for list="{{ gaps }}" as="g" hint-placeholder-count="8">
+      <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:22px;padding:20px;display:flex;flex-direction:column;gap:7px">
+        <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:17px;color:#E3735C">{{ g.i }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:16px;line-height:1.22;letter-spacing:-0.01em">{{ g.t }}</div>
+        <div style="font-size:13px;line-height:1.5;color:rgba(15,29,46,.68)">{{ g.d }}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div id="assess" style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px;display:flex;flex-direction:column;gap:40px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end" data-two>
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(30px,3.6vw,42px);line-height:1.08;letter-spacing:-0.02em;margin:0;color:#FFFFFF">CareOrbit <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#F2B8C6">Assess</em>, preconfigured for the instruments you already run.</h2>
+      <p style="font-size:16px;line-height:1.65;color:#B9C8D8;margin:0;text-wrap:pretty">Assessment delivery is configured to your protocol, not retrofitted to a generic form builder. Instruments are scheduled per participant, completed on any device, scored, and handed back to your data pipeline.</p>
+    </div>
+    <div data-three style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+      <sc-for list="{{ assess }}" as="a" hint-placeholder-count="6">
+        <div style="background:#1E3A5F;border-radius:24px;padding:26px 24px;display:flex;flex-direction:column;gap:10px;transition:transform .25s" style-hover="transform:translateY(-4px)">
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:18px;line-height:1.25;color:#FFFFFF">{{ a.t }}</div>
+          <div style="font-size:13.5px;line-height:1.6;color:#B9C8D8">{{ a.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="font-size:13px;line-height:1.6;color:#8CA0B3;max-width:820px">Instrument names are referenced to describe configuration only. CareOrbit is not affiliated with, and does not license or distribute, third-party assessment instruments; licensing stays with the instrument owner and your research agreement.</div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center" data-two>
+    <div style="height:400px;border-radius:32px;overflow:hidden"><image-slot id="research-participant" radius="32" placeholder="[Placeholder: participant on phone photo]" style="width:100%;height:100%"></image-slot></div>
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">One orbit per participant, from consent to final follow-up.</h2>
+      <sc-for list="{{ flow }}" as="f" hint-placeholder-count="5">
+        <div style="display:flex;gap:16px;align-items:flex-start">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:16px;color:#E3735C;background:#FFFFFF;border:1px solid rgba(15,29,46,.08);border-radius:999px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;flex-shrink:0">{{ f.n }}</div>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:17px">{{ f.t }}</div>
+            <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.7)">{{ f.d }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:40px;padding:56px;display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center">
+    <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:760px;text-wrap:balance">Tell us about your study population and follow-up windows.</h2>
+    <p style="font-size:16.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:620px;text-wrap:pretty">Twenty minutes, no demo script. We will tell you honestly whether an orbit fits your protocol.</p>
+    <a href="BookACall.dc.html?src=research" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 32px;border-radius:999px;margin-top:10px;transition:background .2s,transform .2s" style-hover="background:#E3735C;transform:translateY(-2px)">Book a 20-minute intro call</a>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,480px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      deploy: [
+        {t: "No new coordinators", d: "Nothing added to anyone's week."},
+        {t: "White-label", d: "Your study, your voice."},
+        {t: "Live in a quarter", d: "From kickoff to first participant."}
+      ],
+      gaps: [
+        {i: "01", t: "Consent that is not understood", d: "Signed paperwork is not the same as an informed participant."},
+        {i: "02", t: "Missed assessment windows", d: "A follow-up that arrives late is a data point you cannot use."},
+        {i: "03", t: "Unreachable participants", d: "Phone numbers change; mail goes unopened; the study loses the person."},
+        {i: "04", t: "Coordinator time on reminders", d: "Skilled staff spending their week on phone tag."},
+        {i: "05", t: "Protocol drift", d: "Instructions understood differently by every participant."},
+        {i: "06", t: "Uneven site performance", d: "No shared view of which site or cohort is falling behind."},
+        {i: "07", t: "Paper and portal fatigue", d: "Tools built for clinicians, handed to people in the community."},
+        {i: "08", t: "Late signal on attrition", d: "You learn someone disengaged when the window has already closed."}
+      ],
+      assess: [
+        {t: "Preconfigured instruments", d: "Assess is set up for the instruments community research already relies on, including the GAIN family of assessments and similar structured intake and follow-up tools."},
+        {t: "Scheduled per participant", d: "Baseline, 3-month, 6-month, or any cadence your protocol defines, tracked individually rather than in bulk."},
+        {t: "Any device, plain language", d: "Mobile-first delivery with reading level and language handled up front, so completion does not depend on a clinic visit."},
+        {t: "Automated reminders", d: "Sequenced nudges by text and email until the item is complete or the window closes."},
+        {t: "Scored and exportable", d: "Results captured in structured form and handed to your data team on your schedule."},
+        {t: "Site and cohort rollups", d: "Completion, drift, and attrition visible by site, cohort, and coordinator."}
+      ],
+      flow: [
+        {n: "1", t: "Enroll", d: "Eligibility, consent, and orientation delivered as a guided sequence instead of a packet."},
+        {n: "2", t: "Educate", d: "What the study asks, why each visit matters, and what happens next, in the participant's language."},
+        {n: "3", t: "Assess", d: "Instruments delivered on protocol schedule, with reminders and completion tracking."},
+        {n: "4", t: "Retain", d: "Check-ins between visits so disengagement surfaces early enough to act on."},
+        {n: "5", t: "Report", d: "Completion and engagement data your team can hand to funders and IRBs."}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

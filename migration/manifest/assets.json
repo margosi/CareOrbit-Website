@@ -1,0 +1,1682 @@
+[
+  {
+    "bytes": 8575,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "About.dc.html",
+    "sha256": "b9ead850f29be92029ecb09e014f8671ed0dc1c2cd01ddf5d242dcdf8cd7df2a"
+  },
+  {
+    "bytes": 33300,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "AssessPage.dc.html",
+    "sha256": "69620a19dfb0435e83634db65c2e33b1a33b258c40fc94e0a586fcd9036533ef"
+  },
+  {
+    "bytes": 339,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Bariatrics.dc.html",
+    "sha256": "18ebcbf48f5a7a71d2b9a9d4df4e409259712a9be78916931baac907e01e0674"
+  },
+  {
+    "bytes": 60792,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "BariatricsPage.dc.html",
+    "sha256": "63532296d2e5658b46545b601b8c09e4997bfdfd44f478f9c37675dadb60070b"
+  },
+  {
+    "bytes": 345,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "BehavioralHealth.dc.html",
+    "sha256": "fe7694cb13e83ec9643d138a64c048df75d3ceebf5c5f6c95a53ab0858417347"
+  },
+  {
+    "bytes": 73289,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "BehavioralHealthPage.dc.html",
+    "sha256": "dbba8b51c54fc60d613e6c1e7ef4609be13a65f5b251769fb308b82964e83dcf"
+  },
+  {
+    "bytes": 10891056,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "BehavioralSafety-standalone.html",
+    "sha256": "02b60faf18fd5ade413922dfc9cd6cdb0a88e2e4d64f726d637de2ebcd63a32c"
+  },
+  {
+    "bytes": 55741,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "BehavioralSafety.dc.html",
+    "sha256": "2f96dd0a94e8fbb8937922e46049377ffe7cb9040411db156befea961779178a"
+  },
+  {
+    "bytes": 16722,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "BookACall.dc.html",
+    "sha256": "22cc0bdfa75daeecf610c1fad4d9e07b9a797244cd77107c4754f24540de5f77"
+  },
+  {
+    "bytes": 27244,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "CapturePage.dc.html",
+    "sha256": "b032d38e1e90f04c9f10fa0bf0965a0c99fcddd3449226abac8c71689402eed4"
+  },
+  {
+    "bytes": 339,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Cardiology.dc.html",
+    "sha256": "69a5985d33ff149a9d92e049fdf03380ea49cd6eaf85a775c12b5ad46b01a1f2"
+  },
+  {
+    "bytes": 78679,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "CardiologyPage v1.dc.html",
+    "sha256": "62572a95215a2e5eed2ba110bee51cda8d5c5def3b50d7bb7f683e9bbd736cc6"
+  },
+  {
+    "bytes": 84004,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "CardiologyPage.dc.html",
+    "sha256": "7e51f5580b720e86138186a937c6346f824cbed24d670b4a2566aaef7f75229d"
+  },
+  {
+    "bytes": 9025900,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "CareOrbit-Assess-Overview.pdf",
+    "sha256": "85b2bf4399f4641d5077d6a4fd22df2d0795d910a3c1ab8c7fc4a5db7a557d3e"
+  },
+  {
+    "bytes": 8874545,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "CareOrbit-Engage-Overview.pdf",
+    "sha256": "74276ab0922c687e23a8fd51fa4aa422f6faca91eed46a97d4b5021c62293e3f"
+  },
+  {
+    "bytes": 249607,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "CareOrbit-Pritikin-Pilot-Report.pdf",
+    "sha256": "b9e1d9e958b162f0abc71204a4a63cbfe717cea251bcd9fe8f246d957f4a5bfe"
+  },
+  {
+    "bytes": 915465,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "CareOrbit-Siteman-Pancreatic-Study.pdf",
+    "sha256": "457a4d4d41dfd03d336385a5a6e5d0768fa306da24a99c680c67c09bbb53dbd2"
+  },
+  {
+    "bytes": 243293,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "CareOrbit-Siteman-Study-Report.pdf",
+    "sha256": "6dad5e6a31e64038a158aed80dddef982c30c3adc86560e4fc3fccd6977c688a"
+  },
+  {
+    "bytes": 295410,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "CareOrbit-VA-eScreening-Report.pdf",
+    "sha256": "fa82c5da880d027c8e1e7c5a8e8c3aab9d680c66ecb7a384c219ff3e661909e8"
+  },
+  {
+    "bytes": 23699,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "CommunityResearch v1.dc.html",
+    "sha256": "cb8f027be81547260613ad4bd7e8c83f741c478ed961b7654d95bbc4e2d1f007"
+  },
+  {
+    "bytes": 33525,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "CommunityResearch.dc.html",
+    "sha256": "e16ca3ed288f26bcc608791a9577107f77c46ecb5971dbe4918ca730e619f7a9"
+  },
+  {
+    "bytes": 25583,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "DataPage.dc.html",
+    "sha256": "18b2d6d5b435e7b82ab8659027d73e793d18ac7727b6aefd4fc8eb1cf6ec2d77"
+  },
+  {
+    "bytes": 23398,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "EScreeningResults.dc.html",
+    "sha256": "5b9b3cb697b96bf8a7de72878bdc89b202d7b24ab5508b5cdb8df3d15da3bb9f"
+  },
+  {
+    "bytes": 28569,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "EngagePage.dc.html",
+    "sha256": "531a4d3c788d124dfe85ec68a9e61b8310737b192bdf38862b3c4a715f6ade54"
+  },
+  {
+    "bytes": 46593,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Home.dc.html",
+    "sha256": "05ef2ae5cc495d6fd04627819ff226ae28905fdd0767d3419cea33bb3ac850a9"
+  },
+  {
+    "bytes": 7462,
+    "dimensions": "",
+    "kind": "doc",
+    "path": "IMAGE-PROMPTS-value-section.md",
+    "sha256": "d64963de557450f3d92ce54f2b2f4e19f8869fdb56485d9baa666a4bb38c7503"
+  },
+  {
+    "bytes": 7861,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Login.dc.html",
+    "sha256": "2a5998980a7b5d084b89f315576f539996ce5db08bf9339b4ab8705ea094b300"
+  },
+  {
+    "bytes": 346,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "MedicationTherapy.dc.html",
+    "sha256": "12e1a2af54991dd5bfb851c7b4601481311d1b01166785e36046f14b62a0c4f0"
+  },
+  {
+    "bytes": 73470,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "MedicationTherapyPage.dc.html",
+    "sha256": "eefce34d835797845b112e41e81960a5bbe4097bd93a92c0d898a5030d165788"
+  },
+  {
+    "bytes": 337,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Oncology.dc.html",
+    "sha256": "e1dc6db670242ba85acf8262e0d87caf0e578d9fda0769aba9031481a0e6d6e0"
+  },
+  {
+    "bytes": 35201,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "OncologyPage-print.html",
+    "sha256": "3e09ab637ee7e8e81df620eec2f707962ff227a40cffd5e49d18f56c584e9ea6"
+  },
+  {
+    "bytes": 61443,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "OncologyPage.dc.html",
+    "sha256": "48c15174fd5092ba3c359b6c99058bb034b1c7a7c1ffac820bfab12d4e2c2b2c"
+  },
+  {
+    "bytes": 18697,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "OrbitPage.dc.html",
+    "sha256": "da36b0dc9ae88cf57ffffb547f21269f8eb8d0a3d9d3338e406caaf286217621"
+  },
+  {
+    "bytes": 340,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Orthopedics.dc.html",
+    "sha256": "d6ed921105174425347baef360ed9190e5373c33dc445cb5ad847dffac803afe"
+  },
+  {
+    "bytes": 30221,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "OrthopedicsPage-print.html",
+    "sha256": "b6588d5705cfdf22a56514f322ce0500c77ed5fdf26c63378259d68c87892e88"
+  },
+  {
+    "bytes": 88547,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "OrthopedicsPage.dc.html",
+    "sha256": "d9ae5985e8f5ebd36be7130315aae26c2173fe1bd2c6b77314b63f887706ccca"
+  },
+  {
+    "bytes": 24264,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Outcomes.dc.html",
+    "sha256": "3b6c618cc22c6d8c2aac0d80fb60e58d9d2326a5e610bf71830971e5a6c48935"
+  },
+  {
+    "bytes": 13760,
+    "dimensions": "",
+    "kind": "doc",
+    "path": "PAGE-STANDARD.md",
+    "sha256": "a9794db5f07442f22a0040c2b0839b14571df79dc5be3ca643b7b9539e924333"
+  },
+  {
+    "bytes": 12830,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PancreaticStudy-print.dc.html",
+    "sha256": "54e8948afddc5abe1ab1f33c9f812a3b9db8af1d2c3a521d85a5911b4bc2e65e"
+  },
+  {
+    "bytes": 36666,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Platform.dc.html",
+    "sha256": "41c95ae0e81670eb07d91da33a6fd34c11f0b394ae38f7c173e911c8cab8f432"
+  },
+  {
+    "bytes": 8418,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "Pricing.dc.html",
+    "sha256": "d3daeb87201d132b676ab4aa45366010fd3d7297447266cac5f9008024deffdc"
+  },
+  {
+    "bytes": 7382,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PricingAssess.dc.html",
+    "sha256": "7e89f23a4b7f86ab2702f00a4c70af448a95660d60d8c91daaa59b34e6c4a426"
+  },
+  {
+    "bytes": 8760,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PricingCapture.dc.html",
+    "sha256": "4383ef5c158d26370660378295d1b57910f1eca49596c073f0bc3510b7b1bb50"
+  },
+  {
+    "bytes": 8021,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PricingData.dc.html",
+    "sha256": "888299be9559af33c34f07f783ab065c71993efd8a40623247de2557ec0ec8fc"
+  },
+  {
+    "bytes": 378,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PrimaryCare.dc.html",
+    "sha256": "d00b67cd72e6733184594f05115ce5622628bdb537ff4ac797312c477d892d63"
+  },
+  {
+    "bytes": 53680,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PrimaryCarePage.dc.html",
+    "sha256": "c6d92df87ec49492e00bd1a3b59ffa2f7b27bd1e3da1711db7e0f16bea8ec4d3"
+  },
+  {
+    "bytes": 18273,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PrimaryCareSheet-print.dc.html",
+    "sha256": "cc3cd6505f61db0555f160b81b9168f4e9859fbea42d06959d3d9cf177049e24"
+  },
+  {
+    "bytes": 20045,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PritikinPilot.dc.html",
+    "sha256": "2ebe7f61137060b7710e606723f1d2cc5babe309d67b87fdb8f635daaca5a244"
+  },
+  {
+    "bytes": 14888,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PritikinPilotSummaryPDF-print.dc.html",
+    "sha256": "9f17d974a5da00820f72e9b8f5a93dd7e3748eca74999fa42001b19085e29507"
+  },
+  {
+    "bytes": 14888,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "PritikinPilotSummaryPDF.dc.html",
+    "sha256": "9f17d974a5da00820f72e9b8f5a93dd7e3748eca74999fa42001b19085e29507"
+  },
+  {
+    "bytes": 6115,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "SiteFooter.dc.html",
+    "sha256": "7f7fbbde989aa7cffee5ced1ce3091a0f210d53202fd0ff26bd2e4cd33dad032"
+  },
+  {
+    "bytes": 17953,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "SiteNav.dc.html",
+    "sha256": "cded514a6da6c4f72a8610b0289d184386cd359ce30e9a28490413cbe1693c4f"
+  },
+  {
+    "bytes": 21395,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "SitemanStudy.dc.html",
+    "sha256": "b7ace15676ba941fc95f1d3ac41d94b4336b95bbbc8e1b7642fd9a2415006d13"
+  },
+  {
+    "bytes": 13461,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "StudyRequest.dc.html",
+    "sha256": "da7b5cdda8eab47e677d8a27738b8a1437d393d97d1ed0faa43c5643689ff541"
+  },
+  {
+    "bytes": 344,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "SurgicalSupport.dc.html",
+    "sha256": "e253bc2a619ff38cd18829b9acbb23c3e66df124beb0814565e91175bd442981"
+  },
+  {
+    "bytes": 73892,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "SurgicalSupportPage.dc.html",
+    "sha256": "4a0de50923e37ba7daf66057c51ec55c5a86562599c07e921bc54d737395ffaf"
+  },
+  {
+    "bytes": 3607,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "ThankYou.dc.html",
+    "sha256": "5f2f483eaa7082380eb1c5ade1dd772a61703f14f02648182c09bae2edb04855"
+  },
+  {
+    "bytes": 341,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "WomensHealth.dc.html",
+    "sha256": "f374a685872adda5f62c8af61368995a01e0eecf4da4f1e095d30a8262ef32fc"
+  },
+  {
+    "bytes": 110075,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "WomensHealthPage.dc.html",
+    "sha256": "f8a0cf424b45cbd0c329a5546d01d8a6fce2996c158bb996021619bc9ff08922"
+  },
+  {
+    "bytes": 555,
+    "dimensions": "",
+    "kind": "image",
+    "path": "arc-lines.svg",
+    "sha256": "3bd3267aff8fed0f00097872a042bf20dbefdcd818cdd38094cfc85c9f5c4150"
+  },
+  {
+    "bytes": 8571,
+    "dimensions": "241x72",
+    "kind": "image",
+    "path": "careorbit-logo-nav.png",
+    "sha256": "8c44256dcfb7548d90c6e4c583ef626fdaabbbc584ad03bfd06e27756e9b3f01"
+  },
+  {
+    "bytes": 8385,
+    "dimensions": "210x60",
+    "kind": "image",
+    "path": "careorbit-logo-nav2.png",
+    "sha256": "33b2d566501fca0bb41cff74d84e6f0751e75705d5e5d2ffb278b0449d2d575e"
+  },
+  {
+    "bytes": 21686,
+    "dimensions": "292x102",
+    "kind": "image",
+    "path": "careorbit-logo.png",
+    "sha256": "b96185bb7fe74e9d95721ed3784065df3eabd09b20c7f02cbb6620a103c1e808"
+  },
+  {
+    "bytes": 258587,
+    "dimensions": "394x482",
+    "kind": "image",
+    "path": "case-study-surgery.png",
+    "sha256": "fb41a1efbef06553eb3188f150dd4d063ecef743add7f56f8c0e744222b524fb"
+  },
+  {
+    "bytes": 2074778,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "consult-oncology.png",
+    "sha256": "588534efeb3771954d3c705c53709cb7b0e9334bc219ffd9dad69c028e95e587"
+  },
+  {
+    "bytes": 38579,
+    "dimensions": "",
+    "kind": "script",
+    "path": "doc-page.js",
+    "sha256": "f52ae9c02fca7ab44c37f3ff363194fdf81caa20ae63e2fe1f518ed21133185e"
+  },
+  {
+    "bytes": 1915047,
+    "dimensions": "1692x930",
+    "kind": "image",
+    "path": "hero-1.png",
+    "sha256": "0a169d14c3e2b1d953401007afb2d8997a6368a84f4a12d7f9545b5a9e98bb3c"
+  },
+  {
+    "bytes": 1677914,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "hero-2.png",
+    "sha256": "18883abc096617e17c3ec9ec6db380232ffce3fb20c038a9cf2fab6e31f96717"
+  },
+  {
+    "bytes": 1704548,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "hero-3.png",
+    "sha256": "cd4b01c2a110508b9f2d3317ae2a6f68d0506d43420b58251429032503ff3683"
+  },
+  {
+    "bytes": 1798874,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "hero-4.png",
+    "sha256": "460ce327c2c7dbd4a6be286ac8547b01ed1a7322783904db0110327b9486112b"
+  },
+  {
+    "bytes": 1836502,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "hero-5.png",
+    "sha256": "4fcef58b7ef22d09f2f6bc8d9ca7989147b5cf405a1897bd647115cf66d6682e"
+  },
+  {
+    "bytes": 1472229,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "hero-6.png",
+    "sha256": "84122ebdfe2ae5f2c8f8fc20ccc32a57fcfa5b11b79c3e8d053cc57f7a3495b2"
+  },
+  {
+    "bytes": 1758817,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "hero-7.png",
+    "sha256": "19fec3d5548e410e31c929244496cdf054f7948d07818e737008ef009c04dc7c"
+  },
+  {
+    "bytes": 2143337,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "hero-main.png",
+    "sha256": "2d55d5fbaf769c76f72d9ed457d5fb4a28ef72281a85943dcd6808eba5fcc502"
+  },
+  {
+    "bytes": 2182354,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "hero-secondary.png",
+    "sha256": "3f97b19c4f6589f0848fe94e73f9ad42ce7649476d719a6bec31acf6acbe269f"
+  },
+  {
+    "bytes": 65350,
+    "dimensions": "",
+    "kind": "script",
+    "path": "image-slot.js",
+    "sha256": "fff26d081c8d9d60870f86c7539a5d179b9cdab15e67f2b205508a068e7c7ff6"
+  },
+  {
+    "bytes": 1708,
+    "dimensions": "",
+    "kind": "script",
+    "path": "motion.js",
+    "sha256": "e726c3ac47c3267f80f4a39b1819c8515aade0c60e2e5478a011728245683b16"
+  },
+  {
+    "bytes": 2764914,
+    "dimensions": "1582x867",
+    "kind": "image",
+    "path": "onc-diagnosis-home.png",
+    "sha256": "95ee0261335529852aa567cc2ebcd858340a048e65b1872eed80813c09f8d65f"
+  },
+  {
+    "bytes": 1872670,
+    "dimensions": "1635x962",
+    "kind": "image",
+    "path": "onc-infusion.png",
+    "sha256": "76d4c871a28b0b4d5edf94f5537d42a3dae7f6f1abe559d5b63606110d028c77"
+  },
+  {
+    "bytes": 1937440,
+    "dimensions": "1635x962",
+    "kind": "image",
+    "path": "onc-oral-therapy.png",
+    "sha256": "70ec546bbd5f9c004e5e13736a7f0027258ddc479d2aa7d2ad69c59e73eea225"
+  },
+  {
+    "bytes": 1909020,
+    "dimensions": "1535x1024",
+    "kind": "image",
+    "path": "onc-recovery.png",
+    "sha256": "613e65ac8abb7f1a5af6df8a1ddfbe81fb5fc6322ab15e3ac21c6fc18972f49d"
+  },
+  {
+    "bytes": 1782659,
+    "dimensions": "1634x962",
+    "kind": "image",
+    "path": "onc-surgical-prep.png",
+    "sha256": "e796a193ef73d998e33dd48e469f721dc610f2dda610c898ff5fd3a8993a57a0"
+  },
+  {
+    "bytes": 2026719,
+    "dimensions": "1535x1024",
+    "kind": "image",
+    "path": "onc-survivorship.png",
+    "sha256": "f1915c44662b73728afb54b2479b03fff5ad16026e747e10c9b1fbe1f1485f04"
+  },
+  {
+    "bytes": 1743043,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "oncology-bell.png",
+    "sha256": "5b9addab3ec734e9c705059433501abbd5ff349b477b5a704412ffd937c41871"
+  },
+  {
+    "bytes": 2049883,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "orbit-phone.png",
+    "sha256": "ce6276d527568f18488c9000fc2d4da8b48dd582715108221eeae0e1488f00fe"
+  },
+  {
+    "bytes": 19566,
+    "dimensions": "",
+    "kind": "script",
+    "path": "orbits-data.js",
+    "sha256": "797e575c89329c352c8cf23a7507eeee28497146155af42c4a4d135cec0aed14"
+  },
+  {
+    "bytes": 2083704,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "outcomes-banner.png",
+    "sha256": "b92f6ad1b0cd4084c0b481752c9bb5db7cb1cadad6e8da274d3f806808cf9181"
+  },
+  {
+    "bytes": 2549,
+    "dimensions": "",
+    "kind": "stylesheet",
+    "path": "responsive.css",
+    "sha256": "83d46557efdfec820f925e83ce89e9eb79878d55ddbf6ad3e5951b3139a79b25"
+  },
+  {
+    "bytes": 2271790,
+    "dimensions": "1493x1054",
+    "kind": "image",
+    "path": "safety-toolbox-talk.png",
+    "sha256": "0db386db948d14847bb0746701a11e7abc254ba160c14449480ed6607e875e44"
+  },
+  {
+    "bytes": 69150,
+    "dimensions": "",
+    "kind": "script",
+    "path": "support.js",
+    "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+  },
+  {
+    "bytes": 237845,
+    "dimensions": "394x482",
+    "kind": "image",
+    "path": "tile-bariatrics.png",
+    "sha256": "8e19bda2564ec43fbc80bca570b7c9e924fb56070da00b1997dbcb168a94401d"
+  },
+  {
+    "bytes": 217831,
+    "dimensions": "394x481",
+    "kind": "image",
+    "path": "tile-behavioral.png",
+    "sha256": "26018e7d28c3e04ec632f5495a934d7262f57aa99091484c1b7e735a03cd17d6"
+  },
+  {
+    "bytes": 233906,
+    "dimensions": "393x482",
+    "kind": "image",
+    "path": "tile-cardiology.png",
+    "sha256": "c7531f53e04be3a4c12a04ec7b1527d98f914b7a224877818974e041c5130d86"
+  },
+  {
+    "bytes": 227284,
+    "dimensions": "393x482",
+    "kind": "image",
+    "path": "tile-medication.png",
+    "sha256": "eeae88340ff59e14a7242364ccf5154e873ece8d65c13d33588bf1abff47baa1"
+  },
+  {
+    "bytes": 220391,
+    "dimensions": "393x481",
+    "kind": "image",
+    "path": "tile-oncology.png",
+    "sha256": "109d7af63c451260545028aa42ecd79a4e8f434bf33a6519eb91ea83dd66e5b3"
+  },
+  {
+    "bytes": 222738,
+    "dimensions": "394x481",
+    "kind": "image",
+    "path": "tile-orthopedics.png",
+    "sha256": "2b80a7bf6f534ec26795e6b4015cb9bb1ba78a15831b0f6744c5418e413f2eff"
+  },
+  {
+    "bytes": 2008483,
+    "dimensions": "1394x1128",
+    "kind": "image",
+    "path": "tile-primarycare.png",
+    "sha256": "154249713db2b2686763b42ab45df5454fa9b0e957cd94fa3d059efbe9d8bfff"
+  },
+  {
+    "bytes": 258587,
+    "dimensions": "394x482",
+    "kind": "image",
+    "path": "tile-procedures.png",
+    "sha256": "fb41a1efbef06553eb3188f150dd4d063ecef743add7f56f8c0e744222b524fb"
+  },
+  {
+    "bytes": 246558,
+    "dimensions": "393x481",
+    "kind": "image",
+    "path": "tile-womens.png",
+    "sha256": "36d728042a22ae98094eaf022091bb083156265eb5e02977fc48702236fc3ca6"
+  },
+  {
+    "bytes": 2149713,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "value-bariatrics.png",
+    "sha256": "5970b6860e1a593296817554fa939fe0bb0841bbb80ea896b8a5e4158b7082c2"
+  },
+  {
+    "bytes": 1867069,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "value-behavioralhealth.png",
+    "sha256": "2a98b8c6f466f65df4bb430aced8815673d0ac0b4d16b3fdd38e0e8a81ad839a"
+  },
+  {
+    "bytes": 2078026,
+    "dimensions": "1092x1440",
+    "kind": "image",
+    "path": "value-cardiology.png",
+    "sha256": "f3e3d5545b40545b6fa2d1468dd51ed6a2ddbb59fb51dbb469aba18354df4ca5"
+  },
+  {
+    "bytes": 2095070,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "value-medtherapy.png",
+    "sha256": "5ea2499d28bf86c80721cc5856aa7e9dbdb5e80578be4348b538576528e97087"
+  },
+  {
+    "bytes": 2205784,
+    "dimensions": "1023x1537",
+    "kind": "image",
+    "path": "value-oncology.png",
+    "sha256": "25b7ab1501e93888e12d896570611feca83d7d7fd86773fecc8a9560cd4a5f02"
+  },
+  {
+    "bytes": 1942913,
+    "dimensions": "1086x1448",
+    "kind": "image",
+    "path": "value-orthopedics.png",
+    "sha256": "223f32bf63be166171ecb3049042b0a03f081dc2b6519d145c7a8e44568202f1"
+  },
+  {
+    "bytes": 2169069,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "value-research.png",
+    "sha256": "0453b97c2e9034c7c81f77361088be165f4c537869b436f371b04e5477138477"
+  },
+  {
+    "bytes": 2154207,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "value-surgical.png",
+    "sha256": "9fdddfc1251356d4679146f008f235afb90b60cd8f743cca18ed00bc0e586e9b"
+  },
+  {
+    "bytes": 2066178,
+    "dimensions": "1089x1444",
+    "kind": "image",
+    "path": "value-womenshealth.png",
+    "sha256": "a92497d970f0b885a8a171b545ae29eb0ee6c957dfa983a1ef488587ecb61cd3"
+  },
+  {
+    "bytes": 38212,
+    "dimensions": "",
+    "kind": "page-or-template",
+    "path": "archive/Platform-tabs.dc.html",
+    "sha256": "c1f60bd6e4b8430cd86f75e8264ca0f4d44b21b483419b1403a6a3e859e28b31"
+  },
+  {
+    "bytes": 1893892,
+    "dimensions": "1685x933",
+    "kind": "image",
+    "path": "images/assess-escreening.png",
+    "sha256": "4de13a0f27aea3598f98823eb12907a23ae80d38dea6170a7e323d861e0b7068"
+  },
+  {
+    "bytes": 2029626,
+    "dimensions": "1254x1254",
+    "kind": "image",
+    "path": "images/assess-hero-2.png",
+    "sha256": "2a5cb9677a4e339f52247954504cebd454556cb12ffb35d18fa4d8e24f5a9de4"
+  },
+  {
+    "bytes": 1920443,
+    "dimensions": "1298x1212",
+    "kind": "image",
+    "path": "images/assess-hero-3.png",
+    "sha256": "8391e8c3eb993454d5a98d577a42a7ffafd1a97fad583c64db53dc38c0f2a76d"
+  },
+  {
+    "bytes": 2043310,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/assess-hero-4.png",
+    "sha256": "52f3590ea732e4998da2c0af7ef3e8774219d1a408d38143d9ede8da9394feb6"
+  },
+  {
+    "bytes": 2122921,
+    "dimensions": "1254x1254",
+    "kind": "image",
+    "path": "images/assess-hero-5.png",
+    "sha256": "da93ce71bcb18affbe800bc66af247f99f7ceea6c839c2cd526eb86a97343330"
+  },
+  {
+    "bytes": 1844845,
+    "dimensions": "1590x989",
+    "kind": "image",
+    "path": "images/assess-hero.png",
+    "sha256": "49ffd2992c75707257ebff5e541134fa12a75ec28feb57a1461085660af8767d"
+  },
+  {
+    "bytes": 1636981,
+    "dimensions": "1254x1254",
+    "kind": "image",
+    "path": "images/capture-content-1.png",
+    "sha256": "77143c134fff3ed840d55df9a71295b8a3d34d46fd91703b039e8ed03ba80874"
+  },
+  {
+    "bytes": 1779926,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/capture-hero-2.png",
+    "sha256": "9d547ca94f63dd255dc0e3eea1bd0ab1348e67732d0c2fa61a31d07ba87a76bd"
+  },
+  {
+    "bytes": 1990882,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/case-study-siteman.png",
+    "sha256": "6ce59c4c8ecbb5a33e5140ccb686ca6591771a96f8b5beacb0d9730882e5a078"
+  },
+  {
+    "bytes": 903629,
+    "dimensions": "1774x887",
+    "kind": "image",
+    "path": "images/data-flow-diagram-2.png",
+    "sha256": "f3b47bec865d220c4c2b551809ca6f7240e989e9826a39ed10850f421b1538d3"
+  },
+  {
+    "bytes": 897842,
+    "dimensions": "1774x887",
+    "kind": "image",
+    "path": "images/data-flow-diagram-3.png",
+    "sha256": "641efd019b7dca8cfc8d9ad69a52a1f5a3c1d7e58a768cbc3bb8d5cec1105b24"
+  },
+  {
+    "bytes": 870172,
+    "dimensions": "1774x887",
+    "kind": "image",
+    "path": "images/data-flow-diagram-4.png",
+    "sha256": "51aab7a8b2297614bc82e6401d7ff0965c03ba8f286ccca051f735db329bf246"
+  },
+  {
+    "bytes": 952927,
+    "dimensions": "1774x887",
+    "kind": "image",
+    "path": "images/data-flow-diagram.png",
+    "sha256": "9583a143d8c97825212d7871c919b41769d64e83ef8e5b2de5d35f4229765d07"
+  },
+  {
+    "bytes": 1636981,
+    "dimensions": "1254x1254",
+    "kind": "image",
+    "path": "images/data-hero-1.png",
+    "sha256": "77143c134fff3ed840d55df9a71295b8a3d34d46fd91703b039e8ed03ba80874"
+  },
+  {
+    "bytes": 2011841,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/engage-hero-10.png",
+    "sha256": "516f0858e26c1053edac690c45aa75b15b987e6aae80c0890ce0f3491c29e8fa"
+  },
+  {
+    "bytes": 2120547,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/engage-hero-11.png",
+    "sha256": "9d5094ca52b886fcab36f38a4ad2a089d308dc20e72f9a2a0d0ee1b61fe8bb55"
+  },
+  {
+    "bytes": 1881180,
+    "dimensions": "1670x941",
+    "kind": "image",
+    "path": "images/engage-hero-2.png",
+    "sha256": "125efdc3c9c702e52dd0784cb5fbbd463b37c73f7a04632f9a62838395d5f401"
+  },
+  {
+    "bytes": 1889388,
+    "dimensions": "1971x798",
+    "kind": "image",
+    "path": "images/engage-hero-3.png",
+    "sha256": "648e85cfd556057b1b4fea8c0cfc05785eabb5be07989654d2a20131b613bc36"
+  },
+  {
+    "bytes": 1849025,
+    "dimensions": "1971x798",
+    "kind": "image",
+    "path": "images/engage-hero-4.png",
+    "sha256": "6332102d98f9ba8e4f0a4888cca6e9827abf42647492913a11a889a496f5dd34"
+  },
+  {
+    "bytes": 1870613,
+    "dimensions": "1971x798",
+    "kind": "image",
+    "path": "images/engage-hero-5.png",
+    "sha256": "bce5ea75200522db65dcd8787457d62efdfd011c667899aae284f719e59009c6"
+  },
+  {
+    "bytes": 1921618,
+    "dimensions": "1254x1254",
+    "kind": "image",
+    "path": "images/engage-hero-6.png",
+    "sha256": "bdcb81010982859ffa1c056287f2652c7c2fb69214a68321bcc9e9e9f46b431f"
+  },
+  {
+    "bytes": 1976939,
+    "dimensions": "1254x1254",
+    "kind": "image",
+    "path": "images/engage-hero-7.png",
+    "sha256": "94c2ae5f6c65879cc5800b09c4b7e52cd600f7325c64df35203ca409114836d7"
+  },
+  {
+    "bytes": 1954919,
+    "dimensions": "1254x1254",
+    "kind": "image",
+    "path": "images/engage-hero-8.png",
+    "sha256": "90c74ff75c01ffad7eef1b94d7bd7c118a31978937d6fd1d32e3c4f72519b514"
+  },
+  {
+    "bytes": 2013552,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/engage-hero-9.png",
+    "sha256": "47e5bb2a3821a897b906fdf3ff1c76660a473dbe88828ef9eaafef16121dbb55"
+  },
+  {
+    "bytes": 1870058,
+    "dimensions": "1900x828",
+    "kind": "image",
+    "path": "images/engage-hero.png",
+    "sha256": "4bf5cd665fdbdb32d30f68d090aaf9b6b9e2692b85cb9e036be15b3662968c8c"
+  },
+  {
+    "bytes": 1372470,
+    "dimensions": "914x918",
+    "kind": "image",
+    "path": "images/headshot-david.png",
+    "sha256": "05b74dfba6bf261b5f5921c0d0a67b8bfdd8368f044c1ac615965a268450b879"
+  },
+  {
+    "bytes": 2136623,
+    "dimensions": "1254x1254",
+    "kind": "image",
+    "path": "images/headshot-jeff.png",
+    "sha256": "f9d369638d57ae378d3b60305e0880abf3e49e6f5347dcc47dd526de50f591d1"
+  },
+  {
+    "bytes": 1202064,
+    "dimensions": "918x916",
+    "kind": "image",
+    "path": "images/headshot-jim.png",
+    "sha256": "2942451638d290ee3b99fbcc32b28f46d772feebae5767bb303d681edc6374a6"
+  },
+  {
+    "bytes": 2395278,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/hero-bariatrics.png",
+    "sha256": "d9ed02846c9d6b1bf938704e62711d25a373b730c05c2520766418f55ad6afd4"
+  },
+  {
+    "bytes": 2047761,
+    "dimensions": "1453x1082",
+    "kind": "image",
+    "path": "images/hero-behavioral-health.png",
+    "sha256": "18e1056878adf55a6abab07eddf05a7f943e3e5110960b508020a892bbba96ce"
+  },
+  {
+    "bytes": 2233032,
+    "dimensions": "1448x1086",
+    "kind": "image",
+    "path": "images/hero-cardiology.png",
+    "sha256": "a45e5aa9005c1bdb4f7ebbcfb9f9ad0eed7310c81d051130316f6ef37451beaa"
+  },
+  {
+    "bytes": 2073572,
+    "dimensions": "1394x1128",
+    "kind": "image",
+    "path": "images/hero-medication-therapy.png",
+    "sha256": "2370618ad56a642fb8c8db0c76cfc37a236f3db4673fc387c66fcc2d26990484"
+  },
+  {
+    "bytes": 2323528,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/hero-orthopedics.png",
+    "sha256": "d5e98c3eeb871871fc6ab5d518548b573bdb030eae28ee3e52ba34126581761c"
+  },
+  {
+    "bytes": 2300327,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/hero-surgical-support.png",
+    "sha256": "7a5fb4a9c89ddd7d3f1b8d96c7b0c705767954d58a9c5f953742071ec023d583"
+  },
+  {
+    "bytes": 2047533,
+    "dimensions": "1408x1117",
+    "kind": "image",
+    "path": "images/hero-womens-health.png",
+    "sha256": "5765d2c796b2074fd9f9f411a8291d7e9ad9c7fd919b39e61855708ca3bf34aa"
+  },
+  {
+    "bytes": 2122765,
+    "dimensions": "2068x760",
+    "kind": "image",
+    "path": "images/how-we-work-bg.png",
+    "sha256": "f61250ede0e985b6e9e02d8a0d9d5bc7d27f4a201ff6acd56d699b5f3bd56fbb"
+  },
+  {
+    "bytes": 2592643,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/offering-behavioral-safety.png",
+    "sha256": "db3799fc67f3dea4c197f53301f7bdd8137718297e75747b7064512fa03676c7"
+  },
+  {
+    "bytes": 1779926,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/offering-capture-2.png",
+    "sha256": "9d547ca94f63dd255dc0e3eea1bd0ab1348e67732d0c2fa61a31d07ba87a76bd"
+  },
+  {
+    "bytes": 1080677,
+    "dimensions": "1462x1076",
+    "kind": "image",
+    "path": "images/offering-capture-3.png",
+    "sha256": "e1c60b1e3f750a35637bae45ca52b4a41aa55b36dcc35f5a03663111a7f508f6"
+  },
+  {
+    "bytes": 1322047,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/offering-capture-4.png",
+    "sha256": "67736234b8afa687d0784a1d21f1e66291f64b532f87233e4891eb44a034939a"
+  },
+  {
+    "bytes": 1931462,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "images/offering-capture.png",
+    "sha256": "dc7fc9b3cd8a502ac37eb5dcb2d6ae4f80043597a96f1222d62a29a6b7449a44"
+  },
+  {
+    "bytes": 1909486,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "images/offering-research.png",
+    "sha256": "36461ce45e443b0482ae81547e4ca0399c608150ad0668120c0f75ea1f12b7ac"
+  },
+  {
+    "bytes": 2121764,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "images/ortho-day-of.png",
+    "sha256": "21600ce08aca073eb93f9d0ec0a388f6763cdbbecb90e4d09901e3017b8358b6"
+  },
+  {
+    "bytes": 2020264,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "images/ortho-home-recovery.png",
+    "sha256": "dbcc8fca7ee4aea9ee3efcc193986138f01c326853b11257eefc6604306d8b7d"
+  },
+  {
+    "bytes": 2145824,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "images/ortho-pain.png",
+    "sha256": "2c8434a7ebfd2aa212d452f511c89491342d6ac9d1e758172b9ed076aed9c839"
+  },
+  {
+    "bytes": 2010664,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "images/ortho-prehab.png",
+    "sha256": "4f41f861c66c6d0820fa48279bfafe88700feb59beeedd6748b36b0e466ba8fc"
+  },
+  {
+    "bytes": 2027530,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "images/ortho-proms.png",
+    "sha256": "08695764096f6b5c1c6d4f576c04a97d7a22a56b3bb9eb7931a40b7f14ea2c73"
+  },
+  {
+    "bytes": 1919605,
+    "dimensions": "1672x941",
+    "kind": "image",
+    "path": "images/ortho-therapy.png",
+    "sha256": "218c9a97ced96f6c96cdd8c7dddb153ad7c1ff73f1eb1ee8199314f90d8d29ad"
+  },
+  {
+    "bytes": 1723585,
+    "dimensions": "1538x1023",
+    "kind": "image",
+    "path": "images/phi-free-dashboard.png",
+    "sha256": "73248686a1d29f4d6767229ef8a414fff047946fecdda580b4bd1e1770fce76c"
+  },
+  {
+    "bytes": 2036889,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-assess-2.png",
+    "sha256": "892428d81333961d921a60a3129a7a4ce4cf730902e39a16cb9bab833790e2a9"
+  },
+  {
+    "bytes": 2043310,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-assess-3.png",
+    "sha256": "52f3590ea732e4998da2c0af7ef3e8774219d1a408d38143d9ede8da9394feb6"
+  },
+  {
+    "bytes": 2229476,
+    "dimensions": "1199x1312",
+    "kind": "image",
+    "path": "images/platform-card-assess-4.png",
+    "sha256": "e679874a1bc7d84a65fbec2b9f49eeb76bfd2ff2a471b02df4c2135a0a778af0"
+  },
+  {
+    "bytes": 2177266,
+    "dimensions": "1199x1312",
+    "kind": "image",
+    "path": "images/platform-card-assess-5.png",
+    "sha256": "6a59e391271bbb04e419e84687f038b3f151cc9e3c50371d3c7a420fe5fb8894"
+  },
+  {
+    "bytes": 1914069,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-assess.png",
+    "sha256": "7db844db765fbff2aee690db88656a794a383f0bcae23057578d14c670a92310"
+  },
+  {
+    "bytes": 1784303,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-capture-2.png",
+    "sha256": "8ff65964db5dbde7366e5877aeed2644cfabaedf2974092cbb20b9c2c4c94b09"
+  },
+  {
+    "bytes": 1866798,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-capture.png",
+    "sha256": "cfe9ce349d52f384a36aca5c4ca112785490de980d0f61db0876a8ae575b96cc"
+  },
+  {
+    "bytes": 1877229,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-data-2.png",
+    "sha256": "0803478b256ad03b088db934157d70e4a4962cc5b5178474cba617ca2185fade"
+  },
+  {
+    "bytes": 1850189,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-data.png",
+    "sha256": "d40342d3ac2d97c9f2975dddcf8a61c046c7e2fb53a21a286ff47f32d63f0c5c"
+  },
+  {
+    "bytes": 2013552,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-engage-2.png",
+    "sha256": "47e5bb2a3821a897b906fdf3ff1c76660a473dbe88828ef9eaafef16121dbb55"
+  },
+  {
+    "bytes": 2109776,
+    "dimensions": "1199x1312",
+    "kind": "image",
+    "path": "images/platform-card-engage-3.png",
+    "sha256": "1d18c6812fb3533d0a53ec1cf71f57c3b8e70e18f9316c38f38bfd333469e720"
+  },
+  {
+    "bytes": 2177266,
+    "dimensions": "1199x1312",
+    "kind": "image",
+    "path": "images/platform-card-engage-4.png",
+    "sha256": "6a59e391271bbb04e419e84687f038b3f151cc9e3c50371d3c7a420fe5fb8894"
+  },
+  {
+    "bytes": 2002136,
+    "dimensions": "1113x1413",
+    "kind": "image",
+    "path": "images/platform-card-engage.png",
+    "sha256": "22073c32996d97f05176595e4819a8c8088cd6af6e0cccab2d4f5960938d6a03"
+  },
+  {
+    "bytes": 1861795,
+    "dimensions": "1584x993",
+    "kind": "image",
+    "path": "images/platform-experiences.png",
+    "sha256": "d93d96dfd7d0557c9604594773f4d1cea43ef418781b32fa492d59e13f0f64fb"
+  },
+  {
+    "bytes": 2232270,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-1.png",
+    "sha256": "3b27eed1c3fdab26d708bf4685a1a8b5ea818b1a7721864fbf97af0a18df0d32"
+  },
+  {
+    "bytes": 2141042,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-1b.png",
+    "sha256": "a6ea4dece8090aab6010343c1a9427993247589eab92e96a9c08d6d600b4b9eb"
+  },
+  {
+    "bytes": 2053667,
+    "dimensions": "1199x1312",
+    "kind": "image",
+    "path": "images/platform-feat-1c.png",
+    "sha256": "00f7f3912fe79ee81b182605028769fef0c4f398fddb11cafbdfe8e1673e313f"
+  },
+  {
+    "bytes": 2383836,
+    "dimensions": "1199x1312",
+    "kind": "image",
+    "path": "images/platform-feat-1d.png",
+    "sha256": "8ba7efeb86ff9b72f84eb5aa835b0757925269420d6a7190b0725c30819a8284"
+  },
+  {
+    "bytes": 2152011,
+    "dimensions": "1199x1312",
+    "kind": "image",
+    "path": "images/platform-feat-1e.png",
+    "sha256": "3abb61a326b659022bf2b379c910a445f20b073c52bb1b36d3ef582b1de1cf1c"
+  },
+  {
+    "bytes": 2173207,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-1f.png",
+    "sha256": "98b03f14c3becae86c12a42c27b67342f7c23a81d2f5b77bf7ff5ec5c13425ab"
+  },
+  {
+    "bytes": 1994955,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-2.png",
+    "sha256": "31d737a49bffe29f8ff6fc66bda432216061acec4a36a56e05c9687d7bb705f7"
+  },
+  {
+    "bytes": 2028038,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-2b.png",
+    "sha256": "251906f08a9d22eeada3c3d713d8780f007abe367e65c9509238c98cc73d1655"
+  },
+  {
+    "bytes": 1996019,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-2c.png",
+    "sha256": "97c001cd5dad9404b01da1139281b4edfe6f9a29ad6a8760420e0322415653f1"
+  },
+  {
+    "bytes": 1796349,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-2d.png",
+    "sha256": "1322119fae2a86fc1dc28ac8de6863343ffbfb0c66752663dc25b88c2a4e5140"
+  },
+  {
+    "bytes": 1712230,
+    "dimensions": "1308x1203",
+    "kind": "image",
+    "path": "images/platform-feat-3.png",
+    "sha256": "71afb81574240e1f9d50e83a3351579d44a099a3db412fccfd7406deef0c2832"
+  },
+  {
+    "bytes": 1897401,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-3b.png",
+    "sha256": "b10ec015b21b185940d3ca3ca28e542ff1a50d944df0dd3e725309d1235ccf9d"
+  },
+  {
+    "bytes": 1796151,
+    "dimensions": "1308x1202",
+    "kind": "image",
+    "path": "images/platform-feat-4.png",
+    "sha256": "9a07c04d21c6e6af9f6f914c8f0cd5029db00ef97752aa6454456f379a475649"
+  },
+  {
+    "bytes": 2192473,
+    "dimensions": "1308x1202",
+    "kind": "image",
+    "path": "images/platform-feat-5.png",
+    "sha256": "f5ad88b375f445e2010dcc1616d1018891b11a34f18a0f01cfa89adccbd2c8d6"
+  },
+  {
+    "bytes": 2011841,
+    "dimensions": "1284x1225",
+    "kind": "image",
+    "path": "images/platform-feat-5b.png",
+    "sha256": "516f0858e26c1053edac690c45aa75b15b987e6aae80c0890ce0f3491c29e8fa"
+  },
+  {
+    "bytes": 1958406,
+    "dimensions": "1188x1324",
+    "kind": "image",
+    "path": "images/platform-hero-1.png",
+    "sha256": "bebe2fd708fd321d172a1dadad12054a7a913a85a10f67bfd080457240d9ebf4"
+  },
+  {
+    "bytes": 2122684,
+    "dimensions": "1448x1086",
+    "kind": "image",
+    "path": "images/platform-hero-2.png",
+    "sha256": "0016ca6260f24a5474b3302853b1b647b3b61de1f43790d6a37c99717a4d0c32"
+  },
+  {
+    "bytes": 1963264,
+    "dimensions": "1487x1058",
+    "kind": "image",
+    "path": "images/platform-hero-3.png",
+    "sha256": "e91ac5bc1ae04fdd747a9875f9d1625b0e749aa04ceb6980021a1934bac9c874"
+  },
+  {
+    "bytes": 1964924,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "images/platform-hero-4.png",
+    "sha256": "f3739b331582f0bbe450209fb6926d2289005a8aa6749144c5c31a2ef00ad321"
+  },
+  {
+    "bytes": 1964924,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "images/platform-hero-4b.png",
+    "sha256": "f3739b331582f0bbe450209fb6926d2289005a8aa6749144c5c31a2ef00ad321"
+  },
+  {
+    "bytes": 1865725,
+    "dimensions": "1685x934",
+    "kind": "image",
+    "path": "images/platform-statement-2.png",
+    "sha256": "fdbd42d257b82de8727749add9ea530e3bba203dcbbbf83cc0b1fb6eaf2dd430"
+  },
+  {
+    "bytes": 2183920,
+    "dimensions": "1726x911",
+    "kind": "image",
+    "path": "images/platform-statement.png",
+    "sha256": "758f3c9fcdb3d3d3ab3b9cda7241018703170de5a85d52f7e00b46d2286361bb"
+  },
+  {
+    "bytes": 2008483,
+    "dimensions": "1394x1128",
+    "kind": "image",
+    "path": "images/primarycare-hero.png",
+    "sha256": "154249713db2b2686763b42ab45df5454fa9b0e957cd94fa3d059efbe9d8bfff"
+  },
+  {
+    "bytes": 2057238,
+    "dimensions": "1086x1448",
+    "kind": "image",
+    "path": "images/primarycare-value-chronic.png",
+    "sha256": "8708a2cc83ba6c2f165f2ccbdc6a14548e3b38ab54c8bc56177342c49292e2ac"
+  },
+  {
+    "bytes": 2122055,
+    "dimensions": "1086x1448",
+    "kind": "image",
+    "path": "images/primarycare-value-prevention.png",
+    "sha256": "7cd35b58a2d9fab3d2fe348a161784dae91ecc2ddea7a17018582d1d944d8f09"
+  },
+  {
+    "bytes": 1887504,
+    "dimensions": "1086x1448",
+    "kind": "image",
+    "path": "images/primarycare-value-transitions.png",
+    "sha256": "fdbd7b5c5c83b4b83cc460bda49161aedfc5bab22f80e390065d5fdf97c0ade1"
+  },
+  {
+    "bytes": 2305822,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/research-hero.png",
+    "sha256": "11bc83c3f49b419008a19f1c57a9ad32ed8b204c03d62691d49e4a74db98f7f2"
+  },
+  {
+    "bytes": 1925437,
+    "dimensions": "2070x760",
+    "kind": "image",
+    "path": "images/roi-enrollment.png",
+    "sha256": "18617c24679517fce157ecef0b28b5af2f8d253d525e3cedada6f5ca8ff2bc90"
+  },
+  {
+    "bytes": 1938546,
+    "dimensions": "2071x759",
+    "kind": "image",
+    "path": "images/roi-missed-appts.png",
+    "sha256": "997ee2a00c5053d2168ae9982eed1537fe5cdbbde420c597eebc43a15521b5f1"
+  },
+  {
+    "bytes": 2031365,
+    "dimensions": "2069x760",
+    "kind": "image",
+    "path": "images/roi-staff-time.png",
+    "sha256": "f57d76ff725a7704bfc41ac4064573cb0fb6d06343890be54b6a38569afed0ac"
+  },
+  {
+    "bytes": 2191127,
+    "dimensions": "2070x760",
+    "kind": "image",
+    "path": "images/roi-vbc.png",
+    "sha256": "539440b0d5baf7920239ddd947bb399636d9f01628ee4738489b75c44cc9c9a7"
+  },
+  {
+    "bytes": 2224753,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/study-cardiac-rehab.png",
+    "sha256": "f54390b0a81faad17a348a8f7d8c9e593907701a0af0bb3e8daa7cdd6b0ed56d"
+  },
+  {
+    "bytes": 2155859,
+    "dimensions": "1536x1024",
+    "kind": "image",
+    "path": "images/study-va-escreening.png",
+    "sha256": "c5935c96c06bdf6dd8112eba2de7c2f86d29730923bf8b3fc44f5600b305ca81"
+  },
+  {
+    "bytes": 1780350,
+    "dimensions": "1907x825",
+    "kind": "image",
+    "path": "images/unified-experience-2.png",
+    "sha256": "cdd71a58b0d706256ed884e14391faa151cb0ba86c6e596641d73d4fa71edd60"
+  },
+  {
+    "bytes": 2666532,
+    "dimensions": "1809x774",
+    "kind": "image",
+    "path": "images/unified-experience-3-crop.png",
+    "sha256": "0ace3c9737c98ae9e125352cc5a2214919b6205b46a3630f2aaedc06016c3da0"
+  },
+  {
+    "bytes": 1960768,
+    "dimensions": "1877x838",
+    "kind": "image",
+    "path": "images/unified-experience-3.png",
+    "sha256": "5ec6b491dddf6a5b4c8d5083949c216ec4df45849ece015c5faf62a06e53ab89"
+  },
+  {
+    "bytes": 2535787,
+    "dimensions": "1814x772",
+    "kind": "image",
+    "path": "images/unified-experience-4-crop.png",
+    "sha256": "02108807fd91e5558c115dc926596aca43b5214b95136016a337e6b5a7c75435"
+  },
+  {
+    "bytes": 1845770,
+    "dimensions": "1886x834",
+    "kind": "image",
+    "path": "images/unified-experience-4.png",
+    "sha256": "8bcc4fdf200823feebe72d074b297b709f2dcaa78b31ee6321d54eb13002e05d"
+  },
+  {
+    "bytes": 2562858,
+    "dimensions": "1860x779",
+    "kind": "image",
+    "path": "images/unified-experience-5-crop.png",
+    "sha256": "6df5a11bb89d8cda1b0fd415dfc66356f4d2c2121cec038da5f47b0a95fc901c"
+  },
+  {
+    "bytes": 1780350,
+    "dimensions": "1907x825",
+    "kind": "image",
+    "path": "images/unified-experience-5.png",
+    "sha256": "cdd71a58b0d706256ed884e14391faa151cb0ba86c6e596641d73d4fa71edd60"
+  },
+  {
+    "bytes": 2612562,
+    "dimensions": "1840x758",
+    "kind": "image",
+    "path": "images/unified-experience-crop.png",
+    "sha256": "78218238f127f0f4e4457ad556b9443850f5cdd3ca2adb62f0387bc67af2d126"
+  },
+  {
+    "bytes": 1946350,
+    "dimensions": "1903x826",
+    "kind": "image",
+    "path": "images/unified-experience.png",
+    "sha256": "463a54bd7f52797b1e498822afbec96e92cdf77bbca67f5690442050302605e9"
+  },
+  {
+    "bytes": 2382732,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "images/value-cardiology-all.png",
+    "sha256": "8b1f0a79753a7d12db61c615c3fe922462ff6790f754eac11eec34af3e881d47"
+  },
+  {
+    "bytes": 2539140,
+    "dimensions": "906x1387",
+    "kind": "image",
+    "path": "images/value-cardiology-hf.png",
+    "sha256": "cba86cf73713c23ca2847382730153f4b4fad052ea1096638366f1dfec7ea440"
+  },
+  {
+    "bytes": 2577277,
+    "dimensions": "935x1390",
+    "kind": "image",
+    "path": "images/value-cardiology-procedures.png",
+    "sha256": "9ff0addd1328694855e7cba132af664d22fc3f0bd7a4c5d50c9f405b43f8419c"
+  },
+  {
+    "bytes": 2516258,
+    "dimensions": "1050x1498",
+    "kind": "image",
+    "path": "images/value-cardiology-rehab.png",
+    "sha256": "9bb20fc0b6eda94053d0ee87642488a288fe9204fe7f8b52f123796bd3710446"
+  },
+  {
+    "bytes": 2102226,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "images/value-gyn.png",
+    "sha256": "91aa4349bba536181300f2a4425470c3c5e8b35d2059cefe8d0adb07f7d82874"
+  },
+  {
+    "bytes": 2126620,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "images/value-maternity.png",
+    "sha256": "a640bb8d658e585f9e56c31137028f1cc0532b1a6156f1b2e11059a801e78d92"
+  },
+  {
+    "bytes": 2103063,
+    "dimensions": "1122x1402",
+    "kind": "image",
+    "path": "images/value-midlife.png",
+    "sha256": "5db4e9e6cbbf653a847659b491afbeba5d152d07cda69b8a8f5fbe40caabe916"
+  },
+  {
+    "bytes": 2638306,
+    "dimensions": "948x1384",
+    "kind": "image",
+    "path": "images/value-ortho-all.png",
+    "sha256": "b0c48f3f3ca466d5939e545d95385ec056d077246bc095f8c51371269d4f8706"
+  },
+  {
+    "bytes": 2705722,
+    "dimensions": "955x1417",
+    "kind": "image",
+    "path": "images/value-ortho-joint.png",
+    "sha256": "ff8c5d9bab3eea7c2dd8a19b9af7772af9381b414d3fb053255620bffe0528f5"
+  },
+  {
+    "bytes": 2809464,
+    "dimensions": "958x1409",
+    "kind": "image",
+    "path": "images/value-ortho-spine.png",
+    "sha256": "e4d17771dd2b754410f40c2e794c5a17ed1cbe8788268985899cd69d966e3321"
+  },
+  {
+    "bytes": 2784997,
+    "dimensions": "970x1412",
+    "kind": "image",
+    "path": "images/value-ortho-sports.png",
+    "sha256": "dad8429c80cb1598d1536b835a5af5ee60fad0b12d4ec3824eb60463971b9ef3"
+  },
+  {
+    "bytes": 6544980,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-assess-2-page.pdf",
+    "sha256": "fade230c74ad48054ac04c625d48a3e688f98fd477788630c7f2208f9b7720c6"
+  },
+  {
+    "bytes": 5885528,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-bariatrics-2-page.pdf",
+    "sha256": "44cc78ab80da5c51f81b3e178d20fdb429d433fb05da4585541b0079d0a81387"
+  },
+  {
+    "bytes": 4690859,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-behavioral-health-2-page.pdf",
+    "sha256": "13f23bd654b6a0e13f31cab8dc5b0441c4052f297243b599fbc32e4f7bbb0dec"
+  },
+  {
+    "bytes": 6356247,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-behavioral-safety-2-page.pdf",
+    "sha256": "802e121d2988cb64877cedb59ab2a5ed72d3bf87986b192c4e21c69bf59aecb3"
+  },
+  {
+    "bytes": 3519367,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-capture-2-page.pdf",
+    "sha256": "a5242e779d2bdfea99f28f1c800ae8cdeae9bff0e05d6ead8ca5afe4be0439de"
+  },
+  {
+    "bytes": 5972934,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-cardiology-2-page.pdf",
+    "sha256": "fbd46cc451c09d9675e74057042b650b4fc72179d8e60a10fa8d0c8166bf1a18"
+  },
+  {
+    "bytes": 6007233,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-community-research-2-page.pdf",
+    "sha256": "d75c702bf45aa74048c6181c1f702ce26da1ab370e49eb096b6b8b851daf360c"
+  },
+  {
+    "bytes": 5746047,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-data-2-page.pdf",
+    "sha256": "4181f02c901cb65bbac0742f2ec508de22f7441bc652e1dabe3133510417fb2d"
+  },
+  {
+    "bytes": 6060576,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-engage-2-page.pdf",
+    "sha256": "991dafb465870db431496f3f56e8c46ce8a00963d8730d1dccd50687aa22fcac"
+  },
+  {
+    "bytes": 5763954,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-medication-therapy-2-page.pdf",
+    "sha256": "739a91b6de938c7624f69da0e3368db1e0f4511f491bf9511f012c0db470d393"
+  },
+  {
+    "bytes": 5893809,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-oncology-2-page.pdf",
+    "sha256": "0f3cb864ff7c73a7c510a7e20aa7eae45822c9ec824bf201949e4ea4eed40abd"
+  },
+  {
+    "bytes": 5721375,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-orthopedics-2-page.pdf",
+    "sha256": "26e6fdfc63b30a30b3d5d0da708cdb5d5e142ff446638d7aa269b93d232a23b0"
+  },
+  {
+    "bytes": 4693548,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-platform-2-page.pdf",
+    "sha256": "379af6f457797fd7069cbc4bec174b5fc8291e1d77b9a6b53ec20a6f492ffd33"
+  },
+  {
+    "bytes": 5783035,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-surgical-support-2-page.pdf",
+    "sha256": "a1ced6be1285cc0130d4a442825f409781bf82f2627d6681ef903dad41b1335d"
+  },
+  {
+    "bytes": 5015196,
+    "dimensions": "",
+    "kind": "pdf",
+    "path": "sheets/careorbit-womens-health-2-page.pdf",
+    "sha256": "a5f3fcefc024cf47b660bc9777c8c98e4ab7ba8ca7cc16d034ceab9b7937528c"
+  }
+]

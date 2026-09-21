@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@keyframes coFloat{from{transform:translateY(-7px)}to{transform:translateY(9px)}}
+@media(max-width:1020px){[data-hdr],[data-hero-grid],[data-split],[data-two]{grid-template-columns:1fr!important;gap:32px!important}[data-povrow]{grid-template-columns:1fr!important;gap:12px!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}}
+@media(max-width:900px){[data-restat]{grid-template-columns:1fr!important;gap:18px!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="outcomes" hint-size="100%,120px"></dc-import>
+
+<div data-screen-label="Pilot hero" style="max-width:1220px;margin:0 auto;padding:72px 28px 88px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center" data-hero-grid="1">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="width:9px;height:9px;border-radius:50%;background:#5B9BEA;flex-shrink:0;display:block"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#2D5A87">Cardiology &middot; Observational pilot</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">The Pritikin Cardiac Rehab pilot: patients who opened their orbit started rehab at <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">more than twice the rate</em></h1>
+    <p style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:620px;text-wrap:pretty">Over nine months at a leading Midwest health system, 187 patients referred to Pritikin Intensive Cardiac Rehabilitation were invited to a cardiac rehab orbit. Of those who activated it, 52% went on to start the program. Of those who never activated, 24% did.</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:4px;flex-wrap:wrap">
+      <a href="#request" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 28px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Download a summary of the pilot results</a>
+      <a href="BookACall.dc.html?src=pritikin-pilot" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;padding:16px 24px;border-radius:999px;border:1.5px solid rgba(15,29,46,.2)" style-hover="border-color:#0F1D2E;color:#0F1D2E">Book a 20-minute intro call</a>
+    </div>
+  </div>
+  <div style="min-width:0;animation:coFloat 6s ease-in-out infinite alternate"><image-slot id="pritikin-pilot-hero" radius="32" src="images/study-cardiac-rehab.png" placeholder="[Placeholder: cardiac rehab photo]" style="display:block;width:100%;height:clamp(320px,30vw,440px)"></image-slot></div>
+</div>
+
+<div data-screen-label="Topline" style="max-width:1220px;margin:0 auto;padding:0 28px 88px">
+  <div style="background:#0F1D2E url(arc-lines.svg) center/cover;border-radius:40px;padding:clamp(40px,5vw,72px) clamp(28px,5vw,72px);color:#FFFFFF">
+    <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:40px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5B9BEA">The finding</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Activation predicted <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">enrollment</em></h2>
+      </div>
+      <p style="font-size:20px;line-height:1.6;color:#B9C8D8;margin:0;max-width:560px;text-wrap:pretty">One number carried the pilot: the gap in rehab start rate between patients who activated their orbit and patients who never did.</p>
+    </div>
+    <div data-stat5 data-rv style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px">
+      <sc-for list="{{ topline }}" as="s" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #5B9BEA;padding-top:16px;min-height:120px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.2vw,42px);line-height:1;letter-spacing:-0.035em;color:{{ s.c }}">{{ s.n }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#5B9BEA">{{ s.l }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ s.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:36px;padding-top:18px;border-top:1px solid #2D5A87;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8FA5BC">Cohorts as reported by Pritikin ICR, December 2023. Observational pilot, not a randomized trial.</div>
+  </div>
+</div>
+
+<div data-screen-label="Cohort ledger" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">The two cohorts</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Same invitation, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">different journeys</em></h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:560px;text-wrap:pretty">All 187 patients were referred to the program and invited to an orbit. What separated them was whether they activated it.</p>
+  </div>
+  <sc-for list="{{ cohorts }}" as="c" hint-placeholder-count="2">
+    <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ c.label }}">{{ c.kicker }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ c.t }}</div>
+        <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">{{ c.sub }}</div>
+      </div>
+      <div data-two style="display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);gap:36px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:clamp(38px,4vw,54px);line-height:1;color:{{ c.dot }}">{{ c.rate }}</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62)">of this cohort started ICR</div>
+        </div>
+        <div data-restat style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px">
+          <sc-for list="{{ c.rows }}" as="row" hint-placeholder-count="4">
+            <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:12px">
+              <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(24px,2.4vw,32px);line-height:1;letter-spacing:-0.03em;color:#0F1D2E">{{ row.v }}</div>
+              <div style="font-size:12px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">{{ row.k }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-for>
+  <div data-rv style="border-top:1px solid rgba(15,29,46,.14);padding-top:22px;font-size:14px;line-height:1.65;color:rgba(15,29,46,.6);max-width:760px;text-wrap:pretty">This was an observational pilot, not a randomized trial: patients chose whether to activate, so activation and program start may share underlying causes such as motivation or staff contact. The pilot's own recommendation is a randomized design next.</div>
+</div>
+
+<div data-screen-label="Against goals" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Honest scorekeeping</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Against the pilot's <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">own goals</em></h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:560px;text-wrap:pretty">Three KPIs were set before the pilot began. Two could not be evaluated, and one fell short of its target. We report all three.</p>
+  </div>
+  <sc-for list="{{ goals }}" as="g" hint-placeholder-count="3">
+    <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ g.tone }}">{{ g.verdict }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(19px,2vw,24px);line-height:1.16;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ g.name }}</div>
+        <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6)">Target: {{ g.target }}</div>
+      </div>
+      <div style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);text-wrap:pretty;padding-top:2px">{{ g.result }}</div>
+    </div>
+  </sc-for>
+</div>
+
+<div data-screen-label="Obstacles" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">What we learned</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Obstacles, and <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">what we changed</em></h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:560px;text-wrap:pretty">A pilot exists to surface problems before full deployment. These are the five that mattered, each with the fix it produced.</p>
+  </div>
+  <sc-for list="{{ obstacles }}" as="o" hint-placeholder-count="5">
+    <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:24px 0;border-top:1px solid rgba(15,29,46,.14)">
+      <div style="display:flex;gap:18px;align-items:baseline">
+        <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:22px;color:#5B9BEA">{{ o.n }}</div>
+        <div style="font-size:15.5px;line-height:1.6;font-weight:600;color:#0F1D2E;text-wrap:pretty">{{ o.t }}</div>
+      </div>
+      <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline;padding-top:2px">
+        <span style="width:9px;height:1.5px;border-radius:1px;background:#E3735C;transform:translateY(-4px)"></span>
+        <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ o.s }}</div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+
+<div data-screen-label="Request and CTA" id="request" style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div style="background:#0F1D2E url(arc-lines.svg) center/cover;border-radius:40px;padding:clamp(40px,5vw,72px) clamp(28px,5vw,72px);color:#FFFFFF;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center" data-hero-grid="1">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5B9BEA">Go deeper</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Get the pilot results, or <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">talk it through</em></h2>
+      <p style="font-size:17px;line-height:1.65;color:#B9C8D8;margin:0;max-width:540px;text-wrap:pretty">Download a summary of the nine-month pilot results, including cohort detail, the KPI scorecard, and the obstacles as we reported them. Or bring your own rehab enrollment numbers and we will walk through what an orbit could change.</p>
+      <div><a href="BookACall.dc.html?src=pritikin-pilot" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 28px;border-radius:999px;display:inline-block;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a></div>
+    </div>
+    <div style="background:#FAF8F4;border-radius:28px;padding:32px;color:#0F1D2E">
+      <div style="font-family:Lato,sans-serif;font-weight:700;font-size:19px;margin-bottom:6px">Download the pilot summary</div>
+      <div style="font-size:14px;line-height:1.6;color:rgba(15,29,46,.65);margin-bottom:14px">Full nine-month results and program detail, in one document.</div>
+      <dc-import name="StudyRequest" label="Download a summary of the pilot results" heading="Download the pilot summary" blurb="Tell us who you are and your download will be ready." file="CareOrbit-Pritikin-Pilot-Report.pdf" downloadLabel="Download the pilot report" hint-size="100%,60px"></dc-import>
+    </div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,400px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      topline: [
+        {n: "52%", c: "#FFFFFF", l: "Activated, then started ICR", d: "26 of the 50 patients who activated their orbit started the program."},
+        {n: "24%", c: "#8FA5BC", l: "Never activated, then started", d: "34 of the 141 who did not activate. Less than half the activated rate."},
+        {n: "32%", c: "#FFFFFF", l: "Combined, all invited", d: "The overall start rate across all 187 invited patients, well below the activated cohort."},
+        {n: "9", c: "#FFFFFF", l: "Months of pilot data", d: "Pilot months 1 through 9 at one outlet, reported December 2023."}
+      ],
+      cohorts: [
+        {kicker: "Activated their orbit", label: "#A8412F", dot: "#E3735C", t: "Opened and used the orbit they were invited to", rate: "52%",
+         sub: "Half of these patients went on to start Intensive Cardiac Rehabilitation.",
+         rows: [{k: "invited to an orbit", v: "187"}, {k: "activated their orbit", v: "50"}, {k: "started ICR", v: "26"}, {k: "ICR sessions completed", v: "1,302"}]},
+        {kicker: "Did not activate", label: "#2D5A87", dot: "#2D5A87", t: "Invited to an orbit but never activated it", rate: "24%",
+         sub: "Fewer than one in four of these patients started the program.",
+         rows: [{k: "invited to an orbit", v: "187"}, {k: "did not activate", v: "141"}, {k: "started ICR", v: "34"}, {k: "ICR sessions completed", v: "1,402"}]}
+      ],
+      goals: [
+        {name: "Growth in new Pritikin ICR enrollments", target: "10% year-over-year increase", verdict: "Inconclusive", tone: "#B0A99E",
+         result: "26 enrollments in the pilot period, with no prior-year figures at this site to compare against."},
+        {name: "Share of eligible patients invited to an orbit", target: "90% of eligible patients", verdict: "Inconclusive", tone: "#B0A99E",
+         result: "187 patients were invited, but the site could not report how many were eligible overall."},
+        {name: "Share of invited patients who activate", target: "75% activation", verdict: "Below target", tone: "#A8412F",
+         result: "27% activated. Only 27% of new ICR candidates received the extended engagement emails, which we treat as the primary cause."}
+      ],
+      obstacles: [
+        {n: "01", t: "No historical ICR start data at the site, so year-over-year comparison was impossible.", s: "Run the next pilot as a true randomized A/B test: every other eligible patient receives an orbit."},
+        {n: "02", t: "Year-to-year changes in insurer ICR reimbursement policy and provider coverage skewed any year-over-year read.", s: "Same fix. A randomized concurrent design removes payer-policy drift from the comparison."},
+        {n: "03", t: "Staffing changes and shortages made orbit invitation and onboarding inconsistent. Only 27% of new ICR candidates received the engagement pathway emails.", s: "Shorter pilot window plus Epic integration, so invitation and engagement fire automatically rather than depending on staff availability."},
+        {n: "04", t: "Orbit activation reached 27% against a 75% goal.", s: "Rebuilt engagement pathway emails aimed at a 50 to 75% activation range."},
+        {n: "05", t: "Site staff could not see or manage the status of patients they had invited.", s: "Shipped. Patient invitation status is now visible and editable by site staff in the platform."}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@keyframes coFloat{from{transform:translateY(-7px)}to{transform:translateY(9px)}}
+@media(max-width:1020px){[data-hdr],[data-hero-grid],[data-split],[data-two]{grid-template-columns:1fr!important;gap:32px!important}[data-povrow]{grid-template-columns:1fr!important;gap:12px!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}}
+@media(max-width:900px){[data-restat]{grid-template-columns:1fr!important;gap:18px!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="outcomes" hint-size="100%,120px"></dc-import>
+
+<div data-screen-label="eScreening hero" style="max-width:1220px;margin:0 auto;padding:72px 28px 88px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center" data-hero-grid="1">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="width:9px;height:9px;border-radius:50%;background:#4FB3BF;flex-shrink:0;display:block"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F7B87">CareOrbit Assess &middot; Published VA evidence</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">eScreening across the VA: the engine behind Assess, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">tested in the open literature</em></h1>
+    <p style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:620px;text-wrap:pretty">The assessment approach behind CareOrbit Assess was developed at the VA in 2012 and studied in three peer-reviewed publications: a 1,372-veteran comparison against paper screening, a four-clinic implementation study, and a veteran satisfaction study. These are VA program results, cited as evidence for the approach Assess is built on.</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:4px;flex-wrap:wrap">
+      <a href="#request" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 28px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Download a summary of the eScreening results</a>
+      <a href="AssessPage.dc.html" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;padding:16px 24px;border-radius:999px;border:1.5px solid rgba(15,29,46,.2)" style-hover="border-color:#0F1D2E;color:#0F1D2E">See CareOrbit Assess</a>
+    </div>
+  </div>
+  <div style="min-width:0;animation:coFloat 6s ease-in-out infinite alternate"><image-slot id="escreening-results-hero" radius="32" src="images/study-va-escreening.png" placeholder="[Placeholder: screening in clinic photo]" style="display:block;width:100%;height:clamp(320px,30vw,440px)"></image-slot></div>
+</div>
+
+<div data-screen-label="Topline" style="max-width:1220px;margin:0 auto;padding:0 28px 88px">
+  <div style="background:#0F1D2E url(arc-lines.svg) center/cover;border-radius:40px;padding:clamp(40px,5vw,72px) clamp(28px,5vw,72px);color:#FFFFFF">
+    <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:40px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4FB3BF">Topline results</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Electronic screening against <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">paper</em></h2>
+      </div>
+      <p style="font-size:20px;line-height:1.6;color:#B9C8D8;margin:0;max-width:560px;text-wrap:pretty">1,372 newly enrolling post-9/11 veterans in two cohorts: 795 screened on paper, 577 through eScreening, otherwise following the same enrollment process.</p>
+    </div>
+    <div data-stat5 data-rv style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px">
+      <sc-for list="{{ topline }}" as="s" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #4FB3BF;padding-top:16px;min-height:120px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.2vw,42px);line-height:1;letter-spacing:-0.035em;color:#FFFFFF">{{ s.n }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#4FB3BF">{{ s.l }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ s.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:36px;padding-top:18px;border-top:1px solid #2D5A87;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8FA5BC">Pittman et al., Psychological Services, 2017. VA San Diego Healthcare System.</div>
+  </div>
+</div>
+
+<div data-screen-label="Measured results" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">The full ledger</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">What the published studies <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">measured</em></h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:560px;text-wrap:pretty">Each measure below is drawn from the peer-reviewed publications, cited by author and year.</p>
+  </div>
+  <sc-for list="{{ measures }}" as="m" hint-placeholder-count="5">
+    <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ m.label }}">{{ m.kicker }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ m.t }}</div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#B0A99E">{{ m.src }}</div>
+      </div>
+      <div data-two style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:start">
+        <div data-restat style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+          <sc-for list="{{ m.stats }}" as="sv" hint-placeholder-count="2">
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:clamp(30px,3vw,40px);line-height:1;color:{{ m.dot }}">{{ sv.n }}</div>
+              <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">{{ sv.l }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);text-wrap:pretty;padding-top:4px">{{ m.d }}</div>
+      </div>
+    </div>
+  </sc-for>
+</div>
+
+<div data-screen-label="Implementation honesty" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:30px 0 0;border-top:1px solid rgba(15,29,46,.14)">
+    <div style="display:flex;flex-direction:column;gap:7px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A8412F">Honest scorekeeping</div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">What the implementation study found, including the clinic that said no</div>
+      <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">A mixed-method study followed eScreening into four diverse VA clinics for six months. We cite the result as published, not just the flattering half. Pittman et al., BMC Health Services Research, 2019.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+      <sc-for list="{{ implFindings }}" as="it" hint-placeholder-count="4">
+        <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+          <span style="width:9px;height:1.5px;border-radius:1px;background:#E3735C;transform:translateY(-4px)"></span>
+          <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div data-screen-label="Scale model" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:30px 0 0;border-top:1px solid rgba(15,29,46,.14)">
+    <div style="display:flex;flex-direction:column;gap:7px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#1F6B73">What the paperwork costs at scale</div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">A modeled projection, labeled as a model</div>
+      <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">An internal VA time-driven activity-based costing exercise projected what clinician-administered questionnaires cost across 130 VA medical centers each year. It is a projection from one site's inputs, not a measured national result.</div>
+    </div>
+    <div data-restat style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding-top:2px">
+      <sc-for list="{{ scaleStats }}" as="sv" hint-placeholder-count="3">
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:12px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(26px,2.6vw,36px);line-height:1;letter-spacing:-0.03em;color:#0F1D2E">{{ sv.n }}</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">{{ sv.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div data-screen-label="Provenance" style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Provenance</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">Where eScreening <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">comes from</em></h2>
+    </div>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:560px;text-wrap:pretty">Built by clinicians inside the largest integrated health system in the United States, then spread facility by facility.</p>
+  </div>
+  <sc-for list="{{ provenance }}" as="r" hint-placeholder-count="3">
+    <div data-povrow data-rv style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ r.label }}">{{ r.kicker }}</div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ r.t }}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+        <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="3">
+          <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+            <span style="width:9px;height:1.5px;border-radius:1px;background:{{ r.dot }};transform:translateY(-4px)"></span>
+            <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-for>
+</div>
+
+<div data-screen-label="Request and CTA" id="request" style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div style="background:#0F1D2E url(arc-lines.svg) center/cover;border-radius:40px;padding:clamp(40px,5vw,72px) clamp(28px,5vw,72px);color:#FFFFFF;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center" data-hero-grid="1">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4FB3BF">Go deeper</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Get the summary, or <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">talk it through</em></h2>
+      <p style="font-size:17px;line-height:1.65;color:#B9C8D8;margin:0;max-width:540px;text-wrap:pretty">A summary of the published eScreening evidence and how it maps to CareOrbit Assess. Or bring your screening requirements and we will walk through what Assess could collect for you.</p>
+      <div><a href="BookACall.dc.html?src=escreening-results" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 28px;border-radius:999px;display:inline-block;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a></div>
+    </div>
+    <div style="background:#FAF8F4;border-radius:28px;padding:32px;color:#0F1D2E">
+      <div style="font-family:Lato,sans-serif;font-weight:700;font-size:19px;margin-bottom:6px">Download the eScreening summary</div>
+      <div style="font-size:14px;line-height:1.6;color:rgba(15,29,46,.65);margin-bottom:14px">The published results and citations, in one document.</div>
+      <dc-import name="StudyRequest" label="Download a summary of the eScreening results" heading="Download the eScreening summary" blurb="Tell us who you are and your download will be ready." file="CareOrbit-VA-eScreening-Report.pdf" downloadLabel="Download the eScreening report" hint-size="100%,60px"></dc-import>
+    </div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,400px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      topline: [
+        {n: "10.5 days", l: "Faster into the record", d: "Median time from screening to medical record entry fell from 10 to 11 days on paper to 1 day."},
+        {n: "98\u2013100%", l: "Mandated screens completed", d: "TBI, PTSD, depression, and alcohol screens all documented at 98.4 to 99.7%, against 89 to 93% on paper."},
+        {n: "5\u00d7", l: "Faster clinician follow-up", d: "Median 1 business day from screening to Care Management follow-up, against 5 on paper."},
+        {n: "19+", l: "VA medical centers", d: "Adopted by 2022 through VA Diffusion of Excellence, with 18 more adoptions in progress."}
+      ],
+      measures: [
+        {kicker: "Speed to the record", label: "#A8412F", dot: "#E3735C", t: "Time from screening to medical record documentation", src: "Pittman et al., 2017",
+         stats: [{n: "1 day", l: "median with eScreening"}, {n: "10\u201311", l: "days median on paper"}],
+         d: "Across the four mandated clinical reminders, eScreening moved results into the record the same day or next day. The average median time savings was 10.5 days per screen."},
+        {kicker: "Completion", label: "#1F6B73", dot: "#4FB3BF", t: "Documentation of mandated health screens", src: "Pittman et al., 2017",
+         stats: [{n: "98\u2013100%", l: "with eScreening"}, {n: "89\u201393%", l: "on paper"}],
+         d: "Six-month chart review of TBI, PTSD, depression, and alcohol screens. Depression documentation reached 99.7% with eScreening against 93.0% on paper."},
+        {kicker: "Connection to care", label: "#2D5A87", dot: "#5B9BEA", t: "From screening into the health system", src: "Pittman et al., 2017",
+         stats: [{n: "1 vs 5", l: "business days to clinician follow-up"}, {n: "More", l: "specialty consults, faster vesting"}],
+         d: "eScreening veterans received more specialty clinic consults, attended their vesting appointment at a higher rate, vested into the health system faster, and had required suicide risk assessments documented significantly sooner."},
+        {kicker: "Satisfaction", label: "#A8412F", dot: "#E3735C", t: "Veteran satisfaction with screening", src: "Pittman et al., 2017; Almklov et al., 2020",
+         stats: [{n: "Higher", l: "than paper screening, 2017"}, {n: "High", l: "satisfaction after redesign, 2020"}],
+         d: "Veterans were slightly more satisfied with eScreening than paper in the 2017 comparison. After user-centered improvements, a follow-up study found veterans highly satisfied with usability, information security, and impact on their care."},
+        {kicker: "Detection", label: "#1F6B73", dot: "#4FB3BF", t: "Did the medium change the answers?", src: "Pittman et al., 2017",
+         stats: [{n: "Similar", l: "rates of positive health screens"}],
+         d: "Rates of positive screens were comparable between paper and electronic cohorts across nearly all measures, evidence that moving screening onto a device did not distort what patients report."}
+      ],
+      implFindings: [
+        {t: "One clinic fully implemented,", d: "two partially implemented, and one did not adopt eScreening as part of normal practice after six months."},
+        {t: "The technology posed no barriers", d: "in any of the four settings, as published. The barriers were staffing support and perceived leadership support."},
+        {t: "Training and technical assistance", d: "were cited as the important facilitators, and organizational engagement scores tracked with implementation success."},
+        {t: "Why we cite it:", d: "assessment programs succeed or fail on workflow fit, which is why Assess deploys from the workflow you already run rather than adding one."}
+      ],
+      scaleStats: [
+        {n: "$214M", l: "Projected annual cost for providers and LPNs to administer questionnaires across 130 VA medical centers"},
+        {n: "910 + 650", l: "Physician and LPN full-time equivalents projected to be consumed by questionnaire administration each year"},
+        {n: "106M", l: "Projected physician minutes per year spent filling out questionnaires"}
+      ],
+      provenance: [
+        {kicker: "Origin", label: "#A8412F", dot: "#E3735C", t: "Built by VA clinicians, for VA clinics", items: [
+          {t: "Developed in 2012", d: "at the VA Center of Excellence for Stress and Mental Health, VA San Diego, for the Military 2 VA care management program."},
+          {t: "Veteran-facing by design:", d: "patients self-report on their own device or a clinic tablet, and responses flow directly into the VA electronic medical record, satisfying clinical reminders."}]},
+        {kicker: "Recognition", label: "#1F6B73", dot: "#4FB3BF", t: "Spread through the VA's own vetting", items: [
+          {t: "Named a Gold Status Practice", d: "by the VA Under Secretary of Health in 2016 and a Diffusion of Excellence Promising Practice."},
+          {t: "Adopted at 19 VA medical centers by 2022,", d: "with 18 more adoptions in progress through the Diffusion of Excellence program."},
+          {t: "Patented:", d: "the eScreening approach is covered by US Patent 12,683,023."}]},
+        {kicker: "The published record", label: "#2D5A87", dot: "#5B9BEA", t: "Three peer-reviewed studies", items: [
+          {t: "Pittman et al., 2017, Psychological Services:", d: "1,372-veteran comparison of eScreening against paper screening."},
+          {t: "Pittman et al., 2019, BMC Health Services Research:", d: "mixed-method implementation study across four diverse VA clinics."},
+          {t: "Almklov et al., 2020, Military Medicine:", d: "post-9/11 veteran satisfaction with eScreening after user-centered redesign."}]}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

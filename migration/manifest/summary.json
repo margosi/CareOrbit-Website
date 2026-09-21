@@ -1,0 +1,37 @@
+{
+  "by_kind": {
+    "doc": {
+      "bytes": 21222,
+      "count": 2
+    },
+    "image": {
+      "bytes": 294984877,
+      "count": 159
+    },
+    "page-or-template": {
+      "bytes": 12342143,
+      "count": 52
+    },
+    "pdf": {
+      "bytes": 103258908,
+      "count": 21
+    },
+    "script": {
+      "bytes": 194353,
+      "count": 5
+    },
+    "stylesheet": {
+      "bytes": 2549,
+      "count": 1
+    }
+  },
+  "duplicate_media_groups": 10,
+  "images_over_2mb": 79,
+  "missing_assets": 2,
+  "missing_linked_pages": 1,
+  "orphan_media": 66,
+  "production_pages": 29,
+  "snapshot_path": "migration/reference/v2-maven-snapshot",
+  "total_bytes": 410804052,
+  "total_files": 240
+}

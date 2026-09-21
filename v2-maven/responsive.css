@@ -1,0 +1,38 @@
+/* CareOrbit v2 responsive overrides — selectors match React's serialized inline styles (spaces after colon/comma, leading zeros) */
+@media (max-width: 1020px) {
+  div[style*="grid-template-columns: repeat(4, minmax(0px, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  p[style*="margin-left: auto"] { margin-left: 0 !important; }
+  div[style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+  div[style*="grid-template-columns: repeat(5, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+  div[style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+  div[style*="grid-template-columns: 1fr 1fr"],
+  div[style*="grid-template-columns: 1.05fr 0.95fr"],
+  div[style*="grid-template-columns: 1.1fr 0.9fr"],
+  div[style*="grid-template-columns: 0.9fr 1.1fr"],
+  div[style*="grid-template-columns: 0.85fr 1.15fr"] { grid-template-columns: 1fr !important; }
+  div[style*="padding: 72px 64px"], div[style*="padding: 80px 64px"], div[style*="padding: 88px 64px"] { padding: 48px 32px !important; }
+}
+@media (max-width: 900px) {
+  [data-nav-links] { display: none !important; }
+  [data-nav-mobile] { display: flex !important; }
+  [data-nav-wrap] { padding: 0 !important; }
+  [data-nav-bar] { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; height: 64px !important; padding: 0 8px 0 18px !important; box-shadow: 0 4px 24px rgba(15,29,46,.1) !important; }
+  [data-gallery-row] { display: none !important; }
+  [data-gallery-carousel] { display: block !important; }
+  [data-explore-row] { flex-direction: column !important; height: auto !important; }
+  [data-explore-row] > div { height: 340px; }
+  div[style*="text-align: right"], p[style*="text-align: right"] { text-align: left !important; }
+}
+@media (max-width: 640px) {
+  div[style*="grid-template-columns: repeat(4, 1fr)"],
+  div[style*="grid-template-columns: repeat(5, 1fr)"],
+  div[style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
+  div[style*="padding: 64px"] { padding: 36px 22px !important; }
+  div[style*="padding: 0 64px 72px"] { padding: 0 26px 56px !important; }
+  div[style*="padding: 104px 28px"] { padding-top: 64px !important; padding-bottom: 56px !important; }
+  div[style*="height: clamp(740px, 96vh, 960px)"] { height: 82vh !important; }
+}
+
+@media (max-width: 620px) {
+  div[style*="grid-template-columns: repeat(4, minmax(0px, 1fr))"] { grid-template-columns: 1fr !important; }
+}

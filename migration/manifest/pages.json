@@ -1,0 +1,176 @@
+[
+  {
+    "page_name": "Home",
+    "renders": null,
+    "route_file": "Home.dc.html",
+    "target_route": "/"
+  },
+  {
+    "page_name": "Platform",
+    "renders": null,
+    "route_file": "Platform.dc.html",
+    "target_route": "/platform"
+  },
+  {
+    "page_name": "Engage",
+    "renders": null,
+    "route_file": "EngagePage.dc.html",
+    "target_route": "/platform/engage"
+  },
+  {
+    "page_name": "Assess",
+    "renders": null,
+    "route_file": "AssessPage.dc.html",
+    "target_route": "/platform/assess"
+  },
+  {
+    "page_name": "Capture",
+    "renders": null,
+    "route_file": "CapturePage.dc.html",
+    "target_route": "/platform/capture"
+  },
+  {
+    "page_name": "Data Insights",
+    "renders": null,
+    "route_file": "DataPage.dc.html",
+    "target_route": "/platform/data"
+  },
+  {
+    "page_name": "Outcomes",
+    "renders": null,
+    "route_file": "Outcomes.dc.html",
+    "target_route": "/outcomes"
+  },
+  {
+    "page_name": "Pricing - Engage",
+    "renders": null,
+    "route_file": "Pricing.dc.html",
+    "target_route": "/pricing"
+  },
+  {
+    "page_name": "Pricing - Assess",
+    "renders": null,
+    "route_file": "PricingAssess.dc.html",
+    "target_route": "/pricing/assess"
+  },
+  {
+    "page_name": "Pricing - Capture",
+    "renders": null,
+    "route_file": "PricingCapture.dc.html",
+    "target_route": "/pricing/capture"
+  },
+  {
+    "page_name": "Pricing - Data Insights",
+    "renders": null,
+    "route_file": "PricingData.dc.html",
+    "target_route": "/pricing/data"
+  },
+  {
+    "page_name": "About",
+    "renders": null,
+    "route_file": "About.dc.html",
+    "target_route": "/about"
+  },
+  {
+    "page_name": "Book a Call",
+    "renders": null,
+    "route_file": "BookACall.dc.html",
+    "target_route": "/book-a-call"
+  },
+  {
+    "page_name": "Thank You",
+    "renders": null,
+    "route_file": "ThankYou.dc.html",
+    "target_route": "/thank-you"
+  },
+  {
+    "page_name": "Login",
+    "renders": null,
+    "route_file": "Login.dc.html",
+    "target_route": "(excluded from production)"
+  },
+  {
+    "page_name": "Oncology",
+    "renders": "OncologyPage.dc.html",
+    "route_file": "Oncology.dc.html",
+    "target_route": "/orbits/oncology"
+  },
+  {
+    "page_name": "Primary Care",
+    "renders": "PrimaryCarePage.dc.html",
+    "route_file": "PrimaryCare.dc.html",
+    "target_route": "/orbits/primary-care"
+  },
+  {
+    "page_name": "Cardiology",
+    "renders": "CardiologyPage.dc.html",
+    "route_file": "Cardiology.dc.html",
+    "target_route": "/orbits/cardiology"
+  },
+  {
+    "page_name": "Orthopedics",
+    "renders": "OrthopedicsPage.dc.html",
+    "route_file": "Orthopedics.dc.html",
+    "target_route": "/orbits/orthopedics"
+  },
+  {
+    "page_name": "Women's Health",
+    "renders": "WomensHealthPage.dc.html",
+    "route_file": "WomensHealth.dc.html",
+    "target_route": "/orbits/womens-health"
+  },
+  {
+    "page_name": "Bariatrics",
+    "renders": "BariatricsPage.dc.html",
+    "route_file": "Bariatrics.dc.html",
+    "target_route": "/orbits/bariatrics"
+  },
+  {
+    "page_name": "Behavioral Health",
+    "renders": "BehavioralHealthPage.dc.html",
+    "route_file": "BehavioralHealth.dc.html",
+    "target_route": "/orbits/behavioral-health"
+  },
+  {
+    "page_name": "Medication Therapy",
+    "renders": "MedicationTherapyPage.dc.html",
+    "route_file": "MedicationTherapy.dc.html",
+    "target_route": "/orbits/medication-therapy"
+  },
+  {
+    "page_name": "Community-Based Research",
+    "renders": null,
+    "route_file": "CommunityResearch.dc.html",
+    "target_route": "/orbits/community-research"
+  },
+  {
+    "page_name": "Surgical Support",
+    "renders": "SurgicalSupportPage.dc.html",
+    "route_file": "SurgicalSupport.dc.html",
+    "target_route": "/orbits/surgical-support"
+  },
+  {
+    "page_name": "Behavioral Risk",
+    "renders": null,
+    "route_file": "BehavioralSafety.dc.html",
+    "target_route": "/orbits/behavioral-risk"
+  },
+  {
+    "page_name": "Siteman Study",
+    "renders": null,
+    "route_file": "SitemanStudy.dc.html",
+    "target_route": "/evidence/siteman-study"
+  },
+  {
+    "page_name": "Pritikin Pilot",
+    "renders": null,
+    "route_file": "PritikinPilot.dc.html",
+    "target_route": "/evidence/pritikin-pilot"
+  },
+  {
+    "page_name": "VA eScreening Results",
+    "renders": null,
+    "route_file": "EScreeningResults.dc.html",
+    "target_route": "/evidence/escreening-results"
+  }
+]

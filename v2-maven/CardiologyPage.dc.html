@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}html{scroll-behavior:smooth}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@keyframes coFloat{from{transform:translateY(-7px)}to{transform:translateY(9px)}}
+@media(max-width:1020px){[data-hdr],[data-hero-grid],[data-split]{grid-template-columns:1fr!important;gap:32px!important}[data-feature]{grid-template-columns:1fr!important;gap:24px!important}[data-feature]>*{grid-column:1/-1!important}[data-quad]{grid-template-columns:repeat(2,minmax(0,1fr))!important}[data-deploy]{grid-template-columns:1fr 1fr!important;gap:22px!important}[data-stats]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:32px!important}}
+@media(min-width:1021px){[data-featnav]>div:first-child a{border-bottom-color:transparent!important}}
+@media(max-width:760px){#roi-calculator [data-hdr]{padding-right:0!important;padding-top:44px!important}}
+@media print{
+  @page{size:letter portrait;margin:0.5in}
+  body{background:#FFFFFF!important}
+  body.co-printing > *:not(#print-only){display:none!important}
+  #print-only{display:block!important;position:static!important;page-break-after:avoid;page-break-inside:avoid;break-inside:avoid}
+  #print-only *{page-break-inside:avoid;break-inside:avoid}
+  [data-print-hide]{display:none!important}
+}
+#print-only{display:none}
+#roi-calculator input::placeholder{color:rgba(15,29,46,.34);font-weight:400;font-style:italic}
+#roi-calculator input::-webkit-outer-spin-button,#roi-calculator input::-webkit-inner-spin-button{opacity:1}
+@media(max-width:1020px){[data-calc-out]{grid-template-columns:1fr!important;gap:24px!important}[data-calc-total]{grid-template-columns:1fr!important;gap:20px!important}}
+@media(max-width:640px){[data-calc-grid]{grid-template-columns:1fr!important}}
+@media(max-width:1020px){[data-ledger]{grid-template-columns:1fr!important;gap:8px!important}[data-featnav]{grid-template-columns:1fr!important;gap:32px!important}[data-featnav]>div:first-child{position:static!important;flex-direction:row!important;flex-wrap:wrap!important;gap:4px}[data-featnav]>div:first-child a{border-left:none!important;padding:8px 14px 10px!important;font-size:15px!important}}
+@media(max-width:620px){[data-quad]{grid-template-columns:1fr!important}[data-deploy]{grid-template-columns:1fr!important}[data-deploy]>*{border-left:none!important;padding-left:0!important}[data-stats]{grid-template-columns:1fr!important}}
+@media(max-width:960px){[data-catalog]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 32px!important}}
+@media(max-width:620px){[data-catalog]{grid-template-columns:1fr!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(max-width:1020px){[data-start]{grid-template-columns:1fr!important;gap:24px!important}[data-start]>a{justify-self:start}}
+@media(max-width:1100px){[data-stat5]{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:700px){[data-stat5]{grid-template-columns:1fr!important}}
+@media(max-width:940px){[data-oneline]{white-space:normal!important;text-wrap:balance!important;max-width:640px!important}}
+@media(max-width:1020px){[data-deploy2]{grid-template-columns:1fr!important;gap:26px!important}}
+@media(max-width:900px){[data-three]{grid-template-columns:1fr!important}[data-conn]{display:none!important}}
+@media(max-width:700px){[data-deploy2] [data-three]{grid-template-columns:1fr!important;gap:18px!important}}
+@media(max-width:1120px){[data-serves]{grid-template-columns:1fr 1fr!important;gap:22px 24px!important}}
+@media(max-width:1020px){[data-value]{grid-template-columns:1fr!important;gap:34px!important}[data-povrow]{grid-template-columns:1fr!important;gap:12px!important}[data-two]{grid-template-columns:1fr!important;gap:26px!important}}
+@media(max-width:640px){[data-serves]{grid-template-columns:1fr!important}}
+@media(max-width:700px){[data-measured]{grid-template-columns:1fr!important}}
+@media(max-width:820px){[data-study]{grid-template-columns:1fr!important;gap:24px!important}[data-study-stats]{border-left:none!important;padding-left:0!important;border-top:1px solid rgba(15,29,46,.1);padding-top:20px!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="orbits" hint-size="100%,120px"></dc-import>
+
+<div style="max-width:1220px;margin:0 auto;padding:72px 28px 96px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center" data-hero-grid="1">
+  <div style="display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <span style="width:9px;height:9px;border-radius:50%;background:#E3735C;flex-shrink:0;display:block"></span>
+      <span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B84A34">Cardiology orbit solutions</span>
+    </div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(34px,4.2vw,50px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:balance">Your plan of care in the patient's hands, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">every day between visits</em></h1>
+    <p style="font-size:17.5px;line-height:1.65;color:rgba(15,29,46,.72);margin:0;max-width:620px;text-wrap:pretty">Guided digital support tailored to each condition, procedure, and protocol, carried from diagnosis through rehab and lifelong management. Engagement is tracked at every step, so patients understand how and why to stay on track and your team knows who needs a nudge.</p>
+    <div style="display:flex;gap:14px;align-items:center;margin-top:4px;flex-wrap:wrap">
+      <a href="{{ bookHref }}" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;padding:16px 28px;border-radius:999px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+      <a href="#cta" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;padding:16px 24px;border-radius:999px;border:1.5px solid rgba(15,29,46,.2)" style-hover="border-color:#0F1D2E;color:#0F1D2E">Get the {{ name }} info sheet</a>
+    </div>
+  </div>
+  <div style="min-width:0;animation:coFloat 6s ease-in-out infinite alternate"><image-slot id="{{ heroSlotId }}" radius="32" src="{{ heroSrc }}" placeholder="{{ heroSlotHint }}" style="display:block;width:100%;height:clamp(320px,30vw,440px)"></image-slot></div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 52px">
+  <div data-rv style="display:flex;flex-direction:column;gap:16px;border-top:1px solid rgba(15,29,46,.14);border-bottom:1px solid rgba(15,29,46,.14);padding:22px 0">
+    <div style="display:flex;gap:34px;align-items:baseline;flex-wrap:wrap">
+      <button onClick="{{ pick0 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t0Fg }}">All of cardiology<sc-if value="{{ t0On }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick1 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t1Fg }}">Heart failure &amp; chronic care<sc-if value="{{ t1On }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick2 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t2Fg }}">Procedures &amp; surgery<sc-if value="{{ t2On }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick3 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t3Fg }}">Rehab &amp; prevention<sc-if value="{{ t3On }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+    </div>
+    <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.66);max-width:660px;text-wrap:pretty">{{ segLine }}</div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 40px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px;text-wrap:balance">{{ headLead }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">{{ headEm }}</em>.</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;max-width:600px;text-wrap:pretty">{{ intro }}</p>
+      <p style="font-size:16px;line-height:1.65;color:rgba(15,29,46,.6);margin:0;max-width:600px;text-wrap:pretty">Built to your protocols before launch. Nothing added to your team's day.</p>
+    </div>
+  </div>
+
+  <div data-rv data-value style="display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:60px;align-items:start">
+    <div style="position:relative;min-width:0">
+      <image-slot id="{{ valueSlotId }}" radius="28" src="{{ valueSrc }}" placeholder="[Placeholder: cardiology care team with a patient, vertical crop]" style="display:block;width:100%;height:clamp(420px,42vw,600px)"></image-slot>
+      <div style="margin-top:16px;font-size:13px;line-height:1.55;color:rgba(15,29,46,.5);max-width:300px;text-wrap:pretty">One orbit, issued once, working for three audiences at the same time.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;min-width:0">
+      <sc-for list="{{ pov }}" as="p" hint-placeholder-count="3">
+        <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ p.label }}">{{ p.kicker }}</div>
+            <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ p.t }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+            <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+                <span style="width:9px;height:1.5px;border-radius:1px;background:{{ p.dot }};transform:translateY(-4px)"></span>
+                <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty">{{ it }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div data-rv style="display:flex;flex-direction:column;margin-top:14px">
+    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="2">
+      <div data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:26px 0;border-top:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:{{ r.label }}">{{ r.kicker }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">{{ r.t }}</div>
+          <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">{{ r.sub }}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+          <sc-for list="{{ r.items }}" as="it" hint-placeholder-count="4">
+            <div style="display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;align-items:baseline">
+              <span style="width:9px;height:1.5px;border-radius:1px;background:{{ r.dot }};transform:translateY(-4px)"></span>
+              <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.7);text-wrap:pretty"><span style="font-weight:600;color:#0F1D2E">{{ it.t }}</span> {{ it.d }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(15,29,46,.14)"></div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 88px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px;display:flex;flex-direction:column;gap:44px">
+    <div data-hdr style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">The understanding gap</div>
+        <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">{{ gapLead }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#E3735C">{{ gapEm }}</em>.</h2>
+      </div>
+      <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">{{ gapIntro }}</p>
+    </div>
+    <div style="border-top:1px solid #2D5A87;padding-top:26px;display:flex;flex-direction:column;gap:6px">
+      <div style="font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#E3735C">What the gap costs</div>
+      <div style="font-size:16.5px;line-height:1.6;color:#B9C8D8;max-width:900px;text-wrap:pretty">{{ gapBridge }}</div>
+    </div>
+    <div data-stat5 style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;align-items:stretch;margin-top:-14px">
+      <sc-for list="{{ money }}" as="m" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:2px solid #E3735C;padding-top:18px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.2vw,42px);letter-spacing:-0.04em;line-height:1;color:#FFFFFF">{{ m.v }}</div>
+          <div style="font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#E3735C;line-height:1.35">{{ m.t }}</div>
+          <div style="font-size:13.5px;line-height:1.55;color:#B9C8D8;text-wrap:pretty">{{ m.d }}</div>
+          <div style="margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#7E93AB">{{ m.src }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin:0;font-size:13.5px;line-height:1.6;color:#7E93AB;max-width:900px;text-wrap:pretty">Industry rates from CMS, CDC, and published analyses, not CareOrbit outcomes. Rates vary substantially by program and payer mix; bring your own figures and we will work from those.</p>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Measurable ROI</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">How an orbit <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">provides value</em>.</h2>
+    </div>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">Every orbit is built based on your target clinical and financial outcomes including revenue to protect, costs to lower, opportunities to expand and staff resources to support.</p>
+  </div>
+  <div data-rv style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px">
+    <div style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#2D5A87">Targeted Outcomes</div>
+    <div style="font-family:Lato,sans-serif;font-weight:400;font-size:19px;line-height:1.35;letter-spacing:-0.01em;color:rgba(15,29,46,.78)">What an orbit is built and tracked against from the first patient forward.</div>
+  </div>
+  <div data-rv style="border-top:1px solid rgba(15,29,46,.14)">
+    <sc-for list="{{ measures }}" as="m" hint-placeholder-count="8">
+      <div data-ledger style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px 56px;align-items:baseline;padding:22px 0;border-bottom:1px solid rgba(15,29,46,.14)">
+        <div style="display:flex;gap:16px;align-items:baseline">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:15px;color:#2D5A87;flex-shrink:0;min-width:24px">{{ m.n }}</div>
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:clamp(19px,2vw,23px);line-height:1.25;letter-spacing:-0.015em">{{ m.t }}</div>
+        </div>
+        <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.68);text-wrap:pretty">{{ m.d }}</div>
+      </div>
+    </sc-for>
+  </div>
+  </div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:64px 56px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Cardiology care journeys <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#E3735C">currently supported</em>.</h2>
+    </div>
+    <p style="font-size:18px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">{{ libIntro }}</p>
+  </div>
+  <div data-rv data-catalog style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 44px;border-top:1px solid #2D5A87">
+    <sc-for list="{{ catalog }}" as="c" hint-placeholder-count="9">
+      <div style="display:flex;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(45,90,135,.55)">
+        <span style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:14px;color:#E3735C;min-width:24px">{{ c.n }}</span>
+        <div style="display:flex;flex-direction:column;gap:3px;min-width:0">
+          <div style="font-family:Lato,sans-serif;font-weight:700;font-size:16px;line-height:1.3;letter-spacing:-0.01em;color:#FFFFFF">{{ c.t }}</div>
+          <div style="font-size:13px;line-height:1.5;color:#8FA5BC;text-wrap:pretty">{{ c.v }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 92px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:34px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B0A99E">Clinical evidence</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.1;letter-spacing:-0.02em;margin:0;text-wrap:balance">{{ studyLead }} <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">{{ studyEm }}</em>.</h2>
+    </div>
+    <p style="font-size:clamp(16px,1.4vw,19px);line-height:1.5;color:#122536;margin:0;max-width:540px;justify-self:end;text-wrap:pretty">{{ studySub }}</p>
+  </div>
+
+  <div data-rv data-study style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:start;border-top:1px solid rgba(15,29,46,.14);padding-top:30px">
+    <div style="display:flex;flex-direction:column;gap:13px">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0F1D2E;background:#F2B8C6;border-radius:6px;padding:6px 11px">Pilot with results</span>
+        <span style="font-size:12.5px;color:rgba(15,29,46,.6)">Pritikin Intensive Cardiac Rehabilitation</span>
+      </div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.16;letter-spacing:-0.02em;text-wrap:balance">Patients who opened their orbit started rehab at more than twice the rate</div>
+      <div style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);text-wrap:pretty">Over nine months at a leading Midwest health system, 187 patients referred to Pritikin ICR were invited to a cardiac rehab orbit. Of the patients who activated theirs, 52% went on to start the program; of those who never activated, 24% did. An observational pilot, not a randomized trial, since patients chose whether to activate.</div>
+      <a href="PritikinPilot.dc.html" style="align-self:flex-start;text-decoration:none;font-size:14.5px;font-weight:600;color:#2D5A87;padding-bottom:3px;border-bottom:1.5px solid rgba(45,90,135,.4);transition:color .2s,border-color .2s" style-hover="color:#E3735C;border-color:#E3735C">Read the pilot results &rarr;</a>
+      <dc-import name="StudyRequest" label="Download a summary of the pilot results" heading="Download the pilot summary" file="CareOrbit-Pritikin-Pilot-Report.pdf" downloadLabel="Download the pilot report" blurb="Tell us who you are and your download will be ready." hint-size="100%,60px"></dc-import>
+    </div>
+    <div data-study-stats style="display:grid;grid-template-columns:1fr 1fr;gap:22px 32px">
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">52%</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">of patients who activated their orbit started ICR</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">24%</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">of patients who never activated started ICR</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">187</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">patients invited to an orbit over nine months</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px;border-top:1px solid rgba(15,29,46,.14);padding-top:14px">
+          <div style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1;letter-spacing:-0.035em;color:#0F1D2E">2,704</div>
+          <div style="font-size:12.5px;line-height:1.45;color:rgba(15,29,46,.62);text-wrap:pretty">ICR sessions completed across both cohorts</div>
+        </div>
+    </div>
+  </div>
+
+  <div data-rv data-povrow style="display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);gap:16px 40px;align-items:start;padding:30px 0 0;border-top:1px solid rgba(15,29,46,.14);margin-top:34px">
+    <div style="display:flex;flex-direction:column;gap:7px">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#A8412F">Voices from the pathway</div>
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(21px,2.2vw,26px);line-height:1.14;letter-spacing:-0.02em;color:#0F1D2E;text-wrap:balance">What it sounds like when recovery is guided</div>
+      <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.6);text-wrap:pretty;max-width:330px">From live oncology deployments. Cardiology orbits are built on the same platform.</div>
+    </div>
+    <div data-split style="display:grid;grid-template-columns:1fr 1fr;gap:36px">
+      <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="2">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;font-size:19px;line-height:1.5;color:#B84A34;text-wrap:pretty">{{ q.text }}</div>
+          <div style="margin-top:auto;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(15,29,46,.5)">{{ q.who }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+
+<div id="cta" style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv data-split style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:72px 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(30px,3.4vw,38px);line-height:1.1;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:pretty">20 minutes. <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#E3735C">Your</em> {{ nameLower }} pain points, <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#E3735C">our</em> platform.</h2>
+      <p style="font-size:15.5px;line-height:1.6;color:#B9C8D8;margin:0;text-wrap:pretty">No demo script, no obligation. We get introduced, hear which {{ nameLower }} moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.</p>
+      <a href="{{ bookHref }}" style="text-decoration:none;font-size:15.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:16px 28px;border-radius:999px;align-self:flex-start;margin-top:4px;transition:background .2s,color .2s" style-hover="background:#E3735C;color:#FFFFFF">Book a 20-minute intro call</a>
+    </div>
+    <div style="background:#1E3A5F;border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:12px">
+      <div style="font-family:Lato,sans-serif;font-weight:900;font-size:19px;color:#FFFFFF">Not ready for a call?</div>
+      <div style="font-size:14px;line-height:1.55;color:#B9C8D8">Get the {{ name }} info sheet by email.</div>
+      <input onChange="{{ onHp }}" tabIndex="-1" autoComplete="off" aria-hidden="true" placeholder="Website" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"><input value="{{ email }}" onChange="{{ onEmail }}" placeholder="Work email *" style="font-family:Inter,sans-serif;font-size:14.5px;padding:14px 16px;border-radius:14px;border:1.5px solid #2D5A87;background:#0F1D2E;color:#FFFFFF;outline:none" style-focus="border-color:#E3735C">
+      <button onClick="{{ requestSheet }}" style="font-family:Inter,sans-serif;font-size:14.5px;font-weight:600;color:#0F1D2E;background:#FFFFFF;border:none;border-radius:999px;padding:13px 24px;cursor:pointer;align-self:flex-start;transition:background .2s" style-hover="background:#F2B8C6">{{ sheetBtn }}</button>
+    </div>
+  </div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const CARD_SEGMENTS = [
+  {
+    label: "All of cardiology", nameLower: "cardiology",
+    line: "The whole service line, from prevention and rehab through the cath lab, the operating room, and lifelong management.",
+    headLead: "A trusted digital guide your patients keep, from decision through", headEm: "recovery",
+    intro: "Your instructions and your best guidance, delivered when each one actually matters. Alongside the folder at discharge and the follow-up call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients informed, reassured, and on track between visits.",
+    gapLead: "A lifetime condition, managed in", gapEm: "twenty minutes a month",
+    gapIntro: "Coronary disease, heart failure, and hypertension are managed for life, but your contact is a handful of appointments a year. Medications, weights, sodium, activity, and every warning sign are handled at home, by a patient working from memory. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.",
+    gapBridge: "None of these are decided in your clinic. Each one turns on whether a patient understood the plan, kept taking the medication, recognized a warning sign, or showed up for rehab, in the weeks when no one was there to tell them.",
+    studyLead: "The pilot", studyEm: "behind the numbers",
+    studySub: "A nine-month cardiac rehab pilot measured real enrollment gains, building on the platform's controlled trial in oncology.",
+    libIntro: "Support your cardiology service line with a Cardiology Department Bundle which gives you 9 procedure and condition orbit versions for patients and families, plus a template for the rest, supporting the specifics of procedures like these:",
+    money: [
+      {v: "Up to 3%", t: "Medicare inpatient payment at risk", d: "The HRRP reduction hospitals face for excess readmissions, including heart failure, acute MI, and CABG.", src: "CMS"},
+      {v: "1 in 5", t: "Readmitted within 30 days", d: "National 30-day readmission after a heart failure hospitalization is commonly reported near 20 to 23%.", src: "Published national analyses"},
+      {v: "About half", t: "Stop taking their cardiac medications", d: "Discontinuation and poor adherence to chronic cardiovascular therapy is widely reported near 50% within the first year.", src: "Published adherence literature"},
+      {v: "About 1 in 4", t: "Eligible patients who start rehab", d: "Cardiac rehab is one of the best-evidenced interventions in cardiology. Most eligible patients never begin it.", src: "Published Medicare analyses"}
+    ],
+    measures: [
+      {t: "Fewer 30-day readmissions", d: "The costliest between-visit failure in cardiology, and the one CMS penalizes directly."},
+      {t: "Higher cardiac rehab enrollment", d: "A referral that never becomes an enrollment is billed to nobody and helps no one."},
+      {t: "Higher rehab completion", d: "Completion is where the mortality benefit lives, and where most programs leak patients."},
+      {t: "Better medication adherence", d: "Cardiac regimens only work when they are taken, and nobody sees the bottle between visits."},
+      {t: "Fewer avoidable ED visits", d: "A managed symptom at home instead of an unplanned presentation on a weekend."},
+      {t: "Fewer inbound calls per episode", d: "Every repeat call is nursing time spent re-explaining what was already covered."},
+      {t: "Earlier symptom recognition", d: "A patient who calls about three pounds of weight gain costs a phone call, not an admission."},
+      {t: "A visible program differentiator", d: "A branded cardiac experience is something few competing programs can show a referring physician."}
+    ],
+    catalog: [
+      {t: "Heart Health", v: "Versions: general patient + at-risk + senior + community. Procedure orbits evolve here."},
+      {t: "Cardiac rehabilitation", v: "Versions: newly prescribed + full journey"},
+      {t: "Coronary artery bypass surgery", v: "Versions: general + off-pump / OPCAB"},
+      {t: "Heart valve repair or replacement", v: ""},
+      {t: "Aneurysm repair", v: ""},
+      {t: "Coronary angioplasty and stenting", v: ""},
+      {t: "Implantable pacemaker", v: ""},
+      {t: "Heart transplant", v: ""},
+      {t: "Minimally invasive heart surgery", v: ""}
+    ],
+    beginSub: "Most cardiology programs start with procedure support or rehab. All four run as one guide the patient keeps.",
+    beginItems: [
+      {t: "Procedure support.", d: "Bypass, valve, ablation, device implant, cath lab."},
+      {t: "Cardiac rehab.", d: "Getting referred patients to start, and to keep coming."},
+      {t: "Heart failure.", d: "Daily weights, fluid and sodium limits, titration."},
+      {t: "Prevention and risk.", d: "Screening and referral before they are a patient."}
+    ],
+    pov: [
+      {kicker: "For the patient", t: "They know what to do", label: "#A8412F", dot: "#E3735C", items: [
+        "A clear understanding of their diagnosis, procedure, and who will be caring for them",
+        "Your prep, clearance, and day-of instructions, on the day they apply",
+        "Which symptoms mean call us, and which mean go to the ED",
+        "The same guide works for whoever drives them home"
+      ]},
+      {kicker: "For your team", t: "Nothing added to the day", label: "#2D5A87", dot: "#2D5A87", items: [
+        "Ordered from the workflow you already run, no new FTEs",
+        "Fewer calls asking what the discharge sheet already said",
+        "Your brand and your protocols, not a generic app",
+        "We build and maintain the content, including updates"
+      ]},
+      {kicker: "For the program", t: "You can finally see it", label: "#5B9BEA", dot: "#5B9BEA", items: [
+        "Who opened their orbit and who never did, by patient",
+        "Symptom check-ins routed back before the next visit",
+        "Engagement and completion by cohort and by site",
+        "Optional: validated measures scored automatically"
+      ]}
+    ]
+  },
+  {
+    label: "Heart failure & chronic care", nameLower: "heart failure",
+    line: "The conditions managed for life, where daily weights, sodium, and a regimen that keeps changing are all handled at home.",
+    headLead: "A guide for every day between the visits you only get", headEm: "a few times a year",
+    intro: "Your heart failure and hypertension protocols in your clinicians' own words, delivered on the day each instruction matters. Alongside the discharge folder and the follow-up call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps weights, sodium, medications, and warning signs in front of the patient every day.",
+    gapLead: "Thirty days of risk, and", gapEm: "one follow-up date",
+    gapIntro: "Heart failure is discharged into a house. Weights, fluid, sodium, and a regimen that changes every few weeks are managed by a patient working from memory, in exactly the window where the cost and the penalty both land. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.",
+    gapBridge: "None of this is decided in your clinic. Each one turns on whether a patient weighed themselves, kept taking the medication, or recognized the swelling early enough to pick up the phone.",
+    studyLead: "The cardiology result", studyEm: "behind the numbers",
+    studySub: "The rehab pilot below is our direct cardiology result. It sits alongside the platform's controlled trial, run in surgical oncology.",
+    libIntro: "The chronic and device orbits, plus the template that versions the rest. Heart Health is the default orbit a patient keeps between visits.",
+    money: [
+      {v: "1 in 5", t: "Readmitted within 30 days", d: "National 30-day readmission after a heart failure hospitalization is commonly reported near 20 to 23%.", src: "Published national analyses"},
+      {v: "Up to 3%", t: "Medicare inpatient payment at risk", d: "The HRRP reduction hospitals face for excess readmissions, with heart failure among the named conditions.", src: "CMS"},
+      {v: "About half", t: "Stop taking their cardiac medications", d: "Discontinuation and poor adherence to chronic cardiovascular therapy is widely reported near 50% within the first year.", src: "Published adherence literature"},
+      {v: "Under half", t: "Seen within seven days of discharge", d: "Early follow-up is one of the strongest predictors of staying out, and a large share of patients never get one.", src: "Published transitional care analyses"}
+    ],
+    measures: [
+      {t: "Fewer 30-day readmissions", d: "The costliest between-visit failure in heart failure care, and the one CMS penalizes directly."},
+      {t: "Earlier symptom recognition", d: "A patient who calls about three pounds of weight gain costs a phone call, not an admission."},
+      {t: "Better medication adherence", d: "Titration only works if the previous change was actually taken, and nobody sees the bottle between visits."},
+      {t: "Higher early follow-up attendance", d: "The seven-day visit is where a decompensation gets caught before it becomes an admission."},
+      {t: "Fewer avoidable ED visits", d: "A managed symptom at home instead of an unplanned presentation on a weekend."},
+      {t: "Better daily weight and sodium tracking", d: "The two behaviors that predict the next admission, and the two nobody can observe."},
+      {t: "Fewer inbound calls per patient", d: "Every repeat call is nursing time spent re-explaining what the discharge sheet already said."},
+      {t: "Higher PROM completion", d: "Required for quality programs and value-based contracts, and usually chased by hand."}
+    ],
+    catalog: [
+      {t: "Heart Health", v: "Versions: general patient + at-risk + senior + community. The default orbit between visits."},
+      {t: "Cardiac rehabilitation", v: "Versions: newly prescribed + full journey"},
+      {t: "Implantable pacemaker", v: "Device education and follow-up"},
+      {t: "Heart transplant", v: "Candidacy, wait, and post-transplant management"}
+    ],
+    beginSub: "Most programs start at discharge and extend backward into clinic.",
+    beginItems: [
+      {t: "Post-discharge recovery.", d: "The thirty days where the cost and the penalty land."},
+      {t: "Daily self-management.", d: "Weights, fluid and sodium limits, and what each number means."},
+      {t: "Medication and titration.", d: "Why the regimen keeps changing, and what a missed dose does."},
+      {t: "Prevention and risk.", d: "Screening and referral before they are a patient."}
+    ],
+    pov: [
+      {kicker: "For the patient", t: "They know what today's number means", label: "#A8412F", dot: "#E3735C", items: [
+        "What the diagnosis is, what it does, and what they actually control",
+        "Sodium, fluid, and daily weight guidance written for a kitchen, not a chart",
+        "Which readings mean call us, and which mean go to the ED",
+        "The same guide works for whoever manages the medications at home"
+      ]},
+      {kicker: "For your team", t: "Better calls, fewer of them", label: "#2D5A87", dot: "#2D5A87", items: [
+        "Ordered at discharge and it runs for as long as the patient is yours",
+        "Fewer calls asking what the discharge sheet already said",
+        "Titration changes explained again, in your clinicians' words",
+        "We build and maintain the content, including guideline updates"
+      ]},
+      {kicker: "For the program", t: "The thirty days stop being blind", label: "#5B9BEA", dot: "#5B9BEA", items: [
+        "Who opened their orbit at 7, 14, and 30 days, by patient",
+        "Weight and symptom check-ins routed back before the readmission",
+        "Engagement and completion by unit and by site",
+        "Optional: validated measures scored automatically"
+      ]}
+    ]
+  },
+  {
+    label: "Procedures & surgery", nameLower: "cardiac procedures",
+    line: "The cath lab and the operating room, where preparation decides whether a case happens on the day it was booked.",
+    headLead: "Preparation and recovery your patients can follow, on the day", headEm: "each step matters",
+    intro: "Your operative and cath lab protocols in your surgeons' own words, released one instruction at a time. Alongside the pre-op packet and the nurse call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that gets patients to the day prepared and through recovery without guessing.",
+    gapLead: "Weeks of preparation inside", gapEm: "one procedure day",
+    gapIntro: "A bypass, a valve, an ablation, or a stent is decided in one visit, prepared for alone at home over weeks, and recovered from alone over more. The lab and the operating room see a sliver of it. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.",
+    gapBridge: "None of this is decided in the lab. Each one turns on whether a patient followed the preparation, held the right medication, arrived ready, and recognized the sign that mattered afterward.",
+    studyLead: "The cardiology result", studyEm: "behind the numbers",
+    studySub: "The rehab pilot below measured enrollment in cardiology. The platform's controlled trial was run in surgical oncology, where preparation and recovery work the same way; applied to a cardiac procedural population, those results are a model.",
+    libIntro: "The named procedure orbits, plus a template that versions the long tail with minor edits. Heart Health is where each one returns after the episode closes.",
+    money: [
+      {v: "7 in 10", t: "Day-of cancellations judged avoidable", d: "Incomplete evaluation, missing clearance, and patients who did not arrive. Lab and operating room time lost late is rarely refilled.", src: "Published day-of-surgery cancellation audits"},
+      {v: "Up to 24%", t: "Reported day-of-surgery cancellation rates", d: "Published rates range widely by setting and specialty. The avoidable share is the part preparation can move.", src: "Published cancellation series, 1.96% to 24%"},
+      {v: "Up to 3%", t: "Medicare inpatient payment at risk", d: "HRRP covers excess readmissions after CABG and acute myocardial infarction as well as heart failure.", src: "CMS"},
+      {v: "About half", t: "Stop taking their cardiac medications", d: "Antiplatelet and anticoagulation adherence after a stent or a valve is the difference between a good result and a repeat one.", src: "Published adherence literature"}
+    ],
+    measures: [
+      {t: "Fewer cancelled and rescheduled cases", d: "A case that falls off the schedule late is lab or operating room time that rarely gets refilled."},
+      {t: "Fewer day-of surprises", d: "Fasting, medication hold, and clearance failures that only surface when the patient arrives."},
+      {t: "Fewer 30-day readmissions", d: "The costliest post-procedure failure, and the one CMS penalizes directly after CABG and acute MI."},
+      {t: "Higher follow-up visit attendance", d: "The visit where healing, restrictions, and device or medication checks actually happen."},
+      {t: "Better antiplatelet and anticoagulation adherence", d: "The regimen that protects the result, stopped quietly over a side effect nobody warned about."},
+      {t: "Fewer inbound calls per case", d: "Every repeat call is nursing time spent re-explaining what the packet already said."},
+      {t: "Higher PROM completion", d: "Required for quality programs and value-based contracts, and usually chased by hand."},
+      {t: "Better documented consent and instruction", d: "A record that the patient received and opened the guidance, which protects the program."}
+    ],
+    catalog: [
+      {t: "Coronary artery bypass surgery", v: "Versions: general + off-pump / OPCAB"},
+      {t: "Heart valve repair or replacement", v: ""},
+      {t: "Coronary angioplasty and stenting", v: ""},
+      {t: "Aneurysm repair", v: ""},
+      {t: "Minimally invasive heart surgery", v: ""},
+      {t: "Implantable pacemaker", v: ""},
+      {t: "Heart transplant", v: ""},
+      {t: "Heart Health", v: "Where procedure orbits evolve once the episode closes"}
+    ],
+    beginSub: "Most programs start with their highest-volume case and template the rest.",
+    beginItems: [
+      {t: "Decision and consent.", d: "What the procedure is, what the options were, and what it involves."},
+      {t: "Preparation and clearance.", d: "Labs, imaging, medication holds, and fasting, one instruction at a time."},
+      {t: "Day of procedure.", d: "Arrival, what the day looks like, and who will be in the room."},
+      {t: "Recovery and follow-up.", d: "Restrictions week by week, warning signs, and the post-procedure visit."}
+    ],
+    pov: [
+      {kicker: "For the patient", t: "They arrive ready on the day", label: "#A8412F", dot: "#E3735C", items: [
+        "What the procedure is, why it was recommended, and what the alternatives were",
+        "Every preparation instruction on the day it has to be done, not all at once",
+        "Recovery expectations week by week, with the signs that warrant a call",
+        "The same guide works for whoever drives them home"
+      ]},
+      {kicker: "For your team", t: "Fewer cancellations to rebook", label: "#2D5A87", dot: "#2D5A87", items: [
+        "Ordered when the case is booked, running until the follow-up visit",
+        "Fewer calls about prep, and fewer day-of surprises",
+        "Your protocols and your brand, not a generic surgery handout",
+        "One procedure template versions the long tail of case types"
+      ]},
+      {kicker: "For the program", t: "The schedule holds", label: "#5B9BEA", dot: "#5B9BEA", items: [
+        "Who completed preparation and who never opened it, before the day",
+        "Cancellation and rebooking patterns visible by case type",
+        "PROMs collected before and after without coordinator time",
+        "Engagement and completion by proceduralist and by site"
+      ]}
+    ]
+  },
+  {
+    label: "Rehab & prevention", nameLower: "cardiac rehab",
+    line: "The reimbursed program most eligible patients never start, and the risk work that happens before anyone is a patient.",
+    headLead: "Enrolled, and still there at", headEm: "session thirty-six",
+    intro: "Your rehab and prevention guidance in your clinicians' own words, delivered across the whole course rather than at orientation. Alongside the referral and the intake call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that gets referred patients to start, and keeps them coming.",
+    gapLead: "A referral is not", gapEm: "an enrollment",
+    gapIntro: "Cardiac rehab is one of the best-evidenced interventions in cardiology and one of the least used. The decision to start, and the decision to keep going in week four, are both made at home. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.",
+    gapBridge: "None of this is decided in the clinic. Each one turns on whether a patient understood why rehab matters, knew what a session involves, and kept going after the novelty wore off.",
+    studyLead: "The rehab pilot", studyEm: "behind the numbers",
+    studySub: "This result was measured in exactly this segment: a nine-month observational pilot, alongside the platform's controlled trial in oncology.",
+    libIntro: "Two orbits carry this segment: the rehab journey itself, and the Heart Health orbit that reaches people before and after it.",
+    money: [
+      {v: "About 1 in 4", t: "Eligible patients who start rehab", d: "One of the best-evidenced interventions in cardiology, and most eligible patients never begin it.", src: "Published Medicare analyses"},
+      {v: "Under half", t: "Of those who start, finish", d: "Referral, enrollment, and completion each leak patients, and completion is where the benefit lives.", src: "Published participation and completion literature"},
+      {v: "36", t: "Sessions in a funded course", d: "Every enrolled patient is a reimbursable program. Every session nobody attends is a session nobody bills.", src: "Medicare cardiac rehabilitation benefit"},
+      {v: "52%", t: "Started rehab after activating their orbit", d: "Nine-month pilot at a leading Midwest health system: 52% of patients who activated their orbit started the program, against 24% of those who never did.", src: "Pritikin ICR pilot, reported December 2023"}
+    ],
+    measures: [
+      {t: "Higher cardiac rehab enrollment", d: "A referral that never becomes an enrollment is billed to nobody and helps no one."},
+      {t: "Higher rehab completion", d: "Completion is where the mortality benefit lives, and where most programs leak patients."},
+      {t: "Better program utilization", d: "Rehab capacity you already staff and already pay for, actually filled."},
+      {t: "Fewer 30-day readmissions", d: "Completed rehab is one of the strongest levers against cardiac readmission."},
+      {t: "Better medication adherence", d: "Cardiac regimens only work when they are taken, and nobody sees the bottle between sessions."},
+      {t: "Better risk-factor control", d: "Activity, diet, and smoking, supported on the days between sessions rather than at intake."},
+      {t: "Higher PROM completion", d: "Required for quality programs and value-based contracts, and usually chased by hand."},
+      {t: "New patient acquisition", d: "Prevention and screening outreach reaches people before they are anyone's patient."}
+    ],
+    catalog: [
+      {t: "Cardiac rehabilitation", v: "Versions: newly prescribed + full journey"},
+      {t: "Heart Health", v: "Versions: general patient + at-risk + senior + community"}
+    ],
+    beginSub: "Most programs start at the referral and work outward in both directions.",
+    beginItems: [
+      {t: "Referral to enrollment.", d: "Why rehab matters and what a session actually involves."},
+      {t: "Through the course.", d: "Week-by-week support for the patient who has quietly stopped coming."},
+      {t: "After the last session.", d: "Keeping the habits that the program built."},
+      {t: "Prevention and risk.", d: "Screening and referral before they are a patient."}
+    ],
+    pov: [
+      {kicker: "For the patient", t: "They know why it is worth showing up", label: "#A8412F", dot: "#E3735C", items: [
+        "What rehab is for, what a session involves, and what to wear",
+        "What to expect week by week, including the week motivation drops",
+        "Activity, diet, and medication guidance on the days between sessions",
+        "The same guide works for whoever is driving them there"
+      ]},
+      {kicker: "For your team", t: "Fewer empty slots to backfill", label: "#2D5A87", dot: "#2D5A87", items: [
+        "Issued at referral, no new FTEs and no new intake step",
+        "Fewer calls asking what orientation already covered",
+        "Your protocols and your brand, not a generic fitness app",
+        "We build and maintain the content, including guideline updates"
+      ]},
+      {kicker: "For the program", t: "Enrollment you can see coming", label: "#5B9BEA", dot: "#5B9BEA", items: [
+        "Who activated their orbit and who never did, by referral",
+        "Drop-off visible in week four rather than at the audit",
+        "Engagement and completion by cohort and by site",
+        "Optional: validated measures scored automatically"
+      ]}
+    ]
+  }
+];
+
+class Component extends DCLogic {
+  state = { seg: 0, showSources: false, calcOpen: false, exportOpen: false, calc: {"volume":"600","utilRate":"20","utilCut":"20","utilCost":"15000","calls":"5","callCut":"53","minutes":"9","staffRate":"45","noShow":"50","noShowCut":"15","revPer":"1800"}, email: "", sent: false, active: 0 };
+  componentDidMount() {
+    import('./orbits-data.js').then(m => this.setState({d: m.ORBITS["cardiology"]}));
+    this._onScroll = () => {
+      const blocks = Array.from(document.querySelectorAll('[data-feat-block]'));
+      if (!blocks.length) return;
+      let idx = 0;
+      blocks.forEach((b, i) => { if (b.getBoundingClientRect().top <= 220) idx = i; });
+      if (idx !== this.state.active) this.setState({active: idx});
+    };
+    document.addEventListener('scroll', this._onScroll, {capture: true, passive: true});
+    this._onScroll();
+  }
+  componentWillUnmount() { document.removeEventListener('scroll', this._onScroll, {capture: true}); }
+  t0 = Date.now();
+  humanOk(email) { return /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(email) && !this.state.hp && (Date.now() - this.t0 > 3000); }
+  renderVals() {
+    const d = this.state.d || {};
+    const segIdx = this.state.seg ?? 0;
+    const seg = CARD_SEGMENTS[segIdx];
+    const features = [
+      {tab: "Diagnosis & plan", t: "Understanding the condition, not just the appointment", d: "What the diagnosis means, what the plan is, and what the patient controls, in your team's words, available again the evening after the visit.", src: "", hint: "[Placeholder: cardiology consultation photo]"},
+      {tab: "Cardiac rehab", t: "Enrolled, and still there at session thirty-six", d: "Why rehab matters, what a session involves, and what to expect week by week, with check-ins that surface a patient who has quietly stopped coming.", src: "", hint: "[Placeholder: cardiac rehab session photo]"},
+      {tab: "Medication adherence", t: "Regimens taken as prescribed", d: "What each medication does, why it continues after the patient feels better, how to handle a missed dose, and which side effects warrant a call rather than stopping.", src: "", hint: "[Placeholder: medication guidance photo]"},
+      {tab: "Diet, sodium & weight", t: "The daily habits that keep patients out", d: "Sodium, fluid, and daily weight guidance written for a kitchen rather than a chart, with the specific numbers that should trigger a call.", src: "", hint: "[Placeholder: heart-healthy nutrition photo]"},
+      {tab: "Symptom recognition", t: "The warning signs, known before they happen", d: "Swelling, breathlessness, chest discomfort, and weight gain, described plainly with the threshold for calling your team instead of waiting.", src: "", hint: "[Placeholder: patient checking weight at home photo]"},
+      {tab: "Maintenance & PROMs", t: "Follow-through, measured", d: "Long-term activity and risk-factor guidance, plus validated measures collected on schedule and returned to the care team without added staff time.", src: "", hint: "[Placeholder: care-team dashboard screenshot]"}
+    ].map((f, i) => Object.assign({}, f, {
+      id: "card-f" + i, anchor: "#card-f" + i, slotId: "card-feature-" + i, src: f.src || "",
+      navColor: i === this.state.active ? "#0F1D2E" : "rgba(15,29,46,.66)",
+      navRule: i === this.state.active ? "#E3735C" : "rgba(15,29,46,.12)",
+      pick: () => this.setState({active: i})
+    }));
+    const c = this.state.calc;
+    const num = (k) => (isNaN(parseFloat(c[k])) ? 0 : parseFloat(c[k]));
+    const setCalc = (k) => (e) => {
+      let v = e.target.value;
+      if (v !== "" && parseFloat(v) < 0) v = "0";
+      const pct = ["utilRate", "utilCut", "callCut", "noShow", "noShowCut"];
+      if (v !== "" && pct.indexOf(k) > -1 && parseFloat(v) > 100) v = "100";
+      this.setState(st => ({calc: Object.assign({}, st.calc, {[k]: v})}));
+    };
+    const benchmarks = {"volume":"600","utilRate":"20","utilCut":"20","utilCost":"15000","calls":"5","callCut":"53","minutes":"9","staffRate":"45","noShow":"50","noShowCut":"15","revPer":"1800"};
+    const money = (n) => !n ? "$0" : (n >= 1000000 ? "$" + (n / 1000000).toFixed(2).replace(/\.00$/, "") + "M" : "$" + Math.round(n / 1000).toLocaleString() + "K");
+    const dollars = (n) => "$" + Math.round(n || 0).toLocaleString();
+    const utilEvents = num("volume") * num("utilRate") / 100;
+    const utilAvoided = utilEvents * num("utilCut") / 100;
+    const utilSavings = utilAvoided * num("utilCost");
+    const callsAvoided = num("volume") * num("calls") * num("callCut") / 100;
+    const hoursReturned = callsAvoided * num("minutes") / 60;
+    const callSavings = hoursReturned * num("staffRate");
+    const missedTotal = num("volume") * num("noShow") / 100;
+    const missedRecovered = missedTotal * num("noShowCut") / 100;
+    const missedSavings = missedRecovered * num("revPer");
+    const groupTotal = utilSavings + callSavings + missedSavings;
+    const calcFields = [
+      {k: "volume", label: "Cardiac patients entering a program each year", value: c.volume, ph: "e.g. 600", step: "10", prefix: "", suffix: "patients", hint: "The population an orbit would be issued to"},
+      {k: "utilRate", label: "30-day readmission rate", value: c.utilRate, ph: "e.g. 20", step: "0.5", prefix: "", suffix: "%", hint: "National heart failure readmission runs near 20%. Use your own program's rate."},
+      {k: "utilCut", label: "Reduction in readmissions", value: c.utilCut, ph: "e.g. 20", step: "1", prefix: "", suffix: "%", hint: "Modeled. The CareOrbit trial measured 41% in surgical oncology; cardiac transfer is an assumption."},
+      {k: "utilCost", label: "Cost or penalty exposure per readmission", value: c.utilCost, ph: "e.g. 15000", step: "1000", prefix: "$", suffix: "", hint: "Your finance team's figure, including HRRP penalty exposure"},
+      {k: "calls", label: "Calls per patient per episode", value: c.calls, ph: "e.g. 5", step: "1", prefix: "", suffix: "calls", hint: "Symptom and medication questions to the nursing line"},
+      {k: "callCut", label: "Reduction in inbound calls", value: c.callCut, ph: "e.g. 53", step: "1", prefix: "", suffix: "%", hint: "53% measured in the CareOrbit controlled trial"},
+      {k: "minutes", label: "Minutes per call, including documentation", value: c.minutes, ph: "e.g. 9", step: "1", prefix: "", suffix: "min", hint: "Handle time plus charting and follow-up"},
+      {k: "staffRate", label: "Loaded hourly cost of the staff taking calls", value: c.staffRate, ph: "e.g. 45", step: "5", prefix: "$", suffix: "/hr", hint: "Nurse or navigator wage plus benefits"},
+      {k: "noShow", label: "Patients who never complete the rehab course", value: c.noShow, ph: "e.g. 50", step: "1", prefix: "", suffix: "%", hint: "Completion is low nationally. Most enrolled patients do not finish."},
+      {k: "noShowCut", label: "Reduction in dropout", value: c.noShowCut, ph: "e.g. 15", step: "1", prefix: "", suffix: "%", hint: "Modeled assumption. Set it to 0 to leave it out."},
+      {k: "revPer", label: "Program revenue per retained patient", value: c.revPer, ph: "e.g. 1800", step: "100", prefix: "$", suffix: "", hint: "Your finance team's figure. Varies widely by setting and payer."}
+    ].map(f => Object.assign({}, f, {onChange: setCalc(f.k)}));
+    const calcResults = [
+      {raw: utilSavings, v: money(utilSavings), t: "Readmission cost avoided", d: Math.round(utilAvoided).toLocaleString() + " readmissions a year prevented at the rate and exposure you entered."},
+      {raw: callSavings, v: money(callSavings), t: "Nursing time returned", d: Math.round(hoursReturned).toLocaleString() + " hours a year back to clinical work instead of the phone."},
+      {raw: missedSavings, v: money(missedSavings), t: "Retained program revenue", d: Math.round(missedRecovered).toLocaleString() + " patients a year who complete the course instead of dropping out."}
+    ];
+    const sourcesList = [
+        "CareOrbit controlled clinical trial, Siteman Cancer Center and Washington University School of Medicine, hepatobiliary surgical oncology: 41% fewer readmissions, 53% fewer inbound calls, 65% better understanding of the plan and side effects, 22% higher satisfaction, and 9 of 10 patients reporting improved recovery navigation, measured against usual care. The trial was conducted in surgical oncology. Applying its percentages to a cardiac population is a modeled transfer, not a measured cardiac result.",
+        "CMS Hospital Readmissions Reduction Program: hospitals with excess readmissions, including for heart failure and acute myocardial infarction, face a payment reduction of up to 3% of base Medicare inpatient payments.",
+        "National 30-day readmission after a heart failure hospitalization is commonly reported near 20–23%. Rates vary substantially by program and payer mix; the calculator defaults are placeholders for your own figures.",
+        "Cardiac rehabilitation is one of the best-evidenced interventions in cardiology, and participation and completion remain low across published series. Referral, enrollment, and completion each lose patients.",
+        "Pritikin ICR pilot cohort figures are as reported by Pritikin ICR, December 2023, covering pilot months 1 through 9 at one outlet of a leading Midwest health system. This was an observational pilot, not a randomized trial: patients chose whether to activate their orbit, so activation and program start may share underlying causes. The pilot's own recommendation is a randomized design next.",
+        "Readmission rate, cost or penalty exposure, call volume, staff cost, dropout rate, and per-patient program revenue are supplied by the user. CareOrbit makes no claim about those values.",
+        "Dollar figures on this page are arithmetic applying the percentages entered to the volumes and unit costs entered. They are illustrations, not guarantees."
+    ];
+    return {
+      bookHref: "BookACall.dc.html?src=cardiology",
+      heroSrc: "images/hero-cardiology.png",
+      heroSlotId: "orbit-hero-cardiology", heroSlotHint: "Cardiology care photo",
+      valueSlotId: "cardiology-value-" + segIdx,
+      valueSrc: segIdx === 0 ? "images/value-cardiology-all.png" : segIdx === 1 ? "images/value-cardiology-hf.png" : segIdx === 2 ? "images/value-cardiology-procedures.png" : segIdx === 3 ? "images/value-cardiology-rehab.png" : "",
+      name: d.name ?? "", nameLower: (d.name ?? "").toLowerCase(),
+      hero: d.hero ?? "", sub: d.sub ?? "",
+      costMoments: (d.costMoments ?? []).slice(0, 4),
+      features,
+      benefits: ([
+        {t: "Paper handouts and binders", d: "Handed over at discharge, misplaced within the week, and out of date the moment a medication changes."},
+        {t: "Verbal instructions at discharge", d: "Given at the end of a long admission, often without the family member who will manage the medications."},
+        {t: "Generic EMR education material", d: "Auto-generated, rarely updated, and written for the chart rather than for a patient at home."},
+        {t: "Patient portal messages", d: "One more login to set up, on a channel most patients never open between appointments."},
+        {t: "\"Call us if anything changes\"", d: "Asks the patient to recognize what abnormal looks like, and your nursing line to be available when they do."},
+        {t: "A rehab orientation session", d: "Explained once at the start, needed most in week four when motivation drops."},
+        {t: "Printed medication schedules", d: "No reminders, no check-ins, and no way to tell whether the regimen is being followed."},
+        {t: "Manual nurse outreach", d: "Your most experienced staff spending their week on phone tag instead of on the patients who need them."}
+      ]).slice(0, 4),
+      window: [
+        {n: "Years", t: "Length of the relationship", d: "Coronary disease and heart failure are managed for life, not for an episode.", bg: "transparent", border: "transparent", pad: "0 22px 0 0", size: "clamp(34px,3.6vw,46px)", fg: "#FFFFFF", label: "#5B9BEA", body: "#B9C8D8"},
+        {n: "36", t: "Sessions in a full rehab course", d: "Each one a chance to drop out, and most patients take it.", bg: "transparent", border: "transparent", pad: "0 22px 0 0", size: "clamp(34px,3.6vw,46px)", fg: "#FFFFFF", label: "#5B9BEA", body: "#B9C8D8"},
+        {n: "30 days", t: "The readmission window", d: "Where the cost and the penalty both land.", bg: "transparent", border: "transparent", pad: "0 22px 0 0", size: "clamp(34px,3.6vw,46px)", fg: "#FFFFFF", label: "#5B9BEA", body: "#B9C8D8"},
+        {n: "Every day", t: "Managed at home", d: "Medications, sodium, weight, activity, and symptom recognition, all outside your building.", bg: "#1E3A5F", border: "#E3735C", pad: "26px 24px", size: "clamp(44px,5vw,62px)", fg: "#FFFFFF", label: "#5B9BEA", body: "#D6E1EC"}
+      ],
+      catalog: [
+        {n: "01", t: "Heart Health", v: "Versions: general patient + at-risk + senior + community. Procedure orbits evolve here."},
+        {n: "02", t: "Cardiac rehabilitation", v: "Versions: newly prescribed + full journey"},
+        {n: "03", t: "Coronary artery bypass surgery", v: "Versions: general + off-pump / OPCAB"},
+        {n: "04", t: "Heart valve repair or replacement", v: ""},
+        {n: "05", t: "Aneurysm repair", v: ""},
+        {n: "06", t: "Coronary angioplasty and stenting", v: ""},
+        {n: "07", t: "Implantable pacemaker", v: ""},
+        {n: "08", t: "Heart transplant", v: ""},
+        {n: "09", t: "Minimally invasive heart surgery", v: ""}
+      ],
+      versions: [
+        {n: "By depth", t: "Success plan or full journey", d: "A success plan orbit carries broad, all-patient content and asks little of the care team. A journey orbit layers deeply specific content on top of that foundation.", who: "Chosen per department", bg: "#FFFFFF", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#E3735C", rule: "rgba(15,29,46,.09)"},
+        {n: "By stage", t: "Prospect through long-term follow-up", d: "As a person moves along the pathway, their orbit updates at the right moment, with no new app or login.", who: "One orbit, whole journey", bg: "#FFFFFF", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#2D5A87", rule: "rgba(15,29,46,.09)"},
+        {n: "By procedure", t: "Named orbits, plus a template", d: "High-volume, high-value procedures get their own orbit. Everything else runs on a procedure template that can be versioned with minor edits.", who: "Scope, value, and understanding dividend", bg: "#0F1D2E", fg: "#FFFFFF", body: "#B9C8D8", accent: "#F2B8C6", rule: "#2D5A87"},
+        {n: "By audience", t: "Patient, family, community", d: "Any orbit can be issued in patient and family versions, and in outreach-facing versions for at-risk, senior, or community audiences.", who: "Versioned on request", bg: "#FFFFFF", fg: "#0F1D2E", body: "rgba(15,29,46,.68)", accent: "#4FB3BF", rule: "rgba(15,29,46,.09)"}
+      ],
+      measures: [
+        {t: "Fewer 30-day readmissions", d: "The costliest between-visit failure in cardiology, and the one CMS penalizes directly."},
+        {t: "Higher cardiac rehab enrollment", d: "A referral that never becomes an enrollment is billed to nobody and helps no one."},
+        {t: "Higher rehab completion", d: "Completion is where the mortality benefit lives, and where most programs leak patients."},
+        {t: "Better medication adherence", d: "Cardiac regimens only work when they are taken, and nobody sees the bottle between visits."},
+        {t: "Fewer avoidable ED visits", d: "A managed symptom at home instead of an unplanned presentation on a weekend."},
+        {t: "Fewer inbound calls per episode", d: "Every repeat call is nursing time spent re-explaining what was already covered."},
+        {t: "Earlier symptom recognition", d: "A patient who calls about three pounds of weight gain costs a phone call, not an admission."},
+        {t: "A visible program differentiator", d: "A branded cardiac experience is something few competing programs can show a referring physician."}
+      ].map((m, i) => Object.assign({}, m, {n: String(i + 1).padStart(2, "0")})),
+      money: [
+        {v: "1 in 5", t: "Heart failure patients readmitted within 30 days", d: "National 30-day readmission after a heart failure admission runs near 20%, and the Hospital Readmissions Reduction Program puts up to 3% of all Medicare inpatient payment at risk for programs that run high.", src: "CMS Hospital Readmissions Reduction Program: up to 3% payment reduction. Readmission rate varies by program; use your own."},
+        {v: "Under half", t: "Eligible patients who complete cardiac rehab", d: "Referral, enrollment, and completion all leak. Most eligible patients never finish one of the best-evidenced interventions in cardiology.", src: "Published cardiac rehab participation and completion literature. Your own program's figures will differ."},
+        {v: "−53%", t: "Calls to the nursing line", d: "Measured in the CareOrbit controlled trial. Preparedness and symptom questions the orbit answered first, at five calls per patient and nine minutes each.", src: "CareOrbit controlled clinical trial, Siteman Cancer Center. Applied here to a cardiac population as a modeled transfer."},
+        {v: "52%", t: "Started rehab after activating their orbit", d: "Nine-month Pritikin ICR pilot at a leading Midwest health system: 26 of the 50 patients who activated their orbit started the program, against 24% of the 141 who never activated.", src: "Pritikin ICR pilot, reported December 2023"}
+      ],
+      calcOpen: this.state.calcOpen,
+      calcBtn: this.state.calcOpen ? "Hide the calculator" : "Run the model with your numbers",
+      toggleCalc: () => this.setState(st => ({calcOpen: !st.calcOpen})),
+      closeCalc: () => this.setState({calcOpen: false}),
+      stopClose: (e) => e.stopPropagation(),
+      exportOpen: this.state.exportOpen,
+      toggleExport: () => this.setState(st => ({exportOpen: !st.exportOpen})),
+      exportExcel: () => {
+        const lines = [["CareOrbit cardiology ROI model", ""], ["", ""], ["Input", "Value"]];
+        calcFields.forEach(f => { let n = parseFloat(c[f.k]); if (isNaN(n)) n = 0; lines.push([f.label + (f.suffix === "%" ? " (%)" : (f.prefix === "$" ? " ($)" : "")), n]); });
+        lines.push(["", ""], ["Result", "Annual value"]);
+        calcResults.forEach(r => lines.push([r.t + " ($)", Math.round(r.raw)]));
+        lines.push(["Total annual opportunity ($)", Math.round(groupTotal)]);
+        lines.push(["", ""], ["Modeled illustration. Arithmetic on the inputs above, not a guarantee of results.", ""]);
+        const csv = lines.map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(",")).join("\r\n");
+        const blob = new Blob(["\ufeff" + csv], {type: "text/csv;charset=utf-8;"});
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "careorbit-cardiology-roi.csv";
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+        this.setState({exportOpen: false});
+      },
+      printCalc: () => {
+        const old = document.getElementById("print-only");
+        if (old) old.remove();
+        const esc = (v) => String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+        const fmtIn = (k) => {
+          const n = parseFloat(c[k]);
+          if (isNaN(n)) return "0";
+          return n.toLocaleString(undefined, {maximumFractionDigits: 2});
+        };
+        const inputRows = calcFields.map(f => '<tr><td style="padding:7px 0;border-bottom:1px solid #E6E1D9;font-size:10.5pt;color:#3A4A5C">' + esc(f.label) + '</td><td style="padding:7px 0;border-bottom:1px solid #E6E1D9;font-size:10.5pt;font-weight:700;color:#0F1D2E;text-align:right;white-space:nowrap">' + esc(f.prefix) + fmtIn(f.k) + (f.suffix ? " " + esc(f.suffix) : "") + '</td></tr>').join("");
+        const resultRows = calcResults.map(r => '<tr><td style="padding:9px 0;border-bottom:1px solid #E6E1D9"><div style="font-size:11pt;font-weight:700;color:#0F1D2E">' + esc(r.t) + '</div><div style="font-size:9pt;color:#5A6A7C;line-height:1.35">' + esc(r.d) + '</div></td><td style="padding:9px 0;border-bottom:1px solid #E6E1D9;font-family:Lato,sans-serif;font-size:20pt;font-weight:300;color:#0F1D2E;text-align:right;white-space:nowrap;vertical-align:middle">' + esc(dollars(r.raw)) + '</td></tr>').join("");
+        const holder = document.createElement("div");
+        holder.id = "print-only";
+        holder.innerHTML = '<div style="font-family:Inter,sans-serif;color:#0F1D2E;padding:0">' +
+          '<div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #0F1D2E;padding-bottom:10px;margin-bottom:18px">' +
+            '<div><div style="font-size:8.5pt;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">CareOrbit</div>' +
+            '<div style="font-family:Lato,sans-serif;font-size:20pt;font-weight:700;letter-spacing:-0.02em;line-height:1.1;margin-top:2px">Cardiology orbit ROI model</div></div>' +
+            '<div style="text-align:right;font-size:9pt;color:#5A6A7C;line-height:1.4">' + esc((parseFloat(c.volume) || 0).toLocaleString() + " cardiac patients a year") + '<br>' + new Date().toLocaleDateString() + '</div>' +
+          '</div>' +
+          '<div style="display:flex;gap:26px;align-items:flex-start">' +
+            '<div style="flex:0 0 44%"><div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8578;margin-bottom:6px">Your inputs</div>' +
+              '<table style="width:100%;border-collapse:collapse">' + inputRows + '</table></div>' +
+            '<div style="flex:1"><div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A8578;margin-bottom:6px">Modeled annual value</div>' +
+              '<table style="width:100%;border-collapse:collapse">' + resultRows + '</table>' +
+              '<div style="background:#0F1D2E;border-radius:12px;padding:16px 20px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">' +
+                '<div style="font-size:8.5pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#F2B8C6">Total annual opportunity</div>' +
+                '<div style="font-family:Lato,sans-serif;font-size:26pt;font-weight:300;letter-spacing:-0.03em;color:#FFFFFF;line-height:1">' + esc(dollars(groupTotal)) + '</div>' +
+              '</div></div>' +
+          '</div>' +
+          '<div style="margin-top:18px;padding-top:10px;border-top:1px solid #E6E1D9;font-size:8pt;line-height:1.5;color:#5A6A7C">Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Call-reduction and understanding figures are from the CareOrbit controlled clinical trial at Siteman Cancer Center and are applied here as a modeled transfer to a cardiac population. Readmission and dropout reductions are modeled assumptions, not measured cardiac results. Rates and unit costs are supplied by the user. careorbit.com</div>' +
+        '</div>';
+        document.body.appendChild(holder);
+        document.body.classList.add("co-printing");
+        const cleanup = () => {
+          document.body.classList.remove("co-printing");
+          const h = document.getElementById("print-only");
+          if (h) h.remove();
+          window.removeEventListener("afterprint", cleanup);
+        };
+        window.addEventListener("afterprint", cleanup);
+        this.setState({exportOpen: false});
+        window.print();
+        setTimeout(cleanup, 1500);
+      },
+      practiceLabel: num("volume") ? num("volume").toLocaleString() + " cardiac patients a year" : "your program",
+      calcFields, calcResults,
+      fillBenchmarks: () => this.setState({calc: Object.assign({}, benchmarks)}),
+      clearCalc: () => this.setState({calc: {volume: "", utilRate: "", utilCut: "", utilCost: "", calls: "", callCut: "", minutes: "", staffRate: "", noShow: "", noShowCut: "", revPer: ""}}),
+      calcTotal: money(groupTotal),
+      calcTotalNote: num("volume") ? "Across " + num("volume").toLocaleString() + " cardiac patients a year" : "Enter your volume to scale the model",
+      showSources: this.state.showSources,
+      sourceCount: sourcesList.length + " references",
+      sourceArrow: this.state.showSources ? "rotate(180deg)" : "rotate(0deg)",
+      sourceLabel: this.state.showSources ? "Hide sources" : "View sources",
+      toggleSources: () => this.setState(st => ({showSources: !st.showSources})),
+      sources: sourcesList,
+      rows: [
+        {kicker: "How to begin", t: "Start with one, add the rest", label: "#A8412F", dot: "#E3735C",
+         sub: "Most cardiology programs start with procedure support or rehab. All four run as one guide the patient keeps.",
+         items: [
+           {t: "Procedure support.", d: "Bypass, valve, ablation, device implant, cath lab."},
+           {t: "Cardiac rehab.", d: "Getting referred patients to start, and to keep coming."},
+           {t: "Heart failure.", d: "Daily weights, fluid and sodium limits, titration."},
+           {t: "Prevention and risk.", d: "Screening and referral before they are a patient."}
+         ]},
+        {kicker: "How it deploys", t: "Issued from the workflow you already run", label: "#2D5A87", dot: "#5B9BEA",
+         sub: "From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.",
+         items: [
+           {t: "No new FTEs.", d: "Nothing added to anyone's day."},
+           {t: "White-label.", d: "Your brand, your voice."},
+           {t: "Live in a quarter.", d: "From kickoff to first patient."}
+         ]}
+      ],
+      pov: [
+        {kicker: "For the patient", t: "They know what to do", label: "#A8412F", dot: "#E3735C",
+         items: [
+           "A clear understanding of their diagnosis, procedure, and who will be caring for them",
+           "Your prep, clearance, and day-of instructions, on the day they apply",
+           "Which symptoms mean call us, and which mean go to the ED",
+           "The same guide works for whoever drives them home"
+         ]},
+        {kicker: "For your team", t: "Nothing added to the day", label: "#2D5A87", dot: "#2D5A87",
+         items: [
+           "Ordered from the workflow you already run, no new FTEs",
+           "Fewer calls asking what the discharge sheet already said",
+           "Your brand and your protocols, not a generic app",
+           "We build and maintain the content, including updates"
+         ]},
+        {kicker: "For the program", t: "You can finally see it", label: "#5B9BEA", dot: "#5B9BEA",
+         items: [
+           "Who opened their orbit and who never did, by patient",
+           "Symptom check-ins routed back before the next visit",
+           "Engagement and completion by cohort and by site",
+           "Optional: validated measures scored automatically"
+         ]}
+      ],
+      deploy: [
+        {t: "No new FTEs", d: "Nothing added to anyone's day."},
+        {t: "White-label", d: "Your brand, your voice."},
+        {t: "Live in a quarter", d: "From kickoff to first patient."}
+      ],
+      quotes: [
+        {text: "Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!", who: "Chief of Section, Surgical Oncology"},
+        {text: "It's seen as incredibly easy to understand and use. They (patients and families) just run with it.", who: "Nurse Navigator, Siteman Cancer Center Surgical Department"}
+      ],
+      pick0: () => this.setState({seg: 0}), pick1: () => this.setState({seg: 1}),
+      pick2: () => this.setState({seg: 2}), pick3: () => this.setState({seg: 3}),
+      t0Fg: segIdx === 0 ? "#0F1D2E" : "rgba(15,29,46,.42)", t0On: segIdx === 0,
+      t1Fg: segIdx === 1 ? "#0F1D2E" : "rgba(15,29,46,.42)", t1On: segIdx === 1,
+      t2Fg: segIdx === 2 ? "#0F1D2E" : "rgba(15,29,46,.42)", t2On: segIdx === 2,
+      t3Fg: segIdx === 3 ? "#0F1D2E" : "rgba(15,29,46,.42)", t3On: segIdx === 3,
+      segLine: seg.line,
+      headLead: seg.headLead, headEm: seg.headEm, intro: seg.intro,
+      gapLead: seg.gapLead, gapEm: seg.gapEm, gapIntro: seg.gapIntro, gapBridge: seg.gapBridge,
+      studySub: seg.studySub, studyLead: seg.studyLead, studyEm: seg.studyEm, libIntro: seg.libIntro,
+      nameLower: seg.nameLower,
+      money: seg.money,
+      pov: seg.pov,
+      catalog: seg.catalog.map((c, i) => Object.assign({}, c, {n: String(i + 1).padStart(2, "0")})),
+      measures: seg.measures.map((m, i) => Object.assign({}, m, {n: String(i + 1).padStart(2, "0")})),
+      rows: [
+        {kicker: "How to begin", t: "Start with one, add the rest", label: "#A8412F", dot: "#E3735C", sub: seg.beginSub, items: seg.beginItems},
+        {kicker: "How it deploys", t: "Issued from the workflow you already run", label: "#2D5A87", dot: "#5B9BEA",
+         sub: "From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.",
+         items: [
+           {t: "No new FTEs.", d: "Nothing added to anyone's day."},
+           {t: "White-label.", d: "Your brand, your voice."},
+           {t: "Live in a quarter.", d: "From kickoff to first patient."}
+         ]}
+      ],
+      email: this.state.email,
+      onHp: (e) => this.setState({hp: e.target.value}),
+      onEmail: (e) => this.setState({email: e.target.value}),
+      sheetBtn: this.state.sent ? "Downloading your info sheet \u2713" : "Send me the info sheet",
+      requestSheet: () => { if (this.humanOk(this.state.email)) { this.setState({sent: true}); const a = document.createElement("a"); a.href = "sheets/careorbit-cardiology-2-page.pdf"; a.download = "CareOrbit-Cardiology-Info-Sheet.pdf"; document.body.appendChild(a); a.click(); a.remove(); } }
+    };
+  }
+}
+</script>
+</body>
+</html>

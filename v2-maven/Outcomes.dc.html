@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(max-width:1020px){[data-hdr]{grid-template-columns:1fr!important;gap:24px!important}}
+@media(min-width:1021px){[data-hdr]>div:first-child:has(>h2){display:contents!important}[data-hdr]>div:first-child:has(>h2)>div:first-child{grid-column:1;grid-row:1;margin-bottom:12px}[data-hdr]>div:first-child:has(>h2)>h2{grid-column:1;grid-row:2;align-self:start}[data-hdr]>div:first-child:has(>h2)+*{grid-column:2;grid-row:2;align-self:start}[data-hdr]:has(>div:first-child>h2){row-gap:0!important}}
+@media(max-width:1020px){[data-grid3]{grid-template-columns:1fr!important}[data-grid2]{grid-template-columns:1fr!important}[data-split]{grid-template-columns:1fr!important;gap:32px!important}}
+@media(max-width:1100px){[data-how4]{grid-template-columns:repeat(2,minmax(0,1fr))!important}[data-how4]>div{border-top:1px solid rgba(15,29,46,.14)}}
+@media(max-width:640px){[data-how4]{grid-template-columns:1fr!important}}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4">
+<dc-import name="SiteNav" active="outcomes" hint-size="100%,120px"></dc-import>
+
+<div data-screen-label="Outcomes and ROI" style="width:100%">
+
+<div style="max-width:1220px;margin:0 auto;padding:76px 28px 56px;display:flex;flex-direction:column;gap:22px;align-items:center;text-align:center">
+  <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(36px,4.4vw,54px);line-height:1.06;letter-spacing:-0.025em;margin:0;max-width:880px;text-wrap:balance">Every orbit is designed <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">backwards</em> from a measurable outcome.</h1>
+  <p style="font-size:17.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;max-width:760px;text-wrap:pretty">The outcomes that matter most to your organization, and their financial ROI, chosen before the build starts, with trackable reporting that continuously proves both the human and financial value. This page holds all the real evidence in one place you can send to your CFO or committee.</p>
+</div>
+
+<div data-rv style="position:relative;margin:12px 0 56px">
+  <image-slot id="outcomes-how-we-work-bg" radius="0" src="images/how-we-work-bg.png" placeholder="[Placeholder: full-width care team photo]" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+  <div style="position:absolute;inset:0;background:rgba(15,29,46,.62)"></div>
+  <div style="position:relative;padding:110px 0">
+    <div style="max-width:1220px;margin:0 auto;padding:48px 28px 0">
+      <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.6vw,42px);line-height:1.05;letter-spacing:-0.02em;margin:0 0 34px;color:#FFFFFF">How we <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#F2B8C6">work</em>.</h2>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.28)">
+      <div style="max-width:1220px;margin:0 auto;padding:0 28px">
+        <div data-how4 style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr))">
+          <sc-for list="{{ how }}" as="h" hint-placeholder-count="4">
+            <div style="border-left:1px solid rgba(255,255,255,.28);padding:26px 24px 38px;display:flex;flex-direction:column;gap:12px;box-sizing:border-box">
+              <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;font-size:15px;color:#F2B8C6">{{ h.n }}</div>
+              <div style="font-family:Lato,sans-serif;font-weight:700;font-size:clamp(17px,1.6vw,20px);line-height:1.22;letter-spacing:-0.01em;color:#FFFFFF;text-wrap:balance">{{ h.t }}</div>
+              <div style="font-size:13.5px;line-height:1.6;color:#D5DEE8;flex:1;text-wrap:pretty">{{ h.d }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 56px">
+  <div data-rv style="display:flex;flex-direction:column;gap:16px;border-top:1px solid rgba(15,29,46,.14);border-bottom:1px solid rgba(15,29,46,.14);padding:22px 0">
+    <div style="display:flex;gap:34px;align-items:baseline;flex-wrap:wrap">
+      <button onClick="{{ pick0 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t0Fg }}">Outcomes<sc-if value="{{ t0On }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+      <button onClick="{{ pick1 }}" style="position:relative;font-family:Lato,sans-serif;cursor:pointer;border:none;background:none;padding:0 0 9px;font-weight:900;font-size:clamp(18px,1.9vw,22px);letter-spacing:-0.01em;line-height:1.15;transition:color .2s;color:{{ t1Fg }}">ROI<sc-if value="{{ t1On }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#E3735C"></span></sc-if></button>
+    </div>
+    <div style="font-size:15.5px;line-height:1.6;color:rgba(15,29,46,.66);max-width:660px;text-wrap:pretty">{{ tabLine }}</div>
+  </div>
+</div>
+
+<sc-if value="{{ t0On }}" hint-placeholder-val="{{ true }}">
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:44px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.5vw,40px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px">Key <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">studies</em> and deployments.</h2>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">The evidence behind the platform. Topline results are shown here, and each full write-up is available by request.</p>
+  </div>
+  <div data-grid3 style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+    <sc-for list="{{ studies }}" as="st" hint-placeholder-count="3">
+      <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s" style-hover="transform:translateY(-6px);box-shadow:0 24px 56px rgba(15,29,46,.1)">
+        <div style="height:200px"><image-slot id="{{ st.slot }}" src="{{ st.src }}" placeholder="{{ st.imgHint }}" style="width:100%;height:200px"></image-slot></div>
+        <div style="padding:26px 26px 28px;display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="width:7px;height:7px;border-radius:50%;background:{{ st.dot }};display:inline-block"></span><span style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(15,29,46,.55)">{{ st.tag }}</span></div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:20px;line-height:1.2;letter-spacing:-0.01em">{{ st.t }}</div>
+          <div style="font-size:14px;line-height:1.6;color:rgba(15,29,46,.68);flex:1">{{ st.d }}</div>
+          <a href="{{ st.href }}" style="font-size:13.5px;font-weight:600;color:#2D5A87;text-decoration:none" style-hover="color:#E3735C">{{ st.cta }} &rarr;</a>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-split data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#E3735C">Reporting, shown</div>
+      <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:33px;line-height:1.12;letter-spacing:-0.02em;margin:0;text-wrap:pretty">"Trackable" lands harder when you can <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">see</em> the tracking.</h2>
+      <p style="font-size:15.5px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;text-wrap:pretty">Every patient carries an Engagement Index: one at-a-glance score, broken into knowledge, feeling, and actions, flagging topics not yet engaged or past due. Program dashboards roll it up across every orbit, and any view exports in one click.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:26px;box-shadow:0 24px 56px rgba(15,29,46,.08);padding:26px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:12.5px;font-weight:700">Engagement Index &middot; J. Patient</div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:27px;letter-spacing:-0.02em;color:#1A6B3C">8.2</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px"><div style="font-size:12px;color:#5A7089;width:80px">Knowledge</div><div style="flex:1;height:9px;background:#FAF8F4;border-radius:5px"><div style="width:88%;height:9px;background:#2D5A87;border-radius:5px"></div></div><div style="font-size:12px;font-weight:600;color:#1E3A5F">8.8</div></div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="font-size:12px;color:#5A7089;width:80px">Feeling</div><div style="flex:1;height:9px;background:#FAF8F4;border-radius:5px"><div style="width:76%;height:9px;background:#5B9BEA;border-radius:5px"></div></div><div style="font-size:12px;font-weight:600;color:#1E3A5F">7.6</div></div>
+          <div style="display:flex;align-items:center;gap:10px"><div style="font-size:12px;color:#5A7089;width:80px">Actions</div><div style="flex:1;height:9px;background:#FAF8F4;border-radius:5px"><div style="width:81%;height:9px;background:#E3735C;border-radius:5px"></div></div><div style="font-size:12px;font-weight:600;color:#1E3A5F">8.1</div></div>
+        </div>
+        <div style="background:#FBEDE9;border-radius:12px;padding:11px 14px;font-size:12px;color:#B05A46;font-weight:500">2 topics past due: "Managing side effects", "Your 2-minute check-in"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</sc-if>
+<sc-if value="{{ t1On }}" hint-placeholder-val="{{ false }}">
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:44px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.5vw,40px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px">Targeted ROI, built on the goals that <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">matter most</em>.</h2>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">Each orbit targets the financial outcomes that matter most to your organization, chosen before the build. Here is what that looks like: the outcome, and how it was tracked and delivered.</p>
+  </div>
+  <div data-grid2 style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+    <sc-for list="{{ roiExamples }}" as="e" hint-placeholder-count="4">
+      <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:28px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s" style-hover="transform:translateY(-6px);box-shadow:0 24px 56px rgba(15,29,46,.1)">
+        <div style="height:210px"><image-slot id="{{ e.slot }}" src="{{ e.src }}" placeholder="{{ e.imgHint }}" style="width:100%;height:210px"></image-slot></div>
+        <div style="padding:28px 28px 30px;display:flex;flex-direction:column;gap:14px;flex:1">
+          <div style="display:flex;align-items:center;gap:8px"><span style="width:7px;height:7px;border-radius:50%;background:{{ e.dot }};display:inline-block"></span><span style="font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(15,29,46,.55)">{{ e.tag }}</span></div>
+          <div style="font-family:Lato,sans-serif;font-weight:900;font-size:22px;line-height:1.18;letter-spacing:-0.01em">{{ e.t }}</div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E3735C">The outcome</div>
+            <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.75)">{{ e.outcome }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#2D5A87">How we track and deliver</div>
+            <div style="font-size:14.5px;line-height:1.6;color:rgba(15,29,46,.75)">{{ e.tracked }}</div>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 96px">
+  <div data-hdr data-rv style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-bottom:44px">
+    <h2 style="font-family:Lato,sans-serif;font-weight:300;font-size:clamp(30px,3.5vw,40px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:520px">Where the ROI <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">shows up</em>.</h2>
+    <p style="font-size:20px;line-height:1.6;color:rgba(15,29,46,.72);margin:0;text-wrap:pretty">Three places an orbit pays for itself, whatever the service line.</p>
+  </div>
+  <div data-grid3 style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+    <sc-for list="{{ roi }}" as="r" hint-placeholder-count="3">
+      <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:30px;padding:34px 30px;display:flex;flex-direction:column;gap:12px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s" style-hover="transform:translateY(-6px);box-shadow:0 24px 56px rgba(15,29,46,.1)">
+        <div style="width:44px;height:6px;border-radius:3px;background:{{ r.accent }}"></div>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:21px;letter-spacing:-0.01em">{{ r.t }}</div>
+        <sc-for list="{{ r.points }}" as="p" hint-placeholder-count="3">
+          <div style="display:flex;gap:9px;align-items:flex-start"><div style="width:7px;height:7px;border-radius:50%;background:{{ r.accent }};margin-top:6px;flex-shrink:0"></div><div style="font-size:14px;line-height:1.55;color:rgba(15,29,46,.7)">{{ p }}</div></div>
+        </sc-for>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+</sc-if>
+
+<div style="max-width:1220px;margin:0 auto;padding:0 28px 104px">
+  <div data-rv style="background:#0F1D2E url(arc-lines.svg) center/cover no-repeat;border-radius:40px;padding:80px 64px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center">
+    <h2 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1.08;letter-spacing:-0.02em;margin:0;color:#FFFFFF;text-wrap:balance">Walk through the numbers for <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:500;letter-spacing:0;color:#F2B8C6">your</em> service line.</h2>
+    <p style="font-size:16px;line-height:1.6;color:#B9C8D8;margin:0;max-width:560px">20 minutes, your goals mapped against a proven blueprint, and the outcomes an orbit would target for you.</p>
+    <a href="BookACall.dc.html?src=outcomes" style="text-decoration:none;font-size:16px;font-weight:600;color:#0F1D2E;background:#FFFFFF;padding:17px 32px;border-radius:999px;margin-top:6px;transition:background .2s,color .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-2px)">Book a 20-minute intro call</a>
+  </div>
+</div>
+
+</div>
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { tab: 0 };
+  renderVals() {
+    const tab = this.state.tab;
+    return {
+      pick0: () => this.setState({tab: 0}),
+      pick1: () => this.setState({tab: 1}),
+      t0Fg: tab === 0 ? "#0F1D2E" : "rgba(15,29,46,.42)", t0On: tab === 0,
+      t1Fg: tab === 1 ? "#0F1D2E" : "rgba(15,29,46,.42)", t1On: tab === 1,
+      tabLine: tab === 0
+        ? "The human results: what patients understood, did, and reported, measured in controlled and real-world settings."
+        : "The financial results: the returns that matter most to your organization, which each orbit is designed backwards from, with the tracking that proves them.",
+      how: [
+        {n: "01", t: "Design backwards from the outcome",
+         d: "Before anything is built, we sit down with your team and choose the outcomes that matter most to your organization, clinical and financial, and define exactly how each will be measured.",
+         href: "Platform.dc.html", cta: "How orbits work"},
+        {n: "02", t: "Build the orbit around your care journey",
+         d: "Your material, your protocols, and your clinical voice, structured into a guided journey by our expert team rather than assembled binder by binder.",
+         href: "CapturePage.dc.html", cta: "Explore Capture"},
+        {n: "03", t: "Track engagement continuously",
+         d: "Every patient carries an Engagement Index across knowledge, feeling, and actions. Program dashboards roll it up so you see adoption, completion, and drop-off as they happen.",
+         href: "Platform.dc.html", cta: "See the reporting"},
+        {n: "04", t: "Prove the value, both kinds",
+         d: "Trackable reporting ties engagement to the outcomes chosen up front, continuously proving the human and financial value in evidence you can send to your CFO or committee.",
+         href: "BookACall.dc.html?src=outcomes-how", cta: "Walk through the numbers"}
+      ],
+      trialStats: [
+        {n: "+65%", l: "patient understanding of treatment plan and side effects"},
+        {n: "9 in 10", l: "reported improved recovery navigation"},
+        {n: "\u221253%", l: "patient calls to the office"},
+        {n: "+22%", l: "patient satisfaction"},
+        {n: "\u221241%", l: "re-admission rate"}
+      ],
+      studies: [
+        {slot: "study-oncology", src: "images/case-study-siteman.png", imgHint: "[Placeholder: Siteman care team photo]", dot: "#E3735C", tag: "Oncology \u00b7 Controlled trial",
+         t: "The Siteman controlled clinical trial",
+         d: "Hepatobiliary surgery patients on a CareOrbit journey: +65% understanding of the treatment plan, \u221253% calls to the office, \u221241% re-admissions, +22% satisfaction.",
+         href: "SitemanStudy.dc.html", cta: "Read the study results"},
+        {slot: "study-cardiac", src: "images/study-cardiac-rehab.png", imgHint: "[Placeholder: cardiac rehab photo]", dot: "#2D5A87", tag: "Cardiology \u00b7 Pilot",
+         t: "The Pritikin Cardiac Rehab pilot",
+         d: "A pilot at two leading Midwest healthcare organizations produced a 20\u201340% year-over-year increase in monthly Cardiac Rehab enrollment. Observational, and labeled as such.",
+         href: "PritikinPilot.dc.html", cta: "Read the pilot results"},
+        {slot: "study-assess", src: "images/study-va-escreening.png", imgHint: "[Placeholder: screening in clinic photo]", dot: "#4FB3BF", tag: "Assess \u00b7 Deployment",
+         t: "eScreening across the VA",
+         d: "The assessment engine behind CareOrbit Assess, deployed across VA sites with published evidence on screening completion and staff time.",
+         href: "EScreeningResults.dc.html", cta: "Read the published evidence"}
+      ],
+      roiExamples: [
+        {slot: "roi-missed-appts", src: "images/roi-missed-appts.png", imgHint: "[Placeholder: clinic schedule or front desk photo]", dot: "#E3735C", tag: "Targeted ROI \u00b7 Missed appointments",
+         t: "Missed appointments and no-shows",
+         outcome: "Prepared patients who show up: fewer no-shows, same-day cancellations, and delayed procedures, protecting OR, chair, and clinic capacity.",
+         tracked: "Orbit engagement matched against attendance in your scheduling system, reported by clinic and appointment type. Modeled against your volumes and payer mix on a call, and labeled as a model until your data replaces it."},
+        {slot: "roi-vbc", src: "images/roi-vbc.png", imgHint: "[Placeholder: quality dashboard screenshot]", dot: "#2D5A87", tag: "Targeted ROI \u00b7 Value-based care",
+         t: "Value-based care initiatives",
+         outcome: "Documented education, PROMs collected on schedule, and readmission performance quality contracts pay on. The Siteman trial measured a 41% reduction in re-admissions.",
+         tracked: "Completion and PROMs return rates tracked per patient in the Engagement Index, rolled up in program dashboards, exported for quality reporting without added FTEs."},
+        {slot: "roi-enrollment", src: "images/roi-enrollment.png", imgHint: "[Placeholder: cardiac rehab session photo]", dot: "#1A6B3C", tag: "Targeted ROI \u00b7 Program enrollment",
+         t: "Reimbursable program enrollment",
+         outcome: "More patients starting and completing reimbursable programs. The Pritikin pilot lifted Cardiac Rehab enrollment 20\u201340% year over year at two Midwest organizations.",
+         tracked: "Referral-to-start conversion and session completion tracked per program, with revenue modeled only on measured lift."},
+        {slot: "roi-staff-time", src: "images/roi-staff-time.png", imgHint: "[Placeholder: care team at station photo]", dot: "#B05A46", tag: "Targeted ROI \u00b7 Staff time",
+         t: "Care team time returned",
+         outcome: "Fewer repeat questions answered one patient at a time. The Siteman trial measured 53% fewer patient calls to the office.",
+         tracked: "Call volume and manual outreach measured before and after go-live, alongside which orbit topics patients engaged instead of calling."}
+      ],
+      roi: [
+        {t: "Throughput & preparedness", accent: "#E3735C", points: ["Fewer cancellations, delays, and no-shows", "Prepared patients protect OR, chair, and clinic capacity", "Reduced manual outreach for stretched staff"]},
+        {t: "Quality & value-based care", accent: "#2D5A87", points: ["Stronger value-based care performance", "Outcome documentation quality contracts pay on", "PROMs readiness without added FTEs"]},
+        {t: "Visibility", accent: "#1E3A5F", points: ["Adoption, completion, and drop-off, measured", "Credible ROI narratives for boards and payers", "Rising-risk patients surfaced early"]}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

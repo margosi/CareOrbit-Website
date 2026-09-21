@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900&amp;family=Source+Serif+4:ital,opsz,wght@1,8..60,500;1,8..60,600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="motion.js"></script>
+<style>
+body{margin:0;font-family:Inter,sans-serif;color:#0F1D2E;background:#FAF8F4}a{color:#2D5A87}a:hover{color:#E3735C}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+[data-rv].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){[data-rv]{transition:none;opacity:1;transform:none}}
+@media(max-width:1020px){[data-plan-grid]{grid-template-columns:1fr!important;max-width:560px;margin:0 auto}}
+</style>
+</helmet>
+<div style="font-family:Inter,sans-serif;background:#FAF8F4;min-height:100vh;display:flex;flex-direction:column">
+<dc-import name="SiteNav" active="pricing" hint-size="100%,80px"></dc-import>
+
+<div data-screen-label="Assess Pricing" style="max-width:1280px;width:100%;margin:0 auto;padding:72px 28px 110px;box-sizing:border-box;flex:1">
+  <div style="text-align:center;max-width:720px;margin:0 auto 58px;display:flex;flex-direction:column;gap:18px">
+    <div style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#B05A46">Plans &amp; Pricing &middot; Assess</div>
+    <h1 style="font-family:Lato,sans-serif;font-weight:900;font-size:clamp(38px,4.8vw,58px);line-height:1.06;letter-spacing:-0.025em;margin:0;text-wrap:pretty">Hear from patients <em style="font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;letter-spacing:0;color:#E3735C">between visits</em></h1>
+    <p style="font-size:17px;line-height:1.65;color:rgba(15,29,46,.7);margin:0;text-wrap:pretty">Assess brings patient-reported symptoms and check-ins back to your care teams. Start with one program and grow to system-wide listening.</p>
+  </div>
+
+  <div data-plan-grid style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;align-items:stretch">
+    <sc-for list="{{ plans }}" as="p" hint-placeholder-count="3">
+      <div data-rv style="background:#FFFFFF;border:1px solid rgba(15,29,46,.07);border-radius:28px;padding:34px 32px 38px;display:flex;flex-direction:column;position:relative">
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" style="margin-bottom:20px"><circle cx="22" cy="22" r="6" fill="#E3735C"></circle><circle cx="22" cy="22" r="13" fill="none" stroke="#0F1D2E" stroke-width="1.6" opacity="{{ p.ring2 }}"></circle><circle cx="22" cy="22" r="20" fill="none" stroke="#0F1D2E" stroke-width="1.6" opacity="{{ p.ring3 }}"></circle><circle cx="35" cy="22" r="3" fill="#5B9BEA" opacity="{{ p.ring2 }}"></circle><circle cx="22" cy="2.5" r="2.5" fill="#4FB3BF" opacity="{{ p.ring3 }}"></circle></svg>
+        <div style="font-family:Lato,sans-serif;font-weight:900;font-size:26px;letter-spacing:-0.01em">{{ p.name }}</div>
+        <div style="font-size:15px;color:rgba(15,29,46,.66);margin-top:6px;line-height:1.5">{{ p.tag }}</div>
+        <div style="font-size:14px;color:rgba(15,29,46,.55);margin-top:16px;line-height:1.55;min-height:66px;margin-bottom:30px">{{ p.scope }}</div>
+        <a href="{{ p.href }}" style="display:block;text-align:center;text-decoration:none;font-size:15.5px;font-weight:600;color:#FFFFFF;background:#0F1D2E;border-radius:12px;padding:16px 24px;transition:background .2s,transform .2s" style-hover="background:#E3735C;color:#FFFFFF;transform:translateY(-1px)">Get a quote</a>
+        <div style="height:1px;background:rgba(15,29,46,.08);margin:28px 0 22px"></div>
+        <sc-if value="{{ p.inherit }}" hint-placeholder-val="{{ false }}">
+          <div style="font-size:15px;font-weight:600;margin-bottom:14px">{{ p.inherit }}</div>
+        </sc-if>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="6">
+            <div style="display:flex;gap:11px;align-items:flex-start">
+              <svg width="15" height="15" viewBox="0 0 15 15" style="flex-shrink:0;margin-top:3px" aria-hidden="true"><path d="M2.5 8l3.2 3.2L12.5 4" stroke="#4FB3BF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <span style="font-size:14.5px;line-height:1.55;color:rgba(15,29,46,.82)">{{ it }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="text-align:center;font-size:14px;color:rgba(15,29,46,.55);margin-top:44px;line-height:1.6;text-wrap:pretty">Pricing is scoped to your programs, patient volume, and integration needs. Every quote conversation is a 30 minute meeting with our team, no obligation.</div>
+</div>
+
+<dc-import name="SiteFooter" hint-size="100%,560px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const q = (tier) => "BookACall.dc.html?src=quote-assess-" + tier;
+    return { plans: [
+      { name: "Single Program", tag: "One program, listening fast",
+        scope: "For one clinic or program adding scheduled patient check-ins to an existing workflow.",
+        href: q("single"), inherit: "", ring2: 0, ring3: 0,
+        items: [
+          "One assessment pathway",
+          "Scheduled symptom and progress check-ins by text and email",
+          "Standard question sets reviewed with your clinicians",
+          "Responses delivered to a shared team inbox",
+          "Onboarding and staff training",
+          "Baseline reporting snapshot",
+          "Email support"
+        ]},
+      { name: "Department", tag: "A full service line listening",
+        scope: "For a department running check-ins across multiple programs with responses routed to the right people.",
+        href: q("department"), inherit: "Everything in Single Program and:", ring2: 1, ring3: 0,
+        items: [
+          "Multiple assessment pathways across the department",
+          "Custom question sets built with your care teams",
+          "Escalation routing by role and urgency",
+          "EHR workflow integration",
+          "Trend views across patients and programs",
+          "Dedicated customer success manager",
+          "Quarterly outcomes reporting"
+        ]},
+      { name: "Full Enterprise", tag: "Every program, system-wide",
+        scope: "For health systems standardizing patient-reported data across sites and service lines.",
+        href: q("enterprise"), inherit: "Everything in Department, plus:", ring2: 1, ring3: 1,
+        items: [
+          "Unlimited assessment pathways across the system",
+          "Enterprise integration and single sign-on",
+          "System-branded patient experience",
+          "Population-level analytics and ROI reporting",
+          "Research-ready data exports",
+          "Input on the product roadmap"
+        ]}
+    ]};
+  }
+}
+</script>
+</body>
+</html>

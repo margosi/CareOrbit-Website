@@ -1,0 +1,1468 @@
+WITH COPY REVISIONS BASED ON 8.18 REVIEW
+Suggested new copy shown in RED
+CareOrbit
+Website Copy — Full Text for Review
+NOTE  How to read this document. Blue shaded italic paragraphs tagged NOTE describe where the copy appears on the site and how it is styled — they are not part of the website. Everything in plain black type is the actual copy, verbatim. ALL-CAPS coral lines are the on-page section eyebrow labels.
+NOTE  Type system. Headlines use Lato — light weight (~300) for large display headlines, heavy (900) for section heads — with occasional accent words set in Source Serif 4 italic. Body copy is Inter. Palette: navy #0F1D2E, coral #E3735C, blush pink #F2B8C6, light blues #5B9BEA / #4FB3BF, page background #FAF8F4.
+NOTE  Generated 2026-08-14. Bracketed [Placeholder: …] items are unfinished on the live site.
+Global — Navigation, Announcement Bar &amp; Footer
+NOTE  Reference section, not a page. These three elements repeat on every page. The announcement bar is pinned above the nav; the floating white pill navigation overlaps the hero and hides on scroll-down; the footer closes every page over a giant faint 'CareOrbit' watermark.
+ANNOUNCEMENT BAR (top of every page)
+Live within large, complex health systems including BJC HealthCare, Washington University, and Siteman Cancer Center. See results
+NAVIGATION (every page)
+Platform · Orbit Solutions (dropdown) · Outcomes &amp; ROI · About · Book a Call
+Orbit Solutions dropdown: Oncology · Cardiology · Orthopedics · Women's Health · Bariatrics · Behavioral Health · Medication Therapy &amp; Adherence · Community-Based Research · Surgical Support · Behavioral Safety
+FOOTER (every page)
+Total Orbit — CareOrbit is a Total Orbit company.
+4240 Duncan Ave, Suite #200
+St. Louis, MO 63110
+sales@totalorbit.com
+314-540-4827
+PLATFORM: How orbits work · Security &amp; compliance · Implementation · Blueprints &amp; customization
+ORBITS: Oncology · Cardiology · Orthopedics · Women's Health · Bariatrics · Behavioral Health · Medication Therapy &amp; Adherence · Surgical Support · Community-Based Research · Behavioral Safety
+RESOURCES: Outcomes &amp; ROI · Platform infosheet · Government (VA / DOD)
+COMPANY: About · Book a Call · Contact
+© 2026 Total Orbit. All rights reserved. · HIPAA Compliance · Privacy Policy · Terms
+Home
+NOTE  URL: Home.dc.html — site entry page and the nav logo link. Order top to bottom: announcement bar, floating pill nav, full-height hero with a 3-image background fader and a semi-transparent 'find your orbit' box, a navy grid of orbit tiles ('An orbit for every clinical journey'), a 'Trusted by' logo marquee, the 'costliest moments' card grid, the orbit explainer (phone in a dashed ring), the donut-ring outcomes stats, a case-study card, then the closing CTA.
+NOTE  Hero headline is Lato large display (light weight) with a Source Serif 4 italic accent word ('valuable asset'). The four big stats (+65%, −53%, −41%, +22%) animate as count-ups on scroll.
+Live within large, complex health systems including BJC HealthCare, Washington University, and Siteman Cancer Center  See results
+Engaged patients are your most valuable asset.
+[STRIKE:Orbits are proven to deliver against measured outcomes, with the ][STRIKE:modern ][STRIKE:experience patients][STRIKE: and][STRIKE: expect from their favorite apps,][STRIKE: built for each clinical journey and issued from your existing workflow.]
+Orbits are proven to deliver against measured outcomes with the streamlined, easy experience today’s patients expect. Orbit can be used to support any clinical journey, and can be issued from your existing workflow.
+Book a 20-minute intro call
+See how it works ↓
+An orbit for every clinical journey.
+Trusted within large, complex health systems to improve outcomes across critical care journeys
+Oncology &amp; Cancer Care
+Live at WashU / Siteman today
+−41% re-admission rate in a controlled clinical trial at Siteman Cancer Center.
+Learn more
+Orthopedics &amp; Joint Care
+Live at WashU / BJC today
+[STRIKE:Patients ready for surgery day, ][STRIKE:with ][STRIKE:OPTIONAL ][STRIKE:PROMs built in that collect themselves.]
+[RED:Patients ][RED:ready][RED: for surgery day][RED: and recovery][RED:, with][RED: ][RED:option][RED:al][RED: integrated][RED: ][RED:PROMs][RED: survey][RED:s to track their experience.]
+Learn more
+Maternity &amp; Women's Health
+First visit through menopause
+Confident, prepared patients across pregnancy and well-woman care.
+Learn more
+Behavioral Health &amp; Screening
+eScreening live today
+Measurement-based care without the administrative weight.
+Learn more
+Cardiology &amp; Cardiac Rehab
+Proven enrollment results
+[STRIKE:+20–40% year-over-year cardiac rehab enrollment from Siteman engagement work.]
+[RED:+20][RED:%][RED: to ][RED:40% cardiac rehab enrollme][RED:nt ][RED:compared][RED: year-to-year][RED:.]
+Learn more
+Bariatrics &amp; Weight Loss Surgery
+Patient acquisition built in
+More qualified candidates completing the path to surgery.
+Learn more
+Medication Therapy &amp; Adherence
+From first fill onward
+Patients who start therapy, stay on it, and know what to do when side effects hit.
+Learn more
+Surgery &amp; Procedure Support
+Live at WashU / Siteman today
+ENT Surgery and Fluoroscopy Procedure Support orbits run today: prepared patients, fewer calls.
+Learn more
+Orbits are expanding: supporting community-based research, protecting high-risk workers in the field, and unlocking new capabilities
+NEW
+Explore Community Research
+Orbits supporting community-based research: enrollment, education, assessments, and retention.
+Learn more
+NEW
+Explore Behavioral Safety
+Behavioral health and suicide-risk avoidance for high-risk industries like construction.
+Learn more
+NEW CAPABILITY
+Explore Capture
+A new way to intake, organize, and share a health system's information.
+Learn more
+Your costliest moments happen when your patients aren't with you.
+[STRIKE:Between visits, engagement falls to scattered handouts, portal messages, and manual outreach][STRIKE:. That gap has a price, and your system already pays it. And as][STRIKE: ][STRIKE:TIME WITH PATIENTS][STRIKE: ][STRIKE:visits get shorter][STRIKE: and care teams stretch thinner, the time you do have with patients and families matters more than ever.]
+[RED:Too often,][RED: patient engagement b][RED:etween visits][RED: relies on ][RED:scattered handouts, ][RED:occasional messages and time-consuming ][RED:manual outreach. That][RED: ][RED:gap ][RED:in connection ][RED:can carry a heavy price – one your system is already paying. ][RED:As][RED: ][RED:available time with each patient][RED: gets][RED: shorter][RED:, ][RED:and care teams ][RED:get ][RED:stretch][RED:ed][RED: thinner, the time you do have with ][RED:each ][RED:patient and][RED: ][RED:famil][RED:y][RED: matters more than ever.]
+01
+Missed appointments and no-shows
+Unused capacity and journeys that stall before they start.
+02
+Delayed procedures and lost capacity
+[STRIKE:Unprepared patients turn scheduled OR and chair time into rework][STRIKE: WASTED RESOURCES/LOST OPPORTUNITY/REVENUE “UNPREPARED IS EXPENSIVE FOR EVERYONE”]
+[RED:Unprepared patients ][RED:mean wasted resources, ][RED:lost opportunities and lower revenue. ]
+03
+Poor adherence, uneven outcomes
+The between-visit behaviors that decide clinical and financial results.
+04
+Rising coordination burden
+Stretched staff carrying education and outreach by hand.
+05
+Avoidable readmissions
+Recovery instructions that were never read, understood, or followed at home.
+06
+Repeat calls to the office
+The same questions answered one patient at a time, all day long.
+07
+Medication errors and gaps
+New regimens started without the guidance to take them correctly.
+08
+Patients lost to follow-up
+Journeys that quietly end between one visit and the next.
+THE ANSWER IS AN ORBIT
+A guided digital experience supporting any specific care journey.
+An orbit covers the clinical, logistical, emotional, educational, motivational, and tracking sides of a single clinical journey. Patients receive it on any device, with no downloads. All it needs is an email address. When there is less time in the room, an orbit extends your team's presence into every week between visits.
+ISSUED HOWEVER YOUR WORKFLOW WORKS
+EHR order trigger
+Provided patient list
+QR code
+Text message
+On-site registration
+Improving outcomes by
+engaging patients
+In a controlled clinical trial at Siteman Cancer Center, a CareOrbit journey measurably changed what patients understood, did, and needed.
++65%
+increase in patient understanding of treatment plan and side effects
+−53%
+fewer patient calls to the office
+−41%
+reduction in re-admission rate
++22%
+increase in patient satisfaction
+TRUSTED BY
+CASE STUDY · WASHU / SITEMAN
+A pancreatic cancer surgery orbit inside one of the nation's leading academic medical centers.
+Pancreatic Cancer Surgery Support ran at Washington University and Siteman Cancer Center in a controlled clinical trial: patients arrived prepared, care teams fielded fewer calls, and every journey was tracked end to end.
+Controlled clinical trial at Siteman Cancer Center.
+Read the case study →
+Your first orbit, live within a quarter.
+Issued from inside your existing workflow, with no new FTEs and no forced workflows: a measurable lift in the outcomes you already track.
+Book a 20-minute intro call
+Platform
+NOTE  URL: Platform.dc.html (nav: Platform). Long-form product page. Hero, then the four components as numbered blocks (01 Engage, 02 Assess, 03 Capture, 04 Data), each with a 'WHERE IT FITS' list; the 'Configured around the need' matcher; the EHR order-entry workflow mock; the five-step getting-started sequence; implementation and low-risk sections; and the Security &amp; Compliance block (deep-linked so it can be sent straight to a compliance team).
+NOTE  The large 01–04 numerals are Lato display figures; component names (ENGAGE, ASSESS…) are the caps eyebrow labels.
+[STRIKE:PLATFORM]
+[STRIKE:Patient engagement built for the moments that cost systems the most.]
+[STRIKE:SOLUTION]
+[STRIKE:One platform, four components. Engage, Assess, and Capture each stand on their own, and Data runs through all of them.][STRIKE: Together they ][STRIKE:carry a patient from diagnosis through recovery][STRIKE: and report back on every step. Provider-anchored, with the polish and ease consumers have come to expect from ][STRIKE:the apps][STRIKE: they use every day. As care teams get less time with each patient, extending their presence beyond the visit is where the impact is.]
+[RED:PLATFORM]
+[RED:A p][RED:atient engagement ][RED:solution ][RED:built for the moments that cost systems the most][RED:.]
+[RED:Body Copy ][RED:Revision Option 1: ]
+[RED:The ][RED:CareOrbit][RED: ][RED:platform][RED: provides ][RED:four valu][RED:e-driving][RED: capabilities.][RED: ][RED:Engage][RED: delivers a ][RED:tracked, ][RED:unified experience of education, motivation and support. ][RED:Assess ][RED:surfaces insights through patient-driven surveys. ][RED:Capture ][RED:aggregates and organizes ][RED:all your existing content][RED: into a best practice whole. And ][RED:Data][RED: runs ][RED:through all of them, giving you incredible flexibility and ways to drive value you do not have access to today. ][RED:And, your entire solution is specific to you][RED:, with the p][RED:olish and ease consumers have come to ][RED:demand. ][RED:As care teams get less time with each patient, extending their presence beyond the visit is where the impact is][RED:. ][RED:T][RED:he ][RED:CareOrbit][RED: platform is purpose-built to ][RED:deliver exactly that. ]
+[RED:Body Copy ][RED:Revision Option 2: ]
+[RED:One platform, four pillars. ][RED:Capture][RED: aggregates and streamlines content. ][RED:Engage][RED: delivers a single, unified experience of education, motivation, and support. ][RED:Assess ][RED:surfaces insights through patient-driven scoring. ][RED:Data][RED: connects them all. Together, they carry a patient from diagnosis through recovery][RED: -- ][RED:provider-anchored, with the polish and ease consumers expect from the apps ][RED:they use every day. As care teams get less time with each patient, extending their presence beyond the visit is where the impact is.]
+[RED:Body Copy ][RED:Option ][RED:3][RED: (tighter, leads with the "together" idea):]
+[RED:One platform, ][RED:with four capabilities ][RED:working as one. ][RED:Capture][RED: streamlines content, ][RED:Engage ][RED:delivers a unified patient experience, and ][RED:Assess ][RED:turns patient input into insight][RED: -- ][RED:all connected by ][RED:Data][RED:. Together, they carry a patient from diagnosis through recovery and report back on every step. Provider-anchored, with the polish and ease consumers ][RED:demand every day][RED:. ][RED:As care teams get less time with each patient, extending their presence beyond the visit is where the impact is."]
+Book a 20-minute intro call
+THE PLATFORM
+One unified platform, shaped to fit your need.
+Engage, Assess, and Capture share one patient record, one issuing workflow, and one dashboard, and Data measures all of it. Combine them however the need in front of you dictates.
+01
+ENGAGE
+Guided journeys for the weeks between visits.
+Care-team-approved digital journeys that carry your education, reminders, and next steps to patients and families, step by step from diagnosis through recovery, alongside the discharge folder and the follow-up call, never in place of them.
+[STRIKE:WHERE IT FITS]
+[STRIKE:A costly journey is the problem: readmissions, cancellations, no-shows, or avoidable call volume.]
+[STRIKE:Opens anywhere, no new app or login. ][STRIKE:Patients][STRIKE: ][STRIKE: ][STRIKE:open][STRIKE: their orbit from email, text, or a QR code, on any device they already own.][STRIKE: ANY DEVICE THEY OWN]
+[STRIKE:The right guidance at the right moment. Active, engaging pages sequenced to the clinical pathway, not a PDF gallery.]
+[STRIKE:The whole circle][STRIKE: around the patient. ][STRIKE:A caregiver version travels alongside the patient's][STRIKE:, white-labeled in your brand and voice.]
+[STRIKE:Your team sees who needs a nudge. Engagement is tracked at every step, so staff time goes to the patients who are drifting.]
+[RED:WHERE IT FITS]
+[RED:A costly journey is the problem: readmissions, cancellations, no-shows, or avoidable call volume.]
+[RED:O][RED:pens][RED: anywhere, ][RED:on any device][RED: with n][RED:o new downloads or complicated ][RED:onboarding. ][RED:The right guidance at the right moment][RED:,][RED: based on your existing content and expertise][RED:. Active, engaging pages ][RED:are ][RED:sequenced to the clinical pathway][RED: and overall patient experience,][RED: not a][RED: static library of PDFs and webpages. ][RED: ]
+[RED:It’s a whole circle of information, guidance and expert support that circles t][RED:he patient][RED: – always there, always relevant, always welcomed][RED:. A][RED:lso available to family caregivers][RED:. And, ][RED:white-labeled in your brand and voice][RED: – as if you built it yourself. ]
+02
+ASSESS
+[STRIKE:PROMs, ][STRIKE:eScreenings][STRIKE:, and outcomes capture. ][STRIKE:With an orbit, or entirely without one.]
+[RED:PROMs, ][RED:eScreenings][RED:, and outcome capture][RED:s – available stand-alone or integrated as part of ][RED:the orbit experience. ]
+Validated measures collected on schedule, tied to your care pathways, quality initiatives, and value-based programs. Assess is its own product: an orbit makes it richer, it never requires one.
+WHERE IT FITS
+A screening mandate, a PROMs requirement, or a billable service going undocumented.
+Screenings on their own. Run eScreening and PROMs programs with no accompanying orbit, issued the same easy ways: an order, a patient list, a QR code, or a text.
+Billing opportunities. Structured screenings can support CPT-coded services your clinicians already perform and document.
+Together when the need dictates. Place assessments inside an orbit and collection becomes part of the guidance patients are already following, with no separate ask and no chasing.
+Rising risk surfaced early. Scores return to the care-team dashboard and flag the patients who need a call before the next visit does.
+03
+[RED:NOTE: CAPTURE ][RED:SECTION ][RED:REVISIONS BELOW ARE STILL IN-PROGRESS, BRINGING IN OTHER SOURCES TO HELP CLARIFY CONTENT. CAN DISCUSS WEDNESDAY.]
+CAPTURE
+NEW
+Your content, one canonical version, everywhere.
+Most systems do not have a content problem, they have a version problem: good material scattered across drives, binders, and the EMR, with no way to know which copy is current or whether anyone used it. Capture fixes that. It runs on its own or feeds every orbit above.
+WHERE IT FITS
+Nobody can say which version of a handout, protocol, or video is the current one.
+Intake what you already own. Documents, handouts, protocols, and video, in whatever format they live in today.
+One canonical version. Structured, versioned, and updated everywhere at once when a protocol changes.
+Delivered where patients are. Orbits, QR codes, text, and email, on any device without a portal login.
+Proof of what was used. Views, completion, and engagement by audience and content item. Explore Capture →
+04
+DATA
+Measured from first click to final outcome.
+Dashboards that make engagement, adherence, and outcomes measurable and defensible, rolled up from the individual patient to the program. Data is woven into every component rather than sold on its own, and what you measure from day one is what you defend at committee.
+INCLUDED FROM DAY ONE
+[STRIKE:Data ][STRIKE:PROVIDING INSIGHTS AND OPTIMIZATION TRACKING ETC ][STRIKE:is part of every offering, not a standalone product.][STRIKE: It comes with ][STRIKE:whatever mix you choose][STRIKE: ][STRIKE:CUSTOMIZABLE REPORTING][STRIKE: ]
+[STRIKE:An Engagement Index for every patient. One at-a-glance score across knowledge, ][STRIKE:feeling][STRIKE:, and actions, flagging topics not yet engaged or past due.]
+[RED:All user actions with their orbit are tracked to help provide both insights and constant optimization ][RED:of user understanding, actions and satisfaction. Smart data sharin][RED:g,][RED: analysis ][RED:and customized reporting based on your priorities ][RED:is part of every orbit, not just as a stand-alone upgrade][RED: ]
+An Engagement Index for every patient. One at-a-glance score across knowledge, feeling, and actions, flagging topics not yet engaged to help drive additional info pushes.
+Rollups your executives can read. Care-team dashboards and program-level views, from activation through outcomes.
+Committee-ready in one click. Any dashboard view exports for your committee or quality program.
+Minimal PHI by design. First name, last name, email, phone, and diagnosis only; details in the compliance block below.
+MANY NEEDS, ONE PLATFORM
+Configured around the need in front of you.
+Every system's mix looks different. The platform flexes to the problem you are solving, and every combination compounds from there.
+01
+A journey that is costing you
+Readmissions, cancellations, no-shows, or a phone line consumed by questions your education already answers.
+Engage carries the journey. Assess folds in when you want measures collected along the way.
+02
+A screening or reporting requirement
+PROMs mandates, quality measures, or billable screenings your clinicians perform but nothing documents cleanly.
+Assess handles this on its own, no orbit required. Pair it with Engage when the journey calls for it.
+03
+Content nobody can find or trust
+Good material spread across shared drives, binders, and the EMR, with no current version and no usage signal.
+Capture organizes it once, and everything it holds is ready to feed orbits.
+04
+A committee that wants numbers
+Engagement, adherence, and outcomes you can put in front of quality, finance, or a value-based program.
+Data runs through every configuration, measuring from day one.
+THE EHR WORKFLOW
+[STRIKE:In leading EHRs like Epic, an ][STRIKE:orbit is ordered][STRIKE: the same way as bloodwork.]
+[RED:In leading EHRs like Epic, an orbit ][RED:can be ][RED:ordered ][RED:as easily as][RED: ordering b][RED:loodwork.]
+Staff place an order for an orbit like any other order. The patient receives their journey by email; the care team sees activation, engagement, and assessment results come back on their dashboard. No new system to learn, no separate login for clinicians.
+The same is true of every component: orbits, screenings, and content all issue from a provided patient list, a QR code, a text message, or on-site registration, and a flat-file integration pattern can auto-issue to pre-consented patients from any EHR.
+ORDER ENTRY
+CBC with differential — Lab
+Basic metabolic panel — Lab
+CareOrbit: ENT Surgery Support — Education ✓
+Order signed. Orbit issued to patient's email.
+SEEING IS BELIEVING
+[STRIKE:Built on the content you already ][STRIKE:own.]
+[RED:Built ][RED:based ][RED:on the content ][RED:and guidance ][RED:you already ][RED:use, including ][RED:valuable ][RED:care team][RED: ][RED:explanations and instructions][RED: ][RED:now only ][RED:available ][RED:to patient][RED:s][RED: taking their own notes. ]
+Every orbit, screening, and content library is white-labeled in your brand and voice, built on your material and your care standards. You share what you have; we assemble; you review and launch. Most of the work is assembly, not creation.
+How Capture organizes it →
+[STRIKE:GETTING STARTED]
+[STRIKE:Your first orbit, in five steps.]
+[STRIKE:Within a quarter. No new FTEs. Every launch starts ][STRIKE:from][STRIKE: a proven blueprint and tailors at the level you choose: Low, Medium, or Full customization.]
+[RED:GETTING STARTED]
+[RED:Your first orbit, ][RED:built ][RED:turn-key][RED: ][RED:from a proven blueprint ][RED:with simple][RED:, non-disruptive][RED: steps ]
+[RED:Live orbit ][RED:available][RED: to patients within one quarter. ][RED:No ][RED:staff ][RED:FTE][RED: requirements][RED:. ][RED:Available at a variety of pricing ][RED:tiers][RED: reflecting low, medium or full customization][RED:. ]
+01
+Map your goals
+Your improvement goals, mapped onto a proven blueprint.
+02
+Choose your level
+Low, Medium, or Full customization: your call.
+03
+We ingest your resources
+The content and brand assets you already have.
+04
+Enhance where needed
+We fill the gaps; most of the work is assembly, not creation.
+05
+Launch and track
+Live to patients, measured from day one.
+AFTER YOU SAY YES
+Implementation, handled.
+Kickoff with the Launch Book. A walkthrough with the care team and everyone who will use the orbit.
+An assigned Customer Success Manager. Training and ongoing follow-up for each care team.
+100% remote delivery available. No on-site requirement for customers outside St. Louis.
+Low risk, by design.
+You are already listing the issues you would have to navigate to say yes. Here is where each one lands.
+Limited risk
+No lock-in, no disruptions to your offices. A simple proposal you can say yes or no to; start with one component, one outcome.
+Light lift for your staff
+No new FTEs. You share the content and brand assets you already have; we assemble; you review and launch.
+Secure from the start
+HIPAA-compliant, BAA-ready, minimal PHI, hosted on AWS. Full details in the compliance block below.
+Built to match your system
+White-labeled in your brand and voice, built on your ROI goals and care standards. Works with your EHR and whichever issuing method fits your workflow.
+SECURITY &amp; COMPLIANCE
+Ready for your compliance team.
+Send this section straight to the people who will review it: this page anchors here.
+HIPAA-compliant
+Compliant infrastructure and processes end to end.
+BAA-ready
+Business Associate Agreements in place, including with AWS.
+Hosted on AWS
+HIPAA-compliant AWS hosting.
+Minimal PHI
+First name, last name, email, phone, and diagnosis only.
+Never leaves CareOrbit
+PHI is never transmitted outside the platform.
+Deleted on request
+Retained only as long as you ask; removed on formal request.
+Bring it to your committee with confidence.
+20 minutes: we map your improvement goals against a proven blueprint and show you exactly which component, or combination, would target them.
+Book a 20-minute intro call
+[RED:SAME NOTE AS EARLIER: ][RED:CAPTURE ][RED:REVISIONS STILL IN PROGRESS PULLING FROM ADDITIONAL CONTENT]
+Capture (new capability)
+NOTE  URL: Capture.dc.html — target of the 'Explore Capture' links from Home and from the Platform Capture block. Standalone explainer for the Capture capability.
+NEW CAPABILITY
+CareOrbit Capture.
+Your information, everywhere it needs to be.
+Health systems already own an enormous amount of good material: handouts, protocols, videos, discharge instructions, program overviews. Most of it is trapped in binders, shared drives, and one person's inbox. Capture intakes what you already have, organizes it, and distributes it digitally to patients, providers, and care teams.
+Book a 20-minute intro call
+See how Capture works
+The content problem nobody owns.
+Every service line writes its own material. None of it is versioned, findable, or reachable by the patient who needs it at 9pm on a Sunday.
+01 Trapped in formats — PDFs, print binders, slide decks, and video files nobody can reach from a phone.
+02 No single source of truth — Three versions of the same instruction sheet, each slightly different.
+03 Undeliverable at the moment of need — Good material that never reaches the patient after they leave the building.
+04 Invisible usage — No way to know what was opened, understood, or ignored.
+HOW CAPTURE WORKS — Intake. Organize. Distribute. Measure.
+01 Intake — We take in what you already have: documents, handouts, protocols, video, and program material, in whatever format it lives in today.
+02 Organize — Content is structured, versioned, and tagged so the right material is tied to the right journey, service line, and moment.
+03 Distribute — Delivered digitally across the channels people already use: orbits, QR codes, text, and email, on any device.
+04 Measure — Views, completion, and engagement reported back by audience and content item, so you can retire what is not working.
+Better information. Better care. Better outcomes.
+Capture can stand on its own as a content and distribution layer, or feed every orbit you run so patients receive your material rather than whatever a search engine hands them.
+Your material, your brand, your clinical voice, instead of an internet search.
+One canonical version, updated once and reflected everywhere it is used.
+Reachable on any device without a portal login.
+Reduces the repeat questions care teams answer one patient at a time.
+Usable on its own or as the content layer inside every CareOrbit journey.
+Show us one binder. We will show you what Capture does with it.
+Twenty minutes, no demo script.
+Book a 20-minute intro call
+Oncology &amp; Cancer Care
+NOTE  URL: Oncology.dc.html (Orbit Solutions dropdown). The live / flagship orbit and the reference build for the standard orbit-page template.
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+ONCOLOGY
+Fewer readmissions, well-prepared patients, and a quieter phone line
+Results proven against usual care in a controlled surgical oncology trial. Every orbit starts from the numbers your service line already reports, readmissions, call volume, preparedness, and is built to move them.
+Book a 20-minute intro call
+Get the Oncology info sheet
+A trusted digital guide your patients keep, from diagnosis through survivorship.
+Your protocol in your team's own words, delivered when each instruction actually matters. Alongside the binder at chemo teaching and the navigator's calls, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients and families informed, reassured, and on track between visits.
+Built to your regimens and disease sites before launch. Nothing added to your team's day.
+One orbit, issued once, working for three audiences at the same time.
+FOR THE PATIENT AND FAMILY — They know what to do
+A clear understanding of the diagnosis, the regimen, and who is caring for them
+Treatment prep, side effect management, and what to expect at each cycle, on the day it applies
+Which symptoms mean call us, and which mean go to the ED
+The same guide works for the family member managing the recovery at home
+FOR YOUR TEAM — Nothing added to the day
+Ordered from the workflow you already run, no new FTEs
+Fewer calls asking what chemo teaching already covered
+Your protocols and your brand, not a generic cancer app
+We build and maintain the content, including regimen updates
+FOR THE PROGRAM — You can finally see it
+Who opened their orbit and who never did, by patient
+Patients not engaging with their care material flagged, before it becomes a poor outcome
+Engagement and completion by disease site and by clinic
+Optional: validated measures and PROMs scored automatically
+HOW TO BEGIN — Start with one, add the rest
+Most cancer centers start with their highest-volume regimen or surgical pathway.
+[RED:Select your ideal initial journey. For example, your ][RED:highest-volume regimen or surgical pathway.]
+Treatment support. Chemotherapy, immunotherapy, and radiation, by regimen.
+Surgical support. Cancer operations, from prep through discharge and recovery.
+Survivorship. Long-term follow-up, late effects, and surveillance schedules.
+Screening and outreach. Risk, screening, and referral before someone is a patient.
+[STRIKE:SINGLE ORBIT, MULTIPLE VERSIONS —][STRIKE: One orbit that changes as the patient moves]
+[STRIKE:The same orbit advances through three versions on its own, with no new app or login.]
+[STRIKE:01 Acquisition — BEFORE THEY ARE A PATIENT]
+[STRIKE:Screening and referral outreach that helps people choose your center, plus what ][STRIKE:a finding][STRIKE: means and how to get seen.]
+[STRIKE:02 Treatment support — DIAGNOSIS THROUGH ACTIVE TREATMENT]
+[STRIKE:The regimen ][STRIKE:explained,][STRIKE: prep and clearance, side effect management, and day-of instructions, cycle by cycle.]
+[STRIKE:03 Survivorship with PROMs — AFTER TREATMENT ENDS]
+[STRIKE:Late effects, surveillance schedules, and validated measures collected on schedule and returned to the team.]
+[RED:A PATIENT’S ORBIT CAN ][RED:EVOLVE][RED: AS THEIR JOURNEY NEEDS CHANGE. One orbit can support a patient’s ][RED:full j][RED:ourney,][RED: automatically modifying itself to match a patient’s progress][RED: with no new downloads or added requirements.]
+[RED:T][RED:he same orbit advances through three versions on its own, with no new app or login.]
+[RED:01 ][RED:Early Journey][RED: — ][RED:MOTIVATION, UNDERSTANDING, PREPARATION]
+[RED:Focusing on those vital early learnings ][RED:that help a patient and their family navigate their fears, confusions and overwhelm of a cancer diagnosis][RED: and initial planning][RED:.]
+[RED:02 Treatment support — ][RED:FROM PROCEDURE T][RED:HROUGH ACTIVE TREATMENT]
+[RED:The regimen ][RED:explained,][RED: prep and clearance, side effect management, and day-of instructions, cycle by cycle.]
+[RED:03 Survivorship with PROMs — ][RED:LONGER-TERM RECOVERY AND SURVIVORSHIP]
+[RED:Late effects, surveillance schedules, and validated measures collected on schedule and returned to the team.]
+HOW IT DEPLOYS — Issued from the workflow you already run
+From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.
+[STRIKE:No new FTEs. Nothing added to anyone's day.]
+[STRIKE:White-label][STRIKE:. Your brand, your voice.]
+[STRIKE:Live in a quarter. From kickoff to first patient.]
+THE UNDERSTANDING GAP — The key moments in between their visits.
+A cancer journey runs for years across surgery, infusion, radiation, and surveillance. Those appointments carry the clinical decisions. Almost everything that determines whether the treatment works plays out in between, at home, where the service line currently has almost no presence. That is the understanding gap, and the figures below are what it costs.
+[STRIKE:WHAT ][STRIKE:THE GAP][STRIKE: COSTS]
+[STRIKE:None of this is decided in the infusion suite. Each one turns on whether a patient understood the regimen, recognized a side effect early, or had the family member with them who manages the medications.]
+[STRIKE:Years — LENGTH OF THE JOURNEY — Diagnosis through treatment, recovery, and surveillance.]
+[STRIKE:3+ — ][STRIKE:MODALITIES TO COORDINATE][STRIKE: — Surgery, infusion, and radiation, each with its own instructions and its own side effects.]
+[STRIKE:20 min — TO EXPLAIN ALL OF IT — The instructions are handed over in a single visit, on the day a patient is least able to take them in.]
+[STRIKE:Weeks — BETWEEN APPOINTMENTS — Doses, side effects, and warning signs all arrive at home, where the service line has almost no presence.]
+MEASURABLE ROI — How an orbit provides value.
+[STRIKE:Every orbit is ][STRIKE:built against at least one named outcome][STRIKE: and the revenue it protects or the cost it removes, agreed before the ][STRIKE:build][STRIKE: starts.]
+[RED:Every orbit is built ][RED:based on your ][RED:target ][RED:clinical and financial outcomes][RED: including revenue to protect][RED:, ][RED:costs to lower][RED:, opportunities to expand and staff resources to][RED: support.]
+01 Fewer 30-day readmissions — The costliest between-visit failure in a surgical oncology program, and the one the trial reduced by 41%.
+02 Fewer avoidable ED visits — A managed side effect at home instead of an unplanned presentation on a weekend.
+03 Fewer inbound calls per episode — Nursing and navigator time is the scarcest resource in the service line. The trial returned 53% of it.
+04 Protected treatment throughput — An unprepared patient delays a surgical slot, an infusion chair, or a linac hour that cannot be recovered.
+05 Higher oral therapy adherence — Expensive regimens only work when they are taken correctly, and nobody sees the bottle between visits.
+06 PROMs collected on schedule — Required for accreditation, quality programs, and value-based contracts, and usually chased by hand.
+07 Clinical trial awareness and enrollment — Patients cannot consider a study they were never told about in language they understood.
+08 Retention through survivorship — Surveillance kept on schedule, and the relationship that drives the next referral.
+[STRIKE:ORBITS IN THIS SOLUTION — ][STRIKE:The oncology orbit library.]
+[STRIKE:Twenty main orbits in the department support bundle, each offered in patient and family versions. Any procedure version can be sub-versioned for the nuances of a specific technique.]
+[RED:ORBITS SOLUTION][RED:S ]
+[RED:Support your oncology ][RED:service line with an Oncology Department Bundle which gives you up to 20 main orbit][RED: versions][RED: ][RED:for patients][RED: ][RED:and families and ][RED:supporting][RED: the specifics of procedures like:]
+01 Colectomy — Bowel
+02 Craniotomy — Brain
+03 Gastrectomy — Stomach
+04 Mastectomy — Breast
+05 Esophagectomy — Esophageal
+06 Pancreaticoduodenectomy (Whipple) — Pancreatic, the controlled-trial pathway
+07 Cystectomy — Bladder
+08 Hepatectomy — Liver
+09 Hysterectomy — Cervical, ovarian, uterine
+10 Laryngectomy — Laryngeal / voice box
+11 Lobectomy — Lung
+12 Nephrectomy — Kidney
+13 Orchidectomy — Testicular
+14 Pneumonectomy — Lung
+15 Prostatectomy — Prostate
+16 Thyroidectomy — Thyroid
+17 Vulvectomy — Vulvar
+18 Chemotherapy / medical oncology — Versions: full orbit + add-on module
+19 Radiation therapy — Versions: full orbit + add-on module
+20 Survivorship — Procedure orbits evolve here once the timeline ends
+Orbit choices are made on procedure scope, revenue value, and how much understanding an orbit can add; some journeys are too short or too simple to benefit. Orbits not shown as versioned can still be versioned to department preference, which varies by system.
+CLINICAL EVIDENCE — The study behind the numbers.
+Oncology is where the platform was tested first, in a controlled trial rather than a pilot. Read the work yourself.
+CONTROLLED CLINICAL TRIAL — Siteman Cancer Center, Washington University School of Medicine
+Pancreatic Cancer Surgery Support
+A controlled clinical trial in hepatobiliary surgical oncology comparing an orbit against usual care. Patients arrived better prepared, called less, and were readmitted less often. Every figure on this page comes from it.
+[STRIKE:Request a copy of the study]
+[RED:Request more information on this controlled trial.]
+−41% readmissions
+−53% calls to the office
++65% understanding of plan and side effects
++22% patient satisfaction
+VOICES FROM THE PATHWAY — What it sounds like when care is guided
+Clinicians using orbits with their own patients, in live oncology deployments.
+"Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!" — CHIEF OF SECTION, SURGICAL ONCOLOGY
+"It's seen as incredibly easy to understand and use. They (patients and families) just run with it." — NURSE NAVIGATOR, SITEMAN CANCER CENTER SURGICAL DEPARTMENT
+VIEW SOURCES — 3 references
+20 minutes. Your oncology pain points, our platform.
+No demo script, no obligation. We get introduced, hear which oncology moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the Oncology info sheet by email.
+Send me the info sheet
+Cardiology &amp; Cardiac Rehab
+NOTE  URL: Cardiology.dc.html. Standard orbit page. A 4-way scope toggle sits under the hero (All of cardiology / Heart failure / Procedures / Rehab). Evidence is the Pritikin pilot, gated behind a request form and labelled a pilot, not a controlled trial.
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+CARDIOLOGY ORBIT SOLUTIONS
+Your plan of care in the patient's hands, every day between visits
+Guided digital support tailored to each condition, procedure, and protocol, carried from diagnosis through rehab and lifelong management. Engagement is tracked at every step, so patients understand how and why to stay on track and your team knows who needs a nudge.
+Book a 20-minute intro call
+Get the Cardiology info sheet
+All of cardiology / Heart failure &amp; chronic care / Procedures &amp; surgery / Rehab &amp; prevention
+The whole service line, from prevention and rehab through the cath lab, the operating room, and lifelong management.
+A trusted digital guide your patients keep, from decision through recovery.
+Your instructions and your best guidance, delivered when each one actually matters. Alongside the folder at discharge and the follow-up call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients informed, reassured, and on track between visits.
+Built to your protocols before launch. Nothing added to your team's day.
+One orbit, issued once, working for three audiences at the same time.
+FOR THE PATIENT — They know what to do
+A clear understanding of their diagnosis, procedure, and who will be caring for them
+Your prep, clearance, and day-of instructions, on the day they apply
+Which symptoms mean call us, and which mean go to the ED
+The same guide works for whoever drives them home
+FOR YOUR TEAM — Nothing added to the day
+Ordered from the workflow you already run, no new FTEs
+Fewer calls asking what the discharge sheet already said
+Your brand and your protocols, not a generic app
+We build and maintain the content, including updates
+FOR THE PROGRAM — You can finally see it
+Who opened their orbit and who never did, by patient
+Symptom check-ins routed back before the next visit
+Engagement and completion by cohort and by site
+Optional: validated measures scored automatically
+HOW TO BEGIN — Start with one, add the rest
+Most cardiology programs start with procedure support or rehab. All four run as one guide the patient keeps.
+Procedure support. Bypass, valve, ablation, device implant, cath lab.
+Cardiac rehab. Getting referred patients to start, and to keep coming.
+Heart failure. Daily weights, fluid and sodium limits, titration.
+Prevention and risk. Screening and referral before they are a patient.
+HOW IT DEPLOYS — Issued from the workflow you already run
+From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.
+No new FTEs. Nothing added to anyone's day.
+White-label. Your brand, your voice.
+Live in a quarter. From kickoff to first patient.
+THE UNDERSTANDING GAP — A lifetime condition, managed in twenty minutes a month.
+Coronary disease, heart failure, and hypertension are managed for life, but your contact is a handful of appointments a year. Medications, weights, sodium, activity, and every warning sign are handled at home, by a patient working from memory. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.
+WHAT THE GAP COSTS
+None of these are decided in your clinic. Each one turns on whether a patient understood the plan, kept taking the medication, recognized a warning sign, or showed up for rehab, in the weeks when no one was there to tell them.
+Up to 3% — MEDICARE INPATIENT PAYMENT AT RISK — The HRRP reduction hospitals face for excess readmissions, including heart failure, acute MI, and CABG. (CMS)
+1 in 5 — READMITTED WITHIN 30 DAYS — National 30-day readmission after a heart failure hospitalization is commonly reported near 20 to 23%. (Published national analyses)
+About half — STOP TAKING THEIR CARDIAC MEDICATIONS — Discontinuation and poor adherence to chronic cardiovascular therapy is widely reported near 50% within the first year. (Published adherence literature)
+About 1 in 4 — ELIGIBLE PATIENTS WHO START REHAB — Cardiac rehab is one of the best-evidenced interventions in cardiology. Most eligible patients never begin it. (Published Medicare analyses)
+Industry rates from CMS, CDC, and published analyses, not CareOrbit outcomes. Rates vary substantially by program and payer mix; bring your own figures and we will work from those.
+MEASURABLE ROI — How an orbit provides value.
+Every orbit is built against at least one named outcome and the revenue it protects or the cost it removes, agreed before the build starts.
+TARGETED OUTCOMES — What an orbit is built and tracked against from the first patient forward.
+01 Fewer 30-day readmissions — The costliest between-visit failure in cardiology, and the one CMS penalizes directly.
+02 Higher cardiac rehab enrollment — A referral that never becomes an enrollment is billed to nobody and helps no one.
+03 Higher rehab completion — Completion is where the mortality benefit lives, and where most programs leak patients.
+04 Better medication adherence — Cardiac regimens only work when they are taken, and nobody sees the bottle between visits.
+05 Fewer avoidable ED visits — A managed symptom at home instead of an unplanned presentation on a weekend.
+06 Fewer inbound calls per episode — Every repeat call is nursing time spent re-explaining what was already covered.
+07 Earlier symptom recognition — A patient who calls about three pounds of weight gain costs a phone call, not an admission.
+08 A visible program differentiator — A branded cardiac experience is something few competing programs can show a referring physician.
+ORBITS IN THIS SOLUTION — The cardiology orbit library.
+Nine procedure and condition orbits plus a template for the rest. Procedure orbits lead; cardiac rehab and heart health run alongside them.
+01 Heart Health — Versions: general patient + at-risk + senior + community. Procedure orbits evolve here.
+02 Cardiac rehabilitation — Versions: newly prescribed + full journey
+03 Coronary artery bypass surgery — Versions: general + off-pump / OPCAB
+04 Heart valve repair or replacement
+05 Aneurysm repair
+06 Coronary angioplasty and stenting
+07 Implantable pacemaker
+08 Heart transplant
+09 Minimally invasive heart surgery
+10 Procedure template — TMR, VAD, arrhythmia surgery, ICD, ventricular remodeling, Cox maze, ablation
+Orbit choices are made on procedure scope, revenue value, and how much understanding an orbit can add; some journeys are too short or too simple to benefit. Orbits not shown as versioned can still be versioned to department preference, which varies by system.
+CLINICAL EVIDENCE — The pilot behind the numbers.
+Cardiology evidence comes from a pilot with results, not a controlled trial. The platform's controlled trial was run in oncology.
+PILOT WITH RESULTS — Pritikin Intensive Cardiac Rehabilitation
+Patients who opened their orbit started rehab at more than twice the rate
+Over nine months at a leading Midwest health system, 187 patients referred to Pritikin ICR were invited to a cardiac rehab orbit. Of the patients who activated theirs, 52% went on to start the program; of those who never activated, 24% did. An observational pilot, not a randomized trial, since patients chose whether to activate.
+Request a copy of the pilot summary
+52% of patients who activated their orbit started ICR
+24% of patients who never activated started ICR
+187 patients invited to an orbit over nine months
+2,704 ICR sessions completed across both cohorts
+VOICES FROM THE PATHWAY — What it sounds like when recovery is guided
+From live oncology deployments. Cardiology orbits are built on the same platform.
+"Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!" — CHIEF OF SECTION, SURGICAL ONCOLOGY
+"It's seen as incredibly easy to understand and use. They (patients and families) just run with it." — NURSE NAVIGATOR, SITEMAN CANCER CENTER SURGICAL DEPARTMENT
+20 minutes. Your cardiology pain points, our platform.
+No demo script, no obligation. We get introduced, hear which cardiology moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the Cardiology info sheet by email.
+Send me the info sheet
+Orthopedics &amp; Joint Care
+NOTE  URL: Orthopedics.dc.html. Standard orbit page. Evidence is the oncology trial shown as a modeled transfer. Leans on PROMs that 'collect themselves.'
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+ORTHOPEDIC ORBIT SOLUTIONS
+Your best guidance and motivation in the patient's hands, every day between visits
+Guided digital support tailored to each procedure and each surgeon's protocol, carried through prehab, surgery, and the full recovery window, so every patient arrives ready and recovers as expected.
+Book a 20-minute intro call
+Get the Orthopedics info sheet
+All of orthopedics / Joint replacement / Sports medicine &amp; arthroscopy / Spine
+The whole practice, from the first consult through return to activity, across joints, sports, and spine.
+A trusted digital guide your patients keep, from consult through full recovery, with PROMs that collect themselves.
+Your protocol in your surgeons' own words, delivered when each instruction actually matters. Alongside the handout at discharge and the therapy referral, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients prepared, motivated, and doing the exercises between visits.
+Built to each surgeon's protocol before launch. Nothing added to your team's day.
+One orbit, issued once, working for three audiences at the same time.
+FOR THE PATIENT — They know what to do
+A clear understanding of their procedure, their surgeon, and what recovery will ask of them
+Prehab, clearance, and day-of instructions, on the day they apply
+Their home exercise program week by week, with reminders that keep it going
+Which symptoms mean call us, and which mean go to the ED
+FOR YOUR TEAM — Nothing added to the day
+Ordered from the workflow you already run, no new FTEs
+Fewer calls asking what the discharge sheet already said
+Each surgeon's protocol, not a generic recovery app
+We build and maintain the content, including protocol updates
+FOR THE PRACTICE — You can finally see it
+Who opened their orbit and who never did, by patient
+Adherence and symptom check-ins routed back before the next visit
+PROM completion by procedure, surgeon, and site
+Optional: validated measures scored automatically
+HOW TO BEGIN — Start with one, add the rest
+Most practices start with their highest-volume procedure. All four run as one guide the patient keeps.
+Procedure support. Joint replacement, ACL, rotator cuff, spine, arthroscopy.
+Therapy adherence. The home program, week by week, with PROMs on schedule.
+Nonoperative care. Injections and conservative management before surgery is on the table.
+Activity and outreach. Seminars, screenings, and sports or senior activity plans.
+SINGLE ORBIT, MULTIPLE VERSIONS — One orbit that changes as the patient moves
+The same orbit advances through three versions on its own, with no new app or login for the patient.
+01 Acquisition — BEFORE THEY ARE A PATIENT
+Seminar, screening, and referral outreach that helps people choose your practice, plus what is causing the pain and when a procedure is warranted.
+02 Procedure support — CONSULT THROUGH PROCEDURE WEEK
+Prehab, clearance, logistics, and day-of instructions, delivered week by week instead of handed over in a packet.
+03 Recovery with PROMs — HOME THROUGH RETURN TO ACTIVITY
+Weight-bearing, bracing, pain step-down, the home program, and validated measures collected on schedule.
+HOW IT DEPLOYS — Issued from the workflow you already run
+From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.
+No new FTEs. Nothing added to anyone's day.
+White-label. Your brand, your voice.
+Live in a quarter. From kickoff to first patient.
+THE UNDERSTANDING GAP — Four visits inside a 120-day journey.
+Those four visits carry the clinical decisions. Everything else, the exercises, the brace, the pain plan, and every judgment about what is normal, is handled at home by a patient working from memory. That is the understanding gap, and the figures below are what it costs. As visit time shrinks, extending your team's presence into those weeks matters more, not less.
+WHAT THE GAP COSTS
+None of these days are billable, and none of them are staffed. A cancelled case, an unfinished home program, a brace worn wrong, or a call that becomes an ED visit all happen here, in the stretch between appointments.
+4 — VISITS WITH YOU — One initial consult, then two or three follow-ups.
+120 days — LENGTH OF THE EPISODE — From the first consult through return to activity.
+2 weeks — BETWEEN EACH VISIT — Long enough for instructions to fade and a program to quietly stop.
+116 — DAYS ON THEIR OWN — Where the exercises, the brace, and every recovery decision actually happen.
+MEASURABLE ROI — How an orbit provides value.
+Every orbit is built against at least one named outcome and the revenue it protects or the cost it removes, agreed before the build starts.
+01 Fewer cancellations and delays — A cancelled case is operating room time you cannot get back. Prepared patients keep the schedule intact.
+02 Higher therapy protocol adherence — Adherence is what separates a good surgical result from a good functional one.
+03 Fewer avoidable readmissions and ED visits — The most expensive way to answer a question a patient could have had answered at home.
+04 Fewer inbound calls per episode — Every repeat call is staff time spent re-explaining what was already covered.
+05 Higher PROM completion rates — Bundled and value-based programs pay on documented outcomes. Missing scores are unbilled work.
+06 Correct equipment use at home — Brace and weight-bearing errors cause the revisions and delays that erase an episode's margin.
+07 Stronger referral and review volume — A guided recovery is the cheapest patient acquisition a practice has.
+08 A visible practice differentiator — A branded recovery experience is something few competitors in the market can show.
+ORBITS IN THIS SOLUTION — The orthopedic orbit library.
+Eighteen procedure orbits covering the cases most practices run, plus injection, sports, and activity orbits, outreach versions, and a template for everything else. You choose which ones to launch first.
+01 ACL reconstruction
+02 Hip replacement
+03 Knee replacement
+04 Shoulder replacement
+05 Joint replacement
+06 Arthroscopy
+07 Knee arthroscopy
+08 Hip arthroscopy
+09 Spinal surgery
+10 Spinal fusion
+11 Rotator cuff repair
+12 Shoulder surgery
+13 Foot and ankle surgery
+14 Carpal tunnel surgery
+15 Hand surgery
+16 Osteotomy
+17 Arthroplasty
+18 Joint fusion
+19 Injections — 12+ varieties; one orbit or individualized
+20 Sports / performance plan — Versions: individual + team. Patient and outreach.
+21 Healthy Activity — Versions: general + senior. Patient and outreach.
+22 Procedure template — Trigger finger release, debridement, fracture repair, internal fixation, soft tissue repair
+Orbit choices are made on procedure scope, revenue value, and how much understanding an orbit can add; some journeys are too short or too simple to benefit. Orbits not shown as versioned can still be versioned to department preference, which varies by system.
+CLINICAL EVIDENCE — The trial behind the platform.
+The platform's controlled trial was run in surgical oncology, not orthopedics. We show it as measured and let you judge the transfer.
+CONTROLLED CLINICAL TRIAL — Siteman Cancer Center, Washington University School of Medicine
+Patients arrived better prepared, called less, and came back less
+A controlled trial in hepatobiliary surgical oncology compared an orbit against usual care across the same surgical pathway an orthopedic episode follows: preparation, discharge instructions, home recovery, and the calls in between. The mechanism is comprehension, not oncology. Applying these percentages to an orthopedic population is a modeled transfer, not a measured orthopedic result.
+Request a copy of the study
++65% better understanding of the plan and side effects
+−53% fewer calls to the office
+−41% fewer readmissions
++22% higher patient satisfaction
+VOICES FROM THE PATHWAY — What it sounds like when recovery is guided
+From live oncology deployments. Orthopedic orbits are built on the same platform.
+"Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!" — CHIEF OF SECTION, SURGICAL ONCOLOGY
+"It's seen as incredibly easy to understand and use. They (patients and families) just run with it." — NURSE NAVIGATOR, SITEMAN CANCER CENTER SURGICAL DEPARTMENT
+20 minutes. Your numbers, our platform.
+No demo script, no obligation. Bring your cancellation rate, your PROMs completion rate, and a sense of your post-op call volume. We will show you where an orbit would move each one, and you decide whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the Orthopedics info sheet by email.
+Send me the info sheet
+Women's Health
+NOTE  URL: WomensHealth.dc.html. Standard orbit page, the longest of the set: it adds a practice / group (MSO) economics section and a 'By the numbers' block of published national adherence figures (all sourced, none of them CareOrbit results).
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+WOMEN'S HEALTH
+Confident, prepared patients at every stage of her care
+Women's health is a relationship measured in decades, and almost all of it happens between visits: well-woman care, the operative journeys, pregnancy, and the long midlife stretch. A women's health orbit is designed backwards from preparedness, attendance, and the documentation that protects your practice.
+Book a 20-minute intro call
+Get the Women's Health info sheet
+All of women's health / Maternity &amp; fertility / Gynecology &amp; surgery / Menopause &amp; midlife
+The full practice bundle, from the first well-woman visit through menopause and everything a practice runs in between.
+A trusted digital guide your patients keep, from the first visit through menopause and beyond.
+Your protocol in your clinicians' own words, delivered when each instruction actually matters. Alongside the visit summary and the on-call line, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients informed, reassured, and on track between appointments.
+Built to your practice's protocols before launch. Nothing added to your team's day.
+One orbit, issued once, working for three audiences at the same time.
+FOR THE PATIENT — She knows what to do
+A clear understanding of her diagnosis or stage, the plan, and who is caring for her
+Visit prep, results guidance, and what to expect next, on the day it applies
+Which symptoms mean call us, and which mean go to labor and delivery or the ED
+The same guide works for a partner or support person
+FOR YOUR TEAM — Nothing added to the day
+Ordered from the workflow you already run, no new FTEs
+Fewer calls asking what the visit summary already said
+Your protocols and your brand, not a generic women's health app
+We build and maintain the content, including protocol updates
+FOR THE PRACTICE — You can finally see it
+Who opened their orbit and who never did, by patient
+Symptom and screening responses routed back before the next visit
+Engagement and completion by service and by site
+Optional: validated measures, including postpartum depression screening, scored automatically
+HOW TO BEGIN — Start with one, add the rest
+Most practices start with their highest-volume journey and add the rest.
+Well woman care. The default orbit a patient keeps between annual visits.
+Maternity and fertility. Pregnancy week by week, delivery prep, and the fourth trimester.
+Procedure support. Hysterectomy, myomectomy, and the operative long tail on one template.
+Menopause and midlife. Symptoms, therapy options, and long-term risk, explained plainly.
+SINGLE ORBIT, MULTIPLE VERSIONS — One orbit that changes as the patient moves
+The same orbit advances through three versions on its own, with no new app or login.
+01 Acquisition — BEFORE THEY ARE A PATIENT
+Screening and referral outreach that helps women choose your practice, plus what symptoms mean and when to be seen.
+02 Active care — THROUGH THE PATHWAY
+Preparation, clearance, logistics, and stage-by-stage guidance in your clinicians' words.
+03 Follow-up and ongoing care with PROMs — AFTER THE EPISODE
+Recovery and maintenance guidance, plus validated measures collected on schedule.
+HOW IT DEPLOYS — Issued from the workflow you already run
+From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.
+No new FTEs. Nothing added to anyone's day.
+White-label. Your brand, your voice.
+Live in a quarter. From kickoff to first patient.
+THE UNDERSTANDING GAP — The stretch you do not see is most of her life.
+A practice sees a woman for a handful of hours a year across decades of care. The preparation, the recovery, the adherence, and the screening all happen somewhere else. That is the understanding gap, and the figures below are what it costs.
+WHAT THE GAP COSTS
+None of this is decided in the exam room. Each one turns on whether a patient understood the plan, kept the visit, and recognized the sign that mattered.
+Decades — LENGTH OF THE RELATIONSHIP — Women's health is a lifetime service line, not an episode of care.
+A few hours — TOTAL CONTACT IN A YEAR — An annual visit, maybe a procedure, and a handful of follow-ups.
+1 visit — OFTEN THE ONLY FOLLOW-UP — After a delivery or a procedure, and frequently missed.
+Every day — MANAGED AT HOME — Symptoms, preparation, recovery, adherence, and screening, all outside your building.
+MEASURABLE ROI — How an orbit provides value.
+Every orbit is built against at least one named outcome and the revenue it protects or the cost it removes, agreed before the build starts.
+01 Fewer avoidable readmissions and ED visits — The costliest after-discharge failure, and the one that most often follows a sign nobody recognized.
+02 Higher follow-up visit attendance — The visit where the real clinical decisions get made, and the one most often skipped.
+03 Fewer cancelled and rescheduled cases — A case that falls off the schedule late is revenue that rarely gets refilled.
+04 Earlier recognition of warning signs — A patient who calls about a symptom costs a phone call, not an admission.
+05 Better screening completion — Mammography, cervical, and bone density screening tracked instead of assumed.
+06 Fewer inbound calls per episode — Every repeat call is nursing time spent re-explaining what was already covered.
+07 Higher PROM completion — Required for quality programs and value-based contracts, and usually chased by hand.
+08 New patient acquisition — A branded women's health experience is something few competing practices can show.
+PRACTICE AND GROUP ECONOMICS — Adherence is the difference between care ordered and care actually billed.
+Most of what a practice bills in a year depends on something happening at home: a screening completed, a referral started, a visit kept. An orbit is the only part of your protocol that reaches her there.
+ADHERENCE, THEN BILLING — The services you already ordered, actually completed
+Every one of these is a service you already ordered, sitting unbilled because nobody followed through.
+Screening completed, not assumed. Mammography, cervical, and bone density studies finished on schedule instead of deferred to next year.
+Labs and imaging done as ordered. Preparation understood, the study completed, and the visit the result requires actually booked.
+Referrals that start. Genetic counseling, pelvic floor therapy, nutrition, and behavioral health that patients accept in clinic and never begin.
+Visits kept. Annual, post-operative, and follow-up appointments, the slots hardest to refill when they fall late.
+Value-based measures met. Screening and PROM completion is what the contract pays on, and it is usually chased by hand.
+FOR A GROUP OR MSO — What it means above the practice level
+The same orbit, read from the level that owns the contracts and the recruiting.
+More billable services per patient. The screenings and referrals you already order, completed rather than chased.
+A recruiting and retention argument. Physicians choose groups that hand them a tool their patients notice and their staff does not have to run.
+Staff support instead of staff load. The orbit answers the repeat questions first, so your team spends its time on the interactions that need a person.
+Standardization with room to localize. One group-wide orbit, versioned by site, payor, employer, or language, without a separate build for each.
+Patient-level data you cannot get elsewhere. Who opened what, by location and by clinician, measured against the metrics your contracts pay on.
+HOW IT SCALES — One build, then versions
+Expansion is a versioning exercise, not a second implementation.
+Start group-wide. One main orbit relevant to every patient in the group, live before anything is customized.
+Add journeys on results. Pregnancy, menopause, and operative journeys added where your own numbers say they pay back.
+Customize per care center. Light content edits per site or provider, turn-key on our side, with no headquarters FTE.
+One orbit follows her forward. Fertility becomes pregnancy, pregnancy becomes well woman care, with no new build and no new login.
+ORBITS IN THIS SOLUTION — The women's health orbit library.
+A practice bundle built for a long-term relationship: a default well-woman orbit that procedure orbits return to, plus the journeys a practice chooses to run separately.
+01 Well Woman Care — Default orbit, and where procedure orbits evolve
+02 Prenatal care and pregnancy support — Versions: general and at-risk
+03 Family planning — Options, preparation, and follow-up
+04 Infertility treatment — Cycle preparation and expectation setting
+05 Hysterectomy — Preparation through recovery
+06 Myomectomy — Preparation through recovery
+07 Endometriosis treatment — Diagnosis, options, and ongoing management
+08 Ovarian cysts — Watchful waiting or procedure
+09 Minimally invasive surgery — Procedure template, versioned per case type
+10 Urogynecology — Pelvic floor, continence, and prolapse
+11 Infection control — Treatment adherence and recurrence prevention
+12 Menopause management — Symptoms, timeline, and what is normal
+13 Menopause therapies — Options, adherence, and side effect guidance
+14 Cancer diligence and screenings — Screening adherence and result follow-through
+15 Pediatrics — Overlaps another specialty
+Orbit choices are made on procedure scope, revenue value, and how much understanding an orbit can add; some journeys are too short or too simple to benefit. Orbits not shown as versioned can still be versioned to department preference, which varies by system. A practice may fold some subjects into milestones on a larger journey instead of running them as separate orbits.
+BY THE NUMBERS — Where adherence in women's health actually stands.
+PUBLISHED NATIONAL FIGURES, NOT CAREORBIT RESULTS
+Each figure below is a published national or multi-system estimate of where adherence sits today, not an outcome measured with an orbit in place. They are the baselines an orbit is built to move.
+Worked on 600 patients a year at a 5% avoidable readmission or ED rate and $12,000 per event. All of these improvements are modeled assumptions. Every rate and unit cost is a figure you supply.
+1 in 5 — Not up to date on mammography — Eighty percent of women aged 50 to 74 are current. Every study that does not happen is a billable service that did not happen either. (National Health Interview Survey, 2023 — 80.0% up to date.)
+1 in 4 — Not up to date on cervical screening — Three quarters of women aged 21 to 65 are current, and the share has been falling, with knowledge of what is due the barrier most often reported. (National Health Interview Survey, 2023 — 75.4% up to date.)
+1 in 4 — Abnormal results without colposcopy in a year — The screening was completed and billed. The diagnostic step it existed to trigger was not. (Multi-system cohort of 28,706 patients, 2010 to 2018: 75.3% received colposcopy within 12 months.)
+1 in 6 — Pregnancies with inadequate prenatal care — Visits that were scheduled, staffed, and never attended, measured on the adequacy of prenatal care utilization index. (NCHS final natality data, 2024 — 16.1% of live births.)
+MODELED ANNUAL EXPOSURE
+$97K — On 600 patients a year, at the rates shown below
+286 hrs — Nursing time returned over the same year
+Worked on 600 patients a year at a 5% avoidable readmission or ED rate, $12,000 per event, six calls per patient at nine minutes each, and a $45 loaded hourly staff cost. Substitute your own figures and the totals move accordingly.
+Run the model with your numbers
+VIEW SOURCES — 10 references
+20 minutes. Your women's health pain points, our platform.
+No demo script, no obligation. We get introduced, hear which women's health moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the Women's Health info sheet by email.
+Send me the info sheet
+Bariatrics &amp; Weight Loss Surgery
+NOTE  URL: Bariatrics.dc.html. Standard orbit page, 'In build' status — the orbit library still holds placeholders. Evidence is the oncology trial as a modeled transfer.
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+BARIATRIC ORBIT SOLUTIONS
+More qualified patients reaching surgery, and stronger outcomes after it
+Guided digital support tailored to each pathway and to your program's requirements, carried from the first seminar through long-term follow-up, so every candidate arrives ready and stays on plan.
+Book a 20-minute intro call
+Get the Bariatrics info sheet
+A trusted digital guide your patients keep, from seminar through year one and beyond.
+Your program in your surgeons' and dietitians' own words, delivered when each instruction actually matters. Alongside the seminar and the follow-up visit, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients prepared, motivated, and on plan between appointments.
+Built to your program's protocols before launch. Nothing added to your team's day.
+One orbit, issued once, working for three audiences at the same time.
+FOR THE PATIENT — They know what to do
+A clear understanding of the procedure, the requirements, and who is caring for them
+Every pre-op requirement and appointment, sequenced instead of handed over at once
+Portions, protein, hydration, and supplements, written for a kitchen rather than a chart
+Which symptoms mean call us, and which mean go to the ED
+FOR YOUR TEAM — Nothing added to the day
+Ordered from the workflow you already run, no new FTEs
+Fewer calls asking what the seminar already covered
+Your program and your brand, not a generic weight-loss app
+We build and maintain the content, including protocol updates
+FOR THE PROGRAM — You can finally see it
+Who opened their orbit and who never did, by patient
+Requirement progress and check-ins routed back before the next visit
+Conversion from seminar to surgery, and follow-up attendance by cohort
+Optional: validated measures and outcome reporting scored automatically
+HOW TO BEGIN — Start with one, add the rest
+Most programs start with surgical support, then add the pre-op and outreach versions.
+Surgical support. Sleeve, bypass, and revision, from decision through recovery.
+Pre-op requirements. The months of visits, testing, and insurance steps before surgery.
+Post-op nutrition and habits. Stage-by-stage eating, activity, and supplement guidance.
+Seminar and outreach. The information session that turns interest into a consult.
+SINGLE ORBIT, MULTIPLE VERSIONS — One orbit that changes as the patient moves
+The same orbit advances through three versions on its own, with no new app or login.
+01 Acquisition — BEFORE THEY ARE A PATIENT
+Seminar and outreach that helps people choose your program, plus who qualifies and what the process involves.
+02 Pre-op and procedure support — REQUIREMENTS THROUGH SURGERY WEEK
+Every required visit and test, insurance steps, pre-op diet, and day-of instructions, sequenced week by week.
+03 Year one with PROMs — RECOVERY AND BEYOND
+Stage-by-stage nutrition, activity, supplements, follow-up prompts, and validated measures collected on schedule.
+HOW IT DEPLOYS — Issued from the workflow you already run
+From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.
+No new FTEs. Nothing added to anyone's day.
+White-label. Your brand, your voice.
+Live in a quarter. From kickoff to first patient.
+THE UNDERSTANDING GAP — The six months before surgery, and the years after.
+A bariatric program is a long qualification process followed by a lifetime of behavior change. Both happen mostly at home. The operation itself is the shortest part of the journey and the only part you fully control. That is the understanding gap, and the figures below are what it costs.
+WHAT THE GAP COSTS
+None of this is decided in your building. Each one turns on whether a patient met the pre-op requirements, kept up the protein and hydration, and came back for follow-up.
+6+ months — QUALIFICATION PROCESS — Visits, letters, and requirements before an operation is even scheduled.
+Many — NEVER REACH SURGERY — Candidates start the qualification process and quietly disappear before a date is set. [Placeholder: your program's own attrition rate.]
+Lifelong — SUPPLEMENT AND FOLLOW-UP NEEDS — The part of the journey with the least clinical contact.
+Every meal — MANAGED AT HOME — Portions, hydration, protein, and supplements, all outside your building.
+MEASURABLE ROI — How an orbit provides value.
+Every orbit is built against at least one named outcome and the revenue it protects or the cost it removes, agreed before the build starts.
+01 Lower pre-operative attrition — The single largest revenue leak in a bariatric program, and almost entirely an engagement problem.
+02 Fewer readmissions and ED visits — Dehydration and nutrition complications are the most common reasons, and the most preventable.
+03 Higher supplement adherence — Deficiencies show up years later as complications and revisions.
+04 Better long-term follow-up attendance — Follow-up is where weight regain is caught, and where most programs lose contact.
+05 Fewer inbound calls per candidate — Every repeat call is staff time spent re-explaining what was already covered.
+06 Faster insurance qualification — A candidate who finishes the requirements sooner reaches surgery sooner.
+07 Stronger referral and review volume — A guided journey is the cheapest patient acquisition a bariatric program has.
+08 A visible program differentiator — A branded bariatric experience is something few competing programs can show.
+ORBITS IN THIS SOLUTION — The bariatric orbit library.
+Bariatric surgery is a full-focus orbit inside the general surgery bundle. The rest of the program library is being confirmed with the service line.
+01 Bariatric surgery — Full-focus orbit in the general surgery bundle
+02 [Placeholder: additional bariatric orbits] — To be confirmed with the service line
+Orbit choices are made on procedure scope, revenue value, and how much understanding an orbit can add; some journeys are too short or too simple to benefit. Orbits not shown as versioned can still be versioned to department preference, which varies by system.
+CLINICAL EVIDENCE — The trial behind the platform.
+The platform's controlled trial was run in surgical oncology, not bariatrics. We show it as measured and let you judge the transfer.
+CONTROLLED CLINICAL TRIAL — Siteman Cancer Center, Washington University School of Medicine
+Patients arrived better prepared, called less, and came back less
+A controlled trial in hepatobiliary surgical oncology compared an orbit against usual care across the same shape of pathway a bariatric episode follows: requirements and prep, the operation, discharge instructions, and the calls in between. The mechanism is comprehension. Applying these percentages to a bariatric population is a modeled transfer, not a measured bariatric result.
+Request a copy of the study
++65% better understanding of the plan and side effects
+−53% fewer calls to the office
+−41% fewer readmissions
++22% higher patient satisfaction
+VOICES FROM THE PATHWAY — What it sounds like when care is guided
+From live oncology deployments. Bariatric orbits are built on the same platform.
+"Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!" — CHIEF OF SECTION, SURGICAL ONCOLOGY
+"It's seen as incredibly easy to understand and use. They (patients and families) just run with it." — NURSE NAVIGATOR, SITEMAN CANCER CENTER SURGICAL DEPARTMENT
+20 minutes. Your bariatrics pain points, our platform.
+No demo script, no obligation. We get introduced, hear which bariatrics moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the Bariatrics info sheet by email.
+Send me the info sheet
+Behavioral Health &amp; Screening
+NOTE  URL: BehavioralHealth.dc.html. Standard orbit page. eScreening is called out as live; the orbit library is a placeholder. Includes a modeled 'By the numbers' ROI block.
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+BEHAVIORAL HEALTH
+Measurement-based care, without the administrative weight
+Validated screenings, delivered on schedule, scored automatically, and surfaced to the care team when risk is rising. eScreening is a live CareOrbit product today.
+Book a 20-minute intro call
+Get the Behavioral Health info sheet
+A trusted digital guide your patients keep, from intake through ongoing recovery.
+Your program in your clinicians' own words, delivered when each step actually matters. Alongside the intake packet and the follow-up call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients engaged, reassured, and connected between sessions.
+Built to your program and your crisis resources before launch. Nothing added to your team's day.
+One orbit, issued once, working for three audiences at the same time.
+FOR THE PATIENT — They know what to do
+A clear understanding of their diagnosis, the program, and who is caring for them
+What each session asks of them and what to do between them
+Their medications explained, including why they continue after they feel better
+Which symptoms mean call us, and the crisis line your program designates
+FOR YOUR TEAM — Nothing added to the day
+Ordered from the workflow you already run, no new FTEs
+Fewer calls asking what intake already covered
+Your program and your brand, not a generic wellness app
+We build and maintain the content, including program updates
+FOR THE PROGRAM — You can finally see it
+Who opened their orbit and who never did, by patient
+Check-in responses routed back before the next appointment
+Engagement and completion by program and by site
+Optional: validated measures such as PHQ-9 and GAD-7 scored automatically
+HOW TO BEGIN — Start with one, add the rest
+Most programs start with an intensive outpatient program or a medication start.
+Program support. Intensive outpatient, partial hospitalization, and group programs.
+Medication start. What it does, what to expect, and why it continues.
+Discharge and step-down. The highest-risk window after an inpatient stay.
+Family and support. A version for the people helping at home.
+SINGLE ORBIT, MULTIPLE VERSIONS — One orbit that changes as the patient moves
+The same orbit advances through three versions on its own, with no new app or login.
+01 Acquisition and intake — BEFORE THE FIRST SESSION
+Outreach that helps people choose your program, what to expect at intake, and how to get started.
+02 Program support — THROUGH ACTIVE TREATMENT
+What each phase involves, medication guidance, skills between sessions, and attendance support.
+03 Recovery with PROMs — AFTER THE PROGRAM ENDS
+Relapse prevention, ongoing support, and validated measures collected on schedule and returned to the team.
+HOW IT DEPLOYS — Issued from the workflow you already run
+From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.
+No new FTEs. Nothing added to anyone's day.
+White-label. Your brand, your voice.
+Live in a quarter. From kickoff to first patient.
+THE UNDERSTANDING GAP — The six days between sessions.
+A weekly session is one hour out of one hundred and sixty-eight. Recovery, relapse, medication decisions, and the choice to come back next week all happen in the other one hundred and sixty-seven, at home, where the program has almost no presence. That is the understanding gap, and the figures below are what it costs.
+WHAT THE GAP COSTS
+None of this is decided in session. Each one turns on whether a patient understood the plan, kept taking the medication, recognized a warning sign, or came back next week.
+1 hour — IN SESSION, PER WEEK — The only hour of the week you can see.
+167 — HOURS ON THEIR OWN — Where relapse, medication decisions, and dropout actually happen.
+1 in 4 — APPOINTMENTS MISSED — No-show rates in behavioral health are among the highest in medicine.
+Every day — MANAGED ALONE — Medication, coping, sleep, and the decision to come back next week.
+MEASURABLE ROI — How an orbit provides value.
+Every orbit is built against at least one named outcome and the revenue it protects or the cost it removes, agreed before the build starts.
+01 Fewer appointment no-shows — The largest and most immediate revenue leak in behavioral health, and largely an engagement problem.
+02 Lower early dropout — Most patients who disengage do so in the first few sessions, before treatment has had time to work.
+03 Better medication continuation — Psychiatric regimens are abandoned at the first side effect unless someone explains what to expect.
+04 Fewer 30-day readmissions — The costliest between-session failure, and the one most often preceded by an unrecognized warning sign.
+05 Fewer avoidable crisis presentations — A plan in the patient's pocket instead of an emergency department at midnight.
+06 Fewer inbound calls per episode — Every repeat call is clinical time spent re-explaining what was already covered.
+07 Higher measure completion — Required for quality programs and value-based contracts, and usually chased by hand.
+08 A visible program differentiator — A branded treatment experience is something few competing programs can show a referrer.
+ORBITS IN THIS SOLUTION — The behavioral health orbit library.
+[Placeholder: behavioral health orbit library to be supplied by the CareOrbit team.]
+01 [Placeholder: behavioral health orbit list] — Awaiting the department bundle from the CareOrbit team
+Orbit choices are made on procedure scope, revenue value, and how much understanding an orbit can add; some journeys are too short or too simple to benefit. Orbits not shown as versioned can still be versioned to department preference, which varies by system.
+CLINICAL EVIDENCE — The trial behind the platform.
+The platform's controlled trial was run in surgical oncology, not behavioral health. We show it as measured and let you judge the transfer.
+CONTROLLED CLINICAL TRIAL — Siteman Cancer Center, Washington University School of Medicine
+People understood more, asked sooner, and needed the system less
+A controlled trial in surgical oncology compared an orbit against usual care. The mechanism it tested is the one behavioral health depends on: whether a person understands their plan and knows how to reach help between appointments. Applying these percentages to a behavioral health population is a modeled transfer, not a measured behavioral health result.
+Request a copy of the study
++65% better understanding of the plan and side effects
+−53% fewer calls to the office
+−41% fewer readmissions
++22% higher patient satisfaction
+VOICES FROM THE PATHWAY — What it sounds like when care is guided
+From live oncology deployments. Behavioral health orbits are built on the same platform.
+"Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!" — CHIEF OF SECTION, SURGICAL ONCOLOGY
+"It's seen as incredibly easy to understand and use. They (patients and families) just run with it." — NURSE NAVIGATOR, SITEMAN CANCER CENTER SURGICAL DEPARTMENT
+BY THE NUMBERS — What better engagement is worth in a year.
+MODELED ILLUSTRATION, NOT OBSERVED RESULTS
+Call-reduction figures are measured in surgical oncology and applied here as a modeled transfer to a behavioral health population.
+Worked on 1,200 patients a year at a 15% 30-day readmission rate and $9,000 per event, with a 25% appointment no-show rate. The call reduction is a measured trial outcome; the readmission and no-show improvements are modeled. Every rate and unit cost is a figure you supply.
+1 in 4 — Appointments missed — No-show rates in behavioral health are among the highest in medicine, and every missed slot is unrecoverable clinical capacity in a specialty with waiting lists. (Published behavioral health no-show literature reports rates well above other specialties. Use your own program's rate.)
+First few — Sessions where most dropout happens — Patients disengage early, before treatment has had time to work. Preparation and expectation-setting before the first session are the cheapest interventions available. (Published early-dropout literature across behavioral health settings.)
+−53% — Calls to the clinical line — Measured in the CareOrbit controlled trial. Preparedness and medication questions the orbit answered first, at four calls per patient and nine minutes each. (CareOrbit controlled clinical trial, Siteman Cancer Center. Applied here as a modeled transfer.)
++65% — Understanding of the plan — Measured in the same trial. In a specialty where the treatment is understanding and behavior, this is the intervention rather than a side benefit. (CareOrbit controlled clinical trial, Siteman Cancer Center.)
+MODELED ANNUAL EXPOSURE
+$350K — On 1,200 patients a year, at the rates shown below
+382 hrs — Clinical time returned over the same year
+Worked on 1,200 patients a year at a 15% readmission rate, $9,000 per event, four calls per patient at nine minutes each, a $40 loaded hourly staff cost, and a 25% no-show rate at $180 per visit. Substitute your own figures and the totals move accordingly.
+Run the model with your numbers
+VIEW SOURCES — 6 references
+20 minutes. Your behavioral health pain points, our platform.
+No demo script, no obligation. We get introduced, hear which behavioral health moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the Behavioral Health info sheet by email.
+Send me the info sheet
+Medication Therapy &amp; Adherence
+NOTE  URL: MedicationTherapy.dc.html. Standard orbit page, 'In integration' status. Includes a modeled 'By the numbers' ROI block.
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+MEDICATION THERAPY &amp; ADHERENCE
+Patients who understand their therapy, and stay on it
+Specialty and injectable therapies fail most often in the first months, for reasons education and timely check-ins can reach. A medication therapy orbit is designed backwards from persistence, calls, and chair utilization.
+Book a 20-minute intro call
+Get the Medication Therapy &amp; Adherence info sheet
+A trusted digital guide your patients keep, from the first fill through long-term adherence.
+Your counseling in your pharmacists' own words, delivered when each instruction actually matters. Alongside the printed leaflet and the counseling call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients informed, reassured, and taking the therapy as prescribed.
+Built to your regimens and protocols before launch. Nothing added to your team's day.
+One orbit, issued once, working for three audiences at the same time.
+FOR THE PATIENT — They know what to do
+A clear understanding of what the medication does and why it continues
+How to take it, store it, and handle a missed dose, on the day it applies
+Which side effects warrant a call rather than stopping the therapy
+The same guide works for whoever helps manage the regimen at home
+FOR YOUR TEAM — Nothing added to the day
+Ordered from the workflow you already run, no new FTEs
+Fewer calls asking what the counseling session already covered
+Your protocols and your brand, not a generic pill reminder app
+We build and maintain the content, including formulary updates
+FOR THE PROGRAM — You can finally see it
+Who opened their orbit and who never did, by patient
+Adherence and side effect check-ins routed back between fills
+Persistence and refill patterns by therapy and by site
+Optional: validated measures scored automatically
+HOW TO BEGIN — Start with one, add the rest
+Most programs start with their highest-cost or highest-abandonment therapy.
+Specialty starts. High-cost therapies where abandonment is most expensive.
+Anticoagulation. The regimen where a misunderstanding is most dangerous.
+Injectables and GLP-1s. Technique, titration, and side effect expectations.
+Refill and persistence. The long tail where most therapies quietly stop.
+SINGLE ORBIT, MULTIPLE VERSIONS — One orbit that changes as the therapy progresses
+The same orbit advances through three versions on its own, with no new app or login.
+01 Prescribed — BEFORE THE FIRST FILL
+What the therapy is for, what it will cost, prior authorization expectations, and why starting matters.
+02 Starting therapy — THE FIRST WEEKS
+Technique, timing, titration, and the side effects that are expected rather than a reason to stop.
+03 Long-term adherence with PROMs — MONTH THREE AND BEYOND
+Refill prompts, persistence support, and validated measures collected on schedule and returned to the team.
+HOW IT DEPLOYS — Issued from the workflow you already run
+From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.
+No new FTEs. Nothing added to anyone's day.
+White-label. Your brand, your voice.
+Live in a quarter. From kickoff to first patient.
+THE UNDERSTANDING GAP — The prescription nobody watches.
+A prescription is written in minutes and taken for years. Nobody sees the bottle after it leaves the counter, and roughly half of patients on long-term therapy do not take it as prescribed. That is the understanding gap, and the figures below are what it costs.
+WHAT THE GAP COSTS
+None of this is decided at the counter. Each one turns on whether a patient understood what the medication does, handled a side effect without stopping, and refilled it on time.
+Minutes — SPENT COUNSELING — The only contact most patients get about a medication they will take for years.
+50% — NONADHERENT ON LONG-TERM THERAPY — Roughly half of patients on chronic medication do not take it as prescribed.
+Week 2 — WHERE MOST THERAPIES STOP — The first side effect, met without guidance.
+Every dose — TAKEN ALONE — Timing, food rules, and the decision to keep going, all outside your building.
+MEASURABLE ROI — How an orbit provides value.
+Every orbit is built against at least one named outcome and the revenue it protects or the cost it removes, agreed before the build starts.
+01 Higher adherence on long-term therapy — Roughly half of chronic medication is not taken as prescribed, and almost none of that is visible to the prescriber.
+02 Fewer avoidable admissions — Nonadherence is one of the most consistently cited drivers of preventable hospitalization.
+03 Higher refill persistence — A lapse caught at week three is recoverable. One found at the next visit usually is not.
+04 Fewer medication errors at home — Timing, food rules, and interactions explained once at the counter and never again.
+05 Fewer inbound calls per patient — Every repeat call is pharmacist time spent re-explaining what was already covered.
+06 Better performance on adherence measures — Adherence measures carry direct weight in quality and star-rating programs.
+07 Safer high-risk regimen use — Anticoagulants, oncolytics, and specialty therapies are where an error costs the most.
+08 A visible program differentiator — A branded therapy-management experience is something few competitors can show a payer or a prescriber.
+ORBITS IN THIS SOLUTION — The medication therapy orbit library.
+The Medication Therapy Support Orbit carries the whole therapy course: what the medication does, what to expect, what to do when side effects hit, and when to refill. [Placeholder: additional orbits in this library to be supplied by the CareOrbit team.]
+01 Medication Therapy Support Orbit — Adherence, side effect guidance, and refill support across the therapy course
+Orbit choices are made on procedure scope, revenue value, and how much understanding an orbit can add; some journeys are too short or too simple to benefit. Orbits not shown as versioned can still be versioned to department preference, which varies by system.
+CLINICAL EVIDENCE — The trial behind the platform.
+The platform's controlled trial was run in surgical oncology, not medication therapy. We show it as measured and let you judge the transfer.
+CONTROLLED CLINICAL TRIAL — Siteman Cancer Center, Washington University School of Medicine
+Patients understood the plan, called less, and came back less
+A controlled trial in hepatobiliary surgical oncology compared an orbit against usual care, including the medication instructions patients take home. The mechanism is comprehension, not oncology. Applying these percentages to a medication therapy population is a modeled transfer, not a measured adherence result.
+Request a copy of the study
++65% better understanding of the plan and side effects
+−53% fewer calls to the office
+−41% fewer readmissions
++22% higher patient satisfaction
+VOICES FROM THE PATHWAY — What it sounds like when care is guided
+From live oncology deployments. Medication therapy orbits are built on the same platform.
+"Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!" — CHIEF OF SECTION, SURGICAL ONCOLOGY
+"It's seen as incredibly easy to understand and use. They (patients and families) just run with it." — NURSE NAVIGATOR, SITEMAN CANCER CENTER SURGICAL DEPARTMENT
+BY THE NUMBERS — What better adherence is worth in a year.
+MODELED ILLUSTRATION, NOT OBSERVED RESULTS
+Call-reduction figures are measured in surgical oncology and applied here as a modeled transfer to a medication therapy population.
+Worked on 2,000 patients a year at a 10% avoidable admission rate and $12,000 per admission, with half of patients nonadherent. The call reduction is a measured trial outcome; the admission and adherence improvements are modeled. Every rate and unit cost is a figure you supply.
+About half — Chronic medication not taken as prescribed — Nonadherence on long-term therapy is one of the most consistently documented failures in medicine, and it is almost entirely invisible between appointments. (World Health Organization and subsequent adherence literature: roughly 50% adherence to long-term therapy in developed countries.)
+Week 2 — Where most therapies quietly stop — The first side effect, met without guidance about whether it fades. Setting the expectation in advance is the cheapest intervention available. (Published discontinuation literature across chronic therapy classes.)
+−53% — Calls to the clinical line — Measured in the CareOrbit controlled trial. Dosing and side-effect questions the orbit answered first, at three calls per patient and eight minutes each. (CareOrbit controlled clinical trial, Siteman Cancer Center. Applied here as a modeled transfer.)
++65% — Understanding of the plan — Measured in the same trial. Understanding is what separates a filled prescription from a therapy that is actually taken. (CareOrbit controlled clinical trial, Siteman Cancer Center.)
+MODELED ANNUAL EXPOSURE
+$510K — On 2,000 patients a year, at the rates shown below
+424 hrs — Pharmacist and nursing time returned over the same year
+Worked on 2,000 patients a year at a 10% avoidable admission rate, $12,000 per admission, three calls per patient at eight minutes each, and a $40 loaded hourly staff cost. Substitute your own figures and the totals move accordingly.
+Run the model with your numbers
+VIEW SOURCES — 6 references
+20 minutes. Your medication therapy &amp; adherence pain points, our platform.
+No demo script, no obligation. We get introduced, hear which medication therapy &amp; adherence moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the Medication Therapy &amp; Adherence info sheet by email.
+Send me the info sheet
+Surgical Support
+NOTE  URL: SurgicalSupport.dc.html. Standard orbit page. This is the pathway the controlled trial actually ran on, so its 'By the numbers' figures are presented as measured results rather than modeled. The orbit library is organized by nine departments.
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+SURGICAL SUPPORT
+Patients who arrive prepared and recover as expected
+Surgery is the moment a health system has the least contact and the most at stake. A surgical support orbit is designed backwards from cancellations, readmissions, and the call volume that lands on your nursing line before and after the procedure.
+Book a 20-minute intro call
+Get the Surgical Support info sheet
+A trusted digital guide your patients keep, from consult through recovery at home.
+Your protocol in your surgeons' own words, delivered when each instruction actually matters. Alongside the pre-op packet and the discharge folder, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps patients prepared, reassured, and recovering as expected.
+Built to each surgeon's protocol before launch. Nothing added to your team's day.
+One orbit, issued once, working for three audiences at the same time.
+FOR THE PATIENT — They know what to do
+A clear understanding of the operation, the plan, and who is caring for them
+Prep, clearance, fasting, and day-of instructions, on the day they apply
+Wound care, activity limits, and what a normal recovery looks like at each stage
+The same guide works for whoever drives them home and helps at home
+FOR YOUR TEAM — Nothing added to the day
+Ordered from the workflow you already run, no new FTEs
+Fewer calls asking what the discharge folder already said
+Each surgeon's protocol, not a generic recovery app
+We build and maintain the content, including protocol updates
+FOR THE SERVICE LINE — You can finally see it
+Who opened their orbit and who never did, by patient
+Symptom check-ins routed back before the post-op visit
+Cancellation, readmission, and PROM completion by procedure and by site
+Optional: validated measures scored automatically
+HOW TO BEGIN — Start with one, add the rest
+Most service lines start with their highest-volume or highest-margin procedure.
+Named procedure orbits. Your highest-volume operations, each with its own guide.
+Prehab and optimization. The weeks before surgery, where cancellations are prevented.
+Discharge and recovery. The window where readmissions and calls are decided.
+Procedure template. Everything else, versioned with minor edits.
+SINGLE ORBIT, MULTIPLE VERSIONS — One orbit that changes as the patient moves
+The same orbit advances through three versions on its own, with no new app or login.
+01 Acquisition — BEFORE THEY ARE A PATIENT
+Screening, seminar, and referral outreach that helps people choose your surgeons, plus when an operation is warranted.
+02 Prep and procedure support — CONSULT THROUGH PROCEDURE WEEK
+Prehab, clearance, fasting, logistics, and day-of instructions, delivered week by week.
+03 Recovery with PROMs — DISCHARGE THROUGH FOLLOW-UP
+Wound care, activity limits, pain step-down, warning signs, and validated measures collected on schedule.
+HOW IT DEPLOYS — Issued from the workflow you already run
+From the CareOrbit app, a scheduled flat file from any EHR, a patient list, a QR code, or a text message.
+No new FTEs. Nothing added to anyone's day.
+White-label. Your brand, your voice.
+Live in a quarter. From kickoff to first patient.
+THE UNDERSTANDING GAP — The weeks either side of the operation.
+The operation is the part you control completely. Whether the patient arrives prepared, and whether they recover without an avoidable readmission, is decided in the weeks before and after it, at home. That is the understanding gap, and the figures below are what it costs.
+WHAT THE GAP COSTS
+None of this is decided in the OR. Each one turns on whether a patient completed the prep, followed the discharge instructions, and knew which symptom warranted a call instead of an ED visit.
+2-4 — VISITS AROUND THE CASE — A consult, a pre-op visit, and one or two follow-ups.
+Weeks — OF PREPARATION AT HOME — Where medication holds, fasting, and logistics either happen or do not.
+30 days — THE READMISSION WINDOW — Where the cost and the penalty both land.
+−41% — READMISSIONS IN THE TRIAL — Measured against usual care in a controlled clinical trial at Siteman.
+MEASURABLE ROI — How an orbit provides value.
+Every orbit is built against at least one named outcome and the revenue it protects or the cost it removes, agreed before the build starts.
+01 Fewer avoidable readmissions — The costliest post-discharge failure, and the one the trial reduced by 41%.
+02 Fewer cancellations and delays — A case cancelled for a missed medication hold is unrecoverable OR time.
+03 Fewer avoidable ED visits — The most expensive way to answer a question the patient could have had answered at home.
+04 Fewer inbound calls per episode — Every repeat call is nursing time spent re-explaining what was already covered.
+05 Better pre-operative compliance — Fasting, medication holds, and skin preparation are the most common reasons a case does not go ahead.
+06 Higher PROM completion — Bundled and value-based programs pay on documented outcomes. Missing scores are unbilled work.
+07 Higher patient satisfaction — Satisfaction rose 22% in the trial, and it is what referring physicians hear about.
+08 A visible program differentiator — A branded surgical experience is something few competitors can show a referrer.
+DEPARTMENTS IN THIS SOLUTION — The surgical support orbit library.
+Nine departments, each with its own procedure list and its own full-focus orbits. You choose which departments launch, and which procedures get a named orbit rather than a template.
+01 Oncology — 17 procedures, 22 full-focus orbits with versioning
+02 Orthopedics — 24 procedures, 19 full-focus orbits
+03 Cardiology — 18 procedures, 9 full-focus orbits
+04 Neurology — 24 procedures, 8 full-focus orbits
+05 Otolaryngology (ENT) — 24 procedures, 7 full-focus orbits
+06 Gastroenterology — 14 procedures, 6 full-focus orbits
+07 Urology — 10 procedures, 5 full-focus orbits
+08 General surgery — 13 procedures, 3 full-focus orbits
+09 Renal — 4 procedures, 1 full-focus orbit
+Orbit choices are made on procedure scope, revenue value, and how much understanding an orbit can add; some journeys are too short or too simple to benefit. Orbits not shown as versioned can still be versioned to department preference, which varies by system.
+CLINICAL EVIDENCE — The trial behind the platform.
+The platform's controlled trial was run in one surgical specialty. Every other procedure orbit is built on the same mechanism.
+CONTROLLED CLINICAL TRIAL — Siteman Cancer Center, Washington University School of Medicine
+Patients arrived better prepared, called less, and came back less
+A controlled trial in hepatobiliary surgical oncology compared an orbit against usual care across the exact stages any surgical episode follows: preparation, the operation, discharge instructions, and recovery at home. Applying these percentages to another surgical population is a modeled transfer, not a measured result in that specialty.
+Request a copy of the study
++65% better understanding of the plan and side effects
+−53% fewer calls to the office
+−41% fewer readmissions
++22% higher patient satisfaction
+VOICES FROM THE PATHWAY — What it sounds like when care is guided
+From live oncology deployments. Surgical support orbits are built on the same platform.
+"Patients see it as incredibly easy to understand and use. We use it to open up dialogues so much faster. Families just run with it!" — CHIEF OF SECTION, SURGICAL ONCOLOGY
+"It's seen as incredibly easy to understand and use. They (patients and families) just run with it." — NURSE NAVIGATOR, SITEMAN CANCER CENTER SURGICAL DEPARTMENT
+BY THE NUMBERS — Measured in a controlled trial, not modeled.
+TRIAL RESULTS, APPLIED TO YOUR VOLUME
+Percentages are measured trial outcomes in surgical oncology. Case volume, rates, and unit costs are your figures.
+These reductions were measured against usual care in a controlled clinical trial at Siteman Cancer Center. Surgical support is the pathway the trial ran on, so the percentages here are results rather than projections. The dollar figures apply them to your own volume and costs.
+−41% — Readmissions, measured — Against usual care in a controlled clinical trial at Siteman Cancer Center. On 800 cases at a 10% readmission rate and $14,000 per readmission, that is roughly $459K a year. (CareOrbit controlled clinical trial, Siteman Cancer Center, hepatobiliary surgical oncology. Readmission rate and cost are your figures.)
+−53% — Calls to the nursing line — Preparedness and recovery questions the orbit answered first. At six calls per case and nine minutes each, that is roughly 382 nursing hours a year at 800 cases. (CareOrbit controlled clinical trial, Siteman Cancer Center. Call volume and staff cost are your figures.)
++65% — Patient understanding — Of the procedure and what recovery involves. Understanding sits upstream of every other number here: the call not made, the case not cancelled, the warning sign caught early. (CareOrbit controlled clinical trial, Siteman Cancer Center.)
+9 in 10 — Reported better navigation — Nine of ten patients said the orbit improved how they navigated recovery, and satisfaction rose 22%. (CareOrbit controlled clinical trial, Siteman Cancer Center.)
+ANNUAL VALUE AT YOUR VOLUME
+$678K — On 800 cases a year, at the rates shown below
+382 hrs — Nursing time returned over the same year
+Worked on 800 cases a year at a 10% readmission rate and $14,000 per readmission, six calls per patient at nine minutes each with a $45 loaded hourly staff cost, and 10% of cases cancelled or delayed for preparation gaps at $6,000 collected per case. The percentage reductions are the trial's measured outcomes. Substitute your own rates and costs and the totals move accordingly.
+Run the model with your numbers
+VIEW SOURCES — 5 references
+20 minutes. Your surgical support pain points, our platform.
+No demo script, no obligation. We get introduced, hear which surgical support moments are costing your team the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the Surgical Support info sheet by email.
+Send me the info sheet
+Community-Based Research
+NOTE  URL: CommunityResearch.dc.html. Newer orbit page (NEW badge), aimed at research teams. Audiences are participants / researchers / research division; it adds validated-instrument delivery, a data &amp; integration section (REDCap, Epic, API), and a pilot-cohort start path. Outcome figures are blueprints, not measured results.
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+NEW
+COMMUNITY RESEARCH ORBIT SOLUTIONS
+Your protocol in the participant's hands, every week between visits
+Guided digital support tailored to each protocol, cohort, and follow-up window, carried from first contact through the final assessment, so every participant knows what the study asks and when it asks it.
+Book a 20-minute intro call
+Get the research info sheet
+A trusted guide your participants keep, from first contact through close-out.
+Your consent language and your visit schedule, delivered when each one actually matters. Alongside the packet at enrollment and the coordinator's reminder call, an orbit adds a consumer-grade digital mentor: engaging video, email, and text outreach that keeps people informed, oriented, and on protocol between visits.
+Built to your protocol before launch. Nothing added to a coordinator's week.
+One orbit, issued once, working for three audiences at the same time.
+FOR PARTICIPANTS — They know what the study asks
+Education aligned to their treatment or study milestone, not a generic packet
+Easy to understand across all literacy levels and all ages
+Accessible on any screen, with no app download and no portal login
+Less confusion, and less of the drift that turns into dropout
+FOR RESEARCHERS — Structured data, not chased paperwork
+An IRB-ready audit trail for every participant interaction
+Assessment responses captured in real time and structured for analysis
+No additional FTE and no additional I.T. requirement
+Configurable to any study protocol, instrument set, and time-point schedule
+FOR YOUR RESEARCH DIVISION — Throughput, richness, and a grant story
+White-labeled to your organization's brand rather than ours
+Scalable across multiple concurrent studies
+Higher study throughput and richer participant data
+A differentiator you can point to in grant applications
+HOW WE GET STARTED — One pilot cohort first, then wherever it earns its way
+No risk and no lock-in. A pilot cohort is enough to prove reach before anything scales.
+Define the study protocol and orbits. Which time-points, which instruments, and which stretch of the study is losing people.
+Configure and brand it as yours. White-labeled to your organization, in your voice, matched to your interventions and milestones.
+Test with a pilot cohort. One study arm or one site, run beside the packet and the coordinator call you already have.
+Launch and monitor together. Completion from the pilot decides whether the next study or site turns on.
+SINGLE ORBIT, MULTIPLE VERSIONS — One participant orbit that changes as the study does
+A participant moves through the study, and their orbit updates at the right moment with no new app or login.
+01 Recruitment and eligibility — BEFORE THEY ARE A PARTICIPANT
+Outreach, screening, and referral from community partners: what the study asks, what it involves, and how to take the first step.
+02 Consent through baseline — ENROLLMENT
+Eligibility, consent explained in plain language, orientation to the visit schedule, and the baseline instruments, delivered as a guided sequence instead of a packet.
+03 Follow-up through close-out — THE LONG STRETCH
+Scheduled assessments, reminders that reach people who move, and check-ins that surface disengagement while the window is still open.
+VALIDATED INSTRUMENTS — The screeners your protocol already runs, delivered in-orbit
+Assessment delivery configured to your protocol rather than retrofitted to a generic form builder.
+PHQ-9, GAD-7, AUDIT-C, DAST-10, CAGE-AID. Plus the GAIN family and any researcher-defined instrument your protocol calls for.
+Scheduled and triggered delivery. At defined study time-points, or triggered by a participant behavior or milestone.
+Branching logic for adaptive protocols. The next item follows from the last answer rather than a fixed form.
+Real-time response capture. Structured on arrival, timestamped, and linked to the participant.
+Full audit trail. Every interaction recorded for IRB and regulatory review.
+Site and cohort rollups. Completion, drift, and dropout risk visible by site, cohort, and coordinator.
+DATA AND INTEGRATION — Research-ready from day one
+Engagement and assessment data handed to the systems your team already works in.
+Engagement analytics per participant. Who accessed what, when, and how many times, with completion rates across a study arm.
+Structured exports. CSV or JSON for all instrument responses, timestamped, participant-linked, and audit-ready.
+Progress dashboards. Real-time participant status, pending items, and dropout risk indicators.
+API and EHR integration. Push data into your existing research systems, including REDCap, Epic, and custom API support.
+HOW IT DEPLOYS — Issued from the workflow you already run
+Automated delivery across email, text, and a QR code at a partner site, at the time points you define.
+No new FTEs. Nothing added to a coordinator's week, and no portal logins to administer.
+HIPAA-compliant and BAA-ready. EHR-friendly and non-disruptive to the workflows and I.T. you already run.
+White-label. Your study, your institution, your voice.
+Stands up in days, not months. From kickoff to first participant.
+Instrument names are referenced to describe configuration only. CareOrbit is not affiliated with, and does not license or distribute, third-party assessment instruments; licensing stays with the instrument owner and your research agreement.
+WHERE STUDIES LOSE GROUND — Attrition is rarely one failure. It is a hundred small gaps.
+Community-based studies run for years across sites nobody staffs full time. Between visits, the protocol lives entirely in what a participant remembers and whether anyone can still reach them.
+WHAT THE GAP COSTS
+None of this is decided at a study visit. Each one turns on whether a participant understood what they agreed to, remembered the window, and could still be reached when it opened.
+"Behavioral health research demands deep, continuous patient engagement, yet current tools fall short of capturing real-world experience." — NATIONAL INSTITUTE OF MENTAL HEALTH, RESEARCH PRIORITIES REPORT
+40–60% — RESEARCH PARTICIPANTS WHO DROP OUT BEFORE STUDY COMPLETION — Attrition climbs with study length and follow-up burden, and community-based protocols carry the hardest populations to hold. [PLACEHOLDER: SOURCE TO CONFIRM]
+70%+ — RESEARCH TEAMS REPORTING DIFFICULTY MAINTAINING BETWEEN-VISIT CONTACT — The stretch between visits is where a protocol lives, and it is the stretch nobody is staffed to cover. [PLACEHOLDER: SOURCE TO CONFIRM]
+CareOrbit has no published outcome data in community-based research. The orbits on this page are blueprints built on the platform's engagement work in clinical care.
+MEASURABLE VALUE — How an orbit provides value.
+Every orbit is built against at least one named study metric and the accrual or follow-up it protects, agreed before the build starts.
+TARGETED OUTCOMES — What an orbit is built and tracked against from the first participant forward.
+01 Enrollment against target — How many eligible people screened, consented, and reached baseline, tracked against the accrual curve the protocol assumed.
+02 Time to full accrual — The months between first contact and a closed enrollment window, and what a shorter one is worth to the study budget.
+03 Consent comprehension — Whether a participant can say what the study asks of them after they signed, not just that a signature exists.
+04 Baseline completion — The share of consented participants who finish every baseline instrument inside the protocol window.
+05 Assessment window adherence — On-time completion at each scheduled follow-up, the measure that decides whether a data point is usable at all.
+06 Retention at final follow-up — How many participants are still reachable and still on protocol when the last window opens.
+07 Coordinator hours returned — Time given back from reminder calls, rescheduling, and chasing forms, valued at loaded staff cost.
+08 Study throughput and data richness — How many concurrent studies a division can carry, and how much structured participant data each one produces.
+09 Representation of the target community — Whether the enrolled cohort actually reflects the community the study was funded to serve.
+WHAT IS IN THIS SOLUTION — Three capabilities. One participant experience.
+A participant receives education and motivation, validated instruments arrive inside the same orbit, and every response is captured, structured, and exported to the team drawing the conclusions.
+01 Engage — Structured digital education and motivation delivered to participants across the entire study journey.
+Milestone-aligned content delivery / Protocol-specific messaging / Phone, tablet, or desktop / No app download required
+02 Assess — Validated screening and assessment tools woven into the participant experience rather than bolted on.
+Validated instruments, plus researcher-defined / Scheduled and triggered delivery / Real-time response capture / HIPAA-compliant data handling
+03 Data — Structured participant data and dashboards that power research insight and reporting.
+Engagement analytics by participant / Assessment response exports / API and EHR integration / IRB-ready audit trails
+HIPAA-compliant, BAA-ready, EHR-friendly, and configurable to any study protocol. [Placeholder: the named orbit library for a given study is defined with the CareOrbit team during protocol scoping.]
+20 minutes. Your study population, our platform.
+No demo script, no obligation. We get introduced, hear which follow-up windows are costing your study the most, and give you a brief look at the platform. Then we decide together whether it is worth a second conversation.
+Book a 20-minute intro call
+Not ready for a call? Get the community research info sheet by email.
+Send me the info sheet
+Behavioral Safety
+NOTE  URL: BehavioralSafety.dc.html. Newest orbit page (NEW badge), aimed at high-risk employers and trade associations rather than health systems. Worker privacy is the central promise (no login; the employer never sees individual use). Includes published federal exposure statistics and a financial-case model.
+NOTE  Shared orbit-page pattern — Hero: an ALL-CAPS eyebrow label, then the main headline (Lato large display, light weight, with a Source Serif 4 italic accent word), then a one-paragraph subhead (Inter), then a navy primary button plus a secondary 'Get the … info sheet' link. Further down, every ALL-CAPS line is a section eyebrow label (Lato bold, letter-spaced, coral #E3735C or pink on navy). Lines written as 'NN  Label — detail' are numbered ledger rows; the ±% figures are the stat callouts.
+NEW
+BEHAVIORAL SAFETY
+The most dangerous risk on the jobsite is the one nobody reports.
+High-risk industries have spent decades engineering physical safety. Behavioral risk has not had the same infrastructure. CareOrbit delivers a private, mobile orbit to every worker: what to watch for, where to get help, and a way to reach it without going through a supervisor.
+Book a 20-minute intro call
+How it works in the field
+For employers / For associations
+Issued by your own safety leadership to the crews you employ, alongside the toolbox talk and the benefits packet you already run.
+A private support guide every worker keeps, long before a crisis.
+Your resources and your language, reaching the field the way safety already does. Alongside the toolbox talk and the benefits packet, an orbit adds a consumer-grade digital mentor: short video, plain-language guidance, and text outreach that keeps a worker informed and one tap from help.
+No app, no account, and no supervisor in the middle. A worker orbit is private to the worker; leaders see aggregate reach only.
+One orbit, issued once, working for the worker, the crew, and the company at the same time.
+FOR THE WORKER — They know where to go
+Help without having to ask a supervisor, fill in a form, or be seen doing it
+Something to open at 11pm on the drive home, not only during business hours
+Written for the field, in their language, at a reading level that does not talk down
+Theirs to keep and to pass to a friend or family member who needs it
+FOR THE PEOPLE AROUND THEM — Fewer people frozen
+Confidence to say something instead of hoping someone else does
+A supervisor can act without being asked to play counselor
+Nothing added to anyone's day and no new reporting duty created
+The person at home gets the same guidance as the person on the crew
+FOR PROGRAM LEADERS — Reach you can report, not people you can watch
+Aggregate dashboards only: activations, return visits, and which topics get opened
+Resource click-throughs, so you can fix the benefits that go unused
+Trends by state, chapter, site, and trade, plus peer and family usage
+No employer surveillance and no individual-level monitoring, by design
+HOW TO BEGIN — One site first, then wherever it earns its way
+A pilot on one site or crew is enough to prove reach before anything scales.
+You bring three things. The support services you stand behind, the crews to reach, and a safety or HR lead who can approve content.
+We build and you approve. We propose the structure from your existing materials; nothing goes live until your lead signs off.
+First crew inside a quarter. From kickoff to workers holding it, with all launch and training materials provided.
+Scale on evidence, not faith. Aggregate reach from the first site decides whether the next site or region turns on.
+TWO ORBITS, MANY VERSIONS — One for the person struggling, one for the person helping
+Workers usually turn to a peer before a professional, so the peer gets a guide of their own. Management is never inside the worker's.
+01 Worker Support Orbit — THEIRS, NOT THE EMPLOYER'S
+For workers and their families. Reassurance and normalization, signs to watch for in yourself, habits and coping tools, substance use and financial stress, expert and community resources, and one tap to a hotline or warm line.
+02 Peer Support Orbit — FOR SUPERVISORS, PEERS, AND FAMILY
+For anyone supporting someone else: recognizing warning signs, how to hold a difficult conversation, the do's and don'ts, when and how to escalate, links to formal training, and the ability to send a worker guide to the person they are worried about.
+03 Versioned to your population — TRADE, STATE, CHAPTER, PARTNER
+Content versioned by trade, geography, and participating partner, including branded versions for a single company, union, or organization.
+HOW IT RUNS IN THE FIELD — Starts at the toolbox talk, keeps working after it
+Six steps, from the first handout to the numbers you report upward.
+Introduce. Safety leadership hands it out the way any other safety program starts: in person, on site.
+Reach. A QR code on a poker chip, a hard-hat decal, signage, machinery, or onboarding materials.
+Activate. The worker enters an email address and nothing else. An activation email opens their secure guide.
+Educate. Short, direct modules on the risks that actually take workers out, plus ongoing messages of encouragement.
+Connect. One tap to the crisis line, warm line, EAP, or community resource your organization stands behind.
+Measure. Activations, topics, and resource click-throughs reported de-identified for safety and HR review.
+THIS IS NOT AN APP — Nothing to download, nothing to log into
+Workers distrust apps because of downloads, logins, and the fear that an employer is watching. All three are removed.
+No download, no app store. It opens in the browser the worker already has, on a phone, tablet, or desktop.
+No login, and management never sees it. No credentials, and nobody at the company or the association can see who activated a worker orbit or what they read.
+HIPAA compliant. The same security posture the platform runs inside large health systems.
+No new FTEs, live in a quarter. White-label in your voice, from kickoff to first crew.
+HOW IT GETS SMARTER — AI that learns what this workforce needs
+Always confidential, always de-identified, always worker-centered.
+Recommends what matters. Surfaces the most relevant content for the person reading it.
+Adapts the path. Learning routes change based on what a worker actually opens.
+Spots emerging trends. Stress, substance use, and financial strain, at the population level.
+Improves routing. Resource connections get better over time, informing statewide prevention.
+CareOrbit is not a crisis line and does not replace emergency services. Orbits route workers to the crisis and clinical resources your organization designates. Engagement is reported in aggregate only, never by individual.
+THE EXPOSURE — The risk is already measured. The response is not.
+Published federal data on the trades, not CareOrbit projections. Every figure is an industry rate describing the exposure an orbit is built to reach, and every one of them turns on whether a worker knew what to watch for and had a private way to ask for help.
+WHAT THE GAP COSTS
+None of this is decided in a benefits meeting. It is decided on the drive home, in the truck, and on the shifts between toolbox talks, where the company has almost no presence.
+4× — HIGHER THAN THE NATIONAL SUICIDE RATE — 53.2 suicides per 100,000 construction workers, against 17.3 per 100,000 across the general population. (CDC, cited by CFMA)
+56 — PER 100,000 MALE CONSTRUCTION WORKERS, 2021 — Against 32 per 100,000 among male workers across all industries. Construction ranked second only to mining and extraction. (CDC, 2021, via Travelers)
+162.6 — OVERDOSE DEATHS PER 100,000, CONSTRUCTION AND EXTRACTION — The highest of any occupation group, against 42.1 per 100,000 across all paid civilian occupations. (CDC MMWR QuickStats, 2020 data)
+5× — SUICIDE DEATHS VERSUS ALL FATAL WORK INJURIES — More construction workers are lost to suicide than to every recorded on-the-job fatality combined. (CDC, cited by CFMA and CIASP)
+CareOrbit has no published behavioral safety outcome data. [Placeholder: program engagement and outcome figures once a first employer deployment is measured.] Rates vary by trade, region, and employer; bring your own figures and we will work from those.
+THE FINANCIAL CASE — What one retained worker is already worth.
+A model, not a guarantee. Worked on a 500-worker contractor at a $65,000 average wage and 30% annual turnover. Swap in your own headcount, wage, turnover, and absence data and the arithmetic holds.
+WHERE IT LANDS — Six places behavioral risk shows up on the books
+Published construction industry figures, not CareOrbit outcomes. Your own loss runs will differ.
+01 Workers' compensation — Mental-health-linked injuries cost 2.3 times more and last twice as long. (NCCI)
+02 Lost days of work — Depression and distress drive roughly five missed workdays per worker each year. (NIOSH)
+03 Insurance premiums — Behavioral-health-related claims raise premiums an estimated 10–15%. (Actuarial benchmarks)
+04 Turnover and retention — Replacing a skilled tradesperson costs 20–40% of annual wages. (CII)
+05 Productivity and job-site errors — Stress and fatigue contribute to an estimated 70% of job-site mistakes. (CPWR)
+06 Crisis response — The one outcome with no cost to recover, only to absorb, and the one earliest awareness reaches first. (CDC, CFMA)
+$195K–$325K — RETAINING TEN WORKERS A YEAR — A two-point cut in a 30% turnover rate on 500 workers keeps ten skilled people. At a $65,000 wage, a conservative trade replacement cost of 30–50% returns $19.5K to $32.5K each. (Replacement cost benchmarks: CII, SHRM, Gallup)
+$260 — COST OF ONE MISSED DAY, PER WORKER — A $65,000 wage over roughly 250 working days. Multiply by the absence days your safety and HR leads already track, then by the share behavioral risk drives. (Your absence data; wage-based day rate)
+Put your own headcount, wage, turnover, absence days, and claims spend in and the model totals all three lines.
+Run the numbers
+Replacement-cost ranges are published HR benchmarks: SHRM and Gallup put full replacement at 50–200% of annual salary depending on role, and a conservative frontline figure is 30–50% of annual wage. Absence, incident, and claims values are yours; CareOrbit makes no claim about them. [Placeholder: engagement and retention effect of a behavioral safety orbit, to be measured in a first employer deployment.] Every dollar figure here is arithmetic on the assumptions shown, not a CareOrbit performance claim.
+20 minutes. Your crews, our platform.
+No demo script, no obligation. Twenty minutes with your safety and benefits leads. We hear where behavioral risk is showing up, show you where an orbit would sit, and you decide whether it is worth a second conversation.
+Book a 20-minute intro call
+What to bring
+Headcount, average wage, and turnover for one site or crew
+Absence days and recordables your leads already track
+The crisis line, EAP, and clinical resources you want workers routed to
+Outcomes &amp; ROI
+NOTE  URL: Outcomes.dc.html (nav: Outcomes &amp; ROI). The single evidence hub, meant to be sent to a CFO or committee: the controlled-trial stats, the cardiac-rehab result set against its revenue model, where ROI shows up, an Engagement Index reporting mock, and case-study / asset cards (several marked 'Coming soon').
+OUTCOMES &amp; ROI
+Every orbit is designed backwards from a measurable outcome.
+At least one desired outcome and its financial ROI, chosen before the build starts, with trackable reporting that continuously proves both the human and financial value. This page holds all the real evidence in one place you can send to your CFO or committee.
+The controlled clinical trial.
+A controlled clinical trial at Siteman Cancer Center, in hepatobiliary surgery, measured what a CareOrbit journey changes for patients and the care team.
++65% patient understanding of treatment plan and side effects
+9 in 10 reported improved recovery navigation
+−53% patient calls to the office
++22% patient satisfaction
+−41% re-admission rate
+CONTROLLED CLINICAL TRIAL AT SITEMAN CANCER CENTER
+[Placeholder: trial methodology summary, pending publication decision]
+THE CARDIAC REHAB RESULT
++20–40% year-over-year enrollment. That part is a result.
+CareOrbit engagement work at Siteman produced a 20–40% year-over-year increase in monthly Cardiac Rehab program enrollment. The revenue math on the right is a model built on that lift, and it is labeled as one.
+See the Cardiology orbit →
+THE MODEL, SHOWN AS A MODEL
+25 additional starts per quarter
+× 36 reimbursable sessions
+× $100 Medicare reimbursement per session
+= $90,000 per quarter, per location
+A projection built on the enrollment lift, not a customer result. Reimbursement figure pending 2026 confirmation.
+Where the ROI shows up.
+Three places an orbit pays for itself, whatever the service line.
+Throughput &amp; preparedness
+Fewer cancellations, delays, and no-shows
+Prepared patients protect OR, chair, and clinic capacity
+Reduced manual outreach for stretched staff
+Quality &amp; value-based care
+Stronger value-based care performance
+Outcome documentation quality contracts pay on
+PROMs readiness without added FTEs
+Visibility
+Adoption, completion, and drop-off, measured
+Credible ROI narratives for boards and payers
+Rising-risk patients surfaced early
+REPORTING, SHOWN
+"Trackable" lands harder when you can see the tracking.
+Every patient carries an Engagement Index: one at-a-glance score, broken into knowledge, feeling, and actions, flagging topics not yet engaged or past due. Program dashboards roll it up across every orbit, and any view exports in one click.
+Engagement Index · J. Patient — 8.2
+Knowledge 8.8 / Feeling 7.6 / Actions 8.1
+2 topics past due: "Managing side effects", "Your 2-minute check-in"
+CASE STUDY
+WashU / Siteman: three orbits live
+[Placeholder: case study write-up in progress]
+Coming soon
+ROI OVERVIEW
+Cardiac Rehab ROI overview
+[Placeholder: asset in production; the math exists]
+Coming soon
+DOWNLOAD
+Platform Infosheet
+The one-page overview of how orbits work, deploy, and measure.
+Request by email →
+Walk through the numbers for your service line.
+20 minutes, your goals mapped against a proven blueprint, and the outcomes an orbit would target for you.
+Book a 20-minute intro call
+About
+NOTE  URL: About.dc.html (nav: About). Company and leadership page. Four leadership bios; the headshots are drag-and-drop image slots (only Michael's is filled so far). Bios are drawn from public profiles and flagged to confirm before launch.
+ABOUT
+Ten years building patient engagement that health focused organizations can actually run.
+CareOrbit is a Digital Patient Engagement Platform designed to support any patient care journey through education, understanding, motivation, and insight-driven improvement. We are a Total Orbit company, built in St. Louis, shaped by more than a decade of work alongside Washington University, Siteman Cancer Center, and BJC HealthCare.
+Leadership
+Lean, senior, and hands-on with every client. The people you meet on the first call are the people who build your orbit.
+Michael Margraf — CEO
+Michael runs all facets of the business and stays personally involved in every client relationship. He has spent nearly 20 years leading technology startups, including as CEO of FireHydrant Mobile and co-founder of OSI. He holds a BBA from Washington University in St. Louis and serves on the board of CaringBoost.
+Jeff Coburn — Co-founder &amp; Chief Strategy Officer
+Jeff is the co-inventor of the orbit and heads the engagement side of the company: strategy, content, and how every orbit earns a patient's attention. His career spans creative strategy and engagement leadership for agencies and corporations, most recently as Principal at Ponder Concepts.
+David Scott — Co-founder
+David is a Fortune 500 executive and serial entrepreneur with multiple exits, a board member across several companies, and a former accelerator leader. He holds a J.D., cum laude, from St. Louis University School of Law and guides operations and commercial strategy.
+Jim Peck — Head of Development
+Jim leads the development team behind the CareOrbit platform, from the patient-facing orbit experience to the care-team dashboards and EHR workflow. [Placeholder: 1 to 2 more sentences on Jim's background]
+[Placeholder: real headshots. Drag each person's photo onto their circle. Bios drawn from public profiles; confirm before launch.]
+How we work.
+We have been at this for more than ten years, and we still run lean by choice. No layers between you and the people doing the work: the team that scopes your orbit builds it, launches it, and sits in your quarterly reviews.
+10+ years building patient engagement
+St. Louis roots; WashU, Siteman, and BJC relationships
+Live within large, complex health systems
+A Customer Success Manager on every care team
+Put a face to the platform.
+20 minutes with the people who will actually build your orbit.
+Book a 20-minute intro call
+Book a Call
+NOTE  URL: BookACall.dc.html. The nav 'Book a Call' CTA and every 'Book a 20-minute intro call' button across the site link here. Conversion page with a service-line picker and a placeholder for an embedded scheduler.
+20 minutes.
+Your pain points, our platform.
+No demo script, no obligation. We get introduced, hear which pain points you want to tackle, and give you a brief look at the platform, then decide together whether it's worth a second conversation.
+Not ready for a call?
+Get the info sheet for your service line by email instead.
+Send it
+Book your intro call
+Service line… (Oncology / Cardiology / Orthopedics / Women's Health / Bariatrics / Behavioral Health / Medication Therapy &amp; Adherence / Behavioral Safety (employers) / Other)
+Book a 20-minute intro call
+[Placeholder: embedded scheduler, Calendly or equivalent, wired to Michael's calendar]
+Thank You (post-booking)
+NOTE  URL: ThankYou.dc.html. Post-booking confirmation page shown after the scheduler.
+You're booked.
+A confirmation is on its way to your email. We'll do our homework on your organization before the call, and you'll leave it with a one-page summary of what an orbit would target for you.
+Browse the orbits while you wait
+How the platform works
+[Placeholder: Platform Infosheet PDF link]

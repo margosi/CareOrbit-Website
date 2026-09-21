@@ -1,0 +1,246 @@
+/* Medication Therapy page rules, ported from MedicationTherapyPage.dc.html's
+ * <helmet><style> block, in the original source order.
+ *
+ * Structurally the same sheet as behavioral-health.css: this page carries
+ * the same sections and the same live ROI calculator. See cardiology.css
+ * for why source order matters.
+ *
+ * NOT PORTED (already global in app/globals.css): body / a / html,
+ * [data-rv] and [data-rv].in, @keyframes coFloat (identical values here),
+ * and the prefers-reduced-motion [data-rv] override.
+ */
+
+@media (max-width: 1020px) {
+  [data-hdr],
+  [data-hero-grid],
+  [data-split] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  [data-feature] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  [data-feature] > * {
+    grid-column: 1/-1 !important;
+  }
+  [data-quad] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  [data-deploy] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 22px !important;
+  }
+  [data-stats] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+  }
+}
+@media (min-width: 1021px) {
+  [data-featnav] > div:first-child a {
+    border-bottom-color: transparent !important;
+  }
+}
+@media (max-width: 760px) {
+  #roi-calculator [data-hdr] {
+    padding-right: 0 !important;
+    padding-top: 44px !important;
+  }
+}
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.5in;
+  }
+  body {
+    background: #ffffff !important;
+  }
+  body.co-printing > *:not(#print-only) {
+    display: none !important;
+  }
+  #print-only {
+    display: block !important;
+    position: static !important;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  #print-only * {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  [data-print-hide] {
+    display: none !important;
+  }
+}
+#print-only {
+  display: none;
+}
+#roi-calculator input::placeholder {
+  color: rgba(15, 29, 46, 0.34);
+  font-weight: 400;
+  font-style: italic;
+}
+#roi-calculator input::-webkit-outer-spin-button,
+#roi-calculator input::-webkit-inner-spin-button {
+  opacity: 1;
+}
+@media (max-width: 1020px) {
+  [data-calc-out] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  [data-calc-total] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+@media (max-width: 640px) {
+  [data-calc-grid] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 1020px) {
+  [data-ledger] {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  [data-featnav] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  [data-featnav] > div:first-child {
+    position: static !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 4px;
+  }
+  [data-featnav] > div:first-child a {
+    border-left: none !important;
+    padding: 8px 14px 10px !important;
+    font-size: 15px !important;
+  }
+}
+@media (max-width: 620px) {
+  [data-quad] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-deploy] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-deploy] > * {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+  [data-stats] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 960px) {
+  [data-catalog] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0 32px !important;
+  }
+}
+@media (max-width: 620px) {
+  [data-catalog] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (min-width: 1021px) {
+  [data-hdr] > div:first-child:has(> h2) {
+    display: contents !important;
+  }
+  [data-hdr] > div:first-child:has(> h2) > div:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 12px;
+  }
+  [data-hdr] > div:first-child:has(> h2) > h2 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+  [data-hdr] > div:first-child:has(> h2) + * {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+  [data-hdr]:has(> div:first-child > h2) {
+    row-gap: 0 !important;
+  }
+}
+@media (max-width: 1020px) {
+  [data-start] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  [data-start] > a {
+    justify-self: start;
+  }
+}
+@media (max-width: 940px) {
+  [data-oneline] {
+    white-space: normal !important;
+    text-wrap: balance !important;
+    max-width: 640px !important;
+  }
+}
+@media (max-width: 1020px) {
+  [data-deploy2] {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+}
+@media (max-width: 900px) {
+  [data-three] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-arrow] {
+    display: none !important;
+  }
+  [data-two] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  [data-conn] {
+    display: none !important;
+  }
+}
+@media (max-width: 700px) {
+  [data-deploy2] [data-three] {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+}
+@media (max-width: 1020px) {
+  [data-value] {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+  [data-povrow] {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  [data-two] {
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+}
+@media (max-width: 1100px) {
+  [data-stat5] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px !important;
+  }
+}
+@media (max-width: 700px) {
+  [data-stat5] {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 820px) {
+  [data-study] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}

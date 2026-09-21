@@ -1,0 +1,50 @@
+# CareOrbit — repository root.
+#
+# The Next.js app is careorbit-next/ (Vercel Root Directory). v2-maven/ is
+# the legacy site being replaced, kept as the migration source of truth and
+# as what the verification baselines are regenerated from.
+
+# dependencies and build output
+node_modules/
+.next/
+out/
+build/
+
+# secrets. .env.example holds names only and MUST stay committed.
+.env*
+!.env.example
+
+# Verification artefacts: regenerable or duplicated, and large.
+#   reference/ is a byte-identical copy of v2-maven/, which IS committed.
+#   baseline/ is 145 screenshots, rebuilt with scripts/capture_baseline.py.
+migration/reference/
+migration/baseline/
+#   page-check/ is 365 MB of verify_page.py output, rewritten on every run.
+#   chrome-check/ and typespecimen/ are kept: 2.4 MB, and they are the
+#   evidence the written reports point at.
+migration/page-check/
+
+# The Python verification harness needs playwright, which is not present in
+# the system interpreter. migration/.venv holds it; recreate with
+#   python3 -m venv migration/.venv && migration/.venv/bin/pip install playwright
+migration/.venv/
+
+# Source material: exclude the bulk, keep the written sources of truth.
+#
+# uploads/ is 845 MB of PNGs and PDFs, but it also holds the brief and the
+# authoring rules that CLAUDE.md points at (brief-extracted.txt, my-*.md).
+# Ignoring the CONTENTS rather than the directory lets those be re-included;
+# ignoring `uploads/` itself would stop git descending into it at all.
+uploads/*
+!uploads/*.md
+!uploads/*.txt
+
+design_handoff_careorbit_site/*
+!design_handoff_careorbit_site/*.md
+
+scraps/
+
+# macOS / editor noise
+.DS_Store
+*.swp
+Thumbs.db

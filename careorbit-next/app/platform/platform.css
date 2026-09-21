@@ -1,0 +1,214 @@
+/* Platform-page rules, ported verbatim from Platform.dc.html's
+ * <helmet><style> block (lines 21-52).
+ *
+ * Unlike Home, none of these used style-substring selectors - the author
+ * already used data attributes here, so they carry over unchanged. Keep the
+ * breakpoints and values exactly as they are; they are the visual contract
+ * the Phase 0 baseline was captured against.
+ *
+ * Imported by app/platform/page.tsx.
+ */
+
+@media (max-width: 1020px) {
+  [data-hdr],
+  [data-two],
+  [data-comp] {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  [data-steps] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Desktop only: re-flows the section header so the eyebrow sits above the
+ * heading in column 1 and the supporting copy moves to column 2.
+ * display:contents on the wrapper lets its children become grid items. */
+@media (min-width: 1021px) {
+  [data-hdr] > div:first-child:has(> h2) {
+    display: contents !important;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) > div:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 12px;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) > h2 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  [data-hdr] > div:first-child:has(> h2) + * {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  [data-hdr]:has(> div:first-child > h2) {
+    row-gap: 0 !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  [data-lowrisk] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  [data-cards] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  [data-lowrisk] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 620px) {
+  [data-steps] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-conn] {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1020px) {
+  [data-capture-grid] {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  [data-need] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 820px) {
+  [data-pillars] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-cards],
+  [data-pillars] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 760px) {
+  [data-panel] {
+    padding: 44px 28px !important;
+    border-radius: 28px !important;
+  }
+}
+
+/* Hero collapse. Note [data-panel] appears again here with tighter values;
+ * the 1020px block wins over the 760px one for padding because it is
+ * declared later in the original sheet. Order preserved. */
+@media (max-width: 1020px) {
+  [data-hero-grid] {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+    margin-top: -64px !important;
+  }
+
+  [data-hero-grid] [data-hero-media] {
+    height: clamp(260px, 52vw, 420px) !important;
+    min-height: 0 !important;
+  }
+
+  [data-sec] {
+    margin-top: 64px !important;
+  }
+
+  [data-hero-img4] {
+    bottom: -64px !important;
+  }
+
+  [data-panel] {
+    padding: 44px 24px !important;
+    border-radius: 24px !important;
+  }
+}
+
+/* MUST stay after the 1020px block above. Both declarations carry
+ * !important, so source order decides the winner, and v2-maven declares
+ * 64px (line 36) before 48px (line 39) - so 48px wins below 700px.
+ * Grouping these by breakpoint reverses that and silently yields 64px,
+ * which shifted every section below the hero by 16px at 390px. */
+@media (max-width: 700px) {
+  [data-sec] {
+    margin-top: 48px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  [data-feat-tabs] {
+    flex-wrap: wrap;
+  }
+
+  [data-feat-tabs] button {
+    flex: 1 1 40%;
+  }
+}
+
+/* Phone: the four floating hero images stop being absolutely positioned and
+ * stack in normal flow instead. */
+@media (max-width: 700px) {
+  [data-hero-center] {
+    width: 100% !important;
+  }
+
+  div:has(> [data-hero-img1]) {
+    min-height: 0 !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  [data-hero-img1],
+  [data-hero-img2],
+  [data-hero-img3],
+  [data-hero-img4] {
+    position: static !important;
+    width: 100% !important;
+    border-radius: 16px !important;
+    aspect-ratio: 4 / 3 !important;
+    margin: 0 0 14px !important;
+  }
+
+  [data-hero-img1] {
+    margin-top: 28px !important;
+  }
+}
+
+/* The hero images zoom in once on load. In v2-maven the selector targeted
+ * the <image-slot> child; Figure renders a <div>, so the child selector is
+ * updated to match while keeping the animation identical. */
+[data-hero-img1] > div,
+[data-hero-img2] > div,
+[data-hero-img3] > div,
+[data-hero-img4] > div {
+  animation: heroZoom 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-hero-img1] > div,
+  [data-hero-img2] > div,
+  [data-hero-img3] > div,
+  [data-hero-img4] > div {
+    animation: none;
+  }
+
+  [data-hero-glow] {
+    animation: none !important;
+  }
+}

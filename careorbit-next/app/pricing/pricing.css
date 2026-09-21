@@ -1,0 +1,9 @@
+/* Plan-page rules, ported verbatim from the four Pricing pages'
+ * <helmet><style> blocks (all four declare the same rule). */
+@media (max-width: 1020px) {
+  [data-plan-grid] {
+    grid-template-columns: 1fr !important;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}

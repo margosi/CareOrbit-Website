@@ -1,0 +1,98 @@
+/* Home-page rules, ported verbatim from Home.dc.html's <helmet><style>.
+ *
+ * These are DESCENDANT hover rules ([data-ex-card]:hover [data-ex-sub]), so
+ * they cannot live in lib/hoverStyles.ts - that registry only handles simple
+ * :hover on the element itself. They stay as real CSS, exactly as authored.
+ *
+ * Imported by app/page.tsx. Selectors are Home-specific data attributes.
+ */
+
+/* --- orbit gallery tiles: image scales on card hover ------------------- */
+[data-tile-img] {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: 50% 50%;
+  will-change: transform;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+[data-tile-img],
+[data-tile-img] > div {
+  width: 100%;
+  height: 100%;
+}
+
+[data-tile-card]:hover [data-tile-img] {
+  transform: scale(1.05);
+}
+
+/* --- explore cards ------------------------------------------------------
+ * NOTE: on the orbit gallery tiles the expand-on-hover animation is
+ * DISABLED (per CLAUDE.md) - their description and Learn more link are
+ * always visible. The explore cards below DO still expand.
+ */
+[data-ex-img] {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: 50% 50%;
+  will-change: transform;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+
+[data-ex-img],
+[data-ex-img] > div {
+  width: 100%;
+  height: 100%;
+}
+
+[data-ex-card]:hover [data-ex-img] {
+  transform: scale(1.05);
+}
+
+[data-ex-copy] {
+  transition: padding-bottom 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-ex-card]:hover [data-ex-copy] {
+  padding-bottom: 36px;
+}
+
+[data-ex-sub],
+[data-ex-link] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.5s ease 0.05s,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+}
+
+/* grid-template-rows 0fr -> 1fr animates the reveal without a fixed height */
+[data-ex-reveal] {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-ex-card]:hover [data-ex-reveal] {
+  grid-template-rows: 1fr;
+}
+
+[data-ex-card]:hover [data-ex-sub],
+[data-ex-card]:hover [data-ex-link] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-ex-card]:hover [data-ex-link] {
+  transition-delay: 0.12s;
+}
+
+/* --- hero chat box ------------------------------------------------------
+ * Hidden below 1020px in the original. Kept here rather than in
+ * responsive.css because it is Home-only.
+ */
+@media (max-width: 1020px) {
+  [data-hero-chat] {
+    display: none !important;
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice">
+  <g fill="none" stroke="#FFFFFF" stroke-width="1.1">
+    <path stroke-opacity=".08" d="M-120 800 C 320 640 880 260 1520 60"></path>
+    <path stroke-opacity=".06" d="M-120 140 C 420 320 980 680 1520 880"></path>
+    <ellipse stroke-opacity=".07" cx="1080" cy="140" rx="640" ry="360" transform="rotate(-16 1080 140)"></ellipse>
+    <ellipse stroke-opacity=".05" cx="260" cy="820" rx="560" ry="300" transform="rotate(-20 260 820)"></ellipse>
+  </g>
+</svg>

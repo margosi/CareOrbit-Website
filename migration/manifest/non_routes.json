@@ -1,0 +1,16 @@
+{
+  "BehavioralSafety-standalone.html": "10.9 MB self-contained export",
+  "CardiologyPage v1.dc.html": "superseded draft",
+  "CommunityResearch v1.dc.html": "superseded draft",
+  "OncologyPage-print.html": "print template (preserved per decision 3)",
+  "OrbitPage.dc.html": "dead code - nothing imports it",
+  "OrthopedicsPage-print.html": "print template (preserved per decision 3)",
+  "PancreaticStudy-print.dc.html": "print template (preserved per decision 3)",
+  "PrimaryCareSheet-print.dc.html": "print template (preserved per decision 3)",
+  "PritikinPilotSummaryPDF-print.dc.html": "print template (preserved per decision 3)",
+  "PritikinPilotSummaryPDF.dc.html": "print template (preserved per decision 3)",
+  "SiteFooter.dc.html": "shared component",
+  "SiteNav.dc.html": "shared component",
+  "StudyRequest.dc.html": "shared component",
+  "archive/Platform-tabs.dc.html": "archived draft"
+}

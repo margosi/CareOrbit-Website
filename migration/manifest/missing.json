@@ -1,0 +1,46 @@
+{
+  "download_filenames_not_paths": [
+    "CareOrbit-Assess-Info-Sheet.pdf",
+    "CareOrbit-Bariatrics-Info-Sheet.pdf",
+    "CareOrbit-Behavioral-Health-Info-Sheet.pdf",
+    "CareOrbit-Capture-Info-Sheet.pdf",
+    "CareOrbit-Cardiology-Info-Sheet.pdf",
+    "CareOrbit-Community-Research-Info-Sheet.pdf",
+    "CareOrbit-Data-Info-Sheet.pdf",
+    "CareOrbit-Engage-Info-Sheet.pdf",
+    "CareOrbit-Medication-Therapy-Info-Sheet.pdf",
+    "CareOrbit-Oncology-Info-Sheet.pdf",
+    "CareOrbit-Orthopedics-Info-Sheet.pdf",
+    "CareOrbit-Primary-Care-Info-Sheet.pdf",
+    "CareOrbit-Surgical-Support-Info-Sheet.pdf",
+    "CareOrbit-Womens-Health-Info-Sheet.pdf"
+  ],
+  "missing_assets": {
+    "parsed.js": {
+      "affects_production": false,
+      "production_referrers": [],
+      "referenced_by": [
+        "support.js"
+      ]
+    },
+    "sheets/careorbit-primary-care-2-page.pdf": {
+      "affects_production": true,
+      "production_referrers": [
+        "PrimaryCarePage.dc.html"
+      ],
+      "referenced_by": [
+        "PrimaryCarePage.dc.html"
+      ]
+    }
+  },
+  "missing_linked_pages": {
+    "Capture.dc.html": {
+      "affects_production": false,
+      "production_referrers": [],
+      "referenced_by": [
+        "archive/Platform-tabs.dc.html"
+      ]
+    }
+  },
+  "note": "affects_production=false means the only referrers are archived drafts or the dc-runtime's own source. 'parsed.js' is a known false positive: it is the property access parsed.js inside support.js, not a file path."
+}
