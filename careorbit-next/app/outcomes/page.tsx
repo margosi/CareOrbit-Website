@@ -516,237 +516,237 @@ export default function OutcomesPage() {
   return (
     <div style={{ fontFamily: "Inter,sans-serif", background: "#FAF8F4" }}>
       <SiteNav active="outcomes" />
-
-      <div data-screen-label="Outcomes and ROI" style={{ width: "100%" }}>
-        {/* ------------------------------------------------------- hero -- */}
-        {/* data-pad="page-top": v2-maven's SiteNav stylesheet matched
+      <main id="main-content">
+        <div data-screen-label="Outcomes and ROI" style={{ width: "100%" }}>
+          {/* ------------------------------------------------------- hero -- */}
+          {/* data-pad="page-top": v2-maven's SiteNav stylesheet matched
             div[style*="padding: 76px 28px"] and reduced padding-top below
             1020px. Without the tag the hero kept 76px and pushed the whole
             page down 40px at 768px. */}
-        <div
-          data-pad="page-top"
-          style={{
-            ...WRAP,
-            padding: "76px 28px 56px",
-            display: "flex",
-            flexDirection: "column",
-            gap: 22,
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: "Lato,sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(36px,4.4vw,54px)",
-              lineHeight: 1.06,
-              letterSpacing: "-0.025em",
-              margin: 0,
-              maxWidth: 880,
-              textWrap: "balance",
-            }}
-          >
-            Every orbit is designed <em style={SERIF}>backwards</em> from a
-            measurable outcome.
-          </h1>
-          <p
-            style={{
-              fontSize: 17.5,
-              lineHeight: 1.65,
-              color: "rgba(15,29,46,.7)",
-              margin: 0,
-              maxWidth: 760,
-              textWrap: "pretty",
-            }}
-          >
-            The outcomes that matter most to your organization, and their
-            financial ROI, chosen before the build starts, with trackable
-            reporting that continuously proves both the human and financial
-            value. This page holds all the real evidence in one place you can
-            send to your CFO or committee.
-          </p>
-        </div>
-
-        {/* ----------------------------------------------- how we work -- */}
-        <Reveal style={{ position: "relative", margin: "12px 0 56px" }}>
-          <Figure
-            src="/images/how-we-work-bg.webp"
-            alt=""
-            radius={0}
-            shape="rect"
-            placeholder="[Placeholder: full-width care team photo]"
-            sizes="100vw"
-            style={{
-              position: "absolute",
-              inset: 0,
-              width: "100%",
-              height: "100%",
-            }}
-          />
           <div
+            data-pad="page-top"
             style={{
-              position: "absolute",
-              inset: 0,
-              background: "rgba(15,29,46,.62)",
-            }}
-          />
-          <div style={{ position: "relative", padding: "110px 0" }}>
-            <div style={{ ...WRAP, padding: "48px 28px 0" }}>
-              <h2
-                style={{
-                  fontFamily: "Lato,sans-serif",
-                  fontWeight: 300,
-                  fontSize: "clamp(30px,3.6vw,42px)",
-                  lineHeight: 1.05,
-                  letterSpacing: "-0.02em",
-                  margin: "0 0 34px",
-                  color: "#FFFFFF",
-                }}
-              >
-                How we <em style={{ ...SERIF, color: "#F2B8C6" }}>work</em>.
-              </h2>
-            </div>
-            <div style={{ borderTop: "1px solid rgba(255,255,255,.28)" }}>
-              <div style={{ ...WRAP, padding: "0 28px" }}>
-                <div
-                  data-how4=""
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(4,minmax(0,1fr))",
-                  }}
-                >
-                  {HOW.map((h) => (
-                    <div
-                      key={h.n}
-                      style={{
-                        borderLeft: "1px solid rgba(255,255,255,.28)",
-                        padding: "26px 24px 38px",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: 12,
-                        boxSizing: "border-box",
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: 36,
-                          height: 36,
-                          borderRadius: "50%",
-                          background: "rgba(255,255,255,.16)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontFamily: "'Source Serif 4',serif",
-                          fontStyle: "italic",
-                          fontWeight: 600,
-                          fontSize: 15,
-                          color: "#F2B8C6",
-                        }}
-                      >
-                        {h.n}
-                      </div>
-                      <div
-                        style={{
-                          fontFamily: "Lato,sans-serif",
-                          fontWeight: 700,
-                          fontSize: "clamp(17px,1.6vw,20px)",
-                          lineHeight: 1.22,
-                          letterSpacing: "-0.01em",
-                          color: "#FFFFFF",
-                          textWrap: "balance",
-                        }}
-                      >
-                        {h.t}
-                      </div>
-                      <div
-                        style={{
-                          fontSize: 13.5,
-                          lineHeight: 1.6,
-                          color: "#D5DEE8",
-                          flex: 1,
-                          textWrap: "pretty",
-                        }}
-                      >
-                        {h.d}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-
-        <OutcomesTabs outcomes={outcomesTab} roi={roiTab} />
-
-        {/* -------------------------------------------------------- CTA -- */}
-        <div style={{ ...WRAP, padding: "0 28px 104px" }}>
-          <Reveal
-            data-pad="section"
-            style={{
-              background:
-                "#0F1D2E url(/brand/arc-lines.svg) center/cover no-repeat",
-              borderRadius: 40,
-              padding: "80px 64px",
+              ...WRAP,
+              padding: "76px 28px 56px",
               display: "flex",
               flexDirection: "column",
+              gap: 22,
               alignItems: "center",
-              gap: 16,
               textAlign: "center",
             }}
           >
-            <h2
+            <h1
               style={{
                 fontFamily: "Lato,sans-serif",
                 fontWeight: 900,
-                fontSize: "clamp(28px,3.4vw,42px)",
-                lineHeight: 1.08,
-                letterSpacing: "-0.02em",
+                fontSize: "clamp(36px,4.4vw,54px)",
+                lineHeight: 1.06,
+                letterSpacing: "-0.025em",
                 margin: 0,
-                color: "#FFFFFF",
+                maxWidth: 880,
                 textWrap: "balance",
               }}
             >
-              Walk through the numbers for{" "}
-              <em style={{ ...SERIF, fontWeight: 500, color: "#F2B8C6" }}>
-                your
-              </em>{" "}
-              service line.
-            </h2>
+              Every orbit is designed <em style={SERIF}>backwards</em> from a
+              measurable outcome.
+            </h1>
             <p
               style={{
-                fontSize: 16,
-                lineHeight: 1.6,
-                color: "#B9C8D8",
+                fontSize: 17.5,
+                lineHeight: 1.65,
+                color: "rgba(15,29,46,.7)",
                 margin: 0,
-                maxWidth: 560,
+                maxWidth: 760,
+                textWrap: "pretty",
               }}
             >
-              20 minutes, your goals mapped against a proven blueprint, and the
-              outcomes an orbit would target for you.
+              The outcomes that matter most to your organization, and their
+              financial ROI, chosen before the build starts, with trackable
+              reporting that continuously proves both the human and financial
+              value. This page holds all the real evidence in one place you can
+              send to your CFO or committee.
             </p>
-            <Link
-              href="/book-a-call?src=outcomes"
-              className={hv("ctaWhite")}
+          </div>
+
+          {/* ----------------------------------------------- how we work -- */}
+          <Reveal style={{ position: "relative", margin: "12px 0 56px" }}>
+            <Figure
+              src="/images/how-we-work-bg.webp"
+              alt=""
+              radius={0}
+              shape="rect"
+              placeholder="[Placeholder: full-width care team photo]"
+              sizes="100vw"
               style={{
-                textDecoration: "none",
-                fontSize: 16,
-                fontWeight: 600,
-                color: "#0F1D2E",
-                background: "#FFFFFF",
-                padding: "17px 32px",
-                borderRadius: 999,
-                marginTop: 6,
-                transition: "background .2s,color .2s,transform .2s",
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "rgba(15,29,46,.62)",
+              }}
+            />
+            <div style={{ position: "relative", padding: "110px 0" }}>
+              <div style={{ ...WRAP, padding: "48px 28px 0" }}>
+                <h2
+                  style={{
+                    fontFamily: "Lato,sans-serif",
+                    fontWeight: 300,
+                    fontSize: "clamp(30px,3.6vw,42px)",
+                    lineHeight: 1.05,
+                    letterSpacing: "-0.02em",
+                    margin: "0 0 34px",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  How we <em style={{ ...SERIF, color: "#F2B8C6" }}>work</em>.
+                </h2>
+              </div>
+              <div style={{ borderTop: "1px solid rgba(255,255,255,.28)" }}>
+                <div style={{ ...WRAP, padding: "0 28px" }}>
+                  <div
+                    data-how4=""
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(4,minmax(0,1fr))",
+                    }}
+                  >
+                    {HOW.map((h) => (
+                      <div
+                        key={h.n}
+                        style={{
+                          borderLeft: "1px solid rgba(255,255,255,.28)",
+                          padding: "26px 24px 38px",
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 12,
+                          boxSizing: "border-box",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: 36,
+                            height: 36,
+                            borderRadius: "50%",
+                            background: "rgba(255,255,255,.16)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontFamily: "'Source Serif 4',serif",
+                            fontStyle: "italic",
+                            fontWeight: 600,
+                            fontSize: 15,
+                            color: "#F2B8C6",
+                          }}
+                        >
+                          {h.n}
+                        </div>
+                        <div
+                          style={{
+                            fontFamily: "Lato,sans-serif",
+                            fontWeight: 700,
+                            fontSize: "clamp(17px,1.6vw,20px)",
+                            lineHeight: 1.22,
+                            letterSpacing: "-0.01em",
+                            color: "#FFFFFF",
+                            textWrap: "balance",
+                          }}
+                        >
+                          {h.t}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 13.5,
+                            lineHeight: 1.6,
+                            color: "#D5DEE8",
+                            flex: 1,
+                            textWrap: "pretty",
+                          }}
+                        >
+                          {h.d}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          <OutcomesTabs outcomes={outcomesTab} roi={roiTab} />
+
+          {/* -------------------------------------------------------- CTA -- */}
+          <div style={{ ...WRAP, padding: "0 28px 104px" }}>
+            <Reveal
+              data-pad="section"
+              style={{
+                background:
+                  "#0F1D2E url(/brand/arc-lines.svg) center/cover no-repeat",
+                borderRadius: 40,
+                padding: "80px 64px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 16,
+                textAlign: "center",
               }}
             >
-              Book a 20-minute intro call
-            </Link>
-          </Reveal>
+              <h2
+                style={{
+                  fontFamily: "Lato,sans-serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(28px,3.4vw,42px)",
+                  lineHeight: 1.08,
+                  letterSpacing: "-0.02em",
+                  margin: 0,
+                  color: "#FFFFFF",
+                  textWrap: "balance",
+                }}
+              >
+                Walk through the numbers for{" "}
+                <em style={{ ...SERIF, fontWeight: 500, color: "#F2B8C6" }}>
+                  your
+                </em>{" "}
+                service line.
+              </h2>
+              <p
+                style={{
+                  fontSize: 16,
+                  lineHeight: 1.6,
+                  color: "#B9C8D8",
+                  margin: 0,
+                  maxWidth: 560,
+                }}
+              >
+                20 minutes, your goals mapped against a proven blueprint, and
+                the outcomes an orbit would target for you.
+              </p>
+              <Link
+                href="/book-a-call?src=outcomes"
+                className={hv("ctaWhite")}
+                style={{
+                  textDecoration: "none",
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: "#0F1D2E",
+                  background: "#FFFFFF",
+                  padding: "17px 32px",
+                  borderRadius: 999,
+                  marginTop: 6,
+                  transition: "background .2s,color .2s,transform .2s",
+                }}
+              >
+                Book a 20-minute intro call
+              </Link>
+            </Reveal>
+          </div>
         </div>
-      </div>
-
+      </main>
       <SiteFooter />
     </div>
   );

@@ -119,7 +119,9 @@ export function SiteNav({
   };
 
   return (
-    <div
+    /* <header> rather than <div>: this is the site banner landmark. Both
+     * elements are display:block by default, so nothing moves. */
+    <header
       style={
         {
           fontFamily: "Inter,sans-serif",
@@ -182,7 +184,8 @@ export function SiteNav({
         </div>
       )}
 
-      <div
+      <nav
+        aria-label="Primary"
         data-nav-wrap=""
         style={
           {
@@ -647,7 +650,7 @@ export function SiteNav({
             </button>
           </div>
         </div>
-      </div>
+      </nav>
 
       {mobile && (
         <>
@@ -765,7 +768,7 @@ export function SiteNav({
           </div>
         </>
       )}
-    </div>
+    </header>
   );
 }
 

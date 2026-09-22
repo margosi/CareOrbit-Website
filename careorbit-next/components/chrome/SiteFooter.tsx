@@ -28,7 +28,9 @@ const NO_PREFETCH = { prefetch: false } as const;
 
 export function SiteFooter() {
   return (
-    <div style={{ background: "#FAF8F4" }}>
+    /* <footer> rather than <div>: this is the contentinfo landmark.
+     * display:block on both, so the rendering is unchanged. */
+    <footer style={{ background: "#FAF8F4" }}>
       <div
         style={{
           background:
@@ -188,7 +190,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

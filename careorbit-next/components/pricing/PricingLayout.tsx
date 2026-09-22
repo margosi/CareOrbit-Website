@@ -37,265 +37,265 @@ export function PricingLayout({
       }}
     >
       <SiteNav active="pricing" />
-
-      {/* data-pad="page-top": v2-maven's SiteNav stylesheet matched
+      <main id="main-content">
+        {/* data-pad="page-top": v2-maven's SiteNav stylesheet matched
           div[style*="padding: 72px 28px"] and cut padding-top below 1020px.
           Without it the plan grid sat 40px low at 768px. */}
-      <div
-        data-screen-label={screenLabel}
-        data-pad="page-top"
-        style={{
-          maxWidth: 1280,
-          width: "100%",
-          margin: "0 auto",
-          padding: "72px 28px 110px",
-          boxSizing: "border-box",
-          flex: 1,
-        }}
-      >
         <div
+          data-screen-label={screenLabel}
+          data-pad="page-top"
           style={{
-            textAlign: "center",
-            maxWidth: 720,
-            margin: "0 auto 58px",
-            display: "flex",
-            flexDirection: "column",
-            gap: 18,
+            maxWidth: 1280,
+            width: "100%",
+            margin: "0 auto",
+            padding: "72px 28px 110px",
+            boxSizing: "border-box",
+            flex: 1,
           }}
         >
           <div
             style={{
-              fontSize: 13,
-              fontWeight: 700,
-              letterSpacing: ".12em",
-              textTransform: "uppercase",
-              color: "#B05A46",
+              textAlign: "center",
+              maxWidth: 720,
+              margin: "0 auto 58px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 18,
             }}
           >
-            {kicker}
-          </div>
-          <h1
-            style={{
-              fontFamily: "Lato,sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(38px,4.8vw,58px)",
-              lineHeight: 1.06,
-              letterSpacing: "-0.025em",
-              margin: 0,
-              textWrap: "pretty",
-            }}
-          >
-            {heading}
-          </h1>
-          <p
-            style={{
-              fontSize: 17,
-              lineHeight: 1.65,
-              color: "rgba(15,29,46,.7)",
-              margin: 0,
-              textWrap: "pretty",
-            }}
-          >
-            {blurb}
-          </p>
-        </div>
-
-        <div
-          data-plan-grid=""
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gap: 26,
-            alignItems: "stretch",
-          }}
-        >
-          {plans.map((p) => (
-            <Reveal
-              key={p.name}
+            <div
               style={{
-                background: "#FFFFFF",
-                border: "1px solid rgba(15,29,46,.07)",
-                borderRadius: 28,
-                padding: "34px 32px 38px",
-                display: "flex",
-                flexDirection: "column",
-                gap: 0,
-                boxShadow: "none",
-                position: "relative",
+                fontSize: 13,
+                fontWeight: 700,
+                letterSpacing: ".12em",
+                textTransform: "uppercase",
+                color: "#B05A46",
               }}
             >
-              <PlanRings ring2={p.ring2} ring3={p.ring3} />
-              <div
+              {kicker}
+            </div>
+            <h1
+              style={{
+                fontFamily: "Lato,sans-serif",
+                fontWeight: 900,
+                fontSize: "clamp(38px,4.8vw,58px)",
+                lineHeight: 1.06,
+                letterSpacing: "-0.025em",
+                margin: 0,
+                textWrap: "pretty",
+              }}
+            >
+              {heading}
+            </h1>
+            <p
+              style={{
+                fontSize: 17,
+                lineHeight: 1.65,
+                color: "rgba(15,29,46,.7)",
+                margin: 0,
+                textWrap: "pretty",
+              }}
+            >
+              {blurb}
+            </p>
+          </div>
+
+          <div
+            data-plan-grid=""
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: 26,
+              alignItems: "stretch",
+            }}
+          >
+            {plans.map((p) => (
+              <Reveal
+                key={p.name}
                 style={{
-                  fontFamily: "Lato,sans-serif",
-                  fontWeight: 900,
-                  fontSize: 26,
-                  letterSpacing: "-0.01em",
+                  background: "#FFFFFF",
+                  border: "1px solid rgba(15,29,46,.07)",
+                  borderRadius: 28,
+                  padding: "34px 32px 38px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 0,
+                  boxShadow: "none",
+                  position: "relative",
                 }}
               >
-                {p.name}
-              </div>
-              <div
-                style={{
-                  fontSize: 15,
-                  color: "rgba(15,29,46,.66)",
-                  marginTop: 6,
-                  lineHeight: 1.5,
-                }}
-              >
-                {p.tag}
-              </div>
-              <div
-                style={{
-                  fontSize: 14,
-                  color: "rgba(15,29,46,.55)",
-                  marginTop: 16,
-                  lineHeight: 1.55,
-                  minHeight: 66,
-                  /* Pages with a price line carry the bottom gap on that line
-                   * instead; pages without it put the 30px here. */
-                  ...(p.price ? null : { marginBottom: 30 }),
-                }}
-              >
-                {p.scope}
-              </div>
-              {p.price && (
+                <PlanRings ring2={p.ring2} ring3={p.ring3} />
                 <div
                   style={{
-                    fontSize: 13.5,
-                    fontWeight: 600,
-                    color: "#B05A46",
-                    marginTop: 14,
-                    marginBottom: 24,
-                    lineHeight: 1.5,
+                    fontFamily: "Lato,sans-serif",
+                    fontWeight: 900,
+                    fontSize: 26,
+                    letterSpacing: "-0.01em",
                   }}
                 >
-                  {p.price}
+                  {p.name}
                 </div>
-              )}
-              <Link
-                href={p.href}
-                className={hv("planCta")}
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  textDecoration: "none",
-                  fontSize: 15.5,
-                  fontWeight: 600,
-                  color: "#FFFFFF",
-                  background: "#0F1D2E",
-                  borderRadius: 12,
-                  padding: "16px 24px",
-                  transition: "background .2s,transform .2s",
-                }}
-              >
-                Get a quote
-              </Link>
-              <div
-                style={{
-                  height: 1,
-                  background: "rgba(15,29,46,.08)",
-                  margin: "28px 0 22px",
-                }}
-              />
-              {p.inherit && (
                 <div
                   style={{
                     fontSize: 15,
-                    fontWeight: 600,
-                    marginBottom: 14,
+                    color: "rgba(15,29,46,.66)",
+                    marginTop: 6,
+                    lineHeight: 1.5,
                   }}
                 >
-                  {p.inherit}
+                  {p.tag}
                 </div>
-              )}
-              <div
-                style={{ display: "flex", flexDirection: "column", gap: 12 }}
-              >
-                {p.items.map((it) => (
-                  <div
-                    key={it}
-                    style={{
-                      display: "flex",
-                      gap: 11,
-                      alignItems: "flex-start",
-                    }}
-                  >
-                    <CheckMark />
-                    <span
-                      style={{
-                        fontSize: 14.5,
-                        lineHeight: 1.55,
-                        color: "rgba(15,29,46,.82)",
-                      }}
-                    >
-                      {it}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              {p.assess && (
-                <div style={{ marginTop: "auto", paddingTop: 26 }}>
+                <div
+                  style={{
+                    fontSize: 14,
+                    color: "rgba(15,29,46,.55)",
+                    marginTop: 16,
+                    lineHeight: 1.55,
+                    minHeight: 66,
+                    /* Pages with a price line carry the bottom gap on that line
+                     * instead; pages without it put the 30px here. */
+                    ...(p.price ? null : { marginBottom: 30 }),
+                  }}
+                >
+                  {p.scope}
+                </div>
+                {p.price && (
                   <div
                     style={{
-                      background: "#FAF8F4",
-                      border: "1px dashed rgba(15,29,46,.18)",
-                      borderRadius: 16,
-                      padding: "16px 18px",
+                      fontSize: 13.5,
+                      fontWeight: 600,
+                      color: "#B05A46",
+                      marginTop: 14,
+                      marginBottom: 24,
+                      lineHeight: 1.5,
                     }}
                   >
+                    {p.price}
+                  </div>
+                )}
+                <Link
+                  href={p.href}
+                  className={hv("planCta")}
+                  style={{
+                    display: "block",
+                    textAlign: "center",
+                    textDecoration: "none",
+                    fontSize: 15.5,
+                    fontWeight: 600,
+                    color: "#FFFFFF",
+                    background: "#0F1D2E",
+                    borderRadius: 12,
+                    padding: "16px 24px",
+                    transition: "background .2s,transform .2s",
+                  }}
+                >
+                  Get a quote
+                </Link>
+                <div
+                  style={{
+                    height: 1,
+                    background: "rgba(15,29,46,.08)",
+                    margin: "28px 0 22px",
+                  }}
+                />
+                {p.inherit && (
+                  <div
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 600,
+                      marginBottom: 14,
+                    }}
+                  >
+                    {p.inherit}
+                  </div>
+                )}
+                <div
+                  style={{ display: "flex", flexDirection: "column", gap: 12 }}
+                >
+                  {p.items.map((it) => (
                     <div
+                      key={it}
                       style={{
-                        fontSize: 12,
-                        fontWeight: 700,
-                        letterSpacing: ".08em",
-                        textTransform: "uppercase",
-                        color: "#B05A46",
-                        marginBottom: 6,
+                        display: "flex",
+                        gap: 11,
+                        alignItems: "flex-start",
                       }}
                     >
-                      Optional add-on
+                      <CheckMark />
+                      <span
+                        style={{
+                          fontSize: 14.5,
+                          lineHeight: 1.55,
+                          color: "rgba(15,29,46,.82)",
+                        }}
+                      >
+                        {it}
+                      </span>
                     </div>
+                  ))}
+                </div>
+                {p.assess && (
+                  <div style={{ marginTop: "auto", paddingTop: 26 }}>
                     <div
                       style={{
-                        fontSize: 14,
-                        fontWeight: 600,
-                        color: "#0F1D2E",
+                        background: "#FAF8F4",
+                        border: "1px dashed rgba(15,29,46,.18)",
+                        borderRadius: 16,
+                        padding: "16px 18px",
                       }}
                     >
-                      Assess
-                    </div>
-                    <div
-                      style={{
-                        fontSize: 13.5,
-                        lineHeight: 1.55,
-                        color: "rgba(15,29,46,.66)",
-                        marginTop: 4,
-                      }}
-                    >
-                      {p.assess}
+                      <div
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 700,
+                          letterSpacing: ".08em",
+                          textTransform: "uppercase",
+                          color: "#B05A46",
+                          marginBottom: 6,
+                        }}
+                      >
+                        Optional add-on
+                      </div>
+                      <div
+                        style={{
+                          fontSize: 14,
+                          fontWeight: 600,
+                          color: "#0F1D2E",
+                        }}
+                      >
+                        Assess
+                      </div>
+                      <div
+                        style={{
+                          fontSize: 13.5,
+                          lineHeight: 1.55,
+                          color: "rgba(15,29,46,.66)",
+                          marginTop: 4,
+                        }}
+                      >
+                        {p.assess}
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </Reveal>
-          ))}
-        </div>
+                )}
+              </Reveal>
+            ))}
+          </div>
 
-        <div
-          style={{
-            textAlign: "center",
-            fontSize: 14,
-            color: "rgba(15,29,46,.55)",
-            marginTop: 44,
-            lineHeight: 1.6,
-            textWrap: "pretty",
-          }}
-        >
-          {note}
+          <div
+            style={{
+              textAlign: "center",
+              fontSize: 14,
+              color: "rgba(15,29,46,.55)",
+              marginTop: 44,
+              lineHeight: 1.6,
+              textWrap: "pretty",
+            }}
+          >
+            {note}
+          </div>
         </div>
-      </div>
-
+      </main>
       <SiteFooter />
     </div>
   );

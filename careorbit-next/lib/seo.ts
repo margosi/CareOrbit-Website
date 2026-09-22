@@ -183,30 +183,93 @@ export const PAGE_SEO: Record<string, PageSeo> = {
  * value and would look like a dead end in a search result. */
 export const NOINDEX: string[] = ["/thank-you"];
 
+/* Open Graph / Twitter image.
+ *
+ * There is no branded share card yet, and inventing one is a design task.
+ * OG_IMAGE is therefore undefined by default: a link preview then shows
+ * title and description with no picture, which is honest, rather than a
+ * cropped photograph pretending to be a share card.
+ *
+ * Set it to a 1200x630 asset under /public when the card exists, or pass
+ * `image` to metadataFor() to override a single page. Both paths feed the
+ * same absolute-URL construction, so nothing else has to change.
+ */
+export const OG_IMAGE:
+  { url: string; width: number; height: number; alt: string } | undefined =
+  undefined;
+
+export type MetadataOverrides = {
+  /** Absolute path under /public, e.g. "/images/hero-cardiology.webp". */
+  image?: string;
+  imageAlt?: string;
+  title?: string;
+  description?: string;
+  /** Point the canonical somewhere other than this route's own URL. */
+  canonical?: string;
+  noindex?: boolean;
+};
+
+export function absoluteUrl(pathname: string): string {
+  return SITE_URL + (pathname === "/" ? "" : pathname);
+}
+
 /** Metadata for one route. Call from a page's `export const metadata`. */
-export function metadataFor(route: string): Metadata {
+export function metadataFor(
+  route: string,
+  o: MetadataOverrides = {},
+): Metadata {
   const seo = PAGE_SEO[route];
   if (!seo) throw new Error(`No SEO entry for route ${route}`);
 
-  const url = SITE_URL + (route === "/" ? "" : route);
-  const noindex = NOINDEX.includes(route);
+  const url = absoluteUrl(o.canonical ?? route);
+  const noindex = o.noindex ?? NOINDEX.includes(route);
+  const title =
+    o.title ?? (route === "/" ? seo.title : `${seo.title} | ${SITE_NAME}`);
+  const description = o.description ?? seo.description;
+
+  const image = o.image
+    ? [{ url: o.image, alt: o.imageAlt ?? title }]
+    : OG_IMAGE
+      ? [
+          {
+            url: OG_IMAGE.url,
+            width: OG_IMAGE.width,
+            height: OG_IMAGE.height,
+            alt: OG_IMAGE.alt,
+          },
+        ]
+      : undefined;
 
   return {
-    title: route === "/" ? seo.title : `${seo.title} | ${SITE_NAME}`,
-    description: seo.description,
+    /* `absolute` so the root layout's title template does NOT append the
+     * site name a second time - these strings already carry it, and the
+     * exact wording is the closeout-approved set. The template stays in
+     * the layout as a safety net for any future page that sets a bare
+     * title without going through this function. */
+    title: { absolute: title },
+    description,
     alternates: { canonical: url },
-    robots: noindex ? { index: false, follow: true } : undefined,
+    robots: noindex
+      ? {
+          index: false,
+          follow: true,
+          googleBot: { index: false, follow: true },
+        }
+      : { index: true, follow: true, googleBot: { index: true, follow: true } },
     openGraph: {
       type: "website",
       siteName: SITE_NAME,
+      locale: "en_US",
       url,
-      title: route === "/" ? seo.title : `${seo.title} | ${SITE_NAME}`,
-      description: seo.description,
+      title,
+      description,
+      ...(image ? { images: image } : {}),
     },
     twitter: {
-      card: "summary_large_image",
-      title: route === "/" ? seo.title : `${seo.title} | ${SITE_NAME}`,
-      description: seo.description,
+      card: image ? "summary_large_image" : "summary",
+      title,
+      description,
+      ...(image ? { images: image.map((i) => i.url) } : {}),
     },
   };
 }
