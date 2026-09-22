@@ -22,7 +22,27 @@ export type LeadPayload = {
   src?: string;
   /** Honeypot value, passed through so the server can drop bots too. */
   website?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
 };
+
+/* Real campaign parameters, read from the current URL. Deliberately only
+ * the three utm_* keys: `?src=` is CareOrbit's own internal attribution and
+ * each form already passes it separately, so the two never get blended. */
+function utm(): Pick<LeadPayload, "utmSource" | "utmMedium" | "utmCampaign"> {
+  if (typeof location === "undefined") return {};
+  try {
+    const q = new URLSearchParams(location.search);
+    return {
+      utmSource: q.get("utm_source") ?? undefined,
+      utmMedium: q.get("utm_medium") ?? undefined,
+      utmCampaign: q.get("utm_campaign") ?? undefined,
+    };
+  } catch {
+    return {};
+  }
+}
 
 export function submitLead(payload: LeadPayload): void {
   try {
@@ -30,6 +50,7 @@ export function submitLead(payload: LeadPayload): void {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        ...utm(),
         ...payload,
         path: typeof location === "undefined" ? undefined : location.pathname,
       }),

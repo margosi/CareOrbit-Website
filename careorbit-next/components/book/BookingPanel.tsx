@@ -46,6 +46,10 @@ const INPUT: React.CSSProperties = {
   outline: "none",
 };
 
+/* Minimum time a real visitor spends before submitting. Shared by both
+ * components in this file. */
+const DWELL_MS = 3000;
+
 export function BookingPanel() {
   const router = useRouter();
   const params = useSearchParams();
@@ -64,6 +68,15 @@ export function BookingPanel() {
   const [booking, setBooking] = useState(false);
   const [calendlyUrl, setCalendlyUrl] = useState("");
   const [srcChecked, setSrcChecked] = useState(true);
+  /* Bot protections brought into line with SheetRequestForm and
+   * StudyRequest, which both already had them. Neither is visible. */
+  const [hp, setHp] = useState("");
+  const [dwellPassed, setDwellPassed] = useState(false);
+
+  useEffect(() => {
+    const t = window.setTimeout(() => setDwellPassed(true), DWELL_MS);
+    return () => window.clearTimeout(t);
+  }, []);
 
   const topic = SRC_TOPICS[src];
   const srcLine = SRC_LINES[src];
@@ -105,6 +118,12 @@ export function BookingPanel() {
       setError("Please add your name, organization, and a work email.");
       return;
     }
+    /* Honeypot filled, or submitted faster than a human could: drop it
+     * silently, exactly as the other two forms do. No error is shown - a
+     * bot learns nothing, and a real visitor cannot reach this path. */
+    if (hp) return;
+    if (!dwellPassed) return;
+
     try {
       localStorage.setItem(
         "co_booking",
@@ -132,6 +151,7 @@ export function BookingPanel() {
       role: role || undefined,
       line: line || undefined,
       src: src || "direct",
+      website: hp,
     });
 
     const q =
@@ -278,6 +298,24 @@ export function BookingPanel() {
           </option>
         ))}
       </select>
+      {/* Honeypot. Off-screen and aria-hidden, identical to the other two
+       * forms: only a bot fills it. Occupies no layout space, so the
+       * panel renders exactly as before. */}
+      <input
+        onChange={(e) => setHp(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        placeholder="Website"
+        style={{
+          position: "absolute",
+          left: -9999,
+          width: 1,
+          height: 1,
+          opacity: 0,
+          pointerEvents: "none",
+        }}
+      />
       <input
         value={email}
         onChange={(e) => {
@@ -341,7 +379,6 @@ export function BookingPanel() {
 
 /* The "Not ready for a call?" info-sheet row in the left column.
  * Same three spam guards as the product-page form. */
-const DWELL_MS = 3000;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
 
 export function SheetPicker() {
@@ -367,8 +404,24 @@ export function SheetPicker() {
     if (!EMAIL_RE.test(sheetEmail)) return;
 
     setSent(true);
+
+    const pdf = `/sheets/careorbit-${sheetLine}-2-page.pdf`;
+
+    /* This path served its PDF but transmitted nothing, so the lead was
+     * lost. It is an info-sheet request like any other - same kind, so it
+     * is stored AND generates the internal notification. Fire and forget:
+     * the download below never waits on it. */
+    submitLead({
+      kind: "info-sheet",
+      email: sheetEmail,
+      requested: pdf,
+      line: SRC_LINES[sheetLine] || undefined,
+      src: src || "direct",
+      website: hp,
+    });
+
     const a = document.createElement("a");
-    a.href = `/sheets/careorbit-${sheetLine}-2-page.pdf`;
+    a.href = pdf;
     a.download = "";
     document.body.appendChild(a);
     a.click();

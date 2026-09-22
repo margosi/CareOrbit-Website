@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { notify, store, type Lead } from "@/lib/server/leads";
+import { markNotified, notify, store, type Lead } from "@/lib/server/leads";
 
 /* POST /api/lead - the single endpoint behind all three forms.
  *
@@ -96,11 +96,27 @@ export async function POST(request: Request) {
     line: clean(body.line, 200),
     src: clean(body.src, 100),
     path: clean(body.path, 300),
+    /* Genuine campaign attribution, kept separate from `src` and from the
+     * service line so reporting stays clean. */
+    utmSource: clean(body.utmSource, 150),
+    utmMedium: clean(body.utmMedium, 150),
+    utmCampaign: clean(body.utmCampaign, 150),
   };
 
-  const [stored, notified] = await Promise.all([store(lead), notify(lead)]);
+  /* SEQUENTIAL, not Promise.all. Storage is the record and must not be
+   * raced by the notification: we need the inserted id before we can stamp
+   * notified_at, and a Resend failure must leave a recoverable row rather
+   * than a half-finished pair. */
+  const stored = await store(lead);
+  const notified = await notify(lead);
+
+  if (notified === "ok" && stored.id) await markNotified(stored.id);
 
   /* Always 200 on a valid submission: the visitor's download must not hinge
    * on a third party being up. Delivery status is reported for logs. */
-  return NextResponse.json({ ok: true, stored, notified });
+  return NextResponse.json({
+    ok: true,
+    stored: stored.outcome,
+    notified,
+  });
 }
