@@ -39,7 +39,10 @@ export type PageSeo = { title: string; description: string };
 
 export const PAGE_SEO: Record<string, PageSeo> = {
   "/": {
-    title: "CareOrbit",
+    /* The homepage title was the bare brand name, nine characters carrying
+     * no descriptive terms - the weakest title on the site, on its most
+     * valuable page. Wording supplied by the owner. */
+    title: "CareOrbit | Patient Engagement for Health Systems",
     description:
       "Orbits are proven to deliver against measured outcomes with the streamlined, easy experience today\u2019s patients expect.",
   },
@@ -100,7 +103,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
   "/book-a-call": {
     title: "Book a Call",
-    description: "No demo script, no obligation.",
+    /* Was 30 characters. Extended using the page's OWN visible copy, in its
+     * own order - no new claim and no positioning language is introduced. */
+    description:
+      "No demo script, no obligation. We get introduced, hear which pain points you want to tackle, and give you a brief look at the platform.",
   },
   "/thank-you": {
     title: "Thank you",
@@ -142,7 +148,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "Validated screenings, delivered on schedule, scored automatically, and surfaced to the care team when risk is rising.",
   },
   "/orbits/medication-therapy": {
-    title: "Medication Therapy & Adherence orbit solutions",
+    /* 62 characters rendered, which Google truncates. Dropping the generic
+     * "orbit solutions" keeps the orbit's full name - the distinctive part,
+     * and the wording used in the nav and footer - plus the brand. */
+    title: "Medication Therapy & Adherence",
     description:
       "Specialty and injectable therapies fail most often in the first months, for reasons education and timely check-ins can reach.",
   },
@@ -185,18 +194,24 @@ export const NOINDEX: string[] = ["/thank-you"];
 
 /* Open Graph / Twitter image.
  *
- * There is no branded share card yet, and inventing one is a design task.
- * OG_IMAGE is therefore undefined by default: a link preview then shows
- * title and description with no picture, which is honest, rather than a
- * cropped photograph pretending to be a share card.
+ * The site-wide share card. 1200x630 PNG, the size every major platform
+ * expects, supplied by the owner - the light variant, chosen so the card
+ * reads as continuous with the site's own paper background.
  *
- * Set it to a 1200x630 asset under /public when the card exists, or pass
- * `image` to metadataFor() to override a single page. Both paths feed the
- * same absolute-URL construction, so nothing else has to change.
+ * PNG rather than WebP on purpose: several social scrapers still do not
+ * accept WebP. The URL is relative because metadataBase in the root layout
+ * resolves it to the absolute URL scrapers require.
+ *
+ * A single page can override it by passing `image` to metadataFor(); both
+ * paths feed the same construction, so nothing else has to change.
  */
 export const OG_IMAGE:
-  { url: string; width: number; height: number; alt: string } | undefined =
-  undefined;
+  { url: string; width: number; height: number; alt: string } | undefined = {
+  url: "/brand/careorbit-og.png",
+  width: 1200,
+  height: 630,
+  alt: "CareOrbit - Patient Engagement for Health Systems",
+};
 
 export type MetadataOverrides = {
   /** Absolute path under /public, e.g. "/images/hero-cardiology.webp". */

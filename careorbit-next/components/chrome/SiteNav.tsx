@@ -325,108 +325,115 @@ export function SiteNav({
                   </svg>
                 </span>
 
-                {open && (
+                {/* Same reasoning as the pricing panel below: always
+                 * mounted, toggled with `hidden`. This panel holds the only
+                 * internal link to /platform/data - the footer's Platform
+                 * column points at /platform#anchors, not the product
+                 * pages - so that route had no crawlable inbound link
+                 * either. `hidden` is display:none, so closed it stays
+                 * invisible, untabbable and out of the accessibility tree
+                 * while the anchors remain in the HTML source. */}
+                <div
+                  hidden={!open}
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    left: -16,
+                    paddingTop: 14,
+                    zIndex: 70,
+                  }}
+                >
                   <div
                     style={{
-                      position: "absolute",
-                      top: "100%",
-                      left: -16,
-                      paddingTop: 14,
-                      zIndex: 70,
+                      background: "#FFFFFF",
+                      border: "1px solid rgba(15,29,46,.08)",
+                      borderRadius: 22,
+                      boxShadow: "0 24px 60px rgba(15,29,46,.16)",
+                      padding: 10,
+                      width: 470,
+                      display: "flex",
+                      gap: 10,
                     }}
                   >
                     <div
                       style={{
-                        background: "#FFFFFF",
-                        border: "1px solid rgba(15,29,46,.08)",
-                        borderRadius: 22,
-                        boxShadow: "0 24px 60px rgba(15,29,46,.16)",
-                        padding: 10,
-                        width: 470,
+                        flex: "1 1 auto",
                         display: "flex",
-                        gap: 10,
+                        flexDirection: "column",
                       }}
                     >
-                      <div
-                        style={{
-                          flex: "1 1 auto",
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        {ORBITS.map((o) => (
-                          <Link
-                            key={o.href}
-                            href={o.href}
-                            {...NO_PREFETCH}
-                            className={hv("menuItem")}
+                      {ORBITS.map((o) => (
+                        <Link
+                          key={o.href}
+                          href={o.href}
+                          {...NO_PREFETCH}
+                          className={hv("menuItem")}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            gap: 12,
+                            padding: "11px 14px",
+                            borderRadius: 14,
+                            textDecoration: "none",
+                            transition: "background .15s",
+                          }}
+                        >
+                          <span
                             style={{
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "space-between",
-                              gap: 12,
-                              padding: "11px 14px",
-                              borderRadius: 14,
-                              textDecoration: "none",
-                              transition: "background .15s",
+                              fontSize: 14.5,
+                              fontWeight: 500,
+                              color: "#0F1D2E",
                             }}
                           >
-                            <span
-                              style={{
-                                fontSize: 14.5,
-                                fontWeight: 500,
-                                color: "#0F1D2E",
-                              }}
-                            >
-                              {o.name}
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
-                      <div
-                        style={{
-                          width: 1,
-                          background: "rgba(15,29,46,.1)",
-                          flexShrink: 0,
-                        }}
-                      />
-                      <div
-                        style={{
-                          flex: "0 0 130px",
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        {PRODUCTS.map((p) => (
-                          <Link
-                            key={p.href}
-                            href={p.href}
-                            {...NO_PREFETCH}
-                            className={hv("menuItem")}
+                            {o.name}
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                    <div
+                      style={{
+                        width: 1,
+                        background: "rgba(15,29,46,.1)",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <div
+                      style={{
+                        flex: "0 0 130px",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      {PRODUCTS.map((p) => (
+                        <Link
+                          key={p.href}
+                          href={p.href}
+                          {...NO_PREFETCH}
+                          className={hv("menuItem")}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            padding: "11px 14px",
+                            borderRadius: 14,
+                            textDecoration: "none",
+                            transition: "background .15s",
+                          }}
+                        >
+                          <span
                             style={{
-                              display: "flex",
-                              alignItems: "center",
-                              padding: "11px 14px",
-                              borderRadius: 14,
-                              textDecoration: "none",
-                              transition: "background .15s",
+                              fontSize: 14.5,
+                              fontWeight: 500,
+                              color: "#0F1D2E",
                             }}
                           >
-                            <span
-                              style={{
-                                fontSize: 14.5,
-                                fontWeight: 500,
-                                color: "#0F1D2E",
-                              }}
-                            >
-                              {p.name}
-                            </span>
-                          </Link>
-                        ))}
-                      </div>
+                            {p.name}
+                          </span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
-                )}
+                </div>
               </div>
 
               <Link
@@ -487,58 +494,70 @@ export function SiteNav({
                   </svg>
                 </Link>
 
-                {pOpen && (
+                {/* ALWAYS MOUNTED, toggled with `hidden`, rather than
+                 * `{pOpen && ...}`. These are the only internal links to
+                 * /pricing/assess, /pricing/capture and /pricing/data, and
+                 * a conditionally mounted panel meant they existed in the
+                 * DOM only after a hover. Googlebot renders JavaScript but
+                 * does not hover, so all three pages had no crawlable
+                 * inbound link and read as orphans.
+                 *
+                 * `hidden` resolves to display:none, so when closed the
+                 * panel is still invisible, still out of the tab order and
+                 * still out of the accessibility tree - identical
+                 * behaviour - while the anchors stay in the HTML source
+                 * where a crawler can follow them. */}
+                <div
+                  hidden={!pOpen}
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    left: -16,
+                    paddingTop: 14,
+                    zIndex: 70,
+                  }}
+                >
                   <div
                     style={{
-                      position: "absolute",
-                      top: "100%",
-                      left: -16,
-                      paddingTop: 14,
-                      zIndex: 70,
+                      background: "#FFFFFF",
+                      border: "1px solid rgba(15,29,46,.08)",
+                      borderRadius: 22,
+                      boxShadow: "0 24px 60px rgba(15,29,46,.16)",
+                      padding: 10,
+                      width: 240,
+                      display: "flex",
+                      flexDirection: "column",
                     }}
                   >
-                    <div
-                      style={{
-                        background: "#FFFFFF",
-                        border: "1px solid rgba(15,29,46,.08)",
-                        borderRadius: 22,
-                        boxShadow: "0 24px 60px rgba(15,29,46,.16)",
-                        padding: 10,
-                        width: 240,
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
-                    >
-                      {PRICING_LINKS.map((pl) => (
-                        <Link
-                          key={pl.href}
-                          href={pl.href}
-                          {...NO_PREFETCH}
-                          className={hv("menuItem")}
+                    {PRICING_LINKS.map((pl) => (
+                      <Link
+                        key={pl.href}
+                        href={pl.href}
+                        {...NO_PREFETCH}
+                        className={hv("menuItem")}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 12,
+                          padding: "11px 14px",
+                          borderRadius: 14,
+                          textDecoration: "none",
+                          transition: "background .15s",
+                        }}
+                      >
+                        <span
                           style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 12,
-                            padding: "11px 14px",
-                            borderRadius: 14,
-                            textDecoration: "none",
-                            transition: "background .15s",
+                            fontSize: 14.5,
+                            fontWeight: 500,
+                            color: "#0F1D2E",
                           }}
                         >
-                          <span
-                            style={{
-                              fontSize: 14.5,
-                              fontWeight: 500,
-                              color: "#0F1D2E",
-                            }}
-                          >
-                            {pl.name}
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
+                          {pl.name}
+                        </span>
+                      </Link>
+                    ))}
                   </div>
-                )}
+                </div>
               </div>
 
               <Link
