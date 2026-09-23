@@ -78,8 +78,21 @@
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
+  /* minmax(0, 1fr), not 1fr. A bare `1fr` is `minmax(auto, 1fr)`, and that
+   * `auto` minimum refuses to shrink below the track's min-content width.
+   * On the Home case-study card that pinned the single column at 495px
+   * inside a 334px box, so the headline, body copy and "Read the case
+   * study" link were all clipped at the right edge on a phone. The zero
+   * minimum lets the column actually collapse to the space available. */
   [data-grid="split"] {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  /* Platform card carousel. The slide width is a variable so the card and
+   * the track's translateX always agree; see CardCarousel.tsx. At 30vw a
+   * phone showed a 117px card with its copy clipped mid-word. */
+  [data-cardtrack] {
+    --co-slide-w: 46vw;
   }
 
   [data-pad="section"] {
@@ -163,6 +176,10 @@
 }
 
 @media (max-width: 640px) {
+  [data-cardtrack] {
+    --co-slide-w: 78vw;
+  }
+
   [data-grid="4"],
   [data-grid="5"],
   [data-grid="3"] {

@@ -18,7 +18,14 @@ import { CARD_LOOP } from "@/lib/platform";
  *   - prev from 0: jump to 4 with no transition, then animate to 3
  *   - next past 3: animate to 4, then after the 650ms transition snap to 0
  */
-const SLIDE_VW = 30;
+/* Slide width lives in a CSS custom property, not a constant, because the
+ * same value drives BOTH the card's flex-basis and the track's translateX.
+ * A plain 30vw meant a 117px card on a 390px phone: the body copy was
+ * clipped mid-word ("journeys that carry") and a title rendered as
+ * "Captu...". A media query in responsive.css now widens the slide below
+ * 1020px, and because the transform is expressed in the same variable, the
+ * carousel still lands on the correct card at every width. */
+const SLIDE = "var(--co-slide-w, 30vw)";
 const GAP_PX = 20;
 const EDGE_PX = 35;
 
@@ -26,7 +33,7 @@ export function CardCarousel() {
   const [c, setC] = useState(0);
   const [snap, setSnap] = useState(false);
 
-  const shift = `calc(${-(c + 1) * SLIDE_VW}vw - ${(c + 1) * GAP_PX - EDGE_PX}px)`;
+  const shift = `calc(-1 * ${c + 1} * ${SLIDE} - ${(c + 1) * GAP_PX - EDGE_PX}px)`;
 
   const prev = () => {
     if (c === 0) {
@@ -64,6 +71,7 @@ export function CardCarousel() {
         }}
       >
         <div
+          data-cardtrack=""
           style={{
             display: "flex",
             gap: GAP_PX,
@@ -78,7 +86,7 @@ export function CardCarousel() {
               key={card.slot}
               href={card.href}
               style={{
-                flex: `0 0 ${SLIDE_VW}vw`,
+                flex: `0 0 ${SLIDE}`,
                 boxSizing: "border-box",
                 position: "relative",
                 display: "block",
