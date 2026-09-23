@@ -518,7 +518,7 @@ export default function HomePage() {
                       fontWeight: 700,
                       letterSpacing: ".12em",
                       textTransform: "uppercase",
-                      color: "#5F7690",
+                      color: "#71869D",
                     }}
                   >
                     Issued however your workflow works
@@ -899,7 +899,9 @@ export default function HomePage() {
                     fontWeight: 700,
                     letterSpacing: ".14em",
                     textTransform: "uppercase",
-                    color: "#E3735C",
+                    /* 12.5px eyebrow on a white card: 4.5:1 required and the
+                     * brand coral gives 3.06. Same hue at 4.78. */
+                    color: "#B15948",
                   }}
                 >
                   Case study &middot; WashU / Siteman

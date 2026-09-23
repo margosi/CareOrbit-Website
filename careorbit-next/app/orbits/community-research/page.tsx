@@ -519,7 +519,7 @@ export default function CommunityResearchPage() {
             style={{ ...HDR, marginBottom: 34 }}
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <div style={{ ...EYEBROW, color: "#B0A99E" }}>
+              <div style={{ ...EYEBROW, color: "#6F6A62" }}>
                 Measurable value
               </div>
               <h2 style={H2_LIGHT}>

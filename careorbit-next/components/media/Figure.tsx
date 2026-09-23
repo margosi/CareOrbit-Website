@@ -156,7 +156,7 @@ export function Figure({
               maxWidth: "90%",
               fontWeight: 500,
               letterSpacing: ".01em",
-              opacity: 0.75,
+              opacity: 0.88,
             }}
           >
             {placeholder ?? "Drop an image"}

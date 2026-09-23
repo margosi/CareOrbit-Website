@@ -194,7 +194,8 @@ export default function OutcomesPage() {
                 fontWeight: 700,
                 letterSpacing: ".14em",
                 textTransform: "uppercase",
-                color: "#E3735C",
+                /* 12.5px eyebrow on paper: same reasoning as Home. */
+                color: "#B15948",
               }}
             >
               Reporting, shown
@@ -311,7 +312,7 @@ export default function OutcomesPage() {
                   borderRadius: 12,
                   padding: "11px 14px",
                   fontSize: 12,
-                  color: "#B05A46",
+                  color: "#A4503F",
                   fontWeight: 500,
                 }}
               >

@@ -571,7 +571,7 @@ export default function AssessPage() {
                         fontWeight: 600,
                         letterSpacing: ".08em",
                         textTransform: "uppercase",
-                        color: "#B0A99E",
+                        color: "#6F6A62",
                       }}
                     >
                       {s.src}

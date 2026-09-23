@@ -232,6 +232,7 @@ export function HeroSection({
                 key={f.src}
                 onClick={() => goTo(i)}
                 aria-label={`Image ${i + 1}`}
+                data-hero-dot=""
                 style={{
                   width: heroIdx === i ? "28px" : "8px",
                   height: 8,
@@ -356,6 +357,9 @@ export function HeroSection({
               style={{
                 flex: 1,
                 border: "none",
+                /* outline removed at rest only. The :focus-visible rule
+                 * in globals.css supplies the keyboard indicator; this
+                 * input previously had none at all. */
                 outline: "none",
                 fontFamily: "Inter,sans-serif",
                 fontSize: 12.5,

@@ -34,7 +34,7 @@ export default function NotFound() {
           gap: 20,
         }}
       >
-        <div style={{ ...EYEBROW, color: "#B0A99E" }}>404</div>
+        <div style={{ ...EYEBROW, color: "#6F6A62" }}>404</div>
 
         <h1
           style={{

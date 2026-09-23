@@ -265,7 +265,7 @@ export const PC_SEGMENTS: PcSegment[] = [
       {
         kicker: "For the practice",
         t: "You can finally see it",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who opened their orbit and who never did, by patient",
@@ -422,7 +422,7 @@ export const PC_SEGMENTS: PcSegment[] = [
       {
         kicker: "For the practice",
         t: "The months stop being blind",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who opened their orbit this month and who never did, by patient",
@@ -575,7 +575,7 @@ export const PC_SEGMENTS: PcSegment[] = [
       {
         kicker: "For the practice",
         t: "Gaps visible before the audit",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who engaged with the outreach and who never did, by patient",
@@ -728,7 +728,7 @@ export const PC_SEGMENTS: PcSegment[] = [
       {
         kicker: "For the practice",
         t: "The window stops being silent",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who engaged in the first week and who went quiet, by patient",

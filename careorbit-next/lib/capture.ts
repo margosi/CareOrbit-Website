@@ -43,7 +43,7 @@ export const STEPS = [
     n: "04",
     t: "Measure",
     kicker: "Step 04",
-    label: "#B05A46",
+    label: "#A4503F",
     dot: "#F2B8C6",
     items: [
       "Views, completion, and engagement reported back by audience and content item.",
@@ -65,7 +65,7 @@ export const STEPS = [
     n: "06",
     t: "Expert guidance, end to end",
     kicker: "Included",
-    label: "#B05A46",
+    label: "#A4503F",
     dot: "#E3735C",
     items: [
       "Our team maps what to convert first, how to structure it, and how it compounds toward results.",

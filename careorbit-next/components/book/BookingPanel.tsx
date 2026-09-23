@@ -329,7 +329,7 @@ export function BookingPanel() {
       />
 
       {error && (
-        <div style={{ fontSize: 13, color: "#B05A46", fontWeight: 500 }}>
+        <div style={{ fontSize: 13, color: "#A4503F", fontWeight: 500 }}>
           {error}
         </div>
       )}

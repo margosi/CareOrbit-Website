@@ -112,7 +112,7 @@ export function SiteFooter() {
                     fontWeight: 700,
                     letterSpacing: ".1em",
                     textTransform: "uppercase",
-                    color: "#5F7690",
+                    color: "#71869D",
                   }}
                 >
                   {col.title}
@@ -167,7 +167,7 @@ export function SiteFooter() {
               alignItems: "center",
             }}
           >
-            <div style={{ fontSize: 12.5, color: "#5F7690" }}>
+            <div style={{ fontSize: 12.5, color: "#71869D" }}>
               &copy; 2026 Total Orbit. All rights reserved.
             </div>
             <div style={{ display: "flex", gap: 24 }}>

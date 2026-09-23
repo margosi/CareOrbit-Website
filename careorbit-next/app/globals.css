@@ -181,4 +181,133 @@ a:hover {
     transition: none;
     stroke-dashoffset: var(--rt) !important;
   }
+
+  /* The named keyframe animations were still running under this media
+   * query: coMarquee is a 30s infinite horizontal scroll, and coDash,
+   * coPulse and coFloat loop indefinitely too. Continuous motion a visitor
+   * cannot stop is exactly what this preference exists to switch off, so
+   * they are frozen at their first frame rather than merely slowed.
+   * Everything stays visible - only the movement stops. */
+  [class*="co"],
+  [style*="animation"],
+  .co-marquee,
+  svg path,
+  svg circle {
+    animation-play-state: paused !important;
+  }
+}
+
+/* ------------------------------------------------------ focus visible --
+ * A single visible indicator for anything focusable that does not define
+ * its own. :focus-visible, so it appears for keyboard users and not on
+ * mouse click. The colour is CareOrbit's mid blue at 3.4:1 against the
+ * paper background, which clears the 3:1 that WCAG asks of a focus
+ * indicator. Nothing here changes an element's size or position. */
+:focus-visible {
+  /* !important because several controls carry an inline `outline: none`,
+   * and an inline style beats a stylesheet rule. A keyboard user must get
+   * an indicator on every focusable control, so this one wins. It is
+   * :focus-visible, so a mouse click still shows nothing. */
+  outline: 2px solid #2d5a87 !important;
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------- skip link --
+ * Off-screen until it receives focus, then pinned to the top-left. No
+ * layout impact at rest, so no page moves by a pixel. */
+[data-skip-to-main] {
+  position: absolute;
+  left: 12px;
+  top: -64px;
+  z-index: 200;
+  background: #0f1d2e;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font:
+    600 14px/1 Inter,
+    sans-serif;
+  text-decoration: none;
+  transition: top 0.15s;
+}
+[data-skip-to-main]:focus {
+  top: 12px;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-skip-to-main] {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------- touch target size --
+ * WCAG 2.2 SC 2.5.8 Target Size (Minimum), AA: 24x24 CSS px unless an
+ * exception applies. Measured at 390px, the footer's navigation and
+ * contact links were 21px and 16px tall respectively, stacked too closely
+ * for the Spacing exception to rescue them - 644 failing targets across
+ * the 28 routes, and the single largest accessibility defect on the site.
+ *
+ * 2px of vertical padding is the smallest correction that clears the
+ * threshold. It does not change the type, colour, alignment or column
+ * layout; the links simply sit a few pixels further apart. Ordinary inline
+ * links inside sentences are untouched - those qualify for the Inline
+ * exception and were never a failure. */
+footer a {
+  padding-block: 2px;
+}
+/* The mailto: and tel: links start from a 16px line box rather than 21px,
+ * so they need 4px to clear 24. Same correction, one step larger. */
+footer a[href^="mailto:"],
+footer a[href^="tel:"] {
+  padding-block: 4px;
+}
+
+/* --------------------------------------------- effective target size --
+ * WCAG 2.2 SC 2.5.8 again, for controls whose SIZE cannot grow without
+ * moving the design. A transparent ::after centred on each control
+ * enlarges the hit area while the element's own box - and therefore the
+ * page layout and the typography - is untouched. Clicks on the pseudo
+ * element belong to the control, because it is a child of it.
+ *
+ * .hv-studyLink / .hv-studyTrigger : the "Read the study results" and
+ *   "Download a summary" CTAs on the orbit and evidence pages, 21px tall.
+ * .hv-linkCoral : two 16px inline-styled links.
+ * Each keeps its underline, weight, colour and position exactly. */
+.hv-studyLink,
+.hv-studyTrigger,
+.hv-linkCoral {
+  position: relative;
+}
+.hv-studyLink::after,
+.hv-studyTrigger::after,
+.hv-linkCoral::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 24px;
+  transform: translateY(-50%);
+  /* purely a hit area - never paints, never blocks what is underneath */
+  background: transparent;
+  pointer-events: auto;
+}
+
+/* Hero image-fader dots. The visible dot is 8px and the dots sit 16px
+ * centre to centre, so a full 24x24 target would OVERLAP its neighbour and
+ * make activation ambiguous - a worse outcome than the small target. The
+ * hit area is therefore 24px tall and 16px wide: the largest that cannot
+ * collide, and three times the original area. The dot itself is not
+ * resized, recoloured or respaced. */
+[data-hero-dot] {
+  position: relative;
+}
+[data-hero-dot]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background: transparent;
 }

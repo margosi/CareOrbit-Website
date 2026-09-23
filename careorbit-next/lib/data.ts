@@ -35,7 +35,7 @@ export const STEPS = [
   {
     t: "Optimize every journey",
     kicker: "Step 04",
-    label: "#B05A46",
+    label: "#A4503F",
     dot: "#F2B8C6",
     items: [
       "Proprietary AI-based engagement tools keep tuning each patient's experience toward what works.",

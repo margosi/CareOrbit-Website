@@ -17,6 +17,7 @@ import {
 } from "@/components/orbits/ledger";
 import { hv } from "@/lib/hoverStyles";
 import { DESIGN, MEASURES, QUOTES, TOPLINE } from "@/lib/sitemanStudy";
+import { largeText } from "@/lib/largeText";
 
 /* The Siteman controlled clinical trial. Port of
  * v2-maven/SitemanStudy.dc.html.
@@ -32,6 +33,11 @@ import { DESIGN, MEASURES, QUOTES, TOPLINE } from "@/lib/sitemanStudy";
  * full document is served by StudyRequest.
  */
 const TEAL = "#4FB3BF";
+/* Text-only variant. The brand teal is 2.32:1 on the paper background - it
+ * misses even the 3:1 that large display numerals get. This is the same hue
+ * darkened to 3.36:1. TEAL itself is unchanged, so the rules, dots and fills
+ * that use it decoratively look exactly as before. */
+const TEAL_TEXT = "#41939D";
 const BOOK_HREF = "/book-a-call?src=siteman-study";
 
 const PANEL: React.CSSProperties = {
@@ -196,7 +202,9 @@ export default function SitemanStudyPage() {
               <div
                 style={{ display: "flex", flexDirection: "column", gap: 12 }}
               >
-                <div style={{ ...EYEBROW, color: TEAL }}>Topline results</div>
+                <div style={{ ...EYEBROW, color: TEAL_TEXT }}>
+                  Topline results
+                </div>
                 <h2 style={{ ...H2_LIGHT, color: "#FFFFFF" }}>
                   What changed when patients <Em>had an orbit</Em>
                 </h2>
@@ -255,7 +263,7 @@ export default function SitemanStudyPage() {
                       fontWeight: 700,
                       letterSpacing: ".11em",
                       textTransform: "uppercase",
-                      color: TEAL,
+                      color: TEAL_TEXT,
                     }}
                   >
                     {s.l}
@@ -301,7 +309,7 @@ export default function SitemanStudyPage() {
             style={{ ...HDR, marginBottom: 34 }}
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <div style={{ ...EYEBROW, color: "#B0A99E" }}>
+              <div style={{ ...EYEBROW, color: "#6F6A62" }}>
                 The full ledger
               </div>
               <h2 style={H2_LIGHT}>
@@ -352,7 +360,7 @@ export default function SitemanStudyPage() {
                           fontWeight: 600,
                           fontSize: "clamp(30px,3vw,40px)",
                           lineHeight: 1,
-                          color: m.dot,
+                          color: largeText(m.dot),
                         }}
                       >
                         {sv.n}
@@ -456,7 +464,7 @@ export default function SitemanStudyPage() {
             style={{ ...HDR, marginBottom: 34 }}
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <div style={{ ...EYEBROW, color: "#B0A99E" }}>Study design</div>
+              <div style={{ ...EYEBROW, color: "#6F6A62" }}>Study design</div>
               <h2 style={H2_LIGHT}>
                 How the study <Em>was run</Em>
               </h2>
@@ -512,7 +520,7 @@ export default function SitemanStudyPage() {
             }}
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-              <div style={{ ...EYEBROW, color: TEAL }}>Go deeper</div>
+              <div style={{ ...EYEBROW, color: TEAL_TEXT }}>Go deeper</div>
               <h2 style={{ ...H2_LIGHT, color: "#FFFFFF" }}>
                 Get the study results, or <Em>talk it through</Em>
               </h2>

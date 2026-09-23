@@ -71,7 +71,7 @@ export const POV: PovBlock[] = [
   {
     kicker: "For your research division",
     t: "Throughput, richness, and a grant story",
-    label: "#5B9BEA",
+    label: "#4474B0",
     dot: "#5B9BEA",
     items: [
       "White-labeled to your organization's brand rather than ours",

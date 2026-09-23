@@ -567,7 +567,12 @@ export function QuotePair({
 /** Serif italic accent word inside a heading. */
 export function Em({
   children,
-  color = "#E3735C",
+  /* #D4644E rather than the brand #E3735C. These accent words are large
+   * display text, so WCAG asks 3:1, and #E3735C lands at 2.88 on the paper
+   * background - a miss, not a margin. This is the same hue one step down
+   * its own ramp: 3.22 on paper, 3.42 on white, and still 4.97 on navy, so
+   * the accent reads correctly on both light sections and dark panels. */
+  color = "#D4644E",
   weight = 600,
 }: {
   children: ReactNode;

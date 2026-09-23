@@ -114,7 +114,7 @@ export const GOALS: Goal[] = [
     name: "Growth in new Pritikin ICR enrollments",
     target: "10% year-over-year increase",
     verdict: "Inconclusive",
-    tone: "#B0A99E",
+    tone: "#6F6A62",
     result:
       "26 enrollments in the pilot period, with no prior-year figures at this site to compare against.",
   },
@@ -122,7 +122,7 @@ export const GOALS: Goal[] = [
     name: "Share of eligible patients invited to an orbit",
     target: "90% of eligible patients",
     verdict: "Inconclusive",
-    tone: "#B0A99E",
+    tone: "#6F6A62",
     result:
       "187 patients were invited, but the site could not report how many were eligible overall.",
   },

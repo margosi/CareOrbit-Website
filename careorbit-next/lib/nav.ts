@@ -77,8 +77,8 @@ export const STATUS_COLORS: Record<
   New: { color: "#0F3D2E", background: "#E4F6EC" },
   Live: { color: "#1A6B3C", background: "#EBF4EE" },
   Blueprint: { color: "#2D5A87", background: "#EAF1F8" },
-  "In build": { color: "#B05A46", background: "#FBEDE9" },
-  "In integration": { color: "#B05A46", background: "#FBEDE9" },
+  "In build": { color: "#A4503F", background: "#FBEDE9" },
+  "In integration": { color: "#A4503F", background: "#FBEDE9" },
 };
 
 /* Which top-level nav item is highlighted coral. */

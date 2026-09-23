@@ -75,7 +75,7 @@ export const POV: PovBlock[] = [
   {
     kicker: "For program leaders",
     t: "Reach you can report, not people you can watch",
-    label: "#5B9BEA",
+    label: "#4474B0",
     dot: "#5B9BEA",
     items: [
       "Aggregate dashboards only: activations, return visits, and which topics get opened",

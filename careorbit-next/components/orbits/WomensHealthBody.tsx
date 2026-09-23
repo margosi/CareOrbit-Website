@@ -366,7 +366,7 @@ export function WomensHealthBody() {
           style={{ ...HDR, marginBottom: 34 }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div style={{ ...EYEBROW, color: "#B0A99E" }}>Measurable ROI</div>
+            <div style={{ ...EYEBROW, color: "#6F6A62" }}>Measurable ROI</div>
             <h2 style={H2_LIGHT}>
               How an orbit <Em>provides value</Em>.
             </h2>
@@ -391,7 +391,7 @@ export function WomensHealthBody() {
           style={{ ...HDR, marginBottom: 34 }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div style={{ ...EYEBROW, color: "#B0A99E" }}>
+            <div style={{ ...EYEBROW, color: "#6F6A62" }}>
               Practice and group economics
             </div>
             <h2 style={H2_LIGHT}>
@@ -462,7 +462,7 @@ export function WomensHealthBody() {
           style={{ ...HDR, marginBottom: 34 }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div style={{ ...EYEBROW, color: "#B0A99E" }}>By the numbers</div>
+            <div style={{ ...EYEBROW, color: "#6F6A62" }}>By the numbers</div>
             <h2 style={H2_LIGHT}>
               Where adherence in women&apos;s health <Em>actually stands</Em>.
             </h2>

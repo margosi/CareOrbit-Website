@@ -16,6 +16,7 @@ import {
   RowHead,
 } from "@/components/orbits/ledger";
 import { hv } from "@/lib/hoverStyles";
+import { largeText } from "@/lib/largeText";
 import {
   IMPL_FINDINGS,
   MEASURES,
@@ -38,6 +39,11 @@ import {
  * full document is served by StudyRequest.
  */
 const TEAL = "#4FB3BF";
+/* Text-only variant. The brand teal is 2.32:1 on the paper background - it
+ * misses even the 3:1 that large display numerals get. This is the same hue
+ * darkened to 3.36:1. TEAL itself is unchanged, so the rules, dots and fills
+ * that use it decoratively look exactly as before. */
+const TEAL_TEXT = "#41939D";
 const BOOK_HREF = "/book-a-call?src=escreening-results";
 
 const PANEL: React.CSSProperties = {
@@ -204,7 +210,9 @@ export default function EScreeningResultsPage() {
               <div
                 style={{ display: "flex", flexDirection: "column", gap: 12 }}
               >
-                <div style={{ ...EYEBROW, color: TEAL }}>Topline results</div>
+                <div style={{ ...EYEBROW, color: TEAL_TEXT }}>
+                  Topline results
+                </div>
                 <h2 style={{ ...H2_LIGHT, color: "#FFFFFF" }}>
                   Electronic screening against <Em>paper</Em>
                 </h2>
@@ -264,7 +272,7 @@ export default function EScreeningResultsPage() {
                       fontWeight: 700,
                       letterSpacing: ".11em",
                       textTransform: "uppercase",
-                      color: TEAL,
+                      color: TEAL_TEXT,
                     }}
                   >
                     {s.l}
@@ -310,7 +318,7 @@ export default function EScreeningResultsPage() {
             style={{ ...HDR, marginBottom: 34 }}
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <div style={{ ...EYEBROW, color: "#B0A99E" }}>
+              <div style={{ ...EYEBROW, color: "#6F6A62" }}>
                 The full ledger
               </div>
               <h2 style={H2_LIGHT}>
@@ -356,7 +364,7 @@ export default function EScreeningResultsPage() {
                     fontWeight: 600,
                     letterSpacing: ".08em",
                     textTransform: "uppercase",
-                    color: "#B0A99E",
+                    color: "#6F6A62",
                   }}
                 >
                   {m.src}
@@ -396,7 +404,7 @@ export default function EScreeningResultsPage() {
                           fontWeight: 600,
                           fontSize: "clamp(30px,3vw,40px)",
                           lineHeight: 1,
-                          color: m.dot,
+                          color: largeText(m.dot),
                         }}
                       >
                         {sv.n}
@@ -517,7 +525,7 @@ export default function EScreeningResultsPage() {
             style={{ ...HDR, marginBottom: 34 }}
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <div style={{ ...EYEBROW, color: "#B0A99E" }}>Provenance</div>
+              <div style={{ ...EYEBROW, color: "#6F6A62" }}>Provenance</div>
               <h2 style={H2_LIGHT}>
                 Where eScreening <Em>comes from</Em>
               </h2>
@@ -552,7 +560,7 @@ export default function EScreeningResultsPage() {
             }}
           >
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-              <div style={{ ...EYEBROW, color: TEAL }}>Go deeper</div>
+              <div style={{ ...EYEBROW, color: TEAL_TEXT }}>Go deeper</div>
               <h2 style={{ ...H2_LIGHT, color: "#FFFFFF" }}>
                 Get the summary, or <Em>talk it through</Em>
               </h2>

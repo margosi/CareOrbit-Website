@@ -253,7 +253,7 @@ export const SEGMENTS: WhSegment[] = [
       {
         kicker: "For the practice",
         t: "You can finally see it",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who opened their orbit and who never did, by patient",
@@ -562,7 +562,7 @@ export const SEGMENTS: WhSegment[] = [
       {
         kicker: "For the practice",
         t: "The postpartum window stops being blind",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who is still engaged at 2, 6, and 12 weeks postpartum, by patient",
@@ -828,7 +828,7 @@ export const SEGMENTS: WhSegment[] = [
       {
         kicker: "For the practice",
         t: "The schedule holds",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who completed preparation and who never opened it, before the day",
@@ -1109,7 +1109,7 @@ export const SEGMENTS: WhSegment[] = [
       {
         kicker: "For the practice",
         t: "Adherence and screening, visible",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who is still on therapy at 3, 6, and 12 months, by patient",

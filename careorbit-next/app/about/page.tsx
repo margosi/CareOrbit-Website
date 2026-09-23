@@ -14,7 +14,9 @@ const SERIF: React.CSSProperties = {
   fontStyle: "italic",
   fontWeight: 600,
   letterSpacing: 0,
-  color: "#E3735C",
+  /* 13.5px is normal-size text, so it needs 4.5:1; the brand coral gives
+   * 3.06 on paper. Same hue, darkened to 4.51. */
+  color: "#B15948",
 };
 const WRAP: React.CSSProperties = { maxWidth: 1220, margin: "0 auto" };
 const H2: React.CSSProperties = {
@@ -151,7 +153,9 @@ export default function AboutPage() {
                     style={{
                       fontSize: 13.5,
                       fontWeight: 600,
-                      color: "#E3735C",
+                      /* 13.5px role byline on paper: 3.06:1 against a 4.5
+                       * requirement. Same hue at 4.51. */
+                      color: "#B15948",
                     }}
                   >
                     {p.role}

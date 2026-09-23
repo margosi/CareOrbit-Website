@@ -55,7 +55,7 @@ export function MedicationTherapyNumbers() {
         style={{ ...HDR, marginBottom: 34 }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <div style={{ ...EYEBROW, color: "#B0A99E" }}>By the numbers</div>
+          <div style={{ ...EYEBROW, color: "#6F6A62" }}>By the numbers</div>
           <h2 style={H2_LIGHT}>
             What better adherence is <Em>worth</Em> in a year.
           </h2>

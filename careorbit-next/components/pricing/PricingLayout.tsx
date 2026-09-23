@@ -69,7 +69,7 @@ export function PricingLayout({
                 fontWeight: 700,
                 letterSpacing: ".12em",
                 textTransform: "uppercase",
-                color: "#B05A46",
+                color: "#A4503F",
               }}
             >
               {kicker}
@@ -164,7 +164,7 @@ export function PricingLayout({
                     style={{
                       fontSize: 13.5,
                       fontWeight: 600,
-                      color: "#B05A46",
+                      color: "#A4503F",
                       marginTop: 14,
                       marginBottom: 24,
                       lineHeight: 1.5,
@@ -250,7 +250,7 @@ export function PricingLayout({
                           fontWeight: 700,
                           letterSpacing: ".08em",
                           textTransform: "uppercase",
-                          color: "#B05A46",
+                          color: "#A4503F",
                           marginBottom: 6,
                         }}
                       >

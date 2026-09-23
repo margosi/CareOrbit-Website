@@ -719,7 +719,7 @@ export function BehavioralRiskBody() {
           style={{ ...HDR, marginBottom: 34 }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div style={{ ...EYEBROW, color: "#B0A99E" }}>{copy.finKicker}</div>
+            <div style={{ ...EYEBROW, color: "#6F6A62" }}>{copy.finKicker}</div>
             <h2 style={H2_LIGHT}>
               {copy.finHeadA} <em style={SERIF_600}>{copy.finHeadEm}</em>.
             </h2>

@@ -115,7 +115,7 @@ export const POV: PovBlock[] = [
   {
     kicker: "For the program",
     t: "You can finally see it",
-    label: "#5B9BEA",
+    label: "#4474B0",
     dot: "#5B9BEA",
     items: [
       "Who opened their orbit and who never did, by patient",

@@ -226,7 +226,7 @@ export function RoiCalculator({
                 fontWeight: 700,
                 letterSpacing: ".12em",
                 textTransform: "uppercase",
-                color: "#B0A99E",
+                color: "#6F6A62",
               }}
             >
               {eyebrow}

@@ -215,7 +215,7 @@ export function LedgerHeader({
               fontWeight: 700,
               letterSpacing: ".14em",
               textTransform: "uppercase",
-              color: "#B0A99E",
+              color: "#6F6A62",
             }}
           >
             {kicker}

@@ -249,7 +249,7 @@ export const CARD_SEGMENTS: CardSegment[] = [
       {
         kicker: "For the program",
         t: "You can finally see it",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who opened their orbit and who never did, by patient",
@@ -406,7 +406,7 @@ export const CARD_SEGMENTS: CardSegment[] = [
       {
         kicker: "For the program",
         t: "The thirty days stop being blind",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who opened their orbit at 7, 14, and 30 days, by patient",
@@ -579,7 +579,7 @@ export const CARD_SEGMENTS: CardSegment[] = [
       {
         kicker: "For the program",
         t: "The schedule holds",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who completed preparation and who never opened it, before the day",
@@ -728,7 +728,7 @@ export const CARD_SEGMENTS: CardSegment[] = [
       {
         kicker: "For the program",
         t: "Enrollment you can see coming",
-        label: "#5B9BEA",
+        label: "#4474B0",
         dot: "#5B9BEA",
         items: [
           "Who activated their orbit and who never did, by referral",
