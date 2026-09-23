@@ -2,7 +2,7 @@
  * renderVals(). Copy is brief-locked - do not reword or re-punctuate.
  *
  * DEAD CODE NOT PORTED: the original also built `oldTabData` (a four-entry
- * Engage/Assess/Capture/Data structure with `items` and `fit` fields) and
+ * Engage/Assess/Capture/Data Insights structure with `items` and `fit` fields) and
  * returned `cards`. Neither is referenced anywhere in the markup - the tabs
  * render from `tabData` and the carousel from `cardLoop`. Leftovers from an
  * earlier revision; see archive/Platform-tabs.dc.html.
@@ -101,8 +101,8 @@ export const PLATFORM_CARDS: PlatformCard[] = [
     d: "Your best patient material converted into one organized, trackable system.",
   },
   {
-    /* Data has no page of its own; the card points at Outcomes. */
-    name: "Data",
+    /* Data Insights has no page of its own; the card points at Outcomes. */
+    name: "Data Insights",
     href: "/outcomes",
     slot: "platform-card-data",
     img: "/images/platform-card-data-2.webp",

@@ -10,7 +10,7 @@ import { SheetRequestForm } from "@/components/product/SheetRequestForm";
 import { hv } from "@/lib/hoverStyles";
 import { AI, FAQS, INDEX, INSIGHTS, OWNERSHIP, STEPS } from "@/lib/data";
 
-/* Data. Port of v2-maven/DataPage.dc.html.
+/* Data Insights. Port of v2-maven/DataPage.dc.html.
  *
  * Structurally identical to Capture (same section order, same ledger and
  * card patterns); only the copy, colours and data differ. */
@@ -58,16 +58,18 @@ export default function DataPage() {
       <SiteNav active="orbits" />
       <main id="main-content">
         <div
-          data-screen-label="CareOrbit Data"
+          data-screen-label="CareOrbit Data Insights"
           style={{ width: "100%", flex: 1 }}
         >
           <ProductHero
-            heading={<em style={{ ...SERIF, color: "#2D5A87" }}>Data</em>}
-            blurb="Every action a patient takes, and every one they do not, becomes an engagement signal your teams can act on. Data begins with your first orbit, and you own your own data."
+            heading={
+              <em style={{ ...SERIF, color: "#2D5A87" }}>Data Insights</em>
+            }
+            blurb="Every action a patient takes, and every one they do not, becomes an engagement signal your teams can act on. Data Insights begins with your first orbit, and you own your own data."
             src="/images/data-hero-1.webp"
             placeholder="[Placeholder: Data hero image]"
             bookSrc="data-page"
-            sheetLabel="Get the Data info sheet"
+            sheetLabel="Get the Data Insights info sheet"
           />
 
           {/* --------------------------------------- track / index / align -- */}
@@ -606,7 +608,8 @@ export default function DataPage() {
                 }
               >
                 No new dashboards to learn, no data project to stand up. Data
-                comes with your first orbit and grows with every one after.
+                Insights comes with your first orbit and grows with every one
+                after.
               </LedgerHeader>
             </Reveal>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -681,7 +684,7 @@ export default function DataPage() {
                 >
                   Twenty minutes, no demo script. Bring one care journey and the
                   outcome metrics you already report on, and we will show you
-                  what Data adds from the first orbit.
+                  what Data Insights adds from the first orbit.
                 </p>
                 <div
                   style={{
@@ -710,7 +713,7 @@ export default function DataPage() {
                 </div>
               </div>
               <SheetRequestForm
-                blurb="Get the CareOrbit Data info sheet by email."
+                blurb="Get the CareOrbit Data Insights info sheet by email."
                 pdf="/sheets/careorbit-data-2-page.pdf"
                 downloadAs="CareOrbit-Data-Info-Sheet.pdf"
               />

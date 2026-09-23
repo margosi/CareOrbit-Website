@@ -306,7 +306,7 @@ export const MEASURES = [
   },
 ];
 
-/** Engage / Assess / Data, each with its own bullet list. Legacy: library. */
+/** Engage / Assess / Data Insights, each with its own bullet list. Legacy: library. */
 export const LIBRARY = [
   {
     n: "01",
@@ -332,7 +332,7 @@ export const LIBRARY = [
   },
   {
     n: "03",
-    t: "Data",
+    t: "Data Insights",
     v: "Structured participant data and dashboards that power research insight and reporting.",
     items: [
       "Engagement analytics by participant",

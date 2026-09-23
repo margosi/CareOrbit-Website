@@ -91,7 +91,7 @@ export const SHEET_OPTIONS = [
   { value: "engage", label: "CareOrbit Engage" },
   { value: "capture", label: "CareOrbit Capture" },
   { value: "assess", label: "CareOrbit Assess" },
-  { value: "data", label: "CareOrbit Data" },
+  { value: "data", label: "CareOrbit Data Insights" },
 ];
 
 /** Service-line selector on the booking form. */

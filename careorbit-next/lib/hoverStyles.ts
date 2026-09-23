@@ -94,7 +94,7 @@ export const HOVER_STYLES = {
   /* White-on-photo link in the experiences header. */
   linkBlush: "color:#F2B8C6",
 
-  /* --- Product pages (Engage / Assess / Capture / Data) ----------------- */
+  /* --- Product pages (Engage / Assess / Capture / Data Insights) ----------------- */
 
   /* White pill button on the navy CTA panel -> blush. */
   btnBlush: "background:#F2B8C6;color:#0F1D2E",
@@ -164,7 +164,7 @@ export const HOVER_STYLES = {
  * users; no layout impact either way. */
 export const FOCUS_STYLES = {
   /* Info-sheet email input on the navy product-page CTA panels.
-   * Assess uses the teal variant; Engage/Capture/Data use blush. */
+   * Assess uses the teal variant; Engage/Capture/Data Insights use blush. */
   inputFocusBlush: "border-color:#F2B8C6",
   inputFocusTeal: "border-color:#4FB3BF",
   /* Book a Call inputs focus to navy. */

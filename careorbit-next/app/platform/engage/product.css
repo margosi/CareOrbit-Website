@@ -1,5 +1,5 @@
 /* Shared page-scoped CSS for the four product pages (Engage / Assess /
- * Capture / Data), ported verbatim from EngagePage.dc.html's <helmet><style>.
+ * Capture / Data Insights), ported verbatim from EngagePage.dc.html's <helmet><style>.
  * The four pages declare an identical block.
  *
  * RULE ORDER IS LOAD-BEARING. [data-sec] is declared 64px in the 1020px

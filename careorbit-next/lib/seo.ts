@@ -67,7 +67,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       "A digital tool paired with a professional service: our team converts your best patient material into one organized, deployable, trackable…",
   },
   "/platform/data": {
-    title: "Data",
+    title: "Data Insights",
     description:
       "Every action a patient takes, and every one they do not, becomes an engagement signal your teams can act on.",
   },

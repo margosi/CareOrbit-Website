@@ -4,7 +4,7 @@
  *
  * The four pages share one card layout. Differences, all preserved:
  *  - only the base Orbit Solutions page shows the "Optional add-on" box
- *  - Capture and Data render a coral `price` line under the scope text
+ *  - Capture and Data Insights render a coral `price` line under the scope text
  *    (and their scope div drops the 30px bottom margin as a result)
  *  - each page has its own kicker, heading, blurb and footer note
  */
@@ -12,7 +12,7 @@
 export type Plan = {
   name: string;
   tag: string;
-  /** Coral price line. Capture and Data only. */
+  /** Coral price line. Capture and Data Insights only. */
   price?: string;
   scope: string;
   href: string;

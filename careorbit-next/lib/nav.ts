@@ -51,13 +51,12 @@ export const ORBITS: OrbitLink[] = [
 ];
 
 /* The four product pages, shown in the right-hand column of the orbit
- * dropdown. Labelled "Data" there but "Data Insights" under Pricing, as in
- * the original. */
+ * dropdown. Labelled "Data Insights", matching Pricing. */
 export const PRODUCTS = [
   { name: "Engage", href: "/platform/engage" },
   { name: "Assess", href: "/platform/assess" },
   { name: "Capture", href: "/platform/capture" },
-  { name: "Data", href: "/platform/data" },
+  { name: "Data Insights", href: "/platform/data" },
 ];
 
 export const PRICING_LINKS = [

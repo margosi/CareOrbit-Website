@@ -1,4 +1,4 @@
-/* Data page content, ported verbatim from DataPage.dc.html renderVals().
+/* Data Insights page content, ported verbatim from DataPage.dc.html renderVals().
  * Copy is brief-locked. */
 
 export const STEPS = [

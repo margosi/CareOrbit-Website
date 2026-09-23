@@ -5,7 +5,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { hv } from "@/lib/hoverStyles";
 
 /* Two-column hero shared by the four product pages.
- * Ported from EngagePage.dc.html lines 38-52; Assess/Capture/Data repeat it
+ * Ported from EngagePage.dc.html lines 38-52; Assess/Capture/Data Insights repeat it
  * with different copy and image.
  *
  * Left: heading + blurb + two buttons. Right: full-bleed image.
@@ -20,7 +20,7 @@ export function ProductHero({
   bookSrc,
   sheetLabel,
 }: {
-  /** Optional pill above the heading (Capture / Data show NEW CAPABILITY). */
+  /** Optional pill above the heading (Capture / Data Insights show NEW CAPABILITY). */
   badge?: ReactNode;
   heading: ReactNode;
   blurb: string;

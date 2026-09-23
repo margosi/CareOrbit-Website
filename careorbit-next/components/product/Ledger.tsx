@@ -1,7 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 
 /* The "ledger row" pattern shared by the four product pages
- * (Engage / Assess / Capture / Data).
+ * (Engage / Assess / Capture / Data Insights).
  *
  * Structure, from EngagePage.dc.html lines 61-78 and repeated verbatim in
  * the other three: a [data-row] grid with a .62fr label column (kicker,
