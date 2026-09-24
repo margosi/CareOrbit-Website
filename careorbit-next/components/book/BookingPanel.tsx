@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { submitLead } from "@/lib/submitLead";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { fv, hv } from "@/lib/hoverStyles";
 import { Reveal } from "@/components/motion/Reveal";
 import {
   CALENDLY_BASE,
   CALENDLY_ORIGIN,
-  SERVICE_LINES,
+  BOOKING_GROUPS,
   SHEET_OPTIONS,
   SRC_LINES,
   SRC_PAGES,
@@ -52,7 +53,6 @@ const INPUT: React.CSSProperties = {
 const DWELL_MS = 3000;
 
 export function BookingPanel() {
-  const router = useRouter();
   const params = useSearchParams();
   const src = params.get("src") ?? "";
 
@@ -68,6 +68,7 @@ export function BookingPanel() {
   const [error, setError] = useState("");
   const [booking, setBooking] = useState(false);
   const [calendlyUrl, setCalendlyUrl] = useState("");
+  const [booked, setBooked] = useState(false);
   const [srcChecked, setSrcChecked] = useState(true);
   /* Bot protections brought into line with SheetRequestForm and
    * StudyRequest, which both already had them. Neither is visible. */
@@ -106,13 +107,27 @@ export function BookingPanel() {
       if (e.origin !== CALENDLY_ORIGIN) return;
       const data = e.data as { event?: string } | null;
       if (!data || data.event !== "calendly.event_scheduled") return;
-      const l = encodeURIComponent(line || "Other");
-      const s = encodeURIComponent(src || "direct");
-      router.push(`/thank-you?line=${l}&src=${s}`);
+      /* Stay put. Navigating to /thank-you made booking a terminal state:
+       * the panel unmounted and a second call meant a full page load. The
+       * confirmation below carries the same onward links. */
+      setBooked(true);
     };
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-  }, [line, src, router]);
+  }, []);
+
+  /* Back to a blank booking form without a reload. Name, organization,
+   * role and email survive - they are the same person - but the line is
+   * cleared so the next call's subject is chosen deliberately rather than
+   * inherited. */
+  const bookAnother = () => {
+    setBooked(false);
+    setBooking(false);
+    setCalendlyUrl("");
+    setLine("");
+    setSrcChecked(false);
+    setError("");
+  };
 
   const submit = () => {
     if (!name || !org || !email.includes("@")) {
@@ -292,10 +307,14 @@ export function BookingPanel() {
         }}
       >
         <option value="">Service line&hellip;</option>
-        {SERVICE_LINES.map((l) => (
-          <option key={l} value={l}>
-            {l}
-          </option>
+        {BOOKING_GROUPS.map((g) => (
+          <optgroup key={g.label} label={g.label}>
+            {g.options.map((l) => (
+              <option key={l} value={l}>
+                {l}
+              </option>
+            ))}
+          </optgroup>
         ))}
       </select>
       {/* Honeypot. Off-screen and aria-hidden, identical to the other two
@@ -355,7 +374,7 @@ export function BookingPanel() {
         </button>
       )}
 
-      {booking && (
+      {booking && !booked && (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <div style={{ fontSize: 13, color: "rgba(15,29,46,.6)" }}>
             Pick a time that works for you:
@@ -371,6 +390,73 @@ export function BookingPanel() {
               background: "#FFFFFF",
             }}
           />
+        </div>
+      )}
+
+      {booked && (
+        <div
+          role="status"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 12,
+            background: "#F4F9F5",
+            border: "1px solid rgba(31,107,73,.18)",
+            borderRadius: 18,
+            padding: 24,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "Lato,sans-serif",
+              fontWeight: 900,
+              fontSize: 19,
+              color: "#1F6B49",
+            }}
+          >
+            Your call is booked.
+          </div>
+          <div
+            style={{
+              fontSize: 15,
+              lineHeight: 1.6,
+              color: "rgba(15,29,46,.72)",
+              textWrap: "pretty",
+            }}
+          >
+            Calendly has emailed the invitation and the meeting details to{" "}
+            {email || "your inbox"}. Nothing else is needed from you.
+          </div>
+          <button
+            onClick={bookAnother}
+            className={hv("bookCta")}
+            style={{
+              fontFamily: "Inter,sans-serif",
+              fontSize: 15.5,
+              fontWeight: 600,
+              color: "#FFFFFF",
+              background: "#0F1D2E",
+              border: "none",
+              borderRadius: 999,
+              padding: "15px 28px",
+              cursor: "pointer",
+              alignSelf: "flex-start",
+            }}
+          >
+            Book another call
+          </button>
+          <Link
+            href={`/thank-you?line=${encodeURIComponent(line || "Other")}&src=${encodeURIComponent(src || "direct")}`}
+            className={hv("studyLink")}
+            style={{
+              fontSize: 14,
+              color: "#B15948",
+              textDecoration: "none",
+              alignSelf: "flex-start",
+            }}
+          >
+            See what happens next &rarr;
+          </Link>
         </div>
       )}
     </Reveal>

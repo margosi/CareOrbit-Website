@@ -28,6 +28,23 @@ const ORBIT_BY_LINE: Record<string, { href: string; label: string }> = {
     href: "/orbits/medication-therapy",
     label: "Medication Therapy & Adherence",
   },
+  "Primary Care": { href: "/orbits/primary-care", label: "Primary Care" },
+  "Community-Based Research": {
+    href: "/orbits/community-research",
+    label: "Community-Based Research",
+  },
+  "Surgical Support": {
+    href: "/orbits/surgical-support",
+    label: "Surgical Support",
+  },
+  "Behavioral Risk": {
+    href: "/orbits/behavioral-risk",
+    label: "Behavioral Risk",
+  },
+  Engage: { href: "/platform/engage", label: "Engage" },
+  Assess: { href: "/platform/assess", label: "Assess" },
+  Capture: { href: "/platform/capture", label: "Capture" },
+  "Data Insights": { href: "/platform/data", label: "Data Insights" },
 };
 
 /* searchParams is typed explicitly rather than with PageProps<"/thank-you">:

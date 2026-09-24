@@ -9,13 +9,23 @@
  *  pre-checked context box. */
 export const SRC_LINES: Record<string, string> = {
   oncology: "Oncology",
+  "primary-care": "Primary Care",
   cardiology: "Cardiology",
   orthopedics: "Orthopedics",
   "womens-health": "Women's Health",
   bariatrics: "Bariatrics",
   "behavioral-health": "Behavioral Health",
   "medication-therapy": "Medication Therapy & Adherence",
-  "behavioral-safety": "Behavioral Risk (employers)",
+  research: "Community-Based Research",
+  "surgical-support": "Surgical Support",
+  /* The ?src= token stays "behavioral-safety" - it is baked into links all
+   * over the site and into existing lead rows. Only the label changed. */
+  "behavioral-safety": "Behavioral Risk",
+  /* The four product pages deep-link with a "-page" suffix. */
+  "engage-page": "Engage",
+  "assess-page": "Assess",
+  "capture-page": "Capture",
+  "data-page": "Data Insights",
 };
 
 /** ?src= values that name a quote request or focus topic. */
@@ -94,17 +104,31 @@ export const SHEET_OPTIONS = [
   { value: "data", label: "CareOrbit Data Insights" },
 ];
 
-/** Service-line selector on the booking form. */
-export const SERVICE_LINES = [
-  "Oncology",
-  "Cardiology",
-  "Orthopedics",
-  "Women's Health",
-  "Bariatrics",
-  "Behavioral Health",
-  "Medication Therapy & Adherence",
-  "Behavioral Risk (employers)",
-  "Other",
+/* What the booking form's selector offers: the eleven orbit lines and the
+ * four platform capabilities, in two labelled groups. The stored value is
+ * the visible label, which is what reaches service_line, Calendly's
+ * utm_content and /thank-you's ORBIT_BY_LINE lookup. */
+export const BOOKING_GROUPS: { label: string; options: string[] }[] = [
+  {
+    label: "Orbit Solutions",
+    options: [
+      "Oncology",
+      "Primary Care",
+      "Cardiology",
+      "Orthopedics",
+      "Women's Health",
+      "Bariatrics",
+      "Behavioral Health",
+      "Medication Therapy & Adherence",
+      "Community-Based Research",
+      "Surgical Support",
+      "Behavioral Risk",
+    ],
+  },
+  {
+    label: "Platform",
+    options: ["Engage", "Assess", "Capture", "Data Insights"],
+  },
 ];
 
 export const CALENDLY_BASE =
