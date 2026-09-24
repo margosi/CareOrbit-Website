@@ -171,11 +171,13 @@ export function SiteFooter() {
               &copy; 2026 Total Orbit. All rights reserved.
             </div>
             <div style={{ display: "flex", gap: 24 }}>
-              {["HIPAA Compliance", "Privacy Policy", "Terms"].map((label) => (
-                /* href="#" in the original - these pages do not exist yet. */
+              {[
+                { label: "Privacy Policy", href: "/privacy" },
+                { label: "Terms", href: "/terms" },
+              ].map(({ label, href }) => (
                 <a
                   key={label}
-                  href="#"
+                  href={href}
                   className={hv("footerLink")}
                   style={{
                     fontSize: 12.5,

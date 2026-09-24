@@ -49,10 +49,6 @@ import {
  * its field labels, result labels, document title and CSV filename are all
  * per-segment, which is unusual and is preserved.
  *
- * Segment 0 ("All of women's health") has no value image: the legacy
- * ternary falls through to "" and image-slot shows its placeholder
- * caption. That is the default tab, so the Phase 0 baseline shows the
- * placeholder, and Figure reproduces it.
  */
 const LILAC = "#C0A5E8";
 const NAME_LOWER = NAME.toLowerCase();
@@ -190,7 +186,6 @@ export function WomensHealthBody() {
             <Figure
               src={VALUE_SRC[s.key]}
               alt=""
-              placeholder="[Placeholder: clinician with a patient in a women's health setting, vertical crop]"
               radius={28}
               sizes="(max-width: 1020px) 100vw, 40vw"
               style={{

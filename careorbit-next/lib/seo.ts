@@ -108,6 +108,16 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     description:
       "No demo script, no obligation. We get introduced, hear which pain points you want to tackle, and give you a brief look at the platform.",
   },
+  "/privacy": {
+    title: "Privacy Policy",
+    description:
+      "How Total Orbit and CareOrbit collect, use, disclose and protect personal information across our websites and services.",
+  },
+  "/terms": {
+    title: "Website Terms of Use",
+    description:
+      "The terms that govern your access to and use of the CareOrbit and Total Orbit public websites.",
+  },
   "/thank-you": {
     title: "Thank you",
     description: "A confirmation is on its way to your email.",

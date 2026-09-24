@@ -96,10 +96,9 @@ export const NAME = "Women's Health";
 export const SUB =
   "Women's health is a relationship measured in decades, and almost all of it happens between visits: well-woman care, the operative journeys, pregnancy, and the long midlife stretch. A women's health orbit is designed backwards from preparedness, attendance, and the documentation that protects your practice.";
 
-/** Segment 0 has no value image - the legacy ternary falls through to "".
- * Preserved: the placeholder caption shows on that tab. */
+/** One value image per segment. */
 export const VALUE_SRC: Record<string, string | undefined> = {
-  all: undefined,
+  all: "/images/value-womens-all.webp",
   maternity: "/images/value-maternity.webp",
   gyn: "/images/value-gyn.webp",
   midlife: "/images/value-midlife.webp",

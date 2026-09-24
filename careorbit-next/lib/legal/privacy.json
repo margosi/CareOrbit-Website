@@ -1,0 +1,397 @@
+{
+  "source": "CareOrbit_Total_Orbit_Privacy_Policy 9_24_2026.docx",
+  "blocks": [
+    {
+      "k": "title",
+      "t": "CareOrbit and Total Orbit Privacy Policy"
+    },
+    {
+      "k": "p",
+      "t": "Effective September 24 2026"
+    },
+    {
+      "k": "p",
+      "t": "This Privacy Policy explains how Total Orbit, Inc. (\"Total Orbit,\" \"CareOrbit,\" \"we,\" \"us,\" or \"our\") collects, uses, discloses, and protects information through totalorbit.com and other websites we operate (the \"Websites\"), the CareOrbit platform and its Engage, Assess, Capture, and Data capabilities, and related implementation, support, communication, and analytics services (collectively, the \"Services\"). It also explains the important distinction between information we handle for our own business purposes and protected health information we process on behalf of healthcare organizations."
+    },
+    {
+      "k": "p",
+      "t": "Important healthcare privacy notice. When CareOrbit receives or maintains protected health information on behalf of a healthcare provider, health plan, or other organization subject to HIPAA, CareOrbit generally acts as that organization’s Business Associate. The healthcare organization controls that information, and its Notice of Privacy Practices and agreement with us govern the information. Patients should direct requests concerning their medical record, treatment, appointments, assessment responses, or HIPAA rights to the healthcare organization that invited them to use CareOrbit."
+    },
+    {
+      "k": "h2",
+      "t": "1 Scope of this Privacy Policy"
+    },
+    {
+      "k": "p",
+      "t": "This Privacy Policy applies to personal information processed through the Websites and Services, including information provided by website visitors, prospective and current customers, customer administrators and workforce members, patients and other end users, caregivers or authorized representatives, and individuals who communicate with us."
+    },
+    {
+      "k": "p",
+      "t": "This Privacy Policy does not replace or modify a healthcare organization’s Notice of Privacy Practices, patient consent or authorization, or other privacy notice. It also does not override a customer agreement, Business Associate Agreement, data processing agreement, or other written contract. If those documents conflict with this Privacy Policy regarding information we process for a customer, the applicable contract and law control."
+    },
+    {
+      "k": "p",
+      "t": "The Services may link to content or services operated by healthcare customers or other third parties. Their privacy practices are governed by their own notices, not this Privacy Policy."
+    },
+    {
+      "k": "h2",
+      "t": "2 Our roles and responsibilities"
+    },
+    {
+      "k": "h3",
+      "t": "Website and business operations"
+    },
+    {
+      "k": "p",
+      "t": "For information collected through our Websites, sales and demo requests, account administration, contracting, support, security, and ordinary business operations, Total Orbit determines why and how the information is processed, subject to applicable law."
+    },
+    {
+      "k": "h3",
+      "t": "Services provided for customers"
+    },
+    {
+      "k": "p",
+      "t": "Healthcare organizations and other customers configure CareOrbit for their programs and determine which individuals are invited, what education or support content is presented, what assessments or forms are used, what dates or care milestones are included, what communications are sent, and who may review results. For personal information processed under those instructions, the customer is generally the responsible organization and Total Orbit acts as its service provider, processor, or Business Associate, as applicable."
+    },
+    {
+      "k": "h3",
+      "t": "Protected health information"
+    },
+    {
+      "k": "p",
+      "t": "When information is protected health information under the Health Insurance Portability and Accountability Act and its implementing regulations (\"HIPAA\"), we use and disclose it only as permitted by the applicable Business Associate Agreement, customer instructions, and law. We do not sell PHI, use PHI for targeted advertising, or use PHI for purposes unrelated to providing and securing the Services except as permitted or required by law and the applicable agreement."
+    },
+    {
+      "k": "h2",
+      "t": "3 Information we collect"
+    },
+    {
+      "k": "h3",
+      "t": "Information you provide directly"
+    },
+    {
+      "k": "li",
+      "t": "Contact and professional information, such as name, title, organization, business email address, phone number, mailing address, and the contents of a request for information, demo request, or other communication."
+    },
+    {
+      "k": "li",
+      "t": "Account and authentication information, such as username, email address, role, organization, login and multi-factor authentication records, and access permissions. We do not store a readable copy of your password."
+    },
+    {
+      "k": "li",
+      "t": "Support and implementation information, such as questions, trouble reports, training records, feedback, customer configuration choices, approved content, documents, and other materials supplied for building or operating an Orbit."
+    },
+    {
+      "k": "li",
+      "t": "Assessment and form responses submitted through CareOrbit Assess or related screening and check-in experiences, which may include physical health, behavioral health, symptoms, functional status, social needs, satisfaction, or other information selected by the customer."
+    },
+    {
+      "k": "li",
+      "t": "Communications preferences and consent records, including email or text-message opt-in or opt-out status and records associated with invitations, reminders, and service messages."
+    },
+    {
+      "k": "h3",
+      "t": "Information customers provide or make available"
+    },
+    {
+      "k": "li",
+      "t": "Identifiers and contact details used to issue access, such as name, email address, mobile number, patient or program identifier, or other customer-defined identifiers."
+    },
+    {
+      "k": "li",
+      "t": "Care-program information, such as the assigned Orbit, care journey, service line, location, user type, language, and authorized care-team relationships."
+    },
+    {
+      "k": "li",
+      "t": "Key dates and status information, which may include appointment, procedure, admission, discharge, treatment, follow-up, milestone, or related dates, including updates and missed or rescheduled events."
+    },
+    {
+      "k": "li",
+      "t": "Clinical, screening, referral, demographic, or administrative information needed to configure the experience, route information, support authorized care workflows, or exchange data with a customer’s systems."
+    },
+    {
+      "k": "li",
+      "t": "Customer content and source materials submitted through CareOrbit Capture or other implementation channels, including documents, links, media, instructions, and approved educational resources."
+    },
+    {
+      "k": "h3",
+      "t": "Information collected automatically"
+    },
+    {
+      "k": "li",
+      "t": "Device and network information, such as IP address, browser type, operating system, device type, language, time zone, and approximate location inferred from an IP address."
+    },
+    {
+      "k": "li",
+      "t": "Usage and engagement information, such as activation, login, pages or tiles viewed, links selected, videos or materials accessed, time and sequence of interactions, completion activity, searches, and responses to prompts."
+    },
+    {
+      "k": "li",
+      "t": "Security and diagnostic information, such as access logs, session events, authentication events, error reports, performance data, and suspected fraud or misuse indicators."
+    },
+    {
+      "k": "li",
+      "t": "Website information collected through cookies and similar technologies as described below."
+    },
+    {
+      "k": "p",
+      "t": "We may combine information received from different sources when permitted by the applicable customer agreement and law."
+    },
+    {
+      "k": "h2",
+      "t": "4 How we use information"
+    },
+    {
+      "k": "p",
+      "t": "Depending on our role and the context, we use information to:"
+    },
+    {
+      "k": "li",
+      "t": "Provide, configure, host, maintain, and support the Websites and Services."
+    },
+    {
+      "k": "li",
+      "t": "Create and administer accounts; authenticate users; manage roles, access, and security; and enable single sign-on or multi-factor authentication when configured."
+    },
+    {
+      "k": "li",
+      "t": "Issue and manage CareOrbit access through email, SMS, QR code, customer workflows, or supported integrations."
+    },
+    {
+      "k": "li",
+      "t": "Present approved education, guidance, resources, forms, assessments, check-ins, reminders, and support relevant to an assigned care or engagement journey."
+    },
+    {
+      "k": "li",
+      "t": "Receive and process assessment responses and other information, generate authorized alerts or outputs, and make information available to designated customer personnel or systems."
+    },
+    {
+      "k": "li",
+      "t": "Use key dates, status changes, and customer-defined rules to schedule, personalize, or adjust content and communications."
+    },
+    {
+      "k": "li",
+      "t": "Measure adoption, activation, engagement, completion, usage, and program performance; prepare customer dashboards, exports, reports, engagement measures, and summaries; and support quality improvement."
+    },
+    {
+      "k": "li",
+      "t": "Develop, test, troubleshoot, and improve functionality, accessibility, reliability, usability, and security, subject to contractual and legal restrictions."
+    },
+    {
+      "k": "li",
+      "t": "Respond to requests, provide support, manage our customer relationships, process transactions, and communicate about products, services, events, and updates."
+    },
+    {
+      "k": "li",
+      "t": "Detect, investigate, and prevent security incidents, fraud, abuse, unauthorized access, and violations of our terms or agreements."
+    },
+    {
+      "k": "li",
+      "t": "Comply with law, enforce agreements, establish or defend legal claims, and protect the rights, safety, and property of Total Orbit, customers, users, and others."
+    },
+    {
+      "k": "p",
+      "t": "CareOrbit does not provide medical advice, make diagnoses, or replace communication with a qualified healthcare professional. Customers and their authorized clinicians or staff remain responsible for care decisions and for determining how information from the Services is used in care."
+    },
+    {
+      "k": "h2",
+      "t": "5 How we disclose information"
+    },
+    {
+      "k": "p",
+      "t": "We may disclose information in the following circumstances, subject to the applicable agreement and law:"
+    },
+    {
+      "k": "li",
+      "t": "To the customer that invited or authorized you to use CareOrbit, including its authorized workforce members, affiliates, care teams, contractors, and systems, according to configured permissions and workflows."
+    },
+    {
+      "k": "li",
+      "t": "To service providers and subcontractors that help us host, secure, communicate, support, analyze, and operate the Services. They may process information only for authorized purposes and are bound by appropriate confidentiality, security, and data-protection obligations. Where required, subcontractors that handle PHI are bound by Business Associate terms."
+    },
+    {
+      "k": "li",
+      "t": "To integration partners or systems at the customer’s direction, such as an electronic health record, identity provider, messaging workflow, analytics environment, or other authorized system."
+    },
+    {
+      "k": "li",
+      "t": "To professional advisers, auditors, insurers, and financial institutions when reasonably necessary for legitimate business, compliance, or risk-management purposes and subject to appropriate protections."
+    },
+    {
+      "k": "li",
+      "t": "To government authorities, courts, regulators, or other parties when required by law or legal process, or when reasonably necessary to protect rights, safety, property, and the integrity of the Services. Disclosures of PHI are further limited by HIPAA and the applicable Business Associate Agreement."
+    },
+    {
+      "k": "li",
+      "t": "In connection with a merger, financing, acquisition, reorganization, sale of assets, bankruptcy, or similar transaction, subject to confidentiality obligations and applicable law."
+    },
+    {
+      "k": "li",
+      "t": "With your direction, authorization, or consent, or as otherwise described when the information is collected."
+    },
+    {
+      "k": "p",
+      "t": "We do not sell PHI. We do not disclose PHI to advertising networks or data brokers. We do not use cross-context behavioral advertising in authenticated CareOrbit experiences."
+    },
+    {
+      "k": "h2",
+      "t": "6 De identified and aggregated information"
+    },
+    {
+      "k": "p",
+      "t": "Where permitted by the applicable customer agreement and law, we may create, receive, or use information that has been de-identified or aggregated so that it does not identify and cannot reasonably be used to identify an individual. PHI is de-identified using a method permitted by HIPAA. We may use properly de-identified or aggregated information to provide analytics, understand engagement and program performance, improve the Services, conduct research or benchmarking, and describe overall trends. We maintain de-identified information in de-identified form and do not attempt to re-identify it except as permitted by law to test whether de-identification processes are effective."
+    },
+    {
+      "k": "h2",
+      "t": "7 Email text messages and QR access"
+    },
+    {
+      "k": "p",
+      "t": "At a customer’s direction, CareOrbit may send invitations, access links, authentication messages, reminders, notifications, and other service-related communications by email or text message. Messages may identify the sending organization or program and may contain a secure link. Because ordinary email and SMS are not always encrypted, we seek to limit sensitive content in the message itself and direct users to an appropriate secure experience when needed."
+    },
+    {
+      "k": "p",
+      "t": "Message frequency varies by program. Message and data rates may apply. You may opt out of nonessential text messages by replying STOP when that option is offered, and you may request help by replying HELP or contacting the organization that invited you. Certain authentication, security, or transactional messages may still be sent when necessary to provide requested access or protect an account. Opting out of CareOrbit messages does not change your relationship with your healthcare organization or prevent you from contacting it through other channels."
+    },
+    {
+      "k": "p",
+      "t": "QR codes may allow a user to begin an access or activation flow. Users should avoid sharing personal activation links, codes, or credentials with unauthorized persons."
+    },
+    {
+      "k": "h2",
+      "t": "8 Cookies and website analytics"
+    },
+    {
+      "k": "p",
+      "t": "Our Websites may use cookies, pixels, local storage, and similar technologies that are necessary for navigation, security, preferences, performance, and understanding how the Websites are used. Where required, we provide choices through a cookie banner or preference tool. Browser settings may also allow you to block or delete cookies, but doing so may affect functionality."
+    },
+    {
+      "k": "p",
+      "t": "We do not permit advertising pixels or cross-site behavioral advertising technologies in authenticated CareOrbit experiences that handle PHI. Before deploying analytics or tracking technologies, we evaluate the context in which they operate and apply contractual, technical, and legal controls appropriate to the information involved."
+    },
+    {
+      "k": "p",
+      "t": "A browser’s Global Privacy Control or similar preference signal will be honored where required by applicable law and where our systems can recognize the signal. Because there is no uniform industry standard for other ‘Do Not Track’ signals, the Websites may not respond to them."
+    },
+    {
+      "k": "h2",
+      "t": "9 Security"
+    },
+    {
+      "k": "p",
+      "t": "We use administrative, technical, and physical safeguards designed to protect information against unauthorized access, use, disclosure, alteration, and destruction. Depending on the Service and risk, safeguards may include access controls, role-based permissions, authentication, encryption in transit and at rest, logging and monitoring, workforce training, incident-response procedures, vendor oversight, backups, and secure cloud infrastructure."
+    },
+    {
+      "k": "p",
+      "t": "No system or transmission method is completely secure. Users are responsible for protecting their credentials, devices, and access links and for notifying us or the applicable customer promptly of suspected unauthorized access. If we discover a security incident involving information processed for a customer, we will respond and provide notices as required by the applicable agreement and law."
+    },
+    {
+      "k": "h2",
+      "t": "10 Data retention"
+    },
+    {
+      "k": "p",
+      "t": "We retain personal information only for as long as reasonably necessary for the purposes described in this Privacy Policy, including to provide the Services, follow customer instructions, satisfy contractual requirements, maintain security and audit records, comply with legal obligations, resolve disputes, and enforce agreements. Retention periods vary based on the type of information, the sensitivity and risk associated with it, the customer’s configuration and instructions, and applicable law."
+    },
+    {
+      "k": "p",
+      "t": "For PHI and other customer-controlled information, return, deletion, or continued retention at the end of services is governed by the applicable agreement, Business Associate Agreement, customer instructions, and law. Backup copies may remain for a limited period under protected backup and disaster-recovery schedules before being overwritten or securely deleted. We may retain de-identified information that cannot reasonably identify an individual."
+    },
+    {
+      "k": "h2",
+      "t": "11 Your choices and privacy rights"
+    },
+    {
+      "k": "h3",
+      "t": "Website and business information"
+    },
+    {
+      "k": "p",
+      "t": "Depending on where you live and subject to legal exceptions, you may have rights to request access to, correction of, deletion of, or a portable copy of personal information; obtain information about categories of information and recipients; restrict or object to certain processing; withdraw consent; opt out of certain sales, sharing, targeted advertising, or profiling; or appeal a decision concerning a request. We do not discriminate against individuals for exercising applicable privacy rights."
+    },
+    {
+      "k": "p",
+      "t": "To exercise a right concerning information Total Orbit controls for its own business purposes, contact us using Section 17. We may need to verify your identity and authority. An authorized agent may submit a request where permitted by law, but we may require proof of authorization and identity. If we deny a request, you may appeal by replying to our decision and stating that you wish to appeal."
+    },
+    {
+      "k": "h3",
+      "t": "Patient and end user information"
+    },
+    {
+      "k": "p",
+      "t": "If your request concerns information in an Orbit, an assessment, a healthcare communication, an appointment or procedure date, or another record maintained for a healthcare organization, contact that organization directly. It controls the record and is best positioned to verify your identity, explain its practices, and respond to a request under HIPAA or other law. We will assist the organization as required by our agreement and law."
+    },
+    {
+      "k": "h3",
+      "t": "Communication choices"
+    },
+    {
+      "k": "p",
+      "t": "You may unsubscribe from promotional email by using the link in the message or contacting us. You may opt out of eligible text messages as described in Section 7. Even after an opt-out, we may send nonpromotional messages about an active account, security, support request, transaction, or legal notice when permitted."
+    },
+    {
+      "k": "h2",
+      "t": "12 Children and minors"
+    },
+    {
+      "k": "p",
+      "t": "Our public Websites are directed to business and healthcare audiences and are not intended for children under 13. We do not knowingly collect personal information from a child under 13 through the public Websites without legally sufficient authorization. If you believe a child submitted information through a public Website inappropriately, contact us."
+    },
+    {
+      "k": "p",
+      "t": "A healthcare organization may configure CareOrbit for pediatric care, adolescent care, maternal health, family caregiving, or another program involving minors. In those circumstances, the organization is responsible for determining the appropriate legal basis, authorization, consent, access, and communication rules. We process the information on its behalf under the applicable agreement and law."
+    },
+    {
+      "k": "h2",
+      "t": "13 Information from outside the United States"
+    },
+    {
+      "k": "p",
+      "t": "Total Orbit is based in the United States, and the Services are currently operated from the United States. If you access the Websites or Services from another country, information may be transferred to, stored in, and processed in the United States, where privacy laws may differ. We use appropriate contractual or other safeguards when required by applicable law. Customers should not deploy the Services in a jurisdiction unless the deployment is authorized by their agreement with us."
+    },
+    {
+      "k": "h2",
+      "t": "14 Third party links and customer content"
+    },
+    {
+      "k": "p",
+      "t": "CareOrbit may present links, videos, documents, phone numbers, scheduling resources, crisis resources, or other content selected or approved by a customer. Total Orbit does not control the privacy, security, accessibility, or accuracy of third-party destinations. Review the privacy notice of any third party before providing information. In an emergency, call 911 or the appropriate local emergency service; do not rely on CareOrbit for emergency response."
+    },
+    {
+      "k": "h2",
+      "t": "15 Changes to this Privacy Policy"
+    },
+    {
+      "k": "p",
+      "t": "We may update this Privacy Policy to reflect changes in our Services, practices, technology, or legal obligations. We will post the revised version and update the effective date. If a change is material, we will provide additional notice when required by law or appropriate under the circumstances. Prior versions may be requested using the contact information below."
+    },
+    {
+      "k": "h2",
+      "t": "16 Relationship to other terms"
+    },
+    {
+      "k": "p",
+      "t": "Use of the Websites and Services may also be governed by Terms of Use, customer agreements, informed-consent materials, program notices, and other terms. This Privacy Policy addresses privacy practices and does not create contractual rights beyond those provided by applicable law or a written agreement signed by Total Orbit."
+    },
+    {
+      "k": "h2",
+      "t": "17 Contact us"
+    },
+    {
+      "k": "p",
+      "t": "Questions or requests concerning this Privacy Policy or personal information Total Orbit controls for its own business purposes may be directed to:"
+    },
+    {
+      "k": "table",
+      "rows": [
+        ["Organization", "Total Orbit, Inc.  |  CareOrbit"],
+        ["Email", "legal@totalorbit.com"],
+        ["Mail", "4240 Duncan Avenue, Suite 200, St. Louis, Missouri 63110"]
+      ]
+    },
+    {
+      "k": "p",
+      "t": "If you are a patient or end user and your question concerns your healthcare information, care, assessment responses, appointment or procedure information, or communications from a healthcare organization, contact that healthcare organization first. If you contact Total Orbit, please identify the organization that invited you, but do not send detailed medical information through ordinary email."
+    }
+  ]
+}
