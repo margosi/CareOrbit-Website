@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { submitLead } from "@/lib/submitLead";
 import { useRouter, useSearchParams } from "next/navigation";
 import { fv, hv } from "@/lib/hoverStyles";
+import { Reveal } from "@/components/motion/Reveal";
 import {
   CALENDLY_BASE,
   CALENDLY_ORIGIN,
@@ -170,8 +171,7 @@ export function BookingPanel() {
   };
 
   return (
-    <div
-      data-rv=""
+    <Reveal
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(15,29,46,.07)",
@@ -373,7 +373,7 @@ export function BookingPanel() {
           />
         </div>
       )}
-    </div>
+    </Reveal>
   );
 }
 
