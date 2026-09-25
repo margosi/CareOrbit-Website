@@ -28,7 +28,7 @@ import { hasResend, hasSupabase, leadConfig } from "./env";
 
 export type Lead = {
   /** Which form produced this. */
-  kind: "info-sheet" | "study-request" | "book-a-call";
+  kind: "info-sheet" | "study-request" | "book-a-call" | "newsletter";
   email: string;
   /** What was asked for: a PDF path, or the service line for a booking. */
   requested?: string;
@@ -62,6 +62,10 @@ const NOTIFY_KINDS: ReadonlySet<Lead["kind"]> = new Set([
   "info-sheet",
   "study-request",
 ]);
+/* Note which kinds are absent as much as which are present. "book-a-call"
+ * stays out because Calendly already mails both parties. "newsletter" stays
+ * out because a mail per signup would train the inbox to ignore the
+ * notification address; the rows are the record and a query is the report. */
 
 /** One place where the internal field names meet the actual column names. */
 function toRow(lead: Lead): Record<string, string | undefined> {
@@ -145,6 +149,9 @@ export async function notify(lead: Lead): Promise<Outcome> {
     "info-sheet": "Info sheet request",
     "study-request": "Evidence request",
     "book-a-call": "Booking",
+    /* Never used - newsletter is not in NOTIFY_KINDS - but the map is typed
+     * over every kind so that adding one cannot silently skip this. */
+    newsletter: "Newsletter signup",
   };
 
   const rows: Array<[string, string | undefined]> = [

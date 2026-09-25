@@ -24,7 +24,12 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-const KINDS = new Set(["info-sheet", "study-request", "book-a-call"]);
+const KINDS = new Set([
+  "info-sheet",
+  "study-request",
+  "book-a-call",
+  "newsletter",
+]);
 
 /* Per-IP throttle. Deliberately small and in-memory: it blunts a casual
  * flood on a single instance without pretending to be distributed rate

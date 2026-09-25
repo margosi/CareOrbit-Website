@@ -26,6 +26,18 @@ import { hv } from "@/lib/hoverStyles";
  */
 const NO_PREFETCH = { prefetch: false } as const;
 
+/* Section labels inside the Orbit Solutions dropdown. The menu lists two
+ * different kinds of destination - service lines and platform products -
+ * and without a label the second column reads as more of the first. */
+const menuSection: React.CSSProperties = {
+  fontSize: 11.5,
+  fontWeight: 700,
+  letterSpacing: ".1em",
+  textTransform: "uppercase",
+  color: "#8A8276",
+  padding: "10px 14px 6px",
+};
+
 export function SiteNav({
   active = "home",
   /* Off site-wide. The bar, its dismiss button, its height measurement and
@@ -367,6 +379,7 @@ export function SiteNav({
                         flexDirection: "column",
                       }}
                     >
+                      <div style={menuSection}>Current Solutions For</div>
                       {ORBITS.map((o) => (
                         <Link
                           key={o.href}
@@ -410,6 +423,7 @@ export function SiteNav({
                         flexDirection: "column",
                       }}
                     >
+                      <div style={menuSection}>Products</div>
                       {PRODUCTS.map((p) => (
                         <Link
                           key={p.href}
@@ -727,7 +741,7 @@ export function SiteNav({
                 Platform
               </Link>
 
-              <div style={drawerHeading}>Orbit Solutions</div>
+              <div style={drawerHeading}>Current Solutions For</div>
               {ORBITS.map((o) => (
                 <Link
                   key={o.href}
@@ -740,6 +754,7 @@ export function SiteNav({
                 </Link>
               ))}
 
+              <div style={drawerHeading}>Products</div>
               {PRODUCTS.map((p) => (
                 <Link
                   key={p.href}

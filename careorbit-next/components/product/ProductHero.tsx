@@ -85,9 +85,9 @@ export function ProductHero({
           style={{
             fontFamily: "Lato,sans-serif",
             fontWeight: 900,
-            fontSize: "clamp(38px,4.6vw,60px)",
-            lineHeight: 1.03,
-            letterSpacing: "-0.025em",
+            fontSize: "clamp(56px,7.2vw,104px)",
+            lineHeight: 0.95,
+            letterSpacing: "-0.03em",
             margin: 0,
             textWrap: "balance",
           }}

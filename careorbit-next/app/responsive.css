@@ -117,9 +117,23 @@
     width: 100% !important;
     max-width: 100% !important;
     border-radius: 0 !important;
-    height: 64px !important;
-    padding: 0 8px 0 18px !important;
+    height: 56px !important;
+    padding: 0 8px 0 16px !important;
     box-shadow: 0 4px 24px rgba(15, 29, 46, 0.1) !important;
+  }
+
+  [data-nav-bar] img {
+    height: 34px !important;
+  }
+
+  [data-nav-mobile] {
+    gap: 6px !important;
+  }
+
+  [data-nav-mobile] a {
+    font-size: 13.5px !important;
+    padding: 9px 14px !important;
+    border-radius: 8px !important;
   }
 
   [data-gallery-row] {
@@ -149,7 +163,7 @@
   }
 
   [data-nav-spacer] {
-    height: 64px !important;
+    height: 56px !important;
   }
 
   [data-pad="page-top"] {
@@ -165,10 +179,6 @@
    *
    * It now collapses the way every other grid on the site does. Desktop
    * (>=1024px) is untouched and still matches the baseline exactly. */
-  [data-footer-grid] {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 32px !important;
-  }
 
   [data-footer-brand] {
     grid-column: 1 / -1;
@@ -205,7 +215,7 @@
 
   /* from SiteNav's own style block */
   [data-nav-spacer] {
-    height: 64px !important;
+    height: 56px !important;
   }
 
   [data-announce-bar] {
@@ -216,16 +226,200 @@
   [data-pad="page-top"] {
     padding-top: 24px !important;
   }
-
-  /* Footer: single column on phones. See the 900px block above. */
-  [data-footer-grid] {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
 }
 
 @media (max-width: 620px) {
   [data-grid="4-min0"] {
     grid-template-columns: 1fr !important;
+  }
+}
+
+/* ---------------------------------------------- layout safeguards --
+ * From the Design, and deliberately not scoped to one breakpoint: these
+ * are the rules that stop a long word, a wide image or a 15px input from
+ * making the whole page scroll sideways on a phone.
+ *
+ * `overflow-x: clip` rather than `hidden`: hidden on <html> creates a
+ * scroll container, which breaks position:sticky inside it. clip does not.
+ */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* A grid child defaults to min-width:auto, which refuses to shrink below
+ * its content and is the usual cause of a grid overflowing its track. */
+div[style*="display: grid"] > * {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  overflow-wrap: break-word;
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Pill CTAs keep their label on one line; a flex row wraps whole buttons
+ * instead of breaking a label in half. */
+a[style*="border-radius: 999px"],
+button[style*="border-radius: 999px"] {
+  white-space: nowrap;
+}
+
+@media (max-width: 1020px) {
+  /* Stacked email-capture cards stop stretching edge to edge on tablets. */
+  div[style*="flex-direction: column"]:has(> input[placeholder*="email" i]) {
+    max-width: 640px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+  /* iOS zooms the viewport on focus for any field under 16px. */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  div[style*="display: flex"][style*="flex-wrap: wrap"]
+    > a[style*="border-radius: 999px"] {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  /* Narrower than any pill label can hold: wrapping beats overflowing. */
+  a[style*="border-radius: 999px"],
+  button[style*="border-radius: 999px"] {
+    white-space: normal;
+  }
+}
+
+/* -------------------------------------- "Not ready for a call?" card --
+ * The navy info-sheet card on every orbit and product page. Full-bleed on
+ * a phone reads as a wall of navy; capped and tightened it reads as a card.
+ */
+@media (max-width: 1020px) {
+  [data-nr-card] {
+    max-width: 640px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-nr-card] {
+    padding: 26px 22px !important;
+    border-radius: 22px !important;
+  }
+
+  [data-nr-card] button {
+    align-self: stretch !important;
+  }
+}
+
+/* ------------------------------------------------ nav, 901-1100px --
+ * Between the mobile drawer and a comfortable desktop the six nav items
+ * plus the CTA crowd the bar. Tightening rather than dropping to the
+ * drawer early keeps the full nav available on small laptops.
+ */
+@media (min-width: 901px) and (max-width: 1100px) {
+  [data-nav-bar] {
+    gap: 18px !important;
+    padding: 0 10px 0 18px !important;
+  }
+
+  [data-nav-links] {
+    gap: 16px !important;
+  }
+
+  [data-nav-links] a,
+  [data-nav-links] span {
+    font-size: 14px !important;
+  }
+
+  [data-nav-bar] img {
+    height: 36px !important;
+  }
+
+  [data-cta] {
+    padding: 11px 16px !important;
+    font-size: 14px !important;
+  }
+}
+
+[data-nav-links] a,
+[data-nav-links] span {
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------- footer --
+ * The new two-part footer: four link columns beside a 380px signup and
+ * contact rail. Below 1020px the rail moves under the columns and splits
+ * in two; below 640px everything stacks.
+ */
+@media (max-width: 1020px) {
+  [data-ft-top] {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+
+  [data-ft-side] {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 28px 48px !important;
+    align-items: start;
+  }
+
+  [data-ft-signup] {
+    grid-row: span 2;
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 1020px) and (min-width: 641px) {
+  [data-ft-cols] {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-ft-side] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-ft-signup] {
+    grid-row: auto;
+    max-width: none;
+  }
+
+  [data-ft-cols] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    row-gap: 36px !important;
+  }
+
+  [data-ft-bottom] {
+    flex-direction: column;
+    align-items: flex-start !important;
   }
 }

@@ -107,3 +107,25 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ------------------------------------------------- product hero --
+ * The display h1 tops out at 104px, so the hero needs more room above it
+ * and a lower ceiling on a phone: 7.2vw of a 390px screen is only 28px,
+ * far below the 44px the headline is drawn for.
+ */
+@media (max-width: 1020px) {
+  [data-hero-grid] > div:has(> h1) {
+    padding: 132px 28px 48px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-hero-grid] > div:has(> h1) {
+    padding: 112px 20px 40px !important;
+    gap: 20px !important;
+  }
+
+  [data-hero-grid] h1 {
+    font-size: clamp(44px, 12.5vw, 56px) !important;
+  }
+}

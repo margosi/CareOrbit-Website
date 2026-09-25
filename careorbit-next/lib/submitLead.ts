@@ -10,7 +10,7 @@
  * read them are marked `server-only`.
  */
 export type LeadPayload = {
-  kind: "info-sheet" | "study-request" | "book-a-call";
+  kind: "info-sheet" | "study-request" | "book-a-call" | "newsletter";
   email: string;
   requested?: string;
   first?: string;
@@ -58,5 +58,39 @@ export function submitLead(payload: LeadPayload): void {
     }).catch(() => {});
   } catch {
     /* Never let analytics-shaped work break a download. */
+  }
+}
+
+/* The awaited variant, for a form with nothing to hand over.
+ *
+ * The three original forms serve a download or open Calendly the instant
+ * they validate, so `submitLead` above is fire and forget by design: a slow
+ * or blocked endpoint must never hold up the thing the visitor asked for.
+ *
+ * The newsletter form has no such payload. Its only outcome IS the stored
+ * row, so telling someone they are on the list before knowing that would be
+ * a lie. This returns the endpoint's verdict instead of discarding it.
+ * `stored` is "ok" only when Supabase accepted the insert.
+ */
+export async function submitLeadAwaited(
+  payload: LeadPayload,
+): Promise<{ ok: boolean; stored?: string }> {
+  try {
+    const r = await fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        ...utm(),
+        ...payload,
+        path: typeof location === "undefined" ? undefined : location.pathname,
+      }),
+    });
+    if (!r.ok) return { ok: false };
+    const data = (await r.json()) as { ok?: boolean; stored?: string };
+    return { ok: data.ok === true, stored: data.stored };
+  } catch {
+    /* Offline, blocked, or the endpoint is down. The caller shows an error
+     * rather than a false confirmation. */
+    return { ok: false };
   }
 }

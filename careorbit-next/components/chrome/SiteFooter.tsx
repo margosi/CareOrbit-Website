@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FOOTER_COLUMNS } from "@/lib/nav";
 import { hv } from "@/lib/hoverStyles";
+import { NewsletterSignup } from "./NewsletterSignup";
 
 /* Port of v2-maven/SiteFooter.dc.html.
  *
@@ -28,8 +29,7 @@ const NO_PREFETCH = { prefetch: false } as const;
 
 export function SiteFooter() {
   return (
-    /* <footer> rather than <div>: this is the contentinfo landmark.
-     * display:block on both, so the rendering is unchanged. */
+    /* <footer> rather than <div>: this is the contentinfo landmark. */
     <footer style={{ background: "#FAF8F4" }}>
       <div
         style={{
@@ -43,137 +43,148 @@ export function SiteFooter() {
         <div
           style={{
             position: "relative",
-            maxWidth: 1220,
+            maxWidth: 1320,
             margin: "0 auto",
-            padding: "56px 28px 28px",
+            padding: "clamp(56px,6vw,88px) clamp(24px,4vw,56px) 28px",
+            boxSizing: "border-box",
           }}
         >
           <div
-            data-footer-grid=""
+            data-ft-top=""
             style={{
-              position: "relative",
               display: "grid",
-              gridTemplateColumns: "1.3fr repeat(4,minmax(0,1fr))",
-              gap: 40,
+              gridTemplateColumns: "minmax(0,1fr) 380px",
+              gap: "clamp(40px,5vw,96px)",
               alignItems: "start",
             }}
           >
             <div
-              data-footer-brand=""
-              style={{ display: "flex", flexDirection: "column", gap: 14 }}
+              data-ft-cols=""
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4,minmax(0,1fr))",
+                gap: 32,
+              }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <OrbitMark />
-                <span
-                  style={{
-                    fontFamily: "Lato,sans-serif",
-                    fontWeight: 900,
-                    fontSize: 20,
-                    color: "#FFFFFF",
-                  }}
+              {FOOTER_COLUMNS.map((col) => (
+                <div
+                  key={col.title}
+                  style={{ display: "flex", flexDirection: "column", gap: 10 }}
                 >
-                  Total&nbsp;Orbit
-                </span>
-              </div>
-              <div style={{ fontSize: 13.5, lineHeight: 1.6 }}>
-                CareOrbit is a Total Orbit company.
-                <br />
-                4240 Duncan Ave, Suite #200
-                <br />
-                St. Louis, MO 63110
-              </div>
-              <div style={{ fontSize: 13.5, lineHeight: 1.8 }}>
-                <a
-                  href="mailto:sales@totalorbit.com"
-                  className={hv("footerLink")}
-                  style={{ color: "#CDD9E6", textDecoration: "none" }}
-                >
-                  sales@totalorbit.com
-                </a>
-                <br />
-                <a
-                  href="tel:3145404827"
-                  className={hv("footerLink")}
-                  style={{ color: "#CDD9E6", textDecoration: "none" }}
-                >
-                  314-540-4827
-                </a>
-              </div>
+                  <div
+                    style={{
+                      fontSize: 12,
+                      fontWeight: 700,
+                      letterSpacing: ".1em",
+                      textTransform: "uppercase",
+                      color: "#71869D",
+                    }}
+                  >
+                    {col.title}
+                  </div>
+                  {col.links.map((l) => {
+                    const style = {
+                      fontSize: 14,
+                      color: "#9FB3C8",
+                      textDecoration: "none",
+                      lineHeight: 1.5,
+                      transition: "color .15s",
+                    } as const;
+                    /* mailto: and the PDF are plain anchors; Link is for routes. */
+                    const external =
+                      l.href.startsWith("mailto:") ||
+                      l.href.startsWith("/sheets/");
+                    return external ? (
+                      <a
+                        key={l.href}
+                        href={l.href}
+                        className={hv("footerLink")}
+                        style={style}
+                      >
+                        {l.label}
+                      </a>
+                    ) : (
+                      <Link
+                        key={l.href}
+                        href={l.href}
+                        {...NO_PREFETCH}
+                        className={hv("footerLink")}
+                        style={style}
+                      >
+                        {l.label}
+                      </Link>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
 
-            {FOOTER_COLUMNS.map((col) => (
+            <div
+              data-ft-side=""
+              style={{ display: "flex", flexDirection: "column", gap: 28 }}
+            >
+              <NewsletterSignup />
+
               <div
-                key={col.title}
-                style={{ display: "flex", flexDirection: "column", gap: 10 }}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                  fontSize: 13.5,
+                  lineHeight: 1.6,
+                }}
               >
-                <div
-                  style={{
-                    fontSize: 12,
-                    fontWeight: 700,
-                    letterSpacing: ".1em",
-                    textTransform: "uppercase",
-                    color: "#71869D",
-                  }}
-                >
-                  {col.title}
+                <div style={{ color: "#FFFFFF", fontWeight: 600 }}>
+                  CareOrbit is a Total Orbit company
                 </div>
-                {col.links.map((l) => {
-                  const style = {
-                    fontSize: 14,
-                    color: "#9FB3C8",
-                    textDecoration: "none",
-                    lineHeight: 1.5,
-                    transition: "color .15s",
-                  } as const;
-                  /* mailto: and the PDF are plain anchors; Link is for routes. */
-                  const external =
-                    l.href.startsWith("mailto:") ||
-                    l.href.startsWith("/sheets/");
-                  return external ? (
-                    <a
-                      key={l.href}
-                      href={l.href}
-                      className={hv("footerLink")}
-                      style={style}
-                    >
-                      {l.label}
-                    </a>
-                  ) : (
-                    <Link
-                      key={l.href}
-                      href={l.href}
-                      {...NO_PREFETCH}
-                      className={hv("footerLink")}
-                      style={style}
-                    >
-                      {l.label}
-                    </Link>
-                  );
-                })}
+                <div>4240 Duncan Ave, Suite #200, St. Louis, MO 63110</div>
+                <div
+                  style={{ display: "flex", flexWrap: "wrap", gap: "6px 18px" }}
+                >
+                  <a
+                    href="mailto:sales@totalorbit.com"
+                    className={hv("footerLink")}
+                    style={{
+                      color: "#CDD9E6",
+                      textDecoration: "none",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    sales@totalorbit.com
+                  </a>
+                  <a
+                    href="tel:3145404827"
+                    className={hv("footerLink")}
+                    style={{
+                      color: "#CDD9E6",
+                      textDecoration: "none",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    314-540-4827
+                  </a>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
 
           <div
+            data-ft-bottom=""
             style={{
-              position: "relative",
               borderTop: "1px solid #1E3A5F",
-              marginTop: 36,
-              paddingTop: 20,
+              marginTop: "clamp(48px,5vw,72px)",
+              paddingTop: 22,
               display: "flex",
               flexWrap: "wrap",
-              gap: 16,
+              gap: "14px 28px",
               justifyContent: "space-between",
               alignItems: "center",
             }}
           >
-            <div style={{ fontSize: 12.5, color: "#71869D" }}>
-              &copy; 2026 Total Orbit. All rights reserved.
-            </div>
-            <div style={{ display: "flex", gap: 24 }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 24px" }}>
               {[
-                { label: "Privacy Policy", href: "/privacy" },
                 { label: "Terms", href: "/terms" },
+                { label: "Privacy Policy", href: "/privacy" },
               ].map(({ label, href }) => (
                 <a
                   key={label}
@@ -183,59 +194,25 @@ export function SiteFooter() {
                     fontSize: 12.5,
                     color: "#9FB3C8",
                     textDecoration: "none",
+                    whiteSpace: "nowrap",
                   }}
                 >
                   {label}
                 </a>
               ))}
             </div>
+            <div
+              style={{
+                fontSize: 12.5,
+                color: "#7E93AB",
+                whiteSpace: "nowrap",
+              }}
+            >
+              &copy; 2026 Total Orbit. All rights reserved.
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-}
-
-/* The Total Orbit logomark: 15 orbiting dots plus a six-spoke hub.
- * Coordinates copied exactly from SiteFooter.dc.html lines 21-24. */
-const DOTS: [number, number, number][] = [
-  [42, 24, 3.4],
-  [40.3, 16.4, 2.8],
-  [35.6, 10.2, 2],
-  [28.7, 6.6, 1.3],
-  [22.4, 6.1, 0.9],
-  [17.2, 7.3, 1.3],
-  [11.3, 11.3, 2.1],
-  [7.1, 17.8, 2.9],
-  [6.1, 25.6, 2],
-  [7.7, 31.6, 1.3],
-  [10.6, 36, 0.8],
-  [22.4, 41.9, 0.7],
-  [28.7, 41.4, 1],
-  [34.3, 38.7, 1.4],
-  [39.6, 33, 2.4],
-];
-
-const SPOKES = [
-  "M24 21V15.5",
-  "M24 27v5.5",
-  "M26.6 22.5l4.8-2.75",
-  "M21.4 25.5l-4.8 2.75",
-  "M21.4 22.5l-4.8-2.75",
-  "M26.6 25.5l4.8 2.75",
-];
-
-function OrbitMark() {
-  return (
-    <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
-      {DOTS.map(([cx, cy, r]) => (
-        <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r={r} fill="#FFFFFF" />
-      ))}
-      <g stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round">
-        {SPOKES.map((d) => (
-          <path key={d} d={d} />
-        ))}
-      </g>
-    </svg>
   );
 }

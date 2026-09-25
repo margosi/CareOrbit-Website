@@ -78,6 +78,7 @@ export function SheetRequestForm({
 
   return (
     <div
+      data-nr-card=""
       style={{
         background: "#1E3A5F",
         borderRadius: 28,
