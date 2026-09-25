@@ -1,0 +1,47 @@
+/* Book a Call: the order of the two sections.
+ *
+ * The page body is one grid. At or below 1020px responsive.css collapses it
+ * to a single column, where the children simply stack in DOM order.
+ *
+ * DOM order is intro -> booking panel -> info-sheet card, so the stacked
+ * view reads "Book your intro call" first and "Not ready for a call?"
+ * second. That is the whole point of the arrangement: the call is the
+ * primary action, and the info sheet is the fallback you meet after
+ * scrolling past it.
+ *
+ * Above 1020px that same DOM order would drop the info-sheet card into the
+ * right-hand column, under the booking panel. So the three children are
+ * placed explicitly instead: intro and card in column one, booking panel
+ * spanning both rows in column two. Visually identical to when the intro
+ * and the card shared one flex column - including the row gap, which drops
+ * to the 22px that flex column used, so the card still sits directly under
+ * the intro paragraph.
+ *
+ * The span matters. Without it the booking panel would size row 1 to its
+ * own height (491px against the intro's ~305px) and shove the card far
+ * down column one. Spanning both rows lets the left column set the row
+ * heights, which it can because the intro + card stack is the taller of
+ * the two at every width above 1020px.
+ */
+
+@media (min-width: 1021px) {
+  [data-bac-grid] {
+    /* Beats the inline `gap: 64px`; the column gap is unaffected. */
+    row-gap: 22px !important;
+  }
+
+  [data-bac-intro] {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  [data-bac-booking] {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  [data-bac-sheet] {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}

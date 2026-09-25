@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { metadataFor } from "@/lib/seo";
+import "./book-a-call.css";
 import { SiteNav } from "@/components/chrome/SiteNav";
 import { SiteFooter } from "@/components/chrome/SiteFooter";
 import { BookingPanel, SheetPicker } from "@/components/book/BookingPanel";
@@ -33,6 +34,7 @@ export default function BookACallPage() {
         <div
           data-grid="split"
           data-pad="page-top"
+          data-bac-grid=""
           style={{
             maxWidth: 1220,
             margin: "0 auto",
@@ -44,7 +46,14 @@ export default function BookACallPage() {
             flex: 1,
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+          {/* Three grid children, not two. The info-sheet card used to sit
+            inside this column under the paragraph; it is now a sibling so
+            that the stacked view can place it after the booking panel.
+            book-a-call.css puts it back under the paragraph above 1020px. */}
+          <div
+            data-bac-intro=""
+            style={{ display: "flex", flexDirection: "column", gap: 22 }}
+          >
             <h1
               style={{
                 fontFamily: "Lato,sans-serif",
@@ -76,46 +85,50 @@ export default function BookACallPage() {
               platform, then decide together whether it&apos;s worth a second
               conversation.
             </p>
-            <div
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid rgba(15,29,46,.07)",
-                borderRadius: 26,
-                padding: "26px 28px",
-                display: "flex",
-                flexDirection: "column",
-                gap: 10,
-                marginTop: 8,
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "Lato,sans-serif",
-                  fontWeight: 900,
-                  fontSize: 17,
-                }}
-              >
-                Not ready for a call?
-              </div>
-              <div
-                style={{
-                  fontSize: 14,
-                  lineHeight: 1.55,
-                  color: "rgba(15,29,46,.68)",
-                }}
-              >
-                Get the info sheet for your desired orbit solution by email
-                instead.
-              </div>
-              <Suspense fallback={null}>
-                <SheetPicker />
-              </Suspense>
-            </div>
           </div>
 
-          <Suspense fallback={null}>
-            <BookingPanel />
-          </Suspense>
+          <div data-bac-booking="">
+            <Suspense fallback={null}>
+              <BookingPanel />
+            </Suspense>
+          </div>
+
+          <div
+            data-bac-sheet=""
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid rgba(15,29,46,.07)",
+              borderRadius: 26,
+              padding: "26px 28px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 10,
+              marginTop: 8,
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "Lato,sans-serif",
+                fontWeight: 900,
+                fontSize: 17,
+              }}
+            >
+              Not ready for a call?
+            </div>
+            <div
+              style={{
+                fontSize: 14,
+                lineHeight: 1.55,
+                color: "rgba(15,29,46,.68)",
+              }}
+            >
+              Get the info sheet for your desired orbit solution by email
+              instead.
+            </div>
+            <Suspense fallback={null}>
+              <SheetPicker />
+            </Suspense>
+          </div>
         </div>
       </main>
       <SiteFooter />
