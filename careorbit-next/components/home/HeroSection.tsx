@@ -23,22 +23,39 @@ import { EXACT_PIXELS } from "@/lib/migration";
  * third and the headline has to clear them.
  */
 
+/* Seven orbits, one frame each, in the order the rotation runs.
+ *
+ * object-position is chosen per image, not shared: the set mixes three
+ * aspect ratios (2.46, 2.00 and 1.78) and the hero box runs from 366x756
+ * on a phone to 1412x838 on a desktop. Under object-fit:cover every one of
+ * those boxes is TALLER in proportion than the source, so the crop is
+ * horizontal at every width and the x value is what decides whether a face
+ * survives it. Each was picked by rendering the actual cover crop at 390,
+ * 768, 1020 and 1440 and keeping the subject clear of the copy: left of
+ * centre is where the headline sits on desktop, so the subject sits right.
+ */
 const FRAMES = [
-  { src: "/images/hero-8.webp", pos: "74% 40%" },
-  { src: "/images/hero-2.webp", pos: "80% 32%" },
-  { src: "/images/hero-3.webp", pos: "88% 38%" },
-  { src: "/images/hero-4.webp", pos: "80% 32%" },
-  { src: "/images/hero-7.webp", pos: "60% 40%" },
+  { src: "/images/home-hero-oncology.webp", pos: "80% 38%" },
+  { src: "/images/home-hero-orthopedics.webp", pos: "80% 42%" },
+  { src: "/images/home-hero-maternal.webp", pos: "78% 45%" },
+  { src: "/images/home-hero-behavioral.webp", pos: "72% 44%" },
+  { src: "/images/home-hero-bariatrics.webp", pos: "84% 40%" },
+  { src: "/images/home-hero-medication.webp", pos: "78% 42%" },
+  { src: "/images/home-hero-community.webp", pos: "72% 46%" },
 ];
 
-/* One label per frame. Shown two ways: on the ribbon head at >640px, and in
- * the pill above the headline at <=640px, where the ribbons are hidden. */
+/* One label per frame, and it must stay one per frame - the ribbon loop
+ * indexes both arrays with the same k % FRAMES.length. Shown two ways: on
+ * the ribbon head at >640px, and in the pill above the headline at <=640px
+ * where the ribbons are hidden. */
 const LABELS = [
   "Supporting cancer care",
-  "Supporting expecting mothers",
   "Supporting joint recovery",
-  "Supporting weight-loss surgery",
+  "Supporting expecting mothers",
   "Supporting behavioral health",
+  "Supporting weight-loss surgery",
+  "Supporting medication adherence",
+  "Supporting community research",
 ];
 
 export function HeroSection({

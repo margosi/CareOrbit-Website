@@ -379,7 +379,7 @@ export function SiteNav({
                         flexDirection: "column",
                       }}
                     >
-                      <div style={menuSection}>Current Solutions For</div>
+                      <div style={menuSection}>Who We Serve</div>
                       {ORBITS.map((o) => (
                         <Link
                           key={o.href}
@@ -423,7 +423,7 @@ export function SiteNav({
                         flexDirection: "column",
                       }}
                     >
-                      <div style={menuSection}>Products</div>
+                      <div style={menuSection}>Our Capabilities</div>
                       {PRODUCTS.map((p) => (
                         <Link
                           key={p.href}
@@ -741,7 +741,7 @@ export function SiteNav({
                 Platform
               </Link>
 
-              <div style={drawerHeading}>Current Solutions For</div>
+              <div style={drawerHeading}>Who We Serve</div>
               {ORBITS.map((o) => (
                 <Link
                   key={o.href}
@@ -754,7 +754,7 @@ export function SiteNav({
                 </Link>
               ))}
 
-              <div style={drawerHeading}>Products</div>
+              <div style={drawerHeading}>Our Capabilities</div>
               {PRODUCTS.map((p) => (
                 <Link
                   key={p.href}
