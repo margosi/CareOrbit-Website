@@ -16,6 +16,8 @@
 .hv-heroGhost:hover { background:rgba(255,255,255,.14) !important; color:#FFFFFF !important; }
 .hv-chatLink:hover { background:#DCE8F3 !important; color:#1E3A5F !important; }
 .hv-chatGo:hover { background:#0F1D2E !important; color:#FFFFFF !important; }
+.hv-chatClose:hover { background:#E6E0D4 !important; }
+.hv-chatLaunch:hover { transform:translateY(-2px) !important; }
 .hv-tileLearnMore:hover { background:#2D5A87 !important; color:#FFFFFF !important; }
 .hv-costCard:hover { transform:translateY(-6px) !important; box-shadow:0 22px 48px rgba(15,29,46,.1) !important; }
 .hv-caseLink:hover { color:#E3735C !important; }

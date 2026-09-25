@@ -3,39 +3,42 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 import { hv } from "@/lib/hoverStyles";
 import { EXACT_PIXELS } from "@/lib/migration";
-import {
-  CHAT_HINT_DEFAULT,
-  CHAT_HINT_MISS,
-  logQuery,
-  matchOrbit,
-} from "@/lib/home";
 
-/* Home hero: five-image cross-fader, dot controls, and the chat box.
+/* Home hero. Ported from the Claude Design export, v2-maven/Home.dc.html
+ * lines 85-102 plus the `_runLines()` routine in its component script.
  *
- * Ported from Home.dc.html lines 48-99. Inline styles verbatim.
+ * What the Design replaced, and why none of it is kept:
+ *   - hero-1 is no longer the opening frame; hero-8 is, at 74% 40%.
+ *   - The dot controls are gone. Nothing advances the fader by hand any
+ *     more - the ribbon animation below owns the index.
+ *   - The static three-arc `coDash` SVG is gone, replaced by the drawn
+ *     ribbons (see `useHeroRibbons`).
+ *   - The chat box left the hero entirely. It is now a page-level fixed
+ *     launcher, `components/home/OrbitChat.tsx`.
  *
- * The fader is the reason baseline captures pin setInterval: it advances
- * every 6s, so an unpinned screenshot is non-deterministic. Server renders
- * heroIdx = 0, matching the baseline.
- *
- * Note the frame order - the original uses hero-1,2,3,4 and then hero-7
- * (not hero-5 or hero-6, which exist in the folder but are unused).
+ * The copy block's bottom padding is deliberately enormous -
+ * clamp(200px,25svh,300px) - because the ribbons sweep across the lower
+ * third and the headline has to clear them.
  */
+
 const FRAMES = [
-  { src: "/images/hero-1.webp", pos: "78% 34%" },
+  { src: "/images/hero-8.webp", pos: "74% 40%" },
   { src: "/images/hero-2.webp", pos: "80% 32%" },
   { src: "/images/hero-3.webp", pos: "88% 38%" },
   { src: "/images/hero-4.webp", pos: "80% 32%" },
   { src: "/images/hero-7.webp", pos: "60% 40%" },
 ];
 
-const CHAT_LINKS = [
-  { label: "Book a meeting", href: "/book-a-call?src=home" },
-  { label: "Browse orbit solutions", href: "#orbit-grid" },
-  { label: "See the outcomes", href: "/outcomes" },
+/* One label per frame. Shown two ways: on the ribbon head at >640px, and in
+ * the pill above the headline at <=640px, where the ribbons are hidden. */
+const LABELS = [
+  "Supporting cancer care",
+  "Supporting expecting mothers",
+  "Supporting joint recovery",
+  "Supporting weight-loss surgery",
+  "Supporting behavioral health",
 ];
 
 export function HeroSection({
@@ -46,52 +49,27 @@ export function HeroSection({
   ctaLabel?: string;
 }) {
   const [heroIdx, setHeroIdx] = useState(0);
-  const [query, setQuery] = useState("");
-  const [chatMiss, setChatMiss] = useState(false);
-  const timer = useRef<number | null>(null);
-  const router = useRouter();
+  const linesRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    timer.current = window.setInterval(
-      () => setHeroIdx((i) => (i + 1) % 5),
-      6000,
-    );
-    return () => {
-      if (timer.current) window.clearInterval(timer.current);
-    };
-  }, []);
-
-  /* Clicking a dot stops the rotation, exactly as heroGoN did. */
-  const goTo = (i: number) => {
-    if (timer.current) window.clearInterval(timer.current);
-    timer.current = null;
-    setHeroIdx(i);
-  };
-
-  const chatGo = () => {
-    if (!query || query.length < 2) return;
-    logQuery(query);
-    const m = matchOrbit(query);
-    if (m) router.push(m.href);
-    else setChatMiss(true);
-  };
+  useHeroRibbons(linesRef, setHeroIdx);
 
   return (
     <div
+      data-hero-wrap=""
       style={{
         position: "relative",
-        marginTop: -92,
+        marginTop: -26,
         zIndex: 0,
         padding: "0 14px",
       }}
     >
       <div
-        data-hero-height=""
+        data-hero-box=""
         style={{
           position: "relative",
           borderRadius: 30,
           overflow: "hidden",
-          height: "clamp(740px,96vh,960px)",
+          height: "max(640px,calc(100svh - 62px))",
           background: "#1E3A5F",
         }}
       >
@@ -114,6 +92,7 @@ export function HeroSection({
         ))}
 
         <div
+          data-hero-shade=""
           style={{
             position: "absolute",
             inset: 0,
@@ -124,8 +103,9 @@ export function HeroSection({
         />
 
         <div
-          data-pad="hero"
+          data-hero-copy=""
           style={{
+            zIndex: 1,
             position: "absolute",
             left: 0,
             right: 0,
@@ -135,11 +115,48 @@ export function HeroSection({
             flexDirection: "column",
             justifyContent: "flex-end",
             gap: 26,
-            padding: "0 64px 72px",
-            maxWidth: 720,
+            padding: "0 64px clamp(200px,25svh,300px)",
+            maxWidth: 760,
             boxSizing: "border-box",
           }}
         >
+          <div
+            data-hero-pill=""
+            style={{
+              display: "none",
+              alignItems: "center",
+              gap: 10,
+              alignSelf: "center",
+              background: "rgba(255,255,255,.16)",
+              backdropFilter: "blur(6px)",
+              WebkitBackdropFilter: "blur(6px)",
+              borderRadius: 999,
+              padding: "8px 18px",
+              fontSize: 13,
+              letterSpacing: ".04em",
+              color: "#FFFFFF",
+            }}
+          >
+            <span
+              style={{
+                width: 8,
+                height: 8,
+                borderRadius: "50%",
+                background: "#F2B8C6",
+              }}
+            />
+            {/* Keyed so a new label remounts and replays coPillIn. */}
+            <span
+              key={`m${heroIdx}`}
+              style={{
+                display: "inline-block",
+                animation: "coPillIn .5s ease-out forwards",
+              }}
+            >
+              {LABELS[heroIdx]}
+            </span>
+          </div>
+
           <h1
             style={{
               fontFamily: "Lato,sans-serif",
@@ -176,13 +193,12 @@ export function HeroSection({
               textWrap: "pretty",
             }}
           >
-            Orbits are proven to deliver against measured outcomes with the
-            streamlined, easy experience today&rsquo;s patients expect. Orbits
-            can be used to support any clinical journey, and can be issued from
-            your existing workflow.
+            Proven digital education and engagement supporting any care journey,
+            issued from your existing workflow.
           </p>
 
           <div
+            data-hero-btns=""
             style={{
               display: "flex",
               gap: 14,
@@ -207,8 +223,8 @@ export function HeroSection({
             >
               {ctaLabel}
             </Link>
-            <a
-              href="#orbit-explainer"
+            <Link
+              href="/platform"
               className={hv("heroGhost")}
               style={{
                 textDecoration: "none",
@@ -222,272 +238,313 @@ export function HeroSection({
                 transition: "background .2s",
               }}
             >
-              See how it works &darr;
-            </a>
-          </div>
-
-          <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            {FRAMES.map((f, i) => (
-              <button
-                key={f.src}
-                onClick={() => goTo(i)}
-                aria-label={`Image ${i + 1}`}
-                data-hero-dot=""
-                style={{
-                  width: heroIdx === i ? "28px" : "8px",
-                  height: 8,
-                  borderRadius: 999,
-                  border: "none",
-                  background:
-                    heroIdx === i ? "#FFFFFF" : "rgba(255,255,255,.45)",
-                  cursor: "pointer",
-                  padding: 0,
-                  transition: "all .4s",
-                }}
-              />
-            ))}
+              Explore platform
+            </Link>
           </div>
         </div>
 
-        <HeroArcs />
-
+        {/* Ribbon host. Purely decorative: the label it carries is repeated
+         * as real text in the pill above, which is what a screen reader
+         * gets at any width. */}
         <div
-          data-hero-chat=""
+          data-hero-lines=""
+          aria-hidden="true"
           style={{
             position: "absolute",
-            right: 40,
-            bottom: 44,
-            width: 264,
-            background: "rgba(255,255,255,.55)",
-            backdropFilter: "blur(8px)",
-            borderRadius: 18,
-            boxShadow: "0 24px 64px rgba(15,29,46,.3)",
-            padding: 18,
-            display: "flex",
-            flexDirection: "column",
-            gap: 11,
-            zIndex: 2,
+            left: 0,
+            right: 0,
+            bottom: "3%",
+            height: "clamp(150px,21%,210px)",
+            pointerEvents: "none",
+            zIndex: 0,
           }}
         >
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                border: "1px solid rgba(15,29,46,.14)",
-                borderRadius: 999,
-                padding: "5px 14px 5px 6px",
-              }}
-            >
-              <span
-                style={{
-                  width: 28,
-                  height: 28,
-                  borderRadius: "50%",
-                  background: "#0F1D2E",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <svg width="17" height="17" viewBox="0 0 48 48" fill="none">
-                  <path
-                    d="M24 33 C18.8 29.2 14.8 25.9 14.8 21.5 c0-3 2.4-5.4 5.4-5.4 1.9 0 3.7 1 4.6 2.7 0.9-1.7 2.7-2.7 4.6-2.7 3 0 5.4 2.4 5.4 5.4 0 4.4-4 7.7-9.8 11.5z"
-                    fill="#FFFFFF"
-                  />
-                </svg>
-              </span>
-              <span style={{ fontSize: 13, fontWeight: 600, color: "#0F1D2E" }}>
-                Find your orbit solution
-              </span>
-            </div>
-          </div>
-
-          <div style={{ fontSize: 13, lineHeight: 1.5, color: "#0F1D2E" }}>
-            Are you exploring how CareOrbit can improve outcomes for your
-            service line?
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            {CHAT_LINKS.map((l) =>
-              l.href.startsWith("#") ? (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className={hv("chatLink")}
-                  style={chatLinkStyle}
-                >
-                  {l.label}
-                </a>
-              ) : (
-                <Link
-                  key={l.label}
-                  href={l.href}
-                  className={hv("chatLink")}
-                  style={chatLinkStyle}
-                >
-                  {l.label}
-                </Link>
-              ),
-            )}
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              gap: 6,
-              alignItems: "center",
-              border: "1.5px solid rgba(15,29,46,.14)",
-              borderRadius: 10,
-              padding: "3px 3px 3px 12px",
-            }}
-          >
-            <input
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                setChatMiss(false);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") chatGo();
-              }}
-              placeholder="Ask a question&hellip;"
-              aria-label="Ask a question"
-              style={{
-                flex: 1,
-                border: "none",
-                /* outline removed at rest only. The :focus-visible rule
-                 * in globals.css supplies the keyboard indicator; this
-                 * input previously had none at all. */
-                outline: "none",
-                fontFamily: "Inter,sans-serif",
-                fontSize: 12.5,
-                color: "#0F1D2E",
-                background: "none",
-                minWidth: 0,
-              }}
-            />
-            <button
-              onClick={chatGo}
-              aria-label="Go"
-              className={hv("chatGo")}
-              style={{
-                width: 28,
-                height: 28,
-                borderRadius: 7,
-                border: "none",
-                background: "#EAF1F8",
-                color: "#1E3A5F",
-                fontSize: 14,
-                cursor: "pointer",
-                flexShrink: 0,
-                transition: "background .15s",
-              }}
-            >
-              &rarr;
-            </button>
-          </div>
-
-          <div
-            style={{
-              fontSize: 10.5,
-              lineHeight: 1.45,
-              color: "rgba(15,29,46,.5)",
-              textAlign: "center",
-            }}
-          >
-            {chatMiss ? CHAT_HINT_MISS : CHAT_HINT_DEFAULT}
-          </div>
+          <div ref={linesRef} style={{ position: "absolute", inset: 0 }} />
         </div>
       </div>
     </div>
   );
 }
 
-const chatLinkStyle: React.CSSProperties = {
-  textDecoration: "none",
-  textAlign: "center",
-  fontSize: 12.5,
-  fontWeight: 600,
-  color: "#1E3A5F",
-  background: "#EAF1F8",
-  borderRadius: 8,
-  padding: "8px 12px",
-  transition: "background .15s",
+/* ---------------------------------------------------------------------- */
+
+/* Four coloured ribbons that draw in from the left edge, settle, then take
+ * turns sweeping the full width of the hero with a label riding the head.
+ *
+ * Ported from the Design's `_runLines()` essentially line for line. The
+ * geometry is built imperatively rather than as JSX because every control
+ * point is a fraction of the live box size and the head position comes from
+ * `getPointAtLength()` on the path itself - there is nothing for React to
+ * usefully re-render, and re-rendering it per frame would be far worse.
+ *
+ * The sweep loop is also what advances the photo fader: `setHeroIdx` is
+ * called at the top of each pass. That coupling is the Design's, and it is
+ * why the dot controls could be dropped. Below 640px the host is
+ * display:none so `layout()` no-ops, but the loop keeps running and the
+ * photos and pill keep cycling on the same cadence.
+ *
+ * NOT in the Design: the reduced-motion branch. The Design animates
+ * unconditionally. Here, `prefers-reduced-motion: reduce` draws the four
+ * ribbons once at their resting length and never starts the loop, so the
+ * hero holds frame 1 and nothing moves.
+ */
+const LINE_DEFS = [
+  {
+    col: "#F2B8C6",
+    p0: [-0.005, 0.5],
+    c1: [0.09, 0.02],
+    c2: [0.19, -0.02],
+    e: [0.245, 0.12],
+  },
+  {
+    col: "#4FB3BF",
+    p0: [-0.005, 0.79],
+    c1: [0.1, 0.36],
+    c2: [0.19, 0.19],
+    e: [0.295, 0.3],
+  },
+  {
+    col: "#5B9BEA",
+    p0: [-0.005, 0.66],
+    c1: [0.1, 0.95],
+    c2: [0.18, 1.03],
+    e: [0.254, 0.83],
+  },
+  {
+    col: "#E3735C",
+    p0: [-0.005, 0.23],
+    c1: [0.07, 0.18],
+    c2: [0.19, 0.79],
+    e: [0.284, 0.77],
+  },
+];
+
+const NS = "http://www.w3.org/2000/svg";
+
+type Ribbon = (typeof LINE_DEFS)[number] & {
+  p: SVGPathElement;
+  c: SVGCircleElement;
+  /* Fraction of the full path currently drawn. */
+  u: number;
+  total: number;
+  /* Fraction at which the ribbon rests between sweeps. */
+  rest: number;
+  atRest: boolean;
 };
 
-/* Decorative orbit traces across the hero. Paths and timings verbatim. */
-function HeroArcs() {
-  return (
-    <svg
-      viewBox="0 0 1200 300"
-      style={{
-        position: "absolute",
-        left: -20,
-        bottom: -10,
-        width: "72%",
-        pointerEvents: "none",
-      }}
-      fill="none"
-    >
-      <path
-        d="M-60 210 C 160 130, 360 268, 620 190 S 1010 100, 1260 170"
-        stroke="#4FB3BF"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeDasharray="240 900"
-        style={{ animation: "coDash 9s linear infinite" }}
-      />
-      <path
-        d="M-60 250 C 200 190, 420 300, 680 232 S 1040 150, 1260 215"
-        stroke="#E9C46A"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        strokeDasharray="200 940"
-        style={{
-          animation: "coDash 12s linear infinite",
-          animationDelay: "-4s",
-        }}
-      />
-      <path
-        d="M-60 170 C 180 100, 400 220, 660 150 S 1020 60, 1260 130"
-        stroke="#C0A5E8"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-        strokeDasharray="170 970"
-        style={{
-          animation: "coDash 15s linear infinite",
-          animationDelay: "-8s",
-        }}
-      />
-      <circle
-        cx="620"
-        cy="190"
-        r="4"
-        fill="#E9C46A"
-        style={{ animation: "coPulse 4s ease-in-out infinite" }}
-      />
-      <circle
-        cx="400"
-        cy="220"
-        r="3.5"
-        fill="#4FB3BF"
-        style={{
-          animation: "coPulse 5s ease-in-out infinite",
-          animationDelay: "-2s",
-        }}
-      />
-      <circle
-        cx="820"
-        cy="205"
-        r="3.5"
-        fill="#C0A5E8"
-        style={{
-          animation: "coPulse 6s ease-in-out infinite",
-          animationDelay: "-3.5s",
-        }}
-      />
-    </svg>
-  );
+function useHeroRibbons(
+  hostRef: React.RefObject<HTMLDivElement | null>,
+  setHeroIdx: (i: number) => void,
+) {
+  useEffect(() => {
+    const host = hostRef.current;
+    if (!host) return;
+
+    let dead = false;
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("aria-hidden", "true");
+    svg.style.cssText =
+      "position:absolute;inset:0;width:100%;height:100%;overflow:visible";
+    host.appendChild(svg);
+
+    const pill = document.createElement("div");
+    pill.setAttribute("data-hero-pillend", "");
+    pill.setAttribute("aria-hidden", "true");
+    pill.style.cssText =
+      "position:absolute;display:inline-flex;align-items:center;height:32px;margin-top:-16px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:#FFFFFF;font:500 13px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;opacity:0;clip-path:inset(0 100% 0 0 round 999px)";
+    host.appendChild(pill);
+
+    const lines: Ribbon[] = LINE_DEFS.map((d) => {
+      const p = document.createElementNS(NS, "path");
+      p.setAttribute("fill", "none");
+      p.setAttribute("stroke", d.col);
+      p.setAttribute("stroke-width", "0.9");
+      p.setAttribute("stroke-linecap", "round");
+      const c = document.createElementNS(NS, "circle");
+      c.setAttribute("r", "3.2");
+      c.setAttribute("fill", d.col);
+      c.style.opacity = "0";
+      svg.append(p, c);
+      return { ...d, p, c, u: 0, total: 1, rest: 0, atRest: false };
+    });
+
+    const draw = () =>
+      lines.forEach((l) => {
+        const len = l.u * l.total;
+        l.p.setAttribute("stroke-dasharray", `${len} ${l.total + 20}`);
+        let pt = { x: -99, y: -99 };
+        try {
+          pt = l.p.getPointAtLength(Math.max(len, 0.01));
+        } catch {
+          /* path not measurable yet */
+        }
+        l.c.setAttribute("cx", String(pt.x));
+        l.c.setAttribute("cy", String(pt.y));
+        l.c.style.opacity = l.u > 0.004 ? "1" : "0";
+      });
+
+    /* Rebuild every path in pixel space for the current box size. Each
+     * ribbon is one curve in from the left edge (its resting shape), then
+     * three more that dip, rise and run out to the label. */
+    const layout = () => {
+      const W = host.clientWidth;
+      const H = host.clientHeight;
+      if (!W || !H) return;
+      const pw = pill.offsetWidth || 300;
+      const EX = Math.min(W * 0.8, W - pw - 30);
+      const EY = H * 0.62;
+      lines.forEach((l) => {
+        const X = (v: number) => (v * W).toFixed(1);
+        const Y = (v: number) => (v * H).toFixed(1);
+        const [ex, ey] = l.e;
+        const [c2x, c2y] = l.c2;
+        const first = `M ${X(l.p0[0])} ${Y(l.p0[1])} C ${X(l.c1[0])} ${Y(
+          l.c1[1],
+        )} ${X(c2x)} ${Y(c2y)} ${X(ex)} ${Y(ey)}`;
+        const sx = ex * W;
+        const sy = ey * H;
+        const span = Math.max(EX - sx, 60);
+        const hl = span * 0.16;
+        const dx = sx + span * 0.36;
+        const dy = H * 0.76;
+        const cx = sx + span * 0.76;
+        const cy = H * 0.15;
+        const tl = Math.hypot(sx - c2x * W, sy - c2y * H) || 1;
+        const tk = (span * 0.14) / tl;
+        const f = (n: number) => n.toFixed(1);
+        const full =
+          first +
+          ` C ${f(sx + (sx - c2x * W) * tk)} ${f(
+            sy + (sy - c2y * H) * tk,
+          )} ${f(dx - hl)} ${f(dy)} ${f(dx)} ${f(dy)}` +
+          ` C ${f(dx + hl)} ${f(dy)} ${f(cx - hl)} ${f(cy)} ${f(cx)} ${f(cy)}` +
+          ` C ${f(cx + hl * 0.7)} ${f(cy)} ${f(EX - span * 0.08)} ${f(
+            EY - H * 0.14,
+          )} ${f(EX)} ${f(EY)}`;
+        try {
+          l.p.setAttribute("d", first);
+          const fl = l.p.getTotalLength();
+          l.p.setAttribute("d", full);
+          l.total = l.p.getTotalLength() || 1;
+          l.rest = fl / l.total;
+        } catch {
+          l.p.setAttribute("d", full);
+        }
+        if (l.atRest) l.u = l.rest;
+      });
+      pill.style.left = `${EX + 12}px`;
+      pill.style.top = `${EY}px`;
+      draw();
+    };
+
+    const eo = (t: number) => 1 - Math.pow(1 - t, 3);
+    const eio = (t: number) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    const wait = (ms: number) =>
+      new Promise<void>((res) => setTimeout(res, ms));
+    const tw = (
+      l: Ribbon,
+      to: number,
+      dur: number,
+      ease: (t: number) => number,
+    ) =>
+      new Promise<void>((res) => {
+        const from = l.u;
+        const t0 = performance.now();
+        const step = (now: number) => {
+          if (dead) return;
+          const k = Math.min(1, (now - t0) / dur);
+          l.u = from + (to - from) * ease(k);
+          draw();
+          if (k < 1) requestAnimationFrame(step);
+          else res();
+        };
+        requestAnimationFrame(step);
+      });
+
+    const clipIn: Keyframe[] = [
+      { clipPath: "inset(0 100% 0 0 round 999px)", opacity: 0 },
+      { clipPath: "inset(0 0% 0 0 round 999px)", opacity: 1 },
+    ];
+
+    pill.textContent = LABELS[0];
+
+    let lw = 0;
+    let lh = 0;
+    const ro = new ResizeObserver(() => {
+      if (host.clientWidth === lw && host.clientHeight === lh) return;
+      lw = host.clientWidth;
+      lh = host.clientHeight;
+      layout();
+    });
+    ro.observe(host);
+    layout();
+
+    if (reduce) {
+      /* Resting state, held. No sweep, no photo rotation. */
+      lines.forEach((l) => {
+        l.u = l.rest;
+        l.atRest = true;
+      });
+      draw();
+      return () => {
+        dead = true;
+        ro.disconnect();
+        svg.remove();
+        pill.remove();
+      };
+    }
+
+    void (async () => {
+      await Promise.all(
+        lines.map((l, i) =>
+          wait(300 + i * 380)
+            .then(() => tw(l, l.rest, 1900, eo))
+            .then(() => {
+              l.atRest = true;
+            }),
+        ),
+      );
+      let k = 0;
+      while (!dead) {
+        await wait(k === 0 ? 700 : 900);
+        if (dead) return;
+        const idx = k % FRAMES.length;
+        setHeroIdx(idx);
+        pill.textContent = LABELS[idx];
+        layout();
+        const l = lines[k % lines.length];
+        l.atRest = false;
+        await tw(l, 1, 2800, eio);
+        if (dead) return;
+        pill.animate(clipIn, {
+          duration: 650,
+          easing: "cubic-bezier(.2,.8,.2,1)",
+          fill: "forwards",
+        });
+        await wait(650 + 3200);
+        if (dead) return;
+        pill.animate(clipIn.slice().reverse(), {
+          duration: 480,
+          easing: "cubic-bezier(.6,0,.8,.4)",
+          fill: "forwards",
+        });
+        await wait(480);
+        await tw(l, l.rest, 2400, eio);
+        l.atRest = true;
+        k++;
+      }
+    })();
+
+    return () => {
+      dead = true;
+      ro.disconnect();
+      svg.remove();
+      pill.remove();
+    };
+  }, [hostRef, setHeroIdx]);
 }

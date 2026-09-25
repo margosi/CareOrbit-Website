@@ -28,10 +28,8 @@
  *   data-align-right   : text-align: right
  *   data-pad="section" : padding: 72px/80px/88px 64px
  *   data-pad="64"      : padding: 64px
- *   data-pad="hero"    : padding: 0 64px 72px
  *   data-pad="104-28"  : padding: 104px 28px
  *   data-pad="page-top": padding: 72px/76px/84px 28px  (top-of-page sections)
- *   data-hero-height   : height: clamp(740px, 96vh, 960px)
  */
 
 /* ------------------------------------------------- nav chrome (always on) --
@@ -200,17 +198,9 @@
     padding: 36px 22px !important;
   }
 
-  [data-pad="hero"] {
-    padding: 0 26px 56px !important;
-  }
-
   [data-pad="104-28"] {
     padding-top: 64px !important;
     padding-bottom: 56px !important;
-  }
-
-  [data-hero-height] {
-    height: 82vh !important;
   }
 
   /* from SiteNav's own style block */

@@ -87,12 +87,96 @@
   transition-delay: 0.12s;
 }
 
-/* --- hero chat box ------------------------------------------------------
- * Hidden below 1020px in the original. Kept here rather than in
- * responsive.css because it is Home-only.
+/* --- hero -----------------------------------------------------------------
+ * From the Design export's own <helmet><style>. Home-only, so it lives here
+ * rather than in responsive.css.
+ *
+ * Every rule needs !important: the hero's base values are inline styles on
+ * the component, and an inline style beats a stylesheet selector.
+ *
+ * The nav spacer is 74px at full width, 90px in the 901-1020 band and 56px
+ * below that; the hero's negative top margin is tuned to each, which is why
+ * the middle band gets its own rule.
  */
-@media (max-width: 1020px) {
-  [data-hero-chat] {
+@media (min-width: 901px) and (max-width: 1020px) {
+  [data-hero-wrap] {
+    margin-top: -42px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  [data-hero-wrap] {
+    margin-top: 12px !important;
+    padding: 0 12px !important;
+  }
+
+  [data-hero-box] {
+    height: max(560px, calc(100svh - 88px)) !important;
+    border-radius: 24px !important;
+  }
+
+  [data-hero-pillend] {
+    font-size: 11px !important;
+    letter-spacing: 0.06em !important;
+    padding: 0 12px !important;
+    height: 30px !important;
+    margin-top: -15px !important;
+  }
+}
+
+/* Phone. The ribbons need horizontal room they do not have here, so they
+ * come out and the pill above the headline carries the rotating label
+ * instead. With the ribbons gone the copy can sit centred against a
+ * bottom-up scrim rather than left against a side one. */
+@media (max-width: 640px) {
+  [data-hero-lines] {
     display: none !important;
+  }
+
+  [data-hero-shade] {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 29, 46, 0) 30%,
+      rgba(15, 29, 46, 0.35) 55%,
+      rgba(15, 29, 46, 0.82) 100%
+    ) !important;
+  }
+
+  [data-hero-copy] {
+    align-items: center;
+    text-align: center;
+    gap: 18px !important;
+    padding: 0 22px 36px !important;
+    max-width: none !important;
+  }
+
+  [data-hero-pill] {
+    display: inline-flex !important;
+  }
+
+  [data-hero-copy] h1 {
+    font-size: 44px !important;
+    line-height: 1.06 !important;
+  }
+
+  [data-hero-copy] p {
+    font-size: 17px !important;
+    line-height: 1.45 !important;
+    max-width: 320px !important;
+  }
+
+  [data-hero-btns] {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100%;
+    max-width: 340px;
+    margin-top: 6px;
+  }
+
+  [data-hero-btns] a {
+    text-align: center;
+    font-size: 15px !important;
+    padding: 15px 20px !important;
   }
 }

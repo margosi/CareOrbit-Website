@@ -5,6 +5,7 @@ import { SiteNav } from "@/components/chrome/SiteNav";
 import { SiteFooter } from "@/components/chrome/SiteFooter";
 import { HeroSection } from "@/components/home/HeroSection";
 import { OrbitCarousel } from "@/components/home/OrbitCarousel";
+import { OrbitChat } from "@/components/home/OrbitChat";
 import { Figure } from "@/components/media/Figure";
 import { Reveal } from "@/components/motion/Reveal";
 import { CountUp } from "@/components/motion/CountUp";
@@ -1034,6 +1035,9 @@ export default function HomePage() {
           </div>
         </div>
       </main>
+      {/* Fixed to the viewport corner, so it sits outside <main> - the same
+       * place the Design puts it, after the page body. */}
+      <OrbitChat />
       <SiteFooter />
     </div>
   );

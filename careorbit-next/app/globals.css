@@ -96,24 +96,33 @@ a:hover {
   }
 }
 
-@keyframes coDash {
-  from {
-    stroke-dashoffset: 0;
-  }
+@keyframes coSpin {
   to {
-    stroke-dashoffset: -1140;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes coPulse {
-  0%,
-  100% {
-    opacity: 0.4;
-    transform: scale(1);
+/* The orbit chat panel rising out of its launcher. */
+@keyframes coChatUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
   }
-  50% {
+  to {
     opacity: 1;
-    transform: scale(1.5);
+    transform: none;
+  }
+}
+
+/* The hero label swapping inside the mobile pill. */
+@keyframes coPillIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -183,8 +192,8 @@ a:hover {
   }
 
   /* The named keyframe animations were still running under this media
-   * query: coMarquee is a 30s infinite horizontal scroll, and coDash,
-   * coPulse and coFloat loop indefinitely too. Continuous motion a visitor
+   * query: coMarquee is a 30s infinite horizontal scroll, and coSpin and
+   * coFloat loop indefinitely too. Continuous motion a visitor
    * cannot stop is exactly what this preference exists to switch off, so
    * they are frozen at their first frame rather than merely slowed.
    * Everything stays visible - only the movement stops. */
@@ -290,24 +299,4 @@ footer a[href^="tel:"] {
   /* purely a hit area - never paints, never blocks what is underneath */
   background: transparent;
   pointer-events: auto;
-}
-
-/* Hero image-fader dots. The visible dot is 8px and the dots sit 16px
- * centre to centre, so a full 24x24 target would OVERLAP its neighbour and
- * make activation ambiguous - a worse outcome than the small target. The
- * hit area is therefore 24px tall and 16px wide: the largest that cannot
- * collide, and three times the original area. The dot itself is not
- * resized, recoloured or respaced. */
-[data-hero-dot] {
-  position: relative;
-}
-[data-hero-dot]::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 16px;
-  height: 24px;
-  transform: translate(-50%, -50%);
-  background: transparent;
 }

@@ -46,14 +46,20 @@ export const HOVER_STYLES = {
   /* Blush hero CTA turns white and lifts. */
   heroCta: "background:#FFFFFF;color:#0F1D2E;transform:translateY(-2px)",
 
-  /* Outlined "See how it works" button fills faintly. */
+  /* Outlined "Explore platform" button fills faintly. */
   heroGhost: "background:rgba(255,255,255,.14);color:#FFFFFF",
 
-  /* The three shortcut buttons inside the hero chat box. */
+  /* The three shortcut buttons inside the orbit chat panel. */
   chatLink: "background:#DCE8F3;color:#1E3A5F",
 
   /* Chat submit arrow inverts. */
   chatGo: "background:#0F1D2E;color:#FFFFFF",
+
+  /* Chat panel dismiss. */
+  chatClose: "background:#E6E0D4",
+
+  /* The fixed launcher pill lifts. */
+  chatLaunch: "transform:translateY(-2px)",
 
   /* "Learn more" pills on the orbit tiles and explore cards. */
   tileLearnMore: "background:#2D5A87;color:#FFFFFF",
