@@ -1,20 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { Figure } from "@/components/media/Figure";
 import { GALLERY } from "@/lib/home";
 import { hv } from "@/lib/hoverStyles";
 
-/* Mobile view of the orbit gallery, from Home.dc.html lines 138-164.
+/* Mobile view of the orbit gallery, from Home.dc.html.
  *
  * display:none by default; responsive.css flips [data-gallery-carousel] to
  * block at max-width:900px, where the two desktop rows are hidden.
  *
+ * The Design replaced the crossfade this used to be with a native
+ * scroll-snap strip: eight cards in a row, one per screen with the next
+ * peeking in, swipeable. A fader hid seven of the eight orbits behind a
+ * control the visitor had to find; the strip shows there is more by
+ * letting the next card intrude. The arrows are a convenience on top of
+ * the swipe, scrolling by exactly one card.
+ *
  * The eight slides are the same GALLERY entries the desktop rows use.
  */
 export function OrbitCarousel() {
-  const [slide, setSlide] = useState(0);
+  const scrollByCard = (dir: -1 | 1) => {
+    const el = document.querySelector("[data-gal-row]");
+    if (el)
+      el.scrollBy({ left: dir * (el.clientWidth - 28), behavior: "smooth" });
+  };
 
   return (
     <div
@@ -28,22 +38,28 @@ export function OrbitCarousel() {
       }}
     >
       <div
+        data-gal-row=""
         style={{
-          position: "relative",
-          borderRadius: 20,
-          overflow: "hidden",
-          height: 520,
+          display: "flex",
+          gap: 12,
+          overflowX: "auto",
+          scrollSnapType: "x mandatory",
+          scrollbarWidth: "none",
+          margin: "0 -20px",
+          padding: "0 20px",
+          scrollPadding: "0 20px",
         }}
       >
-        {GALLERY.map((g, i) => (
+        {GALLERY.map((g) => (
           <div
             key={g.slotId}
             style={{
-              position: "absolute",
-              inset: 0,
-              opacity: slide === i ? 1 : 0,
-              transition: "opacity .6s ease",
-              pointerEvents: slide === i ? "auto" : "none",
+              position: "relative",
+              flex: "0 0 calc(100% - 28px)",
+              height: "clamp(460px,125vw,560px)",
+              borderRadius: 20,
+              overflow: "hidden",
+              scrollSnapAlign: "start",
             }}
           >
             <div style={{ position: "absolute", inset: 0 }}>
@@ -86,9 +102,9 @@ export function OrbitCarousel() {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                padding: "30px 26px",
+                padding: "28px 22px",
                 background:
-                  "linear-gradient(0deg,rgba(15,29,46,.82),rgba(15,29,46,0) 80%)",
+                  "linear-gradient(0deg,rgba(15,29,46,.88) 0%,rgba(15,29,46,.55) 55%,rgba(15,29,46,0) 100%)",
               }}
             >
               <div
@@ -152,66 +168,40 @@ export function OrbitCarousel() {
       <div
         style={{
           display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 20,
-          borderTop: "1px solid rgba(255,255,255,.25)",
-          marginTop: 28,
-          padding: "18px 2px 72px",
+          justifyContent: "flex-end",
+          gap: 10,
+          marginTop: 24,
+          paddingBottom: 20,
+          borderBottom: "1px solid rgba(255,255,255,.18)",
+          marginBottom: 56,
         }}
       >
-        <div style={{ display: "flex", gap: 9, flexWrap: "wrap" }}>
-          {GALLERY.map((g, i) => (
-            <span
-              key={g.slotId}
-              onClick={() => setSlide(i)}
-              title={g.title}
-              style={{
-                width: 10,
-                height: 10,
-                borderRadius: "50%",
-                background: slide === i ? g.dot : "rgba(255,255,255,.3)",
-                display: "block",
-                cursor: "pointer",
-                transition: "background .3s",
-              }}
-            />
-          ))}
-        </div>
-        <div style={{ display: "flex", gap: 10 }}>
-          <button
-            onClick={() => setSlide((s) => (s + 7) % 8)}
-            aria-label="Previous orbit"
-            className={hv("carouselNav")}
-            style={navBtn}
-          >
-            &#8592;
-          </button>
-          <button
-            onClick={() => setSlide((s) => (s + 1) % 8)}
-            aria-label="Next orbit"
-            className={hv("carouselNav")}
-            style={navBtn}
-          >
-            &#8594;
-          </button>
-        </div>
+        <button
+          onClick={() => scrollByCard(-1)}
+          aria-label="Previous orbit"
+          style={navBtn}
+        >
+          &larr;
+        </button>
+        <button
+          onClick={() => scrollByCard(1)}
+          aria-label="Next orbit"
+          style={navBtn}
+        >
+          &rarr;
+        </button>
       </div>
     </div>
   );
 }
 
 const navBtn: React.CSSProperties = {
-  width: 48,
-  height: 48,
+  width: 40,
+  height: 40,
   borderRadius: "50%",
   border: "none",
-  background: "rgba(255,255,255,.14)",
+  background: "rgba(255,255,255,.12)",
   color: "#FFFFFF",
-  fontSize: 19,
+  fontSize: 16,
   cursor: "pointer",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  transition: "background .2s",
 };

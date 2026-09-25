@@ -180,3 +180,95 @@
     padding: 15px 20px !important;
   }
 }
+
+/* --------------------------------------- explore row, 900px and below --
+ * Three cards that expand on hover become a scroll-snap strip showing one
+ * at a time. Hover is not available here, so the copy each card reveals on
+ * hover is shown outright: [data-ex-reveal] opens, and the sub and link
+ * stop being transparent. The gradient behind the copy gets stronger to
+ * carry the extra text.
+ */
+@media (max-width: 900px) {
+  [data-explore-row] {
+    flex-direction: row !important;
+    height: auto !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin: 0 -28px !important;
+    padding: 0 20px !important;
+    scroll-padding: 0 20px;
+    gap: 12px !important;
+  }
+
+  [data-explore-row]::-webkit-scrollbar,
+  [data-gal-row]::-webkit-scrollbar {
+    display: none;
+  }
+
+  [data-explore-row] > [data-ex-card] {
+    flex: 0 0 calc(100% - 28px) !important;
+    height: clamp(440px, 120vw, 540px) !important;
+    scroll-snap-align: start;
+  }
+
+  [data-ex-reveal] {
+    grid-template-rows: 1fr !important;
+  }
+
+  [data-ex-sub],
+  [data-ex-link] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [data-ex-sub] {
+    font-size: 15.5px !important;
+    line-height: 1.55 !important;
+  }
+
+  [data-ex-copy] {
+    padding: 28px 22px !important;
+    background: linear-gradient(
+      0deg,
+      rgba(15, 29, 46, 0.88) 0%,
+      rgba(15, 29, 46, 0.55) 55%,
+      rgba(15, 29, 46, 0) 100%
+    ) !important;
+  }
+
+  [data-ex-nav] {
+    display: flex !important;
+  }
+}
+
+/* ------------------------------------------------ case study card --
+ * 52px of padding and a 40px radius are desktop proportions; on a phone
+ * they eat the measure. The image drops from a fixed 330px to a share of
+ * the viewport.
+ */
+@media (max-width: 900px) {
+  [data-case] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 28px !important;
+    gap: 28px !important;
+    border-radius: 28px !important;
+  }
+
+  [data-case-img],
+  [data-case-img] > div {
+    height: clamp(220px, 56vw, 360px) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-case] {
+    padding: 18px 18px 26px !important;
+    border-radius: 24px !important;
+    gap: 22px !important;
+  }
+
+  [data-case] > div:last-child {
+    padding: 0 4px;
+  }
+}

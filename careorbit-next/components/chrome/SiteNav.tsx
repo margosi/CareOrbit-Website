@@ -224,7 +224,7 @@ export function SiteNav({
               left: 0,
               right: 0,
               zIndex: 80,
-              padding: "8px 20px 0",
+              padding: "12px 20px 0",
               display: "flex",
               justifyContent: "center",
               transition: "transform .4s cubic-bezier(.16,1,.3,1), opacity .3s",

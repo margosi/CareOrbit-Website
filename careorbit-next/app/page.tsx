@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/chrome/SiteFooter";
 import { HeroSection } from "@/components/home/HeroSection";
 import { OrbitCarousel } from "@/components/home/OrbitCarousel";
 import { OrbitChat } from "@/components/home/OrbitChat";
+import { ExploreNav } from "@/components/home/ExploreNav";
 import { Figure } from "@/components/media/Figure";
 import { Reveal } from "@/components/motion/Reveal";
 import { CountUp } from "@/components/motion/CountUp";
@@ -306,6 +307,8 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
+
+            <ExploreNav />
           </div>
         </div>
 
@@ -868,20 +871,25 @@ export default function HomePage() {
           <div
             style={{ maxWidth: 1220, margin: "0 auto", padding: "40px 28px 0" }}
           >
+            {/* No data-grid="split" here. That attribute collapses at 1020px,
+              but the Design writes this card's columns as
+              minmax(0,.9fr) minmax(0,1.1fr) precisely so its generic split
+              selector does NOT match: the card stays two-up until
+              [data-case] collapses it at 900px. */}
             <Reveal
-              data-grid="split"
+              data-case=""
               style={{
                 background: "#FFFFFF",
                 border: "1px solid rgba(15,29,46,.07)",
                 borderRadius: 40,
                 padding: 52,
                 display: "grid",
-                gridTemplateColumns: ".9fr 1.1fr",
+                gridTemplateColumns: "minmax(0,.9fr) minmax(0,1.1fr)",
                 gap: 48,
                 alignItems: "center",
               }}
             >
-              <div style={{ height: 330 }}>
+              <div data-case-img="" style={{ height: 330 }}>
                 <Figure
                   src="/images/case-study-siteman.webp"
                   alt=""

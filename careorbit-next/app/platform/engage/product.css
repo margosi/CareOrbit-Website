@@ -128,4 +128,16 @@
   [data-hero-grid] h1 {
     font-size: clamp(44px, 12.5vw, 56px) !important;
   }
+
+  /* The CTA row goes full width and each button takes its own line rather
+   * than two pills sharing one and overflowing. */
+  [data-hero-grid] > div:has(> h1) > div:last-child {
+    width: 100%;
+  }
+
+  [data-hero-grid] > div:has(> h1) > div:last-child > a {
+    flex: 1 1 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }

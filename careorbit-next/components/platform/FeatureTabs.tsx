@@ -16,9 +16,16 @@ import { FEATURE_TABS, TAB_INTERVAL_MS } from "@/lib/platform";
  * index so React remounts the span and the animation restarts on change.
  *
  * Server renders tab 0, which is what the Phase 0 baseline captured.
+ *
+ * Below 700px the tab strip is replaced by a dropdown ([data-feat-dd]).
+ * Five tabs sharing one row leaves each about 60px on a phone, which
+ * truncates every label; the dropdown shows the current one in full and
+ * opens the rest. Picking from it selects the tab and closes the menu,
+ * restarting the 18s timer exactly as a tab click does.
  */
 export function FeatureTabs() {
   const [tab, setTab] = useState(0);
+  const [ddOpen, setDdOpen] = useState(false);
   const timer = useRef<number | null>(null);
 
   const start = useCallback(() => {
@@ -45,6 +52,88 @@ export function FeatureTabs() {
 
   return (
     <>
+      <div
+        data-feat-dd=""
+        style={{ display: "none", flexDirection: "column", gap: 16 }}
+      >
+        <button
+          onClick={() => setDdOpen((v) => !v)}
+          aria-expanded={ddOpen}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 12,
+            width: "100%",
+            background: "none",
+            border: "none",
+            borderBottom: "1px solid rgba(15,29,46,.2)",
+            padding: "4px 0 18px",
+            cursor: "pointer",
+            fontFamily: "Lato,sans-serif",
+            fontWeight: 400,
+            fontSize: 21,
+            color: "#0F1D2E",
+            textAlign: "left",
+          }}
+        >
+          <span>{active.name}</span>
+          <svg
+            width="20"
+            height="12"
+            viewBox="0 0 20 12"
+            fill="none"
+            stroke="#0F1D2E"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+            style={{
+              flexShrink: 0,
+              transition: "transform .25s",
+              transform: ddOpen ? "rotate(180deg)" : "none",
+            }}
+          >
+            <path d="M1 1l9 9 9-9" />
+          </svg>
+        </button>
+        {ddOpen ? (
+          <div
+            style={{
+              background: "#FFFFFF",
+              borderRadius: 16,
+              padding: "10px 18px",
+              display: "flex",
+              flexDirection: "column",
+              animation: "coDdIn .25s ease-out",
+            }}
+          >
+            {FEATURE_TABS.map((t, i) => (
+              <button
+                key={t.slot}
+                onClick={() => {
+                  pick(i);
+                  setDdOpen(false);
+                }}
+                style={{
+                  background: "none",
+                  border: "none",
+                  borderBottom: "1px solid rgba(15,29,46,.12)",
+                  padding: "16px 0",
+                  textAlign: "left",
+                  fontFamily: "Inter,sans-serif",
+                  fontSize: 16,
+                  color: i === tab ? "#0F1D2E" : "rgba(15,29,46,.5)",
+                  cursor: "pointer",
+                }}
+              >
+                {t.name}
+              </button>
+            ))}
+          </div>
+        ) : null}
+      </div>
+
       <div
         data-feat-tabs=""
         style={{ display: "flex", gap: "clamp(12px,2vw,32px)" }}

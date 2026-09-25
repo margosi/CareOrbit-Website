@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Figure } from "@/components/media/Figure";
 import { hv } from "@/lib/hoverStyles";
-import { CARD_LOOP } from "@/lib/platform";
+import { CARD_LOOP, PLATFORM_CARDS } from "@/lib/platform";
 
 /* The four-component carousel under "how orbits work".
  * Platform.dc.html lines 91-110.
@@ -17,6 +17,12 @@ import { CARD_LOOP } from "@/lib/platform";
  * back to the cloned slide is invisible:
  *   - prev from 0: jump to 4 with no transition, then animate to 3
  *   - next past 3: animate to 4, then after the 650ms transition snap to 0
+ *
+ * Below 700px this whole thing is replaced, not resized. The Design swaps
+ * in a native scroll-snap strip ([data-pc-mob]) showing one card at a time,
+ * and hides the transform track and its nav. A transform carousel sized in
+ * vw never reads well on a phone; a swipeable strip does, and it costs no
+ * JavaScript to drag. The arrows just scrollBy one card width.
  */
 /* Slide width lives in a CSS custom property, not a constant, because the
  * same value drives BOTH the card's flex-basis and the track's translateX.
@@ -61,9 +67,17 @@ export function CardCarousel() {
     }
   };
 
+  /* One card plus the 28px of the next one that peeks in. */
+  const scrollByCard = (dir: -1 | 1) => {
+    const el = document.querySelector("[data-pc-mob]");
+    if (el)
+      el.scrollBy({ left: dir * (el.clientWidth - 28), behavior: "smooth" });
+  };
+
   return (
     <>
       <div
+        data-pc-desk=""
         style={{
           overflow: "hidden",
           margin: "0 calc(50% - 50vw)",
@@ -180,7 +194,147 @@ export function CardCarousel() {
         </div>
       </div>
 
+      {/* Phone: a scroll-snap strip in place of the transform track. */}
       <div
+        data-pc-mob=""
+        style={{
+          display: "none",
+          gap: 12,
+          overflowX: "auto",
+          scrollSnapType: "x mandatory",
+          scrollbarWidth: "none",
+          margin: "0 -20px",
+          padding: "0 20px",
+          scrollPadding: "0 20px",
+        }}
+      >
+        {PLATFORM_CARDS.map((card) => (
+          <Link
+            key={card.slot}
+            href={card.href}
+            style={{
+              flex: "0 0 calc(100% - 28px)",
+              scrollSnapAlign: "start",
+              boxSizing: "border-box",
+              position: "relative",
+              display: "block",
+              height: "clamp(460px,125vw,560px)",
+              borderRadius: 16,
+              overflow: "hidden",
+              textDecoration: "none",
+              color: "#FFFFFF",
+            }}
+          >
+            <Figure
+              src={card.img}
+              alt=""
+              radius={0}
+              shape="rect"
+              placeholder={card.ph}
+              sizes="100vw"
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                display: "block",
+              }}
+            />
+            <div
+              style={{
+                position: "absolute",
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backdropFilter: "blur(22px)",
+                WebkitBackdropFilter: "blur(22px)",
+                background:
+                  "linear-gradient(180deg,rgba(52,48,44,.42) 0%,rgba(42,39,36,.62) 100%)",
+                display: "flex",
+                flexDirection: "column",
+                gap: 12,
+                padding: "24px 22px 26px",
+                boxSizing: "border-box",
+              }}
+            >
+              <span
+                style={{
+                  width: 11,
+                  height: 11,
+                  borderRadius: "50%",
+                  background: card.dot,
+                  boxShadow: "0 0 0 4px rgba(255,255,255,.25)",
+                  display: "inline-block",
+                }}
+              />
+              <div
+                style={{
+                  fontFamily: "Lato,sans-serif",
+                  fontWeight: 400,
+                  fontSize: 28,
+                  letterSpacing: "-0.01em",
+                  lineHeight: 1.2,
+                }}
+              >
+                {card.name}
+              </div>
+              <div
+                style={{
+                  fontSize: 15.5,
+                  lineHeight: 1.55,
+                  color: "rgba(255,255,255,.94)",
+                  textWrap: "pretty",
+                }}
+              >
+                {card.d}
+              </div>
+              <div
+                style={{
+                  marginTop: 6,
+                  fontSize: 15,
+                  fontWeight: 500,
+                  color: "#FFFFFF",
+                  textDecoration: "underline",
+                  textUnderlineOffset: 7,
+                  alignSelf: "flex-start",
+                }}
+              >
+                Learn more
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      <div
+        data-pc-mobnav=""
+        style={{
+          display: "none",
+          justifyContent: "flex-end",
+          gap: 10,
+          marginTop: 24,
+          paddingBottom: 20,
+          borderBottom: "1px solid rgba(15,29,46,.18)",
+        }}
+      >
+        <button
+          onClick={() => scrollByCard(-1)}
+          aria-label="Previous"
+          style={mobNavBtn}
+        >
+          &larr;
+        </button>
+        <button
+          onClick={() => scrollByCard(1)}
+          aria-label="Next"
+          style={mobNavBtn}
+        >
+          &rarr;
+        </button>
+      </div>
+
+      <div
+        data-pc-desknav=""
         style={{
           display: "flex",
           alignItems: "center",
@@ -209,6 +363,17 @@ export function CardCarousel() {
     </>
   );
 }
+
+const mobNavBtn: React.CSSProperties = {
+  width: 40,
+  height: 40,
+  borderRadius: "50%",
+  border: "none",
+  background: "#2D5A87",
+  color: "#FFFFFF",
+  fontSize: 16,
+  cursor: "pointer",
+};
 
 const navBtn: React.CSSProperties = {
   width: 44,

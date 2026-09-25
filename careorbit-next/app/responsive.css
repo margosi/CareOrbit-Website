@@ -14,8 +14,9 @@
  *
  * Each such selector is replaced by an explicit data attribute. Components
  * built in Phase 2 onward MUST carry these attributes; the mapping below is
- * the contract. The [data-nav-*], [data-gallery-*] and [data-explore-row]
- * selectors already worked this way in v2-maven and are carried over as-is.
+ * the contract. The [data-nav-*] and [data-gallery-*] selectors already
+ * worked this way in v2-maven and are carried over as-is. [data-explore-row]
+ * moved to home.css when the Design turned it into a carousel.
  *
  * CONTRACT - attribute : replaces
  *   data-grid="4-min0" : grid-template-columns: repeat(4, minmax(0px, 1fr))
@@ -142,15 +143,6 @@
     display: block !important;
   }
 
-  [data-explore-row] {
-    flex-direction: column !important;
-    height: auto !important;
-  }
-
-  [data-explore-row] > div {
-    height: 340px;
-  }
-
   [data-align-right] {
     text-align: left !important;
   }
@@ -273,8 +265,13 @@ button[style*="border-radius: 999px"] {
 }
 
 @media (max-width: 1020px) {
-  /* Stacked email-capture cards stop stretching edge to edge on tablets. */
-  div[style*="flex-direction: column"]:has(> input[placeholder*="email" i]) {
+  /* Stacked email-capture cards stop stretching edge to edge on tablets.
+   * The Book a Call panel is excluded: it is the page's primary form and
+   * its own page-scoped CSS sizes it inside a 680px column, so capping it
+   * here would leave it narrower than the card beneath it. */
+  div[style*="flex-direction: column"]:has(> input[placeholder*="email" i]):not(
+      [data-bk-card]
+    ) {
     max-width: 640px;
     width: 100%;
     box-sizing: border-box;

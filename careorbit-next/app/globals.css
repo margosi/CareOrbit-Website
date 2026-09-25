@@ -114,6 +114,18 @@ a:hover {
   }
 }
 
+/* The Platform features dropdown opening on a phone. */
+@keyframes coDdIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* The hero label swapping inside the mobile pill. */
 @keyframes coPillIn {
   from {

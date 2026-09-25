@@ -1049,6 +1049,7 @@ export function BehavioralRiskBody() {
           </div>
 
           <div
+            data-nr-card=""
             style={{
               background: "#1E3A5F",
               borderRadius: 28,

@@ -166,27 +166,51 @@
 @media (max-width: 700px) {
   [data-hero-center] {
     width: 100% !important;
+    padding-top: clamp(150px, 44vw, 230px) !important;
+    padding-bottom: clamp(190px, 58vw, 300px) !important;
+    gap: 18px !important;
   }
 
+  /* The four hero images stay absolutely positioned on a phone rather than
+   * stacking into a column. Two bleed off the left and right edges and two
+   * sit inset, which keeps the collage reading as one composition instead
+   * of four unrelated photos. [data-hero-center] grows its vertical padding
+   * to make room for them. */
   div:has(> [data-hero-img1]) {
     min-height: 0 !important;
-    display: flex;
-    flex-direction: column;
-  }
-
-  [data-hero-img1],
-  [data-hero-img2],
-  [data-hero-img3],
-  [data-hero-img4] {
-    position: static !important;
-    width: 100% !important;
-    border-radius: 16px !important;
-    aspect-ratio: 4 / 3 !important;
-    margin: 0 0 14px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 0 !important;
   }
 
   [data-hero-img1] {
-    margin-top: 28px !important;
+    top: 28px !important;
+    left: 0 !important;
+    width: 34vw !important;
+    border-radius: 0 16px 16px 0 !important;
+  }
+
+  [data-hero-img2] {
+    top: 44px !important;
+    right: 0 !important;
+    width: 30vw !important;
+    aspect-ratio: 4 / 5 !important;
+    border-radius: 16px 0 0 16px !important;
+  }
+
+  [data-hero-img3] {
+    bottom: 40px !important;
+    left: 20px !important;
+    width: 46vw !important;
+    border-radius: 14px !important;
+  }
+
+  [data-hero-img4] {
+    bottom: -8px !important;
+    right: 20px !important;
+    width: 36vw !important;
+    aspect-ratio: 4 / 5 !important;
+    border-radius: 14px !important;
   }
 }
 
@@ -210,5 +234,69 @@
 
   [data-hero-glow] {
     animation: none !important;
+  }
+}
+
+/* ----------------------------------------------- quote carousel sizing --
+ * One slide is 30vw on a desktop and 86vw on a phone; --qo is where the
+ * strip rests. QuoteCarousel.tsx expresses its translateX in the same two
+ * variables, so the shift stays correct across the breakpoint.
+ */
+[data-quotes] {
+  --qw: 30vw;
+  --qo: 35px;
+}
+
+[data-pc-mob]::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------------------------- phone swaps, 700px --
+ * Three sections trade their desktop mechanism for a phone-native one:
+ * the product-card track becomes a scroll-snap strip, the five feature
+ * tabs become a dropdown, and the quote slides widen to fill the screen.
+ */
+@media (max-width: 700px) {
+  [data-pc-desk],
+  [data-pc-desknav] {
+    display: none !important;
+  }
+
+  [data-pc-mob],
+  [data-pc-mobnav] {
+    display: flex !important;
+  }
+
+  [data-feat-tabs] {
+    display: none !important;
+  }
+
+  [data-feat-dd] {
+    display: flex !important;
+  }
+
+  [data-quotes] {
+    --qw: 86vw !important;
+    --qo: 7vw !important;
+  }
+
+  [data-quote-card] {
+    padding: 28px 24px 26px !important;
+    min-height: 380px !important;
+    gap: 22px !important;
+  }
+
+  [data-quote-card] > div:nth-child(1) {
+    font-size: 44px !important;
+    line-height: 0.6 !important;
+  }
+
+  [data-quote-card] > div:nth-child(2) {
+    font-size: 16.5px !important;
+    line-height: 1.55 !important;
+  }
+
+  [data-quote-card] > div:nth-child(3) {
+    font-size: 14px !important;
   }
 }

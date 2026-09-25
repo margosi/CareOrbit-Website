@@ -13,6 +13,13 @@ import { BookingPanel, SheetPicker } from "@/components/book/BookingPanel";
  * BookingPanel and SheetPicker read ?src= via useSearchParams, so they sit
  * behind Suspense boundaries; without one Next opts the whole route into
  * client-side rendering.
+ *
+ * The data-bk-* hooks are the Design's own. book-a-call.css carries its
+ * page-scoped rules, which is where the section order lives: below 1020px
+ * the grid becomes a flex column and [data-bk-alt] takes order:2, so the
+ * booking panel is read first and the info-sheet card second. Do not
+ * reorder this markup to achieve that - the Design does it in CSS, and the
+ * two-column desktop layout depends on this DOM order.
  */
 export const metadata = metadataFor("/book-a-call");
 
@@ -34,7 +41,7 @@ export default function BookACallPage() {
         <div
           data-grid="split"
           data-pad="page-top"
-          data-bac-grid=""
+          data-bk-grid=""
           style={{
             maxWidth: 1220,
             margin: "0 auto",
@@ -46,12 +53,8 @@ export default function BookACallPage() {
             flex: 1,
           }}
         >
-          {/* Three grid children, not two. The info-sheet card used to sit
-            inside this column under the paragraph; it is now a sibling so
-            that the stacked view can place it after the booking panel.
-            book-a-call.css puts it back under the paragraph above 1020px. */}
           <div
-            data-bac-intro=""
+            data-bk-left=""
             style={{ display: "flex", flexDirection: "column", gap: 22 }}
           >
             <h1
@@ -85,50 +88,47 @@ export default function BookACallPage() {
               platform, then decide together whether it&apos;s worth a second
               conversation.
             </p>
-          </div>
-
-          <div data-bac-booking="">
-            <Suspense fallback={null}>
-              <BookingPanel />
-            </Suspense>
-          </div>
-
-          <div
-            data-bac-sheet=""
-            style={{
-              background: "#FFFFFF",
-              border: "1px solid rgba(15,29,46,.07)",
-              borderRadius: 26,
-              padding: "26px 28px",
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-              marginTop: 8,
-            }}
-          >
             <div
+              data-bk-alt=""
               style={{
-                fontFamily: "Lato,sans-serif",
-                fontWeight: 900,
-                fontSize: 17,
+                background: "#FFFFFF",
+                border: "1px solid rgba(15,29,46,.07)",
+                borderRadius: 26,
+                padding: "26px 28px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 10,
+                marginTop: 8,
               }}
             >
-              Not ready for a call?
+              <div
+                style={{
+                  fontFamily: "Lato,sans-serif",
+                  fontWeight: 900,
+                  fontSize: 17,
+                }}
+              >
+                Not ready for a call?
+              </div>
+              <div
+                style={{
+                  fontSize: 14,
+                  lineHeight: 1.55,
+                  color: "rgba(15,29,46,.68)",
+                }}
+              >
+                Get the info sheet for your desired orbit solution by email
+                instead.
+              </div>
+              <Suspense fallback={null}>
+                <SheetPicker />
+              </Suspense>
             </div>
-            <div
-              style={{
-                fontSize: 14,
-                lineHeight: 1.55,
-                color: "rgba(15,29,46,.68)",
-              }}
-            >
-              Get the info sheet for your desired orbit solution by email
-              instead.
-            </div>
-            <Suspense fallback={null}>
-              <SheetPicker />
-            </Suspense>
           </div>
+
+          <Suspense fallback={null}>
+            <BookingPanel />
+          </Suspense>
         </div>
       </main>
       <SiteFooter />

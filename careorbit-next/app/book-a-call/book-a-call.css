@@ -1,47 +1,77 @@
-/* Book a Call: the order of the two sections.
+/* Book a Call, page-scoped. Ported from BookACall.dc.html's own
+ * <helmet><style> block.
  *
- * The page body is one grid. At or below 1020px responsive.css collapses it
- * to a single column, where the children simply stack in DOM order.
+ * This block is why the page reads the way it does below 1020px, and it is
+ * the piece the first Design port missed: it inspected markup and shared
+ * CSS but not the page's own <style>, so none of the data-bk-* hooks came
+ * across.
  *
- * DOM order is intro -> booking panel -> info-sheet card, so the stacked
- * view reads "Book your intro call" first and "Not ready for a call?"
- * second. That is the whole point of the arrangement: the call is the
- * primary action, and the info sheet is the fallback you meet after
- * scrolling past it.
- *
- * Above 1020px that same DOM order would drop the info-sheet card into the
- * right-hand column, under the booking panel. So the three children are
- * placed explicitly instead: intro and card in column one, booking panel
- * spanning both rows in column two. Visually identical to when the intro
- * and the card shared one flex column - including the row gap, which drops
- * to the 22px that flex column used, so the card still sits directly under
- * the intro paragraph.
- *
- * The span matters. Without it the booking panel would size row 1 to its
- * own height (491px against the intro's ~305px) and shove the card far
- * down column one. Spanning both rows lets the left column set the row
- * heights, which it can because the intro + card stack is the taller of
- * the two at every width above 1020px.
+ * The section order lives here, not in the markup. [data-bk-left] becomes
+ * display:contents so its three children join the flex column directly,
+ * and [data-bk-alt] takes order:2 - which lifts the booking panel above
+ * the info-sheet card without disturbing the two-column desktop layout,
+ * where the panel is already level with the headline.
  */
 
-@media (min-width: 1021px) {
-  [data-bac-grid] {
-    /* Beats the inline `gap: 64px`; the column gap is unaffected. */
-    row-gap: 22px !important;
+@media (max-width: 1020px) {
+  [data-bk-grid] {
+    display: flex !important;
+    flex-direction: column;
+    gap: 22px !important;
+    align-items: stretch !important;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 680px !important;
+    padding-top: 48px !important;
+    padding-bottom: 72px !important;
   }
 
-  [data-bac-intro] {
-    grid-column: 1;
-    grid-row: 1;
+  /* The left column dissolves so the headline, the paragraph and the
+   * info-sheet card become siblings of the booking panel. */
+  [data-bk-left] {
+    display: contents !important;
   }
 
-  [data-bac-booking] {
-    grid-column: 2;
-    grid-row: 1 / span 2;
+  /* Book your intro call first, Not ready for a call? after it. */
+  [data-bk-alt] {
+    order: 2;
+    margin-top: 18px !important;
   }
 
-  [data-bac-sheet] {
-    grid-column: 1;
-    grid-row: 2;
+  [data-bk-grid] h1 {
+    font-size: clamp(34px, 6vw, 46px) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  [data-bk-grid] {
+    padding: 28px 18px 56px !important;
+    gap: 18px !important;
+  }
+
+  [data-bk-card] {
+    padding: 24px 20px !important;
+    border-radius: 24px !important;
+  }
+
+  [data-bk-alt] {
+    padding: 22px 20px !important;
+    border-radius: 22px !important;
+  }
+
+  [data-bk-grid] input,
+  [data-bk-grid] select {
+    font-size: 16px !important;
+  }
+
+  /* The info-sheet row stops sharing a line: each control takes its own. */
+  [data-bk-alt-row] > * {
+    flex: 1 1 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Calendly needs the height to show a month and the time list. */
+  [data-bk-grid] iframe {
+    height: 720px !important;
   }
 }

@@ -187,6 +187,7 @@ export function BookingPanel() {
 
   return (
     <Reveal
+      data-bk-card=""
       style={{
         background: "#FFFFFF",
         border: "1px solid rgba(15,29,46,.07)",
@@ -526,7 +527,10 @@ export function SheetPicker() {
   };
 
   return (
-    <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+    <div
+      data-bk-alt-row=""
+      style={{ display: "flex", gap: 10, flexWrap: "wrap" }}
+    >
       <select
         value={sheetLine}
         onChange={(e) => setSheetLine(e.target.value)}

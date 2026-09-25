@@ -12,20 +12,25 @@ import { QUOTES, QUOTE_MAX_INDEX } from "@/lib/platform";
  * quotes are only reachable by the tail of the strip being visible, not by
  * stepping to them. Preserved exactly rather than "fixed" - changing the
  * bound would alter the progress bar and the reachable content.
+ *
+ * Slide width and the strip's resting offset are CSS custom properties, not
+ * constants, because the same two values drive the card's flex-basis AND
+ * the track's translateX. platform.css widens them below 700px (30vw -> 86vw)
+ * so one quote fills a phone; expressing the shift in the same variables
+ * means the carousel still lands on the right card at every width.
  */
-const SLIDE_VW = 30;
 const GAP_PX = 20;
-const EDGE_PX = 35;
 
 export function QuoteCarousel() {
   const [q, setQ] = useState(0);
 
-  const shift = `calc(${-q * SLIDE_VW}vw - ${q * GAP_PX - EDGE_PX}px)`;
+  const shift = `calc(var(--qo) - ${q} * (var(--qw) + ${GAP_PX}px))`;
   const progress = `${Math.round(((q + 1) / 5) * 100)}%`;
 
   return (
     <>
       <div
+        data-quotes=""
         style={{
           overflow: "hidden",
           margin:
@@ -44,8 +49,9 @@ export function QuoteCarousel() {
           {QUOTES.map((quote, i) => (
             <div
               key={i}
+              data-quote-card=""
               style={{
-                flex: `0 0 ${SLIDE_VW}vw`,
+                flex: "0 0 var(--qw)",
                 boxSizing: "border-box",
                 background: quote.bg,
                 backdropFilter: "blur(10px)",
