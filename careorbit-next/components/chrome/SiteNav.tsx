@@ -28,7 +28,12 @@ const NO_PREFETCH = { prefetch: false } as const;
 
 export function SiteNav({
   active = "home",
-  announce = true,
+  /* Off site-wide. The bar, its dismiss button, its height measurement and
+   * the scroll offsets that depend on it are all still here and still
+   * correct - `announce` gates the whole thing at one point below, so
+   * turning it back on is this default and nothing else. Two pages already
+   * passed announce={false} explicitly; those stay valid, just redundant. */
+  announce = false,
 }: {
   active?: NavActive;
   announce?: boolean;
