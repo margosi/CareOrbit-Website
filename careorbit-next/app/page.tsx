@@ -947,7 +947,7 @@ export default function HomePage() {
                   Controlled clinical trial at Siteman Cancer Center.
                 </div>
                 <Link
-                  href="/outcomes"
+                  href="/evidence/siteman-study"
                   className={hv("caseLink")}
                   style={{
                     fontSize: 14.5,
