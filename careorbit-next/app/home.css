@@ -272,3 +272,127 @@
     padding: 0 4px;
   }
 }
+
+/* ------------------------------------------- hero frame selection --
+ * Which of the seven photos is showing is decided in CSS, not by an
+ * inline style from React, and that is what makes a random opening frame
+ * safe here.
+ *
+ * The Home page is statically prerendered, so its HTML is identical for
+ * every visitor and cannot carry a per-visit random number. A tiny script
+ * in app/page.tsx runs before first paint and parks one on
+ * <html data-hero-start>. These rules read it, so the very first painted
+ * frame is already the right one - no flash of frame 1, and no blank hero.
+ *
+ * React renders data-hero-idx only once it has mounted (state starts
+ * null), so server and first client render are byte-identical and there is
+ * no hydration mismatch. The moment React sets it, the :not([data-hero-idx])
+ * guard switches these rules off and the second block takes over with the
+ * same frame - control changes hands, the picture does not.
+ *
+ * With no JavaScript at all neither attribute exists, so the last rule
+ * shows frame 1 and the hero is still a hero.
+ */
+[data-hero-box] img[data-frame] {
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+html:not([data-hero-start])
+  [data-hero-box]:not([data-hero-idx])
+  img[data-frame="0"] {
+  opacity: 1;
+}
+
+html[data-hero-start="0"]
+  [data-hero-box]:not([data-hero-idx])
+  img[data-frame="0"],
+html[data-hero-start="1"]
+  [data-hero-box]:not([data-hero-idx])
+  img[data-frame="1"],
+html[data-hero-start="2"]
+  [data-hero-box]:not([data-hero-idx])
+  img[data-frame="2"],
+html[data-hero-start="3"]
+  [data-hero-box]:not([data-hero-idx])
+  img[data-frame="3"],
+html[data-hero-start="4"]
+  [data-hero-box]:not([data-hero-idx])
+  img[data-frame="4"],
+html[data-hero-start="5"]
+  [data-hero-box]:not([data-hero-idx])
+  img[data-frame="5"],
+html[data-hero-start="6"]
+  [data-hero-box]:not([data-hero-idx])
+  img[data-frame="6"] {
+  opacity: 1;
+}
+
+[data-hero-box][data-hero-idx="0"] img[data-frame="0"],
+[data-hero-box][data-hero-idx="1"] img[data-frame="1"],
+[data-hero-box][data-hero-idx="2"] img[data-frame="2"],
+[data-hero-box][data-hero-idx="3"] img[data-frame="3"],
+[data-hero-box][data-hero-idx="4"] img[data-frame="4"],
+[data-hero-box][data-hero-idx="5"] img[data-frame="5"],
+[data-hero-box][data-hero-idx="6"] img[data-frame="6"] {
+  opacity: 1;
+}
+
+/* The mobile pill's label follows the same frame, for the same reason:
+ * it has to be right before React knows anything. Going from display:none
+ * to inline-block restarts coPillIn, which is how the label animated on
+ * each change before. */
+[data-hero-pill] span[data-frame] {
+  display: none;
+}
+
+html:not([data-hero-start])
+  [data-hero-box]:not([data-hero-idx])
+  [data-hero-pill]
+  span[data-frame="0"] {
+  display: inline-block;
+  animation: coPillIn 0.5s ease-out forwards;
+}
+
+html[data-hero-start="0"]
+  [data-hero-box]:not([data-hero-idx])
+  [data-hero-pill]
+  span[data-frame="0"],
+html[data-hero-start="1"]
+  [data-hero-box]:not([data-hero-idx])
+  [data-hero-pill]
+  span[data-frame="1"],
+html[data-hero-start="2"]
+  [data-hero-box]:not([data-hero-idx])
+  [data-hero-pill]
+  span[data-frame="2"],
+html[data-hero-start="3"]
+  [data-hero-box]:not([data-hero-idx])
+  [data-hero-pill]
+  span[data-frame="3"],
+html[data-hero-start="4"]
+  [data-hero-box]:not([data-hero-idx])
+  [data-hero-pill]
+  span[data-frame="4"],
+html[data-hero-start="5"]
+  [data-hero-box]:not([data-hero-idx])
+  [data-hero-pill]
+  span[data-frame="5"],
+html[data-hero-start="6"]
+  [data-hero-box]:not([data-hero-idx])
+  [data-hero-pill]
+  span[data-frame="6"] {
+  display: inline-block;
+  animation: coPillIn 0.5s ease-out forwards;
+}
+
+[data-hero-box][data-hero-idx="0"] [data-hero-pill] span[data-frame="0"],
+[data-hero-box][data-hero-idx="1"] [data-hero-pill] span[data-frame="1"],
+[data-hero-box][data-hero-idx="2"] [data-hero-pill] span[data-frame="2"],
+[data-hero-box][data-hero-idx="3"] [data-hero-pill] span[data-frame="3"],
+[data-hero-box][data-hero-idx="4"] [data-hero-pill] span[data-frame="4"],
+[data-hero-box][data-hero-idx="5"] [data-hero-pill] span[data-frame="5"],
+[data-hero-box][data-hero-idx="6"] [data-hero-pill] span[data-frame="6"] {
+  display: inline-block;
+  animation: coPillIn 0.5s ease-out forwards;
+}

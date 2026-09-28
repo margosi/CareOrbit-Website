@@ -161,6 +161,12 @@ export default function CardiologyPage() {
               placeholder="Cardiology care photo"
               radius={32}
               priority
+              /* The hero box is 1.04 wide at 390px and 1.08 at 1440px but
+               * 2.23 at 768px and 3.01 at 1020px, against a 1.33 source - so
+               * cover crops horizontally at the narrow widths and vertically
+               * at the wide ones, and both axes matter. 62% 32% keeps his
+               * face and the phone inside the frame at all four. */
+              objectPosition="62% 32%"
               sizes="(max-width: 1020px) 100vw, 40vw"
               style={{
                 display: "block",

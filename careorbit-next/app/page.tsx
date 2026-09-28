@@ -50,6 +50,21 @@ export default function HomePage() {
         overflowX: "clip",
       }}
     >
+      {/* Picks the hero's opening frame before anything paints.
+       *
+       * This page is statically prerendered, so the HTML is the same for
+       * every visitor and cannot itself vary. A blocking inline script is
+       * the only place a per-visit value can come from that still lands
+       * ahead of first paint - which is the whole point, because a choice
+       * made after paint would show frame 1 and then cross-fade away from
+       * it. It writes one attribute and nothing else; home.css reads it.
+       * No cookie, no storage, no network. */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html:
+            'document.documentElement.setAttribute("data-hero-start",String(Math.floor(Math.random()*7)))',
+        }}
+      />
       <SiteNav active="home" />
       <main id="main-content">
         <HeroSection ctaLabel={CTA_LABEL} />

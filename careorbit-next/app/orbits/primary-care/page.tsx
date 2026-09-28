@@ -143,6 +143,10 @@ export default function PrimaryCarePage() {
               placeholder="[Placeholder: primary care visit photo]"
               radius={32}
               priority
+              /* Two subjects rather than one, so the crop has to hold both
+               * faces. 52% 28% does at every width, including the 3.01-ratio
+               * box at 1020px where only ~44% of the source height shows. */
+              objectPosition="52% 28%"
               sizes="(max-width: 1020px) 100vw, 40vw"
               style={{
                 display: "block",

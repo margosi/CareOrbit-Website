@@ -65,7 +65,10 @@ export function HeroSection({
   heroWord?: string;
   ctaLabel?: string;
 }) {
-  const [heroIdx, setHeroIdx] = useState(0);
+  /* null until React takes over. Server and first client render therefore
+   * agree exactly, and home.css decides the opening frame from the
+   * data-hero-start the inline script set before first paint. */
+  const [heroIdx, setHeroIdx] = useState<number | null>(null);
   const linesRef = useRef<HTMLDivElement | null>(null);
 
   useHeroRibbons(linesRef, setHeroIdx);
@@ -82,6 +85,7 @@ export function HeroSection({
     >
       <div
         data-hero-box=""
+        data-hero-idx={heroIdx ?? undefined}
         style={{
           position: "relative",
           borderRadius: 30,
@@ -93,18 +97,14 @@ export function HeroSection({
         {FRAMES.map((f, i) => (
           <Image
             key={f.src}
+            data-frame={i}
             src={f.src}
             alt=""
             fill
             priority={i === 0}
             unoptimized={EXACT_PIXELS}
             sizes="100vw"
-            style={{
-              objectFit: "cover",
-              objectPosition: f.pos,
-              transition: "opacity 1.4s ease",
-              opacity: heroIdx === i ? 1 : 0,
-            }}
+            style={{ objectFit: "cover", objectPosition: f.pos }}
           />
         ))}
 
@@ -162,16 +162,17 @@ export function HeroSection({
                 background: "#F2B8C6",
               }}
             />
-            {/* Keyed so a new label remounts and replays coPillIn. */}
-            <span
-              key={`m${heroIdx}`}
-              style={{
-                display: "inline-block",
-                animation: "coPillIn .5s ease-out forwards",
-              }}
-            >
-              {LABELS[heroIdx]}
-            </span>
+            {/* All seven labels are rendered; home.css shows the one that
+             * matches the active frame, using the same selectors as the
+             * photos. That keeps the label correct before hydration, when
+             * React does not yet know which frame the inline script chose,
+             * and it still replays coPillIn on each change because the
+             * incoming span goes from display:none to display:inline-block. */}
+            {LABELS.map((l, i) => (
+              <span key={l} data-frame={i}>
+                {l}
+              </span>
+            ))}
           </div>
 
           <h1
@@ -338,6 +339,29 @@ const LINE_DEFS = [
 
 const NS = "http://www.w3.org/2000/svg";
 
+/* One pass through the loop, in milliseconds.
+ *
+ * The two ribbon tweens and the pill's clip in/out are the animation
+ * itself and are UNCHANGED - the drawing keeps exactly its old character
+ * and speed. Only the two waiting periods were shortened, which is what
+ * actually governs how long you stare at the same photo:
+ *
+ *            was      now
+ *   DWELL     900      600     gap after a pass before the next photo
+ *   HOLD     3200     1750     label sitting fully open, nothing moving
+ *   pass    10430     8680     -16.8%
+ *
+ * HOLD still leaves the label readable for 1750ms static plus its 650ms
+ * open and 480ms close, which is comfortably longer than the longest
+ * label takes to read. */
+const DWELL_MS = 600;
+const FIRST_DWELL_MS = 450;
+const SWEEP_MS = 2800; // ribbon out, unchanged
+const PILL_IN_MS = 650; // unchanged
+const HOLD_MS = 1750;
+const PILL_OUT_MS = 480; // unchanged
+const RETRACT_MS = 2400; // ribbon back to rest, unchanged
+
 type Ribbon = (typeof LINE_DEFS)[number] & {
   p: SVGPathElement;
   c: SVGCircleElement;
@@ -349,6 +373,15 @@ type Ribbon = (typeof LINE_DEFS)[number] & {
   atRest: boolean;
 };
 
+/* The opening frame, chosen before first paint by the inline script in
+ * app/page.tsx and parked on <html data-hero-start>. Read, never written,
+ * so React and the server never disagree about it. */
+function openingFrame(): number {
+  const raw = document.documentElement.dataset.heroStart;
+  const n = Number(raw);
+  return Number.isInteger(n) && n >= 0 && n < FRAMES.length ? n : 0;
+}
+
 function useHeroRibbons(
   hostRef: React.RefObject<HTMLDivElement | null>,
   setHeroIdx: (i: number) => void,
@@ -356,6 +389,12 @@ function useHeroRibbons(
   useEffect(() => {
     const host = hostRef.current;
     if (!host) return;
+
+    const start = openingFrame();
+    /* Take ownership of the frame React is showing. Same number the CSS is
+     * already displaying, so nothing moves on screen - it only transfers
+     * control from the pre-paint attribute to React state. */
+    setHeroIdx(start);
 
     let dead = false;
     const reduce = window.matchMedia(
@@ -488,7 +527,7 @@ function useHeroRibbons(
       { clipPath: "inset(0 0% 0 0 round 999px)", opacity: 1 },
     ];
 
-    pill.textContent = LABELS[0];
+    pill.textContent = LABELS[start];
 
     let lw = 0;
     let lh = 0;
@@ -502,7 +541,8 @@ function useHeroRibbons(
     layout();
 
     if (reduce) {
-      /* Resting state, held. No sweep, no photo rotation. */
+      /* Resting state, held - on whichever frame the page opened with.
+       * Variable start costs nothing here because nothing ever moves. */
       lines.forEach((l) => {
         l.u = l.rest;
         l.atRest = true;
@@ -528,30 +568,32 @@ function useHeroRibbons(
       );
       let k = 0;
       while (!dead) {
-        await wait(k === 0 ? 700 : 900);
+        await wait(k === 0 ? FIRST_DWELL_MS : DWELL_MS);
         if (dead) return;
-        const idx = k % FRAMES.length;
+        /* Offset by the opening frame, so the sequence continues from
+         * wherever the page started rather than jumping to oncology. */
+        const idx = (start + k) % FRAMES.length;
         setHeroIdx(idx);
         pill.textContent = LABELS[idx];
         layout();
         const l = lines[k % lines.length];
         l.atRest = false;
-        await tw(l, 1, 2800, eio);
+        await tw(l, 1, SWEEP_MS, eio);
         if (dead) return;
         pill.animate(clipIn, {
-          duration: 650,
+          duration: PILL_IN_MS,
           easing: "cubic-bezier(.2,.8,.2,1)",
           fill: "forwards",
         });
-        await wait(650 + 3200);
+        await wait(PILL_IN_MS + HOLD_MS);
         if (dead) return;
         pill.animate(clipIn.slice().reverse(), {
-          duration: 480,
+          duration: PILL_OUT_MS,
           easing: "cubic-bezier(.6,0,.8,.4)",
           fill: "forwards",
         });
-        await wait(480);
-        await tw(l, l.rest, 2400, eio);
+        await wait(PILL_OUT_MS);
+        await tw(l, l.rest, RETRACT_MS, eio);
         l.atRest = true;
         k++;
       }
