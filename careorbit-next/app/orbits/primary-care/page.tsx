@@ -137,8 +137,12 @@ export default function PrimaryCarePage() {
               animation: "coFloat 6s ease-in-out infinite alternate",
             }}
           >
+            {/* Its own asset, not the shared primarycare-hero.webp, which
+             * lib/primaryCare.ts also serves as VALUE_SRC[0] further down
+             * this page. Overwriting that file would have silently changed
+             * the segment image too. */}
             <Figure
-              src="/images/primarycare-hero.webp"
+              src="/images/hero-primary-care.webp"
               alt=""
               placeholder="[Placeholder: primary care visit photo]"
               radius={32}
