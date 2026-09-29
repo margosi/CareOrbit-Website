@@ -28,8 +28,12 @@ import {
  *
  * Section order (matches CLAUDE.md):
  *   announcement + nav -> hero -> #orbit-grid (tiles + explore) ->
- *   costliest moments -> #orbit-explainer -> sticky banner + donut stats ->
- *   Trusted by marquee -> case study -> CTA -> footer
+ *   Trusted by marquee -> costliest moments -> #orbit-explainer ->
+ *   sticky banner + donut stats -> case study -> CTA -> footer
+ *
+ * The marquee closes the dark #orbit-grid block rather than sitting between
+ * the donut stats and the case study, where it named Washington University
+ * directly between two sections describing an anonymised cancer center.
  *
  * DEAD CODE NOT PORTED: the original's renderVals() also computed
  * orbitRow1/orbitRow2, chips, hasMatch/noMatch/matchKicker/matchTitle/
@@ -324,6 +328,83 @@ export default function HomePage() {
             </div>
 
             <ExploreNav />
+          </div>
+        </div>
+
+        {/* --------------------------------------------- Trusted by marquee -- */}
+        <div
+          style={{
+            background:
+              "#0F1D2E url(/brand/arc-lines.svg) center/cover no-repeat",
+            marginBottom: 0,
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              padding: "40px 0 28px",
+              fontSize: 12.5,
+              fontWeight: 600,
+              letterSpacing: ".14em",
+              textTransform: "uppercase",
+              color: "#DCE8F3",
+            }}
+          >
+            <span
+              style={{
+                width: 9,
+                height: 9,
+                borderRadius: "50%",
+                background: "#DCE8F3",
+                display: "inline-block",
+              }}
+            />
+            Trusted by
+          </div>
+          <div
+            style={{
+              overflow: "hidden",
+              borderTop: "1px solid rgba(255,255,255,.16)",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                width: "max-content",
+                animation: "coMarquee 30s linear infinite",
+              }}
+            >
+              {MARQUEE.map((m, i) => (
+                <div
+                  key={`${m}-${i}`}
+                  style={{
+                    width: 420,
+                    height: 124,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    borderRight: "1px solid rgba(255,255,255,.16)",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: "Lato,sans-serif",
+                      fontWeight: 700,
+                      fontSize: 27,
+                      letterSpacing: "-0.01em",
+                      color: "#FFFFFF",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {m}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -801,83 +882,6 @@ export default function HomePage() {
                 </div>
               ))}
             </Reveal>
-          </div>
-        </div>
-
-        {/* --------------------------------------------- Trusted by marquee -- */}
-        <div
-          style={{
-            background:
-              "#0F1D2E url(/brand/arc-lines.svg) center/cover no-repeat",
-            marginBottom: 0,
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 10,
-              padding: "40px 0 28px",
-              fontSize: 12.5,
-              fontWeight: 600,
-              letterSpacing: ".14em",
-              textTransform: "uppercase",
-              color: "#DCE8F3",
-            }}
-          >
-            <span
-              style={{
-                width: 9,
-                height: 9,
-                borderRadius: "50%",
-                background: "#DCE8F3",
-                display: "inline-block",
-              }}
-            />
-            Trusted by
-          </div>
-          <div
-            style={{
-              overflow: "hidden",
-              borderTop: "1px solid rgba(255,255,255,.16)",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                width: "max-content",
-                animation: "coMarquee 30s linear infinite",
-              }}
-            >
-              {MARQUEE.map((m, i) => (
-                <div
-                  key={`${m}-${i}`}
-                  style={{
-                    width: 420,
-                    height: 124,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRight: "1px solid rgba(255,255,255,.16)",
-                    boxSizing: "border-box",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: "Lato,sans-serif",
-                      fontWeight: 700,
-                      fontSize: 27,
-                      letterSpacing: "-0.01em",
-                      color: "#FFFFFF",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {m}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 

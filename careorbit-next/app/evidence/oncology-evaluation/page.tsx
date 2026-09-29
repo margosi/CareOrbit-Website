@@ -494,13 +494,9 @@ export default function OncologyEvaluationPage() {
               textWrap: "pretty",
             }}
           >
-            These results come from an unpublished internal evaluation. They
-            have not been submitted for publication, and there is no public
-            study record to look up. Some details of the survey instruments
-            remain confidential. The clinical team that ran the evaluation is
-            available for discussion with interested professional parties,
-            including competitive healthcare systems, and the center is
-            currently expanding its use of orbits, with multiple orbits now in
+            These results come from an unpublished internal evaluation conducted
+            at a leading national cancer center. The center is currently
+            expanding its use of orbits, with multiple orbits now in
             development.
           </Reveal>
         </div>
