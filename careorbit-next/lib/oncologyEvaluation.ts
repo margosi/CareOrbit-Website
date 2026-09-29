@@ -218,7 +218,7 @@ export const DESIGN: DesignRow[] = [
     ],
   },
   {
-    kicker: "Who ran it",
+    kicker: "The team",
     label: "#2D5A87",
     dot: "#5B9BEA",
     t: "Who ran it",
