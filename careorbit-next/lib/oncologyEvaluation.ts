@@ -1,5 +1,6 @@
-/* Siteman controlled clinical trial page data. Extracted verbatim from
- * v2-maven/SitemanStudy.dc.html renderVals() (lines 166-218).
+/* Oncology evaluation page data. Extracted from the legacy
+ * SitemanStudy.dc.html renderVals() (lines 166-218) and anonymised: neither
+ * the center nor the individual clinician is named publicly.
  *
  * The page is wholly static - no dead keys, no calculator, no tabs - so
  * everything here is rendered.
@@ -139,7 +140,7 @@ export const MEASURES: MeasureRow[] = [
         l: "of patients and families",
       },
     ],
-    d: "Reported reaching additional support and educational resources, internal and external to Siteman, from their orbits.",
+    d: "Reported reaching additional support and educational resources, internal and external to the center, from their orbits.",
   },
   {
     kicker: "Adoption",
@@ -217,18 +218,18 @@ export const DESIGN: DesignRow[] = [
     ],
   },
   {
-    kicker: "Study author",
+    kicker: "Who ran it",
     label: "#2D5A87",
     dot: "#5B9BEA",
     t: "Who ran it",
     items: [
       {
-        t: "Dr. Ryan C. Fields,",
-        d: "chief of the Section of Surgical Oncology at Washington University School of Medicine, treating patients at Siteman Cancer Center, St. Louis.",
+        t: "A senior surgical oncologist",
+        d: "leading the section of surgical oncology at the center, who designed and ran the evaluation.",
       },
       {
-        t: "A nationally noted cancer surgeon and researcher",
-        d: "focused on patients at high risk of cancer recurrence, running a translational research laboratory funded by the National Institutes of Health (NIH).",
+        t: "An experienced cancer surgery team",
+        d: "caring for patients at high risk of cancer recurrence, in the hepatobiliary surgical oncology service where the evaluation was run.",
       },
     ],
   },

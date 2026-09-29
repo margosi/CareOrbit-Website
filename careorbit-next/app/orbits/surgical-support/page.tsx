@@ -507,11 +507,11 @@ export default function SurgicalSupportPage() {
                 Clinical evidence
               </div>
               <h2 style={H2_LIGHT}>
-                The trial <Em>behind the platform</Em>.
+                The evaluation <Em>behind the platform</Em>.
               </h2>
             </div>
             <p style={SECTION_LEAD}>
-              The platform&apos;s controlled trial was run in one surgical
+              The platform&apos;s controlled evaluation was run in one surgical
               specialty. Every other procedure orbit is built on the same
               mechanism.
             </p>
@@ -549,11 +549,10 @@ export default function SurgicalSupportPage() {
                     padding: "6px 11px",
                   }}
                 >
-                  Controlled clinical trial
+                  Controlled evaluation
                 </span>
                 <span style={{ fontSize: 12.5, color: "rgba(15,29,46,.6)" }}>
-                  Siteman Cancer Center, Washington University School of
-                  Medicine
+                  a leading national cancer center
                 </span>
               </div>
               <div
@@ -577,15 +576,15 @@ export default function SurgicalSupportPage() {
                   textWrap: "pretty",
                 }}
               >
-                A controlled trial in hepatobiliary surgical oncology compared
-                an orbit against usual care across the exact stages any surgical
-                episode follows: preparation, the operation, discharge
+                A controlled evaluation in hepatobiliary surgical oncology
+                compared an orbit against usual care across the exact stages any
+                surgical episode follows: preparation, the operation, discharge
                 instructions, and recovery at home. Applying these percentages
                 to another surgical population is a modeled transfer, not a
                 measured result in that specialty.
               </div>
               <Link
-                href="/evidence/siteman-study"
+                href="/evidence/oncology-evaluation"
                 className={hv("studyLink")}
                 style={{
                   alignSelf: "flex-start",

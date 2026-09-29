@@ -123,9 +123,9 @@ export function BehavioralHealthNumbers() {
           >
             Worked on 1,200 patients a year at a 15% 30-day readmission rate and
             $9,000 per event, with a 25% appointment no-show rate. The call
-            reduction is a measured trial outcome; the readmission and no-show
-            improvements are modeled. Every rate and unit cost is a figure you
-            supply.
+            reduction is a measured evaluation outcome; the readmission and
+            no-show improvements are modeled. Every rate and unit cost is a
+            figure you supply.
           </p>
         </div>
       </Reveal>
@@ -211,7 +211,7 @@ export function BehavioralHealthNumbers() {
                 (parseFloat(calc.volume) || 0).toLocaleString() +
                 " patients a year",
               footNote:
-                "Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Call-reduction and understanding figures are from the CareOrbit controlled clinical trial at Siteman Cancer Center and are applied here as a modeled transfer to a behavioral health population. Readmission and no-show reductions are modeled assumptions. Rates and unit costs are supplied by the user. careorbit.com",
+                "Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Call-reduction and understanding figures are from the CareOrbit controlled evaluation at a leading national cancer center and are applied here as a modeled transfer to a behavioral health population. Readmission and no-show reductions are modeled assumptions. Rates and unit costs are supplied by the user. careorbit.com",
               fields: CALC_FIELDS,
               values: calc,
               results,

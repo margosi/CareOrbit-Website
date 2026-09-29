@@ -123,7 +123,7 @@ export function MedicationTherapyNumbers() {
           >
             Worked on 2,000 patients a year at a 10% avoidable admission rate
             and $12,000 per admission, with half of patients nonadherent. The
-            call reduction is a measured trial outcome; the admission and
+            call reduction is a measured evaluation outcome; the admission and
             adherence improvements are modeled. Every rate and unit cost is a
             figure you supply.
           </p>
@@ -214,7 +214,7 @@ export function MedicationTherapyNumbers() {
                 (parseFloat(calc.volume) || 0).toLocaleString() +
                 " patients a year",
               footNote:
-                "Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Call-reduction and understanding figures are from the CareOrbit controlled clinical trial at Siteman Cancer Center and are applied here as a modeled transfer. Admission and adherence improvements are modeled assumptions. Rates and unit costs are supplied by the user. careorbit.com",
+                "Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Call-reduction and understanding figures are from the CareOrbit controlled evaluation at a leading national cancer center and are applied here as a modeled transfer. Admission and adherence improvements are modeled assumptions. Rates and unit costs are supplied by the user. careorbit.com",
               fields: CALC_FIELDS,
               values: calc,
               results,

@@ -266,11 +266,11 @@ export const QUOTES = [
   },
   {
     text: "It's seen as incredibly easy to understand and use. They (patients and families) just run with it.",
-    who: "Nurse Navigator, Siteman Cancer Center Surgical Department",
+    who: "Nurse Navigator, surgical oncology department, leading national cancer center",
   },
 ];
 
-/** The Siteman trial figures, static on this page. */
+/** The evaluation figures, static on this page. */
 export const TRIAL_STATS = [
   { v: "+65%", d: "better understanding of the plan and side effects" },
   { v: "−53%", d: "fewer calls to the office" },

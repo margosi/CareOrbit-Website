@@ -514,8 +514,8 @@ export default function OncologyPage() {
               </h2>
             </div>
             <p style={SECTION_LEAD}>
-              Oncology is where the platform was tested first, in a controlled
-              trial rather than a pilot. Read the work yourself.
+              Oncology is where the platform was evaluated first, in a
+              controlled evaluation rather than a pilot. Read the work yourself.
             </p>
           </Reveal>
 
@@ -584,7 +584,7 @@ export default function OncologyPage() {
                   {st.d}
                 </div>
                 <Link
-                  href="/evidence/siteman-study"
+                  href="/evidence/oncology-evaluation"
                   className={hv("studyLink")}
                   style={{
                     alignSelf: "flex-start",

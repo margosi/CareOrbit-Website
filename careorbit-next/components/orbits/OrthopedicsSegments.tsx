@@ -28,7 +28,7 @@ import {
  *      source line and no disclaimer paragraph under it, and whose fourth
  *      entry is set larger (legacy: w.hero)
  *   3. there is no "Targeted Outcomes" sub-header above the ROI ledger
- *   4. the evidence block is the Siteman trial and is static; only the
+ *   4. the evidence block is the oncology evaluation and is static; only the
  *      accent colours and the "orthopedic" wording change from Cardiology
  */
 
@@ -869,7 +869,7 @@ export function OrthopedicsSegments({ name }: { name: string }) {
               Clinical evidence
             </div>
             <h2 style={H2_LIGHT}>
-              The trial <em style={SERIF_600}>behind the platform</em>.
+              The evaluation <em style={SERIF_600}>behind the platform</em>.
             </h2>
           </div>
           <p
@@ -883,9 +883,9 @@ export function OrthopedicsSegments({ name }: { name: string }) {
               textWrap: "pretty",
             }}
           >
-            The platform&apos;s controlled trial was run in surgical oncology,
-            not orthopedics. We show it as measured and let you judge the
-            transfer.
+            The platform&apos;s controlled evaluation was run in surgical
+            oncology, not orthopedics. We show it as measured and let you judge
+            the transfer.
           </p>
         </Reveal>
 
@@ -921,10 +921,10 @@ export function OrthopedicsSegments({ name }: { name: string }) {
                   padding: "6px 11px",
                 }}
               >
-                Controlled clinical trial
+                Controlled evaluation
               </span>
               <span style={{ fontSize: 12.5, color: "rgba(15,29,46,.6)" }}>
-                Siteman Cancer Center, Washington University School of Medicine
+                a leading national cancer center
               </span>
             </div>
             <div
@@ -947,16 +947,16 @@ export function OrthopedicsSegments({ name }: { name: string }) {
                 textWrap: "pretty",
               }}
             >
-              A controlled trial in hepatobiliary surgical oncology compared an
-              orbit against usual care across the same surgical pathway an
-              orthopedic episode follows: preparation, discharge instructions,
-              home recovery, and the calls in between. The mechanism is
-              comprehension, not oncology. Applying these percentages to an
-              orthopedic population is a modeled transfer, not a measured
-              orthopedic result.
+              A controlled evaluation in hepatobiliary surgical oncology
+              compared an orbit against usual care across the same surgical
+              pathway an orthopedic episode follows: preparation, discharge
+              instructions, home recovery, and the calls in between. The
+              mechanism is comprehension, not oncology. Applying these
+              percentages to an orthopedic population is a modeled transfer, not
+              a measured orthopedic result.
             </div>
             <Link
-              href="/evidence/siteman-study"
+              href="/evidence/oncology-evaluation"
               className={hv("studyLink")}
               style={{
                 alignSelf: "flex-start",

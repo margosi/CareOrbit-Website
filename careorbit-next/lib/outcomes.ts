@@ -1,5 +1,5 @@
 /* Outcomes & ROI content, ported verbatim from Outcomes.dc.html renderVals().
- * Copy is brief-locked. Stat claims and their framing (controlled trial vs
+ * Copy is brief-locked. Stat claims and their framing (controlled evaluation vs
  * observational pilot) are preserved exactly - CLAUDE.md requires models be
  * labelled as models and the Pritikin pilot be described as observational.
  *
@@ -35,13 +35,13 @@ export const HOW = [
 export const STUDIES = [
   {
     slot: "study-oncology",
-    src: "/images/case-study-siteman.webp",
-    imgHint: "[Placeholder: Siteman care team photo]",
+    src: "/images/case-study-oncology.webp",
+    imgHint: "[Placeholder: oncology care team photo]",
     dot: "#E3735C",
-    tag: "Oncology · Controlled trial",
-    t: "The Siteman controlled clinical trial",
+    tag: "Oncology · Controlled evaluation",
+    t: "A controlled evaluation in surgical oncology",
     d: "Hepatobiliary surgery patients on a CareOrbit journey: +65% understanding of the treatment plan, −53% calls to the office, −41% re-admissions, +22% satisfaction.",
-    href: "/evidence/siteman-study",
+    href: "/evidence/oncology-evaluation",
     cta: "Read the study results",
   },
   {
@@ -89,7 +89,7 @@ export const ROI_EXAMPLES = [
     tag: "Targeted ROI · Value-based care",
     t: "Value-based care initiatives",
     outcome:
-      "Documented education, PROMs collected on schedule, and readmission performance quality contracts pay on. The Siteman trial measured a 41% reduction in re-admissions.",
+      "Documented education, PROMs collected on schedule, and readmission performance quality contracts pay on. The evaluation measured a 41% reduction in re-admissions.",
     tracked:
       "Completion and PROMs return rates tracked per patient in the Engagement Index, rolled up in program dashboards, exported for quality reporting without added FTEs.",
   },
@@ -113,7 +113,7 @@ export const ROI_EXAMPLES = [
     tag: "Targeted ROI · Staff time",
     t: "Care team time returned",
     outcome:
-      "Fewer repeat questions answered one patient at a time. The Siteman trial measured 53% fewer patient calls to the office.",
+      "Fewer repeat questions answered one patient at a time. The evaluation measured 53% fewer patient calls to the office.",
     tracked:
       "Call volume and manual outreach measured before and after go-live, alongside which orbit topics patients engaged instead of calling.",
   },

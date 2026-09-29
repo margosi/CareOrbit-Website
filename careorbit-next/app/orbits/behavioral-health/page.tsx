@@ -505,13 +505,13 @@ export default function BehavioralHealthPage() {
                 Clinical evidence
               </div>
               <h2 style={H2_LIGHT}>
-                The trial <Em>behind the platform</Em>.
+                The evaluation <Em>behind the platform</Em>.
               </h2>
             </div>
             <p style={SECTION_LEAD}>
-              The platform&apos;s controlled trial was run in surgical oncology,
-              not behavioral health. We show it as measured and let you judge
-              the transfer.
+              The platform&apos;s controlled evaluation was run in surgical
+              oncology, not behavioral health. We show it as measured and let
+              you judge the transfer.
             </p>
           </Reveal>
 
@@ -547,11 +547,10 @@ export default function BehavioralHealthPage() {
                     padding: "6px 11px",
                   }}
                 >
-                  Controlled clinical trial
+                  Controlled evaluation
                 </span>
                 <span style={{ fontSize: 12.5, color: "rgba(15,29,46,.6)" }}>
-                  Siteman Cancer Center, Washington University School of
-                  Medicine
+                  a leading national cancer center
                 </span>
               </div>
               <div
@@ -574,7 +573,7 @@ export default function BehavioralHealthPage() {
                   textWrap: "pretty",
                 }}
               >
-                A controlled trial in surgical oncology compared an orbit
+                A controlled evaluation in surgical oncology compared an orbit
                 against usual care. The mechanism it tested is the one
                 behavioral health depends on: whether a person understands their
                 plan and knows how to reach help between appointments. Applying
@@ -582,7 +581,7 @@ export default function BehavioralHealthPage() {
                 transfer, not a measured behavioral health result.
               </div>
               <Link
-                href="/evidence/siteman-study"
+                href="/evidence/oncology-evaluation"
                 className={hv("studyLink")}
                 style={{
                   alignSelf: "flex-start",

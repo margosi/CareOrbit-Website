@@ -231,14 +231,14 @@ export default function EngagePage() {
             </div>
           </div>
 
-          {/* -------------------------------------------- trial results -- */}
+          {/* --------------------------------------- evaluation results -- */}
           <div
             data-sec=""
             style={{ ...SEC, padding: "0 clamp(28px,5vw,108px)" }}
           >
             <Reveal>
               <LedgerHeader
-                kicker="Measured in a controlled trial"
+                kicker="Measured in a controlled evaluation"
                 marginBottom={34}
                 lead="flow"
                 heading={
@@ -251,10 +251,9 @@ export default function EngagePage() {
                   </h2>
                 }
               >
-                In a controlled trial at Siteman Cancer Center with Washington
-                University, patients carrying an orbit were compared with
-                patients receiving standard education. These are the measured
-                results.
+                In a controlled evaluation at a leading national cancer center,
+                patients carrying an orbit were compared with patients receiving
+                standard education. These are the measured results.
               </LedgerHeader>
               <div
                 style={{
@@ -328,7 +327,7 @@ export default function EngagePage() {
                 Nine in ten patients reported the orbit helped them navigate
                 their care.{" "}
                 <Link
-                  href="/evidence/siteman-study"
+                  href="/evidence/oncology-evaluation"
                   className={hv("studyLink")}
                   style={{
                     color: "#2D5A87",

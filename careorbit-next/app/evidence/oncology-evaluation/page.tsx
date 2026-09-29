@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { metadataFor } from "@/lib/seo";
-import "./siteman-study.css";
+import "./oncology-evaluation.css";
 import { SiteNav } from "@/components/chrome/SiteNav";
 import { SiteFooter } from "@/components/chrome/SiteFooter";
 import { Figure } from "@/components/media/Figure";
@@ -16,11 +16,11 @@ import {
   RowHead,
 } from "@/components/orbits/ledger";
 import { hv } from "@/lib/hoverStyles";
-import { DESIGN, MEASURES, QUOTES, TOPLINE } from "@/lib/sitemanStudy";
+import { DESIGN, MEASURES, QUOTES, TOPLINE } from "@/lib/oncologyEvaluation";
 import { largeText } from "@/lib/largeText";
 
-/* The Siteman controlled clinical trial. Port of
- * v2-maven/SitemanStudy.dc.html.
+/* A controlled evaluation in surgical oncology. Port of
+ * v2-maven/SitemanStudy.dc.html (legacy filename).
  *
  * Wholly static, so this is a server component; only the gated
  * StudyRequest and the scroll reveals ship JS.
@@ -38,7 +38,7 @@ const TEAL = "#4FB3BF";
  * darkened to 3.36:1. TEAL itself is unchanged, so the rules, dots and fills
  * that use it decoratively look exactly as before. */
 const TEAL_TEXT = "#41939D";
-const BOOK_HREF = "/book-a-call?src=siteman-study";
+const BOOK_HREF = "/book-a-call?src=oncology-evaluation";
 
 const PANEL: React.CSSProperties = {
   background: "#0F1D2E url(/brand/arc-lines.svg) center/cover",
@@ -56,9 +56,9 @@ const LEAD: React.CSSProperties = {
   textWrap: "pretty",
 };
 
-export const metadata = metadataFor("/evidence/siteman-study");
+export const metadata = metadataFor("/evidence/oncology-evaluation");
 
-export default function SitemanStudyPage() {
+export default function OncologyEvaluationPage() {
   return (
     <div style={{ fontFamily: "Inter,sans-serif", background: "#FAF8F4" }}>
       <SiteNav active="outcomes" />
@@ -89,7 +89,7 @@ export default function SitemanStudyPage() {
                 }}
               />
               <span style={{ ...EYEBROW, color: "#1F7B87" }}>
-                Oncology · Controlled clinical trial
+                Oncology · Controlled evaluation
               </span>
             </div>
 
@@ -104,7 +104,7 @@ export default function SitemanStudyPage() {
                 textWrap: "balance",
               }}
             >
-              The Siteman controlled clinical trial: an orbit,{" "}
+              A controlled evaluation in surgical oncology: an orbit,{" "}
               <Em>measured against usual care</Em>
             </h1>
 
@@ -118,10 +118,10 @@ export default function SitemanStudyPage() {
                 textWrap: "pretty",
               }}
             >
-              Pancreatic cancer surgery patients and their families at Siteman
-              Cancer Center, Washington University School of Medicine, were
-              issued a CareOrbit and otherwise treated identically to a matched
-              control group. These are the results.
+              Pancreatic cancer surgery patients and their families at a leading
+              national cancer center were issued a CareOrbit and otherwise
+              treated identically to a matched control group. These are the
+              results.
             </p>
 
             <div
@@ -174,9 +174,9 @@ export default function SitemanStudyPage() {
             }}
           >
             <Figure
-              src="/images/case-study-siteman.webp"
+              src="/images/case-study-oncology.webp"
               alt=""
-              placeholder="[Placeholder: Siteman care team photo]"
+              placeholder="[Placeholder: oncology care team photo]"
               radius={32}
               priority
               sizes="(max-width: 1020px) 100vw, 40vw"
@@ -293,8 +293,8 @@ export default function SitemanStudyPage() {
                 color: "#8FA5BC",
               }}
             >
-              Controlled study, Siteman Cancer Center. Patient measures vs.
-              matched control group.
+              Controlled evaluation, a leading national cancer center. Patient
+              measures vs. matched control group.
             </div>
           </div>
         </div>
@@ -471,8 +471,8 @@ export default function SitemanStudyPage() {
             </div>
             <p style={LEAD}>
               A controlled design with a matched comparison group, validated
-              survey instruments, and a nationally noted surgical oncologist as
-              study author.
+              survey instruments, and a senior surgical oncologist leading the
+              evaluation.
             </p>
           </Reveal>
 
@@ -494,13 +494,14 @@ export default function SitemanStudyPage() {
               textWrap: "pretty",
             }}
           >
-            The information on this page is the extent of what can be publicly
-            shared prior to publication of the study. Some details of the
-            validated survey instruments remain confidential until that time.
-            Dr. Fields has made himself available for discussion with interested
-            professional parties, including competitive healthcare systems.
-            Siteman Cancer Center is currently expanding use of orbits, with
-            multiple orbits now in development.
+            These results come from an unpublished internal evaluation. They
+            have not been submitted for publication, and there is no public
+            study record to look up. Some details of the survey instruments
+            remain confidential. The clinical team that ran the evaluation is
+            available for discussion with interested professional parties,
+            including competitive healthcare systems, and the center is
+            currently expanding its use of orbits, with multiple orbits now in
+            development.
           </Reveal>
         </div>
 

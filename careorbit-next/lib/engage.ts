@@ -266,7 +266,7 @@ export const REACH = [
   },
 ];
 
-/* Same Siteman trial figures used on Home and Platform. */
+/* Same oncology evaluation figures used on Home and Platform. */
 export const TRIAL_STATS = [
   {
     v: "+65%",

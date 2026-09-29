@@ -84,8 +84,7 @@ export default function AboutPage() {
             support any patient care journey through education, understanding,
             motivation, and insight-driven improvement. We are a Total Orbit
             company, built in St. Louis, shaped by more than a decade of work
-            alongside Washington University, Siteman Cancer Center, and BJC
-            HealthCare.
+            alongside Washington University and BJC HealthCare.
           </p>
         </div>
 

@@ -162,7 +162,7 @@ export const QUOTES = [
     ink: "#122536",
     text: "“It's seen as incredibly easy to understand and use. They (patients and families) just run with it.”",
     who: "Nurse Navigator,",
-    role: "Siteman Cancer Center Surgical Department",
+    role: "surgical oncology department, leading national cancer center",
   },
   {
     bg: "rgba(120,100,90,.45)",
@@ -173,7 +173,7 @@ export const QUOTES = [
   },
 ];
 
-/* Siteman controlled-trial figures. Same numbers as Home's donut rings.
+/* Oncology evaluation figures. Same numbers as Home's donut rings.
  * `l` is unused by the markup but kept alongside its source data. */
 export const TRIAL_STATS = [
   {

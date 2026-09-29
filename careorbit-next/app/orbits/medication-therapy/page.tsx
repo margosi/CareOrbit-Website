@@ -509,13 +509,13 @@ export default function MedicationTherapyPage() {
                 Clinical evidence
               </div>
               <h2 style={H2_LIGHT}>
-                The trial <Em>behind the platform</Em>.
+                The evaluation <Em>behind the platform</Em>.
               </h2>
             </div>
             <p style={SECTION_LEAD}>
-              The platform&apos;s controlled trial was run in surgical oncology,
-              not medication therapy. We show it as measured and let you judge
-              the transfer.
+              The platform&apos;s controlled evaluation was run in surgical
+              oncology, not medication therapy. We show it as measured and let
+              you judge the transfer.
             </p>
           </Reveal>
 
@@ -551,11 +551,10 @@ export default function MedicationTherapyPage() {
                     padding: "6px 11px",
                   }}
                 >
-                  Controlled clinical trial
+                  Controlled evaluation
                 </span>
                 <span style={{ fontSize: 12.5, color: "rgba(15,29,46,.6)" }}>
-                  Siteman Cancer Center, Washington University School of
-                  Medicine
+                  a leading national cancer center
                 </span>
               </div>
               <div
@@ -578,15 +577,15 @@ export default function MedicationTherapyPage() {
                   textWrap: "pretty",
                 }}
               >
-                A controlled trial in hepatobiliary surgical oncology compared
-                an orbit against usual care, including the medication
+                A controlled evaluation in hepatobiliary surgical oncology
+                compared an orbit against usual care, including the medication
                 instructions patients take home. The mechanism is comprehension,
                 not oncology. Applying these percentages to a medication therapy
                 population is a modeled transfer, not a measured adherence
                 result.
               </div>
               <Link
-                href="/evidence/siteman-study"
+                href="/evidence/oncology-evaluation"
                 className={hv("studyLink")}
                 style={{
                   alignSelf: "flex-start",

@@ -63,7 +63,7 @@ export const QUOTES = [
   },
   {
     text: "It's seen as incredibly easy to understand and use. They (patients and families) just run with it.",
-    who: "Nurse Navigator, Siteman Cancer Center Surgical Department",
+    who: "Nurse Navigator, surgical oncology department, leading national cancer center",
   },
 ];
 
@@ -100,7 +100,7 @@ export const CARD_SEGMENTS: CardSegment[] = [
     studyLead: "The pilot",
     studyEm: "behind the numbers",
     studySub:
-      "A nine-month cardiac rehab pilot measured real enrollment gains, building on the platform's controlled trial in oncology.",
+      "A nine-month cardiac rehab pilot measured real enrollment gains, building on the platform's controlled evaluation in oncology.",
     libIntro:
       "Support your cardiology service line with a Cardiology Department Bundle which gives you 9 procedure and condition orbit versions for patients and families, plus a template for the rest, supporting the specifics of procedures like these:",
     money: [
@@ -277,7 +277,7 @@ export const CARD_SEGMENTS: CardSegment[] = [
     studyLead: "The cardiology result",
     studyEm: "behind the numbers",
     studySub:
-      "The rehab pilot below is our direct cardiology result. It sits alongside the platform's controlled trial, run in surgical oncology.",
+      "The rehab pilot below is our direct cardiology result. It sits alongside the platform's controlled evaluation, run in surgical oncology.",
     libIntro:
       "The chronic and device orbits, plus the template that versions the rest. Heart Health is the default orbit a patient keeps between visits.",
     money: [
@@ -434,7 +434,7 @@ export const CARD_SEGMENTS: CardSegment[] = [
     studyLead: "The cardiology result",
     studyEm: "behind the numbers",
     studySub:
-      "The rehab pilot below measured enrollment in cardiology. The platform's controlled trial was run in surgical oncology, where preparation and recovery work the same way; applied to a cardiac procedural population, those results are a model.",
+      "The rehab pilot below measured enrollment in cardiology. The platform's controlled evaluation was run in surgical oncology, where preparation and recovery work the same way; applied to a cardiac procedural population, those results are a model.",
     libIntro:
       "The named procedure orbits, plus a template that versions the long tail with minor edits. Heart Health is where each one returns after the episode closes.",
     money: [
@@ -607,7 +607,7 @@ export const CARD_SEGMENTS: CardSegment[] = [
     studyLead: "The rehab pilot",
     studyEm: "behind the numbers",
     studySub:
-      "This result was measured in exactly this segment: a nine-month observational pilot, alongside the platform's controlled trial in oncology.",
+      "This result was measured in exactly this segment: a nine-month observational pilot, alongside the platform's controlled evaluation in oncology.",
     libIntro:
       "Two orbits carry this segment: the rehab journey itself, and the Heart Health orbit that reaches people before and after it.",
     money: [

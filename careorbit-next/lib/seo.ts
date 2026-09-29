@@ -125,7 +125,7 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   "/orbits/oncology": {
     title: "Oncology orbit solutions",
     description:
-      "Results proven against usual care in a controlled surgical oncology trial.",
+      "Results measured against usual care in a controlled surgical oncology evaluation.",
   },
   "/orbits/primary-care": {
     title: "Primary Care orbit solutions",
@@ -180,10 +180,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     description:
       "High-risk industries have spent decades engineering physical safety. Behavioral risk has not had the same infrastructure.",
   },
-  "/evidence/siteman-study": {
-    title: "The Siteman controlled clinical trial",
+  "/evidence/oncology-evaluation": {
+    title: "A controlled evaluation in surgical oncology",
     description:
-      "Pancreatic cancer surgery patients and their families at Siteman Cancer Center, Washington University School of Medicine…",
+      "Pancreatic cancer surgery patients and their families at a leading national cancer center…",
   },
   "/evidence/pritikin-pilot": {
     title: "The Pritikin cardiac rehab pilot",

@@ -587,9 +587,9 @@ export default function PlatformPage() {
                 textWrap: "pretty",
               }}
             >
-              In a controlled trial at Siteman Cancer Center with Washington
-              University, patients carrying an orbit were compared with patients
-              receiving standard education. See the measured results{" "}
+              In a controlled evaluation at a leading national cancer center,
+              patients carrying an orbit were compared with patients receiving
+              standard education. See the measured results{" "}
               <Link
                 href="/outcomes"
                 className={hv("linkCoral")}

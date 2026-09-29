@@ -279,14 +279,14 @@ export const MONEY = [
   {
     v: "−53%",
     t: "Calls to the clinical line",
-    d: "Measured in the CareOrbit controlled trial. Preparedness and medication questions the orbit answered first, at four calls per patient and nine minutes each.",
-    src: "CareOrbit controlled clinical trial, Siteman Cancer Center. Applied here as a modeled transfer.",
+    d: "Measured in the CareOrbit controlled evaluation. Preparedness and medication questions the orbit answered first, at four calls per patient and nine minutes each.",
+    src: "CareOrbit controlled evaluation, a leading national cancer center. Applied here as a modeled transfer.",
   },
   {
     v: "+65%",
     t: "Understanding of the plan",
-    d: "Measured in the same trial. In a specialty where the treatment is understanding and behavior, this is the intervention rather than a side benefit.",
-    src: "CareOrbit controlled clinical trial, Siteman Cancer Center.",
+    d: "Measured in the same evaluation. In a specialty where the treatment is understanding and behavior, this is the intervention rather than a side benefit.",
+    src: "CareOrbit controlled evaluation, a leading national cancer center.",
   },
 ];
 
@@ -297,13 +297,13 @@ export const QUOTES = [
   },
   {
     text: "It's seen as incredibly easy to understand and use. They (patients and families) just run with it.",
-    who: "Nurse Navigator, Siteman Cancer Center Surgical Department",
+    who: "Nurse Navigator, surgical oncology department, leading national cancer center",
   },
 ];
 
 /** Shown by the "View sources" disclosure. Legacy: sourcesList. */
 export const SOURCES: string[] = [
-  "CareOrbit controlled clinical trial, Siteman Cancer Center and Washington University School of Medicine, hepatobiliary surgical oncology: 41% fewer readmissions, 53% fewer inbound calls, 65% better understanding of the plan and side effects, 22% higher satisfaction, and 9 of 10 patients reporting improved recovery navigation, measured against usual care.",
+  "CareOrbit controlled evaluation, a leading national cancer center, hepatobiliary surgical oncology: 41% fewer readmissions, 53% fewer inbound calls, 65% better understanding of the plan and side effects, 22% higher satisfaction, and 9 of 10 patients reporting improved recovery navigation, measured against usual care.",
   "No-show rates in behavioral health are consistently reported above those of other outpatient specialties across published series. The 25% default is a placeholder for your own rate.",
   "Early dropout concentrates in the first several sessions across published behavioral health cohorts, before treatment has had time to produce measurable benefit.",
   "Psychiatric medication discontinuation is commonly driven by early side effects and unmet expectations about time to effect, both of which are education-sensitive.",
@@ -311,7 +311,7 @@ export const SOURCES: string[] = [
   "Dollar figures on this page are arithmetic applying the percentages entered to the volumes and unit costs entered. They are illustrations, not guarantees.",
 ];
 
-/** The Siteman trial figures, static on this page. */
+/** The evaluation figures, static on this page. */
 export const TRIAL_STATS = [
   { v: "+65%", d: "better understanding of the plan and side effects" },
   { v: "\u221253%", d: "fewer calls to the office" },
@@ -392,7 +392,7 @@ export const CALC_FIELDS = [
     step: "1",
     prefix: "",
     suffix: "%",
-    hint: "53% measured in the CareOrbit controlled trial",
+    hint: "53% measured in the CareOrbit controlled evaluation",
   },
   {
     k: "minutes",

@@ -51,7 +51,7 @@ export type LedgerRow = PlainRow | SeqRow;
 
 export const NAME = "Oncology";
 export const SUB =
-  "Results proven against usual care in a controlled surgical oncology trial. Every orbit starts from the numbers your service line already reports, readmissions, call volume, preparedness, and is built to move them.";
+  "Results measured against usual care in a controlled surgical oncology evaluation. Every orbit starts from the numbers your service line already reports, readmissions, call volume, preparedness, and is built to move them.";
 
 /** The navy panel stats. Only n/t/d/size are read by the markup; the
  * bg/border/pad/fg/label/body keys the source also set are never used. */
@@ -244,7 +244,7 @@ export const CATALOG = [
   {
     n: "06",
     t: "Pancreaticoduodenectomy (Whipple)",
-    v: "Pancreatic, the controlled-trial pathway",
+    v: "Pancreatic, the controlled-evaluation pathway",
   },
   {
     n: "07",
@@ -321,7 +321,7 @@ export const CATALOG = [
 export const MEASURES = [
   {
     t: "Fewer 30-day readmissions",
-    d: "The costliest between-visit failure in a surgical oncology program, and the one the trial reduced by 41%.",
+    d: "The costliest between-visit failure in a surgical oncology program, and the one the evaluation reduced by 41%.",
   },
   {
     t: "Fewer avoidable ED visits",
@@ -329,7 +329,7 @@ export const MEASURES = [
   },
   {
     t: "Fewer inbound calls per episode",
-    d: "Nursing and navigator time is the scarcest resource in the service line. The trial returned 53% of it.",
+    d: "Nursing and navigator time is the scarcest resource in the service line. The evaluation returned 53% of it.",
   },
   {
     t: "Protected treatment throughput",
@@ -355,12 +355,12 @@ export const MEASURES = [
 
 export const STUDIES = [
   {
-    tag: "Controlled clinical trial",
+    tag: "Controlled evaluation",
     tagColor: "#FFFFFF",
     tagBg: "#0F1D2E",
-    setting: "Siteman Cancer Center, Washington University School of Medicine",
+    setting: "a leading national cancer center",
     t: "Pancreatic Cancer Surgery Support",
-    d: "A controlled clinical trial in hepatobiliary surgical oncology comparing an orbit against usual care. Patients arrived better prepared, called less, and were readmitted less often. Every figure on this page comes from it.",
+    d: "A controlled evaluation in hepatobiliary surgical oncology comparing an orbit against usual care. Patients arrived better prepared, called less, and were readmitted less often. Every figure on this page comes from it.",
     linkLabel: "Download a summary of the study results",
     stats: [
       {
@@ -390,13 +390,12 @@ export const QUOTES = [
   },
   {
     text: "It's seen as incredibly easy to understand and use. They (patients and families) just run with it.",
-    who: "Nurse Navigator, Siteman Cancer Center Surgical Department",
+    who: "Nurse Navigator, surgical oncology department, leading national cancer center",
   },
 ];
 
 /** Shown by the "View sources" disclosure. Legacy: sourcesList. */
 export const SOURCES = [
-  "CareOrbit controlled clinical trial, Siteman Cancer Center and Washington University School of Medicine, hepatobiliary surgical oncology: 41% fewer readmissions, 53% fewer inbound calls, 65% better understanding of the treatment plan and side effects, 22% higher patient satisfaction, and 9 of 10 patients reporting improved recovery navigation, measured against usual care.",
-  "[Placeholder: full citation and link to the published trial]",
-  "Live and in build at Washington University and Siteman Cancer Center: ENT Surgery Support and Fluoroscopy Procedure Support are live; Head and Neck Cancer Tumor Center and Breast Cancer orbits are in active build.",
+  "CareOrbit controlled evaluation, a leading national cancer center, hepatobiliary surgical oncology: 41% fewer readmissions, 53% fewer inbound calls, 65% better understanding of the treatment plan and side effects, 22% higher patient satisfaction, and 9 of 10 patients reporting improved recovery navigation, measured against usual care.",
+  "Live and in build at a leading national cancer center: ENT Surgery Support and Fluoroscopy Procedure Support are live; Head and Neck Cancer Tumor Center and Breast Cancer orbits are in active build.",
 ];

@@ -133,14 +133,12 @@ export const EXPLORE_CARDS = [
   },
 ];
 
-/* Six entries, not three: the marquee scrolls -50% so the list must be
- * duplicated for the loop to be seamless. */
+/* Duplicated, not listed once: the marquee scrolls -50% so the list has to
+ * repeat for the loop to be seamless. */
 export const MARQUEE = [
   "Washington University",
-  "Siteman Cancer Center",
   "BJC HealthCare",
   "Washington University",
-  "Siteman Cancer Center",
   "BJC HealthCare",
 ];
 
@@ -195,7 +193,7 @@ export const ISSUE_METHODS = [
   "On-site registration",
 ];
 
-/* Siteman controlled-trial numbers. CLAUDE.md: only real, sourced numbers.
+/* Oncology evaluation numbers. CLAUDE.md: only real, sourced numbers.
  * rt is the ring's final stroke-dashoffset: circumference 930 scaled by the
  * remaining fraction, exactly as the original computed it. */
 const RAW_STATS = [

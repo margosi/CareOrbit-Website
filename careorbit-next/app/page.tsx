@@ -694,8 +694,8 @@ export default function HomePage() {
                   textWrap: "pretty",
                 }}
               >
-                In a controlled clinical trial at Siteman Cancer Center, a
-                CareOrbit journey measurably changed what patients understood,
+                In a controlled evaluation at a leading national cancer center,
+                a CareOrbit journey measurably changed what patients understood,
                 did, and needed.
               </p>
             </Reveal>
@@ -906,7 +906,7 @@ export default function HomePage() {
             >
               <div data-case-img="" style={{ height: 330 }}>
                 <Figure
-                  src="/images/case-study-siteman.webp"
+                  src="/images/case-study-oncology.webp"
                   alt=""
                   radius={28}
                   placeholder="Care team reviewing the study"
@@ -928,7 +928,7 @@ export default function HomePage() {
                     color: "#B15948",
                   }}
                 >
-                  Case study &middot; WashU / Siteman
+                  Case study &middot; Leading national cancer center
                 </div>
                 <h2
                   style={{
@@ -953,16 +953,16 @@ export default function HomePage() {
                     textWrap: "pretty",
                   }}
                 >
-                  Pancreatic Cancer Surgery Support ran at Washington University
-                  and Siteman Cancer Center in a controlled clinical trial:
-                  patients arrived prepared, care teams fielded fewer calls, and
-                  every journey was tracked end to end.
+                  Pancreatic Cancer Surgery Support ran at a leading national
+                  cancer center in a controlled evaluation: patients arrived
+                  prepared, care teams fielded fewer calls, and every journey
+                  was tracked end to end.
                 </p>
                 <div style={{ fontSize: 11.5, color: "rgba(15,29,46,.5)" }}>
-                  Controlled clinical trial at Siteman Cancer Center.
+                  Controlled evaluation at a leading national cancer center.
                 </div>
                 <Link
-                  href="/evidence/siteman-study"
+                  href="/evidence/oncology-evaluation"
                   className={hv("caseLink")}
                   style={{
                     fontSize: 14.5,

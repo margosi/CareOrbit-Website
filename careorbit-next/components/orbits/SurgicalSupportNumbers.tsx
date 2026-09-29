@@ -61,7 +61,7 @@ export function SurgicalSupportNumbers() {
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           <div style={{ ...EYEBROW, color: "#6F6A62" }}>By the numbers</div>
           <h2 style={H2_LIGHT}>
-            Measured in a <Em>controlled trial</Em>, not modeled.
+            Measured in a <Em>controlled evaluation</Em>, not modeled.
           </h2>
         </div>
         <div
@@ -101,7 +101,7 @@ export function SurgicalSupportNumbers() {
                 color: "#0F1D2E",
               }}
             >
-              Trial results, applied to your volume
+              Evaluation results, applied to your volume
             </span>
           </span>
           <div
@@ -112,8 +112,8 @@ export function SurgicalSupportNumbers() {
               maxWidth: 520,
             }}
           >
-            Percentages are measured trial outcomes in surgical oncology. Case
-            volume, rates, and unit costs are your figures.
+            Percentages are measured evaluation outcomes in surgical oncology.
+            Case volume, rates, and unit costs are your figures.
           </div>
           <p
             style={{
@@ -126,10 +126,10 @@ export function SurgicalSupportNumbers() {
             }}
           >
             These reductions were measured against usual care in a controlled
-            clinical trial at Siteman Cancer Center. Surgical support is the
-            pathway the trial ran on, so the percentages here are results rather
-            than projections. The dollar figures apply them to your own volume
-            and costs.
+            evaluation at a leading national cancer center. Surgical support is
+            the pathway the evaluation ran on, so the percentages here are
+            results rather than projections. The dollar figures apply them to
+            your own volume and costs.
           </p>
         </div>
       </Reveal>
@@ -170,7 +170,7 @@ export function SurgicalSupportNumbers() {
             },
             { v: "382 hrs", d: "Nursing time returned over the same year" },
           ]}
-          note="Worked on 800 cases a year at a 10% readmission rate and $14,000 per readmission, six calls per patient at nine minutes each with a $45 loaded hourly staff cost, and 10% of cases cancelled or delayed for preparation gaps at $6,000 collected per case. The percentage reductions are the trial's measured outcomes. Substitute your own rates and costs and the totals move accordingly."
+          note="Worked on 800 cases a year at a 10% readmission rate and $14,000 per readmission, six calls per patient at nine minutes each with a $45 loaded hourly staff cost, and 10% of cases cancelled or delayed for preparation gaps at $6,000 collected per case. The percentage reductions are the evaluation's measured outcomes. Substitute your own rates and costs and the totals move accordingly."
           buttonLabel={
             calcOpen ? "Hide the calculator" : "Run the model with your numbers"
           }
@@ -183,7 +183,7 @@ export function SurgicalSupportNumbers() {
           backdropAttr
           eyebrow="ROI calculator"
           title="Put your own numbers in."
-          blurb="Prefilled with 800 cases a year and the trial's measured reductions. Replace the rates and unit costs with your own; the totals update as you type."
+          blurb="Prefilled with 800 cases a year and the evaluation's measured reductions. Replace the rates and unit costs with your own; the totals update as you type."
           fields={CALC_FIELDS}
           values={calc}
           onChange={(k, raw) =>
@@ -216,7 +216,7 @@ export function SurgicalSupportNumbers() {
                 (parseFloat(calc.volume) || 0).toLocaleString() +
                 " cases a year",
               footNote:
-                "Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Readmission and call-reduction figures are the measured outcomes of the CareOrbit controlled clinical trial in surgical oncology at Siteman Cancer Center. Volumes and unit costs are supplied by the user. careorbit.com",
+                "Modeled illustration built on arithmetic from the inputs shown. Not a guarantee of results. Readmission and call-reduction figures are the measured outcomes of the CareOrbit controlled evaluation in surgical oncology at a leading national cancer center. Volumes and unit costs are supplied by the user. careorbit.com",
               fields: CALC_FIELDS,
               values: calc,
               results,

@@ -82,8 +82,8 @@ export const WINDOW: WindowStat[] = [
   },
   {
     n: "−41%",
-    t: "Readmissions in the trial",
-    d: "Measured against usual care in a controlled clinical trial at Siteman.",
+    t: "Readmissions in the evaluation",
+    d: "Measured against usual care in a controlled evaluation at a leading national cancer center.",
     size: "clamp(44px,5vw,62px)",
   },
 ];
@@ -272,7 +272,7 @@ export const CATALOG = [
 export const MEASURES = [
   {
     t: "Fewer avoidable readmissions",
-    d: "The costliest post-discharge failure, and the one the trial reduced by 41%.",
+    d: "The costliest post-discharge failure, and the one the evaluation reduced by 41%.",
   },
   {
     t: "Fewer cancellations and delays",
@@ -296,7 +296,7 @@ export const MEASURES = [
   },
   {
     t: "Higher patient satisfaction",
-    d: "Satisfaction rose 22% in the trial, and it is what referring physicians hear about.",
+    d: "Satisfaction rose 22% in the evaluation, and it is what referring physicians hear about.",
   },
   {
     t: "A visible program differentiator",
@@ -308,26 +308,26 @@ export const MONEY = [
   {
     v: "−41%",
     t: "Readmissions, measured",
-    d: "Against usual care in a controlled clinical trial at Siteman Cancer Center. On 800 cases at a 10% readmission rate and $14,000 per readmission, that is roughly $459K a year.",
-    src: "CareOrbit controlled clinical trial, Siteman Cancer Center, hepatobiliary surgical oncology. Readmission rate and cost are your figures.",
+    d: "Against usual care in a controlled evaluation at a leading national cancer center. On 800 cases at a 10% readmission rate and $14,000 per readmission, that is roughly $459K a year.",
+    src: "CareOrbit controlled evaluation, a leading national cancer center, hepatobiliary surgical oncology. Readmission rate and cost are your figures.",
   },
   {
     v: "−53%",
     t: "Calls to the nursing line",
     d: "Preparedness and recovery questions the orbit answered first. At six calls per case and nine minutes each, that is roughly 382 nursing hours a year at 800 cases.",
-    src: "CareOrbit controlled clinical trial, Siteman Cancer Center. Call volume and staff cost are your figures.",
+    src: "CareOrbit controlled evaluation, a leading national cancer center. Call volume and staff cost are your figures.",
   },
   {
     v: "+65%",
     t: "Patient understanding",
     d: "Of the procedure and what recovery involves. Understanding sits upstream of every other number here: the call not made, the case not cancelled, the warning sign caught early.",
-    src: "CareOrbit controlled clinical trial, Siteman Cancer Center.",
+    src: "CareOrbit controlled evaluation, a leading national cancer center.",
   },
   {
     v: "9 in 10",
     t: "Reported better navigation",
     d: "Nine of ten patients said the orbit improved how they navigated recovery, and satisfaction rose 22%.",
-    src: "CareOrbit controlled clinical trial, Siteman Cancer Center.",
+    src: "CareOrbit controlled evaluation, a leading national cancer center.",
   },
 ];
 
@@ -338,20 +338,19 @@ export const QUOTES = [
   },
   {
     text: "It's seen as incredibly easy to understand and use. They (patients and families) just run with it.",
-    who: "Nurse Navigator, Siteman Cancer Center Surgical Department",
+    who: "Nurse Navigator, surgical oncology department, leading national cancer center",
   },
 ];
 
 /** Shown by the "View sources" disclosure. Legacy: sourcesList. */
 export const SOURCES: string[] = [
-  "CareOrbit controlled clinical trial, Siteman Cancer Center and Washington University School of Medicine, hepatobiliary surgical oncology: 41% fewer readmissions, 53% fewer inbound calls, 65% better understanding of the procedure and recovery, 22% higher satisfaction, and 9 of 10 patients reporting improved recovery navigation, measured against usual care. Surgical support is the pathway the trial ran on.",
-  "[Placeholder: full citation and link to the published trial]",
+  "CareOrbit controlled evaluation, a leading national cancer center, hepatobiliary surgical oncology: 41% fewer readmissions, 53% fewer inbound calls, 65% better understanding of the procedure and recovery, 22% higher satisfaction, and 9 of 10 patients reporting improved recovery navigation, measured against usual care. Surgical support is the pathway the evaluation ran on.",
   "Leite KA, et al. Reducing Preventable Surgical Cancellations. J PeriAnesthesia Nurs. 2019;34(5):929-37. Online education and a standardized nurse-led preoperative interview reduced preventable cancellations from 34.3% to 20.0%.",
   "Readmission rate, cost or penalty exposure, call volume, staff cost, cancellation rate, and revenue per case are supplied by the user. CareOrbit makes no claim about those values.",
   "Dollar figures on this page are arithmetic applying the percentages entered to the volumes and unit costs entered. They are illustrations, not guarantees.",
 ];
 
-/** The Siteman trial figures. On this page they are measured results for
+/** The evaluation figures. On this page they are measured results for
  * the pathway, not a transfer. */
 export const TRIAL_STATS = [
   { v: "+65%", d: "better understanding of the plan and side effects" },
@@ -406,7 +405,7 @@ export const CALC_FIELDS = [
     step: "1",
     prefix: "",
     suffix: "%",
-    hint: "41% measured against usual care in the CareOrbit controlled trial",
+    hint: "41% measured against usual care in the CareOrbit controlled evaluation",
   },
   {
     k: "utilCost",
@@ -433,7 +432,7 @@ export const CALC_FIELDS = [
     step: "1",
     prefix: "",
     suffix: "%",
-    hint: "53% measured in the CareOrbit controlled trial",
+    hint: "53% measured in the CareOrbit controlled evaluation",
   },
   {
     k: "minutes",

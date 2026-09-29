@@ -33,7 +33,7 @@ import { FIXED_ROWS, PC_SEGMENTS, QUOTES, VALUE_SRC } from "@/lib/primaryCare";
  *
  * Same four-tab shape as Cardiology. The differences are all in the data
  * and the accent colour, except the evidence block, which is static here:
- * Primary Care shows the Siteman trial rather than a per-segment study.
+ * Primary Care shows the oncology evaluation rather than a per-segment study.
  */
 const TEAL = "#4FB3BF";
 const NAME = "Primary Care";
@@ -382,11 +382,11 @@ export function PrimaryCareSegments() {
               Clinical evidence
             </div>
             <h2 style={H2_LIGHT}>
-              The trial <Em>behind the platform</Em>.
+              The evaluation <Em>behind the platform</Em>.
             </h2>
           </div>
           <p style={SECTION_LEAD}>
-            CareOrbit&apos;s controlled clinical trial ran in surgical oncology.
+            CareOrbit&apos;s controlled evaluation ran in surgical oncology.
             Applied to a primary care panel, its percentages are a modeled
             transfer, not a measured primary care result.
           </p>
@@ -424,10 +424,10 @@ export function PrimaryCareSegments() {
                   padding: "6px 11px",
                 }}
               >
-                Controlled clinical trial
+                Controlled evaluation
               </span>
               <span style={{ fontSize: 12.5, color: "rgba(15,29,46,.6)" }}>
-                Siteman Cancer Center and Washington University
+                a leading national cancer center
               </span>
             </div>
             <div
@@ -459,7 +459,7 @@ export function PrimaryCareSegments() {
               measured primary care result.
             </div>
             <Link
-              href="/evidence/siteman-study"
+              href="/evidence/oncology-evaluation"
               className={hv("studyLink")}
               style={{
                 alignSelf: "flex-start",
@@ -472,13 +472,13 @@ export function PrimaryCareSegments() {
                 transition: "color .2s,border-color .2s",
               }}
             >
-              Read the trial results &rarr;
+              Read the evaluation results &rarr;
             </Link>
             <StudyRequest
-              label="Download a summary of the trial results"
-              heading="Download the trial summary"
+              label="Download a summary of the evaluation results"
+              heading="Download the evaluation summary"
               file="/evidence-docs/CareOrbit-Siteman-Study-Report.pdf"
-              downloadLabel="Download the trial report"
+              downloadLabel="Download the evaluation report"
               blurb="Tell us who you are and your download will be ready."
             />
           </div>

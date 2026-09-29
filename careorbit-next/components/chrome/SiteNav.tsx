@@ -176,8 +176,8 @@ export function SiteNav({
               zIndex: 1,
             }}
           >
-            Live within large, complex health systems including BJC HealthCare,
-            Washington University, and Siteman Cancer Center&nbsp;&nbsp;
+            Live within large, complex health systems including BJC HealthCare
+            and Washington University&nbsp;&nbsp;
             <Link
               href="/outcomes"
               {...NO_PREFETCH}

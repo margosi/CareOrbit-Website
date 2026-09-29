@@ -184,7 +184,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/SitemanStudy.dc.html",
-        destination: "/evidence/siteman-study",
+        destination: "/evidence/oncology-evaluation",
+        permanent: true,
+      },
+      /* The evidence page was published at this path before the centre was
+       * anonymised. It may be bookmarked, linked or still in a search index,
+       * so it redirects rather than 404s - but it is gone from the sitemap
+       * and no longer the canonical, so crawlers will settle on the new
+       * URL and stop surfacing the old name. */
+      {
+        source: "/evidence/siteman-study",
+        destination: "/evidence/oncology-evaluation",
         permanent: true,
       },
       {

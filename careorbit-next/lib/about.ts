@@ -42,7 +42,7 @@ export const TEAM = [
 
 export const FACTS = [
   "10+ years building patient engagement",
-  "St. Louis roots; WashU, Siteman, and BJC relationships",
+  "St. Louis roots; WashU and BJC relationships",
   "Live within large, complex health systems",
   "A Customer Success Manager on every care team",
 ];
