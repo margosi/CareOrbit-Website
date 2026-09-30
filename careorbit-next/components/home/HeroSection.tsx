@@ -339,28 +339,33 @@ const LINE_DEFS = [
 
 const NS = "http://www.w3.org/2000/svg";
 
-/* One pass through the loop, in milliseconds.
+/* One pass through the loop, in milliseconds. The photo changes at the top
+ * of a pass, so the pass length IS the interval between photos: 4000ms.
  *
- * The two ribbon tweens and the pill's clip in/out are the animation
- * itself and are UNCHANGED - the drawing keeps exactly its old character
- * and speed. Only the two waiting periods were shortened, which is what
- * actually governs how long you stare at the same photo:
+ * Getting there meant compressing the ribbon, not just the waiting. The
+ * animation alone - sweep, label in, label out, retract - used to run
+ * 6330ms, so 4s was below the floor however hard the idle time was cut.
+ * Every value is therefore scaled by 4000/8680:
  *
  *            was      now
- *   DWELL     900      600     gap after a pass before the next photo
- *   HOLD     3200     1750     label sitting fully open, nothing moving
- *   pass    10430     8680     -16.8%
+ *   DWELL     600      277
+ *   SWEEP    2800     1290     ribbon out
+ *   PILL_IN   650      300
+ *   HOLD     1750      806     label fully open, nothing moving
+ *   PILL_OUT  480      221
+ *   RETRACT  2400     1106     ribbon back to rest
+ *   pass     8680     4000     -53.9%
  *
- * HOLD still leaves the label readable for 1750ms static plus its 650ms
- * open and 480ms close, which is comfortably longer than the longest
- * label takes to read. */
-const DWELL_MS = 600;
-const FIRST_DWELL_MS = 450;
-const SWEEP_MS = 2800; // ribbon out, unchanged
-const PILL_IN_MS = 650; // unchanged
-const HOLD_MS = 1750;
-const PILL_OUT_MS = 480; // unchanged
-const RETRACT_MS = 2400; // ribbon back to rest, unchanged
+ * The label is now fully open for 806ms rather than 1750ms. That is the
+ * real cost of a 4s interval and it is the thing to watch if the copy ever
+ * gets longer than "Supporting medication adherence". */
+const DWELL_MS = 277;
+const FIRST_DWELL_MS = 207;
+const SWEEP_MS = 1290; // ribbon out
+const PILL_IN_MS = 300;
+const HOLD_MS = 806;
+const PILL_OUT_MS = 221;
+const RETRACT_MS = 1106; // ribbon back to rest
 
 type Ribbon = (typeof LINE_DEFS)[number] & {
   p: SVGPathElement;
@@ -557,10 +562,14 @@ function useHeroRibbons(
     }
 
     void (async () => {
+      /* The one-time draw-in, scaled by the same 4000/8680 as the loop. Left
+       * at full speed it ran 3340ms, which put the first photo change about
+       * 80% later than every one after it - visibly out of step now the
+       * cadence is 4s. */
       await Promise.all(
         lines.map((l, i) =>
-          wait(300 + i * 380)
-            .then(() => tw(l, l.rest, 1900, eo))
+          wait(138 + i * 175)
+            .then(() => tw(l, l.rest, 875, eo))
             .then(() => {
               l.atRest = true;
             }),
