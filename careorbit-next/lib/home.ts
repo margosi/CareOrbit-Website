@@ -134,11 +134,19 @@ export const EXPLORE_CARDS = [
 ];
 
 /* Duplicated, not listed once: the marquee scrolls -50% so the list has to
- * repeat for the loop to be seamless. */
+ * repeat for the loop to be seamless.
+ *
+ * Siteman is named here, and nowhere else on the public site. This strip is
+ * a customer/relationship credit with naming permission; the oncology
+ * evaluation stays anonymised as "a leading national cancer center", and the
+ * marquee sits two sections away from that content so the two do not read as
+ * one claim. */
 export const MARQUEE = [
   "Washington University",
+  "Siteman Cancer Center",
   "BJC HealthCare",
   "Washington University",
+  "Siteman Cancer Center",
   "BJC HealthCare",
 ];
 
