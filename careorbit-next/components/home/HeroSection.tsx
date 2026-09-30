@@ -211,8 +211,8 @@ export function HeroSection({
               textWrap: "pretty",
             }}
           >
-            Proven digital education and engagement supporting any care journey,
-            issued from your existing workflow.
+            Proven digital education and engagement platform supporting any care
+            journey, issued from your existing workflow.
           </p>
 
           <div
